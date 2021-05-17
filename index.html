@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <title>Green Software Foundation</title>
+    <meta name="description" content="TODO" />
+    <meta name="author" content="TODO" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <svg class="header-background-wave" viewBox="0 0 1920 335.78">
+        <path
+          d="M 0 335.7795104980469 L 53.33333587646484 329.6002502441406 C 106.6666717529297 322.95458984375 213.3333435058594 311.2955932617188 320 254.9825592041016 C 426.6666870117188 199.3690795898438 533.3333740234375 99.10159301757812 640 74.61766815185547 C 746.6666870117188 50.13374710083008 853.3333740234375 99.10159301757812 960 136.7602081298828 C 1066.666748046875 173.7192687988281 1173.333374023438 199.3690795898438 1280 186.5441741943359 C 1386.666748046875 173.7192687988281 1493.333374023438 124.7514190673828 1600 118.1057891845703 C 1706.666748046875 111.9265060424805 1813.333374023438 149.2353363037109 1866.666748046875 167.8897552490234 L 1920 186.5441741943359 L 1920 0 L 1866.666748046875 0 C 1813.333374023438 0 1706.666748046875 0 1600 0 C 1493.333374023438 0 1386.666748046875 0 1280 0 C 1173.333374023438 0 1066.666748046875 0 960 0 C 853.3333740234375 0 746.6666870117188 0 640 0 C 533.3333740234375 0 426.6666870117188 0 320 0 C 213.3333435058594 0 106.6666717529297 0 53.33333587646484 0 L 0 0 L 0 335.7795104980469 Z"
+        ></path>
+      </svg>
+
+      <div class="header-content">
+        <h1 class="logo">
+          <span>green</span>
+          <span>software</span>
+          <span>foundation</span>
+        </h1>
+        <span class="spacer"></span>
+        <nav>
+          <ul>
+            <li><a title="TODO" href="#">link</a></li>
+            <li><a title="TODO" href="#">link</a></li>
+            <li><a title="TODO" href="#">link</a></li>
+            <li><a title="TODO" href="#">link</a></li>
+            <li><a title="TODO" href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section--hero">
+        <article>
+          <h1>green software</h1>
+          <h2>foundation</h2>
+          <a title="TODO" href="#" class="button">join newsletter</a>
+        </article>
+        <article>
+          <video src="#"></video>
+        </article>
+      </section>
+      <section class="section--what">
+        <h3>green software foundation</h3>
+        <p>
+          The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people,
+          standards, tooling and best practices for building green software. Our ambition is a 50% reduction in the
+          carbon emissions of software, via abatement, not neutralisation, by 2030.
+        </p>
+      </section>
+      <section class="section--focus">
+        <h3>Our Focus Areas</h3>
+        <p>
+          <b>Standards</b>: Agreeing on standards, best practices and patterns for building green software. <br />
+          <b>Innovation</b>: Nurture the creation of trusted open-source and open-data projects and support academic
+          research. <br />
+          <b>Community</b>: Facilitate the growth of a diverse and international community of green software
+          ambassadors.
+        </p>
+      </section>
+      <section class="section--bg">
+        <img src="section-background.svg" alt="" />
+      </section>
+      <section class="section--members"></section>
+      <section class="section--join"></section>
+      <section class="section--team"></section>
+    </main>
+    <footer></footer>
+
+    <style>
+      /* GLOBAL */
+      :root {
+        --primary-color: rgba(125, 184, 51, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        font-family: "Helvetica Neue";
+      }
+      .button {
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        display: block;
+        min-width: 200px;
+        text-align: center;
+      }
+
+      /* HEADER */
+      header {
+        height: 250px;
+      }
+
+      header .header-content {
+        display: flex;
+        flex-direction: row;
+      }
+
+      header .spacer {
+        flex: 1;
+      }
+
+      /* HEADER WAVE */
+      .header-background-wave {
+        position: absolute;
+        top: 0px;
+        overflow: visible;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+      }
+      .header-background-wave path {
+        fill: var(--primary-color);
+        height: 335.78px;
+        width: 100vw;
+      }
+
+      /* LOGO */
+      .logo {
+        color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        margin: 20px;
+        text-transform: uppercase;
+      }
+      .logo span {
+        display: block;
+        font-size: 1em;
+      }
+      .logo span:nth-child(1) {
+        font-size: 25.8px;
+      }
+      .logo span:last-child {
+        font-size: 13.6px;
+      }
+
+      /* HEADER MENU */
+      nav {
+        position: relative;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+      }
+      nav ul {
+        display: flex;
+      }
+      nav ul li {
+        margin: 4px 20px;
+      }
+
+      /* MAIN  */
+      section:not(.section--bg) {
+        margin: 30px 0;
+        padding: 20px;
+      }
+      section h1,
+      section h3 {
+        text-transform: uppercase;
+      }
+      section h3 {
+        color: var(--primary-color);
+        margin: 10px 0;
+      }
+      section p {
+        line-height: 20px;
+      }
+
+      /* SECTION HERO */
+      .section--hero {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+      .section--hero h1 {
+        color: var(--primary-color);
+        font-size: 2em;
+      }
+      .section--hero h2 {
+        font-size: 2em;
+        font-weight: 200;
+      }
+      .section--hero .button {
+        padding: 20px;
+        margin: 40px 0;
+      }
+      .section--hero video {
+        background-color: var(--primary-color);
+        width: 500px;
+      }
+
+      /* SECTION BG */
+      
+    </style>
+  </body>
+</html>
