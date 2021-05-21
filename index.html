@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="dns-prefetch" href="https://greensoftware.foundation" />
+    <link rel="preconnect" href="https://greensoftware.foundation" crossorigin />
 
     <title>Green Software Foundation</title>
     <meta
@@ -29,10 +31,13 @@
       name="twitter:description"
       content="The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling and best practices for building green software"
     />
-    <meta name="twitter:image:src" content="https://greensoftware.foundation/assets/background/Green-Software_Sc_10.png" />
+    <meta
+      name="twitter:image:src"
+      content="https://greensoftware.foundation/assets/background/Green-Software_Sc_10.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <meta name="theme-color" content="#008575">
+    <meta name="theme-color" content="#008575" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
@@ -242,6 +247,14 @@
       </section>
       <section class="section--join">
         <h3>How to join?</h3>
+        <p>
+          The Green Software Foundation is a diverse community of organizations, representing academia, for-profits and
+          non-profits all sharing a mission to grow the field of Green Software Engineering. The Foundation is a neutral
+          space managed by the Linux Foundation and designed to enable collaboration. Currently we are only accepting
+          membership through an organisation, non-profit or for-profit. Please join the mailing list at the top of the
+          page to learn when individual contributor membership is opened up. Click here to apply for membership to
+          contribute this effort.
+        </p>
         <a
           class="button"
           href="https://share.hsforms.com/1EpGQDyibRdyent7eTPJyNA4tvhy"
@@ -277,12 +290,28 @@
         <nav role="navigation">
           <ul>
             <li>
-              <a title="Contact Us" href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy">Contact Us</a>
+              <a
+                target="_blank"
+                rel="noopener"
+                title="Contact Us"
+                href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy"
+                >Contact Us</a
+              >
             </li>
             <li>
-              <a title="Privacy & Cookies" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & Cookies</a>
+              <a
+                target="_blank"
+                rel="noopener"
+                title="Privacy & Cookies"
+                href="https://go.microsoft.com/fwlink/?LinkId=521839"
+                >Privacy & Cookies</a
+              >
             </li>
-            <li><a title="Terms of Use" href="https://www.microsoft.com/legal/terms-of-use">Terms of Use</a></li>
+            <li>
+              <a target="_blank" rel="noopener" title="Terms of Use" href="https://www.microsoft.com/legal/terms-of-use"
+                >Terms of Use</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -315,8 +344,8 @@
 
       :root {
         --primary-color: #008575;
-        --seconday-color: #24917b;
-        --tertiary-color: #2b8f7a;
+        --secondary-color: #134e44;
+        --tertiary-color: #4d8376;
         --page-width: 1200px;
       }
 
@@ -336,6 +365,18 @@
         background-repeat: no-repeat;
         background-size: contain;
       }
+      body::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: var(--primary-color);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--secondary-color);
+        border-radius: 20px;
+      }
       p {
         font-weight: 100;
       }
@@ -344,7 +385,8 @@
       h3,
       h4,
       h5,
-      h6 {
+      h6,
+      b {
         font-family: "Montserrat-Bold", "Helvetica Neue", sans-serif;
       }
 
@@ -358,7 +400,7 @@
         transition: all 0.4s;
       }
       .button:hover {
-        background-color: var(--tertiary-color);
+        background-color: var(--secondary-color);
       }
 
       /* WAVES */
@@ -367,7 +409,7 @@
         opacity: 0.53;
       }
       path.b {
-        fill: var(--seconday-color);
+        fill: var(--secondary-color);
         opacity: 0.3;
       }
       path.c {
@@ -536,6 +578,7 @@
       section p {
         line-height: 25px;
         padding: 10px 0;
+        text-align: justify;
       }
 
       /* SECTION HERO */
@@ -590,7 +633,7 @@
 
       .section--members li {
         margin: 5px;
-        height: 70px;
+        height: 90px;
         display: flex;
         align-content: center;
         align-items: center;
@@ -609,7 +652,6 @@
         height: 100%;
         text-align: center;
       }
-
 
       .section--members li img {
         height: 100%;
