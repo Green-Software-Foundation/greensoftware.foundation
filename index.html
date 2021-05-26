@@ -113,6 +113,7 @@
       var ml_account = ml("accounts", "3172990", "d6u7p8a8b7", "load");
     </script>
     <!-- End MailerLite Universal -->
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>    
   </head>
   <body>
     <svg class="background-wave--header" xmlns="http://www.w3.org/2000/svg">
@@ -191,13 +192,21 @@
           </button>
         </article>
         <article>
-          <video controls width="600">
+          <!-- <video controls width="600">
             <source
               src="assets/videos//2021.05.19_Green Software_v2.mp4"
               type="video/mp4"
             />
             Sorry, your browser doesn't support embedded videos.
-          </video>
+          </video> -->
+
+          <div class="video">
+            <div class='embed-container'>
+              <iframe src='https://www.youtube.com/embed/59Y9lgYyQYo' frameborder='0' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+            </div>  
+          </div>
+
         </article>
       </section>
       <section class="section--what">
@@ -868,7 +877,7 @@
         margin: 40px 0;
         text-transform: uppercase;
       }
-      .section--hero video {
+      .section--hero .video {
         background-color: var(--primary-color);
         max-width: 800px;
         width: 90vw;
