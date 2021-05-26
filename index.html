@@ -541,9 +541,19 @@
     </svg>
     
     <footer>    
+      <div class="footer--body">
+        <p>Copyright © 2021 Joint Development Foundation Projects, LLC, Green Software Foundation Series</p>
+      </div>
       <div class="footer--content">
         <nav role="navigation">
           <ul>
+            <li>
+              <a
+                title="Home"
+                href="/"
+                >Home</a
+              >
+            </li>            
             <li>
               <a
                 target="_blank"
@@ -557,23 +567,16 @@
               <a
                 target="_blank"
                 rel="noopener"
-                title="Privacy & Cookies"
-                href="/privacy/"
-                >Privacy & Cookies</a
-              >
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener"
-                title="Terms of Use"
+                title="Terms of Use, Privacy Policy and Cookie Policy."
                 href="/terms/"
-                >Terms of Use</a
-              >
-            </li>          
+              >Terms of Use, Privacy Policy and Cookie Policy.</a>
+            </li>     
           </ul>
         </nav>
       </div>
+      <div class="footer--body">
+        <p>The Joint Development Foundation Projects, LLC is an affiliate of the Linux Foundation.</p>
+      </div>      
     </footer>
 
     <style>
@@ -1018,6 +1021,11 @@
 
       .footer--content .logo {
         transform: scale(0.6);
+      }
+
+      .footer--body {
+        text-align: center;
+        color: white;
       }
 
       /* MEDIA */
