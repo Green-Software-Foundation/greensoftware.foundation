@@ -1,0 +1,32 @@
+header {
+  padding: 1.75rem 0;
+  .main-navbar {
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      .nav-menu-item {
+        margin-bottom: 0;
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+        &.active {
+          a {
+            color: var(--primary);
+          }
+        }
+        a {
+          text-decoration: none;
+          color: var(--black);
+        }
+        .caret-icon {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    .cta-wrapper {
+      button {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
