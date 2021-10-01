@@ -1,7 +1,12 @@
 .page-layout {
-  max-width: 272px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+
+  // Tablet and larger
+  @media (min-width: 640px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   // Tablet
   @media (min-width: 640px) and (max-width: 1280px) {

@@ -1,0 +1,111 @@
+.homepage {
+  .section1 {
+    min-height: 515px;
+    .main-text {
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      p {
+        font-size: 1.25rem;
+        line-height: normal;
+        text-align: center;
+        color: var(--primary-darker);
+        a {
+          text-decoration: none;
+          color: inherit;
+          position: relative;
+          white-space: nowrap;
+          &:hover {
+            &::after {
+              height: 1em;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            height: 0.3em;
+            width: 100%;
+            background: var(--accent1);
+            left: 0;
+            bottom: 0.2em;
+            z-index: -1;
+            transition: height 250ms;
+          }
+        }
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin: 0;
+      }
+    }
+    .newsletter-form {
+      input {
+        flex: 1;
+        margin-right: 0.5rem;
+        max-width: 272px;
+      }
+    }
+    .illustration-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 667px;
+      overflow: hidden;
+      background-image: url(../../assets/illustrations/homepage-hero_mobile.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      z-index: -1;
+    }
+  }
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    .section1 {
+      min-height: 872px;
+
+      .illustration-wrapper {
+        height: 1024px;
+        background-image: url(../../assets/illustrations/homepage-hero_tablet.svg);
+      }
+    }
+  }
+
+  // Tablet and larger
+  @media (min-width: 640px) {
+    .section1 {
+      .main-text {
+        margin-top: 6rem;
+        p {
+          font-size: 2rem;
+          font-size: 2rem;
+          max-width: 800px;
+          margin: auto;
+          margin-bottom: 1rem;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  // Desktop and larger
+  @media (min-width: 1280px) {
+    .section1 {
+      min-height: 832px;
+      .main-text {
+        margin-top: 3rem;
+      }
+      .illustration-wrapper {
+        height: 440px;
+        background-size: cover;
+        top: 503px;
+        background-image: url(../../assets/illustrations/homepage-hero_desktop.svg);
+      }
+    }
+  }
+}

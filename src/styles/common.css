@@ -109,6 +109,9 @@ button {
   cursor: pointer;
   color: var(--black);
 }
+button:focus:not(:focus-visible) {
+  outline: none;
+}
 a {
   color: var(--accent2-dark);
   background-color: transparent;
@@ -117,6 +120,18 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+}
+input[type="text"] {
+  padding: 0.75em 1em;
+  font-size: 0.875rem;
+  border: 1px solid var(--gray-dark);
+  border-radius: 0.5em;
+  color: var(--black);
+}
+textarea:focus,
+input:focus {
+  border-color: var(--primary);
+  outline: 0 none;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -641,5 +656,11 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+/*Tablet or larger*/
+@media (min-width: 640px) {
+  input[type="text"] {
+    font-size: 1rem;
   }
 }

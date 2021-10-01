@@ -7,14 +7,15 @@ import Navbar from "./navbar";
 // Fonts
 import "@fontsource/nunito-sans";
 import "@fontsource/nunito-sans/800.css";
+import "@fontsource/nunito-sans/900.css";
 
 // Styles
 import "../styles/common.css";
 import "../styles/components/layout.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageName }) => {
   return (
-    <main className="page-layout">
+    <main className={`page-layout ${pageName}`}>
       <Navbar />
       {children}
     </main>

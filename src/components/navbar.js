@@ -10,6 +10,7 @@ import "../styles/components/navbar.scss";
 // Assets
 import Logo from "../assets/icons/logo.inline.svg";
 import CaretDown from "../assets/icons/caret-down.inline.svg";
+import HamburgerMenu from "../assets/icons/hamburger-menu.inline.svg";
 
 // Menu Data
 const menuData = [
@@ -27,10 +28,10 @@ const menuData = [
   {
     title: "Working Groups",
     submenu: [
-      { title: "Standards", to: "/standards" },
-      { title: "Trademark", to: "/trademark" },
-      { title: "Innovation", to: "/innovation" },
-      { title: "Community", to: "/community" },
+      { title: "Standards", to: "/working-groups/standards" },
+      { title: "Trademark", to: "/working-groups/trademark" },
+      { title: "Innovation", to: "/working-groups/innovation" },
+      { title: "Community", to: "/working-groups/community" },
     ],
   },
   {
@@ -85,6 +86,11 @@ const Navbar = ({ currentPage }) => {
               JOIN US
             </Button>
           </Link>
+        </div>
+        <div className="hamburger-menu">
+          <button>
+            <HamburgerMenu />
+          </button>
         </div>
       </nav>
     </header>
