@@ -81,11 +81,9 @@ const Navbar = ({ currentPage }) => {
           </ul>
         </div>
         <div className="cta-wrapper">
-          <Link to="/join-us">
-            <Button color="accent2" edgeColor="accent2-dark">
-              JOIN US
-            </Button>
-          </Link>
+          <Button color="accent2" edgeColor="accent2-dark" to="/join-us">
+            JOIN US
+          </Button>
         </div>
         <div className="hamburger-menu">
           <button>

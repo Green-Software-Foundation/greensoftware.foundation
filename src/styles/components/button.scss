@@ -7,6 +7,8 @@
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
+  display: inline-block;
+  text-decoration: none;
   &:hover {
     filter: brightness(110%);
     .button-front {

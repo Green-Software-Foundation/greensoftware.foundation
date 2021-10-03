@@ -50,11 +50,9 @@ const Section2 = () => (
         Green software is software that is responsible for emitting fewer
         greenhouse gases. Our focus is reduction, not neutralisation.
       </p>
-      <Link to="/manifesto">
-        <Button color="primary" edgeColor="primary-darker">
-          Check Manifesto
-        </Button>
-      </Link>
+      <Button to="/manifesto" color="primary" edgeColor="primary-darker">
+        Check Manifesto
+      </Button>
     </div>
   </section>
 );
@@ -151,16 +149,15 @@ const Section6 = () => (
         Foundation, from joining as members to participating in our global
         community.
       </p>
-      <Link to="/join-us">
-        <Button
-          color="gray-lightest-2"
-          edgeColor="gray-dark"
-          textColor="black"
-          fontWeight={600}
-        >
-          Join us
-        </Button>
-      </Link>
+      <Button
+        to="/join-us"
+        color="gray-lightest-2"
+        edgeColor="gray-dark"
+        textColor="black"
+        fontWeight={600}
+      >
+        Join us
+      </Button>
     </div>
   </section>
 );
