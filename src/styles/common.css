@@ -1,4 +1,5 @@
 :root {
+  --primary-darkest: #002c2a;
   --primary-darker: #003734;
   --primary-dark: #00524f;
   --primary: #006d69;
@@ -28,15 +29,26 @@
   --gray: #ededed;
   --gray-light: #f6f6f6;
   --gray-lighter: #fbfbfb;
+  --gray-lightest-2: #fdfdfd;
+  --gray-lightest-1: #fefefe;
 
   --black: #3c3c3c;
   --black-light: rgba(60, 60, 60, 0.5);
   --black-lighter: rgba(60, 60, 60, 0.25);
   --black-lightest-2: rgba(60, 60, 60, 0.1);
   --black-lightest-1: rgba(60, 60, 60, 0.05);
+
+  --white: #fff;
+  --white-lighter: rgba(255, 255, 255, 0.5);
+  --white-lightest-1: rgba(255, 255, 255, 0.25);
 }
 
 /* Common Classes */
+.flex-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 .flex-center-between {
   display: flex;
   align-items: center;
@@ -46,6 +58,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.green-uppercase-title {
+  color: var(--primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
 }
 /* CSS Reset */
 html {
@@ -154,7 +171,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -191,7 +208,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -211,7 +228,7 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 hr {
   box-sizing: content-box;
@@ -276,7 +293,7 @@ fieldset {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 legend {
   box-sizing: border-box;
@@ -331,7 +348,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -346,7 +363,7 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -361,7 +378,7 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -376,7 +393,7 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -391,7 +408,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -406,7 +423,7 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 ul {
   margin-left: 1.45rem;
@@ -416,7 +433,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -428,7 +445,7 @@ ol {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -440,7 +457,7 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 dd {
   margin-left: 0;
@@ -450,7 +467,7 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 p {
   margin-left: 0;
@@ -460,13 +477,14 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
+  line-height: 1.45;
 }
 pre {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
@@ -483,7 +501,7 @@ table {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
@@ -497,7 +515,7 @@ blockquote {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 form {
   margin-left: 0;
@@ -507,7 +525,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 noscript {
   margin-left: 0;
@@ -517,7 +535,7 @@ noscript {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 iframe {
   margin-left: 0;
@@ -527,7 +545,7 @@ iframe {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 address {
   margin-left: 0;
@@ -537,7 +555,7 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 b {
   font-weight: bold;
@@ -660,6 +678,9 @@ pre tt:after {
 }
 /*Tablet or larger*/
 @media (min-width: 640px) {
+  .green-uppercase-title {
+    font-size: 1rem;
+  }
   input[type="text"] {
     font-size: 1rem;
   }

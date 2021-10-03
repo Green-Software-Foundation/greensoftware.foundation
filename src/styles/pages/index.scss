@@ -1,6 +1,7 @@
 .homepage {
   .section1 {
     min-height: 515px;
+    margin-bottom: 4rem;
     .main-text {
       margin-top: 2rem;
       margin-bottom: 2.5rem;
@@ -62,20 +63,187 @@
       z-index: -1;
     }
   }
+  .section2 {
+    margin-bottom: 5rem;
+    .illustration-wrapper {
+      margin-bottom: 2rem;
+    }
+    .content-wrapper {
+      text-align: center;
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .section3 {
+    text-align: center;
+    margin-bottom: 5rem;
+    .values-wrapper {
+      .value-item {
+        text-align: left;
+        position: relative;
+        img {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .text {
+          padding-left: 3.5rem;
+          padding-top: 3.5rem;
+          strong {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary);
+          }
+          span {
+            display: block;
+            color: var(--primary-dark);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .section4,
+  .section5 {
+    text-align: center;
+    margin-bottom: 5rem;
+    .logos-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      .logo {
+        margin: 0;
+        &.horizontal {
+          img {
+            max-width: 100%;
+          }
+        }
+        &.vertical {
+          img {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .section4 {
+    .logos-wrapper {
+      flex-direction: column;
+      .logo {
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+        &.horizontal {
+          width: 60%;
+        }
+        &.vertical {
+          height: 100px;
+        }
+      }
+    }
+  }
+  .section5 {
+    .logos-wrapper {
+      .logo {
+        margin: 1.5rem;
+        &.horizontal {
+          width: calc(50% - 3rem);
+        }
+        &.vertical {
+          height: 50px;
+        }
+      }
+    }
+  }
+  .section6 {
+    margin-bottom: 5rem;
+    background-color: var(--primary-dark);
+    padding: 3rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    .pattern {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../../assets/pattern.svg);
+      z-index: 1;
+      opacity: 0.1;
+    }
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
   // Tablet
   @media (min-width: 640px) and (max-width: 1280px) {
     .section1 {
-      min-height: 872px;
-
+      min-height: 813px;
       .illustration-wrapper {
         height: 1024px;
         background-image: url(../../assets/illustrations/homepage-hero_tablet.svg);
+      }
+    }
+    .section2 {
+      .content-wrapper {
+        p {
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    .section4 {
+      .logos-wrapper {
+        .logo {
+          margin: 2rem;
+          &.horizontal {
+            width: calc(50% - 4rem);
+          }
+          &.vertical {
+            height: 120px;
+          }
+        }
+      }
+    }
+    .section5 {
+      .logos-wrapper {
+        .logo {
+          margin: 1.5rem;
+          &.horizontal {
+            width: calc(25% - 3rem);
+          }
+          &.vertical {
+            height: 70px;
+          }
+        }
       }
     }
   }
 
   // Tablet and larger
   @media (min-width: 640px) {
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5,
+    .section6 {
+      margin-bottom: 8rem;
+    }
     .section1 {
       .main-text {
         margin-top: 6rem;
@@ -91,12 +259,46 @@
         }
       }
     }
+    .section2,
+    .section3 {
+      .content-wrapper {
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .section3 {
+      .values-wrapper .value-item .text {
+        strong {
+          font-size: 5rem;
+        }
+        span {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .section4 {
+      .logos-wrapper {
+        flex-direction: row;
+        .logo.horizontal.isSVG {
+          max-height: 60px;
+        }
+      }
+    }
+    .section6 {
+      padding: 4rem;
+      .content-wrapper {
+        h3 {
+          font-size: 2.25rem;
+        }
+      }
+    }
   }
 
   // Desktop and larger
   @media (min-width: 1280px) {
     .section1 {
-      min-height: 832px;
+      min-height: 778px;
       .main-text {
         margin-top: 3rem;
       }
@@ -105,6 +307,66 @@
         background-size: cover;
         top: 503px;
         background-image: url(../../assets/illustrations/homepage-hero_desktop.svg);
+      }
+    }
+    .section2 {
+      display: flex;
+      align-items: center;
+
+      .illustration-wrapper {
+        width: 70%;
+        margin-right: 2.5rem;
+        svg {
+          width: 100%;
+          max-width: 350px;
+          height: auto;
+        }
+      }
+      .content-wrapper {
+        text-align: left;
+      }
+    }
+    .section3 {
+      display: flex;
+      align-items: center;
+      .content-wrapper {
+        text-align: left;
+        margin-right: 2.5rem;
+      }
+    }
+    .section4 {
+      .logos-wrapper {
+        .logo {
+          margin: 2rem;
+          &.horizontal {
+            width: calc(33.33333% - 4rem);
+          }
+          &.vertical {
+            height: 150px;
+          }
+        }
+      }
+    }
+    .section5 {
+      .logos-wrapper {
+        .logo {
+          margin: 2.5rem;
+          &.horizontal {
+            width: calc(20% - 5rem);
+          }
+          &.vertical {
+            height: 90px;
+          }
+        }
+      }
+    }
+    .section6 {
+      .content-wrapper {
+        p {
+          max-width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
   }

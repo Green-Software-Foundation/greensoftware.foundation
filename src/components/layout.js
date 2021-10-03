@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 // Components
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 // Fonts
 import "@fontsource/nunito-sans";
@@ -15,10 +16,13 @@ import "../styles/components/layout.scss";
 
 const Layout = ({ children, pageName }) => {
   return (
-    <main className={`page-layout ${pageName}`}>
-      <Navbar />
-      {children}
-    </main>
+    <>
+      <main className={`page-layout ${pageName}`}>
+        <Navbar />
+        {children}
+      </main>
+      <Footer />
+    </>
   );
 };
 
