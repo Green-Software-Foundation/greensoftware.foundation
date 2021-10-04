@@ -11,6 +11,7 @@ import section3Background from "../assets/illustrations/homepage-section3-backgr
 
 // Fonts
 import "@fontsource/nunito-sans/600.css";
+
 // Styles
 import "../styles/pages/index.scss";
 

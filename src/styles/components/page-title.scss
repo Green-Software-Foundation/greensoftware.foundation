@@ -1,0 +1,50 @@
+.page-title {
+  position: relative;
+  height: 105px;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  margin: 2.25rem 0 4rem 0;
+  .pattern {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+  h1 {
+    font-weight: 900;
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    .suptitle {
+      font-weight: normal;
+      color: var(--black);
+      font-size: 0.75rem;
+      display: block;
+    }
+  }
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    height: 160px;
+    h1 {
+      font-size: 2.25rem;
+      .suptitle {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    height: 230px;
+    h1 {
+      font-size: 3rem;
+      .suptitle {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

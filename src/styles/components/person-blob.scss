@@ -1,0 +1,99 @@
+.person-blob {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 0.75rem;
+  .image-blob-wrapper {
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--accent1-lighter);
+    position: relative;
+    .person-photo {
+      width: 93%;
+      height: 93%;
+      border-radius: 50%;
+      overflow: hidden;
+      mix-blend-mode: multiply;
+    }
+    .pattern {
+      background: url(../../assets/pattern.svg);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      opacity: 0.5;
+    }
+  }
+  .person-data-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h5 {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    h6 {
+      font-weight: 600;
+      font-size: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+    .company {
+      a,
+      p {
+        color: var(--black-light);
+        text-decoration: none;
+        font-size: 0.75rem;
+        margin: 0;
+      }
+    }
+    .socials {
+      margin-top: 0.5rem;
+      a {
+        color: var(--primary-light);
+        svg {
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    grid-template-columns: 140px 188px;
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    .image-blob-wrapper {
+      height: 140px;
+    }
+    .person-data-wrapper {
+      h5 {
+        font-size: 1.25rem;
+      }
+      h6 {
+        font-size: 1rem;
+      }
+      .company {
+        a,
+        p {
+          font-size: 1rem;
+        }
+      }
+      .socials a {
+        svg {
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    grid-template-columns: 140px 232px;
+  }
+}
