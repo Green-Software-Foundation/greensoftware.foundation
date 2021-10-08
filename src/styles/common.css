@@ -59,6 +59,10 @@
   align-items: center;
   justify-content: center;
 }
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
 .green-uppercase-title {
   color: var(--primary);
   font-size: 0.875rem;
@@ -240,8 +244,9 @@ hr {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: var(--gray);
   border: none;
   height: 1px;
 }
