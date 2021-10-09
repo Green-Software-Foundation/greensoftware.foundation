@@ -1,0 +1,76 @@
+.manifesto {
+  .main-paragraph {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .mission-vision-wrapper {
+    text-align: center;
+    margin-bottom: 8rem;
+    .mv-item:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+  .topic-wrapper {
+    margin-bottom: 5rem;
+    .illustration-wrapper {
+      text-align: center;
+    }
+    .content-wrapper {
+      h6 {
+        font-weight: normal;
+        font-size: 1rem;
+        color: var(--primary);
+      }
+    }
+  }
+
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    .main-paragraph {
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mission-vision-wrapper {
+      .mv-item {
+        max-width: 250px;
+      }
+    }
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    .mission-vision-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      .mv-item {
+        max-width: 250px;
+      }
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    .topic-wrapper {
+      &:nth-of-type(even) {
+        .illustration-wrapper {
+          order: 2;
+        }
+        .content-wrapper {
+          order: 1;
+        }
+      }
+      .illustration-wrapper {
+        width: 50%;
+        order: 1;
+        img {
+          width: 70%;
+        }
+      }
+      .content-wrapper {
+        width: 50%;
+        order: 2;
+      }
+    }
+  }
+}
