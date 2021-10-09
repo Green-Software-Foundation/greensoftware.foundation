@@ -27,6 +27,7 @@
     "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-source-datocms": "^2.6.18",
     "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
     "react-datocms": "^1.6.3",
