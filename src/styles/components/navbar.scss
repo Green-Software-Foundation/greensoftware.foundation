@@ -7,9 +7,10 @@ header {
       margin: 0;
       .nav-menu-item {
         margin-bottom: 0;
-        &:not(:last-of-type) {
-          margin-right: 2rem;
-        }
+        // &:not(:last-of-type) {
+        //   margin-right: 2rem;
+        // }
+        padding: 1rem;
         &.active {
           a {
             color: var(--primary);
@@ -21,6 +22,49 @@ header {
         }
         .caret-icon {
           margin-left: 0.5rem;
+        }
+        &.has-submenu {
+          position: relative;
+          &:hover,
+          button:focus {
+            .submenu-wrapper {
+              visibility: visible;
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .submenu-wrapper {
+            position: absolute;
+            background: var(--white);
+            margin: 0;
+            list-style: none;
+            left: -1rem;
+            top: 3rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            z-index: 99;
+            width: 200px;
+            box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.1),
+              0px 4px 20px -2px rgba(0, 55, 53, 0.08);
+            border-radius: 0.5rem;
+            padding: 1rem 0;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: transform 0.25s, opacity 0.25s;
+            li {
+              margin: 0;
+              text-align: left;
+              &:hover {
+                background: var(--primary-lightest-1);
+              }
+              a {
+                color: var(--primary-dark);
+                display: block;
+                padding: 0.5rem 2rem;
+              }
+            }
+          }
         }
       }
     }

@@ -9,7 +9,6 @@ import "../styles/components/navbar.scss";
 
 // Assets
 import Logo from "../assets/icons/logo.inline.svg";
-import CaretDown from "../assets/icons/caret-down.inline.svg";
 import HamburgerMenu from "../assets/icons/hamburger-menu.inline.svg";
 
 // Menu Data
@@ -42,9 +41,9 @@ const menuData = [
     title: "Resources",
     submenu: [
       { title: "Meetups", href: "/standards" },
-      { title: "Discourse", to: "/trademark" },
-      { title: "Podcast", to: "/innovation" },
-      { title: "GitHub", to: "/community" },
+      { title: "Discourse", href: "/trademark" },
+      { title: "Podcast", href: "/innovation" },
+      { title: "GitHub", href: "/community" },
     ],
   },
   {
@@ -53,7 +52,7 @@ const menuData = [
   },
 ];
 
-const Navbar = ({ currentPage }) => {
+const Navbar = () => {
   return (
     <header>
       <nav className="main-navbar flex-center-between">
@@ -65,16 +64,35 @@ const Navbar = ({ currentPage }) => {
         <div>
           <ul className="nav-menu flex-center-between">
             {menuData.map((menuItem) => (
-              <li className="nav-menu-item" key={menuItem.title}>
-                {menuItem.to ? (
-                  <Link to={menuItem.to}>{menuItem.title}</Link>
-                ) : (
+              <li
+                className={`nav-menu-item ${
+                  menuItem.submenu ? "has-submenu" : ""
+                }`}
+                key={menuItem.title}
+              >
+                {menuItem.submenu ? (
                   <button>
                     <span>{menuItem.title}</span>
-                    <span className="caret-icon">
-                      <CaretDown />
-                    </span>
+                    <ul className="submenu-wrapper">
+                      {menuItem.submenu.map((submenuItem) => (
+                        <li key={submenuItem.title}>
+                          {submenuItem.to ? (
+                            <Link to={submenuItem.to}>{submenuItem.title}</Link>
+                          ) : (
+                            <a
+                              href=""
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {submenuItem.title}
+                            </a>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
                   </button>
+                ) : (
+                  <Link to={menuItem.to}>{menuItem.title}</Link>
                 )}
               </li>
             ))}
