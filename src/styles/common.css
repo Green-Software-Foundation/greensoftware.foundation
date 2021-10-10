@@ -41,9 +41,11 @@
   --white: #fff;
   --white-lighter: rgba(255, 255, 255, 0.5);
   --white-lightest-1: rgba(255, 255, 255, 0.25);
+
+  --reach-tooltip: 1;
 }
 
-/* Common Classes */
+/* Common CSS */
 .flex-start-center {
   display: flex;
   align-items: flex-start;
@@ -67,6 +69,21 @@
   color: var(--primary);
   font-size: 0.875rem;
   text-transform: uppercase;
+}
+[data-reach-tooltip] {
+  z-index: 9;
+  pointer-events: none;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.1);
+  white-space: nowrap;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--primary-darker);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 800;
+  border: solid 1px var(--primary-darkest);
 }
 /* CSS Reset */
 html {

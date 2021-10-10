@@ -22,7 +22,6 @@ const MVItem = ({ icon, title, text }) => (
 );
 
 const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
-  console.log(data);
   return (
     <Layout pageName="manifesto">
       <PageTitle>manifesto</PageTitle>

@@ -1,0 +1,21 @@
+.member-blob-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--accent1-lighter);
+  position: relative;
+  .person-photo {
+    width: 93%;
+    height: 93%;
+    border-radius: 50%;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    height: 5rem;
+    width: 5rem;
+  }
+}
