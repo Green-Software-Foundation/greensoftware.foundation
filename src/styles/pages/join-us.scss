@@ -1,0 +1,117 @@
+.join-us {
+  .disclaimer-wrapper {
+    margin-bottom: 4rem;
+    background-color: var(--accent1-lighter);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--accent1);
+    color: var(--accent1-darker);
+    font-size: 0.875rem;
+    text-align: center;
+    .icon {
+      color: var(--accent1-dark);
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .section-title {
+    color: var(--primary);
+  }
+  .section1 {
+    text-align: center;
+    .illustration-wrapper {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+  }
+  .section2 {
+    h2 {
+      color: var(--primary);
+    }
+    .content-wrapper {
+      list-style: none;
+      margin: 0;
+      h3 {
+        font-size: 1.125rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        &::before {
+          content: attr(data-count);
+          font-size: 3rem;
+          color: var(--primary-light);
+          opacity: 0.5;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .section3 {
+    .membership-benefits-mobile {
+      .card-wrapper {
+        background: var(--white);
+        border: 1px solid var(--accent1-light);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        &:not(:last-of-type) {
+          margin-bottom: 1.5rem;
+        }
+        .title-wrapper {
+          margin-bottom: 1.5rem;
+          h4 {
+            margin: 0;
+            color: var(--primary);
+            margin-left: 0.5rem;
+          }
+        }
+        ul {
+          list-style: none;
+          margin: 0;
+          li {
+            margin-bottom: 1.25rem;
+            .icon {
+              color: var(--accent1);
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section4 {
+    margin-bottom: 4rem;
+    .membership-fees-mobile {
+      hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .fee-explained {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+        h5 {
+          color: var(--primary-dark);
+          margin: 0;
+        }
+        strong {
+          color: var(--primary);
+        }
+      }
+      .disclamer {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .section5 {
+    text-align: center;
+    .illustration-wrapper {
+      margin-bottom: 3rem;
+    }
+  }
+}
