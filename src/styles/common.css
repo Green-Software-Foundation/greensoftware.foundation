@@ -437,6 +437,14 @@ h6 {
   font-size: 0.78405rem;
   line-height: 1.1;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+}
 hgroup {
   margin-left: 0;
   margin-right: 0;

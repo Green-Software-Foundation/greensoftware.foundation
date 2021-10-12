@@ -51,6 +51,7 @@ const benefits = {
 
 const memberships = [
   {
+    id: "steering",
     title: "Steering",
     benefits: [
       "vote_S",
@@ -64,11 +65,13 @@ const memberships = [
     icon: <SteeringIcon />,
   },
   {
+    id: "general",
     title: "General",
     benefits: ["chair", "participate", "create", "vote_W"],
     icon: <GeneralIcon />,
   },
   {
+    id: "contributer",
     title: "* Contributer",
     benefits: ["participate"],
     icon: <AllMembershipsIcon />,
@@ -175,7 +178,7 @@ const Section2 = () => (
 const Section3Mobile = () => (
   <div className="membership-benefits-mobile">
     {memberships.map((membership) => (
-      <div key={membership.title} className="card-wrapper">
+      <div key={membership.id} className="card-wrapper">
         <div className="title-wrapper flex-align-center">
           <span className="icon">{membership.icon}</span>
           <h4>{membership.title}</h4>
@@ -194,10 +197,40 @@ const Section3Mobile = () => (
     ))}
   </div>
 );
+
 const Section3 = () => (
   <section className="section3">
     <h3 className="section-title">Membership Benefits</h3>
     <Section3Mobile />
+    <div className="membership-benefits">
+      <h4 style={{ gridArea: `title`, textAlign: "left" }}>Activity</h4>
+      {memberships.map((membership) => (
+        <React.Fragment key={membership.id}>
+          <span style={{ gridArea: `${membership.id}-icon` }} className="icon">
+            {membership.icon}
+          </span>
+          <h4 style={{ gridArea: `title-${membership.id[0]}` }}>
+            {membership.title}
+          </h4>
+          {membership.benefits.map((benefit) => (
+            <span
+              style={{ gridArea: `check-${membership.id[0]}-${benefit}` }}
+              className="check-icon flex-center-center"
+            >
+              <CheckCircleIcon />
+            </span>
+          ))}
+        </React.Fragment>
+      ))}
+      {Object.keys(benefits).map((key, i) => (
+        <React.Fragment key={key}>
+          <hr style={{ gridArea: `hr-${i}` }} />
+          <p style={{ gridArea: key }} key={key}>
+            {benefits[key]}
+          </p>
+        </React.Fragment>
+      ))}
+    </div>
   </section>
 );
 
@@ -232,7 +265,32 @@ const Section4Mobile = () => (
 const Section4 = () => (
   <section className="section4">
     <h3 className="section-title">Membership Fees</h3>
+    <p className="main-description">
+      Since we are a part of the Linux Foundation, membership of the GSF
+      requires that you are at least a silver member of the Linux Foundation. If
+      you are already a member of the Linux Foundation, you can ignore the LF
+      fees in the table below. All our fees are yearly.
+    </p>
     <Section4Mobile />
+    <div className="membership-fees">
+      <h4>Membership type</h4>
+      <h4>GSF</h4>
+      <h4>LF*</h4>
+      <h4>Total</h4>
+      <hr style={{ gridArea: "2/1/3/5" }} />
+      {membershipFees.map((fee, i) => (
+        <React.Fragment key={fee.type}>
+          <p>{fee.type}</p>
+          <strong>{fee.GSF}</strong>
+          <strong>{fee.LF}</strong>
+          <strong>{fee.total}</strong>
+        </React.Fragment>
+      ))}
+    </div>
+    <hr />
+    <small>
+      * Only needed if you are not already a Linux Foundation Member
+    </small>
   </section>
 );
 

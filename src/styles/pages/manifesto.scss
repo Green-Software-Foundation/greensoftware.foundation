@@ -52,6 +52,8 @@
   // Desktop and Larger
   @media (min-width: 1280px) {
     .topic-wrapper {
+      display: flex;
+      align-items: center;
       &:nth-of-type(even) {
         .illustration-wrapper {
           order: 2;

@@ -33,7 +33,7 @@ const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
         <MVItem icon={<VisionIcon />} title="Vision" text={data.vision} />
       </div>
       {data.manifestoTopic.map((topic) => (
-        <section key={topic.id} className="topic-wrapper flex-align-center">
+        <section key={topic.id} className="topic-wrapper ">
           <div className="illustration-wrapper">
             <img src={topic.illustration.url} alt={topic.title} />
           </div>

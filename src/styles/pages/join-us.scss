@@ -52,6 +52,10 @@
       }
     }
   }
+  .section3 .membership-benefits,
+  .section4 .membership-fees {
+    display: none;
+  }
   .section3 {
     .membership-benefits-mobile {
       .card-wrapper {
@@ -86,11 +90,17 @@
   }
   .section4 {
     margin-bottom: 4rem;
+    strong {
+      color: var(--primary);
+    }
+    .main-description {
+      margin-bottom: 2rem;
+    }
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
     .membership-fees-mobile {
-      hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
       .fee-explained {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -98,9 +108,6 @@
         h5 {
           color: var(--primary-dark);
           margin: 0;
-        }
-        strong {
-          color: var(--primary);
         }
       }
       .disclamer {
@@ -112,6 +119,105 @@
     text-align: center;
     .illustration-wrapper {
       margin-bottom: 3rem;
+    }
+  }
+
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    .section1 {
+      p {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    .disclaimer-wrapper {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      column-gap: 1.5rem;
+      text-align: left;
+      .icon {
+        margin-bottom: 0;
+        svg {
+          width: 32px;
+          height: auto;
+        }
+      }
+    }
+    .section2 {
+      .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+        h3 {
+          &::before {
+            margin-right: -1.25rem;
+          }
+        }
+      }
+    }
+    .section3 .membership-benefits-mobile,
+    .section4 .membership-fees-mobile {
+      display: none;
+    }
+    .section3 {
+      .membership-benefits {
+        display: grid;
+        column-gap: 1.5rem;
+        row-gap: 0;
+        grid-template-columns: 1fr repeat(3, 100px);
+        grid-template-areas:
+          "blank steering-icon general-icon contributer-icon"
+          "title title-s title-g title-c"
+          "hr-0 hr-0 hr-0 hr-0"
+          "vote_S check-s-vote_S check-g-vote_S check-c-vote_S"
+          "hr-1 hr-1 hr-1 hr-1"
+          "chair check-s-chair check-g-chair check-c-chair"
+          "hr-2 hr-2 hr-2 hr-2"
+          "participate check-s-participate check-g-participate check-c-participate"
+          "hr-3 hr-3 hr-3 hr-3"
+          "create check-s-create check-g-create check-c-create"
+          "hr-4 hr-4 hr-4 hr-4"
+          "vote_W check-s-vote_W check-g-vote_W check-c-vote_W"
+          "hr-5 hr-5 hr-5 hr-5"
+          "premium check-s-premium check-g-premium check-c-premium"
+          "hr-6 hr-6 hr-6 hr-6"
+          "speaking check-s-speaking check-g-speaking check-c-speaking"
+          "hr-7 hr-7 hr-7 hr-7";
+        h4,
+        .icon {
+          text-align: center;
+        }
+        h4 {
+          color: var(--primary-darker);
+        }
+        hr {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        .check-icon {
+          color: var(--accent1);
+        }
+      }
+    }
+    .section4 {
+      .membership-fees {
+        display: grid;
+        column-gap: 1.5rem;
+        row-gap: 0;
+        grid-template-columns: 1fr repeat(3, 100px);
+        hr {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 }
