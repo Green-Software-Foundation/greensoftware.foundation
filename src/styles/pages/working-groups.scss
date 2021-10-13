@@ -1,0 +1,55 @@
+.single-working-group {
+  section {
+    margin-bottom: 2rem;
+  }
+  .projects-section {
+    ul {
+      list-style: none;
+      margin: 0;
+      display: grid;
+      row-gap: 1rem;
+      li {
+        a {
+          text-decoration: none;
+          h4 {
+            color: var(--primary-dark);
+            position: relative;
+            padding-left: 0.5rem;
+            &:before {
+              content: "";
+              width: 1rem;
+              height: 1rem;
+              background: var(--accent1);
+              display: inline-block;
+              position: absolute;
+              z-index: -1;
+              left: 0;
+              top: -0.5rem;
+            }
+          }
+          p {
+            color: var(--black-light);
+            font-size: 0.875rem;
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    section {
+      margin-bottom: 4rem;
+    }
+  }
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    .projects-section {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+      }
+    }
+  }
+}

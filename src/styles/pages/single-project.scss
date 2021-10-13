@@ -20,24 +20,7 @@
       margin: 0;
     }
   }
-  .chairs-section {
-    margin-bottom: 2rem;
-    .chairs-blobs {
-      display: grid;
-      row-gap: 1.5rem;
-      column-gap: 1.5rem;
-    }
-  }
 
-  .members-section {
-    margin-bottom: 2rem;
-    .members-blobs {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      row-gap: 0.75rem;
-      column-gap: 0.75rem;
-    }
-  }
   .info-item {
     margin-bottom: 2rem;
     p:last-of-type {
@@ -59,12 +42,6 @@
         font-size: 1.25rem;
       }
     }
-
-    .chairs-section {
-      .chairs-blobs {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
   }
 
   // Tablet and Larger
@@ -74,13 +51,6 @@
     .members-section,
     .info-item {
       margin-bottom: 4rem;
-    }
-    .members-section {
-      .members-blobs {
-        grid-template-columns: repeat(auto-fit, 5rem);
-        row-gap: 1.5rem;
-        column-gap: 1.5rem;
-      }
     }
   }
 
@@ -96,11 +66,6 @@
       }
       p {
         font-size: 1.25rem;
-      }
-    }
-    .chairs-section {
-      .chairs-blobs {
-        grid-template-columns: repeat(3, 1fr);
       }
     }
   }

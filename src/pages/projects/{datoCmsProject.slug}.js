@@ -4,8 +4,8 @@ import { StructuredText } from "react-datocms";
 
 // Components
 import Layout from "../../components/layout";
-import PersonBlob from "../../components/person-blob";
-import MemberBlob from "../../components/member-blob";
+import ChairsSection from "../../components/chairs-section";
+import MembersSection from "../../components/members-section";
 
 // Styles
 import "../../styles/pages/single-project.scss";
@@ -22,28 +22,6 @@ const HeroSection = ({ illustration, title, workingGroup }) => (
         {workingGroup.title} Working Group
       </Link>
     </p>
-  </section>
-);
-
-const ChairsSection = ({ chairs }) => (
-  <section className="chairs-section">
-    <h6 className="green-uppercase-title">chairs</h6>
-    <div className="chairs-blobs">
-      {chairs.map((chair) => (
-        <PersonBlob key={chair.fullName} person={chair} />
-      ))}
-    </div>
-  </section>
-);
-
-const MembersSection = ({ members }) => (
-  <section className="members-section">
-    <h6 className="green-uppercase-title">members</h6>
-    <div className="members-blobs">
-      {members.map((member) => (
-        <MemberBlob key={member.fullName} member={member} />
-      ))}
-    </div>
   </section>
 );
 
