@@ -140,6 +140,9 @@
       grid-template-columns: 32px 1fr;
       column-gap: 1.5rem;
       text-align: left;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
       .icon {
         margin-bottom: 0;
         svg {
@@ -217,7 +220,58 @@
           margin-top: 0.5rem;
           margin-bottom: 0.5rem;
         }
+        strong {
+          text-align: center;
+        }
       }
+    }
+  }
+  // Tablet and Larger
+  @media (min-width: 1280px) {
+    .section1,
+    .section5 {
+      display: flex;
+      align-items: center;
+      .illustration-wrapper {
+        order: 2;
+        flex: 1;
+        svg {
+          width: 400px;
+          height: auto;
+        }
+      }
+      .content-wrapper {
+        order: 1;
+        text-align: left;
+        flex: 1;
+      }
+    }
+    .section2 {
+      h2 {
+        max-width: 50%;
+      }
+    }
+    .section3 .membership-benefits,
+    .section4 .membership-fees {
+      grid-template-columns: 2fr repeat(3, 1fr);
+    }
+    .section3 .membership-benefits {
+      hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .check-icon {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .section4 .membership-fees {
+      row-gap: 1rem;
+    }
+    .section5 {
+      margin-bottom: 4rem;
     }
   }
 }

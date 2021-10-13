@@ -274,9 +274,9 @@ const Section4 = () => (
     <Section4Mobile />
     <div className="membership-fees">
       <h4>Membership type</h4>
-      <h4>GSF</h4>
-      <h4>LF*</h4>
-      <h4>Total</h4>
+      <h4 style={{ textAlign: "center" }}>GSF</h4>
+      <h4 style={{ textAlign: "center" }}>LF*</h4>
+      <h4 style={{ textAlign: "center" }}>Total</h4>
       <hr style={{ gridArea: "2/1/3/5" }} />
       {membershipFees.map((fee, i) => (
         <React.Fragment key={fee.type}>
@@ -299,32 +299,34 @@ const Section5 = () => (
     <div className="illustration-wrapper">
       <ApplyIllustration />
     </div>
-    <h3 className="section-title">Applying For Membership</h3>
-    <p>
-      There are no minimum requirements for entry at the General or Contributor
-      level. However, at the Steering level, we insist that every member
-      organisation have a public commitment to sustainability or examples of
-      leadership in green software. More information can be found in our GSF
-      Steering Membership Policy.
-    </p>
-    <p>To start the application process, please fill out this form.</p>
-    <Button color="accent2" edgeColor="accent2-dark">
-      APPLY TO JOIN GSF
-    </Button>
-    <br />
-    <br />
-    <p>
-      If you would like to arrange a meeting to discuss more, we still ask that
-      you please fill out our{" "}
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy"
-      >
-        application form
-      </a>
-      , and we will get back to you to arrange a time.
-    </p>
+    <div className="content-wrapper">
+      <h3 className="section-title">Applying For Membership</h3>
+      <p>
+        There are no minimum requirements for entry at the General or
+        Contributor level. However, at the Steering level, we insist that every
+        member organisation have a public commitment to sustainability or
+        examples of leadership in green software. More information can be found
+        in our GSF Steering Membership Policy.
+      </p>
+      <p>To start the application process, please fill out this form.</p>
+      <Button color="accent2" edgeColor="accent2-dark">
+        APPLY TO JOIN GSF
+      </Button>
+      <br />
+      <br />
+      <p>
+        If you would like to arrange a meeting to discuss more, we still ask
+        that you please fill out our{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy"
+        >
+          application form
+        </a>
+        , and we will get back to you to arrange a time.
+      </p>
+    </div>
   </section>
 );
 
