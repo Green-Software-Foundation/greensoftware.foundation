@@ -42,7 +42,6 @@
     .newsletter-wrapper {
       text-align: center;
       background-color: var(--primary-dark);
-      color: var(--white);
       padding: 2rem;
       border-radius: 1rem;
       margin-bottom: 4rem;
@@ -61,6 +60,7 @@
         opacity: 0.1;
       }
       h2 {
+        color: var(--accent1);
         margin-bottom: 2rem;
         z-index: 2;
         position: relative;

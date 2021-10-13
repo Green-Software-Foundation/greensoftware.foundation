@@ -36,7 +36,6 @@
       h1 {
         text-align: center;
         text-transform: uppercase;
-        color: var(--primary);
         font-size: 1.75rem;
         font-weight: 900;
         margin: 0;
@@ -94,7 +93,6 @@
           strong {
             font-size: 4rem;
             font-weight: 900;
-            color: var(--primary);
           }
           span {
             display: block;
@@ -185,6 +183,7 @@
       z-index: 2;
       h3 {
         font-size: 1.5rem;
+        color: var(--accent1);
       }
       p {
         margin-bottom: 2rem;

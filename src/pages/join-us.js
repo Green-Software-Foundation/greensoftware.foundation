@@ -200,7 +200,7 @@ const Section3Mobile = () => (
 
 const Section3 = () => (
   <section className="section3">
-    <h3 className="section-title">Membership Benefits</h3>
+    <h3>Membership Benefits</h3>
     <Section3Mobile />
     <div className="membership-benefits">
       <h4 style={{ gridArea: `title`, textAlign: "left" }}>Activity</h4>
@@ -264,7 +264,7 @@ const Section4Mobile = () => (
 
 const Section4 = () => (
   <section className="section4">
-    <h3 className="section-title">Membership Fees</h3>
+    <h3>Membership Fees</h3>
     <p className="main-description">
       Since we are a part of the Linux Foundation, membership of the GSF
       requires that you are at least a silver member of the Linux Foundation. If
@@ -300,7 +300,7 @@ const Section5 = () => (
       <ApplyIllustration />
     </div>
     <div className="content-wrapper">
-      <h3 className="section-title">Applying For Membership</h3>
+      <h3>Applying For Membership</h3>
       <p>
         There are no minimum requirements for entry at the General or
         Contributor level. However, at the Steering level, we insist that every

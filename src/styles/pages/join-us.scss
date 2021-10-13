@@ -16,29 +16,21 @@
       margin: 0;
     }
   }
-  .section-title {
-    color: var(--primary);
-  }
   .section1 {
     text-align: center;
     .illustration-wrapper {
       margin-bottom: 2rem;
     }
     h1 {
-      color: var(--primary);
       font-size: 1.5rem;
     }
   }
   .section2 {
-    h2 {
-      color: var(--primary);
-    }
     .content-wrapper {
       list-style: none;
       margin: 0;
       h3 {
         font-size: 1.125rem;
-        color: var(--primary);
         display: flex;
         align-items: center;
         margin-bottom: 0;
@@ -70,7 +62,6 @@
           margin-bottom: 1.5rem;
           h4 {
             margin: 0;
-            color: var(--primary);
             margin-left: 0.5rem;
           }
         }
