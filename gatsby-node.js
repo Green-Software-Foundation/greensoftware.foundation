@@ -14,28 +14,54 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
+        allDatoCmsProject(
+          sort: { fields: meta___createdAt, order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
       }
     `
   );
 
-  console.log(result);
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    reporter.panicOnBuild(`Error while running allDatoCmsArticle query.`);
     return;
   }
 
   // Create Article-list pages
-  const article = result.data.allDatoCmsArticle.edges;
+  const articles = result.data.allDatoCmsArticle.edges;
   const articlesPerPage = 10;
-  const numPages = Math.ceil(article.length / articlesPerPage);
-  Array.from({ length: numPages }).forEach((_, i) => {
+  const numPagesArticles = Math.ceil(articles.length / articlesPerPage);
+  Array.from({ length: numPagesArticles }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/articles` : `/articles/${i + 1}`,
-      component: path.resolve("./src/templates/articles-list-template.js"),
+      component: path.resolve("./src/templates/articles-list.js"),
       context: {
         limit: articlesPerPage,
         skip: i * articlesPerPage,
-        numPages,
+        numPages: numPagesArticles,
+        currentPage: i + 1,
+      },
+    });
+  });
+
+  // Create Project-list pages
+  const projects = result.data.allDatoCmsProject.edges;
+  const projectsPerPage = 10;
+  const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
+  Array.from({ length: numPagesProjects }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/projects` : `/projects/${i + 1}`,
+      component: path.resolve("./src/templates/projects-list.js"),
+      context: {
+        limit: projectsPerPage,
+        skip: i * projectsPerPage,
+        numPages: numPagesProjects,
         currentPage: i + 1,
       },
     });
