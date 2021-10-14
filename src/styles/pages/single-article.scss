@@ -76,35 +76,6 @@
         }
       }
     }
-    .more-articles {
-      display: flex;
-      justify-content: flex-start;
-      .more-article {
-        text-decoration: none;
-        span {
-          color: var(--gray-dark);
-          font-size: 0.875rem;
-          font-weight: 800;
-          letter-spacing: 0.25rem;
-          text-transform: uppercase;
-        }
-        p {
-          margin-bottom: 0.25rem;
-          color: var(--gray-darker);
-          font-weight: 600;
-        }
-        .icon {
-          svg {
-            width: 24px;
-            height: auto;
-          }
-        }
-        &.next {
-          margin-left: auto;
-          text-align: right;
-        }
-      }
-    }
   }
 
   // Tablet and Larger
@@ -144,13 +115,6 @@
         }
         p {
           font-size: 1.25rem;
-        }
-      }
-      .more-articles {
-        .more-article {
-          p {
-            font-size: 1.25rem;
-          }
         }
       }
     }

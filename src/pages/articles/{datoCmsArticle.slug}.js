@@ -89,33 +89,6 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
         <div className="author-wrapper">
           <PersonBlob person={article.author} />
         </div>
-        <hr />
-        <div className="more-articles">
-          {article.previousArticle && (
-            <Link
-              to={`/articles/${article.previousArticle.slug}`}
-              className="more-article previous"
-            >
-              <span>Previous</span>
-              <p>{article.previousArticle.title}</p>
-              <span className="icon">
-                <ArrowLeft />
-              </span>
-            </Link>
-          )}
-          {article.nextArticle && (
-            <Link
-              to={`/articles/${article.nextArticle.slug}`}
-              className="more-article next"
-            >
-              <span>NEXT</span>
-              <p>{article.nextArticle.title}</p>
-              <span className="icon">
-                <ArrowRight />
-              </span>
-            </Link>
-          )}
-        </div>
       </div>
     </Layout>
   );
@@ -163,14 +136,6 @@ export const query = graphql`
       }
       publishedOriginUrl
       originBlogName
-      nextArticle {
-        slug
-        title
-      }
-      previousArticle {
-        slug
-        title
-      }
     }
   }
 `;
