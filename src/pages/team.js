@@ -48,9 +48,11 @@ const Section2 = ({ administrativeTeam }) => (
 
 const TeamPage = ({
   data: {
-    datoCmsTeamBoard: { steeringCommittee, administrativeTeam },
+    steeringCommittee: { nodes: steeringCommittee },
+    administrativeTeam: { nodes: administrativeTeam },
   },
 }) => {
+  console.log(steeringCommittee);
   return (
     <Layout pageName="team">
       <PageTitle>Board / Team</PageTitle>
@@ -62,27 +64,44 @@ const TeamPage = ({
 
 export const query = graphql`
   query TeamPageQuery {
-    datoCmsTeamBoard {
-      steeringCommittee {
+    steeringCommittee: allDatoCmsMember(
+      filter: { isSteeringCommitteeMember: { eq: true } }
+    ) {
+      nodes {
         fullName
-        companyWebsite
-        company
-        twitterUsername
-        linkedinUsername
         role
+        company
+        compnayWebsite
         photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        socialMediaLink {
+          link
+          platform
         }
       }
-      administrativeTeam {
+    }
+
+    administrativeTeam: allDatoCmsMember(
+      filter: { isAdministrativeTeamMember: { eq: true } }
+    ) {
+      nodes {
         fullName
-        companyWebsite
-        company
-        twitterUsername
-        linkedinUsername
         role
+        company
+        compnayWebsite
         photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        socialMediaLink {
+          link
+          platform
         }
       }
     }
