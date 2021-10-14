@@ -28,19 +28,21 @@ const SingleWorkingGroupTemplate = ({
       </section>
       <ChairsSection chairs={workingGroup.chairs} />
       <MembersSection members={workingGroup.members} />
-      <section className="projects-section">
-        <h6 className="green-uppercase-title">PROJECTS</h6>
-        <ul>
-          {workingGroup.projects.map((project) => (
-            <li key={project.id}>
-              <Link to={`/projects/${project.slug}`}>
-                <h4>{project.title}</h4>
-                <p>{project.shortDescription}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {Boolean(workingGroup.projects.length) ?? (
+        <section className="projects-section">
+          <h6 className="green-uppercase-title">PROJECTS</h6>
+          <ul>
+            {workingGroup.projects.map((project) => (
+              <li key={project.id}>
+                <Link to={`/projects/${project.slug}`}>
+                  <h4>{project.title}</h4>
+                  <p>{project.shortDescription}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {workingGroup.info.map((infoItem) => (
         <section key={infoItem.title} className="info-item">
           <h6 className="green-uppercase-title">{infoItem.title}</h6>
