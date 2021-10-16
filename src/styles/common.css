@@ -656,7 +656,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border: 1px solid var(--gray-dark);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -666,14 +666,7 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
+
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);

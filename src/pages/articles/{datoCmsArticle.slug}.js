@@ -46,8 +46,15 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
                     alt="Article Image"
                   />
                 );
+              } else if (record.__typename === "DatoCmsArticleContentTable") {
+                return (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: record.tableNode.childMarkdownRemark.html,
+                    }}
+                  />
+                );
               }
-
               return (
                 <>
                   <p>Don't know how to render a block!</p>
@@ -119,6 +126,14 @@ export const query = graphql`
                 placeholder: TRACED_SVG
                 imgixParams: { fm: "jpg" }
               )
+            }
+          }
+          ... on DatoCmsArticleContentTable {
+            id: originalId
+            tableNode {
+              childMarkdownRemark {
+                html
+              }
             }
           }
         }
