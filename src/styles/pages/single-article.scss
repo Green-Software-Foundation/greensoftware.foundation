@@ -16,10 +16,17 @@
         margin-bottom: 0;
       }
     }
-    .main-image,
-    .article-image {
+    .main-image {
       margin-bottom: 1rem;
       border-radius: 1rem;
+      overflow: hidden;
+    }
+    .article-image-wrapper {
+      text-align: center;
+      margin-bottom: 1rem;
+      .article-image {
+        border-radius: 1rem;
+      }
     }
     .content {
       margin-bottom: 4rem;

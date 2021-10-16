@@ -2,14 +2,33 @@ import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Assets
+import FacebookIcon from "../assets/icons/facebook.inline.svg";
 import TwitterIcon from "../assets/icons/twitter.inline.svg";
 import LinkedinIcon from "../assets/icons/linkedin.inline.svg";
+import TumblrIcon from "../assets/icons/tumblr.inline.svg";
+import GlobeIcon from "../assets/icons/globe.inline.svg";
 
 // Fonts
 import "@fontsource/nunito-sans/600.css";
 
 // Styles
 import "../styles/components/person-blob.scss";
+
+// Helpers
+function getIcon(type) {
+  switch (type) {
+    case "Facebook":
+      return <FacebookIcon />;
+    case "Twitter":
+      return <TwitterIcon />;
+    case "Linkedin":
+      return <LinkedinIcon />;
+    case "Tumblr":
+      return <TumblrIcon />;
+    case "Personal Website":
+      return <GlobeIcon />;
+  }
+}
 
 const ImageBlob = ({ photo, alt }) => (
   <div className="image-blob-wrapper flex-center-center">
@@ -21,6 +40,7 @@ const ImageBlob = ({ photo, alt }) => (
 );
 
 const PersonBlob = ({ person }) => {
+  console.log(person);
   return (
     <div className="person-blob">
       <ImageBlob photo={getImage(person.photo)} alt={person.fullName} />
@@ -42,27 +62,18 @@ const PersonBlob = ({ person }) => {
             )}
           </div>
         )}
-        {(person.twitterUsername || person.linkedinUsername) && (
+        {person.socialMediaLink && (
           <div className="socials">
-            {person.twitterUsername && (
+            {person.socialMediaLink.map((social) => (
               <a
-                href={`https://twitter.com/${person.twitterUsername}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ marginRight: "0.75rem" }}
-              >
-                <TwitterIcon />
-              </a>
-            )}
-            {person.linkedinUsername && (
-              <a
-                href={`https://www.linkedin.com/in/${person.linkedinUsername}`}
+                key={social.link}
+                href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedinIcon />
+                {getIcon(social.platform)}
               </a>
-            )}
+            ))}
           </div>
         )}
       </div>

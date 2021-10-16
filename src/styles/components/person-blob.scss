@@ -54,8 +54,13 @@
       margin-top: 0.5rem;
       a {
         color: var(--primary-light);
+        &:not(:last-of-type) {
+          margin-right: 0.75rem;
+        }
+        display: inline-block;
         svg {
           height: 1rem;
+          width: auto;
         }
       }
     }

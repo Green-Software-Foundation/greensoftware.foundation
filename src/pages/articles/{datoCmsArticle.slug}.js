@@ -40,11 +40,18 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
             renderBlock={({ record }) => {
               if (record.__typename === "DatoCmsArticleContentImage") {
                 return (
-                  <GatsbyImage
-                    className="article-image"
-                    image={getImage(record.image)}
-                    alt="Article Image"
-                  />
+                  <div className="article-image-wrapper">
+                    <GatsbyImage
+                      className="article-image"
+                      image={getImage(record.image)}
+                      alt={record.image.alt}
+                    />
+                    {record.image.title && (
+                      <small>
+                        <em>{record.image.title}</em>
+                      </small>
+                    )}
+                  </div>
                 );
               } else if (record.__typename === "DatoCmsArticleContentTable") {
                 return (
@@ -122,6 +129,8 @@ export const query = graphql`
           ... on DatoCmsArticleContentImage {
             id: originalId
             image {
+              title
+              alt
               gatsbyImageData(
                 placeholder: TRACED_SVG
                 imgixParams: { fm: "jpg" }
@@ -142,12 +151,14 @@ export const query = graphql`
         company: companyName
         companyWebsite
         fullName
-        linkedinUsername
         role
         photo {
           gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
         }
-        twitterUsername
+        socialMediaLink {
+          link
+          platform
+        }
       }
       publishedOriginUrl
       originBlogName
