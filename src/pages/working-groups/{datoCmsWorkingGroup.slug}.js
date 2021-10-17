@@ -12,9 +12,14 @@ import MembersSection from "../../components/members-section";
 import "../../styles/pages/working-groups.scss";
 
 const SingleWorkingGroupTemplate = ({
-  data: { datoCmsWorkingGroup: workingGroup },
+  data: {
+    datoCmsWorkingGroup: workingGroup,
+    chairsData: { nodes: chairs },
+    membersData: { nodes: members },
+    participantData: { nodes: participants },
+  },
 }) => {
-  console.log(workingGroup);
+  console.log(participants);
   return (
     <Layout pageName="single-working-group">
       <PageTitle suptitle={workingGroup.title}>Working Group</PageTitle>
@@ -26,8 +31,10 @@ const SingleWorkingGroupTemplate = ({
           }}
         />
       </section>
-      <ChairsSection chairs={workingGroup.chairs} />
-      <MembersSection members={workingGroup.members} />
+      {Boolean(chairs.length) && <ChairsSection chairs={chairs} />}
+      {Boolean(members.length) && (
+        <MembersSection members={[...members, ...participants]} />
+      )}
       {Boolean(workingGroup.projects.length) ?? (
         <section className="projects-section">
           <h6 className="green-uppercase-title">PROJECTS</h6>
@@ -67,24 +74,7 @@ export const query = graphql`
           html
         }
       }
-      chairs {
-        company
-        companyWebsite
-        fullName
-        linkedinUsername
-        photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
-        }
-        twitterUsername
-        role
-      }
-      members {
-        fullName
-        socialLink
-        photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
-        }
-      }
+
       projects {
         id
         slug
@@ -96,6 +86,59 @@ export const query = graphql`
         content {
           value
         }
+      }
+    }
+    chairsData: allDatoCmsMember(
+      filter: { chairWorkingGroups: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        companyWebsite
+        company
+        role
+        socialMediaLink {
+          platform
+          link
+        }
+      }
+    }
+    membersData: allDatoCmsMember(
+      filter: { memberWorkingGroups: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        companyName: company
+        role
+        socialMediaLink {
+          link
+        }
+      }
+    }
+    participantData: allDatoCmsParticipant(
+      filter: { workingGroupsInvolvedIn: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "100px", fm: "jpg" }
+          )
+        }
+        companyName
+        socialMediaLink
       }
     }
   }

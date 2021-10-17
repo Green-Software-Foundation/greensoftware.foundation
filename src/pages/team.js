@@ -71,7 +71,7 @@ export const query = graphql`
         fullName
         role
         company
-        compnayWebsite
+        companyWebsite
         photo {
           gatsbyImageData(
             placeholder: TRACED_SVG
@@ -92,7 +92,7 @@ export const query = graphql`
         fullName
         role
         company
-        compnayWebsite
+        companyWebsite
         photo {
           gatsbyImageData(
             placeholder: TRACED_SVG

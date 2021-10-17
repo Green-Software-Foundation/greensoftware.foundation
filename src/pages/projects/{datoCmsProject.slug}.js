@@ -25,8 +25,15 @@ const HeroSection = ({ illustration, title, workingGroup }) => (
   </section>
 );
 
-const SingleProjectTemplate = ({ data: { datoCmsProject: project } }) => {
-  console.log(project);
+const SingleProjectTemplate = ({
+  data: {
+    datoCmsProject: project,
+    chairsData: { nodes: chairs },
+    membersData: { nodes: members },
+    participantData: { nodes: participants },
+  },
+}) => {
+  console.log({ chairs, members });
   return (
     <Layout pageName="single-project">
       <HeroSection
@@ -37,8 +44,10 @@ const SingleProjectTemplate = ({ data: { datoCmsProject: project } }) => {
       <section className="short-description">
         <p>{project.shortDescription}</p>
       </section>
-      <ChairsSection chairs={project.chairs} />
-      <MembersSection members={project.members} />
+      {Boolean(chairs.length) && <ChairsSection chairs={chairs} />}
+      {Boolean(members.length) && (
+        <MembersSection members={[...members, ...participants]} />
+      )}
       {project.info.map((infoItem) => (
         <section key={infoItem.title} className="info-item">
           <h6 className="green-uppercase-title">{infoItem.title}</h6>
@@ -66,29 +75,65 @@ export const query = graphql`
         slug
       }
       shortDescription
-      chairs {
-        company
-        companyWebsite
-        fullName
-        linkedinUsername
-        photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
-        }
-        twitterUsername
-        role
-      }
-      members {
-        fullName
-        socialLink
-        photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
-        }
-      }
+
       info {
         title
         content {
           value
         }
+      }
+    }
+    chairsData: allDatoCmsMember(
+      filter: { chairProjects: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        companyWebsite
+        company
+        role
+        socialMediaLink {
+          platform
+          link
+        }
+      }
+    }
+    membersData: allDatoCmsMember(
+      filter: { memberProjects: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        companyName: company
+        role
+        socialMediaLink {
+          link
+        }
+      }
+    }
+    participantData: allDatoCmsParticipant(
+      filter: { projectsInvolvedIn: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        fullName
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "100px", fm: "jpg" }
+          )
+        }
+        companyName
+        socialMediaLink
       }
     }
   }

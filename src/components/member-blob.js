@@ -6,10 +6,19 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/components/member-blob.scss";
 
 const MemberBlob = ({ member }) => {
+  console.log(member);
   return (
-    <Tooltip label={member.fullName}>
+    <Tooltip
+      label={`${member.fullName} ${
+        member.companyName ? `/ ${member.companyName}` : ""
+      }`}
+    >
       <a
-        href={member.socialLink}
+        href={
+          typeof member.socialMediaLink === "string"
+            ? member.socialMediaLink
+            : member.socialMediaLink[0].link
+        }
         target="_blank"
         rel="noopener noreferrer"
         className="member-blob-wrapper flex-center-center"
