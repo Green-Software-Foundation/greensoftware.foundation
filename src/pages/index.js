@@ -100,13 +100,9 @@ const Section4 = ({ logos }) => (
           target="_blank"
           rel="noopener noreferrer"
           href={companyWebsite}
+          key={companyName}
         >
-          <img
-            src={logo.url}
-            key={companyName}
-            alt={companyName}
-            {...logo.fluid}
-          />
+          <img src={logo.url} alt={companyName} {...logo.fluid} />
         </a>
       ))}
     </div>
@@ -125,13 +121,9 @@ const Section5 = ({ logos }) => (
           target="_blank"
           rel="noopener noreferrer"
           href={companyWebsite}
+          key={companyName}
         >
-          <img
-            src={logo.url}
-            key={companyName}
-            alt={companyName}
-            {...logo.fluid}
-          />
+          <img src={logo.url} alt={companyName} {...logo.fluid} />
         </a>
       ))}
     </div>
