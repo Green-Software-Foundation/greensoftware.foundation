@@ -35,11 +35,11 @@ const Section1 = ({ steeringCommittee }) => (
   </section>
 );
 
-const Section2 = ({ administrativeTeam }) => (
+const NoTextSection = ({ team, title }) => (
   <section className="section2">
-    <h6 className="green-uppercase-title">ADMINISTRATIVE TEAM</h6>
+    <h6 className="green-uppercase-title">{title}</h6>
     <div className="members-wrapper">
-      {administrativeTeam.map((person) => (
+      {team.map((person) => (
         <PersonBlob key={person.fullName} person={person} />
       ))}
     </div>
@@ -50,6 +50,7 @@ const TeamPage = ({
   data: {
     steeringCommittee: { nodes: steeringCommittee },
     administrativeTeam: { nodes: administrativeTeam },
+    generalTeam: { nodes: generalTeam },
   },
 }) => {
   console.log(steeringCommittee);
@@ -57,7 +58,8 @@ const TeamPage = ({
     <Layout pageName="team">
       <PageTitle>Board / Team</PageTitle>
       <Section1 steeringCommittee={steeringCommittee} />
-      <Section2 administrativeTeam={administrativeTeam} />
+      <NoTextSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />
+      <NoTextSection team={generalTeam} title="General TEAM" />
     </Layout>
   );
 };
@@ -88,6 +90,25 @@ export const query = graphql`
     administrativeTeam: allDatoCmsMember(
       filter: { isAdministrativeTeamMember: { eq: true } }
     ) {
+      nodes {
+        fullName
+        role
+        company
+        companyWebsite
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+          )
+        }
+        socialMediaLink {
+          link
+          platform
+        }
+      }
+    }
+
+    generalTeam: allDatoCmsMember(filter: { isGeneralMember: { eq: true } }) {
       nodes {
         fullName
         role
