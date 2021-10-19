@@ -306,7 +306,11 @@ const Section5 = () => (
         Contributor level. However, at the Steering level, we insist that every
         member organisation have a public commitment to sustainability or
         examples of leadership in green software. More information can be found
-        in our GSF Steering Membership Policy.
+        in our{" "}
+        <Link to="/gsf-steering-membership-policy">
+          GSF Steering Membership Policy
+        </Link>
+        .
       </p>
       <p>To start the application process, please fill out this form.</p>
       <Button color="accent2" edgeColor="accent2-dark">
