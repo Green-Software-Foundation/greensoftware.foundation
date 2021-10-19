@@ -58,7 +58,7 @@ const Section2 = () => (
   </section>
 );
 
-const Section3 = () => (
+const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
   <section className="section3">
     <div className="content-wrapper">
       <h6 className="green-uppercase-title">NON-PROFIT FOUNDATION</h6>
@@ -72,7 +72,7 @@ const Section3 = () => (
       <div className="value-item">
         <img src={section3Background} alt="Background" />
         <div className="text">
-          <strong>14</strong>
+          <strong>{numberOfOrganisations}</strong>
           <span>MEMBER</span>
           <span>ORGANISATIONS</span>
         </div>
@@ -80,7 +80,7 @@ const Section3 = () => (
       <div className="value-item">
         <img src={section3Background} alt="Background" />
         <div className="text">
-          <strong>100</strong>
+          <strong>{numberOfIndividuals}</strong>
           <span>INDIVIDUALS</span>
         </div>
       </div>
@@ -160,7 +160,10 @@ const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
     <Layout pageName="homepage">
       <Section1 />
       <Section2 />
-      <Section3 />
+      <Section3
+        numberOfIndividuals={homepageData.numberOfIndividuals}
+        numberOfOrganisations={homepageData.numberOfOrganisations}
+      />
       <Section4 logos={homepageData.steeringMembers} />
       <Section5 logos={homepageData.generalMembers} />
       <Section6 />
@@ -171,6 +174,8 @@ const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
 export const query = graphql`
   query HomePageQuery {
     datoCmsHomepage {
+      numberOfIndividuals
+      numberOfOrganisations
       steeringMembers {
         logo {
           url
