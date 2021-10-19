@@ -1,33 +1,45 @@
 import * as React from "react";
-import Tooltip, { useTooltip, TooltipPopup } from "@reach/tooltip";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Styles
 import "../styles/components/member-blob.scss";
 
 const MemberBlob = ({ member }) => {
-  console.log(member);
-  return (
-    <Tooltip
-      label={`${member.fullName} ${
-        member.companyName ? `/ ${member.companyName}` : ""
-      }`}
+  const companyName = member.companyName ? `/ ${member.companyName}` : "";
+  let socialLink = "";
+  if (member.socialMediaLink === "string") {
+    socialLink = member.socialMediaLink;
+  } else {
+    console.log(member.socialMediaLink.length);
+    if (member.socialMediaLink.length) {
+      socialLink = member.socialMediaLink[0].link;
+    }
+  }
+  if (!socialLink) {
+    <div
+      data-tooltip={`${member.fullName} ${companyName}`}
+      href={socialLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="member-blob-wrapper flex-center-center"
     >
-      <a
-        href={
-          typeof member.socialMediaLink === "string"
-            ? member.socialMediaLink
-            : member.socialMediaLink[0].link
-        }
-        target="_blank"
-        rel="noopener noreferrer"
-        className="member-blob-wrapper flex-center-center"
-      >
-        <div className="person-photo">
-          <GatsbyImage image={getImage(member.photo)} alt={member.fullName} />
-        </div>
-      </a>
-    </Tooltip>
+      <div className="person-photo">
+        <GatsbyImage image={getImage(member.photo)} alt={member.fullName} />
+      </div>
+    </div>;
+  }
+  return (
+    <a
+      data-tooltip={`${member.fullName} ${companyName}`}
+      href={socialLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="member-blob-wrapper flex-center-center"
+    >
+      <div className="person-photo">
+        <GatsbyImage image={getImage(member.photo)} alt={member.fullName} />
+      </div>
+    </a>
   );
 };
 

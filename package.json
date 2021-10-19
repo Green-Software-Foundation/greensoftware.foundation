@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@fontsource/nunito-sans": "^4.5.1",
-    "@reach/tooltip": "^0.16.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.13.1",
     "gatsby-plugin-image": "^1.14.0",
