@@ -17,9 +17,9 @@ import "../styles/components/layout.scss";
 const Layout = ({ children, pageName }) => {
   return (
     <>
-      <main className={`page-layout ${pageName}`}>
+      <main className={`${pageName}`}>
         <Navbar />
-        {children}
+        <div className="page-layout">{children}</div>
       </main>
       <Footer />
     </>
