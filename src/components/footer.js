@@ -35,10 +35,6 @@ const moreData = [
     title: "Join us",
     to: "/join-us",
   },
-  {
-    title: "Community",
-    href: "https://www.discourse.org/",
-  },
 ];
 const Footer = () => {
   return (
