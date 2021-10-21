@@ -35,7 +35,7 @@ const SingleProjectTemplate = ({
 }) => {
   console.log({ chairs, members });
   return (
-    <Layout pageName="single-project">
+    <Layout pageName="single-project" seo={{ meta: project.seoMetaTags }}>
       <HeroSection
         illustration={project.illustration.url}
         title={project.title}

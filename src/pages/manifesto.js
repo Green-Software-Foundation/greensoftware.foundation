@@ -23,7 +23,7 @@ const MVItem = ({ icon, title, text }) => (
 
 const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
   return (
-    <Layout pageName="manifesto">
+    <Layout pageName="manifesto" seo={{ title: "Manifesto" }}>
       <PageTitle>manifesto</PageTitle>
       <div className="main-paragraph">
         <p>{data.mainParagraph}</p>

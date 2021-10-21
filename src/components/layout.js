@@ -1,6 +1,7 @@
 import * as React from "react";
 
 // Components
+import SEO from "./seo";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -13,9 +14,10 @@ import "@fontsource/nunito-sans/900.css";
 import "../styles/common.css";
 import "../styles/components/layout.scss";
 
-const Layout = ({ children, pageName }) => {
+const Layout = ({ children, pageName, seo }) => {
   return (
     <>
+      <SEO title={seo?.title} meta={seo?.meta} />
       <main className={`${pageName}`}>
         <Navbar />
         <div className="page-layout">{children}</div>

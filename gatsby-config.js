@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://greensoftware.foundation/",
     title: "Green Software Foundation",
   },
   plugins: [
@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/static-images/icon.png",
       },
     },
     "gatsby-plugin-sharp",
@@ -27,7 +27,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/static-images/",
       },
       __key: "images",
     },

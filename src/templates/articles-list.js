@@ -47,7 +47,7 @@ const ArticlesPage = ({
   pageContext: { currentPage, numPages },
 }) => {
   return (
-    <Layout pageName="articles">
+    <Layout pageName="articles" seo={{ title: "Articles" }}>
       <PageTitle>articles </PageTitle>
       <div className="articles-wrapper">
         {articles.map((article) => (

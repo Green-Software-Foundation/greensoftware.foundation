@@ -35,7 +35,7 @@ const ProjectsPage = ({
 }) => {
   console.log({ currentPage, numPages, projects });
   return (
-    <Layout pageName="projects">
+    <Layout pageName="projects" seo={{ title: "Projects" }}>
       <PageTitle>projects </PageTitle>
       <div className="projects-wrapper">
         {projects.map((project) => (

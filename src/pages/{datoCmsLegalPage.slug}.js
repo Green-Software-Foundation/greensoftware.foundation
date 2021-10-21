@@ -11,7 +11,7 @@ import PageTitle from "../components/page-title";
 
 const SingleLegalPageTemplate = ({ data: { datoCmsLegalPage: data } }) => {
   return (
-    <Layout pageName="single-working-group">
+    <Layout pageName="single-working-group" seo={{ title: data.title }}>
       <PageTitle>{data.title}</PageTitle>
       <StructuredText data={data.content} />
     </Layout>

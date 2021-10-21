@@ -55,7 +55,7 @@ const TeamPage = ({
 }) => {
   console.log(steeringCommittee);
   return (
-    <Layout pageName="team">
+    <Layout pageName="team" seo={{ title: "Board / Team" }}>
       <PageTitle>Board / Team</PageTitle>
       <Section1 steeringCommittee={steeringCommittee} />
       <NoTextSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />

@@ -29,7 +29,7 @@ const PressPage = ({
 }) => {
   console.log(data);
   return (
-    <Layout pageName="press">
+    <Layout pageName="press" seo={{ title: "Press" }}>
       <PageTitle>Press</PageTitle>
       <section className="cards-wrapper">
         {data.map((press) => (

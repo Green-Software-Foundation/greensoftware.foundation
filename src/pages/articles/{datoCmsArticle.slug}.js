@@ -9,16 +9,12 @@ import PageTitle from "../../components/page-title";
 import PersonBlob from "../../components/person-blob";
 import Button from "../../components/button";
 
-// Assets
-import ArrowLeft from "../../assets/icons/arrow-left.inline.svg";
-import ArrowRight from "../../assets/icons/arrow-right.inline.svg";
-
 // Styles
 import "../../styles/pages/single-article.scss";
 
 const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
   return (
-    <Layout pageName="single-article">
+    <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
       <div className="content-wrapper">
         <div className="teaser-text">

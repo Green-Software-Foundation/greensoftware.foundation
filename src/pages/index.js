@@ -157,7 +157,7 @@ const Section6 = () => (
 const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
   console.log(homepageData);
   return (
-    <Layout pageName="homepage">
+    <Layout pageName="homepage" seo={{ title: "Home" }}>
       <Section1 />
       <Section2 />
       <Section3

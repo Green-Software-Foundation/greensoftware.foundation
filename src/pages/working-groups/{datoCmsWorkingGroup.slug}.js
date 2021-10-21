@@ -21,7 +21,10 @@ const SingleWorkingGroupTemplate = ({
 }) => {
   console.log(participants);
   return (
-    <Layout pageName="single-working-group">
+    <Layout
+      pageName="single-working-group"
+      seo={{ meta: workingGroup.seoMetaTags }}
+    >
       <PageTitle suptitle={workingGroup.title}>Working Group</PageTitle>
       <section>
         <h6 className="green-uppercase-title">Scope</h6>
