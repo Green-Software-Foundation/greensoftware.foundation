@@ -33,7 +33,6 @@ const ProjectsPage = ({
   },
   pageContext: { currentPage, numPages },
 }) => {
-  console.log({ currentPage, numPages, projects });
   return (
     <Layout pageName="projects" seo={{ title: "Projects" }}>
       <PageTitle>projects </PageTitle>

@@ -27,7 +27,6 @@ const PressPage = ({
     allDatoCmsPress: { nodes: data },
   },
 }) => {
-  console.log(data);
   return (
     <Layout pageName="press" seo={{ title: "Press" }}>
       <PageTitle>Press</PageTitle>

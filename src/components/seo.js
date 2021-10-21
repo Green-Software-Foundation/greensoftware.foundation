@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
 function Seo({ description, meta, title }) {
-  console.log({ meta, title });
   const {
     datoCmsSite: { globalSeo },
   } = useStaticQuery(
@@ -31,8 +30,6 @@ function Seo({ description, meta, title }) {
   if (meta) {
     return <HelmetDatoCms seo={meta} />;
   }
-
-  console.log(globalSeo);
 
   return (
     <Helmet

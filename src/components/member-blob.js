@@ -10,7 +10,6 @@ const MemberBlob = ({ member }) => {
   if (member.socialMediaLink === "string") {
     socialLink = member.socialMediaLink;
   } else {
-    console.log(member.socialMediaLink.length);
     if (member.socialMediaLink.length) {
       socialLink = member.socialMediaLink[0].link;
     }

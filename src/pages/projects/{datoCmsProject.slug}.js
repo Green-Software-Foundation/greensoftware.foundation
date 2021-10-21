@@ -33,7 +33,6 @@ const SingleProjectTemplate = ({
     participantData: { nodes: participants },
   },
 }) => {
-  console.log({ chairs, members });
   return (
     <Layout pageName="single-project" seo={{ meta: project.seoMetaTags }}>
       <HeroSection

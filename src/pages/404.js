@@ -26,7 +26,6 @@ const codeStyles = {
 
 // markup
 const NotFoundPage = (props) => {
-  console.log(props);
   return (
     <main style={pageStyles}>
       <title>Not found</title>

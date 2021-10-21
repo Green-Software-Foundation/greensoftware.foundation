@@ -13,7 +13,6 @@ import Button from "../../components/button";
 import "../../styles/pages/single-article.scss";
 
 const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
-  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>

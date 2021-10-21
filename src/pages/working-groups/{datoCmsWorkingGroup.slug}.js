@@ -19,7 +19,6 @@ const SingleWorkingGroupTemplate = ({
     participantData: { nodes: participants },
   },
 }) => {
-  console.log(participants);
   return (
     <Layout
       pageName="single-working-group"

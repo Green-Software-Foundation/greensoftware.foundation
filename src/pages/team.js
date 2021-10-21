@@ -53,7 +53,6 @@ const TeamPage = ({
     generalTeam: { nodes: generalTeam },
   },
 }) => {
-  console.log(steeringCommittee);
   return (
     <Layout pageName="team" seo={{ title: "Board / Team" }}>
       <PageTitle>Board / Team</PageTitle>

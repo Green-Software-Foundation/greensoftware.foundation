@@ -40,7 +40,6 @@ const ImageBlob = ({ photo, alt }) => (
 );
 
 const PersonBlob = ({ person }) => {
-  console.log(person);
   return (
     <div className="person-blob">
       <ImageBlob photo={getImage(person.photo)} alt={person.fullName} />
