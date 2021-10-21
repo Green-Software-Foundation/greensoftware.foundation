@@ -1,9 +1,14 @@
 .paginator-wrapper {
+  margin-top: 2rem;
   ul {
     list-style: none;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      margin: 1rem;
+    }
     .prev-btn {
       grid-area: 1 / 1 / 2 / 2;
     }
