@@ -13,6 +13,7 @@ import Button from "../../components/button";
 import "../../styles/pages/single-article.scss";
 
 const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
+  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
@@ -33,6 +34,33 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
         <div className="content">
           <StructuredText
             data={article.content}
+            renderLinkToRecord={({ record, children, transformedMeta }) => {
+              switch (record.__typename) {
+                case "DatoCmsArticle":
+                  return (
+                    <Link {...transformedMeta} to={`/articles/${record.slug}`}>
+                      {children}
+                    </Link>
+                  );
+                case "DatoCmsProject":
+                  return (
+                    <Link {...transformedMeta} to={`/projects/${record.slug}`}>
+                      {children}
+                    </Link>
+                  );
+                case "DatoCmsWorkingGroup":
+                  return (
+                    <Link
+                      {...transformedMeta}
+                      to={`/working-groups/${record.slug}`}
+                    >
+                      {children}
+                    </Link>
+                  );
+                default:
+                  return null;
+              }
+            }}
             renderBlock={({ record }) => {
               if (record.__typename === "DatoCmsArticleContentImage") {
                 return (
@@ -120,6 +148,21 @@ export const query = graphql`
       }
       content {
         value
+        links {
+          __typename
+          ... on DatoCmsArticle {
+            id: originalId
+            slug
+          }
+          ... on DatoCmsProject {
+            id: originalId
+            slug
+          }
+          ... on DatoCmsWorkingGroup {
+            id: originalId
+            slug
+          }
+        }
         blocks {
           __typename
           ... on DatoCmsArticleContentImage {
