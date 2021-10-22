@@ -1,6 +1,6 @@
 .member-blob-wrapper {
-  height: 100%;
-  width: 100%;
+  height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
   background: var(--accent1-lighter);
   position: relative;
@@ -35,10 +35,20 @@
     border-radius: 50%;
     overflow: hidden;
     mix-blend-mode: multiply;
+    .photo {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  // Tablet and Larger
-  @media (min-width: 640px) {
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
     height: 5rem;
     width: 5rem;
   }

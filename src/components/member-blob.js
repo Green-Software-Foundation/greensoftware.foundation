@@ -14,18 +14,23 @@ const MemberBlob = ({ member }) => {
       socialLink = member.socialMediaLink[0].link;
     }
   }
+  console.log({ name: member.fullName, socialLink: Boolean(socialLink) });
   if (!socialLink) {
-    <div
-      data-tooltip={`${member.fullName} ${companyName}`}
-      href={socialLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="member-blob-wrapper flex-center-center"
-    >
-      <div className="person-photo">
-        <GatsbyImage image={getImage(member.photo)} alt={member.fullName} />
+    return (
+      <div
+        data-tooltip={`${member.fullName} ${companyName}`}
+        href={socialLink}
+        className="member-blob-wrapper flex-center-center"
+      >
+        <div className="person-photo">
+          <GatsbyImage
+            className="photo"
+            image={getImage(member.photo)}
+            alt={member.fullName}
+          />
+        </div>
       </div>
-    </div>;
+    );
   }
   return (
     <a
@@ -36,7 +41,11 @@ const MemberBlob = ({ member }) => {
       className="member-blob-wrapper flex-center-center"
     >
       <div className="person-photo">
-        <GatsbyImage image={getImage(member.photo)} alt={member.fullName} />
+        <GatsbyImage
+          className="photo"
+          image={getImage(member.photo)}
+          alt={member.fullName}
+        />
       </div>
     </a>
   );
