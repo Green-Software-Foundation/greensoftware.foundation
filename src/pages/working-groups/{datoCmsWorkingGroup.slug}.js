@@ -37,7 +37,7 @@ const SingleWorkingGroupTemplate = ({
       {Boolean(members.length) && (
         <MembersSection members={[...members, ...participants]} />
       )}
-      {Boolean(workingGroup.projects.length) ?? (
+      {Boolean(workingGroup.projects.length) && (
         <section className="projects-section">
           <h6 className="green-uppercase-title">PROJECTS</h6>
           <ul>
