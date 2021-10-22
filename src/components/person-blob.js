@@ -6,6 +6,9 @@ import FacebookIcon from "../assets/icons/facebook.inline.svg";
 import TwitterIcon from "../assets/icons/twitter.inline.svg";
 import LinkedinIcon from "../assets/icons/linkedin.inline.svg";
 import TumblrIcon from "../assets/icons/tumblr.inline.svg";
+import GithubIcon from "../assets/icons/github.inline.svg";
+import SoundCloudIcon from "../assets/icons/soundcloud.inline.svg";
+import YoutubeIcon from "../assets/icons/youtube.inline.svg";
 import GlobeIcon from "../assets/icons/globe.inline.svg";
 
 // Fonts
@@ -25,6 +28,12 @@ function getIcon(type) {
       return <LinkedinIcon />;
     case "Tumblr":
       return <TumblrIcon />;
+    case "Github":
+      return <GithubIcon />;
+    case "SoundCloud":
+      return <SoundCloudIcon />;
+    case "YouTube":
+      return <YoutubeIcon />;
     case "Personal Website":
       return <GlobeIcon />;
   }
