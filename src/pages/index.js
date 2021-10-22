@@ -89,7 +89,7 @@ const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
 );
 
 const Section4 = ({ logos }) => (
-  <section className="section4">
+  <section id="steering-members" className="section4">
     <h6 className="green-uppercase-title">OUR STEERING MEMBERS</h6>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
@@ -110,7 +110,7 @@ const Section4 = ({ logos }) => (
 );
 
 const Section5 = ({ logos }) => (
-  <section className="section5">
+  <section id="general-members" className="section5">
     <h6 className="green-uppercase-title">OUR General MEMBERS</h6>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
