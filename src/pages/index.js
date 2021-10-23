@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import addToMailchimp from "gatsby-plugin-mailchimp";
 
 // Components
 import Layout from "../components/layout";
