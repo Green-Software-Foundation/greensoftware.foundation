@@ -96,16 +96,6 @@ const Footer = () => {
           <NewsletterForm placeholder="you@example.xyz" hasDarkBg />
         </div>
       </footer>
-      <div className="made-by">
-        Made with <HeartIcon /> by{" "}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://osamajandali.com/"
-        >
-          Osama Jandali
-        </a>
-      </div>
     </div>
   );
 };

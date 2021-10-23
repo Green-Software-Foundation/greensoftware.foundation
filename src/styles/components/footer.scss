@@ -65,22 +65,6 @@
       color: var(--primary-lighter);
     }
   }
-  .made-by {
-    background: var(--primary-darkest);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: var(--white-lighter);
-    svg {
-      display: inline-block;
-      width: 1rem;
-      color: var(--accent1);
-      transform: translateY(20%);
-    }
-    a {
-      color: var(--accent1);
-    }
-  }
 
   // Tablet
   @media (min-width: 640px) and (max-width: 1280px) {
