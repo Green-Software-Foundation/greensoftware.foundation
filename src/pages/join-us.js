@@ -150,8 +150,11 @@ const Section1 = () => (
       <p>
         To understand our mission and values, please read our{" "}
         <Link to="/manifesto">Manifesto</Link>, look at our{" "}
-        <Link to="/manifesto">Working Groups</Link> and our{" "}
-        <Link to="/manifesto">list of Projects</Link>.
+        <Link to="/working-groups/standards">Standards</Link>,{" "}
+        <Link to="/working-groups/innovation">Innovation</Link>,{" "}
+        <Link to="/working-groups/trademark">Trademark</Link> and{" "}
+        <Link to="/working-groups/community">Community</Link> Working Groups as well as our{" "}
+        <Link to="/projects">list of Projects</Link>.
       </p>
     </div>
   </section>
