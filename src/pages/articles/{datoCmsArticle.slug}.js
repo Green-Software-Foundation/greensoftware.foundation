@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
 import PageTitle from "../../components/page-title";
 import PersonBlob from "../../components/person-blob";
-import Button from "../../components/button";
+import NewsletterForm from "../../components/newsletter-form";
 
 // Styles
 import "../../styles/pages/single-article.scss";
@@ -109,18 +109,13 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
         <div className="newsletter-wrapper">
           <div className="pattern"></div>
           <h2>Stay updated with our articles updates</h2>
-          <form className="newsletter-form">
-            <input type="text" placeholder="Sign up to our newsletter..." />
-            <Button
-              type="submit"
-              color="gray-lightest-2"
-              edgeColor="gray-dark"
-              textColor="black"
-              fontWeight={600}
-            >
-              Sign up
-            </Button>
-          </form>
+          <NewsletterForm
+            placeholder="Sign up to our newsletter..."
+            buttoncolor="gray-lightest-2"
+            buttonEdgeColor="gray-dark"
+            buttonTextColor="black"
+            hasDarkBg
+          />
         </div>
         <hr />
         <div className="author-wrapper">

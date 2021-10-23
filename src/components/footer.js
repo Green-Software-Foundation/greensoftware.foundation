@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 // Components
-import Button from "./button";
+import NewsletterForm from "./newsletter-form";
 
 // Assets
 import Logo from "../assets/icons/logo-sign.inline.svg";
@@ -93,10 +93,7 @@ const Footer = () => {
         </div>
         <div className="newsletter-wrapper">
           <h6>JOIN OUR NEWSLETTER</h6>
-          <input type="text" placeholder="you@example.xyz" />
-          <Button color="primary" edgeColor="primary-darkest">
-            Sign up
-          </Button>
+          <NewsletterForm placeholder="you@example.xyz" hasDarkBg />
         </div>
       </footer>
       <div className="made-by">

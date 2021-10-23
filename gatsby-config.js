@@ -39,5 +39,13 @@ module.exports = {
         },
       },
     },
+
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&amp;id=c5376a805c",
+      },
+    },
   ],
 };

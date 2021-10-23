@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import addToMailchimp from "gatsby-plugin-mailchimp";
 
 // Components
 import Layout from "../components/layout";
+import NewsletterForm from "../components/newsletter-form";
 import Button from "../components/button";
 
 // Assets
@@ -29,12 +31,7 @@ const Section1 = () => {
         </p>
         <h1>Green software</h1>
       </div>
-      <form className="newsletter-form flex-center-center">
-        <input type="text" placeholder="Sign up to our newsletter..." />
-        <Button type="submit" color="primary" edgeColor="primary-darker">
-          Sign up
-        </Button>
-      </form>
+      <NewsletterForm placeholder="Sign up to our newsletter..." />
       <div className="illustration-wrapper"></div>
     </section>
   );
@@ -163,6 +160,7 @@ const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
         numberOfIndividuals={homepageData.numberOfIndividuals}
         numberOfOrganisations={homepageData.numberOfOrganisations}
       />
+
       <Section4 logos={homepageData.steeringMembers} />
       <Section5 logos={homepageData.generalMembers} />
       <Section6 />

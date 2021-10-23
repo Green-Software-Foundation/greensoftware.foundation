@@ -41,6 +41,10 @@
   --white: #fff;
   --white-lighter: rgba(255, 255, 255, 0.5);
   --white-lightest-1: rgba(255, 255, 255, 0.25);
+
+  --danger-dark: #a61d15;
+  --danger: #dd261c;
+  --danger-light: #ee938d;
 }
 
 /* Common CSS */
@@ -68,7 +72,12 @@
   font-size: 0.875rem;
   text-transform: uppercase;
 }
-
+.error-msg {
+  color: var(--danger);
+}
+.error-msg.hasDarkBg {
+  color: var(--danger-light);
+}
 /* CSS Reset */
 html {
   -ms-text-size-adjust: 100%;
@@ -149,6 +158,7 @@ input[type="text"] {
   border: 1px solid var(--gray-dark);
   border-radius: 0.5em;
   color: var(--black);
+  display: block;
 }
 textarea:focus,
 input:focus {

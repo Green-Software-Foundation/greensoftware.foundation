@@ -42,11 +42,20 @@
       }
     }
     .newsletter-form {
+      text-align: center;
+      max-width: 372px;
+      margin-right: auto;
+      margin-left: auto;
       input {
-        flex: 1;
-        margin-right: 0.5rem;
-        max-width: 272px;
+        width: 100%;
       }
+      .button {
+        margin-top: 1rem;
+      }
+    }
+    .newsletter-success-msg {
+      text-align: center;
+      color: var(--primary-dark);
     }
     .illustration-wrapper {
       position: absolute;

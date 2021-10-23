@@ -79,8 +79,18 @@
         input {
           display: block;
           width: 100%;
-          margin-bottom: 1rem;
         }
+        .button {
+          margin-top: 1rem;
+        }
+        a {
+          color: var(--accent2);
+        }
+      }
+      .newsletter-success-msg {
+        z-index: 2;
+        position: relative;
+        color: var(--primary-lighter);
       }
     }
   }
