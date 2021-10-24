@@ -20,9 +20,8 @@ const menuData = [
       { title: "Manifesto", to: "/manifesto" },
       { title: "Team", to: "/team" },
       { title: "Press", to: "/press" },
-      { title: "Media Kit", to: "/media-kit" },
-      { title: "Trademark Policy", to: "/trademark-policy" },
-      { title: "FAQ", to: "/faq" },
+      { title: "Media Kit", href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing" },
+      { title: "Trademark Policy", to: "policy/trademark" }
     ],
   },
   {
@@ -41,10 +40,11 @@ const menuData = [
   {
     title: "Resources",
     submenu: [
-      { title: "Meetups", href: "https://greensoftware.foundation/" },
-      { title: "Discourse", href: "https://greensoftware.foundation/" },
-      { title: "Podcast", href: "https://greensoftware.foundation/" },
-      { title: "GitHub", href: "https://greensoftware.foundation/" },
+      { title: "Welcome to the Green Software Foundation", to: "articles/welcome-to-the-green-software-foundation" },
+      { title: "What is Green software?", to: "articles/what-is-green-software" },
+      { title: "Principles of Green Software Engineering", href: "principles.green" },   
+      { title: "Awesome Green Software - List", href: "https://github.com/Green-Software-Foundation/awesome-green-software" },   
+      { title: "GitHub", href: "https://github.com/Green-Software-Foundation" },
     ],
   },
   {
