@@ -3,13 +3,13 @@ import { graphql, Link } from "gatsby";
 import { StructuredText } from "react-datocms";
 
 // Components
-import Layout from "../../components/layout";
-import PageTitle from "../../components/page-title";
-import ChairsSection from "../../components/chairs-section";
-import MembersSection from "../../components/members-section";
+import Layout from "../components/layout";
+import PageTitle from "../components/page-title";
+import ChairsSection from "../components/chairs-section";
+import MembersSection from "../components/members-section";
 
 // Styles
-import "../../styles/pages/working-groups.scss";
+import "../styles/templates/working-groups.scss";
 
 const SingleWorkingGroupTemplate = ({
   data: {

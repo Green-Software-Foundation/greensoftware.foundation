@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allDatoCmsArticle(sort: { fields: date, order: DESC }, limit: 1000) {
+        allDatoCmsArticle(sort: { fields: date, order: DESC }) {
           edges {
             node {
               id
@@ -15,12 +15,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
-        allDatoCmsProject(
+
+        allDatoCmsProject(sort: { fields: meta___createdAt, order: DESC }) {
+          edges {
+            node {
+              id
+              slug
+            }
+          }
+        }
+
+        allDatoCmsWorkingGroup(
           sort: { fields: meta___createdAt, order: DESC }
-          limit: 1000
         ) {
           edges {
             node {
+              id
+              slug
+            }
+          }
+        }
+
+        allDatoCmsFlatPage {
+          edges {
+            node {
+              id
               slug
             }
           }
@@ -28,12 +47,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   );
-
+  console.log(result);
   if (result.errors) {
     reporter.panicOnBuild(`Error while running allDatoCmsArticle query.`);
     return;
   }
 
+  // Articles
   const articles = result.data.allDatoCmsArticle.edges;
   const articlesPerPage = 10;
   const numPagesArticles = Math.ceil(articles.length / articlesPerPage);
@@ -63,10 +83,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  // Create Project-list pages
+  // Projects
   const projects = result.data.allDatoCmsProject.edges;
   const projectsPerPage = 10;
   const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
+
+  // Create Project-list pages
   Array.from({ length: numPagesProjects }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/projects` : `/projects/${i + 1}`,
@@ -76,6 +98,45 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         skip: i * projectsPerPage,
         numPages: numPagesProjects,
         currentPage: i + 1,
+      },
+    });
+  });
+
+  // Create Articles pages
+  projects.forEach(({ node: project }) => {
+    createPage({
+      path: `/projects/${project.slug}`,
+      component: path.resolve("./src/templates/project.js"),
+      context: {
+        id: project.id,
+      },
+    });
+  });
+
+  //Working groups
+  const workingGroups = result.data.allDatoCmsWorkingGroup.edges;
+
+  // Create Working groups pages
+  workingGroups.forEach(({ node: workingGroup }) => {
+    createPage({
+      path: `/working-groups/${workingGroup.slug}`,
+      component: path.resolve("./src/templates/working-group.js"),
+      context: {
+        id: workingGroup.id,
+      },
+    });
+  });
+
+  // Flat pages
+  const flatPages = result.data.allDatoCmsFlatPage.edges;
+
+  // Create Working groups pages
+  flatPages.forEach(({ node: flatPage }) => {
+    createPage({
+      path: `/${flatPage.slug}`,
+      component: path.resolve("./src/templates/flat-page.js"),
+      context: {
+        id: flatPage.id,
       },
     });
   });

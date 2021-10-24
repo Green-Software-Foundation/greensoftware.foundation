@@ -3,12 +3,12 @@ import { graphql, Link } from "gatsby";
 import { StructuredText } from "react-datocms";
 
 // Components
-import Layout from "../../components/layout";
-import ChairsSection from "../../components/chairs-section";
-import MembersSection from "../../components/members-section";
+import Layout from "../components/layout";
+import ChairsSection from "../components/chairs-section";
+import MembersSection from "../components/members-section";
 
 // Styles
-import "../../styles/pages/single-project.scss";
+import "../styles/templates/single-project.scss";
 
 const HeroSection = ({ illustration, title, workingGroup }) => (
   <section className="hero-section">

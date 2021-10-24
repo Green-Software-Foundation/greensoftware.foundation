@@ -10,7 +10,7 @@ import PersonBlob from "../components/person-blob";
 import NewsletterForm from "../components/newsletter-form";
 
 // Styles
-import "../styles/pages/single-article.scss";
+import "../styles/templates/single-article.scss";
 
 const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
   return (

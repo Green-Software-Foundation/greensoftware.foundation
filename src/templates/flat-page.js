@@ -6,10 +6,7 @@ import { StructuredText } from "react-datocms";
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 
-// Styles
-// import "../../styles/pages/working-groups.scss";
-
-const SingleLegalPageTemplate = ({ data: { datoCmsLegalPage: data } }) => {
+const SingleFlatPageTemplate = ({ data: { datoCmsFlatPage: data } }) => {
   return (
     <Layout pageName="single-working-group" seo={{ title: data.title }}>
       <PageTitle>{data.title}</PageTitle>
@@ -19,8 +16,8 @@ const SingleLegalPageTemplate = ({ data: { datoCmsLegalPage: data } }) => {
 };
 
 export const query = graphql`
-  query SingleLegalPageTemplateQuery($id: String) {
-    datoCmsLegalPage(id: { eq: $id }) {
+  query SingleFlatPageTemplateQuery($id: String) {
+    datoCmsFlatPage(id: { eq: $id }) {
       id
       slug
       title
@@ -30,4 +27,4 @@ export const query = graphql`
     }
   }
 `;
-export default SingleLegalPageTemplate;
+export default SingleFlatPageTemplate;
