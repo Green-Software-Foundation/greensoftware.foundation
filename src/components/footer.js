@@ -17,7 +17,7 @@ const legalData = [
   },
   {
     title: "Terms and Privacy Policy",
-    to: "policy/terms",
+    to: "/policy/terms",
   },
 ];
 
