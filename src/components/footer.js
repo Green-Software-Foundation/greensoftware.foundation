@@ -13,11 +13,11 @@ import "../styles/components/footer.scss";
 const legalData = [
   {
     title: "Trademark Policy",
-    to: "/policy/trademark-policy",
+    to: "/policy/trademark",
   },
   {
     title: "Terms and Privacy Policy",
-    to: "terms",
+    to: "policy/terms",
   },
 ];
 
