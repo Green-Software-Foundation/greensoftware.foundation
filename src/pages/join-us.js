@@ -325,15 +325,7 @@ const Section5 = () => (
       <br />
       <p>
         If you would like to arrange a meeting to discuss more, we still ask
-        that you please fill out our{" "}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy"
-        >
-          application form
-        </a>
-        , and we will get back to you to arrange a time.
+        that you please fill out our application form, and we will get back to you to arrange a time.
       </p>
     </div>
   </section>
