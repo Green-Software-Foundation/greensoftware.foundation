@@ -23,7 +23,7 @@ const section2Data = [
   {
     title: "Steering membership",
     description:
-      "offers you a seat in the steering committee, the right to review the outputs of the individuals working groups and decide where and how the GSF budget should be allocated.",
+      "offers you a seat on the steering committee directing the Foundations strategic focus and budget allocation as well as a seat in the communications team to coordinate public relations efforts with the Foundation and other steering members.",
     icon: <SteeringIcon />,
   },
   {
@@ -40,13 +40,14 @@ const section2Data = [
 ];
 
 const benefits = {
-  vote_S: "Vote in Steering Committee",
-  chair: "Chair working group",
-  participate: "Participate in working groups",
+  vote_S: "A seat on the steering committee",
+  comms_T: "A seat on the communications team",
+  listed: "Listed on the Foundations homepage",
+  chair: "Chair working groups and projects",
+  participate: "Participate in working groups and projects",
   create: "Create new working groups",
   vote_W: "Vote in working groups",
-  premium: "Premium sponsorship opportunities",
-  speaking: "Guaranteed speaking opportunities at flagship events",
+  premium: "Employee engagement & onboarding"
 };
 
 const memberships = [
@@ -60,14 +61,15 @@ const memberships = [
       "create",
       "vote_W",
       "premium",
-      "speaking",
+      "comms_T",
+      "listed"
     ],
     icon: <SteeringIcon />,
   },
   {
     id: "general",
     title: "General",
-    benefits: ["chair", "participate", "create", "vote_W"],
+    benefits: ["chair", "participate", "create", "vote_W", "listed"],
     icon: <GeneralIcon />,
   },
   {
@@ -271,7 +273,7 @@ const Section4 = () => (
     <p className="main-description">
       Since we are a part of the Linux Foundation, membership of the GSF
       requires that you are at least a silver member of the Linux Foundation. If
-      you are already a member of the Linux Foundation, you can ignore the LF
+      you are already a member of the Linux Foundation, you can ignore the Linux Foundation
       fees in the table below. All our fees are yearly.
     </p>
     <Section4Mobile />
