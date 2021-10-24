@@ -42,7 +42,7 @@ const Section2 = () => (
       <Section2Illustration />
     </div>
     <div className="content-wrapper">
-      <h6 className="green-uppercase-title">WHAT IS GREEN SOFTWARE?</h6>
+      <h2 className="green-uppercase-title">WHAT IS GREEN SOFTWARE?</h2>
       <p>
         Green software is software that is responsible for emitting fewer
         greenhouse gases. Our focus is reduction, not neutralisation.
@@ -57,7 +57,7 @@ const Section2 = () => (
 const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
   <section className="section3">
     <div className="content-wrapper">
-      <h6 className="green-uppercase-title">NON-PROFIT FOUNDATION</h6>
+      <h2 className="green-uppercase-title">NON-PROFIT FOUNDATION</h2>
       <p>
         We are a non-profit formed under the Linux Foundation with organisations
         and individuals participating in various projects to further our
@@ -86,7 +86,7 @@ const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
 
 const Section4 = ({ logos }) => (
   <section id="steering-members" className="section4">
-    <h6 className="green-uppercase-title">OUR STEERING MEMBERS</h6>
+    <h2 className="green-uppercase-title">OUR STEERING MEMBERS</h2>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
         <a
@@ -107,7 +107,7 @@ const Section4 = ({ logos }) => (
 
 const Section5 = ({ logos }) => (
   <section id="general-members" className="section5">
-    <h6 className="green-uppercase-title">OUR General MEMBERS</h6>
+    <h2 className="green-uppercase-title">OUR General MEMBERS</h2>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
         <a

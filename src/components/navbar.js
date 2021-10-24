@@ -112,7 +112,7 @@ const MenuItems = ({ className, responsive }) => {
 };
 const JoinCTA = () => (
   <div className="cta-wrapper">
-    <Button color="accent2" edgeColor="accent2-dark" to="/join-us">
+    <Button color="primary" edgeColor="primary-dark" to="/join-us">
       JOIN US
     </Button>
   </div>
@@ -143,7 +143,7 @@ const Navbar = () => {
     <header>
       <nav className="main-navbar flex-center-between">
         <div>
-          <Link to="/">
+          <Link style={{ display: "block" }} aria-current="homepage" to="/">
             <Logo />
           </Link>
         </div>
@@ -152,7 +152,10 @@ const Navbar = () => {
         </div>
         <JoinCTA />
         <div className="hamburger-menu">
-          <button onClick={() => setMenuIsOpen((prev) => !prev)}>
+          <button
+            aria-label="menu"
+            onClick={() => setMenuIsOpen((prev) => !prev)}
+          >
             <HamburgerMenuBlob />
             <div
               className={`hamburger-menu-lines ${menuIsOpen ? "is-open" : ""}`}
