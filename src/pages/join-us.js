@@ -312,7 +312,7 @@ const Section5 = () => (
         member organisation have a public commitment to sustainability or
         examples of leadership in green software. More information can be found
         in our{" "}
-        <Link to="/pages/gsf-steering-membership-policy">
+        <Link to="/policy/steering-membership">
           GSF Steering Membership Policy
         </Link>
         .
