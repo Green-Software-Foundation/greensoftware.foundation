@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // Components
-import SEO from "./seo";
+import Seo from "./seo";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -17,7 +17,7 @@ import "../styles/components/layout.scss";
 const Layout = ({ children, pageName, seo }) => {
   return (
     <>
-      <SEO title={seo?.title} meta={seo?.meta} />
+      <Seo title={seo?.title} meta={seo?.meta} />
       <main className={`${pageName}`}>
         <Navbar />
         <div className="page-layout">{children}</div>

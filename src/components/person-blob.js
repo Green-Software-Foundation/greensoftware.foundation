@@ -36,6 +36,8 @@ function getIcon(type) {
       return <YoutubeIcon />;
     case "Personal Website":
       return <GlobeIcon />;
+    default:
+      return <></>;
   }
 }
 

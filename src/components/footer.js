@@ -6,7 +6,6 @@ import NewsletterForm from "./newsletter-form";
 
 // Assets
 import Logo from "../assets/icons/logo-sign.inline.svg";
-import HeartIcon from "../assets/icons/heart.inline.svg";
 
 // Styles
 import "../styles/components/footer.scss";

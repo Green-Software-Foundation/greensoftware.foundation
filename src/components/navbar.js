@@ -41,10 +41,10 @@ const menuData = [
   {
     title: "Resources",
     submenu: [
-      { title: "Meetups", href: "/standards" },
-      { title: "Discourse", href: "/trademark" },
-      { title: "Podcast", href: "/innovation" },
-      { title: "GitHub", href: "/community" },
+      { title: "Meetups", href: "https://greensoftware.foundation/" },
+      { title: "Discourse", href: "https://greensoftware.foundation/" },
+      { title: "Podcast", href: "https://greensoftware.foundation/" },
+      { title: "GitHub", href: "https://greensoftware.foundation/" },
     ],
   },
   {
@@ -90,7 +90,11 @@ const MenuItems = ({ className, responsive }) => {
                     {submenuItem.to ? (
                       <Link to={submenuItem.to}>{submenuItem.title}</Link>
                     ) : (
-                      <a href="" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={submenuItem.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {submenuItem.title}
                       </a>
                     )}

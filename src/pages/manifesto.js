@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { StructuredText } from "react-datocms";
 
 // Components
 import Layout from "../components/layout";
