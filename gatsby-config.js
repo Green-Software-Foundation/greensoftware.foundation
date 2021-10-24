@@ -47,5 +47,12 @@ module.exports = {
           "https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&amp;id=c5376a805c",
       },
     },
+
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-593HJXNS18"],
+      },
+    },
   ],
 };
