@@ -10,6 +10,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allDatoCmsArticle(sort: { fields: date, order: DESC }, limit: 1000) {
           edges {
             node {
+              id
               slug
             }
           }
@@ -33,10 +34,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  // Create Article-list pages
   const articles = result.data.allDatoCmsArticle.edges;
   const articlesPerPage = 10;
   const numPagesArticles = Math.ceil(articles.length / articlesPerPage);
+
+  // Create Article-list pages
   Array.from({ length: numPagesArticles }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/articles` : `/articles/${i + 1}`,
@@ -46,6 +48,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         skip: i * articlesPerPage,
         numPages: numPagesArticles,
         currentPage: i + 1,
+      },
+    });
+  });
+
+  // Create Articles pages
+  articles.forEach(({ node: article }) => {
+    createPage({
+      path: `/articles/${article.slug}`,
+      component: path.resolve("./src/templates/article.js"),
+      context: {
+        id: article.id,
       },
     });
   });

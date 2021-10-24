@@ -4,13 +4,13 @@ import { StructuredText } from "react-datocms";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Components
-import Layout from "../../components/layout";
-import PageTitle from "../../components/page-title";
-import PersonBlob from "../../components/person-blob";
-import NewsletterForm from "../../components/newsletter-form";
+import Layout from "../components/layout";
+import PageTitle from "../components/page-title";
+import PersonBlob from "../components/person-blob";
+import NewsletterForm from "../components/newsletter-form";
 
 // Styles
-import "../../styles/pages/single-article.scss";
+import "../styles/pages/single-article.scss";
 
 const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
   return (
