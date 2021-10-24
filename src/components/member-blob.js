@@ -14,7 +14,6 @@ const MemberBlob = ({ member }) => {
       socialLink = member.socialMediaLink[0].link;
     }
   }
-  console.log({ name: member.fullName, socialLink: Boolean(socialLink) });
   if (!socialLink) {
     return (
       <div
