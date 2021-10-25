@@ -47,7 +47,7 @@ const benefits = {
   participate: "Participate in working groups and projects",
   create: "Create new working groups",
   vote_W: "Vote in working groups",
-  premium: "Employee engagement & onboarding"
+  premium: "Employee engagement & onboarding",
 };
 
 const memberships = [
@@ -62,7 +62,7 @@ const memberships = [
       "vote_W",
       "premium",
       "comms_T",
-      "listed"
+      "listed",
     ],
     icon: <SteeringIcon />,
   },
@@ -125,6 +125,21 @@ const membershipFees = [
   },
 ];
 
+// Custom styles
+
+let membershipGridTemplate = `
+"blank steering-icon general-icon contributer-icon"
+"title title-s title-g title-c"
+"hr-0 hr-0 hr-0 hr-0"
+`;
+
+Object.keys(benefits).forEach((benefit, i) => {
+  membershipGridTemplate += `"${benefit} check-s-${benefit} check-g-${benefit} check-c-${benefit}"\n`;
+  membershipGridTemplate += `"hr-${i + 1} hr-${i + 1} hr-${i + 1} hr-${
+    i + 1
+  }"\n`;
+});
+
 const Disclaimer = () => (
   <div className="disclaimer-wrapper">
     <span className="icon flex-center-center">
@@ -155,8 +170,8 @@ const Section1 = () => (
         <Link to="/working-groups/standards">Standards</Link>,{" "}
         <Link to="/working-groups/innovation">Innovation</Link>,{" "}
         <Link to="/working-groups/trademark">Trademark</Link> and{" "}
-        <Link to="/working-groups/community">Community</Link> Working Groups as well as our{" "}
-        <Link to="/projects">list of Projects</Link>.
+        <Link to="/working-groups/community">Community</Link> Working Groups as
+        well as our <Link to="/projects">list of Projects</Link>.
       </p>
     </div>
   </section>
@@ -207,7 +222,10 @@ const Section3 = () => (
   <section className="section3">
     <h3>Membership Benefits</h3>
     <Section3Mobile />
-    <div className="membership-benefits">
+    <div
+      style={{ gridTemplateAreas: membershipGridTemplate }}
+      className="membership-benefits"
+    >
       <h4 style={{ gridArea: `title`, textAlign: "left" }}>Activity</h4>
       {memberships.map((membership) => (
         <React.Fragment key={membership.id}>
@@ -273,8 +291,8 @@ const Section4 = () => (
     <p className="main-description">
       Since we are a part of the Linux Foundation, membership of the GSF
       requires that you are at least a silver member of the Linux Foundation. If
-      you are already a member of the Linux Foundation, you can ignore the Linux Foundation
-      fees in the table below. All our fees are yearly.
+      you are already a member of the Linux Foundation, you can ignore the Linux
+      Foundation fees in the table below. All our fees are yearly.
     </p>
     <Section4Mobile />
     <div className="membership-fees">
@@ -325,7 +343,8 @@ const Section5 = () => (
       <br />
       <p>
         If you would like to arrange a meeting to discuss more, we still ask
-        that you please fill out our application form, and we will get back to you to arrange a time.
+        that you please fill out our application form, and we will get back to
+        you to arrange a time.
       </p>
     </div>
   </section>

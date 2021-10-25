@@ -164,24 +164,6 @@
         column-gap: 1.5rem;
         row-gap: 0;
         grid-template-columns: 1fr repeat(3, 100px);
-        grid-template-areas:
-          "blank steering-icon general-icon contributer-icon"
-          "title title-s title-g title-c"
-          "hr-0 hr-0 hr-0 hr-0"
-          "vote_S check-s-vote_S check-g-vote_S check-c-vote_S"
-          "hr-1 hr-1 hr-1 hr-1"
-          "chair check-s-chair check-g-chair check-c-chair"
-          "hr-2 hr-2 hr-2 hr-2"
-          "participate check-s-participate check-g-participate check-c-participate"
-          "hr-3 hr-3 hr-3 hr-3"
-          "create check-s-create check-g-create check-c-create"
-          "hr-4 hr-4 hr-4 hr-4"
-          "vote_W check-s-vote_W check-g-vote_W check-c-vote_W"
-          "hr-5 hr-5 hr-5 hr-5"
-          "premium check-s-premium check-g-premium check-c-premium"
-          "hr-6 hr-6 hr-6 hr-6"
-          "speaking check-s-speaking check-g-speaking check-c-speaking"
-          "hr-7 hr-7 hr-7 hr-7";
         h4,
         .icon {
           text-align: center;
