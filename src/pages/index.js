@@ -26,7 +26,7 @@ const Section1 = () => {
           <Link to="/working-groups/community">people</Link>,{" "}
           <Link to="/working-groups/standards">standards</Link>,{" "}
           <Link to="/working-groups/innovation">tooling</Link> and{" "}
-          <Link to="/working-groups/standards">best practices</Link> for
+          <Link to="/projects/software-carbon-intensity-sci-specification">best practices</Link> for
         </p>
         <h1>Green software</h1>
       </div>
@@ -47,8 +47,8 @@ const Section2 = () => (
         Green software is software that is responsible for emitting fewer
         greenhouse gases. Our focus is reduction, not neutralisation.
       </p>
-      <Button to="/manifesto" color="primary" edgeColor="primary-darker">
-        Check Manifesto
+      <Button to="/articles/what-is-green-software" color="primary" edgeColor="primary-darker">
+        Read our definition
       </Button>
     </div>
   </section>
