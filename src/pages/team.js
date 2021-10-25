@@ -35,9 +35,10 @@ const Section1 = ({ steeringCommittee }) => (
   </section>
 );
 
-const NoTextSection = ({ team, title }) => (
-  <section className="section2">
+const MembersSection = ({ team, title, description }) => (
+  <section className="members-section">
     <h6 className="green-uppercase-title">{title}</h6>
+    {description && <p>{description}</p>}
     <div className="members-wrapper">
       {team.map((person) => (
         <PersonBlob key={person.fullName} person={person} />
@@ -57,8 +58,12 @@ const TeamPage = ({
     <Layout pageName="team" seo={{ title: "Board / Team" }}>
       <PageTitle>Board / Team</PageTitle>
       <Section1 steeringCommittee={steeringCommittee} />
-      <NoTextSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />
-      <NoTextSection team={generalTeam} title="General TEAM" />
+      <MembersSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />
+      <MembersSection
+        team={generalTeam}
+        title="Organisational Leads"
+        description="If you are a member of one of our member organizations and would like to understand how to get involved in the Foundation, please get in touch with your representative below."
+      />
     </Layout>
   );
 };
