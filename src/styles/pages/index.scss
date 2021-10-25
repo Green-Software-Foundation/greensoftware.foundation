@@ -384,4 +384,11 @@
       }
     }
   }
+
+  // Large Screens
+  @media (min-width: 1920px) {
+    .section1 .illustration-wrapper {
+      background-size: contain;
+    }
+  }
 }
