@@ -8,11 +8,12 @@
     grid-row-gap: 2rem;
     padding: 2.5rem 3rem;
     color: var(--white-lighter);
-    h6 {
+    h2 {
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.25rem;
       color: var(--accent1);
+      font-size: 0.75rem;
       &::after {
         content: "";
         display: block;
@@ -23,7 +24,7 @@
       }
     }
     a {
-      color: var(--accent2);
+      color: var(--primary-lighter);
     }
     .links-wrapper {
       ul {

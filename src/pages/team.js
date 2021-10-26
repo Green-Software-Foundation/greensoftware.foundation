@@ -17,7 +17,7 @@ const Section1 = ({ steeringCommittee }) => (
     <div className="content-wrapper">
       <HeroIllustration />
       <div className="content">
-        <h6 className="green-uppercase-title">STEERING COMMITTEE</h6>
+        <h2 className="green-uppercase-title">STEERING COMMITTEE</h2>
         <p>
           The steering committee is made up of primary and alternative
           representatives from each of our steering member organizations. They
@@ -37,7 +37,7 @@ const Section1 = ({ steeringCommittee }) => (
 
 const MembersSection = ({ team, title, description }) => (
   <section className="members-section">
-    <h6 className="green-uppercase-title">{title}</h6>
+    <h2 className="green-uppercase-title">{title}</h2>
     {description && <p>{description}</p>}
     <div className="members-wrapper">
       {team.map((person) => (

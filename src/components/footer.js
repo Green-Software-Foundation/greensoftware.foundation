@@ -47,7 +47,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="links-wrapper legal-links">
-          <h6>Legal</h6>
+          <h2>Legal</h2>
           <ul>
             {legalData.map((linkItem) => (
               <li key={linkItem.title}>
@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="links-wrapper more-links">
-          <h6>More</h6>
+          <h2>More</h2>
           <ul>
             {moreData.map((linkItem) => (
               <li key={linkItem.title}>
@@ -87,7 +87,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="newsletter-wrapper">
-          <h6>JOIN OUR NEWSLETTER</h6>
+          <h2>JOIN OUR NEWSLETTER</h2>
           <NewsletterForm placeholder="you@example.xyz" hasDarkBg />
         </div>
       </footer>

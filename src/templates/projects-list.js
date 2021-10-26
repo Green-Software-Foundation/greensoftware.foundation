@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => (
     </div>
     <div className="content-wrapper">
       <div>
-        <h4>{project.title}</h4>
+        <h2>{project.title}</h2>
         <small>By {project.workingGroup.title} Working Group</small>
         <p>{project.shortDescription}</p>
       </div>

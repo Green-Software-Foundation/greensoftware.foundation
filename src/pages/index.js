@@ -26,7 +26,10 @@ const Section1 = () => {
           <Link to="/working-groups/community">people</Link>,{" "}
           <Link to="/working-groups/standards">standards</Link>,{" "}
           <Link to="/working-groups/innovation">tooling</Link> and{" "}
-          <Link to="/projects/software-carbon-intensity-sci-specification">best practices</Link> for
+          <Link to="/projects/software-carbon-intensity-sci-specification">
+            best practices
+          </Link>{" "}
+          for
         </p>
         <h1>Green software</h1>
       </div>
@@ -47,7 +50,11 @@ const Section2 = () => (
         Green software is software that is responsible for emitting fewer
         greenhouse gases. Our focus is reduction, not neutralisation.
       </p>
-      <Button to="/articles/what-is-green-software" color="primary" edgeColor="primary-darker">
+      <Button
+        to="/articles/what-is-green-software"
+        color="primary"
+        edgeColor="primary-darker"
+      >
         Read our definition
       </Button>
     </div>
@@ -129,10 +136,10 @@ const Section6 = () => (
   <section className="section6">
     <div className="pattern"></div>
     <div className="content-wrapper">
-      <h3>
+      <h2>
         Wanna work
         <br /> with us?
-      </h3>
+      </h2>
       <p>
         There are several ways of getting involved in the Green Software
         Foundation, from joining as members to participating in our global

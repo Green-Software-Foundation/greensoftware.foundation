@@ -26,7 +26,7 @@ const SingleWorkingGroupTemplate = ({
     >
       <PageTitle suptitle={workingGroup.title}>Working Group</PageTitle>
       <section>
-        <h6 className="green-uppercase-title">Scope</h6>
+        <h2 className="green-uppercase-title">Scope</h2>
         <div
           dangerouslySetInnerHTML={{
             __html: workingGroup.scopeNode.childMarkdownRemark.html,
@@ -39,7 +39,7 @@ const SingleWorkingGroupTemplate = ({
       )}
       {Boolean(workingGroup.projects.length) && (
         <section className="projects-section">
-          <h6 className="green-uppercase-title">PROJECTS</h6>
+          <h2 className="green-uppercase-title">PROJECTS</h2>
           <ul>
             {workingGroup.projects.map((project) => (
               <li key={project.id}>
@@ -54,7 +54,7 @@ const SingleWorkingGroupTemplate = ({
       )}
       {workingGroup.info.map((infoItem) => (
         <section key={infoItem.title} className="info-item">
-          <h6 className="green-uppercase-title">{infoItem.title}</h6>
+          <h2 className="green-uppercase-title">{infoItem.title}</h2>
           <StructuredText data={infoItem.content} />
         </section>
       ))}

@@ -18,7 +18,7 @@ const PressCard = ({ press }) => (
     <div className="logo-wrapper">
       <img src={press.logo.url} alt={press.headline} />
     </div>
-    <h4>{press.headline}</h4>
+    <p>{press.headline}</p>
   </a>
 );
 

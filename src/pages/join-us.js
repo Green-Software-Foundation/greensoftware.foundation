@@ -336,7 +336,7 @@ const Section5 = () => (
         .
       </p>
       <p>To start the application process, please fill out this form.</p>
-      <Button color="accent2" edgeColor="accent2-dark">
+      <Button color="primary" edgeColor="primary-dark">
         APPLY TO JOIN GSF
       </Button>
       <br />

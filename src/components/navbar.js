@@ -19,11 +19,20 @@ const menuData = [
     submenu: [
       { title: "Manifesto", to: "/manifesto" },
       { title: "Team", to: "/team" },
-      { title: "What is Green software?", to: "/articles/what-is-green-software" },            
-      { title: "How we work?", to: "/articles/welcome-to-the-green-software-foundation" },
+      {
+        title: "What is Green software?",
+        to: "/articles/what-is-green-software",
+      },
+      {
+        title: "How we work?",
+        to: "/articles/welcome-to-the-green-software-foundation",
+      },
       { title: "Press", to: "/press" },
-      { title: "Media Kit", href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing" },
-      { title: "Trademark Policy", to: "/policy/trademark" }
+      {
+        title: "Media Kit",
+        href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing",
+      },
+      { title: "Trademark Policy", to: "/policy/trademark" },
     ],
   },
   {
@@ -43,8 +52,14 @@ const menuData = [
     title: "Resources",
     submenu: [
       { title: "GitHub", href: "https://github.com/Green-Software-Foundation" },
-      { title: "Awesome Green Software", href: "https://github.com/Green-Software-Foundation/awesome-green-software" },   
-      { title: "Principles of Green Software Engineering", href: "https://principles.green" }   
+      {
+        title: "Awesome Green Software",
+        href: "https://github.com/Green-Software-Foundation/awesome-green-software",
+      },
+      {
+        title: "Principles of Green Software Engineering",
+        href: "https://principles.green",
+      },
     ],
   },
   {
@@ -143,7 +158,12 @@ const Navbar = () => {
     <header>
       <nav className="main-navbar flex-center-between">
         <div>
-          <Link style={{ display: "block" }} aria-current="homepage" to="/">
+          <Link
+            style={{ display: "block" }}
+            aria-label="GSF Logo"
+            aria-current="page"
+            to="/"
+          >
             <Logo />
           </Link>
         </div>

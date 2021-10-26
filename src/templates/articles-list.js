@@ -23,7 +23,7 @@ const ArticleCard = ({ article }) => (
     <div className="content-wrapper">
       <div>
         <small>{article.date}</small>
-        <h4>{article.title}</h4>
+        <h2>{article.title}</h2>
         <p>{article.summary}</p>
       </div>
       <div className="author-wrapper flex-align-center ">

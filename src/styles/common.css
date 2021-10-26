@@ -16,14 +16,6 @@
   --accent1-lightest-2: #f7faee;
   --accent1-lightest-1: #fbfcf6;
 
-  --accent2-darker: #316271;
-  --accent2-dark: #4994aa;
-  --accent2: #62c5e3;
-  --accent2-light: #b0e2f1;
-  --accent2-lighter: #d8f0f8;
-  --accent2-lightest-2: #eff9fc;
-  --accent2-lightest-1: #f7fcfe;
-
   --gray-darker: #777777;
   --gray-dark: #b2b2b2;
   --gray: #ededed;
@@ -33,7 +25,7 @@
   --gray-lightest-1: #fefefe;
 
   --black: #3c3c3c;
-  --black-light: rgba(60, 60, 60, 0.5);
+  --black-light: rgba(60, 60, 60, 0.8);
   --black-lighter: rgba(60, 60, 60, 0.25);
   --black-lightest-2: rgba(60, 60, 60, 0.1);
   --black-lightest-1: rgba(60, 60, 60, 0.05);
@@ -144,7 +136,7 @@ button:focus:not(:focus-visible) {
   outline: none;
 }
 a {
-  color: var(--accent2-dark);
+  color: var(--primary-dark);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }

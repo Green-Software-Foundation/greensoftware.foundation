@@ -55,8 +55,8 @@ const PersonBlob = ({ person }) => {
     <div className="person-blob">
       <ImageBlob photo={getImage(person.photo)} alt={person.fullName} />
       <div className="person-data-wrapper">
-        <h5>{person.fullName}</h5>
-        {person.role && <h6>{person.role}</h6>}
+        <span className="fullname">{person.fullName}</span>
+        {person.role && <span className="role">{person.role}</span>}
         {person.company && (
           <div className="company">
             {person.companyWebsite ? (
@@ -68,7 +68,7 @@ const PersonBlob = ({ person }) => {
                 @{person.company}
               </a>
             ) : (
-              <p>@ {person.company}</p>
+              <span>@ {person.company}</span>
             )}
           </div>
         )}
@@ -78,6 +78,7 @@ const PersonBlob = ({ person }) => {
               <a
                 key={social.link}
                 href={social.link}
+                aria-label={social.platform}
                 target="_blank"
                 rel="noopener noreferrer"
               >

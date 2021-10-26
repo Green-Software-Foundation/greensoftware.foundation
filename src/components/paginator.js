@@ -21,8 +21,9 @@ const Paginator = ({ currentPage, numPages, path }) => {
         {!isFirst && (
           <li className="btn prev-btn">
             <Button
-              color="accent2"
-              edgeColor="accent2-dark"
+              color="accent1"
+              edgeColor="accent1-dark"
+              textColor="black"
               to={`/${path}/${prevPage}`}
               rel="next"
             >
@@ -34,8 +35,9 @@ const Paginator = ({ currentPage, numPages, path }) => {
         {!isLast && (
           <li className="btn next-btn">
             <Button
-              color="accent2"
-              edgeColor="accent2-dark"
+              color="accent1"
+              edgeColor="accent1-dark"
+              textColor="black"
               to={`/${path}/${nextPage}`}
               rel="next"
             >

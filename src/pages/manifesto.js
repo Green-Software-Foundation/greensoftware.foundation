@@ -37,9 +37,9 @@ const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
             <img src={topic.illustration.url} alt={topic.title} />
           </div>
           <div className="content-wrapper">
-            <h5 className="green-uppercase-title">{topic.title}</h5>
+            <h3 className="green-uppercase-title">{topic.title}</h3>
             <p>{topic.description}</p>
-            <h6>Operationalise: </h6>
+            <h4>Operationalise: </h4>
             <div
               dangerouslySetInnerHTML={{
                 __html: topic.operationaliseNode.childMarkdownRemark.html,
