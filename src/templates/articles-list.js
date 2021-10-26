@@ -80,13 +80,16 @@ export const query = graphql`
             gatsbyImageData(
               placeholder: TRACED_SVG
               width: 45
-              imgixParams: { sat: -100 }
+              imgixParams: { sat: -100, auto: "compress" }
             )
           }
         }
         date
         mainImage {
-          gatsbyImageData(placeholder: TRACED_SVG)
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { w: "750", auto: "compress" }
+          )
         }
       }
     }

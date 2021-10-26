@@ -90,7 +90,7 @@ export const query = graphql`
         photo {
           gatsbyImageData(
             placeholder: TRACED_SVG
-            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
           )
         }
         companyWebsite
@@ -110,7 +110,7 @@ export const query = graphql`
         photo {
           gatsbyImageData(
             placeholder: TRACED_SVG
-            imgixParams: { sat: -100, w: "150px", fm: "jpg" }
+            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
           )
         }
         companyName: company
@@ -128,7 +128,7 @@ export const query = graphql`
         photo {
           gatsbyImageData(
             placeholder: TRACED_SVG
-            imgixParams: { sat: -100, w: "100px", fm: "jpg" }
+            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
           )
         }
         companyName

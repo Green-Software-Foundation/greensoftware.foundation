@@ -138,7 +138,10 @@ export const query = graphql`
       teaserText
       date(formatString: "MMMM Do, YYYY")
       mainImage {
-        gatsbyImageData(placeholder: TRACED_SVG)
+        gatsbyImageData(
+          placeholder: TRACED_SVG
+          imgixParams: { fm: "png", w: "768", auto: "compress" }
+        )
       }
       content {
         value
@@ -166,7 +169,7 @@ export const query = graphql`
               alt
               gatsbyImageData(
                 placeholder: TRACED_SVG
-                imgixParams: { fm: "jpg" }
+                imgixParams: { w: "768", auto: "compress" }
               )
             }
           }
@@ -186,7 +189,10 @@ export const query = graphql`
         fullName
         role
         photo {
-          gatsbyImageData(placeholder: TRACED_SVG, imgixParams: { sat: -100 })
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
+          )
         }
         socialMediaLink {
           link
