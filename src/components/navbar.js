@@ -33,6 +33,8 @@ const menuData = [
         href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing",
       },
       { title: "Trademark Policy", to: "/policy/trademark" },
+      { title: "Code Of Conduct", to: "/code-of-conduct" }      
+
     ],
   },
   {
