@@ -45,7 +45,7 @@ const ImageBlob = ({ photo, alt }) => (
   <div className="image-blob-wrapper flex-center-center">
     <div className="pattern"></div>
     <div className="person-photo">
-      <GatsbyImage image={photo} alt={alt} />
+      <GatsbyImage image={photo} alt={alt} className="photo-img" />
     </div>
   </div>
 );
