@@ -8,9 +8,11 @@ import PageTitle from "../components/page-title";
 
 const SingleFlatPageTemplate = ({ data: { datoCmsFlatPage: data } }) => {
   return (
-    <Layout pageName="single-working-group" seo={{ title: data.title }}>
+    <Layout pageName="flat-page" seo={{ title: data.title }}>
       <PageTitle>{data.title}</PageTitle>
-      <StructuredText data={data.content} />
+      <div style={{ marginBottom: "5rem" }}>
+        <StructuredText data={data.content} />
+      </div>
     </Layout>
   );
 };
