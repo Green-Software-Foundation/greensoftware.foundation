@@ -36,20 +36,43 @@ const Button = ({
   textColor = "white",
   fontWeight = 800,
   to,
+  href,
   ...props
 }) => {
-  return to ? (
-    <Link to={to} className="button" {...props}>
-      <ButtonElements
-        edgeColor={edgeColor}
-        color={color}
-        textColor={textColor}
-        fontWeight={fontWeight}
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="button"
+        {...props}
       >
-        {children}
-      </ButtonElements>
-    </Link>
-  ) : (
+        <ButtonElements
+          edgeColor={edgeColor}
+          color={color}
+          textColor={textColor}
+          fontWeight={fontWeight}
+        >
+          {children}
+        </ButtonElements>
+      </a>
+    );
+  } else if (to) {
+    return (
+      <Link to={to} className="button" {...props}>
+        <ButtonElements
+          edgeColor={edgeColor}
+          color={color}
+          textColor={textColor}
+          fontWeight={fontWeight}
+        >
+          {children}
+        </ButtonElements>
+      </Link>
+    );
+  }
+  return (
     <button className="button" {...props}>
       <ButtonElements
         edgeColor={edgeColor}
