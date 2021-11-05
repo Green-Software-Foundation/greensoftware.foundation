@@ -18,33 +18,31 @@ const Paginator = ({ currentPage, numPages, path }) => {
   return (
     <div className="paginator-wrapper">
       <ul>
-        {!isFirst && (
-          <li className="btn prev-btn">
-            <Button
-              color="accent1"
-              edgeColor="accent1-dark"
-              textColor="black"
-              to={`/${path}/${prevPage}`}
-              rel="next"
-            >
-              ←
-            </Button>
-          </li>
-        )}
+        <li className="btn prev-btn">
+          <Button
+            color="accent1"
+            edgeColor="accent1-dark"
+            textColor="black"
+            to={isFirst ? null : `/${path}/${prevPage}`}
+            rel="previous"
+            disabled={isFirst}
+          >
+            ←
+          </Button>
+        </li>
         {/* TODO: Add Pagination Breaks */}
-        {!isLast && (
-          <li className="btn next-btn">
-            <Button
-              color="accent1"
-              edgeColor="accent1-dark"
-              textColor="black"
-              to={`/${path}/${nextPage}`}
-              rel="next"
-            >
-              →
-            </Button>
-          </li>
-        )}
+        <li className="btn next-btn">
+          <Button
+            color="accent1"
+            edgeColor="accent1-dark"
+            textColor="black"
+            to={isLast ? null : `/${path}/${nextPage}`}
+            rel="next"
+            disabled={isLast}
+          >
+            →
+          </Button>
+        </li>
       </ul>
     </div>
   );
