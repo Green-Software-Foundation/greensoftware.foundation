@@ -37,6 +37,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.17.5",
+    "react-medium-image-zoom": "^4.3.5",
     "sass": "^1.42.1"
   }
 }

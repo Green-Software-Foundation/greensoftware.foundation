@@ -2,6 +2,8 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import { StructuredText } from "react-datocms";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 // Components
 import Layout from "../components/layout";
@@ -24,11 +26,13 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
           <p>{article.teaserText}</p>
         </div>
         <div className="main-image">
-          <GatsbyImage
-            className="article-image"
-            image={getImage(article.mainImage)}
-            alt={article.title}
-          />
+          <Zoom>
+            <GatsbyImage
+              className="article-image"
+              image={getImage(article.mainImage)}
+              alt={article.title}
+            />
+          </Zoom>
         </div>
         <div className="content">
           <StructuredText
@@ -64,11 +68,13 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
               if (record.__typename === "DatoCmsArticleContentImage") {
                 return (
                   <div className="article-image-wrapper">
-                    <GatsbyImage
-                      className="article-image"
-                      image={getImage(record.image)}
-                      alt={record.image.alt}
-                    />
+                    <Zoom>
+                      <GatsbyImage
+                        className="article-image"
+                        image={getImage(record.image)}
+                        alt={record.image.alt}
+                      />
+                    </Zoom>
                     {record.image.title && (
                       <small>
                         <em>{record.image.title}</em>
@@ -140,7 +146,7 @@ export const query = graphql`
       mainImage {
         gatsbyImageData(
           placeholder: TRACED_SVG
-          imgixParams: { fm: "png", w: "768", auto: "compress" }
+          imgixParams: { w: "1920", auto: "compress" }
         )
       }
       content {
@@ -169,7 +175,7 @@ export const query = graphql`
               alt
               gatsbyImageData(
                 placeholder: TRACED_SVG
-                imgixParams: { w: "768", auto: "compress" }
+                imgixParams: { w: "1920", auto: "compress" }
               )
             }
           }
