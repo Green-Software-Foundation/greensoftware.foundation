@@ -99,7 +99,7 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
               );
             }}
           />
-          {article.originBlogName && article.publishedOriginUrl && (
+          {article.originBlogName && article.publishedOriginUrl ? (
             <p>
               Originally published in the{" "}
               <a
@@ -108,6 +108,17 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
                 href={article.publishedOriginUrl}
               >
                 {article.originBlogName}
+              </a>
+            </p>
+          ) : (
+            <p>
+              This article is licenced under{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://creativecommons.org/licenses/by/4.0/"
+              >
+                Creative Commons (CC BY 4.0)
               </a>
             </p>
           )}
