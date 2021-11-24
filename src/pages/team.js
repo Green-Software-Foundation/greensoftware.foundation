@@ -72,6 +72,7 @@ export const query = graphql`
   query TeamPageQuery {
     steeringCommittee: allDatoCmsMember(
       filter: { isSteeringCommitteeMember: { eq: true } }
+      sort: { order: ASC, fields: fullName }
     ) {
       nodes {
         fullName
@@ -93,6 +94,7 @@ export const query = graphql`
 
     administrativeTeam: allDatoCmsMember(
       filter: { isAdministrativeTeamMember: { eq: true } }
+      sort: { order: ASC, fields: fullName }
     ) {
       nodes {
         fullName
@@ -112,7 +114,10 @@ export const query = graphql`
       }
     }
 
-    generalTeam: allDatoCmsMember(filter: { isGeneralMember: { eq: true } }) {
+    generalTeam: allDatoCmsMember(
+      filter: { isGeneralMember: { eq: true } }
+      sort: { order: ASC, fields: fullName }
+    ) {
       nodes {
         fullName
         role

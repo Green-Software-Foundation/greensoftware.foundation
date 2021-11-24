@@ -92,6 +92,7 @@ export const query = graphql`
     }
     chairsData: allDatoCmsMember(
       filter: { chairWorkingGroups: { elemMatch: { id: { eq: $id } } } }
+      sort: { order: ASC, fields: fullName }
     ) {
       nodes {
         fullName
@@ -112,6 +113,7 @@ export const query = graphql`
     }
     membersData: allDatoCmsMember(
       filter: { memberWorkingGroups: { elemMatch: { id: { eq: $id } } } }
+      sort: { order: ASC, fields: fullName }
     ) {
       nodes {
         fullName
