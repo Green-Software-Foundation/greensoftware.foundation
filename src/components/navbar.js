@@ -1,6 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 // Components
 import Button from "./button";
@@ -33,8 +38,7 @@ const menuData = [
         href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing",
       },
       { title: "Trademark Policy", to: "/policy/trademark" },
-      { title: "Code Of Conduct", to: "/code-of-conduct" }      
-
+      { title: "Code Of Conduct", to: "/code-of-conduct" },
     ],
   },
   {
@@ -136,9 +140,15 @@ const JoinCTA = () => (
 );
 
 const ResponsiveMenu = () => {
+  const menuEl = React.useRef(null);
+  React.useEffect(() => {
+    disableBodyScroll(menuEl.current);
+    return () => clearAllBodyScrollLocks();
+  }, []);
+
   return (
     <motion.div
-      // ref={menuEl}
+      ref={menuEl}
       key="responsive-menu"
       initial={{ x: "-100%", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
