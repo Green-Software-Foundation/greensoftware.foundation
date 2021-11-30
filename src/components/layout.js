@@ -4,6 +4,7 @@ import * as React from "react";
 import Seo from "./seo";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Search from "./search";
 
 // Fonts
 import "@fontsource/nunito-sans";
@@ -23,6 +24,7 @@ const Layout = ({ children, pageName, seo }) => {
         <div className="page-layout">{children}</div>
       </main>
       <Footer />
+      <Search />
     </>
   );
 };

@@ -70,13 +70,15 @@
 .error-msg.hasDarkBg {
   color: var(--danger-light);
 }
+.ais-Highlight-highlighted {
+  background-color: var(--accent1);
+}
 /* CSS Reset */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 16px/1.45em "Nunito Sans";
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 
 body {
