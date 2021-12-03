@@ -1,26 +1,51 @@
 const StructureToPlain = require("datocms-structured-text-to-plain-text");
 
-const pageQuery = `{
-  pages: allDatoCmsArticle {
-    edges {
-      node {
+const pageQuery = `
+  {
+    articles: allDatoCmsArticle {
+      edges {
+        node {
           id
           slug
           title
           teaserText
           summary
+          date
           mainImage {
             url
           }
-          content{
-              value
+          content {
+            value
           }
+        }
+      }
+    }
+    projects: allDatoCmsProject {
+      edges {
+        node {
+          id
+          slug
+          title
+          shortDescription
+          workingGroup {
+            title
+          }
+          illustration {
+            url
+          }
+          info {
+            title
+            content {
+              value
+            }
+          }
+        }
       }
     }
   }
-}`;
+`;
 
-function pageToAlgoliaRecord({ node: { id, mainImage, content, ...rest } }) {
+function articleToAlgoliaRecord({ node: { id, mainImage, content, ...rest } }) {
   return {
     objectID: id,
     image: mainImage.url,
@@ -29,12 +54,35 @@ function pageToAlgoliaRecord({ node: { id, mainImage, content, ...rest } }) {
   };
 }
 
+function projectToAlgoliaRecord({
+  node: { id, illustration, info, workingGroup, ...rest },
+}) {
+  let infoText = ``;
+  for (const singleInfo of info) {
+    infoText += `${singleInfo.title}
+        ${StructureToPlain.render(singleInfo.content)}
+      `;
+  }
+  return {
+    objectID: id,
+    image: illustration.url,
+    workingGroup: `${workingGroup.title} Working Group`,
+    content: infoText,
+    ...rest,
+  };
+}
 const queries = [
   {
     query: pageQuery,
-    transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
+    transformer: ({ data }) => data.articles.edges.map(articleToAlgoliaRecord),
     indexName: "Articles",
-    settings: { attributesToSnippet: [`excerpt:20`] },
+    settings: { attributesToSnippet: [`content:20`] },
+  },
+  {
+    query: pageQuery,
+    transformer: ({ data }) => data.projects.edges.map(projectToAlgoliaRecord),
+    indexName: "Projects",
+    settings: { attributesToSnippet: [`content:20`] },
   },
 ];
 
