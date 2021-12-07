@@ -13,12 +13,48 @@ import NewsletterForm from "../components/newsletter-form";
 
 // Styles
 import "../styles/templates/single-article.scss";
+const localeTranslations = {
+  Portugese: "Português",
+  Spanish: "Español",
+  Chinese: "中文",
+};
 
-const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
+const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
+  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
       <div className="content-wrapper">
+        {translatedArticles.nodes.length ? (
+          <div>
+            <p>Read this article in </p>
+            <ul>
+              {article.isATranslatedArticle && (
+                <li>
+                  <Link to={`/articles/${article.originalArticle.slug}`}>
+                    English
+                  </Link>
+                </li>
+              )}
+              {translatedArticles.nodes.map((translatedArticle, i) =>
+                translatedArticle.id === article.id ? (
+                  <></>
+                ) : (
+                  <li>
+                    <Link
+                      key={translatedArticle.id}
+                      to={`/articles/${translatedArticle.slug}`}
+                    >
+                      {localeTranslations[translatedArticle.language]}
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        ) : (
+          <></>
+        )}
         <div className="teaser-text">
           <small>
             Posted on {article.date} by {article.author.fullName}
@@ -138,14 +174,23 @@ const SingleArticleTemplate = ({ data: { datoCmsArticle: article } }) => {
         <div className="author-wrapper">
           <PersonBlob person={article.author} />
         </div>
+        {article.translator && (
+          <>
+            <hr />
+            <div className="author-wrapper">
+              <p>This article is translated by:</p>
+              <PersonBlob person={article.translator} />
+            </div>{" "}
+          </>
+        )}
       </div>
     </Layout>
   );
 };
 
 export const query = graphql`
-  query SingleArticleTemplateQuery($id: String) {
-    datoCmsArticle(id: { eq: $id }) {
+  query SingleArticleTemplateQuery($id: String, $originalArticle: String) {
+    article: datoCmsArticle(id: { eq: $id }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
@@ -218,6 +263,36 @@ export const query = graphql`
       }
       publishedOriginUrl
       originBlogName
+      isATranslatedArticle
+      originalArticle {
+        id
+        slug
+      }
+      translator {
+        company: companyName
+        companyWebsite
+        fullName
+        role
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
+          )
+        }
+        socialMediaLink {
+          link
+          platform
+        }
+      }
+    }
+    translatedArticles: allDatoCmsArticle(
+      filter: { originalArticle: { id: { eq: $originalArticle } } }
+    ) {
+      nodes {
+        id
+        language
+        slug
+      }
     }
   }
 `;

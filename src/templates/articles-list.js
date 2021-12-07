@@ -67,6 +67,7 @@ export const query = graphql`
   query ArticlesPageQuery($skip: Int!, $limit: Int!) {
     allDatoCmsArticle(
       sort: { fields: date, order: DESC }
+      filter: { isATranslatedArticle: { ne: true } }
       limit: $limit
       skip: $skip
     ) {

@@ -12,6 +12,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               slug
+              isATranslatedArticle
+              originalArticle {
+                id
+              }
             }
           }
         }
@@ -54,8 +58,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Articles
   const articles = result.data.allDatoCmsArticle.edges;
+  const originalArticles = result.data.allDatoCmsArticle.edges.filter(
+    (article) => !article.isATranslatedArticle
+  );
   const articlesPerPage = 10;
-  const numPagesArticles = Math.ceil(articles.length / articlesPerPage);
+  const numPagesArticles = Math.ceil(originalArticles.length / articlesPerPage);
 
   // Create Article-list pages
   Array.from({ length: numPagesArticles }).forEach((_, i) => {
@@ -78,6 +85,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve("./src/templates/article.js"),
       context: {
         id: article.id,
+        originalArticle: article.originalArticle
+          ? article.originalArticle?.id
+          : article.id,
       },
     });
   });
