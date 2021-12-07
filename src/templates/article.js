@@ -13,14 +13,11 @@ import NewsletterForm from "../components/newsletter-form";
 
 // Styles
 import "../styles/templates/single-article.scss";
-const localeTranslations = {
-  Portugese: "Português",
-  Spanish: "Español",
-  Chinese: "中文",
-};
+
+// Utils
+import { getLocaleNativeName } from "../utils/language-locale";
 
 const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
-  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
@@ -45,7 +42,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
                       key={translatedArticle.id}
                       to={`/articles/${translatedArticle.slug}`}
                     >
-                      {localeTranslations[translatedArticle.language]}
+                      {getLocaleNativeName(translatedArticle.language)}
                     </Link>
                   </li>
                 )

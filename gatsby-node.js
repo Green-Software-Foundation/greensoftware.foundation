@@ -1,5 +1,4 @@
 const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
@@ -36,6 +35,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               slug
+            }
+          }
+        }
+
+        allDatoCmsManifesto {
+          edges {
+            node {
+              id
+              slug
+              language
             }
           }
         }
@@ -136,9 +145,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
+  // Manifesto Translation pages
+  const manifestoPages = result.data.allDatoCmsManifesto.edges;
+
+  manifestoPages.forEach(({ node: manifestoPage }) => {
+    createPage({
+      path: `/${manifestoPage.slug}`,
+      component: path.resolve("./src/templates/manifesto.js"),
+      context: {
+        id: manifestoPage.id,
+      },
+    });
+  });
+
   // Flat pages
   const flatPages = result.data.allDatoCmsFlatPage.edges;
-
   // Create Working groups pages
   flatPages.forEach(({ node: flatPage }) => {
     createPage({
