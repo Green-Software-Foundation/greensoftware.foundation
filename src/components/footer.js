@@ -6,6 +6,8 @@ import NewsletterForm from "./newsletter-form";
 
 // Assets
 import Logo from "../assets/icons/logo-sign.inline.svg";
+import TwitterIcon from "../assets/icons/twitter.inline.svg";
+import LinkedinIcon from "../assets/icons/linkedin.inline.svg";
 
 // Styles
 import "../styles/components/footer.scss";
@@ -31,20 +33,35 @@ const moreData = [
     to: "/join-us",
   },
 ];
+const socialMediaLinks = [
+  {
+    icon: <TwitterIcon />,
+    link: "https://twitter.com/gsfcommunity",
+  },
+  {
+    icon: <LinkedinIcon />,
+    link: "https://www.linkedin.com/company/green-software-foundation/",
+  },
+];
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <footer>
+      <footer className="container">
         <div className="logo-copyrights-wrapper">
           <Logo />
           <p>
             Copyright © {new Date().getFullYear()} Joint Development Foundation
             Projects, LLC, Green Software Foundation Series
           </p>
-          <p>
-            The Joint Development Foundation Projects, LLC is an affiliate of
-            the Linux Foundation.
-          </p>
+          <ul className="social-links">
+            {socialMediaLinks.map(({ link, icon }) => (
+              <li key={link}>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="links-wrapper legal-links">
           <h2>Legal</h2>
@@ -91,6 +108,12 @@ const Footer = () => {
           <NewsletterForm placeholder="you@example.xyz" hasDarkBg />
         </div>
       </footer>
+      <div className="sub-footer">
+        <p>
+          The Joint Development Foundation Projects, LLC is an affiliate of the
+          Linux Foundation.
+        </p>
+      </div>
     </div>
   );
 };
