@@ -21,7 +21,7 @@ const Layout = ({ children, pageName, seo }) => {
       <Seo title={seo?.title} meta={seo?.meta} />
       <main className={`${pageName}`}>
         <Navbar />
-        <div className="page-layout">{children}</div>
+        <div className="page-layout container">{children}</div>
       </main>
       <Footer />
       <Search />

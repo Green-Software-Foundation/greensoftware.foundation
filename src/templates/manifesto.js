@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 // Components
 import Layout from "../components/layout";
@@ -12,6 +12,9 @@ import VisionIcon from "../assets/icons/vision.inline.svg";
 // Styles
 import "../styles/pages/manifesto.scss";
 
+// Utils
+import { getLocaleNativeName } from "../utils/language-locale";
+
 const MVItem = ({ icon, title, text }) => (
   <div className="mv-item">
     <div className="icon-wrapper">{icon}</div>
@@ -20,10 +23,29 @@ const MVItem = ({ icon, title, text }) => (
   </div>
 );
 
-const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
+const ManifestoPage = ({
+  data: {
+    datoCmsManifesto: data,
+    allDatoCmsManifesto: { nodes: allManifesto },
+  },
+}) => {
+  const allOtherManifesto = allManifesto.filter(({ id }) => id !== data.id);
   return (
-    <Layout pageName="manifesto" seo={{ title: "Manifesto" }}>
-      <PageTitle>manifesto</PageTitle>
+    <Layout pageName="manifesto" seo={{ title: data.title }}>
+      <PageTitle>{data.title}</PageTitle>
+      {Boolean(allOtherManifesto.length) && (
+        <div>
+          <p>You can read manifesto in: </p>
+          <ul>
+            {allOtherManifesto.map(({ language, slug }) => (
+              <li key={language}>
+                <Link to={`/${slug}`}>{getLocaleNativeName(language)}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <hr />
       <div className="main-paragraph">
         <p>{data.mainParagraph}</p>
       </div>
@@ -53,8 +75,10 @@ const ManifestoPage = ({ data: { datoCmsManifesto: data } }) => {
 };
 
 export const query = graphql`
-  query ManifestoPageQuery {
-    datoCmsManifesto {
+  query ManifestoPageQuery($id: String) {
+    datoCmsManifesto(id: { eq: $id }) {
+      id
+      title
       mainParagraph
       vision
       mission
@@ -70,6 +94,13 @@ export const query = graphql`
             html
           }
         }
+      }
+    }
+    allDatoCmsManifesto {
+      nodes {
+        id
+        slug
+        language
       }
     }
   }

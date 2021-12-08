@@ -1,4 +1,5 @@
 :root {
+  --primary-darkest-2: #002625;
   --primary-darkest: #002c2a;
   --primary-darker: #003734;
   --primary-dark: #00524f;
@@ -72,6 +73,39 @@
 }
 .ais-Highlight-highlighted {
   background-color: var(--accent1);
+}
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1280px) {
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 1280px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 /* CSS Reset */
 html {

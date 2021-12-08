@@ -1,5 +1,4 @@
 const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
@@ -12,6 +11,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               slug
+              isATranslatedArticle
+              originalArticle {
+                id
+              }
             }
           }
         }
@@ -36,6 +39,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
 
+        allDatoCmsManifesto {
+          edges {
+            node {
+              id
+              slug
+              language
+            }
+          }
+        }
+
         allDatoCmsFlatPage {
           edges {
             node {
@@ -54,8 +67,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Articles
   const articles = result.data.allDatoCmsArticle.edges;
+  const originalArticles = result.data.allDatoCmsArticle.edges.filter(
+    (article) => !article.isATranslatedArticle
+  );
   const articlesPerPage = 10;
-  const numPagesArticles = Math.ceil(articles.length / articlesPerPage);
+  const numPagesArticles = Math.ceil(originalArticles.length / articlesPerPage);
 
   // Create Article-list pages
   Array.from({ length: numPagesArticles }).forEach((_, i) => {
@@ -78,6 +94,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve("./src/templates/article.js"),
       context: {
         id: article.id,
+        originalArticle: article.originalArticle
+          ? article.originalArticle?.id
+          : article.id,
       },
     });
   });
@@ -126,9 +145,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
+  // Manifesto Translation pages
+  const manifestoPages = result.data.allDatoCmsManifesto.edges;
+
+  manifestoPages.forEach(({ node: manifestoPage }) => {
+    createPage({
+      path: `/${manifestoPage.slug}`,
+      component: path.resolve("./src/templates/manifesto.js"),
+      context: {
+        id: manifestoPage.id,
+      },
+    });
+  });
+
   // Flat pages
   const flatPages = result.data.allDatoCmsFlatPage.edges;
-
   // Create Working groups pages
   flatPages.forEach(({ node: flatPage }) => {
     createPage({

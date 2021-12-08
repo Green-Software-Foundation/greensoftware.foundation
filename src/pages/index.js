@@ -158,7 +158,6 @@ const Section6 = () => (
   </section>
 );
 const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
-  console.log(homepageData);
   return (
     <Layout pageName="homepage" seo={{ title: "Green Software Foundation" }}>
       <Section1 />
