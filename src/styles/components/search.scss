@@ -1,5 +1,9 @@
+@use "sass:math";
 .search-wrapper {
-  background: rgba(87, 102, 41, 0.6);
+  $inputHeight: 3.75rem;
+  $searchIconSize: 1.25rem;
+  $inputLeftPadding: 1rem;
+  background: rgba(251 252 246 / 0.5);
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -9,29 +13,113 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  overflow-y: scroll;
   .search-widget {
-    background: var(--gray-lightest-2);
     width: 100%;
+    margin: 1.5rem;
+    .algolia-logo {
+      text-align: right;
+      svg {
+        height: 1rem;
+        width: auto;
+      }
+    }
     .search-form {
       margin: 0;
+      position: relative;
+      margin-bottom: 1rem;
+      .search-icon {
+        position: absolute;
+        width: $searchIconSize;
+        height: $searchIconSize;
+        top: math.div($inputHeight, 2) - math.div($searchIconSize, 2);
+        left: $inputLeftPadding;
+        color: var(--primary-light);
+        transition: color 0.25s;
+      }
       .search-input {
-        height: 4rem;
+        height: $inputHeight;
         width: 100%;
         border: none;
         padding: 1rem;
-        border-bottom: 1px solid var(--primary-lighter);
-        // box-shadow: 0px 6px 0 0px var(--gray-dark);
-        font-size: 1.25rem;
+        padding-left: $inputLeftPadding * 3;
+        box-shadow: var(--shadow-4);
+        font-size: 0.875rem;
         transition: box-shadow 0.25s;
-        // &:focus {
-        //   box-shadow: 0px 6px 0 0px var(--primary-dark);
-        // }
+        border-radius: 0.5rem;
+        color: var(--gray-darker);
+        &:focus {
+          box-shadow: var(--shadow-2);
+          ~ .search-icon {
+            color: var(--primary);
+          }
+        }
       }
     }
   }
   .hits-wrapper {
-    padding: 1rem;
-    .article-hit {
+    padding: 2rem;
+    background: white;
+    box-shadow: var(--shadow-2);
+    border-radius: 0.5rem;
+    .results-wrapper {
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        margin-top: 2rem;
+        &::before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: var(--gray);
+          margin-bottom: 2rem;
+        }
+      }
+      .results-header {
+        margin-bottom: 1rem;
+        h1 {
+          margin: 0;
+        }
+        span {
+          font-size: 0.75rem;
+          color: var(--gray-dark);
+        }
+      }
+    }
+    .ais-Hits-list {
+      margin: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 2rem;
+      .ais-Hits-item {
+        margin: 0;
+      }
+      .article-hit,
+      .project-hit {
+        a {
+          text-decoration: none;
+          img {
+            border-radius: 0.25rem;
+          }
+          .title {
+            font-weight: bold;
+            display: block;
+          }
+          .summary {
+            font-size: 0.875rem;
+            color: var(--gray-darker);
+          }
+        }
+      }
+      .project-hit {
+        img {
+          height: 120px;
+        }
+      }
+    }
+    .ais-Highlight-highlighted {
+      background-color: var(--accent1);
     }
   }
 }

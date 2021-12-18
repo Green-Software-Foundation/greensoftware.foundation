@@ -38,6 +38,17 @@
   --danger-dark: #a61d15;
   --danger: #dd261c;
   --danger-light: #ee938d;
+
+  --shadow-1: 0px 0px 1px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  --shadow-2: 0px 0px 1px rgba(12, 26, 75, 0.1),
+    0px 4px 20px -2px rgba(50, 50, 71, 0.08);
+  --shadow-3: 0px 0px 1px rgba(12, 26, 75, 0.1),
+    0px 10px 16px rgba(20, 37, 63, 0.06);
+  --shadow-4: 0px 0px 1px rgba(12, 26, 75, 0.1),
+    0px 20px 24px rgba(20, 37, 63, 0.06);
+  --shadow-5: 0px 0px 1px rgba(12, 26, 75, 0.1),
+    0px 30px 40px rgba(20, 37, 63, 0.08);
 }
 
 /* Common CSS */
@@ -70,9 +81,6 @@
 }
 .error-msg.hasDarkBg {
   color: var(--danger-light);
-}
-.ais-Highlight-highlighted {
-  background-color: var(--accent1);
 }
 .container {
   margin-left: 1.5rem;

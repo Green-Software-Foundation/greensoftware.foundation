@@ -16,15 +16,19 @@ import "../styles/common.css";
 import "../styles/components/layout.scss";
 
 const Layout = ({ children, pageName, seo }) => {
+  const pageContentEl = React.useRef(null);
+
   return (
     <>
       <Seo title={seo?.title} meta={seo?.meta} />
-      <main className={`${pageName}`}>
-        <Navbar />
-        <div className="page-layout container">{children}</div>
-      </main>
-      <Footer />
-      <Search />
+      <div ref={pageContentEl}>
+        <main className={`${pageName}`}>
+          <Navbar />
+          <div className="page-layout container">{children}</div>
+        </main>
+        <Footer />
+      </div>
+      <Search pageContentEl={pageContentEl} />
     </>
   );
 };
