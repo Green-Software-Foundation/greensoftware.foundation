@@ -13,7 +13,6 @@ import "@fontsource/nunito-sans/900.css";
 
 // Styles
 import "../styles/common.css";
-import "../styles/components/layout.scss";
 
 const Layout = ({ children, pageName, seo }) => {
   const pageContentEl = React.useRef(null);
