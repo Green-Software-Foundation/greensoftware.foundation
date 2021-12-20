@@ -8,14 +8,19 @@ import {
   Highlight,
   connectSearchBox,
   connectStateResults,
-  //   SearchBox,
 } from "react-instantsearch-dom";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+
+// Components
+import Spinner from "./spinner";
 
 // Assets
 import SearchIcon from "../assets/icons/search.inline.svg";
 import AlgoliaLogo from "../assets/icons/search-by-algolia-light-background.inline.svg";
+import CloseCircleIcon from "../assets/icons/x-circle.inline.svg";
+import CloseIcon from "../assets/icons/close.inline.svg";
 
+// Styles
 import "../styles/components/search.scss";
 
 const algoliaClient = algoliasearch(
@@ -40,14 +45,17 @@ const searchClient = {
   },
 };
 const AllResults = connectStateResults(
-  ({ allSearchResults, searchState, children }) => {
+  ({ allSearchResults, searchState, isSearchStalled, children }) => {
     const hasResults =
       allSearchResults &&
       Object.values(allSearchResults).some((results) => results.nbHits > 0);
     if (!(searchState && searchState.query)) return <></>;
+    if (isSearchStalled) return <></>;
     return !hasResults ? (
       <div>
-        <div>No results in articles, projects or working groups</div>
+        <div className="no-result-wrapper">
+          No results in articles, projects or working groups
+        </div>
         <Index indexName="Articles" />
         <Index indexName="Projects" />
       </div>
@@ -76,7 +84,6 @@ const IndexResults = connectStateResults(
 );
 
 const ArticlesHit = ({ hit, ...props }) => {
-  console.log(hit);
   return (
     <div className="article-hit">
       <Link to={`/articles/${hit.slug}`}>
@@ -117,15 +124,25 @@ const CustomSearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
     <span className="search-icon">
       <SearchIcon />
     </span>
-    {/* <button
-      onClick={(e) => {
-        e.preventDefault();
-        refine("");
-      }}
-    >
-      Reset query
-    </button>
-    {isSearchStalled ? "My search is stalled" : ""} */}
+
+    {currentRefinement && (
+      <button
+        className="reset-btn"
+        onClick={(e) => {
+          e.preventDefault();
+          refine("");
+        }}
+      >
+        <CloseCircleIcon />
+      </button>
+    )}
+    {isSearchStalled ? (
+      <div style={{ marginTop: "1rem" }} className="flex-center-center">
+        <Spinner />
+      </div>
+    ) : (
+      ""
+    )}
   </form>
 );
 
@@ -144,16 +161,7 @@ const Search = ({ pageContentEl }) => {
   }, [pageContentEl]);
   return (
     <div ref={searchEl} className="search-wrapper ">
-      <div className="search-widget">
-        <div className="algolia-logo">
-          <a
-            href=" https://algolia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AlgoliaLogo />
-          </a>
-        </div>
+      <div className="search-widget container">
         <InstantSearch searchClient={searchClient} indexName="Articles">
           <SearchBox />
           <AllResults>
@@ -171,6 +179,15 @@ const Search = ({ pageContentEl }) => {
             </div>
           </AllResults>
         </InstantSearch>
+        <div className="algolia-logo">
+          <a
+            href=" https://algolia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AlgoliaLogo />
+          </a>
+        </div>
       </div>
     </div>
   );
