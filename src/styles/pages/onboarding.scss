@@ -14,8 +14,12 @@
         margin-bottom: 0.5rem;
         display: block;
       }
-      input:not([type="checkbox"]) {
+      input:not([type="checkbox"]),
+      textarea {
         width: 100%;
+      }
+      textarea {
+        resize: none;
       }
       .asterisk {
         color: var(--danger);
