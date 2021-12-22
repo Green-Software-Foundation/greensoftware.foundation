@@ -11,7 +11,7 @@ import "../styles/pages/onboarding.scss";
 const PressPage = () => {
   return (
     <Layout pageName="onboarding" seo={{ title: "Onboarding" }}>
-      <PageTitle>Member Application</PageTitle>
+      <PageTitle>GSF Member onboarding’</PageTitle>
       <section className="form-wrapper">
         <form
           action="https://forms.zohopublic.eu/gsf/form/MemberApplication/formperma/mI7ykSxhRb2bfWMYEEGA6BCIj3UlUI79dvzkPS79c5w/htmlRecords/submit"
