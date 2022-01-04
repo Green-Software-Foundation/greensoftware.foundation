@@ -158,6 +158,14 @@ const SearchBox = connectSearchBox(CustomSearchBox);
 
 const Search = ({ pageContentEl, close }) => {
   const searchEl = React.useRef(null);
+  const escFunction = React.useCallback(
+    (event) => {
+      if (event.keyCode === 27) {
+        close();
+      }
+    },
+    [close]
+  );
   React.useEffect(() => {
     disableBodyScroll(searchEl.current);
     const pageContentElement = pageContentEl.current;
@@ -168,12 +176,20 @@ const Search = ({ pageContentEl, close }) => {
     };
   }, [pageContentEl]);
 
+  React.useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
   return (
     <div ref={searchEl} className="search-wrapper ">
       <div className="search-widget container">
         <div className="main-close-btn">
-          <button onClick={close}>
+          <button onClick={close} className="flex-center-center">
             <CloseIcon />
+            <span> esc</span>
           </button>
         </div>
         <div>

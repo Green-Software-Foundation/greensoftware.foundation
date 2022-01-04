@@ -1,11 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 // Components
 import Button from "./button";
@@ -16,6 +12,7 @@ import "../styles/components/navbar.scss";
 // Assets
 import Logo from "../assets/icons/logo.inline.svg";
 import HamburgerMenuBlob from "../assets/icons/hamburger-menu-blob.inline.svg";
+import SearchIcon from "../assets/icons/search.inline.svg";
 
 // Menu Data
 const menuData = [
@@ -131,8 +128,11 @@ const MenuItems = ({ className, responsive }) => {
     </ul>
   );
 };
-const JoinCTA = () => (
-  <div className="cta-wrapper">
+const CTAs = ({ openSearch }) => (
+  <div className="cta-wrapper flex-align-center">
+    <button onClick={openSearch} className="search-btn">
+      <SearchIcon style={{ width: "1.5rem", height: "1.5rem" }} />
+    </button>
     <Button color="primary" edgeColor="primary-dark" to="/join-us">
       JOIN US
     </Button>
@@ -160,18 +160,18 @@ const ResponsiveMenu = () => {
       className="responsive-menu-wrapper"
     >
       <MenuItems responsive />
-      <JoinCTA />
+      <CTAs />
     </motion.div>
   );
 };
-const Navbar = () => {
+const Navbar = ({ openSearch }) => {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
   return (
     <header>
       <nav className="main-navbar flex-center-between">
         <div>
           <Link
-            style={{ display: "block" }}
+            className="gsf-logo"
             aria-label="GSF Logo"
             aria-current="page"
             to="/"
@@ -182,8 +182,16 @@ const Navbar = () => {
         <div>
           <MenuItems className="flex-center-between" />
         </div>
-        <JoinCTA />
+        <CTAs openSearch={openSearch} />
         <div className="hamburger-menu">
+          <button
+            aria-label="search"
+            onClick={openSearch}
+            className="search-btn"
+          >
+            <HamburgerMenuBlob />
+            <SearchIcon className="icon" />
+          </button>
           <button
             aria-label="menu"
             onClick={() => setMenuIsOpen((prev) => !prev)}

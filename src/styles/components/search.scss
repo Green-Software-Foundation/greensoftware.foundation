@@ -78,7 +78,7 @@
     left: 0;
     width: 100%;
     background: white;
-    border: 1px solid var(--accent1-light);
+    border-top: 1px solid var(--accent1-light);
     padding: 0.5rem;
     font-size: 0.875rem;
     font-weight: 600;
@@ -168,9 +168,10 @@
       .main-close-btn {
         display: flex;
         justify-content: flex-end;
+        margin-bottom: 0.5rem;
         button {
           opacity: 0.5;
-          color: var(--primary);
+          color: var(--primary-darker);
           transition: opacity 0.25s;
           &:hover {
             opacity: 1;

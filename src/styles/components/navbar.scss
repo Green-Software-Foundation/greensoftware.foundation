@@ -6,6 +6,14 @@ header {
   z-index: 999;
   border-bottom: 1px solid var(--accent1-light);
   .main-navbar {
+    .gsf-logo {
+      height: 2.5rem;
+      display: inline-block;
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
     .nav-menu {
       display: none;
     }
@@ -18,12 +26,12 @@ header {
           left: 11px;
           span {
             display: block;
-            width: 27px;
-            height: 4px;
-            margin-bottom: 5px;
+            width: 20px;
+            height: 3px;
+            margin-bottom: 3px;
             background: var(--primary);
-            border-radius: 3px;
-            transform-origin: 4px 0px;
+            border-radius: 8px;
+            transform-origin: 3px 0px;
             transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
               opacity 0.55s ease;
 
@@ -37,15 +45,26 @@ header {
           }
           &.is-open {
             span {
-              transform: rotate(45deg) translate(4px, -3px);
+              transform: rotate(45deg) translate(3px, -3px);
               &:nth-of-type(2) {
                 opacity: 0;
                 transform: rotate(0deg) scale(0.2, 0.2);
               }
               &:nth-of-type(3) {
-                transform: rotate(-45deg) translate(3px, 4px);
+                transform: rotate(-45deg) translate(2px, 4px);
               }
             }
+          }
+        }
+        &.search-btn {
+          margin-right: 0.5rem;
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            left: 8px;
+            top: 11px;
+            color: var(--primary);
           }
         }
       }
@@ -199,13 +218,31 @@ header {
         }
       }
       .cta-wrapper {
-        display: block;
+        display: flex;
+        .search-btn {
+          margin-right: 1rem;
+          margin-bottom: 4px;
+          display: inline-flex;
+          color: var(--primary-dark);
+          &:hover {
+            color: var(--primary);
+          }
+        }
       }
       .hamburger-menu {
         display: none;
       }
       .responsive-menu-wrapper {
         display: none;
+      }
+    }
+  }
+
+  // Tablet and larger
+  @media (min-width: 640px) {
+    .main-navbar {
+      .gsf-logo {
+        height: 3.25rem;
       }
     }
   }
@@ -217,7 +254,7 @@ header {
     }
   }
 
-  // Large Screens
+  // Large Screens and larger
   @media (min-width: 1920px) {
     .main-navbar {
       max-width: 1536px;
