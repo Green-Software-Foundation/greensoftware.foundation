@@ -118,7 +118,7 @@
   // Desktop and Larger
   @media (min-width: 1280px) {
     footer {
-      grid-template-columns: 3fr repeat(2, 1fr) 2fr;
+      grid-template-columns: 2fr repeat(2, 1fr) 2fr;
       grid-template-rows: 1rem 1fr;
       column-gap: 7rem;
       row-gap: 0;

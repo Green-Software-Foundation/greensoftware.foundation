@@ -25,12 +25,16 @@ const legalData = [
 
 const moreData = [
   {
-    title: "Contact us",
+    title: "Membership enquires",
     href: "https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy",
   },
   {
     title: "Join us",
     to: "/join-us",
+  },
+  {
+    title: "Helpdesk",
+    to: "/helpdesk",
   },
 ];
 const socialMediaLinks = [
