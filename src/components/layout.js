@@ -15,6 +15,7 @@ import "@fontsource/nunito-sans/900.css";
 import "../styles/common.css";
 
 const Layout = ({ children, pageName, seo }) => {
+  const [isSearchOpen, setIsSearchOpen] = React.useState(true);
   const pageContentEl = React.useRef(null);
 
   return (
@@ -27,7 +28,12 @@ const Layout = ({ children, pageName, seo }) => {
         </main>
         <Footer />
       </div>
-      <Search pageContentEl={pageContentEl} />
+      {isSearchOpen && (
+        <Search
+          pageContentEl={pageContentEl}
+          close={() => setIsSearchOpen(false)}
+        />
+      )}
     </>
   );
 };

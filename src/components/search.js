@@ -114,9 +114,17 @@ const ProjectsHit = ({ hit, ...props }) => {
 };
 const CustomSearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <form noValidate role="search" className="search-form ">
+    <a
+      href=" https://algolia.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="algolia-logo"
+    >
+      <AlgoliaLogo />
+    </a>
     <input
       className="search-input"
-      placeholder="Search Articles, Projects and Groups..."
+      placeholder="Search Articles and Projects... "
       type="search"
       value={currentRefinement}
       onChange={(event) => refine(event.currentTarget.value)}
@@ -148,7 +156,7 @@ const CustomSearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
 
 const SearchBox = connectSearchBox(CustomSearchBox);
 
-const Search = ({ pageContentEl }) => {
+const Search = ({ pageContentEl, close }) => {
   const searchEl = React.useRef(null);
   React.useEffect(() => {
     disableBodyScroll(searchEl.current);
@@ -159,35 +167,48 @@ const Search = ({ pageContentEl }) => {
       pageContentElement.style.filter = "";
     };
   }, [pageContentEl]);
+
   return (
     <div ref={searchEl} className="search-wrapper ">
       <div className="search-widget container">
-        <InstantSearch searchClient={searchClient} indexName="Articles">
-          <SearchBox />
-          <AllResults>
-            <div className="hits-wrapper">
-              <Index indexName="Articles">
-                <IndexResults title="Articles">
-                  <Hits hitComponent={ArticlesHit} />
-                </IndexResults>
-              </Index>
-              <Index indexName="Projects">
-                <IndexResults title="Projects">
-                  <Hits hitComponent={ProjectsHit} />
-                </IndexResults>
-              </Index>
-            </div>
-          </AllResults>
-        </InstantSearch>
-        <div className="algolia-logo">
-          <a
-            href=" https://algolia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AlgoliaLogo />
-          </a>
+        <div className="main-close-btn">
+          <button onClick={close}>
+            <CloseIcon />
+          </button>
         </div>
+        <div>
+          <InstantSearch searchClient={searchClient} indexName="Articles">
+            <SearchBox />
+            <AllResults>
+              <div className="hits-wrapper">
+                <Index indexName="Articles">
+                  <IndexResults title="Articles">
+                    <Hits hitComponent={ArticlesHit} />
+                  </IndexResults>
+                </Index>
+                <Index indexName="Projects">
+                  <IndexResults title="Projects">
+                    <Hits hitComponent={ProjectsHit} />
+                  </IndexResults>
+                </Index>
+              </div>
+            </AllResults>
+          </InstantSearch>
+        </div>
+      </div>
+      <div className="search-footer flex-center-between">
+        <button onClick={close} className="close-btn flex-center-between">
+          <CloseIcon />
+          Close
+        </button>
+        <a
+          href=" https://algolia.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="algolia-logo"
+        >
+          <AlgoliaLogo />
+        </a>
       </div>
     </div>
   );

@@ -24,13 +24,9 @@
   }
   .search-widget {
     width: 100%;
-    margin: 1.5rem;
-    .algolia-logo {
-      text-align: right;
-      svg {
-        height: 1rem;
-        width: auto;
-      }
+    margin: 1.5rem 1.5rem 5rem 1.5rem;
+    .main-close-btn {
+      display: none;
     }
     .search-form {
       margin: 0;
@@ -49,8 +45,7 @@
         height: $inputHeight;
         width: 100%;
         border: none;
-        padding: 1rem;
-        padding-left: $inputLeftPadding * 3;
+        padding: 1rem $inputLeftPadding * 3;
         box-shadow: var(--shadow-4);
         font-size: 0.875rem;
         transition: box-shadow 0.25s;
@@ -71,6 +66,34 @@
         top: math.div($inputHeight, 2) - math.div($searchIconSize, 2);
         right: 1rem;
         color: var(--gray-dark);
+      }
+      .algolia-logo {
+        display: none;
+      }
+    }
+  }
+  .search-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid var(--accent1-light);
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    .close-btn {
+      color: var(--primary-dark);
+      svg {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+    .algolia-logo {
+      height: 1rem;
+      svg {
+        height: 100%;
+        width: auto;
       }
     }
   }
@@ -107,7 +130,7 @@
       margin: 0;
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
       grid-gap: 2rem;
       .ais-Hits-item {
         margin: 0;
@@ -139,10 +162,48 @@
       background-color: var(--accent1);
     }
   }
-  /* Tablet */
-  @media (min-width: 640px) and (max-width: 1280px) {
-    .search-widget .search-form .search-input {
-      font-size: 1rem;
+  /* Tablet and larger */
+  @media (min-width: 640px) {
+    .search-widget {
+      .main-close-btn {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          opacity: 0.5;
+          color: var(--primary);
+          transition: opacity 0.25s;
+          &:hover {
+            opacity: 1;
+          }
+          svg {
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+        }
+      }
+      .search-form {
+        .search-input {
+          font-size: 1rem;
+          padding-right: calc(112px + 3rem);
+        }
+        .reset-btn {
+          right: calc(112px + 1.5rem);
+        }
+        .algolia-logo {
+          display: inline-block;
+          height: math.div($searchIconSize, 1.25);
+          position: absolute;
+          top: math.div($inputHeight, 2) - math.div($searchIconSize, 2 * 1.25);
+          right: 1rem;
+          svg {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+    .search-footer {
+      display: none;
     }
   }
 }
