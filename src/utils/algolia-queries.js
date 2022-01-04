@@ -67,44 +67,6 @@ const pageQuery = `
   }
 `;
 
-// const projectMembers = {};
-// const workingGroupsMembers = {};
-
-// pageQuery.members.edges.map(({ node: member }) => {
-//   for (let project of member.chairProjects) {
-//     if (project.id in projectMembers) {
-//       if (projectMembers[project.id].indexOf(member.fullName) === -1) {
-//         projectMembers[project.id].push(member.fullName);
-//       }
-//     } else projectMembers[project.id] = [member.fullName];
-//   }
-//   for (let project of member.memberProjects) {
-//     if (project.id in projectMembers) {
-//       if (projectMembers[project.id].indexOf(member.fullName) === -1) {
-//         projectMembers[project.id].push(member.fullName);
-//       }
-//     } else projectMembers[project.id] = [member.fullName];
-//   }
-//   for (let workingGroup of member.chairWorkingGroups) {
-//     if (workingGroup.id in workingGroupsMembers) {
-//       if (
-//         workingGroupsMembers[workingGroup.id].indexOf(member.fullName) === -1
-//       ) {
-//         workingGroupsMembers[workingGroup.id].push(member.fullName);
-//       }
-//     } else workingGroupsMembers[workingGroup.id] = [member.fullName];
-//   }
-//   for (let workingGroup of member.memberWorkingGroups) {
-//     if (workingGroup.id in workingGroupsMembers) {
-//       if (
-//         workingGroupsMembers[workingGroup.id].indexOf(member.fullName) === -1
-//       ) {
-//         workingGroupsMembers[workingGroup.id].push(member.fullName);
-//       }
-//     } else workingGroupsMembers[workingGroup.id] = [member.fullName];
-//   }
-// });
-
 function articleToAlgoliaRecord({
   node: { id, mainImage, content, author, ...rest },
 }) {
@@ -117,30 +79,13 @@ function articleToAlgoliaRecord({
   };
 }
 
-// function projectToAlgoliaRecord({
-//   node: { id, illustration, info, workingGroup, ...rest },
-// }) {
-//   let infoText = ``;
-//   for (const singleInfo of info) {
-//     infoText += `${singleInfo.title}
-//         ${StructureToPlain.render(singleInfo.content)}
-//       `;
-//   }
-//   return {
-//     objectID: id,
-//     image: illustration.url,
-//     workingGroup: `${workingGroup.title} Working Group`,
-//     content: infoText,
-//     members: projectMembers[id],
-//     ...rest,
-//   };
-// }
 const queries = [
   {
     query: pageQuery,
     transformer: ({ data }) => data.articles.edges.map(articleToAlgoliaRecord),
     indexName: "Articles",
     settings: { attributesToSnippet: [`content:20`] },
+    mergeSettings: true,
   },
   {
     query: pageQuery,
@@ -185,6 +130,7 @@ const queries = [
     },
     indexName: "Projects",
     settings: { attributesToSnippet: [`content:20`] },
+    mergeSettings: true,
   },
 ];
 
