@@ -28,7 +28,7 @@ const ArticleCard = ({ article }) => {
           <h2>{article.title}</h2>
           <p>{article.summary}</p>
         </div>
-        <div className="author-wrapper flex-align-center ">
+        {/* <div className="author-wrapper flex-align-center ">
           <div className="photo-wrapper flex-center-center">
             <GatsbyImage
               className="photo"
@@ -37,7 +37,7 @@ const ArticleCard = ({ article }) => {
             />
           </div>
           <span>{article.authors[0].fullName}</span>
-        </div>
+        </div> */}
       </div>
     </Link>
   );

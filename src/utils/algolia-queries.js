@@ -17,7 +17,7 @@ const pageQuery = `
           content {
             value
           }
-          author {
+          authors {
             fullName
           }
         }
@@ -68,13 +68,13 @@ const pageQuery = `
 `;
 
 function articleToAlgoliaRecord({
-  node: { id, mainImage, content, author, ...rest },
+  node: { id, mainImage, content, authors, ...rest },
 }) {
   return {
     objectID: id,
     image: mainImage.url,
     content: StructureToPlain.render(content),
-    author: author.fullName,
+    authors: authors.flatMap((author) => [author.fullName]),
     ...rest,
   };
 }
