@@ -51,9 +51,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
           <></>
         )}
         <div className="teaser-text">
-          <small>
-            Posted on {article.date} by {article.authors[0].fullName}
-          </small>
+          <small>Posted on {article.date}</small>
           <p>{article.teaserText}</p>
         </div>
         <div className="main-image">
