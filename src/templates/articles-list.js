@@ -12,7 +12,6 @@ import Paginator from "../components/paginator";
 import "../styles/templates/articles-list.scss";
 
 const ArticleCard = ({ article }) => {
-  console.log(article);
   return (
     <Link to={`/articles/${article.slug}`} className="article-card-wrapper">
       <div className="image-wrapper">

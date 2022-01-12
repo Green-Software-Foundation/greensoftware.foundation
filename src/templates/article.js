@@ -18,7 +18,6 @@ import "../styles/templates/single-article.scss";
 import { getLocaleNativeName } from "../utils/language-locale";
 
 const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
-  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
