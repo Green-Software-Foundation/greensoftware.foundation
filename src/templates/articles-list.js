@@ -11,34 +11,37 @@ import Paginator from "../components/paginator";
 // Styles
 import "../styles/templates/articles-list.scss";
 
-const ArticleCard = ({ article }) => (
-  <Link to={`/articles/${article.slug}`} className="article-card-wrapper">
-    <div className="image-wrapper">
-      <GatsbyImage
-        className="image"
-        image={getImage(article.mainImage)}
-        alt={article.title}
-      />
-    </div>
-    <div className="content-wrapper">
-      <div>
-        <small>{article.date}</small>
-        <h2>{article.title}</h2>
-        <p>{article.summary}</p>
+const ArticleCard = ({ article }) => {
+  console.log(article);
+  return (
+    <Link to={`/articles/${article.slug}`} className="article-card-wrapper">
+      <div className="image-wrapper">
+        <GatsbyImage
+          className="image"
+          image={getImage(article.mainImage)}
+          alt={article.title}
+        />
       </div>
-      <div className="author-wrapper flex-align-center ">
-        <div className="photo-wrapper flex-center-center">
-          <GatsbyImage
-            className="photo"
-            image={getImage(article.author.photo)}
-            alt={article.author.fullName}
-          />
+      <div className="content-wrapper">
+        <div>
+          <small>{article.date}</small>
+          <h2>{article.title}</h2>
+          <p>{article.summary}</p>
         </div>
-        <span>{article.author.fullName}</span>
+        <div className="author-wrapper flex-align-center ">
+          <div className="photo-wrapper flex-center-center">
+            <GatsbyImage
+              className="photo"
+              image={getImage(article.authors[0].photo)}
+              alt={article.authors[0].fullName}
+            />
+          </div>
+          <span>{article.authors[0].fullName}</span>
+        </div>
       </div>
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
 
 const ArticlesPage = ({
   data: {
@@ -75,7 +78,7 @@ export const query = graphql`
         title
         summary
         slug
-        author {
+        authors {
           fullName
           photo {
             gatsbyImageData(

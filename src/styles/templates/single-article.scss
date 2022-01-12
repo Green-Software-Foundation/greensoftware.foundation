@@ -91,6 +91,12 @@
         color: var(--primary-lighter);
       }
     }
+    .authors-wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      grid-row-gap: 1rem;
+    }
   }
 
   // Tablet and Larger

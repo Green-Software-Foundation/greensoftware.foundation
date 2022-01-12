@@ -18,6 +18,7 @@ import "../styles/templates/single-article.scss";
 import { getLocaleNativeName } from "../utils/language-locale";
 
 const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
+  console.log(article);
   return (
     <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
       <PageTitle>{article.title}</PageTitle>
@@ -35,13 +36,10 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
               )}
               {translatedArticles.nodes.map((translatedArticle, i) =>
                 translatedArticle.id === article.id ? (
-                  <></>
+                  <React.Fragment key={translatedArticle.id}></React.Fragment>
                 ) : (
-                  <li>
-                    <Link
-                      key={translatedArticle.id}
-                      to={`/articles/${translatedArticle.slug}`}
-                    >
+                  <li key={translatedArticle.id}>
+                    <Link to={`/articles/${translatedArticle.slug}`}>
                       {getLocaleNativeName(translatedArticle.language)}
                     </Link>
                   </li>
@@ -54,7 +52,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
         )}
         <div className="teaser-text">
           <small>
-            Posted on {article.date} by {article.author.fullName}
+            Posted on {article.date} by {article.authors[0].fullName}
           </small>
           <p>{article.teaserText}</p>
         </div>
@@ -168,18 +166,23 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
           />
         </div>
         <hr />
-        <div className="author-wrapper">
-          <PersonBlob person={article.author} />
+        <div className="authors-wrapper">
+          {article.authors.map((author) => (
+            <PersonBlob key={author.id} person={author} />
+          ))}
         </div>
-        {article.translator && (
+        {!!article.translators.length && (
           <>
             <hr />
-            <div className="author-wrapper">
-              <p>This article is translated by:</p>
-              <PersonBlob person={article.translator} />
-            </div>{" "}
+            <h2 className="green-uppercase-title">Translators / Editors</h2>
           </>
         )}
+
+        <div className="authors-wrapper">
+          {article.translators.map((translator) => (
+            <PersonBlob key={translator.id} person={translator} />
+          ))}
+        </div>
       </div>
     </Layout>
   );
@@ -242,7 +245,8 @@ export const query = graphql`
           }
         }
       }
-      author {
+      authors {
+        id
         company: companyName
         companyWebsite
         fullName
@@ -265,7 +269,8 @@ export const query = graphql`
         id
         slug
       }
-      translator {
+      translators {
+        id
         company: companyName
         companyWebsite
         fullName
