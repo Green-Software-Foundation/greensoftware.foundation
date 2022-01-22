@@ -36,6 +36,7 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
+    "lottie-react": "^2.1.0",
     "react": "^17.0.1",
     "react-datocms": "^1.6.3",
     "react-dom": "^17.0.1",

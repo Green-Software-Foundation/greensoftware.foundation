@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import lottie from "lottie-web";
+import { useLottie } from "lottie-react";
 
 // Components
 import Layout from "../components/layout";
@@ -9,15 +11,36 @@ import Button from "../components/button";
 // Assets
 import Section2Illustration from "../assets/illustrations/homepage-section2.inline.svg";
 import section3Background from "../assets/illustrations/homepage-section3-background.svg";
-
+import homepageIllustrationLottie from "../assets/lottie/homepage.json";
+import test from "../assets/lottie/Green Software Foundation Animation.json";
 // Fonts
 import "@fontsource/nunito-sans/600.css";
 
 // Styles
 import "../styles/pages/index.scss";
 
+const options = {
+  animationData: homepageIllustrationLottie,
+  loop: true,
+  autoplay: true,
+};
+
 // Main page Sections
 const Section1 = () => {
+  // const lottieContainer = React.useRef(null);
+
+  // React.useEffect(() => {
+  //   const anim = lottie.loadAnimation({
+  //     container: lottieContainer.current,
+  //     animationData: homepageIllustrationLottie,
+  //     renderer: "svg",
+  //     loop: false,
+  //     autoplay: true,
+  //   });
+  //   return () => anim.destroy(); // optional clean up for unmounting
+  // }, []);
+
+  const { View } = useLottie(options);
   return (
     <section className="section1">
       <div className="main-text">
@@ -34,7 +57,9 @@ const Section1 = () => {
         <h1>Green software</h1>
       </div>
       <NewsletterForm placeholder="Sign up to our newsletter..." />
-      <div className="illustration-wrapper"></div>
+      {/* <div className="illustration-wrapper"></div> */}
+      {/* <div ref={lottieContainer} /> */}
+      {View}
     </section>
   );
 };
