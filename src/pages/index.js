@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import lottie from "lottie-web";
 import { useLottie } from "lottie-react";
+import { useMediaQuery } from "react-responsive";
 
 // Components
 import Layout from "../components/layout";
@@ -19,14 +20,23 @@ import "@fontsource/nunito-sans/600.css";
 // Styles
 import "../styles/pages/index.scss";
 
-const options = {
-  animationData: homepageIllustrationLottie,
-  loop: true,
-  autoplay: false,
-};
+// const options = {
+//   animationData: homepageIllustrationLottie,
+//   loop: true,
+//   autoplay: false,
+// };
 
 // Main page Sections
 const Section1 = () => {
+  const isDesktopOrLarger = useMediaQuery({
+    query: "(min-width: 1280px)",
+  });
+
+  const options = {
+    animationData: isDesktopOrLarger ? homepageIllustrationLottie : test,
+    loop: true,
+    autoplay: false,
+  };
   // const lottieContainer = React.useRef(null);
 
   // React.useEffect(() => {
@@ -65,7 +75,7 @@ const Section1 = () => {
 };
 
 const Section2 = () => (
-  <section className="section2">
+  <section className="section2 container">
     <div className="illustration-wrapper flex-center-center">
       <Section2Illustration />
     </div>
@@ -87,7 +97,7 @@ const Section2 = () => (
 );
 
 const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
-  <section className="section3">
+  <section className="section3 container">
     <div className="content-wrapper">
       <h2 className="green-uppercase-title">NON-PROFIT FOUNDATION</h2>
       <p>
@@ -117,7 +127,7 @@ const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
 );
 
 const Section4 = ({ logos }) => (
-  <section id="steering-members" className="section4">
+  <section id="steering-members" className="section4 container">
     <h2 className="green-uppercase-title">OUR STEERING MEMBERS</h2>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
@@ -138,7 +148,7 @@ const Section4 = ({ logos }) => (
 );
 
 const Section5 = ({ logos }) => (
-  <section id="general-members" className="section5">
+  <section id="general-members" className="section5 container">
     <h2 className="green-uppercase-title">OUR General MEMBERS</h2>
     <div className="logos-wrapper ">
       {logos.map(({ logo, companyName, companyWebsite }) => (
@@ -158,7 +168,7 @@ const Section5 = ({ logos }) => (
   </section>
 );
 const Section6 = () => (
-  <section className="section6">
+  <section className="section6 container">
     <div className="pattern"></div>
     <div className="content-wrapper">
       <h2>

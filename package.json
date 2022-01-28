@@ -44,6 +44,7 @@
     "react-hook-form": "^7.17.5",
     "react-instantsearch-dom": "^6.16.0",
     "react-medium-image-zoom": "^4.3.5",
+    "react-responsive": "^9.0.0-beta.6",
     "sass": "^1.42.1"
   }
 }
