@@ -35,7 +35,7 @@ const Section1 = () => {
   const options = {
     animationData: isDesktopOrLarger ? homepageIllustrationLottie : test,
     loop: true,
-    autoplay: false,
+    autoplay: true,
   };
   // const lottieContainer = React.useRef(null);
 
