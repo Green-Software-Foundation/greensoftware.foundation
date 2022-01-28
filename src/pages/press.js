@@ -28,7 +28,7 @@ const PressPage = ({
   },
 }) => {
   return (
-    <Layout pageName="press" seo={{ title: "Press" }}>
+    <Layout className="container" pageName="press" seo={{ title: "Press" }}>
       <PageTitle>Press</PageTitle>
       <section className="cards-wrapper">
         {data.map((press) => (

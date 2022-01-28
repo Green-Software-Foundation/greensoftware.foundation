@@ -21,6 +21,7 @@ const SingleWorkingGroupTemplate = ({
 }) => {
   return (
     <Layout
+      className="container"
       pageName="single-working-group"
       seo={{ meta: workingGroup.seoMetaTags }}
     >

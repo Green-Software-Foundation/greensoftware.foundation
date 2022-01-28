@@ -34,7 +34,11 @@ const SingleProjectTemplate = ({
   },
 }) => {
   return (
-    <Layout pageName="single-project" seo={{ meta: project.seoMetaTags }}>
+    <Layout
+      className="container"
+      pageName="single-project"
+      seo={{ meta: project.seoMetaTags }}
+    >
       <HeroSection
         illustration={project.illustration.url}
         title={project.title}

@@ -33,7 +33,11 @@ const ProjectsPage = ({
   pageContext: { currentPage, numPages },
 }) => {
   return (
-    <Layout pageName="projects" seo={{ title: "Projects" }}>
+    <Layout
+      className="container"
+      pageName="projects"
+      seo={{ title: "Projects" }}
+    >
       <PageTitle>projects </PageTitle>
       <div className="projects-wrapper">
         {projects.map((project) => (

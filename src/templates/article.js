@@ -19,7 +19,11 @@ import { getLocaleNativeName } from "../utils/language-locale";
 
 const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
   return (
-    <Layout pageName="single-article" seo={{ meta: article.seoMetaTags }}>
+    <Layout
+      className="container"
+      pageName="single-article"
+      seo={{ meta: article.seoMetaTags }}
+    >
       <PageTitle>{article.title}</PageTitle>
       <div className="content-wrapper">
         {translatedArticles.nodes.length ? (

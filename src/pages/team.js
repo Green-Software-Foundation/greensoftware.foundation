@@ -55,7 +55,11 @@ const TeamPage = ({
   },
 }) => {
   return (
-    <Layout pageName="team" seo={{ title: "Board / Team" }}>
+    <Layout
+      className="container"
+      pageName="team"
+      seo={{ title: "Board / Team" }}
+    >
       <PageTitle>Board / Team</PageTitle>
       <Section1 steeringCommittee={steeringCommittee} />
       <MembersSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />

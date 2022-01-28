@@ -31,7 +31,11 @@ const ManifestoPage = ({
 }) => {
   const allOtherManifesto = allManifesto.filter(({ id }) => id !== data.id);
   return (
-    <Layout pageName="manifesto" seo={{ title: data.title }}>
+    <Layout
+      className="container"
+      pageName="manifesto"
+      seo={{ title: data.title }}
+    >
       <PageTitle>{data.title}</PageTitle>
       {Boolean(allOtherManifesto.length) && (
         <div>

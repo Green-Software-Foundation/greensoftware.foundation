@@ -14,7 +14,7 @@ import "@fontsource/nunito-sans/900.css";
 // Styles
 import "../styles/common.css";
 
-const Layout = ({ children, pageName, seo }) => {
+const Layout = ({ children, pageName, seo, className }) => {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const pageContentEl = React.useRef(null);
 
@@ -24,7 +24,7 @@ const Layout = ({ children, pageName, seo }) => {
       <div ref={pageContentEl}>
         <main className={`${pageName}`}>
           <Navbar openSearch={() => setIsSearchOpen(true)} />
-          <div className="page-layout container">{children}</div>
+          <div className={`page-layout ${className}`}>{children}</div>
         </main>
         <Footer />
       </div>

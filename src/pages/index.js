@@ -22,7 +22,7 @@ import "../styles/pages/index.scss";
 const options = {
   animationData: homepageIllustrationLottie,
   loop: true,
-  autoplay: true,
+  autoplay: false,
 };
 
 // Main page Sections

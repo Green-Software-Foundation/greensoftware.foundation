@@ -356,7 +356,7 @@ const Section5 = () => (
 
 const JoinUsPage = () => {
   return (
-    <Layout pageName="join-us" seo={{ title: "Join us" }}>
+    <Layout className="container" pageName="join-us" seo={{ title: "Join us" }}>
       <PageTitle suptitle="applying for">Membership</PageTitle>
       <Disclaimer />
       <Section1 />

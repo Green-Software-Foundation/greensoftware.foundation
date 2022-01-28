@@ -10,7 +10,11 @@ import "../styles/pages/onboarding.scss";
 
 const PressPage = () => {
   return (
-    <Layout pageName="onboarding" seo={{ title: "Onboarding" }}>
+    <Layout
+      className="container"
+      pageName="onboarding"
+      seo={{ title: "Onboarding" }}
+    >
       <PageTitle>GSF Member onboarding</PageTitle>
       <section className="form-wrapper">
         <form
