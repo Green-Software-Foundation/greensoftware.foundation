@@ -35,7 +35,7 @@ const ManifestoPage = ({
       <PageTitle>{data.title}</PageTitle>
       {Boolean(allOtherManifesto.length) && (
         <div>
-          <p>You can read manifesto in: </p>
+          <p>You can also read the Manifesto in: </p>
           <ul>
             {allOtherManifesto.map(({ language, slug }) => (
               <li key={language}>

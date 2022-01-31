@@ -2,7 +2,8 @@ const locales = {
   English: { native_name: "English", code: "en" },
   Portugese: { native_name: "Português", code: "pt" },
   Spanish: { native_name: "Español", code: "es" },
-  Chinese: { native_name: "中文", code: "zh" },
+  Mandarin: { native_name: "中文", code: "zh" },
+  Japanese: { native_name: "日本語", code: "ja" },
 };
 const getLocale = (langName) => {
   return locales[langName];
