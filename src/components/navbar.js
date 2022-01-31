@@ -132,7 +132,8 @@ const CTAs = ({ openSearch }) => (
   <div className="cta-wrapper flex-align-center">
     <a
       href="https://github.com/Green-Software-Foundation"
-      onClick={openSearch}
+      target="_blank"
+      rel="noopener noreferrer"
       className="search-btn"
     >
       <GithubIcon style={{ width: "1.5rem", height: "1.5rem" }} />
