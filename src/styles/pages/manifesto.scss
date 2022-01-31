@@ -22,7 +22,15 @@
       }
     }
   }
-
+  .editors-section {
+    margin-bottom: 4rem;
+    .editors-wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      grid-row-gap: 1rem;
+    }
+  }
   // Tablet
   @media (min-width: 640px) and (max-width: 1280px) {
     .main-paragraph {
