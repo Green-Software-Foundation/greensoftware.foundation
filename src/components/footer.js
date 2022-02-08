@@ -6,6 +6,7 @@ import NewsletterForm from "./newsletter-form";
 
 // Assets
 import Logo from "../assets/icons/logo-sign.inline.svg";
+import GithubIcon from "../assets/icons/github.inline.svg";
 import TwitterIcon from "../assets/icons/twitter.inline.svg";
 import LinkedinIcon from "../assets/icons/linkedin.inline.svg";
 
@@ -38,6 +39,10 @@ const moreData = [
   },
 ];
 const socialMediaLinks = [
+  {
+    icon: <GithubIcon />,
+    link: "https://github.com/Green-Software-Foundation",
+  },
   {
     icon: <TwitterIcon />,
     link: "https://twitter.com/gsfcommunity",

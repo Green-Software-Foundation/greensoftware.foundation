@@ -337,7 +337,7 @@ const Section5 = () => (
       </p>
       <p>To start the application process, please fill out this form.</p>
       <Button
-        href="https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy"
+        href="https://enrollment.lfx.linuxfoundation.org/?project=green-software-foundation-fund"
         color="primary"
         edgeColor="primary-dark"
       >

@@ -13,6 +13,7 @@ import "../styles/components/navbar.scss";
 import Logo from "../assets/icons/logo.inline.svg";
 import HamburgerMenuBlob from "../assets/icons/hamburger-menu-blob.inline.svg";
 import SearchIcon from "../assets/icons/search.inline.svg";
+import GithubIcon from "../assets/icons/github.inline.svg";
 
 // Menu Data
 const menuData = [
@@ -54,7 +55,6 @@ const menuData = [
   {
     title: "Resources",
     submenu: [
-      { title: "GitHub", href: "https://github.com/Green-Software-Foundation" },
       {
         title: "Awesome Green Software",
         href: "https://github.com/Green-Software-Foundation/awesome-green-software",
@@ -130,6 +130,14 @@ const MenuItems = ({ className, responsive }) => {
 };
 const CTAs = ({ openSearch }) => (
   <div className="cta-wrapper flex-align-center">
+    <a
+      href="https://github.com/Green-Software-Foundation"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="search-btn"
+    >
+      <GithubIcon style={{ width: "1.5rem", height: "1.5rem" }} />
+    </a>
     <button onClick={openSearch} className="search-btn">
       <SearchIcon style={{ width: "1.5rem", height: "1.5rem" }} />
     </button>
@@ -188,6 +196,8 @@ const Navbar = ({ openSearch }) => {
             aria-label="search"
             onClick={openSearch}
             className="search-btn"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <HamburgerMenuBlob />
             <SearchIcon className="icon" />

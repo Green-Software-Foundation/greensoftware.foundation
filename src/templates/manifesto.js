@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
+import PersonBlob from "../components/person-blob";
 
 // Assets
 import MissionIcon from "../assets/icons/mission.inline.svg";
@@ -39,7 +40,7 @@ const ManifestoPage = ({
       <PageTitle>{data.title}</PageTitle>
       {Boolean(allOtherManifesto.length) && (
         <div>
-          <p>You can read manifesto in: </p>
+          <p>You can also read the Manifesto in: </p>
           <ul>
             {allOtherManifesto.map(({ language, slug }) => (
               <li key={language}>
@@ -74,6 +75,19 @@ const ManifestoPage = ({
           </div>
         </section>
       ))}
+      {Boolean(data.editors.length) && (
+        <>
+          <hr />
+          <section className="editors-section">
+            <p>Translated and checked by: </p>
+            <div className="editors-wrapper">
+              {data.editors.map((editor) => (
+                <PersonBlob key={editor.id} person={editor} />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </Layout>
   );
 };
@@ -86,6 +100,23 @@ export const query = graphql`
       mainParagraph
       vision
       mission
+      editors {
+        id
+        fullName
+        role
+        company
+        companyWebsite
+        photo {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
+          )
+        }
+        socialMediaLink {
+          link
+          platform
+        }
+      }
       manifestoTopic {
         id
         title
