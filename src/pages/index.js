@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import lottie from "lottie-web";
 import { useLottie } from "lottie-react";
 import { useMediaQuery } from "react-responsive";
 
@@ -22,12 +21,6 @@ import "@fontsource/nunito-sans/600.css";
 
 // Styles
 import "../styles/pages/index.scss";
-
-// const options = {
-//   animationData: homepageIllustrationLottie,
-//   loop: true,
-//   autoplay: false,
-// };
 
 // Main page Sections
 const Section1 = () => {
@@ -55,18 +48,6 @@ const Section1 = () => {
     loop: false,
     autoplay: true,
   };
-  // const lottieContainer = React.useRef(null);
-
-  // React.useEffect(() => {
-  //   const anim = lottie.loadAnimation({
-  //     container: lottieContainer.current,
-  //     animationData: homepageIllustrationLottie,
-  //     renderer: "svg",
-  //     loop: false,
-  //     autoplay: true,
-  //   });
-  //   return () => anim.destroy(); // optional clean up for unmounting
-  // }, []);
 
   const { View } = useLottie(options);
   return (
@@ -85,9 +66,7 @@ const Section1 = () => {
         <h1>Green software</h1>
       </div>
       <NewsletterForm placeholder="Sign up to our newsletter..." />
-      {/* <div className="illustration-wrapper"></div> */}
-      {/* <div ref={lottieContainer} /> */}
-      {View}
+      <div className="illustration-wrapper">{View}</div>
     </section>
   );
 };
