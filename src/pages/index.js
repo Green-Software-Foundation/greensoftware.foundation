@@ -12,8 +12,11 @@ import Button from "../components/button";
 // Assets
 import Section2Illustration from "../assets/illustrations/homepage-section2.inline.svg";
 import section3Background from "../assets/illustrations/homepage-section3-background.svg";
-import homepageIllustrationLottie from "../assets/lottie/homepage.json";
-import test from "../assets/lottie/Green Software Foundation Animation.json";
+import illustrationLottieMobile from "../assets/lottie/homepage-mobile.json";
+import illustrationLottieTablet from "../assets/lottie/homepage-tablet.json";
+import illustrationLottieDesktop from "../assets/lottie/homepage-desktop.json";
+import illustrationLottieLargeScreen from "../assets/lottie/homepage-large-screen.json";
+
 // Fonts
 import "@fontsource/nunito-sans/600.css";
 
@@ -28,13 +31,28 @@ import "../styles/pages/index.scss";
 
 // Main page Sections
 const Section1 = () => {
-  const isDesktopOrLarger = useMediaQuery({
-    query: "(min-width: 1280px)",
+  let illustrationJSON;
+  const isTablet = useMediaQuery({
+    query: "(min-width: 768px) and (max-width: 1280px)",
   });
-
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1280px) and (max-width: 1440px)",
+  });
+  const isLargeScreen = useMediaQuery({
+    query: "(min-width: 1440px) ",
+  });
+  if (isTablet) {
+    illustrationJSON = illustrationLottieTablet;
+  } else if (isDesktop) {
+    illustrationJSON = illustrationLottieDesktop;
+  } else if (isLargeScreen) {
+    illustrationJSON = illustrationLottieLargeScreen;
+  } else {
+    illustrationJSON = illustrationLottieMobile;
+  }
   const options = {
-    animationData: isDesktopOrLarger ? homepageIllustrationLottie : test,
-    loop: true,
+    animationData: illustrationJSON,
+    loop: false,
     autoplay: true,
   };
   // const lottieContainer = React.useRef(null);
