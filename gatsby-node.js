@@ -103,7 +103,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Projects
   const projects = result.data.allDatoCmsProject.edges;
-  const projectsPerPage = 10;
+  const projectsPerPage = 9;
   const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
 
   // Create Project-list pages
