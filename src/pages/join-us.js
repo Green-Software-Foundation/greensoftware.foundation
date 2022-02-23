@@ -297,9 +297,9 @@ const Section4 = () => (
     <Section4Mobile />
     <div className="membership-fees">
       <h4>Membership type</h4>
-      <h4 style={{ textAlign: "center" }}>GSF</h4>
-      <h4 style={{ textAlign: "center" }}>LF*</h4>
-      <h4 style={{ textAlign: "center" }}>Total</h4>
+      <h4 style={{ textAlign: "center" }}>GSF <small style={{display: 'block'}}>(per year)</small></h4>
+      <h4 style={{ textAlign: "center" }}>LF* <small style={{display: 'block'}}>(per year)</small></h4>
+      <h4 style={{ textAlign: "center" }}>Total <small style={{display: 'block'}}>(per year)</small></h4>
       <hr style={{ gridArea: "2/1/3/5" }} />
       {membershipFees.map((fee, i) => (
         <React.Fragment key={fee.type}>
