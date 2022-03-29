@@ -62,7 +62,7 @@ const TeamPage = ({
     >
       <PageTitle>Board / Team</PageTitle>
       <Section1 steeringCommittee={steeringCommittee} />
-      <MembersSection team={administrativeTeam} title="ADMINISTRATIVE TEAM" />
+      <MembersSection team={administrativeTeam} title="Operations team" />
       <MembersSection
         team={generalTeam}
         title="Organisational Leads"
