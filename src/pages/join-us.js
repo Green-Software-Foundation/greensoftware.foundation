@@ -168,8 +168,8 @@ const Section1 = () => (
         To understand our mission and values, please read our{" "}
         <Link to="/manifesto">Manifesto</Link>, look at our{" "}
         <Link to="/working-groups/standards">Standards</Link>,{" "}
-        <Link to="/working-groups/innovation">Innovation</Link>,{" "}
-        <Link to="/working-groups/trademark">Trademark</Link> and{" "}
+        <Link to="/working-groups/opensource">Opensource</Link>,{" "}
+        <Link to="/working-groups/policy">Policy</Link> and{" "}
         <Link to="/working-groups/community">Community</Link> Working Groups as
         well as our <Link to="/projects">list of Projects</Link>.
       </p>
@@ -297,9 +297,15 @@ const Section4 = () => (
     <Section4Mobile />
     <div className="membership-fees">
       <h4>Membership type</h4>
-      <h4 style={{ textAlign: "center" }}>GSF <small style={{display: 'block'}}>(per year)</small></h4>
-      <h4 style={{ textAlign: "center" }}>LF* <small style={{display: 'block'}}>(per year)</small></h4>
-      <h4 style={{ textAlign: "center" }}>Total <small style={{display: 'block'}}>(per year)</small></h4>
+      <h4 style={{ textAlign: "center" }}>
+        GSF <small style={{ display: "block" }}>(per year)</small>
+      </h4>
+      <h4 style={{ textAlign: "center" }}>
+        LF* <small style={{ display: "block" }}>(per year)</small>
+      </h4>
+      <h4 style={{ textAlign: "center" }}>
+        Total <small style={{ display: "block" }}>(per year)</small>
+      </h4>
       <hr style={{ gridArea: "2/1/3/5" }} />
       {membershipFees.map((fee, i) => (
         <React.Fragment key={fee.type}>

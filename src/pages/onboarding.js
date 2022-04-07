@@ -91,18 +91,18 @@ const PressPage = () => {
                 type="checkbox"
                 id="Checkbox_2"
                 name="Checkbox"
-                value="Trademark"
+                value="Policy"
               />
-              <label for="Checkbox_2">Trademark</label>
+              <label for="Checkbox_2">Policy</label>
             </div>
             <div className="flex-align-center">
               <input
                 type="checkbox"
                 id="Checkbox_3"
                 name="Checkbox"
-                value="Innovation"
+                value="Opensource"
               />
-              <label for="Checkbox_3">Innovation</label>
+              <label for="Checkbox_3">Opensource</label>
             </div>
             <div className="flex-align-center">
               <input

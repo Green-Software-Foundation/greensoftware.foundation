@@ -57,7 +57,7 @@ const Section1 = () => {
           We are building a trusted ecosystem of{" "}
           <Link to="/working-groups/community">people</Link>,{" "}
           <Link to="/working-groups/standards">standards</Link>,{" "}
-          <Link to="/working-groups/innovation">tooling</Link> and{" "}
+          <Link to="/working-groups/opensource">tooling</Link> and{" "}
           <Link to="/projects/software-carbon-intensity-sci-specification">
             best practices
           </Link>{" "}
