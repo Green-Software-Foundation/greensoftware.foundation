@@ -72,12 +72,12 @@ const memberships = [
     benefits: ["chair", "participate", "create", "vote_W", "listed"],
     icon: <GeneralIcon />,
   },
-  {
-    id: "contributer",
-    title: "* Contributer",
-    benefits: ["participate"],
-    icon: <AllMembershipsIcon />,
-  },
+  // {
+  //   id: "contributer",
+  //   title: "* Contributer",
+  //   benefits: ["participate"],
+  //   icon: <AllMembershipsIcon />,
+  // },
 ];
 
 const membershipFees = [
@@ -117,12 +117,12 @@ const membershipFees = [
     LF: "$0",
     total: "$0",
   },
-  {
-    type: "Contributors",
-    GSF: "$0",
-    LF: "$0",
-    total: "$0",
-  },
+  // {
+  //   type: "Contributors",
+  //   GSF: "$0",
+  //   LF: "$0",
+  //   total: "$0",
+  // },
 ];
 
 // Custom styles
