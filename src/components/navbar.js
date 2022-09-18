@@ -42,10 +42,19 @@ const menuData = [
   {
     title: "Working Groups",
     submenu: [
-      { title: "Standards", to: "/working-groups/standards" },
-      { title: "Policy", to: "/working-groups/policy" },
-      { title: "Opensource", to: "/working-groups/opensource" },
-      { title: "Community", to: "/working-groups/community" },
+      {
+        title: "Standards",
+        href: "https://standards.greensoftware.foundation",
+      },
+      { title: "Policy", href: "https://policy.greensoftware.foundation" },
+      {
+        title: "Opensource",
+        href: "https://opensource.greensoftware.foundation",
+      },
+      {
+        title: "Community",
+        href: "https://community.greensoftware.foundation",
+      },
     ],
   },
   {

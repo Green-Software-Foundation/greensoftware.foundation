@@ -131,20 +131,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  //Working groups
-  const workingGroups = result.data.allDatoCmsWorkingGroup.edges;
-
-  // Create Working groups pages
-  workingGroups.forEach(({ node: workingGroup }) => {
-    createPage({
-      path: `/working-groups/${workingGroup.slug}`,
-      component: path.resolve("./src/templates/working-group.js"),
-      context: {
-        id: workingGroup.id,
-      },
-    });
-  });
-
   // Manifesto Translation pages
   const manifestoPages = result.data.allDatoCmsManifesto.edges;
 
