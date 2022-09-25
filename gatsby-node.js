@@ -19,26 +19,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
 
-        allDatoCmsProject(sort: { fields: meta___createdAt, order: DESC }) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
-
-        allDatoCmsWorkingGroup(
-          sort: { fields: meta___createdAt, order: DESC }
-        ) {
-          edges {
-            node {
-              id
-              slug
-            }
-          }
-        }
-
         allDatoCmsManifesto {
           edges {
             node {
@@ -101,35 +81,58 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
+
+  // allDatoCmsProject(sort: { fields: meta___createdAt, order: DESC }) {
+  //   edges {
+  //     node {
+  //       id
+  //       slug
+  //     }
+  //   }
+  // }
+
+  // allDatoCmsWorkingGroup(
+  //   sort: { fields: meta___createdAt, order: DESC }
+  // ) {
+  //   edges {
+  //     node {
+  //       id
+  //       slug
+  //     }
+  //   }
+  // }
   // Projects
-  const projects = result.data.allDatoCmsProject.edges;
-  const projectsPerPage = 9;
-  const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
+  /*
+const projects = result.data.allDatoCmsProject.edges;
+const projectsPerPage = 9;
+const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
 
-  // Create Project-list pages
-  Array.from({ length: numPagesProjects }).forEach((_, i) => {
-    createPage({
-      path: i === 0 ? `/projects` : `/projects/${i + 1}`,
-      component: path.resolve("./src/templates/projects-list.js"),
-      context: {
-        limit: projectsPerPage,
-        skip: i * projectsPerPage,
-        numPages: numPagesProjects,
-        currentPage: i + 1,
-      },
-    });
-  });
 
-  // Create Articles pages
-  projects.forEach(({ node: project }) => {
-    createPage({
-      path: `/projects/${project.slug}`,
-      component: path.resolve("./src/templates/project.js"),
-      context: {
-        id: project.id,
-      },
-    });
+// Create Project-list pages
+Array.from({ length: numPagesProjects }).forEach((_, i) => {
+  createPage({
+    path: i === 0 ? `/projects` : `/projects/${i + 1}`,
+    component: path.resolve("./src/templates/projects-list.js"),
+    context: {
+      limit: projectsPerPage,
+      skip: i * projectsPerPage,
+      numPages: numPagesProjects,
+      currentPage: i + 1,
+    },
   });
+});
+
+// Create Projects pages
+projects.forEach(({ node: project }) => {
+  createPage({
+    path: `/projects/${project.slug}`,
+    component: path.resolve("./src/templates/project.js"),
+    context: {
+      id: project.id,
+    },
+  });
+});
+*/
 
   // Manifesto Translation pages
   const manifestoPages = result.data.allDatoCmsManifesto.edges;
