@@ -27,7 +27,7 @@ const Banner = ({ children }) => {
       </div>
       <div className="center">
         <div>
-          <span>13 Oct - 11 Nov</span>
+          <span>13 Oct - 10 Nov</span>
         </div>
         <div>
           <CenterBanner />
