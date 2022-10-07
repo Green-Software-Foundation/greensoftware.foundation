@@ -12,6 +12,7 @@ module.exports = {
         apiToken: "92c1b380aae9e3cd567d6f16f11e47",
       },
     },
+    "gatsby-plugin-netlify",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -64,6 +65,5 @@ module.exports = {
     //     queries: require("./src/utils/algolia-queries"),
     //   },
     // },
-    'gatsby-plugin-netlify'
   ],
 };

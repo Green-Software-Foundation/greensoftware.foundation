@@ -34,7 +34,6 @@ const ProjectsPage = ({
     allDatoCmsProjectV2: { nodes: projects },
   },
 }) => {
-  console.log(projects);
   return (
     <Layout
       className="container"
