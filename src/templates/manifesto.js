@@ -108,7 +108,7 @@ export const query = graphql`
         companyWebsite
         photo {
           gatsbyImageData(
-            placeholder: TRACED_SVG
+            
             imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
           )
         }

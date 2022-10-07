@@ -202,7 +202,7 @@ export const query = graphql`
       date(formatString: "MMMM Do, YYYY")
       mainImage {
         gatsbyImageData(
-          placeholder: TRACED_SVG
+          
           imgixParams: { w: "1920", auto: "compress" }
         )
       }
@@ -231,7 +231,7 @@ export const query = graphql`
               title
               alt
               gatsbyImageData(
-                placeholder: TRACED_SVG
+                
                 imgixParams: { w: "1920", auto: "compress" }
               )
             }
@@ -254,7 +254,7 @@ export const query = graphql`
         role
         photo {
           gatsbyImageData(
-            placeholder: TRACED_SVG
+            
             imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
           )
         }
@@ -278,7 +278,7 @@ export const query = graphql`
         role
         photo {
           gatsbyImageData(
-            placeholder: TRACED_SVG
+            
             imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
           )
         }
