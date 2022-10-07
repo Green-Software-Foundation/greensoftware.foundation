@@ -1,0 +1,3 @@
+# Redirects all product pages to main project page
+
+/projects/* /projects 200

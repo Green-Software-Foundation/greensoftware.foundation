@@ -54,7 +54,7 @@ const ProjectsPage = ({
 
 export const query = graphql`
   query  {
-    allDatoCmsProjectV2(sort: {fields: name, order: DESC}) {
+    allDatoCmsProjectV2(sort: {fields: name, order: ASC}) {
       nodes {
         id
         name
