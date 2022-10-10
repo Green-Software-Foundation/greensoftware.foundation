@@ -15,7 +15,7 @@ import "../styles/templates/projects-list.scss";
 
 const ProjectCard = ({ project }) => (
   <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-card-wrapper">
-    <div className="image-wrapper flex-center-center">
+    <div className={`image-wrapper ${project.isDraft ? 'is-draft' : ''}  flex-center-center`}>
       <div className="pattern"></div>
       <img src={project.logo ? project.logo.url : Logo} alt={project.name} />
     </div>
@@ -62,6 +62,7 @@ export const query = graphql`
           url
         }
         shortDescription
+        isDraft
       }
   }
   }
