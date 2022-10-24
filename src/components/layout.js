@@ -27,7 +27,7 @@ const Banner = ({ children }) => {
       </div>
       <div className="center">
         <div>
-          <span>13 Oct - 10 Nov</span>
+          <span>November 10th</span>
         </div>
         <div>
           <CenterBanner />
@@ -37,7 +37,7 @@ const Banner = ({ children }) => {
             color="accent1"
             edgeColor="accent1-dark"
             textColor="primary-dark"
-            href="https://grnsft.org/hack22"
+            href="https://grnsft.org/decarb-cop27/gsf"
             target="_blank"
             rel="noopener noreferrer"
           >
