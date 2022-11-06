@@ -1,9 +1,11 @@
 const path = require("path");
 
+const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
+
 exports.onCreatePage = ({ page, actions }) => {
   const { createRedirect } = actions
   if (!page.path.includes('.html') && page.path !== '/') {
-    createRedirect({ fromPath: `${page.path}/`, toPath: page.path, isPermanent: true })
+    createRedirect({ fromPath: `${page.path}`, toPath: replacePath(page.path), isPermanent: true })
   }
 }
 
