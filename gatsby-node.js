@@ -1,7 +1,9 @@
 const path = require("path");
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+exports.createPages = async ({ graphql, page, actions, reporter }) => {
+  const { createPage, createRedirect } = actions;
+
+
 
   const result = await graphql(
     `
@@ -159,4 +161,7 @@ projects.forEach(({ node: project }) => {
       },
     });
   });
+  if (!page.path.includes('.html') && page.path !== '/') {
+    createRedirect({ fromPath: `${page.path}/`, toPath: page.path, isPermanent: true })
+  }
 };
