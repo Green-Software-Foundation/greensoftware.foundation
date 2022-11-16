@@ -27,21 +27,22 @@ const Banner = ({ children }) => {
       </div>
       <div className="center">
         <div>
-          <span>November 10th</span>
+          <span>Ends December 31<sup>st</sup></span>
         </div>
-        <div>
+        <div className="svg-wrapper">
           <CenterBanner />
+          <p>Be part of the largest green software survey </p>
         </div>
         <div>
           <Button
             color="accent1"
             edgeColor="accent1-dark"
             textColor="primary-dark"
-            href="https://grnsft.org/decarb-cop27/gsf"
+            href="https://grnsft.org/sogs/survey"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Register Now
+            Take Survey Now
           </Button>
         </div>
       </div>

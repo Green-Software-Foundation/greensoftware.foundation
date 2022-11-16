@@ -89,7 +89,7 @@
 
 /* Banner */
 .banner {
-  background-color: #0d4b76;
+  background-color: #181818;
   color: var(--white);
   display: grid;
   padding: 1rem 0;
@@ -115,8 +115,17 @@
 .banner .center {
   text-align: center;
 }
-.banner .center svg {
-  width: 300px;
+.banner .center p {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.banner .center .svg-wrapper {
+  width: 400px;
+}
+.banner .center .svg-wrapper svg {
+  width: auto;
+  height: 48px;
 }
 .banner .center > *:nth-child(1) {
   color: #aecc53;
@@ -140,7 +149,7 @@
 /* Mobile and larger*/
 @media (min-width: 640px) {
   .banner {
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 1rem;
     padding: 0;
   }
