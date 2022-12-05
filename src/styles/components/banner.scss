@@ -1,0 +1,38 @@
+.banner-wrapper {
+  background: #181818;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.banner-wrapper img {
+  margin: 0;
+}
+.banner-wrapper p {
+  margin: 0;
+  color: #fff;
+}
+.banner-wrapper a {
+  background: var(--accent1);
+  color: #181818;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+// Desktop and Larger
+@media (min-width: 1280px) {
+  .banner-wrapper {
+    padding: 12px 160px;
+    flex-direction: row;
+    gap: 0;
+  }
+}
