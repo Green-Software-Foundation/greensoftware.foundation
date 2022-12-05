@@ -1,0 +1,135 @@
+.single-article {
+  .content-wrapper {
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: 4rem;
+    .teaser-text {
+      margin-bottom: 1rem;
+      small {
+        font-size: 0.75rem;
+        color: var(--black-light);
+      }
+      p {
+        font-size: 1.25rem;
+        color: var(--primary);
+        font-weight: 800;
+        margin-bottom: 0;
+      }
+    }
+    .main-image {
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .article-image-wrapper {
+      text-align: center;
+      margin-bottom: 1rem;
+      .article-image {
+        border-radius: 1rem;
+      }
+    }
+    .content {
+      margin-bottom: 4rem;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+    }
+    .newsletter-wrapper {
+      text-align: center;
+      background-color: var(--primary-dark);
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-bottom: 4rem;
+      position: relative;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      .pattern {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(../../assets/pattern.svg);
+        z-index: 1;
+        opacity: 0.1;
+      }
+      h2 {
+        color: var(--accent1);
+        margin-bottom: 2rem;
+        z-index: 2;
+        position: relative;
+      }
+      .newsletter-form {
+        margin: 0;
+        z-index: 2;
+        position: relative;
+        input {
+          display: block;
+          width: 100%;
+        }
+        .button {
+          margin-top: 1rem;
+        }
+        a {
+          color: var(--primary-lighter);
+        }
+      }
+      .newsletter-success-msg {
+        z-index: 2;
+        position: relative;
+        color: var(--primary-lighter);
+      }
+    }
+    .authors-wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      grid-row-gap: 1rem;
+    }
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    .content-wrapper {
+      .newsletter-wrapper {
+        padding: 3rem 0;
+        h2,
+        .newsletter-form {
+          max-width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    .content-wrapper {
+      .teaser-text {
+        small {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+      .content {
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

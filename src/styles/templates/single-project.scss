@@ -1,0 +1,72 @@
+.single-project {
+  .hero-section {
+    margin-bottom: 2rem;
+    .illustration-wrapper {
+      height: 170px;
+      margin-bottom: 2rem;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .short-description {
+    margin-bottom: 2rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  .info-item {
+    margin-bottom: 2rem;
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    .hero-section {
+      margin-bottom: 3rem;
+      .illustration-wrapper {
+        height: 230px;
+      }
+      h1 {
+        font-size: 2.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  // Tablet and Larger
+  @media (min-width: 640px) {
+    .short-description,
+    .chairs-section,
+    .members-section,
+    .info-item {
+      margin-bottom: 4rem;
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    .hero-section {
+      margin-bottom: 3rem;
+      .illustration-wrapper {
+        height: 350px;
+      }
+      h1 {
+        font-size: 2.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

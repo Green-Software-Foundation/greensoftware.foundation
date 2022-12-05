@@ -1,0 +1,22 @@
+.chairs-section {
+  margin-bottom: 2rem;
+  .chairs-blobs {
+    display: grid;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+
+  // Tablet
+  @media (min-width: 640px) and (max-width: 1280px) {
+    .chairs-blobs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // Desktop and Larger
+  @media (min-width: 1280px) {
+    .chairs-blobs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.paginator-wrapper {
+  margin-top: 2rem;
+  ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      margin: 1rem;
+    }
+    .prev-btn {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .next-btn {
+      text-align: right;
+      grid-area: 1 / 2 / 2 / 3;
+    }
+  }
+}
