@@ -10,15 +10,19 @@ const Banner = () => {
     return (
         <div className="banner-wrapper">
             <div className="left">
-                <img src={Logo} alt="SoGS logo" />
+
             </div>
             <div className="center">
-                <p>Be part of the largest green software survey. <strong>Survey ends December 31<sup>st</sup></strong></p>
-            </div>
-            <div className="right">
+                <img src={Logo} alt="SoGS logo" />
+                <p>Learn how to build, maintain and run greener applications
+                    {/* <strong>Survey ends December 31<sup>st</sup></strong> */}
+                </p>
                 <a href="https://grnsft.org/sogs/survey" target="_blank"
                     rel="noopener noreferrer"
-                >Take survey now</a>
+                >Take Our Course</a>
+            </div>
+            <div className="right">
+
             </div>
         </div>
     );
