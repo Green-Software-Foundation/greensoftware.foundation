@@ -17,7 +17,7 @@ const Banner = () => {
                 <p>Learn how to build, maintain and run greener applications
                     {/* <strong>Survey ends December 31<sup>st</sup></strong> */}
                 </p>
-                <a href="https://grnsft.org/sogs/survey" target="_blank"
+                <a href="https://learn.greensoftware.foundation/" target="_blank"
                     rel="noopener noreferrer"
                 >Take Our Course</a>
             </div>
