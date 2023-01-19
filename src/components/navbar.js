@@ -70,7 +70,7 @@ const menuData = [
       },
       {
         title: "Principles of Green Software Engineering",
-        href: "https://principles.green",
+        href: "https://learn.greensoftware.foundation/",
       },
     ],
   },
@@ -84,9 +84,8 @@ const MenuItems = ({ className, responsive }) => {
   const [selectedMenu, setSelectedMenu] = React.useState("");
   return (
     <ul
-      className={`${responsive ? "responsive-nav-menu" : "nav-menu"} ${
-        className ? className : ""
-      }`}
+      className={`${responsive ? "responsive-nav-menu" : "nav-menu"} ${className ? className : ""
+        }`}
     >
       {menuData.map((menuItem) => (
         <li
@@ -96,9 +95,8 @@ const MenuItems = ({ className, responsive }) => {
           {menuItem.submenu ? (
             <>
               <button
-                className={`${
-                  selectedMenu === menuItem.title ? "selected" : ""
-                }`}
+                className={`${selectedMenu === menuItem.title ? "selected" : ""
+                  }`}
                 onClick={() =>
                   setSelectedMenu(
                     selectedMenu === menuItem.title ? "" : menuItem.title
@@ -108,9 +106,8 @@ const MenuItems = ({ className, responsive }) => {
                 <span>{menuItem.title}</span>
               </button>
               <ul
-                className={`submenu-wrapper ${
-                  selectedMenu === menuItem.title ? "selected" : ""
-                }`}
+                className={`submenu-wrapper ${selectedMenu === menuItem.title ? "selected" : ""
+                  }`}
               >
                 {menuItem.submenu.map((submenuItem) => (
                   <li key={submenuItem.title}>
