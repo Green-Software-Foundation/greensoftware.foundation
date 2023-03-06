@@ -6,6 +6,7 @@ import addToMailchimp from "gatsby-plugin-mailchimp";
 import Button from "./button";
 
 const NewsletterForm = ({
+  position,
   placeholder,
   hasDarkBg,
   buttoncolor = "primary",
@@ -23,6 +24,13 @@ const NewsletterForm = ({
     setMailchimpResult(result);
   };
   if (mailchimpResult && mailchimpResult.result === "success") {
+    if (window && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'formSubmitted',
+        'formName': 'newsletter',
+        'formPosition': position,
+      });
+    }
     return <p className="newsletter-success-msg">{mailchimpResult.msg}</p>;
   }
 

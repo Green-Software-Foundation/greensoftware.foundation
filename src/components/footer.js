@@ -114,7 +114,7 @@ const Footer = () => {
         </div>
         <div className="newsletter-wrapper">
           <h2>JOIN OUR NEWSLETTER</h2>
-          <NewsletterForm placeholder="you@example.xyz" hasDarkBg />
+          <NewsletterForm position="footer" placeholder="you@example.xyz" hasDarkBg />
         </div>
       </footer>
       <div className="sub-footer">

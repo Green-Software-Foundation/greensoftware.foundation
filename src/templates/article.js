@@ -159,6 +159,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
           <div className="pattern"></div>
           <h2>Stay updated with our articles updates</h2>
           <NewsletterForm
+            position={article.title}
             placeholder="Sign up to our newsletter..."
             buttoncolor="gray-lightest-2"
             buttonEdgeColor="gray-dark"
