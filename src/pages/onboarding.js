@@ -44,7 +44,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
       <PageTitle>GSF Member onboarding</PageTitle>
       <section className="form-wrapper">
         <form
-          name="contact"
+          name="onboarding"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
