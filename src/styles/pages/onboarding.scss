@@ -3,7 +3,7 @@
     margin-bottom: 4rem;
     form {
       background: white;
-      max-width: 768px;
+      max-width: 468px;
       margin: auto;
       padding: 3rem;
       border-radius: 0.5rem;
@@ -11,18 +11,26 @@
       display: grid;
       row-gap: 2rem;
       label {
-        margin-bottom: 0.5rem;
         display: block;
       }
       input:not([type="checkbox"]),
+      select,
       textarea {
         width: 100%;
+        &.has-error {
+          border-color: var(--danger);
+        }
       }
       textarea {
         resize: none;
       }
       .asterisk {
         color: var(--danger);
+      }
+      .error {
+        color: var(--danger);
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
       }
       .checkboxes-wrapper {
         p {

@@ -1,4 +1,6 @@
 import * as React from "react";
+import { graphql } from "gatsby";
+import { useForm } from 'react-hook-form';
 
 // Components
 import Layout from "../components/layout";
@@ -7,8 +9,32 @@ import Button from "../components/button";
 
 // Styles
 import "../styles/pages/onboarding.scss";
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
-const PressPage = () => {
+const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMembers } } }) => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const allCompanies = [...generalMembers, ...steeringMembers].map(member => member.companyName).sort(
+    (a, b) => a.localeCompare(b)
+
+  );
+  console.log(allCompanies)
+  const onSubmit = (data) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => {
+        // handle success here
+      })
+      .catch(error => {
+        // handle error here
+      })
+  };
   return (
     <Layout
       className="container"
@@ -18,155 +44,134 @@ const PressPage = () => {
       <PageTitle>GSF Member onboarding</PageTitle>
       <section className="form-wrapper">
         <form
-          action="https://forms.zohopublic.eu/gsf/form/MemberApplication/formperma/mI7ykSxhRb2bfWMYEEGA6BCIj3UlUI79dvzkPS79c5w/htmlRecords/submit"
-          name="form"
-          method="POST"
-          accept-charset="UTF-8"
-          enctype="multipart/form-data"
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <input type="hidden" name="zf_referrer_name" value="" />
-          <input type="hidden" name="zf_redirect_url" value="" />
-          <input type="hidden" name="zc_gad" value="" />
+          <input type="hidden" name="form-name" value="onboarding" {...register("form-name")} />
           <div>
             <label>
-              First Name
-              <span className="asterisk">*</span>
+              First Name:{" "}
+              <input
+                type="text"
+                name="firstName"
+                className={errors?.firstName ? "has-error" : ""}
+                {...register("firstName", { required: true })}
+              />
             </label>
-            <input
-              type="text"
-              maxLength="255"
-              name="Name_First"
-              fieldType="7"
-            />
+            {errors?.firstName && <span class="error">This field is required</span>}
           </div>
           <div>
             <label>
-              Last Name
-              <span className="asterisk">*</span>
+              Last Name:{" "}
+              <input
+                type="text"
+                name="lastName"
+                className={errors?.lastName ? "has-error" : ""}
+                {...register("lastName", { required: true })}
+
+
+              />
             </label>
-            <input type="text" maxLength="255" name="Name_Last" fieldType="7" />
+            {errors?.lastName && <span class="error">This field is required</span>}
           </div>
           <div>
             <label>
-              Email
-              <span className="asterisk">*</span>
+              Company:{" "}
+              <select
+                name="company"
+                className={errors?.company ? "has-error" : ""}
+                {...register("company", { required: true })}
+                defaultValue=""
+              >
+                <option value="" disabled>Select a company</option>
+                {allCompanies.map(company => (
+                  <option key={company} value={company}>
+                    {company}
+                  </option>
+                ))}
+              </select>
             </label>
-            <input type="text" maxLength="255" name="Email" fieldType="9" />
-            <p>
-              Please use your company email ID. If you encounter any issues
-              please reach our help desk.
-            </p>
+            {errors?.company && <span class="error">This field is required</span>}
           </div>
           <div>
-            <label>Company</label>
-            <input
-              type="text"
-              name="SingleLine"
-              fieldType="1"
-              maxLength="255"
-            />
-          </div>
-          <div>
-            <label>Profile Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              name="ImageUpload"
-              checktype="c1"
-            />
-          </div>
-          <div className="checkboxes-wrapper">
-            <p>Working Groups</p>
-            <div className="flex-align-center">
+            <label>
+              Role:{" "}
               <input
-                type="checkbox"
-                id="Checkbox_1"
-                name="Checkbox"
-                value="Standards"
-              />
-              <label for="Checkbox_1">Standards</label>
-            </div>
-            <div className="flex-align-center">
+                type="text"
+                className={errors?.role ? "has-error" : ""}
+                name="role"
+                {...register("role", { required: true })} />
+            </label>
+            {errors?.role && <span class="error">This field is required</span>}
+          </div>
+          <div>
+            <label>
+              Work email:{" "}
               <input
-                type="checkbox"
-                id="Checkbox_2"
-                name="Checkbox"
-                value="Policy"
+                type="email"
+                name="email"
+                className={errors?.email ? "has-error" : ""}
+                {...register("email", {
+                  required: true,
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  maxLength: 50,
+                })}
               />
-              <label for="Checkbox_2">Policy</label>
-            </div>
-            <div className="flex-align-center">
+            </label>
+            {errors?.email && (
+              <span class="error">{errors.email.message || "This field is invalid"}</span>
+            )}
+          </div>
+          <div>
+            <label>
+              GitHub username:{" "}
               <input
-                type="checkbox"
-                id="Checkbox_3"
-                name="Checkbox"
-                value="Opensource"
+                type="text"
+                name="githubUsername"
+                className={errors?.githubUsername ? "has-error" : ""}
+                {...register("githubUsername", {
+                  required: true,
+                  minLength: 3,
+                  validate: async value => {
+                    const response = await fetch(
+                      `https://api.github.com/users/${value}`
+                    )
+                    return response.ok || "This username does not exist on GitHub"
+                  },
+                })}
               />
-              <label for="Checkbox_3">Opensource</label>
-            </div>
-            <div className="flex-align-center">
-              <input
-                type="checkbox"
-                id="Checkbox_4"
-                name="Checkbox"
-                value="Community"
-              />
-              <label for="Checkbox_4">Community</label>
-            </div>
+            </label>
+            {errors?.githubUsername && (
+              <span class="error">{errors.githubUsername.message || "This field is invalid"}</span>
+            )}
           </div>
-          <div>
-            <label>Role</label>
-            <input
-              type="text"
-              name="SingleLine1"
-              fieldType="1"
-              maxLength="255"
-            />
+          <div className="flex-start-center">
+            <Button type="submit" color="primary" edgeColor="primary-dark" >Submit</Button>
           </div>
-          <div>
-            <label>Twitter URL</label>
-            <input type="text" maxLength="2083" name="Website" />
-          </div>
-          <div>
-            <label>Facebook URL</label>
-            <input type="text" maxLength="2083" name="Website1" />
-          </div>
-          <div>
-            <label>LinkedIn URL</label>
-            <input type="text" maxLength="2083" name="Website2" />
-          </div>
-          <div>
-            <label>GitHub Username</label>
-            <input
-              type="text"
-              name="SingleLine2"
-              fieldType="1"
-              maxLength="255"
-            />
-          </div>
-          <div>
-            <label>Website</label>
-            <input type="text" maxLength="2083" name="Website3" />
-          </div>
-          <div>
-            <label>Primary Link</label>
-            <select name="Dropdown">
-              <option selected="true" value="-Select-">
-                -Select-
-              </option>
-              <option value="Twitter">Twitter</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="Website">Website</option>
-              <option value="Facebook">Facebook</option>
-            </select>
-          </div>
-          <Button color="primary" edgeColor="primary-dark" type="submit">
-            Submit
-          </Button>
+
         </form>
+
       </section>
     </Layout>
   );
 };
 
-export default PressPage;
+
+export const query = graphql`
+  query OnboardingPageQuery {
+    datoCmsHomepage {
+      steeringMembers {
+        companyName
+      }
+      generalMembers {
+        companyName
+      }
+    }
+  }
+`;
+
+
+export default OnboardingPage;

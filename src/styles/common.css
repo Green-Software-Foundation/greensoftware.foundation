@@ -189,6 +189,8 @@ a:hover {
   outline-width: 0;
 }
 input[type="text"],
+input[type="email"],
+select,
 textarea {
   padding: 0.75em 1em;
   font-size: 0.875rem;
