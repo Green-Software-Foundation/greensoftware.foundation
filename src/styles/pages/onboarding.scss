@@ -1,6 +1,25 @@
 .onboarding {
   .form-wrapper {
     margin-bottom: 4rem;
+    .success-message {
+      text-align: center;
+    }
+    .error-message {
+      background: var(--danger-light);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      color: var(--danger-dark);
+      .error-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+      a {
+        color: var(--danger-dark);
+        text-decoration: underline;
+      }
+    }
     form {
       background: white;
       max-width: 468px;
