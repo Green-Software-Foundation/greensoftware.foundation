@@ -158,6 +158,12 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
               {errors?.githubUsername && (
                 <span class="error">{errors.githubUsername.message || "This field is invalid"}</span>
               )}
+              {/* add disclamer to this field */}
+              <small>The GSF works almost entirely in the open via GitHub, your opportunities to engage will be very limited without a GitHub username, click this
+                {" "}<a href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >link</a> to create one if you do not already have one</small>
             </div>
             {isError && (
               <div className="error-message">
