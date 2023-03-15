@@ -27,7 +27,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
+      body: encode({ "form-name": "onboarding", ...data }),
     })
       .then(() => {
         setIsSubmitted(true);
@@ -42,7 +42,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
       pageName="onboarding"
       seo={{ title: "Onboarding" }}
     >
-      <PageTitle>GSF Member onboarding</PageTitle>
+      <PageTitle>Join Foundation</PageTitle>
       <section className="form-wrapper">
         {isSubmitted ? (
           <div className="success-message">
@@ -64,7 +64,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             <input type="hidden" name="form-name" value="onboarding" {...register("form-name")} />
             <div>
               <label>
-                First Name:{" "}
+                First Name:{" "}<span className="asterisk">*</span>
                 <input
                   type="text"
                   name="firstName"
@@ -76,7 +76,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             </div>
             <div>
               <label>
-                Last Name:{" "}
+                Last Name:{" "}<span className="asterisk">*</span>
                 <input
                   type="text"
                   name="lastName"
@@ -90,7 +90,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             </div>
             <div>
               <label>
-                Company:{" "}
+                Company:{" "}<span className="asterisk">*</span>
                 <select
                   name="company"
                   className={errors?.company ? "has-error" : ""}
@@ -109,7 +109,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             </div>
             <div>
               <label>
-                Role:{" "}
+                Role:{" "}<span className="asterisk">*</span>
                 <input
                   type="text"
                   className={errors?.role ? "has-error" : ""}
@@ -120,7 +120,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             </div>
             <div>
               <label>
-                Work email:{" "}
+                Work email:{" "}<span className="asterisk">*</span>
                 <input
                   type="email"
                   name="email"
@@ -138,7 +138,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
             </div>
             <div>
               <label>
-                GitHub username:{" "}
+                GitHub username:{" "}<span className="asterisk">*</span>
                 <input
                   type="text"
                   name="githubUsername"
