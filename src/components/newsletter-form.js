@@ -25,6 +25,7 @@ const NewsletterForm = ({
   };
   if (mailchimpResult && mailchimpResult.result === "success") {
     if (window && window.dataLayer) {
+      console.log("pushing formSubmitted event");
       window.dataLayer.push({
         'event': 'formSubmitted',
         'formName': 'newsletter',
