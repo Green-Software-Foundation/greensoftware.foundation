@@ -2,6 +2,8 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import { useForm } from 'react-hook-form';
 
+// Countries
+import countries from "../utils/countries.json";
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
@@ -106,6 +108,39 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
                 </select>
               </label>
               {errors?.company && <span class="error">This field is required</span>}
+            </div>
+            {/* Select field with countries */}
+            <div>
+              <label>
+                Country:{" "}
+                <select
+                  name="country"
+                  className={errors?.country ? "has-error" : ""}
+                  {...register("country")}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select a country</option>
+                  {countries.map(country => (
+                    <option key={country.name} value={country.name}>
+                      {country.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {errors?.country && <span class="error">This field is required</span>}
+            </div>
+            {/* (Closest major) City */}
+            <div>
+              <label>
+                City:{" "}
+                <input
+                  type="text"
+                  name="city"
+                  className={errors?.city ? "has-error" : ""}
+                  {...register("city")}
+                />
+              </label>
+              {errors?.city && <span class="error">This field is required</span>}
             </div>
             <div>
               <label>
