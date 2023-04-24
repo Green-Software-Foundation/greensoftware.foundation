@@ -67,7 +67,7 @@ const SubscribePage = ({ data: { allDatoCmsProjectV2: { nodes } } }) => {
             <input type="hidden" name="form-name" value="subscribe" {...register("form-name")} />
             <div>
               <label>
-                Email:{" "}<span className="asterisk">*</span>
+                Work Email:{" "}<span className="asterisk">*</span>
                 <input
                   type="email"
                   name="email"
