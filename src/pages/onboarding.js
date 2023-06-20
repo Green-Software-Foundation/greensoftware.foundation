@@ -4,10 +4,12 @@ import { useForm } from 'react-hook-form';
 
 // Countries
 import countries from "../utils/countries.json";
+
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import Button from "../components/button";
+import Disclaimer from "../components/disclaimer";
 
 // Styles
 import "../styles/pages/onboarding.scss";
@@ -44,7 +46,18 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
       pageName="onboarding"
       seo={{ title: "Onboarding" }}
     >
-      <PageTitle>Join Foundation</PageTitle>
+      <PageTitle>Registration Form</PageTitle>
+      <Disclaimer>
+      If you are an employee of an existing member organization please use this form to register with the Foundation. Registering - Gives you access to member only spaces, emails and communication channels.
+<br />
+Allows you to subscribe to working group and projects so you can join the meetings and are added to the member only email lists.<br />
+Allows you to take part in voting and consensus.<br />
+Informs your organization of your registration so you can act on behalf of your organization.<br />
+If you are having any difficulty using this form please email{" "}
+    <a href="mailto:help@greensoftware.foundation">
+    help@greensoftware.foundation
+    </a> using your work email address with details and we will help.
+      </Disclaimer>
       <section className="form-wrapper">
         {isSubmitted ? (
           <div className="success-message">
@@ -128,6 +141,7 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
                 </select>
               </label>
               {errors?.country && <span class="error">This field is required</span>}
+              <small>We use this data to connect people together geographically and to take into consideration time zones for meetings and events.</small>
             </div>
             {/* (Closest major) City */}
             <div>
@@ -170,6 +184,9 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
               {errors?.email && (
                 <span class="error">{errors.email.message || "This field is invalid"}</span>
               )}
+              <small>
+              It is essential that you use a work email to register, only email domains that are whitelisted by one of our member organizations will be approved.
+              </small>
             </div>
             <div>
               <label>

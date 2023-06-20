@@ -5,9 +5,8 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import Button from "../components/button";
-
+import Disclaimer from "../components/disclaimer";
 // Assets
-import WarningIcon from "../assets/icons/warning.inline.svg";
 import JoinUsIllustration from "../assets/illustrations/join-us.inline.svg";
 import SteeringIcon from "../assets/icons/steering-membership.inline.svg";
 import GeneralIcon from "../assets/icons/general-membership.inline.svg";
@@ -139,19 +138,6 @@ Object.keys(benefits).forEach((benefit, i) => {
     i + 1
   }"\n`;
 });
-
-const Disclaimer = () => (
-  <div className="disclaimer-wrapper">
-    <span className="icon flex-center-center">
-      <WarningIcon />
-    </span>
-    <p>
-      If you are already an employee of one of the existing member
-      organisations, please contact your organisational lead, found on the{" "}
-      <Link to="/team">Member List</Link> page.
-    </p>
-  </div>
-);
 
 const Section1 = () => (
   <section className="section1">
@@ -364,7 +350,11 @@ const JoinUsPage = () => {
   return (
     <Layout className="container" pageName="join-us" seo={{ title: "Join us" }}>
       <PageTitle suptitle="applying for">Membership</PageTitle>
-      <Disclaimer />
+      <Disclaimer>
+        If you are already an employee of one of the existing member
+        organisations, please contact your organisational lead, found on the{" "}
+        <Link to="/team">Member List</Link> page.
+      </Disclaimer>
       <Section1 />
       <hr />
       <Section2 />
