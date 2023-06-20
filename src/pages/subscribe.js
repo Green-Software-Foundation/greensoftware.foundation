@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import Button from "../components/button";
+import Disclaimer from "../components/disclaimer";
 
 // Icons
 import ExternalLink from "../assets/icons/external-link.inline.svg"
@@ -45,7 +46,26 @@ const SubscribePage = ({ data: { allDatoCmsProjectV2: { nodes } } }) => {
       pageName="onboarding"
       seo={{ title: "Subscribe" }}
     >
-      <PageTitle>Subscribe</PageTitle>
+      <PageTitle>Subscription Form</PageTitle>
+      <Disclaimer>
+      Employees of member organizations can use this form to subscribe to specific working groups and projects. Subscribing:
+      <br />
+Adds you to any mailing lists for the working groups or projects.<br />
+Automatically invites you to any meetings related to those working groups or projects.<br />
+Sends you a weekly digest of the latest and most popular activities for the working groups and projects you've selected.<br />
+Prior to using this form you must have completed the <Link to="/onboarding"> registration form </Link> and received a confirmation email.<br />
+
+If you are having any difficulty using this form please email {" "}
+    <a href="mailto:help@greensoftware.foundation">
+    help@greensoftware.foundation
+    </a>{" "}using your work email address with details and we will help.
+<br />
+To find out more information about our working groups, projects and how we work please visit our{" "}
+<a
+        target="_blank"
+        rel="noopener noreferrer"
+href="https://grnsft.org/wiki">Wiki</a> 
+      </Disclaimer>
       <section className="form-wrapper">
         {isSubmitted ? (
           <div className="success-message">
@@ -82,6 +102,10 @@ const SubscribePage = ({ data: { allDatoCmsProjectV2: { nodes } } }) => {
               {errors?.email && (
                 <span class="error">{errors.email.message || "This field is invalid"}</span>
               )}
+              <small>
+              You must use the same work email you used to register with the Foundation
+              </small>
+
             </div>
             <div className="checkboxes-wrapper">
               <p>Working Groups <span className="asterisk">*</span></p>
