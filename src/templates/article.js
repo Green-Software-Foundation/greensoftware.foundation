@@ -123,6 +123,27 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
                   />
                 );
               }
+              else if (record.__typename === "DatoCmsArticleYoutubeVideo") {
+                const youtubeUrl = record.videoUrl.url;
+                const videoId = youtubeUrl.split("v=")[1];
+                const ampersandPosition = videoId.indexOf("&");
+                if (ampersandPosition !== -1) {
+                  videoId = videoId.substring(0, ampersandPosition);
+                }
+
+                return (
+                  <div className="article-image-wrapper">
+                    <iframe
+                      width="100%"
+                      height="480"
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      title={record.videoUrl.title}
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen={true}
+                    ></iframe>
+                  </div>
+                );
+              }
               return (
                 <>
                   <p>Don't know how to render a block!</p>
@@ -245,6 +266,14 @@ export const query = graphql`
               }
             }
           }
+          ... on DatoCmsArticleYoutubeVideo {
+            id: originalId
+            videoUrl{
+              url
+              title
+              thumbnailUrl
+            }
+          }              
         }
       }
       authors {
