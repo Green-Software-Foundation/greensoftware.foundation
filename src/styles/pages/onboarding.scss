@@ -1,9 +1,28 @@
 .onboarding {
   .form-wrapper {
     margin-bottom: 4rem;
+    .success-message {
+      text-align: center;
+    }
+    .error-message {
+      background: var(--danger-light);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      color: var(--danger-dark);
+      .error-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+      a {
+        color: var(--danger-dark);
+        text-decoration: underline;
+      }
+    }
     form {
       background: white;
-      max-width: 768px;
+      max-width: 520px;
       margin: auto;
       padding: 3rem;
       border-radius: 0.5rem;
@@ -11,18 +30,27 @@
       display: grid;
       row-gap: 2rem;
       label {
-        margin-bottom: 0.5rem;
         display: block;
       }
       input:not([type="checkbox"]),
+      select,
       textarea {
         width: 100%;
+        &.has-error {
+          border-color: var(--danger);
+        }
       }
       textarea {
         resize: none;
       }
       .asterisk {
         color: var(--danger);
+      }
+      .error {
+        color: var(--danger);
+        font-size: 0.8rem;
+        margin-top: 0.25rem;
+        display: block;
       }
       .checkboxes-wrapper {
         p {
@@ -31,6 +59,14 @@
         label {
           margin-bottom: 0;
           margin-left: 0.5rem;
+        }
+      }
+      .external-link {
+        color: var(--primary);
+        svg {
+          margin-left: 0.5rem;
+          width: 1rem;
+          height: 1rem;
         }
       }
     }

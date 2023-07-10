@@ -1,172 +1,258 @@
 import * as React from "react";
+import { graphql, Link } from "gatsby";
+import { useForm } from 'react-hook-form';
+
+// Countries
+import countries from "../utils/countries.json";
 
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import Button from "../components/button";
+import Disclaimer from "../components/disclaimer";
 
 // Styles
 import "../styles/pages/onboarding.scss";
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
-const PressPage = () => {
+const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMembers } } }) => {
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const allCompanies = [...generalMembers, ...steeringMembers].map(member => member.companyName).sort(
+    (a, b) => a.localeCompare(b)
+
+  );
+  const onSubmit = (data) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "onboarding", ...data }),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+      })
+      .catch(error => {
+        setIsError(true);
+      })
+  };
   return (
     <Layout
       className="container"
       pageName="onboarding"
       seo={{ title: "Onboarding" }}
     >
-      <PageTitle>GSF Member onboarding</PageTitle>
+      <PageTitle>Registration Form</PageTitle>
+      <Disclaimer>
+      If you are an employee of an existing member organization please use this form to register with the Foundation. Registering - Gives you access to member only spaces, emails and communication channels.
+<br />
+Allows you to subscribe to working group and projects so you can join the meetings and are added to the member only email lists.<br />
+Allows you to take part in voting and consensus.<br />
+Informs your organization of your registration so you can act on behalf of your organization.<br />
+If you are having any difficulty using this form please email{" "}
+    <a href="mailto:help@greensoftware.foundation">
+    help@greensoftware.foundation
+    </a> using your work email address with details and we will help.
+      </Disclaimer>
       <section className="form-wrapper">
-        <form
-          action="https://forms.zohopublic.eu/gsf/form/MemberApplication/formperma/mI7ykSxhRb2bfWMYEEGA6BCIj3UlUI79dvzkPS79c5w/htmlRecords/submit"
-          name="form"
-          method="POST"
-          accept-charset="UTF-8"
-          enctype="multipart/form-data"
-        >
-          <input type="hidden" name="zf_referrer_name" value="" />
-          <input type="hidden" name="zf_redirect_url" value="" />
-          <input type="hidden" name="zc_gad" value="" />
-          <div>
-            <label>
-              First Name
-              <span className="asterisk">*</span>
-            </label>
-            <input
-              type="text"
-              maxLength="255"
-              name="Name_First"
-              fieldType="7"
-            />
-          </div>
-          <div>
-            <label>
-              Last Name
-              <span className="asterisk">*</span>
-            </label>
-            <input type="text" maxLength="255" name="Name_Last" fieldType="7" />
-          </div>
-          <div>
-            <label>
-              Email
-              <span className="asterisk">*</span>
-            </label>
-            <input type="text" maxLength="255" name="Email" fieldType="9" />
+        {isSubmitted ? (
+          <div className="success-message">
+            <h2>Thank you for your submission!</h2>
             <p>
-              Please use your company email ID. If you encounter any issues
-              please reach our help desk.
+              We will review your information and get back to you as soon as
+              possible.
             </p>
           </div>
-          <div>
-            <label>Company</label>
-            <input
-              type="text"
-              name="SingleLine"
-              fieldType="1"
-              maxLength="255"
-            />
-          </div>
-          <div>
-            <label>Profile Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              name="ImageUpload"
-              checktype="c1"
-            />
-          </div>
-          <div className="checkboxes-wrapper">
-            <p>Working Groups</p>
-            <div className="flex-align-center">
-              <input
-                type="checkbox"
-                id="Checkbox_1"
-                name="Checkbox"
-                value="Standards"
-              />
-              <label for="Checkbox_1">Standards</label>
+        ) : (
+
+          <form
+            name="onboarding"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <input type="hidden" name="form-name" value="onboarding" {...register("form-name")} />
+            <div>
+              <label>
+                First Name:{" "}<span className="asterisk">*</span>
+                <input
+                  type="text"
+                  name="firstName"
+                  className={errors?.firstName ? "has-error" : ""}
+                  {...register("firstName", { required: true })}
+                />
+              </label>
+              {errors?.firstName && <span class="error">This field is required</span>}
             </div>
-            <div className="flex-align-center">
-              <input
-                type="checkbox"
-                id="Checkbox_2"
-                name="Checkbox"
-                value="Policy"
-              />
-              <label for="Checkbox_2">Policy</label>
+            <div>
+              <label>
+                Last Name:{" "}<span className="asterisk">*</span>
+                <input
+                  type="text"
+                  name="lastName"
+                  className={errors?.lastName ? "has-error" : ""}
+                  {...register("lastName", { required: true })}
+
+
+                />
+              </label>
+              {errors?.lastName && <span class="error">This field is required</span>}
             </div>
-            <div className="flex-align-center">
-              <input
-                type="checkbox"
-                id="Checkbox_3"
-                name="Checkbox"
-                value="Opensource"
-              />
-              <label for="Checkbox_3">Opensource</label>
+            <div>
+              <label>
+                Company:{" "}<span className="asterisk">*</span>
+                <select
+                  name="company"
+                  className={errors?.company ? "has-error" : ""}
+                  {...register("company", { required: true })}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select a company</option>
+                  {allCompanies.map(company => (
+                    <option key={company} value={company}>
+                      {company}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {errors?.company && <span class="error">This field is required</span>}
             </div>
-            <div className="flex-align-center">
-              <input
-                type="checkbox"
-                id="Checkbox_4"
-                name="Checkbox"
-                value="Community"
-              />
-              <label for="Checkbox_4">Community</label>
+            {/* Select field with countries */}
+            <div>
+              <label>
+                Country:{" "}
+                <select
+                  name="country"
+                  className={errors?.country ? "has-error" : ""}
+                  {...register("country")}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select a country</option>
+                  {countries.map(country => (
+                    <option key={country.name} value={country.name}>
+                      {country.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {errors?.country && <span class="error">This field is required</span>}
+              <small>We use this data to connect people together geographically and to take into consideration time zones for meetings and events.</small>
             </div>
-          </div>
-          <div>
-            <label>Role</label>
-            <input
-              type="text"
-              name="SingleLine1"
-              fieldType="1"
-              maxLength="255"
-            />
-          </div>
-          <div>
-            <label>Twitter URL</label>
-            <input type="text" maxLength="2083" name="Website" />
-          </div>
-          <div>
-            <label>Facebook URL</label>
-            <input type="text" maxLength="2083" name="Website1" />
-          </div>
-          <div>
-            <label>LinkedIn URL</label>
-            <input type="text" maxLength="2083" name="Website2" />
-          </div>
-          <div>
-            <label>GitHub Username</label>
-            <input
-              type="text"
-              name="SingleLine2"
-              fieldType="1"
-              maxLength="255"
-            />
-          </div>
-          <div>
-            <label>Website</label>
-            <input type="text" maxLength="2083" name="Website3" />
-          </div>
-          <div>
-            <label>Primary Link</label>
-            <select name="Dropdown">
-              <option selected="true" value="-Select-">
-                -Select-
-              </option>
-              <option value="Twitter">Twitter</option>
-              <option value="LinkedIn">LinkedIn</option>
-              <option value="Website">Website</option>
-              <option value="Facebook">Facebook</option>
-            </select>
-          </div>
-          <Button color="primary" edgeColor="primary-dark" type="submit">
-            Submit
-          </Button>
-        </form>
+            {/* (Closest major) City */}
+            <div>
+              <label>
+                City:{" "}
+                <input
+                  type="text"
+                  name="city"
+                  className={errors?.city ? "has-error" : ""}
+                  {...register("city")}
+                />
+              </label>
+              {errors?.city && <span class="error">This field is required</span>}
+            </div>
+            <div>
+              <label>
+                Role:{" "}<span className="asterisk">*</span>
+                <input
+                  type="text"
+                  className={errors?.role ? "has-error" : ""}
+                  name="role"
+                  {...register("role", { required: true })} />
+              </label>
+              {errors?.role && <span class="error">This field is required</span>}
+            </div>
+            <div>
+              <label>
+                Work email:{" "}<span className="asterisk">*</span>
+                <input
+                  type="email"
+                  name="email"
+                  className={errors?.email ? "has-error" : ""}
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    maxLength: 50,
+                  })}
+                />
+              </label>
+              {errors?.email && (
+                <span class="error">{errors.email.message || "This field is invalid"}</span>
+              )}
+              <small>
+              It is essential that you use a work email to register, only email domains that are whitelisted by one of our member organizations will be approved.
+              </small>
+            </div>
+            <div>
+              <label>
+                GitHub username:{" "}<span className="asterisk">*</span>
+                <input
+                  type="text"
+                  name="githubUsername"
+                  className={errors?.githubUsername ? "has-error" : ""}
+                  {...register("githubUsername", {
+                    required: true,
+                    minLength: 3,
+                    validate: async value => {
+                      const response = await fetch(
+                        `https://api.github.com/users/${value}`
+                      )
+                      return response.ok || "This username does not exist on GitHub"
+                    },
+                  })}
+                />
+              </label>
+              {errors?.githubUsername && (
+                <span class="error">{errors.githubUsername.message || "This field is invalid"}</span>
+              )}
+              {/* add disclamer to this field */}
+              <small>The GSF works almost entirely in the open via GitHub, your opportunities to engage will be very limited without a GitHub username, click this
+                {" "}<a href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >link</a> to create one if you do not already have one</small>
+            </div>
+            {isError && (
+              <div className="error-message">
+                <p className="error-title">Something went wrong!</p>
+                <p>
+                  Please try again later or contact us directly at{" "}
+                  <Link to="/helpdesk">
+                    our helpdesk
+                  </Link>{" "}
+                  if the problem persists.
+                </p>
+              </div>
+            )}
+            <div className="flex-start-center">
+              <Button type="submit" color="primary" edgeColor="primary-dark" >Submit</Button>
+            </div>
+
+          </form>
+        )}
       </section>
     </Layout>
   );
 };
 
-export default PressPage;
+
+export const query = graphql`
+  query OnboardingPageQuery {
+    datoCmsHomepage {
+      steeringMembers {
+        companyName
+      }
+      generalMembers {
+        companyName
+      }
+    }
+  }
+`;
+
+
+export default OnboardingPage;

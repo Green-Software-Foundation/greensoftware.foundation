@@ -1,21 +1,5 @@
 .join-us {
-  .disclaimer-wrapper {
-    margin-bottom: 4rem;
-    background-color: var(--accent1-lighter);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--accent1);
-    color: var(--accent1-darker);
-    font-size: 0.875rem;
-    text-align: center;
-    .icon {
-      color: var(--accent1-dark);
-      margin-bottom: 1rem;
-    }
-    p {
-      margin: 0;
-    }
-  }
+ 
   .section1 {
     text-align: center;
     .illustration-wrapper {
@@ -126,22 +110,6 @@
 
   // Tablet and Larger
   @media (min-width: 640px) {
-    .disclaimer-wrapper {
-      display: grid;
-      grid-template-columns: 32px 1fr;
-      column-gap: 1.5rem;
-      text-align: left;
-      max-width: 640px;
-      margin-left: auto;
-      margin-right: auto;
-      .icon {
-        margin-bottom: 0;
-        svg {
-          width: 32px;
-          height: auto;
-        }
-      }
-    }
     .section2 {
       .content-wrapper {
         display: grid;
