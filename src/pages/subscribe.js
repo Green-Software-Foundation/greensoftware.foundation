@@ -75,17 +75,18 @@ const SubscribePage = ({
             Sends you a weekly digest of the latest and most popular activities
             for the working groups and projects you've selected.
           </li>
-          <li>
-            Prior to using this form you must have completed the{" "}
-            <Link to="/onboarding"> registration form </Link> and received a
-            confirmation email.
-          </li>
         </ul>
+        Prior to using this form you must have completed the{" "}
+        <Link to="/onboarding"> registration form </Link> and received a
+        confirmation email.
+        <br />
+        <br />
         If you are having any difficulty using this form please email{" "}
         <a href="mailto:help@greensoftware.foundation">
           help@greensoftware.foundation
         </a>{" "}
         using your work email address with details and we will help.
+        <br />
         <br />
         To find out more information about our working groups, projects and how
         we work please visit our{" "}
