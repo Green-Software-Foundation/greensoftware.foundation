@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
 // Countries
 import countries from "../utils/countries.json";
@@ -15,18 +15,25 @@ import Disclaimer from "../components/disclaimer";
 import "../styles/pages/onboarding.scss";
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 }
 
-const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMembers } } }) => {
+const OnboardingPage = ({
+  data: {
+    datoCmsHomepage: { generalMembers, steeringMembers },
+  },
+}) => {
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const allCompanies = [...generalMembers, ...steeringMembers].map(member => member.companyName).sort(
-    (a, b) => a.localeCompare(b)
-
-  );
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const allCompanies = [...generalMembers, ...steeringMembers]
+    .map((member) => member.companyName)
+    .sort((a, b) => a.localeCompare(b));
   const onSubmit = (data) => {
     fetch("/", {
       method: "POST",
@@ -36,9 +43,9 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
       .then(() => {
         setIsSubmitted(true);
       })
-      .catch(error => {
+      .catch((error) => {
         setIsError(true);
-      })
+      });
   };
   return (
     <Layout
@@ -48,15 +55,32 @@ const OnboardingPage = ({ data: { datoCmsHomepage: { generalMembers, steeringMem
     >
       <PageTitle>Registration Form</PageTitle>
       <Disclaimer>
-      If you are an employee of an existing member organization please use this form to register with the Foundation. Registering - Gives you access to member only spaces, emails and communication channels.
-<br />
-Allows you to subscribe to working group and projects so you can join the meetings and are added to the member only email lists.<br />
-Allows you to take part in voting and consensus.<br />
-Informs your organization of your registration so you can act on behalf of your organization.<br />
-If you are having any difficulty using this form please email{" "}
-    <a href="mailto:help@greensoftware.foundation">
-    help@greensoftware.foundation
-    </a> using your work email address with details and we will help.
+        If you are an employee of an{" "}
+        <strong>existing member organization</strong> please use this form to
+        register with the Foundation.
+        <br />
+        <br />
+        Registering:-
+        <ul>
+          <li>
+            Gives you access to member only spaces, emails and communication
+            channels.
+          </li>
+          <li>
+            Allows you to subscribe to working group and projects so you can
+            join the meetings and are added to the member only email lists.
+          </li>
+          <li>Allows you to take part in voting and consensus.</li>
+          <li>
+            Informs your organization of your registration so you can act on
+            behalf of your organization.
+          </li>
+        </ul>
+        If you are having any difficulty using this form please email{" "}
+        <a href="mailto:help@greensoftware.foundation">
+          help@greensoftware.foundation
+        </a>{" "}
+        using your work email address with details and we will help.
       </Disclaimer>
       <section className="form-wrapper">
         {isSubmitted ? (
@@ -68,7 +92,6 @@ If you are having any difficulty using this form please email{" "}
             </p>
           </div>
         ) : (
-
           <form
             name="onboarding"
             method="post"
@@ -76,10 +99,15 @@ If you are having any difficulty using this form please email{" "}
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <input type="hidden" name="form-name" value="onboarding" {...register("form-name")} />
+            <input
+              type="hidden"
+              name="form-name"
+              value="onboarding"
+              {...register("form-name")}
+            />
             <div>
               <label>
-                First Name:{" "}<span className="asterisk">*</span>
+                First Name: <span className="asterisk">*</span>
                 <input
                   type="text"
                   name="firstName"
@@ -87,40 +115,46 @@ If you are having any difficulty using this form please email{" "}
                   {...register("firstName", { required: true })}
                 />
               </label>
-              {errors?.firstName && <span class="error">This field is required</span>}
+              {errors?.firstName && (
+                <span class="error">This field is required</span>
+              )}
             </div>
             <div>
               <label>
-                Last Name:{" "}<span className="asterisk">*</span>
+                Last Name: <span className="asterisk">*</span>
                 <input
                   type="text"
                   name="lastName"
                   className={errors?.lastName ? "has-error" : ""}
                   {...register("lastName", { required: true })}
-
-
                 />
               </label>
-              {errors?.lastName && <span class="error">This field is required</span>}
+              {errors?.lastName && (
+                <span class="error">This field is required</span>
+              )}
             </div>
             <div>
               <label>
-                Company:{" "}<span className="asterisk">*</span>
+                Company: <span className="asterisk">*</span>
                 <select
                   name="company"
                   className={errors?.company ? "has-error" : ""}
                   {...register("company", { required: true })}
                   defaultValue=""
                 >
-                  <option value="" disabled>Select a company</option>
-                  {allCompanies.map(company => (
+                  <option value="" disabled>
+                    Select a company
+                  </option>
+                  {allCompanies.map((company) => (
                     <option key={company} value={company}>
                       {company}
                     </option>
                   ))}
                 </select>
               </label>
-              {errors?.company && <span class="error">This field is required</span>}
+              {errors?.company && (
+                <span class="error">This field is required</span>
+              )}
             </div>
             {/* Select field with countries */}
             <div>
@@ -132,16 +166,23 @@ If you are having any difficulty using this form please email{" "}
                   {...register("country")}
                   defaultValue=""
                 >
-                  <option value="" disabled>Select a country</option>
-                  {countries.map(country => (
+                  <option value="" disabled>
+                    Select a country
+                  </option>
+                  {countries.map((country) => (
                     <option key={country.name} value={country.name}>
                       {country.name}
                     </option>
                   ))}
                 </select>
               </label>
-              {errors?.country && <span class="error">This field is required</span>}
-              <small>We use this data to connect people together geographically and to take into consideration time zones for meetings and events.</small>
+              {errors?.country && (
+                <span class="error">This field is required</span>
+              )}
+              <small>
+                We use this data to connect people together geographically and
+                to take into consideration time zones for meetings and events.
+              </small>
             </div>
             {/* (Closest major) City */}
             <div>
@@ -154,22 +195,27 @@ If you are having any difficulty using this form please email{" "}
                   {...register("city")}
                 />
               </label>
-              {errors?.city && <span class="error">This field is required</span>}
+              {errors?.city && (
+                <span class="error">This field is required</span>
+              )}
             </div>
             <div>
               <label>
-                Role:{" "}<span className="asterisk">*</span>
+                Role: <span className="asterisk">*</span>
                 <input
                   type="text"
                   className={errors?.role ? "has-error" : ""}
                   name="role"
-                  {...register("role", { required: true })} />
+                  {...register("role", { required: true })}
+                />
               </label>
-              {errors?.role && <span class="error">This field is required</span>}
+              {errors?.role && (
+                <span class="error">This field is required</span>
+              )}
             </div>
             <div>
               <label>
-                Work email:{" "}<span className="asterisk">*</span>
+                Work email: <span className="asterisk">*</span>
                 <input
                   type="email"
                   name="email"
@@ -182,15 +228,19 @@ If you are having any difficulty using this form please email{" "}
                 />
               </label>
               {errors?.email && (
-                <span class="error">{errors.email.message || "This field is invalid"}</span>
+                <span class="error">
+                  {errors.email.message || "This field is invalid"}
+                </span>
               )}
               <small>
-              It is essential that you use a work email to register, only email domains that are whitelisted by one of our member organizations will be approved.
+                It is essential that you use a work email to register, only
+                email domains that are whitelisted by one of our member
+                organizations will be approved.
               </small>
             </div>
             <div>
               <label>
-                GitHub username:{" "}<span className="asterisk">*</span>
+                GitHub username: <span className="asterisk">*</span>
                 <input
                   type="text"
                   name="githubUsername"
@@ -198,48 +248,58 @@ If you are having any difficulty using this form please email{" "}
                   {...register("githubUsername", {
                     required: true,
                     minLength: 3,
-                    validate: async value => {
+                    validate: async (value) => {
                       const response = await fetch(
                         `https://api.github.com/users/${value}`
-                      )
-                      return response.ok || "This username does not exist on GitHub"
+                      );
+                      return (
+                        response.ok || "This username does not exist on GitHub"
+                      );
                     },
                   })}
                 />
               </label>
               {errors?.githubUsername && (
-                <span class="error">{errors.githubUsername.message || "This field is invalid"}</span>
+                <span class="error">
+                  {errors.githubUsername.message || "This field is invalid"}
+                </span>
               )}
               {/* add disclamer to this field */}
-              <small>The GSF works almost entirely in the open via GitHub, your opportunities to engage will be very limited without a GitHub username, click this
-                {" "}<a href="https://github.com"
+              <small>
+                The GSF works almost entirely in the open via GitHub, your
+                opportunities to engage will be very limited without a GitHub
+                username, click this{" "}
+                <a
+                  href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                >link</a> to create one if you do not already have one</small>
+                >
+                  link
+                </a>{" "}
+                to create one if you do not already have one
+              </small>
             </div>
             {isError && (
               <div className="error-message">
                 <p className="error-title">Something went wrong!</p>
                 <p>
                   Please try again later or contact us directly at{" "}
-                  <Link to="/helpdesk">
-                    our helpdesk
-                  </Link>{" "}
-                  if the problem persists.
+                  <Link to="/helpdesk">our helpdesk</Link> if the problem
+                  persists.
                 </p>
               </div>
             )}
             <div className="flex-start-center">
-              <Button type="submit" color="primary" edgeColor="primary-dark" >Submit</Button>
+              <Button type="submit" color="primary" edgeColor="primary-dark">
+                Submit
+              </Button>
             </div>
-
           </form>
         )}
       </section>
     </Layout>
   );
 };
-
 
 export const query = graphql`
   query OnboardingPageQuery {
@@ -253,6 +313,5 @@ export const query = graphql`
     }
   }
 `;
-
 
 export default OnboardingPage;
