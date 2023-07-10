@@ -18,6 +18,9 @@ import "../styles/templates/single-article.scss";
 import { getLocaleNativeName } from "../utils/language-locale";
 
 const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
+  article.seoMetaTags.tags[3].attributes.content = article.teaserText;
+  article.seoMetaTags.tags[4].attributes.content = article.teaserText;
+  article.seoMetaTags.tags[5].attributes.content = article.teaserText;
   return (
     <Layout
       className="container"
@@ -122,8 +125,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
                     }}
                   />
                 );
-              }
-              else if (record.__typename === "DatoCmsArticleYoutubeVideo") {
+              } else if (record.__typename === "DatoCmsArticleYoutubeVideo") {
                 const youtubeUrl = record.videoUrl.url;
                 const videoId = youtubeUrl.split("v=")[1];
                 const ampersandPosition = videoId.indexOf("&");
@@ -223,10 +225,7 @@ export const query = graphql`
       teaserText
       date(formatString: "MMMM Do, YYYY")
       mainImage {
-        gatsbyImageData(
-          
-          imgixParams: { w: "1920", auto: "compress" }
-        )
+        gatsbyImageData(imgixParams: { w: "1920", auto: "compress" })
       }
       content {
         value
@@ -252,10 +251,7 @@ export const query = graphql`
             image {
               title
               alt
-              gatsbyImageData(
-                
-                imgixParams: { w: "1920", auto: "compress" }
-              )
+              gatsbyImageData(imgixParams: { w: "1920", auto: "compress" })
             }
           }
           ... on DatoCmsArticleContentTable {
@@ -268,12 +264,12 @@ export const query = graphql`
           }
           ... on DatoCmsArticleYoutubeVideo {
             id: originalId
-            videoUrl{
+            videoUrl {
               url
               title
               thumbnailUrl
             }
-          }              
+          }
         }
       }
       authors {
@@ -284,7 +280,6 @@ export const query = graphql`
         role
         photo {
           gatsbyImageData(
-            
             imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
           )
         }
@@ -308,7 +303,6 @@ export const query = graphql`
         role
         photo {
           gatsbyImageData(
-            
             imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
           )
         }
