@@ -55,12 +55,37 @@ const Section1 = () => {
       <div className="main-text">
         <p>
           We are building a trusted ecosystem of{" "}
-          <Link to="/working-groups/community">people</Link>,{" "}
-          <Link to="/working-groups/standards">standards</Link>,{" "}
-          <Link to="/working-groups/opensource">tooling</Link> and{" "}
-          <Link to="/projects/software-carbon-intensity-sci-specification">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/1015850/Community+Working+Group"
+          >
+            people
+          </a>
+          ,{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group"
+          >
+            standards
+          </a>
+          ,{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/852049/Open+Source+Working+Group"
+          >
+            tooling
+          </a>{" "}
+          and{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/884790/Policy+Working+Group"
+          >
             best practices
-          </Link>{" "}
+          </a>{" "}
           for
         </p>
         <h1>Green software</h1>

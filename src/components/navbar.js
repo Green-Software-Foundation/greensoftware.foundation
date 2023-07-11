@@ -44,16 +44,19 @@ const menuData = [
     submenu: [
       {
         title: "Standards",
-        href: "https://standards.greensoftware.foundation",
+        href: "https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group",
       },
-      { title: "Policy", href: "https://policy.greensoftware.foundation" },
+      {
+        title: "Policy",
+        href: "https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/884790/Policy+Working+Group",
+      },
       {
         title: "Opensource",
-        href: "https://opensource.greensoftware.foundation",
+        href: "https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/852049/Open+Source+Working+Group",
       },
       {
         title: "Community",
-        href: "https://community.greensoftware.foundation",
+        href: "https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/1015850/Community+Working+Group",
       },
     ],
   },
@@ -84,8 +87,9 @@ const MenuItems = ({ className, responsive }) => {
   const [selectedMenu, setSelectedMenu] = React.useState("");
   return (
     <ul
-      className={`${responsive ? "responsive-nav-menu" : "nav-menu"} ${className ? className : ""
-        }`}
+      className={`${responsive ? "responsive-nav-menu" : "nav-menu"} ${
+        className ? className : ""
+      }`}
     >
       {menuData.map((menuItem) => (
         <li
@@ -95,8 +99,9 @@ const MenuItems = ({ className, responsive }) => {
           {menuItem.submenu ? (
             <>
               <button
-                className={`${selectedMenu === menuItem.title ? "selected" : ""
-                  }`}
+                className={`${
+                  selectedMenu === menuItem.title ? "selected" : ""
+                }`}
                 onClick={() =>
                   setSelectedMenu(
                     selectedMenu === menuItem.title ? "" : menuItem.title
@@ -106,8 +111,9 @@ const MenuItems = ({ className, responsive }) => {
                 <span>{menuItem.title}</span>
               </button>
               <ul
-                className={`submenu-wrapper ${selectedMenu === menuItem.title ? "selected" : ""
-                  }`}
+                className={`submenu-wrapper ${
+                  selectedMenu === menuItem.title ? "selected" : ""
+                }`}
               >
                 {menuItem.submenu.map((submenuItem) => (
                   <li key={submenuItem.title}>
