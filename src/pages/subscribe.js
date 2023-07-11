@@ -24,6 +24,7 @@ const SubscribePage = ({
     allDatoCmsProjectV2: { nodes },
   },
 }) => {
+  console.log(nodes);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
   const {
@@ -33,7 +34,11 @@ const SubscribePage = ({
   } = useForm();
   const projects = nodes
     .map((node) => {
-      return { name: node.name, url: node.url };
+      return {
+        name: node.name,
+        url: node.url,
+        workingGroup: node.workingGroup,
+      };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
   console.log(projects);
@@ -150,7 +155,7 @@ const SubscribePage = ({
               <p>
                 Working Groups <span className="asterisk">*</span>
               </p>
-              <div className="flex-align-center">
+              <div className="checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="Checkbox_1"
@@ -160,7 +165,7 @@ const SubscribePage = ({
                 />
                 <label htmlFor="Checkbox_1">Standards</label>
                 <a
-                  href="https://standards.greensoftware.foundation/"
+                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -168,7 +173,7 @@ const SubscribePage = ({
                   <ExternalLink />
                 </a>
               </div>
-              <div className="flex-align-center">
+              <div className="checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="Checkbox_2"
@@ -178,7 +183,7 @@ const SubscribePage = ({
                 />
                 <label for="Checkbox_2">Policy</label>
                 <a
-                  href="https://policy.greensoftware.foundation/"
+                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/884790/Policy+Working+Group"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -186,7 +191,7 @@ const SubscribePage = ({
                   <ExternalLink />
                 </a>
               </div>
-              <div className="flex-align-center">
+              <div className="checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="Checkbox_3"
@@ -196,7 +201,7 @@ const SubscribePage = ({
                 />
                 <label htmlFor="Checkbox_3">Opensource</label>
                 <a
-                  href="https://opensource.greensoftware.foundation/"
+                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/852049/Open+Source+Working+Group"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -204,7 +209,7 @@ const SubscribePage = ({
                   <ExternalLink />
                 </a>
               </div>
-              <div className="flex-align-center">
+              <div className="checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="Checkbox_4"
@@ -214,7 +219,7 @@ const SubscribePage = ({
                 />
                 <label for="Checkbox_4">Community</label>
                 <a
-                  href="https://community.greensoftware.foundation/"
+                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/1015850/Community+Working+Group"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -227,8 +232,8 @@ const SubscribePage = ({
               <p>
                 Projects <span className="asterisk">*</span>
               </p>
-              {projects.map(({ name, url }, index) => (
-                <div className="flex-align-center" key={index}>
+              {projects.map(({ name, url, workingGroup }, index) => (
+                <div className="checkbox-wrapper" key={index}>
                   <input
                     type="checkbox"
                     id={`Checkbox_${name}`}
@@ -236,7 +241,10 @@ const SubscribePage = ({
                     value={name}
                     {...register("Projects", { required: true })}
                   />
-                  <label for={`Checkbox_${name}`}>{name}</label>
+                  <label for={`Checkbox_${name}`}>
+                    {name}
+                    <span className="sub-label">{workingGroup.title} WG</span>
+                  </label>
                   <a
                     href={url}
                     target="_blank"
@@ -276,6 +284,9 @@ export const query = graphql`
       nodes {
         name
         url
+        workingGroup {
+          title
+        }
       }
     }
   }

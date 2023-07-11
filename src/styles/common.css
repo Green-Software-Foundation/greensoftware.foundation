@@ -67,6 +67,10 @@
   align-items: center;
   justify-content: center;
 }
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
 .flex-align-center {
   display: flex;
   align-items: center;

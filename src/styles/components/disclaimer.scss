@@ -20,8 +20,8 @@
 @media (min-width: 640px) {
   .disclaimer-wrapper {
     display: grid;
-    grid-template-columns: 32px 1fr;
-    column-gap: 1.5rem;
+    grid-template-rows: 32px 1fr;
+    gap: 1.5rem;
     text-align: left;
     max-width: 640px;
     margin-left: auto;
