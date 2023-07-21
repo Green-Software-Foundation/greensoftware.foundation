@@ -152,17 +152,19 @@ const Section4 = ({ logos }) => (
   <section id="steering-members" className="section4 container">
     <h2 className="green-uppercase-title">OUR STEERING MEMBERS</h2>
     <div className="logos-wrapper ">
-      {logos.map(({ logo, companyName, companyWebsite }) => (
+      {logos.map(({ companyLogo, companyName, companyWebsite }) => (
         <a
           className={`logo ${
-            logo.width / logo.height > 2 ? "horizontal" : "vertical"
-          } ${logo.format === "svg" ? "isSVG" : ""}`}
+            companyLogo.width / companyLogo.height > 2
+              ? "horizontal"
+              : "vertical"
+          } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
           target="_blank"
           rel="noopener noreferrer"
           href={companyWebsite}
           key={companyName}
         >
-          <img src={logo.url} alt={companyName} {...logo.fluid} />
+          <img src={companyLogo.url} alt={companyName} {...companyLogo.fluid} />
         </a>
       ))}
     </div>
@@ -173,17 +175,19 @@ const Section5 = ({ logos }) => (
   <section id="general-members" className="section5 container">
     <h2 className="green-uppercase-title">OUR General MEMBERS</h2>
     <div className="logos-wrapper ">
-      {logos.map(({ logo, companyName, companyWebsite }) => (
+      {logos.map(({ companyLogo, companyName, companyWebsite }) => (
         <a
           className={`logo  ${
-            logo.width / logo.height > 2 ? "horizontal" : "vertical"
-          } ${logo.format === "svg" ? "isSVG" : ""}`}
+            companyLogo.width / companyLogo.height > 2
+              ? "horizontal"
+              : "vertical"
+          } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
           target="_blank"
           rel="noopener noreferrer"
           href={companyWebsite}
           key={companyName}
         >
-          <img src={logo.url} alt={companyName} {...logo.fluid} />
+          <img src={companyLogo.url} alt={companyName} {...companyLogo.fluid} />
         </a>
       ))}
     </div>
@@ -215,6 +219,13 @@ const Section6 = () => (
   </section>
 );
 const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
+  // Sort by company name
+  const steeringMembers = homepageData.steeringMembers.sort((a, b) =>
+    a.companyName.localeCompare(b.companyName)
+  );
+  const generalMembers = homepageData.generalMembers.sort((a, b) =>
+    a.companyName.localeCompare(b.companyName)
+  );
   return (
     <Layout pageName="homepage" seo={{ title: "Green Software Foundation" }}>
       <Section1 />
@@ -224,8 +235,8 @@ const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
         numberOfOrganisations={homepageData.numberOfOrganisations}
       />
 
-      <Section4 logos={homepageData.steeringMembers} />
-      <Section5 logos={homepageData.generalMembers} />
+      <Section4 logos={steeringMembers} />
+      <Section5 logos={generalMembers} />
       <Section6 />
     </Layout>
   );
@@ -237,7 +248,7 @@ export const query = graphql`
       numberOfIndividuals
       numberOfOrganisations
       steeringMembers {
-        logo {
+        companyLogo {
           url
           height
           width
@@ -252,7 +263,7 @@ export const query = graphql`
         companyWebsite
       }
       generalMembers {
-        logo {
+        companyLogo {
           url
           height
           width

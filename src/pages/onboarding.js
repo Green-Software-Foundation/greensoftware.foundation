@@ -21,7 +21,7 @@ function encode(data) {
 
 const OnboardingPage = ({
   data: {
-    datoCmsHomepage: { generalMembers, steeringMembers },
+    allDatoCmsCompany: { nodes },
   },
 }) => {
   const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -31,9 +31,7 @@ const OnboardingPage = ({
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const allCompanies = [...generalMembers, ...steeringMembers]
-    .map((member) => member.companyName)
-    .sort((a, b) => a.localeCompare(b));
+  const allCompanies = nodes.map((member) => member.companyName);
   const onSubmit = (data) => {
     fetch("/", {
       method: "POST",
@@ -303,11 +301,8 @@ const OnboardingPage = ({
 
 export const query = graphql`
   query OnboardingPageQuery {
-    datoCmsHomepage {
-      steeringMembers {
-        companyName
-      }
-      generalMembers {
+    allDatoCmsCompany(sort: { fields: companyName, order: ASC }) {
+      nodes {
         companyName
       }
     }
