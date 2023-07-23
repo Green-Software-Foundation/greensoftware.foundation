@@ -152,21 +152,28 @@ const Section4 = ({ logos }) => (
   <section id="steering-members" className="section4 container">
     <h2 className="green-uppercase-title">OUR STEERING MEMBERS</h2>
     <div className="logos-wrapper ">
-      {logos.map(({ companyLogo, companyName, companyWebsite }) => (
-        <a
-          className={`logo ${
-            companyLogo.width / companyLogo.height > 2
-              ? "horizontal"
-              : "vertical"
-          } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          href={companyWebsite}
-          key={companyName}
-        >
-          <img src={companyLogo.url} alt={companyName} {...companyLogo.fluid} />
-        </a>
-      ))}
+      {logos.map(({ companyLogo, companyName, companyWebsite }) => {
+        if (!companyLogo) return null;
+        return (
+          <a
+            className={`logo ${
+              companyLogo.width / companyLogo.height > 2
+                ? "horizontal"
+                : "vertical"
+            } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={companyWebsite}
+            key={companyName}
+          >
+            <img
+              src={companyLogo.url}
+              alt={companyName}
+              {...companyLogo.fluid}
+            />
+          </a>
+        );
+      })}
     </div>
   </section>
 );
@@ -175,21 +182,28 @@ const Section5 = ({ logos }) => (
   <section id="general-members" className="section5 container">
     <h2 className="green-uppercase-title">OUR General MEMBERS</h2>
     <div className="logos-wrapper ">
-      {logos.map(({ companyLogo, companyName, companyWebsite }) => (
-        <a
-          className={`logo  ${
-            companyLogo.width / companyLogo.height > 2
-              ? "horizontal"
-              : "vertical"
-          } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          href={companyWebsite}
-          key={companyName}
-        >
-          <img src={companyLogo.url} alt={companyName} {...companyLogo.fluid} />
-        </a>
-      ))}
+      {logos.map(({ companyLogo, companyName, companyWebsite }) => {
+        if (!companyLogo) return null;
+        return (
+          <a
+            className={`logo  ${
+              companyLogo.width / companyLogo.height > 2
+                ? "horizontal"
+                : "vertical"
+            } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={companyWebsite}
+            key={companyName}
+          >
+            <img
+              src={companyLogo.url}
+              alt={companyName}
+              {...companyLogo.fluid}
+            />
+          </a>
+        );
+      })}
     </div>
   </section>
 );
