@@ -247,12 +247,19 @@ const OnboardingPage = ({
                     required: true,
                     minLength: 3,
                     validate: async (value) => {
-                      const response = await fetch(
-                        `https://api.github.com/users/${value}`
-                      );
-                      return (
-                        response.ok || "This username does not exist on GitHub"
-                      );
+                      try {
+                        const response = await fetch(
+                          `https://api.github.com/users/${value}`
+                        );
+                        return (
+                          response.ok ||
+                          "This username does not exist on GitHub"
+                        );
+                      } catch (error) {
+                        return window.confirm(
+                          "It appears that GitHub is currently inaccessible on your network. We are in the process of validating your GitHub username. If you're confident that your GitHub username is accurate, you can proceed by clicking OK."
+                        );
+                      }
                     },
                   })}
                 />
