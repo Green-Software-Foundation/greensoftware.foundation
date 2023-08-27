@@ -58,7 +58,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/1015850/Community+Working+Group"
+            href="https://grnsft.org/wiki-community-wg"
           >
             people
           </a>
@@ -66,7 +66,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group"
+            href="https://grnsft.org/wiki-standards-wg"
           >
             standards
           </a>
@@ -74,7 +74,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/852049/Open+Source+Working+Group"
+            href="https://grnsft.org/wiki-os-wg"
           >
             tooling
           </a>{" "}
@@ -82,7 +82,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/884790/Policy+Working+Group"
+            href="https://grnsft.org/wiki-policy-wg"
           >
             best practices
           </a>{" "}

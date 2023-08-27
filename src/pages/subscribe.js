@@ -165,7 +165,7 @@ const SubscribePage = ({
                 />
                 <label htmlFor="Checkbox_1">Standards</label>
                 <a
-                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group"
+                  href="https://grnsft.org/wiki-standards-wg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -183,7 +183,7 @@ const SubscribePage = ({
                 />
                 <label for="Checkbox_2">Policy</label>
                 <a
-                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/884790/Policy+Working+Group"
+                  href="https://grnsft.org/wiki-policy-wg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -201,7 +201,7 @@ const SubscribePage = ({
                 />
                 <label htmlFor="Checkbox_3">Opensource</label>
                 <a
-                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/852049/Open+Source+Working+Group"
+                  href="https://grnsft.org/wiki-os-wg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
@@ -219,7 +219,7 @@ const SubscribePage = ({
                 />
                 <label for="Checkbox_4">Community</label>
                 <a
-                  href="https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/1015850/Community+Working+Group"
+                  href="https://grnsft.org/wiki-community-wg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-link"
