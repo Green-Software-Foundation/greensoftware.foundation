@@ -23,6 +23,7 @@
     "framer-motion": "^7.5.3",
     "gatsby": "^4.24.3",
     "gatsby-plugin-algolia": "^0.26.0",
+    "gatsby-plugin-feed": "^4.25.0",
     "gatsby-plugin-google-gtag": "^4.24.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-mailchimp": "^5.2.2",

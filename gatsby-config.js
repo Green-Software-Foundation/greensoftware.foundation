@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://greensoftware.foundation/",
     title: "Green Software Foundation",
+    description: "The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling and best practices for building green software",
   },
   plugins: [
     {
@@ -17,6 +18,40 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        feeds: [
+          {
+            serialize: ({query: {site, allDatoCmsArticle}}) =>
+              allDatoCmsArticle.edges.map(edge => ({
+                  title: `${edge.node.title}`,
+                  description: `${edge.node.summary}`,
+                  date: `${edge.node.date}`,
+                  url: `${site.siteMetadata.siteUrl}/articles/${edge.node.slug }`,
+                  guid: `${site.siteMetadata.siteUrl}/articles/${edge.node.slug }`,
+              })),
+            query: `{
+              allDatoCmsArticle(
+                sort: {fields: date, order: DESC}
+                filter: { isATranslatedArticle: { ne: true } }
+              ) {
+                edges {
+                  node {
+                    title
+                    summary
+                    date
+                    slug
+                  }
+                }
+              }
+            }`,
+            output: "/rss.xml",
+            title: "Green Software Foundation RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
