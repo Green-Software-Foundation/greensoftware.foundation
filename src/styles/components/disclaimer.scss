@@ -6,7 +6,6 @@
   border: 1px solid var(--accent1);
   color: var(--accent1-darker);
   font-size: 0.875rem;
-  text-align: center;
   .icon {
     color: var(--accent1-dark);
     margin-bottom: 1rem;
@@ -22,7 +21,6 @@
     display: grid;
     grid-template-rows: 32px 1fr;
     gap: 1.5rem;
-    text-align: left;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
