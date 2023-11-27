@@ -82,7 +82,8 @@ const SubscribePage = ({
           </li>
         </ul>
         Prior to using this form you must have completed the{" "}
-        <Link to="/onboarding"> registration form </Link> and received a
+        <Link to="/onboarding">registration form</Link>{" "}
+        and received a
         confirmation email.
         <br />
         <br />
