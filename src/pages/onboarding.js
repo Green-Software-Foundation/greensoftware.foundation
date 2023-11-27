@@ -58,7 +58,7 @@ const OnboardingPage = ({
         register with the Foundation.
         <br />
         <br />
-        Registering:-
+        Registering:
         <ul>
           <li>
             Gives you access to member only spaces, emails and communication
