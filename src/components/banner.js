@@ -19,7 +19,7 @@ const Banner = () => {
                 </p>
                 <a href="https://decarb.greensoftware.foundation/" target="_blank"
                     rel="noopener noreferrer"
-                >Register Now</a>
+                >Watch on-demand</a>
             </div>
             <div className="right">
 
