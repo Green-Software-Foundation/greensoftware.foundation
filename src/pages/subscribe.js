@@ -63,11 +63,11 @@ const SubscribePage = ({
     >
       <PageTitle>Subscription Form</PageTitle>
       <Disclaimer>
-        <strong>Employees of member organizations</strong> an use this form to
+        <strong>Employees of member organizations</strong> can use this form to
         subscribe to specific working groups and projects.
         <br />
         <br />
-        Subscribing:-
+        Subscribing:
         <ul>
           <li>
             Adds you to any mailing lists for the working groups or projects.
@@ -82,7 +82,8 @@ const SubscribePage = ({
           </li>
         </ul>
         Prior to using this form you must have completed the{" "}
-        <Link to="/onboarding"> registration form </Link> and received a
+        <Link to="/onboarding">registration form</Link>{" "}
+        and received a
         confirmation email.
         <br />
         <br />
