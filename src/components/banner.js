@@ -13,7 +13,7 @@ const Banner = () => {
 
             </div>
             <div className="center">
-                <img src={Logo} alt="SoGS logo" />
+                {/* <img src={Logo} alt="SoGS logo" /> */}
                 <p>View our Book of News for 2023
                     {/* <strong>Survey ends December 31<sup>st</sup></strong> */}
                 </p>
