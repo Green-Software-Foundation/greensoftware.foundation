@@ -14,12 +14,12 @@ const Banner = () => {
             </div>
             <div className="center">
                 <img src={Logo} alt="SoGS logo" />
-                <p>Join Decarbonize Software on November 16
+                <p>View our Book of News for 2023
                     {/* <strong>Survey ends December 31<sup>st</sup></strong> */}
                 </p>
-                <a href="https://decarb.greensoftware.foundation/" target="_blank"
+                <a href="https://greensoftware.foundation/articles/green-software-foundation-book-of-news-2023/" target="_blank"
                     rel="noopener noreferrer"
-                >Watch on-demand</a>
+                >Read now</a>
             </div>
             <div className="right">
 
