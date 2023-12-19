@@ -13,13 +13,13 @@ const Banner = () => {
 
             </div>
             <div className="center">
-                {/* <img src={Logo} alt="SoGS logo" /> */}
-                <p>View our Book of News for 2023
+                <img src={Logo} alt="Carbon Hack logo" />
+                <p>Join Carbon Hack 24 on 24 February - 14 March
                     {/* <strong>Survey ends December 31<sup>st</sup></strong> */}
                 </p>
-                <a href="https://greensoftware.foundation/articles/green-software-foundation-book-of-news-2023/" target="_blank"
+                <a href="https://grnsft.org/hack/homepage" target="_blank"
                     rel="noopener noreferrer"
-                >Read now</a>
+                >Register Now</a>
             </div>
             <div className="right">
 
