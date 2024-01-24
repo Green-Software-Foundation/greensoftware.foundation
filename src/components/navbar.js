@@ -75,6 +75,10 @@ const menuData = [
         title: "Principles of Green Software Engineering",
         href: "https://learn.greensoftware.foundation/",
       },
+      {
+        title: "Software Carbon Intensity (SCI) Specification",
+        href: "https://sci.greensoftware.foundation/",
+      },
     ],
   },
   {
