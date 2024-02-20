@@ -154,7 +154,7 @@ const SubscribePage = ({
             </div>
             <div className="checkboxes-wrapper">
               <p>
-                Working Groups <span className="asterisk">*</span>
+                Working Groups
               </p>
               <div className="checkbox-wrapper">
                 <input
