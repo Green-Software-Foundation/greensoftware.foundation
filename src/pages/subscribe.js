@@ -154,7 +154,7 @@ const SubscribePage = ({
             </div>
             <div className="checkboxes-wrapper">
               <p>
-                Working Groups
+                Working Groups ‹span className="asterisk">*</span>
               </p>
               <div className="checkbox-wrapper">
                 <input
@@ -231,7 +231,7 @@ const SubscribePage = ({
             </div>
             <div className="checkboxes-wrapper">
               <p>
-                Projects 
+                Projects ‹span className="asterisk">*</span>
               </p>
               {projects.map(({ name, url, workingGroup }, index) => (
                 <div className="checkbox-wrapper" key={index}>
