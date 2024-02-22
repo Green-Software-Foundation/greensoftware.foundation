@@ -35,7 +35,7 @@ const moreData = [
   },
   {
     title: "Helpdesk",
-    to: "/helpdesk",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSfd5J6F7gLddKbGJqNdbd29MqJZtg3CQjHdrXzKs19tLsv6CQ/viewform",
   },
 ];
 const socialMediaLinks = [
