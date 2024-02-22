@@ -154,7 +154,7 @@ const SubscribePage = ({
             </div>
             <div className="checkboxes-wrapper">
               <p>
-                Working Groups <span className="asterisk">*</span>
+                Working Groups
               </p>
               <div className="checkbox-wrapper">
                 <input
@@ -162,7 +162,7 @@ const SubscribePage = ({
                   id="Checkbox_1"
                   name="Working Groups"
                   value="Standards"
-                  {...register("Working Groups", { required: true })}
+                  {...register("Working Groups")}
                 />
                 <label htmlFor="Checkbox_1">Standards</label>
                 <a
@@ -180,7 +180,7 @@ const SubscribePage = ({
                   id="Checkbox_2"
                   name="Working Groups"
                   value="Policy"
-                  {...register("Working Groups", { required: true })}
+                  {...register("Working Groups")}
                 />
                 <label for="Checkbox_2">Policy</label>
                 <a
@@ -198,7 +198,7 @@ const SubscribePage = ({
                   id="Checkbox_3"
                   name="Working Groups"
                   value="Opensource"
-                  {...register("Working Groups", { required: true })}
+                  {...register("Working Groups")}
                 />
                 <label htmlFor="Checkbox_3">Opensource</label>
                 <a
@@ -216,7 +216,7 @@ const SubscribePage = ({
                   id="Checkbox_4"
                   name="Working Groups"
                   value="Community"
-                  {...register("Working Groups", { required: true })}
+                  {...register("Working Groups")}
                 />
                 <label for="Checkbox_4">Community</label>
                 <a
@@ -228,6 +228,11 @@ const SubscribePage = ({
                   <ExternalLink />
                 </a>
               </div>
+              {errors?.["Working Groups"] && (
+                <span class="error">
+                  {errors["Working Groups"].message || "This field is invalid"}
+                </span>
+              )}
             </div>
             <div className="checkboxes-wrapper">
               <p>
@@ -256,6 +261,11 @@ const SubscribePage = ({
                   </a>
                 </div>
               ))}
+               {errors?.["Projects"] && (
+                <span class="error">
+                  {errors["Projects"].message || "Please select at least one project."}
+                </span>
+              )}
             </div>
             {isError && (
               <div className="error-message">
