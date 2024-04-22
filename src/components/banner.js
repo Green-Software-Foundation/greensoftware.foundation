@@ -14,12 +14,11 @@ const Banner = () => {
             </div>
             <div className="center">
                 <img src={Logo} alt="Carbon Hack logo" />
-                <p>Attend the Closing & Award Ceremony Live Stream on {" "}
-                    <strong>April 18<sup>th</sup></strong>
+                <p>Watch the Carbon Hack 24 Award Ceremony
                 </p>
                 <a href="https://hack.greensoftware.foundation/awards/" target="_blank"
                     rel="noopener noreferrer"
-                >Join Now</a>
+                >Watch Now</a>
             </div>
             <div className="right">
 
