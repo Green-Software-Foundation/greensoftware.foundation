@@ -1,5 +1,5 @@
 .banner-wrapper {
-  background: #11283C;
+  background: var(--primary-darker);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@
 .banner-wrapper p {
   margin: 0;
   color: #fff;
+  font-weight: bold;
 }
 .banner-wrapper a {
   background: var(--accent1);

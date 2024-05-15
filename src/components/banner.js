@@ -14,11 +14,11 @@ const Banner = () => {
             </div>
             <div className="center">
                 <img src={Logo} alt="Carbon Hack logo" />
-                <p>Watch the Carbon Hack 24 Award Ceremony
+                <p>SCI Specification Achieves ISO Standard
                 </p>
-                <a href="https://hack.greensoftware.foundation/awards/" target="_blank"
+                <a href="https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status" target="_blank"
                     rel="noopener noreferrer"
-                >Watch Now</a>
+                >Read more</a>
             </div>
             <div className="right">
 
