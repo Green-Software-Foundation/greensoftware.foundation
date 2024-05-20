@@ -44,19 +44,19 @@ const menuData = [
     submenu: [
       {
         title: "Standards",
-        href: "https://grnsft.org/wiki-standards-wg",
+        href: "https://grnsft.org/standards-working-group",
       },
       {
         title: "Policy",
-        href: "https://grnsft.org/wiki-policy-wg",
+        href: "https://grnsft.org/policy-working-group",
       },
       {
         title: "Opensource",
-        href: "https://grnsft.org/wiki-os-wg",
+        href: "https://grnsft.org/open-source-wg",
       },
       {
         title: "Community",
-        href: "https://grnsft.org/wiki-community-wg",
+        href: "https://grnsft.org/community-working-group",
       },
     ],
   },
