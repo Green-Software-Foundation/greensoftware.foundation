@@ -62,7 +62,7 @@ const menuData = [
   },
   {
     title: "Projects",
-    to: "/projects",
+    href: "https://grnsft.org/gsf-projects",
   },
   {
     title: "Resources",
