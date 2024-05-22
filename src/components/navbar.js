@@ -141,7 +141,15 @@ const MenuItems = ({ className, responsive }) => {
               </ul>
             </>
           ) : (
-            <Link to={menuItem.to}>{menuItem.title}</Link>
+            menuItem.to ? <Link to={menuItem.to}>{menuItem.title}</Link> : 
+            <a
+              href={menuItem.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {menuItem.title}
+            </a>
+            
           )}
         </li>
       ))}
