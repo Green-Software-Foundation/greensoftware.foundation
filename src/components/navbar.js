@@ -65,6 +65,10 @@ const menuData = [
     href: "https://grnsft.org/gsf-projects",
   },
   {
+    title: "Committees",
+    href: "https://grnsft.org/Committees",
+  },
+  {
     title: "Resources",
     submenu: [
       {
