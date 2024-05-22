@@ -44,25 +44,29 @@ const menuData = [
     submenu: [
       {
         title: "Standards",
-        href: "https://grnsft.org/wiki-standards-wg",
+        href: "https://grnsft.org/standards-working-group",
       },
       {
         title: "Policy",
-        href: "https://grnsft.org/wiki-policy-wg",
+        href: "https://grnsft.org/policy-working-group",
       },
       {
         title: "Opensource",
-        href: "https://grnsft.org/wiki-os-wg",
+        href: "https://grnsft.org/open-source-wg",
       },
       {
         title: "Community",
-        href: "https://grnsft.org/wiki-community-wg",
+        href: "https://grnsft.org/community-working-group",
       },
     ],
   },
   {
     title: "Projects",
-    to: "/projects",
+    href: "https://grnsft.org/gsf-projects",
+  },
+  {
+    title: "Committees",
+    href: "https://grnsft.org/Committees",
   },
   {
     title: "Resources",
@@ -137,7 +141,15 @@ const MenuItems = ({ className, responsive }) => {
               </ul>
             </>
           ) : (
-            <Link to={menuItem.to}>{menuItem.title}</Link>
+            menuItem.to ? <Link to={menuItem.to}>{menuItem.title}</Link> : 
+            <a
+              href={menuItem.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {menuItem.title}
+            </a>
+            
           )}
         </li>
       ))}

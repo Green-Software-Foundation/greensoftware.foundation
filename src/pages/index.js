@@ -58,7 +58,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://grnsft.org/wiki-community-wg"
+            href="https://grnsft.org/community-working-group"
           >
             people
           </a>
@@ -66,7 +66,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://grnsft.org/wiki-standards-wg"
+            href="https://grnsft.org/standards-working-group"
           >
             standards
           </a>
@@ -74,7 +74,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://grnsft.org/wiki-os-wg"
+            href="https://grnsft.org/open-source-wg"
           >
             tooling
           </a>{" "}
@@ -82,7 +82,7 @@ const Section1 = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://grnsft.org/wiki-policy-wg"
+            href="https://grnsft.org/policy-working-group"
           >
             best practices
           </a>{" "}
