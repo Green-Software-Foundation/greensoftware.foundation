@@ -33,7 +33,7 @@ const menuData = [
       { title: "Press", to: "/press" },
       {
         title: "Media Kit",
-        href: "https://drive.google.com/drive/folders/1mC2YiR9cRfTe5h7p_-aCndTB0v0biWVq?usp=sharing",
+        href: "https://grnsft.notion.site/GSF-Media-Kit-118456c07cab808cae7fc316f8c7ccb5",
       },
       { title: "Trademark Policy", to: "/policy/trademark" },
       { title: "Code Of Conduct", to: "/code-of-conduct" },
