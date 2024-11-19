@@ -76,13 +76,21 @@ const menuData = [
         href: "https://github.com/Green-Software-Foundation/awesome-green-software",
       },
       {
-        title: "Principles of Green Software Engineering",
+        title: "Green Software Practitioner course",
         href: "https://learn.greensoftware.foundation/",
       },
       {
+        title: "Green Software Patterns",
+        href: "https://patterns.greensoftware.foundation/",
+      },
+      {
+        title: "Impact Framework",
+        href: "https://if.greensoftware.foundation/",
+      },            
+      {
         title: "Software Carbon Intensity (SCI) Specification",
         href: "https://sci.greensoftware.foundation/",
-      },
+      }
     ],
   },
   {
