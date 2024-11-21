@@ -13,10 +13,9 @@ const Banner = () => {
 
             </div>
             <div className="center">
-                <img src={Logo} alt="Carbon Hack logo" />
-                <p>SCI Specification Achieves ISO Standard
-                </p>
-                <a href="https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status" target="_blank"
+                <img src={Logo} alt="Banner logo" />
+                <p>SSIA joins the Green Software Foundation</p>
+                <a href="https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat" target="_blank"
                     rel="noopener noreferrer"
                 >Read more</a>
             </div>
