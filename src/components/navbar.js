@@ -97,6 +97,10 @@ const menuData = [
     title: "Articles",
     to: "/articles",
   },
+  {
+    title: "Workshops",
+    href: "https://workshops.greensoftware.foundation/workshops",
+  },  
 ];
 
 const MenuItems = ({ className, responsive }) => {
