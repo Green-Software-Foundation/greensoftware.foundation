@@ -33,7 +33,7 @@ const menuData = [
       { title: "Press", to: "/press" },
       {
         title: "Media Kit",
-        href: "https://grnsft.notion.site/GSF-Media-Kit-118456c07cab808cae7fc316f8c7ccb5",
+        href: "https://wiki.greensoftware.foundation/resource-media-kit",
       },
       { title: "Trademark Policy", to: "/policy/trademark" },
       { title: "Code Of Conduct", to: "/code-of-conduct" },
