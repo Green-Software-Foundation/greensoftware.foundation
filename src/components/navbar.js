@@ -99,7 +99,7 @@ const menuData = [
   },
   {
     title: "Workshops",
-    href: "https://workshops.greensoftware.foundation/workshops",
+    href: "https://workshops.greensoftware.foundation",
   },  
 ];
 
