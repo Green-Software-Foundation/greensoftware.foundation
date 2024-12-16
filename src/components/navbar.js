@@ -43,9 +43,13 @@ const menuData = [
     title: "Working Groups",
     submenu: [
       {
-        title: "Standards",
+        title: "Software Standards",
         href: "https://grnsft.org/standards-working-group",
       },
+      {
+        title: "Hardware Standards",
+        href: "https://grnsft.org/hardware-standards-working-group",
+      },      
       {
         title: "Policy",
         href: "https://grnsft.org/policy-working-group",
