@@ -48,7 +48,7 @@ const menuData = [
       },
       {
         title: "Hardware Standards",
-        href: "https://grnsft.org/hardware-standards-working-group",
+        href: "https://grnsft.org/hardware-standards-working-group-wiki",
       },      
       {
         title: "Policy",
