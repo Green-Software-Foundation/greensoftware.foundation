@@ -53,41 +53,7 @@ const Section1 = () => {
   return (
     <section className="section1">
       <div className="main-text">
-        <p>
-          We are building a trusted ecosystem of{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://grnsft.org/community-working-group"
-          >
-            people
-          </a>
-          ,{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://grnsft.org/standards-working-group"
-          >
-            standards
-          </a>
-          ,{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://grnsft.org/open-source-wg"
-          >
-            tooling
-          </a>{" "}
-          and{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://grnsft.org/policy-working-group"
-          >
-            best practices
-          </a>{" "}
-          for
-        </p>
+        <p>We are building a trusted ecosystem of people, standards, tooling and best practices for</p>
         <h1>Green software</h1>
       </div>
       <NewsletterForm placeholder="Sign up to our newsletter..." />
