@@ -25,7 +25,7 @@
     "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.25.0",
     "gatsby-plugin-google-gtag": "^4.24.0",
-    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-netlify": "^5.0.1",
@@ -34,7 +34,7 @@
     "gatsby-plugin-sass": "^5.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-sitemap": "^5.24.0",
-    "gatsby-source-datocms": "^4.0.4",
+    "gatsby-source-datocms": "^5.1.5",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-remark": "^5.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
@@ -48,5 +48,6 @@
     "react-medium-image-zoom": "^5.0.3",
     "react-responsive": "^9.0.0-beta.6",
     "sass": "^1.42.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

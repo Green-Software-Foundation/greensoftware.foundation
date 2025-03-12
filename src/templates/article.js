@@ -21,27 +21,6 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
   article.seoMetaTags.tags[3].attributes.content = article.teaserText;
   article.seoMetaTags.tags[4].attributes.content = article.teaserText;
   article.seoMetaTags.tags[5].attributes.content = article.teaserText;
-
-  if (article.mainImage?.url) {
-    const imageUrl = article.mainImage.url;
-    article.seoMetaTags.tags.push(
-      {
-        tagName: "meta",
-        attributes: {
-          name: "og:image",
-          content: imageUrl,
-        },
-      },
-      {
-        tagName: "meta",
-        attributes: {
-          name: "twitter:image",
-          content: imageUrl,
-        },
-      }
-    );
-  }
-
   return (
     <Layout
       className="container"
@@ -247,7 +226,6 @@ export const query = graphql`
       date(formatString: "MMMM Do, YYYY")
       mainImage {
         gatsbyImageData(imgixParams: { w: "1920", auto: "compress" })
-        url
       }
       content {
         value
