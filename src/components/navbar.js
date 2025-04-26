@@ -94,7 +94,7 @@ const menuData = [
       {
         title: "Software Carbon Intensity (SCI) Specification",
         href: "https://sci.greensoftware.foundation/",
-      }
+      },
       {
         title: "Policy Radar",
         href: "https://policy-radar.greensoftware.foundation/",
