@@ -54,14 +54,6 @@ const menuData = [
         title: "Policy",
         href: "https://grnsft.org/policy-working-group",
       },
-      {
-        title: "Opensource",
-        href: "https://grnsft.org/open-source-wg",
-      },
-      {
-        title: "Community",
-        href: "https://grnsft.org/community-working-group",
-      },
     ],
   },
   {
