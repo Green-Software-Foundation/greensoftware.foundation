@@ -41,28 +41,15 @@ const menuData = [
   },
   {
     title: "Working Groups",
-    submenu: [
-      {
-        title: "Software Standards",
-        href: "https://grnsft.org/standards-working-group",
-      },
-      {
-        title: "Hardware Standards",
-        href: "https://grnsft.org/hardware-standards-working-group-wiki",
-      },      
-      {
-        title: "Policy",
-        href: "https://grnsft.org/policy-working-group",
-      },
-    ],
+    href: "https://directory.greensoftware.foundation/working-groups/",
   },
   {
     title: "Projects",
-    href: "https://grnsft.org/gsf-projects",
+    href: "https://directory.greensoftware.foundation/projects/",
   },
   {
     title: "Committees",
-    href: "https://grnsft.org/Committees",
+    href: "https://directory.greensoftware.foundation/committees/",
   },
   {
     title: "Resources",
