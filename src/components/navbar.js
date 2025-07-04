@@ -85,7 +85,7 @@ const menuData = [
     to: "/articles",
   },
   {
-    title: "Workshops",
+    title: "Assemblies",
     href: "https://workshops.greensoftware.foundation",
   },  
 ];
