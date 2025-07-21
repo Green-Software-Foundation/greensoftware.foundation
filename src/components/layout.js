@@ -24,7 +24,7 @@ const Layout = ({ children, pageName, seo, className }) => {
     <>
       <Seo title={seo?.title} meta={seo?.meta} />
       <div ref={pageContentEl}>
-        {/* <Banner /> */}
+        <Banner />
         <main className={`${pageName}`}>
           <Navbar openSearch={() => setIsSearchOpen(true)} />
           <div className={`page-layout ${className}`}>{children}</div>
