@@ -88,15 +88,15 @@ const membershipFees = [
   },
   {
     type: "General Members (5,000+)",
-    GSF: "$20,000",
+    GSF: "$30,000",
     LF: "$20,000",
-    total: "$40,000",
+    total: "$50,000",
   },
   {
     type: "General Members (< 5,000)",
-    GSF: "$15,000",
+    GSF: "$20,000",
     LF: "$15,000",
-    total: "$30,000",
+    total: "$35,000",
   },
   {
     type: "General Members (< 500)",
