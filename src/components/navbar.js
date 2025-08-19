@@ -55,29 +55,25 @@ const menuData = [
     title: "Resources",
     submenu: [
       {
-        title: "Awesome Green Software",
-        href: "https://github.com/Green-Software-Foundation/awesome-green-software",
-      },
+        title: "Software Carbon Intensity (SCI) Specification",
+        href: "https://sci.greensoftware.foundation/",
+      },      
+      {
+        title: "Impact Framework",
+        href: "https://if.greensoftware.foundation/",
+      },   
+      {
+        title: "Policy Radar",
+        href: "https://policy-radar.greensoftware.foundation/",
+      },        
       {
         title: "Green Software Practitioner course",
-        href: "https://learn.greensoftware.foundation/",
+        href: "https://grnsft.org/mov-plat-gsp",
       },
       {
         title: "Green Software Patterns",
         href: "https://patterns.greensoftware.foundation/",
       },
-      {
-        title: "Impact Framework",
-        href: "https://if.greensoftware.foundation/",
-      },            
-      {
-        title: "Software Carbon Intensity (SCI) Specification",
-        href: "https://sci.greensoftware.foundation/",
-      },
-      {
-        title: "Policy Radar",
-        href: "https://policy-radar.greensoftware.foundation/",
-      }        
     ],
   },
   {
@@ -86,7 +82,7 @@ const menuData = [
   },
   {
     title: "Assemblies",
-    href: "https://workshops.greensoftware.foundation",
+    href: "https://assemblies.greensoftware.foundation",
   },  
 ];
 
