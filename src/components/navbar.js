@@ -16,6 +16,7 @@ import SearchIcon from "../assets/icons/search.inline.svg";
 import GithubIcon from "../assets/icons/github.inline.svg";
 import LinkedInIcon from "../assets/icons/linkedin.inline.svg";
 import MightyNetworksIcon from "../assets/icons/mighty-networks.svg";
+import YouTubeIcon from "../assets/icons/youtube.inline.svg";
 
 // Menu Data
 const menuData = [
@@ -156,6 +157,15 @@ const MenuItems = ({ className, responsive }) => {
 const CTAs = ({ openSearch }) => (
   <div className="cta-wrapper flex-align-center">
 
+
+    <a
+      href="https://www.youtube.com/@greensoftwarefoundation3662"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="search-btn"
+    >
+      <YouTubeIcon style={{ width: "1.5rem", height: "1.5rem" }} />
+    </a>
      <a
       href="https://movement.greensoftware.foundation/about"
       target="_blank"
