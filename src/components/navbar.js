@@ -14,6 +14,7 @@ import Logo from "../assets/icons/logo.inline.svg";
 import HamburgerMenuBlob from "../assets/icons/hamburger-menu-blob.inline.svg";
 import SearchIcon from "../assets/icons/search.inline.svg";
 import GithubIcon from "../assets/icons/github.inline.svg";
+import LinkedInIcon from "../assets/icons/linkedin.inline.svg";
 
 // Menu Data
 const menuData = [
@@ -153,6 +154,15 @@ const MenuItems = ({ className, responsive }) => {
 };
 const CTAs = ({ openSearch }) => (
   <div className="cta-wrapper flex-align-center">
+
+      <a
+      href="https://www.linkedin.com/company/green-software-foundation"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="search-btn"
+    >
+      <LinkedInIcon style={{ width: "1.5rem", height: "1.5rem" }} />
+    </a>
     <a
       href="https://github.com/Green-Software-Foundation"
       target="_blank"
