@@ -15,6 +15,7 @@ import HamburgerMenuBlob from "../assets/icons/hamburger-menu-blob.inline.svg";
 import SearchIcon from "../assets/icons/search.inline.svg";
 import GithubIcon from "../assets/icons/github.inline.svg";
 import LinkedInIcon from "../assets/icons/linkedin.inline.svg";
+import MightyNetworksIcon from "../assets/icons/mighty-networks.svg";
 
 // Menu Data
 const menuData = [
@@ -155,7 +156,15 @@ const MenuItems = ({ className, responsive }) => {
 const CTAs = ({ openSearch }) => (
   <div className="cta-wrapper flex-align-center">
 
-      <a
+     <a
+      href="https://movement.greensoftware.foundation/about"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="search-btn"
+    >
+      <MightyNetworksIcon style={{ width: "1.5rem", height: "1.5rem" }} />
+    </a>
+   <a
       href="https://www.linkedin.com/company/green-software-foundation"
       target="_blank"
       rel="noopener noreferrer"
