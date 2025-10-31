@@ -15,7 +15,7 @@ import HamburgerMenuBlob from "../assets/icons/hamburger-menu-blob.inline.svg";
 import SearchIcon from "../assets/icons/search.inline.svg";
 import GithubIcon from "../assets/icons/github.inline.svg";
 import LinkedInIcon from "../assets/icons/linkedin.inline.svg";
-import MightyNetworksIcon from "../assets/icons/mighty-networks.svg";
+import MightyNetworksIcon from "../assets/icons/mighty-networks.inline.svg";
 import YouTubeIcon from "../assets/icons/youtube.inline.svg";
 
 // Menu Data
