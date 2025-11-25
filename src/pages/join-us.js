@@ -327,21 +327,8 @@ const Section5 = () => (
         </Link>
         .
       </p>
-      <p>To start the application process, please fill out this form.</p>
-      <Button
-        href="https://enrollment.lfx.linuxfoundation.org/?project=green-software-foundation-fund"
-        color="primary"
-        edgeColor="primary-dark"
-      >
-        APPLY TO JOIN GSF
-      </Button>
-      <br />
-      <br />
-      <p>
-        If you would like to arrange a meeting to discuss more, we still ask
-        that you please fill out our application form, and we will get back to
-        you to arrange a time.
-      </p>
+
+      <iframe src="https://grnsft.notion.site/ebd/2b6456c07cab803085d8d4c925353e82" width="100%" height="900" frameborder="0" allowfullscreen />
     </div>
   </section>
 );
