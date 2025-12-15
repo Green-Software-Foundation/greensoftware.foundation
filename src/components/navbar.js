@@ -33,6 +33,7 @@ const menuData = [
         title: "How we work?",
         to: "/articles/welcome-to-the-green-software-foundation",
       },
+      { title: "Policy Engagement", href: "https://github.com/Green-Software-Foundation/policy-wg/blob/main/pwg-mission-statement.md" },
       { title: "Press", to: "/press" },
       {
         title: "Media Kit",
