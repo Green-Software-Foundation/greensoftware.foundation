@@ -322,7 +322,8 @@ const Section5 = () => (
         edgeColor="primary-dark"
       >
         APPLY TO JOIN GSF
-      </Button>          
+      </Button>         
+      <br><br>
       <p>
         There are no minimum requirements for entry at the General or
         Contributor level. However, at the Steering level, we insist that every
