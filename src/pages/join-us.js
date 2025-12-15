@@ -316,6 +316,13 @@ const Section5 = () => (
     </div>
     <div className="content-wrapper">
       <h3>Applying For Membership</h3>
+      <Button
+        href="https://enrollment.lfx.linuxfoundation.org/?project=green-software-foundation-fund"
+        color="primary"
+        edgeColor="primary-dark"
+      >
+        APPLY TO JOIN GSF
+      </Button>          
       <p>
         There are no minimum requirements for entry at the General or
         Contributor level. However, at the Steering level, we insist that every
@@ -327,7 +334,7 @@ const Section5 = () => (
         </Link>
         .
       </p>
-
+          
       <iframe src="https://grnsft.notion.site/ebd/2b6456c07cab803085d8d4c925353e82" width="100%" height="900" frameborder="0" allowfullscreen />
     </div>
   </section>
