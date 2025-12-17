@@ -323,7 +323,7 @@ const Section5 = () => (
       >
         APPLY TO JOIN GSF
       </Button>         
-      <br><br>
+      <br />
       <p>
         There are no minimum requirements for entry at the General or
         Contributor level. However, at the Steering level, we insist that every
