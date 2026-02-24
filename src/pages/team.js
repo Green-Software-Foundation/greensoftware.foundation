@@ -49,11 +49,19 @@ const MembersSection = ({ team, title, description }) => (
 
 const TeamPage = ({
   data: {
-    steeringCommittee: { nodes: steeringCommittee },
-    administrativeTeam: { nodes: administrativeTeam },
-    generalTeam: { nodes: generalTeam },
+    allTeamJson: { nodes: allMembers },
   },
 }) => {
+  const steeringCommittee = allMembers
+    .filter((m) => m.groups && m.groups.includes("steeringCommittee"))
+    .sort((a, b) => a.fullName.localeCompare(b.fullName));
+  const administrativeTeam = allMembers
+    .filter((m) => m.groups && m.groups.includes("administrativeTeam"))
+    .sort((a, b) => a.fullName.localeCompare(b.fullName));
+  const generalTeam = allMembers
+    .filter((m) => m.groups && m.groups.includes("organisationalLeads"))
+    .sort((a, b) => a.fullName.localeCompare(b.fullName));
+
   return (
     <Layout
       className="container"
@@ -74,68 +82,17 @@ const TeamPage = ({
 
 export const query = graphql`
   query TeamPageQuery {
-    steeringCommittee: allDatoCmsMember(
-      filter: { isSteeringCommitteeMember: { eq: true } }
-      sort: { order: ASC, fields: fullName }
-    ) {
+    allTeamJson {
       nodes {
         fullName
         role
         company
         companyWebsite
-        photo {
-          gatsbyImageData(
-            
-            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
-          )
-        }
-        socialMediaLink {
-          link
+        photo { publicURL }
+        groups
+        socialMedia {
           platform
-        }
-      }
-    }
-
-    administrativeTeam: allDatoCmsMember(
-      filter: { isAdministrativeTeamMember: { eq: true } }
-      sort: { order: ASC, fields: fullName }
-    ) {
-      nodes {
-        fullName
-        role
-        company
-        companyWebsite
-        photo {
-          gatsbyImageData(
-            
-            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
-          )
-        }
-        socialMediaLink {
           link
-          platform
-        }
-      }
-    }
-
-    generalTeam: allDatoCmsMember(
-      filter: { isGeneralMember: { eq: true } }
-      sort: { order: ASC, fields: fullName }
-    ) {
-      nodes {
-        fullName
-        role
-        company
-        companyWebsite
-        photo {
-          gatsbyImageData(
-            
-            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
-          )
-        }
-        socialMediaLink {
-          link
-          platform
         }
       }
     }

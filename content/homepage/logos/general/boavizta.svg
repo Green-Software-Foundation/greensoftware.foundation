@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 717.2 1012.24">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: #008c8d;
+      }
+
+      .st0, .st1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 11.1;
+        stroke-width: 93.72px;
+      }
+
+      .st1 {
+        stroke: #62c08b;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M53.9,958.86l-.63-907.58"/>
+  <path class="st0" d="M310.08,625.62l140.78,123.89"/>
+  <path class="st0" d="M305.94,406.16l132.76-117.19"/>
+  <path class="st0" d="M187.57,207.88c114.07-132.1,267.07-142.71,472.61-139.71,13.77,328-72.85,393.5-170.71,437.69"/>
+  <path class="st0" d="M187.57,802.17c114.07,132.1,267.07,142.71,472.61,139.71,13.77-328-72.85-393.5-170.71-437.69"/>
+</svg>

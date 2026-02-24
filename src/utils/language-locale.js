@@ -19,4 +19,10 @@ export const getLocaleCode = (langName) => {
   return locales[langName].code;
 };
 
+// Reverse lookup: code -> native name (e.g. "en" -> "English", "es" -> "Español")
+export const getNativeNameByCode = (code) => {
+  const entry = Object.values(locales).find((l) => l.code === code);
+  return entry ? entry.native_name : code;
+};
+
 export default getLocale;

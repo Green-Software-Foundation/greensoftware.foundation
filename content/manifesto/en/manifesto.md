@@ -1,0 +1,28 @@
+---
+title: "Manifesto"
+mainParagraph: "The Green Software Foundation’s Manifesto is the public facing declaration of the policy and aims of the Foundation. It describes the set of core values of the Foundation and how we operationalise those values. It is used to both inform and guide the decisions and behaviours of the people inside the Foundation and signal to external stakeholders what's important to the Foundation."
+mission: "Build a trusted ecosystem of people, standards, tooling and best practices for creating and building green software.  "
+vision: "Change the culture of building software across the tech industry, so sustainability becomes a core priority to software teams, just as important as performance, security, cost and accessibility."
+topics:
+  - title: "Minimise Carbon "
+    description: "The Foundation's mission is to reduce the total change in global carbon emissions associated with software. When evaluating choices we choose the option that advocates for abatement (reducing emissions) not neutralisation (offsetting emissions)."
+    operationalise: "* We will consider how to minimise carbon emissions in every decision we make around how we conduct ourselves operationally and the standards and technology we create and use."
+    illustration: "/images/manifesto/minimise-carbon.svg"
+  - title: "Maximise Trust"
+    description: "If there is no trust in the Foundation's output, it won't have the influence needed and will fail its core mission. When evaluating choices we choose the option that increases trust in the Foundation."
+    operationalise: "* We will have a diverse mix of organisations, for profits, non-profits, government, and academia.\n* Unless there is a good reason to maintain privacy, all documentation, threads, and processes will be open and transparent."
+    illustration: "/images/manifesto/maximise-trust.svg"
+  - title: "Engage with Empathy "
+    description: "Ensuring that all of our members and contributors feel that they can actively contribute will ensure that we create an environment that promotes belonging and will lead to better outcomes. "
+    operationalise: "* We will endeavour to listen actively before we respond, to recognize when other group members are not participating, and make space for them to engage.\n* We will acknowledge that everyone is at a different stage on their climate journey and we will work to help our peers advance in their understanding and impact aligned with the mission of the Foundation.\n* We will commit to providing direct, constructive feedback to our colleagues in our work to achieve the mission of the Green Software Foundation."
+    illustration: "/images/manifesto/engage-with-empathy.svg"
+  - title: "Be Inclusive and Open to All"
+    description: "Achieving the mission of the Green Software Foundation requires us to act with fairness to all members and be inclusive of diverse perspectives. "
+    operationalise: "* We will ensure digital accessibility throughout our organizational processes, communications channels, standard development, and code.\n* Our working groups and steering committee will work via consensus. If we fail to reach a consensus on issues, then there is a vote. The organization's size does not matter. Each general and steering member organization has one vote each.\n* Our steering committee will review any requests for resources that, on balance, benefit some member organizations over others.\n* We will follow the Linux Foundation [anti-trust policy](https://www.linuxfoundation.org/antitrust-policy/)."
+    illustration: "/images/manifesto/be-inclusive-and-open-to-all.svg"
+  - title: "Hold Ourselves Accountable"
+    description: "Accountability builds trust and ensures that all members, stakeholders, and contributors feel that the Green Software Foundation is a community where we uphold our values and ensure safety, professionalism, and inclusion. "
+    operationalise: "* We will always assume our colleagues are operating with the best intentions and working towards the Green Software Foundation mission.  \n* In the case that a member or contributors of the Green Software Foundation is engaging in any behaviors that are in conflict with our core values, reports can be made to Asim Hussain, Chairperson, <asim@greensoftware.foundation>. "
+    illustration: "/images/manifesto/hold-ourselves-accountable.svg"
+---
+

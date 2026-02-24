@@ -111,61 +111,53 @@
     margin-bottom: 5rem;
     padding-top: 137px;
     margin-top: -137px;
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
     .logos-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
       .logo {
-        margin: 0;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        cursor: pointer;
         img {
-          width: 100%;
-          margin: 0;
-        }
-        &.horizontal {
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        &.vertical {
-          img {
-            height: 100%;
-            width: auto;
-          }
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
         }
       }
     }
   }
   .section4 {
     .logos-wrapper {
-      flex-direction: column;
+      gap: 2rem;
       .logo {
-        &:not(:last-child) {
-          margin-bottom: 3rem;
-        }
+        width: 110px;
+        height: 80px;
         &.horizontal {
-          width: 60%;
-        }
-        &.vertical {
-          height: 100px;
+          width: 180px;
+          height: 55px;
         }
       }
     }
   }
   .section5 {
     .logos-wrapper {
+      gap: 1.5rem;
       .logo {
-        margin: 1.5rem;
+        width: 80px;
+        height: 60px;
         &.horizontal {
-          width: calc(50% - 3rem);
-        }
-        &.vertical {
-          height: 50px;
-        }
-        img {
-          margin: 0;
+          width: 130px;
+          height: 40px;
         }
       }
     }
@@ -217,26 +209,26 @@
     }
     .section4 {
       .logos-wrapper {
+        gap: 2.5rem;
         .logo {
-          margin: 2rem;
+          width: 130px;
+          height: 90px;
           &.horizontal {
-            width: calc(50% - 4rem);
-          }
-          &.vertical {
-            height: 120px;
+            width: 210px;
+            height: 60px;
           }
         }
       }
     }
     .section5 {
       .logos-wrapper {
+        gap: 2rem;
         .logo {
-          margin: 1.5rem;
+          width: 95px;
+          height: 70px;
           &.horizontal {
-            width: calc(25% - 3rem);
-          }
-          &.vertical {
-            height: 70px;
+            width: 155px;
+            height: 45px;
           }
         }
       }
@@ -286,12 +278,11 @@
         }
       }
     }
-    .section4 {
-      .logos-wrapper {
-        flex-direction: row;
-        .logo.horizontal.isSVG {
-          max-height: 60px;
-        }
+    .section4,
+    .section5 {
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
       }
     }
     .section6 {
@@ -339,26 +330,26 @@
     }
     .section4 {
       .logos-wrapper {
+        gap: 3rem;
         .logo {
-          margin: 2rem;
+          width: 160px;
+          height: 100px;
           &.horizontal {
-            width: calc(25% - 4rem);
-          }
-          &.vertical {
-            height: 150px;
+            width: 250px;
+            height: 70px;
           }
         }
       }
     }
     .section5 {
       .logos-wrapper {
+        gap: 2.5rem;
         .logo {
-          margin: 2.5rem;
+          width: 110px;
+          height: 80px;
           &.horizontal {
-            width: calc(20% - 5rem);
-          }
-          &.vertical {
-            height: 90px;
+            width: 180px;
+            height: 50px;
           }
         }
       }

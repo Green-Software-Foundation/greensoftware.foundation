@@ -1,0 +1,416 @@
+[
+  {
+    "companyName": "Aveva",
+    "companyWebsite": "https://www.aveva.com/en/",
+    "logo": "logos/general/aveva.svg",
+    "logoWidth": 205,
+    "logoHeight": 46,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Trust.ai",
+    "companyWebsite": "trustai.eu",
+    "logo": "logos/general/trust-ai.svg",
+    "logoWidth": 104,
+    "logoHeight": 28,
+    "logoFormat": "svg",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "ACIS",
+    "companyWebsite": "https://acis.org.co/",
+    "logo": "logos/general/acis.png",
+    "logoWidth": 547,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Almaviva",
+    "companyWebsite": "www.almaviva.it",
+    "logo": "logos/general/almaviva.png",
+    "logoWidth": 1364,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Schneider Electric",
+    "companyWebsite": "www.se.com",
+    "logo": "logos/general/schneider-electric.jpg",
+    "logoWidth": 867,
+    "logoHeight": 256,
+    "logoFormat": "jpg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "OpenUK",
+    "companyWebsite": "https://openuk.uk/",
+    "logo": "logos/general/openuk.png",
+    "logoWidth": 983,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Cloud Sustainability Watch",
+    "companyWebsite": "cloud.sustainability.watch/",
+    "logo": "logos/general/cloud-sustainability-watch.webp",
+    "logoWidth": null,
+    "logoHeight": null,
+    "logoFormat": "webp",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "GitLab",
+    "companyWebsite": "https://about.gitlab.com/",
+    "logo": "logos/general/gitlab.svg",
+    "logoWidth": 695,
+    "logoHeight": 152,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Goldman Sachs",
+    "companyWebsite": "https://www.goldmansachs.com/",
+    "logo": "logos/general/goldman-sachs.png",
+    "logoWidth": 593,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "ZutaCore",
+    "companyWebsite": "https://zutacore.com",
+    "logo": "logos/general/zutacore.webp",
+    "logoWidth": null,
+    "logoHeight": null,
+    "logoFormat": "webp",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "mondragon.edu",
+    "companyWebsite": "https://www.mondragon.edu/en/home",
+    "logo": "logos/general/mondragon-edu.png",
+    "logoWidth": 431,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "GrUSP",
+    "companyWebsite": "https://www.grusp.org/en/",
+    "logo": "logos/general/grusp.png",
+    "logoWidth": 378,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "International Institute of Information Technology",
+    "companyWebsite": "https://www.iiit.ac.in/",
+    "logo": "logos/general/international-institute-of-information-technology.png",
+    "logoWidth": 509,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Amadeus",
+    "companyWebsite": "amadeus.com/en",
+    "logo": "logos/general/amadeus.jpg",
+    "logoWidth": 791,
+    "logoHeight": 256,
+    "logoFormat": "jpg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "ClimateAction.tech",
+    "companyWebsite": "https://climateaction.tech/",
+    "logo": "logos/general/climateaction-tech.png",
+    "logoWidth": 256,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Sustainable Digital Infrastructure Alliance",
+    "companyWebsite": "https://sdialliance.org/",
+    "logo": "logos/general/sustainable-digital-infrastructure-alliance.png",
+    "logoWidth": 565,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Futurewei",
+    "companyWebsite": "https://www.futurewei.com/",
+    "logo": "logos/general/futurewei.png",
+    "logoWidth": 894,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "logo": "logos/general/green-software-foundation.png",
+    "logoWidth": 2400,
+    "logoHeight": 1260,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Electricity Maps",
+    "companyWebsite": "https://www.electricitymaps.com/",
+    "logo": "logos/general/electricity-maps.svg",
+    "logoWidth": 1000,
+    "logoHeight": 217,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Thoughtworks",
+    "companyWebsite": "https://www.thoughtworks.com/en-gb",
+    "logo": "logos/general/thoughtworks.svg",
+    "logoWidth": 218,
+    "logoHeight": 36,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Bloomberg",
+    "companyWebsite": "https://www.bloomberg.com/uk",
+    "logo": "logos/general/bloomberg.svg",
+    "logoWidth": null,
+    "logoHeight": null,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "The Explorers",
+    "companyWebsite": "https://theexplorers.com/",
+    "logo": "logos/general/the-explorers.png",
+    "logoWidth": 414,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Microsoft",
+    "companyWebsite": "microsoft.com",
+    "logo": "logos/general/microsoft.webp",
+    "logoWidth": null,
+    "logoHeight": null,
+    "logoFormat": "webp",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Leaders for Climate Action",
+    "companyWebsite": "https://lfca.earth/",
+    "logo": "logos/general/leaders-for-climate-action.png",
+    "logoWidth": 237,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Envite",
+    "companyWebsite": "https://envite.de/",
+    "logo": "logos/general/envite.svg",
+    "logoWidth": 124,
+    "logoHeight": 31,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Sentry",
+    "companyWebsite": "https://www.sentrysoftware.com/",
+    "logo": "logos/general/sentry.png",
+    "logoWidth": 902,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Interfima",
+    "companyWebsite": "https://www.interfima.org/",
+    "logo": "logos/general/interfima.png",
+    "logoWidth": 1308,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Energy Web",
+    "companyWebsite": "https://www.energyweb.org/",
+    "logo": "logos/general/energy-web.png",
+    "logoWidth": 690,
+    "logoHeight": 201,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Responsible AI",
+    "companyWebsite": "https://www.responsible.ai/",
+    "logo": "logos/general/responsible-ai.png",
+    "logoWidth": 793,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "German Informatics Society",
+    "companyWebsite": "https://gi.de/",
+    "logo": "logos/general/german-informatics-society.png",
+    "logoWidth": 935,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Globant",
+    "companyWebsite": "https://www.globant.com/",
+    "logo": "logos/general/globant.svg",
+    "logoWidth": 208,
+    "logoHeight": 41,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "HARC",
+    "companyWebsite": "https://harcresearch.org/",
+    "logo": "logos/general/harc.png",
+    "logoWidth": 420,
+    "logoHeight": 120,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Mastercard",
+    "companyWebsite": "https://www.mastercard.co.uk/en-gb.html",
+    "logo": "logos/general/mastercard.svg",
+    "logoWidth": 2,
+    "logoHeight": 1,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "IBM",
+    "companyWebsite": "https://www.ibm.com/uk-en",
+    "logo": "logos/general/ibm.gif",
+    "logoWidth": 684,
+    "logoHeight": 256,
+    "logoFormat": "gif",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Code from Finland",
+    "companyWebsite": "https://koodiasuomesta.fi/en/",
+    "logo": "logos/general/code-from-finland.png",
+    "logoWidth": 360,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "GitHub",
+    "companyWebsite": "github.com/home",
+    "logo": "logos/general/github.png",
+    "logoWidth": 944,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Digital Emissions",
+    "companyWebsite": "https://www.digitalemissions.org/",
+    "logo": "logos/general/digital-emissions.png",
+    "logoWidth": 791,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Nomura Research Institute, Ltd",
+    "companyWebsite": "https://www.nri.com/en",
+    "logo": "logos/general/nomura-research-institute-ltd.svg",
+    "logoWidth": 652,
+    "logoHeight": 652,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "WattTime",
+    "companyWebsite": "https://watttime.org/",
+    "logo": "logos/general/watttime.png",
+    "logoWidth": 660,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "The Green Web Foundation",
+    "companyWebsite": "https://www.thegreenwebfoundation.org/",
+    "logo": "logos/general/the-green-web-foundation.png",
+    "logoWidth": 1069,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Time for the Planet",
+    "companyWebsite": "https://team-planet.com/",
+    "logo": "logos/general/time-for-the-planet.png",
+    "logoWidth": 368,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "EDSP ECO",
+    "companyWebsite": "https://edsp.nl/",
+    "logo": "logos/general/edsp-eco.jpg",
+    "logoWidth": 256,
+    "logoHeight": 256,
+    "logoFormat": "jpg",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "DXC",
+    "companyWebsite": "https://dxc.com/uk/en",
+    "logo": "logos/general/dxc.png",
+    "logoWidth": 259,
+    "logoHeight": 172,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Virtasant",
+    "companyWebsite": "https://www.virtasant.com/",
+    "logo": "logos/general/virtasant.svg",
+    "logoWidth": 130,
+    "logoHeight": 28,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Boavizta",
+    "companyWebsite": "https://www.boavizta.org/",
+    "logo": "logos/general/boavizta.svg",
+    "logoWidth": 717,
+    "logoHeight": 1012,
+    "logoFormat": "svg",
+    "organisationType": "Non-Profit"
+  },
+  {
+    "companyName": "Shell",
+    "companyWebsite": "https://www.shell.com/",
+    "logo": "logos/general/shell.svg",
+    "logoWidth": 141,
+    "logoHeight": 141,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  }
+]

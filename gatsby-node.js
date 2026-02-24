@@ -1,69 +1,92 @@
 const path = require("path");
 
-const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
+const replacePath = (path) => (path === `/` ? path : path.replace(/\/$/, ``));
 
 exports.onCreatePage = ({ page, actions }) => {
-  const { createRedirect } = actions
-  if (!page.path.includes('.html') && page.path !== '/') {
-    createRedirect({ fromPath: `${page.path}`, toPath: replacePath(page.path), isPermanent: true })
+  const { createRedirect } = actions;
+  if (!page.path.includes(".html") && page.path !== "/") {
+    createRedirect({
+      fromPath: `${page.path}`,
+      toPath: replacePath(page.path),
+      isPermanent: true,
+    });
   }
-}
+};
 
-exports.createPages = async ({ graphql, actions, reporter, ...rest }) => {
+// Derive collection, lang, and slug fields from the filesystem path
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === "MarkdownRemark") {
+    const fileNode = getNode(node.parent);
+    const collection = fileNode.sourceInstanceName; // "articles", "manifesto", "pages"
+
+    createNodeField({ node, name: "collection", value: collection });
+
+    // Extract lang from directory path: e.g. "en/slug.md" -> "en"
+    const relativePath = fileNode.relativePath; // e.g. "en/what-is-green-software.md"
+    const parts = relativePath.split("/");
+    let lang = "en";
+    let slug = fileNode.name; // filename without extension
+
+    if (parts.length > 1) {
+      // Skip "images" directories
+      if (parts[0] !== "images") {
+        lang = parts[0];
+      }
+    }
+
+    createNodeField({ node, name: "lang", value: lang });
+    createNodeField({ node, name: "slug", value: slug });
+  }
+};
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-
-  const result = await graphql(
-    `
-      {
-        allDatoCmsArticle(sort: { fields: date, order: DESC }) {
-          edges {
-            node {
-              id
-              slug
-              isATranslatedArticle
-              originalArticle {
-                id
-              }
-            }
+  const result = await graphql(`
+    {
+      allMarkdownRemark {
+        nodes {
+          id
+          fields {
+            collection
+            lang
+            slug
           }
-        }
-
-        allDatoCmsManifesto {
-          edges {
-            node {
-              id
-              slug
-              language
-            }
-          }
-        }
-
-        allDatoCmsFlatPage {
-          edges {
-            node {
-              id
-              slug
-            }
+          frontmatter {
+            title
+            date
+            slug
           }
         }
       }
-    `
-  );
+    }
+  `);
+
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running allDatoCmsArticle query.`);
+    reporter.panicOnBuild(`Error while running markdown query.`);
     return;
   }
 
-  // Articles
-  const articles = result.data.allDatoCmsArticle.edges;
-  const originalArticles = result.data.allDatoCmsArticle.edges.filter(
-    (article) => !article.isATranslatedArticle
-  );
-  const articlesPerPage = 10;
-  const numPagesArticles = Math.ceil(originalArticles.length / articlesPerPage);
+  const allNodes = result.data.allMarkdownRemark.nodes;
 
-  // Create Article-list pages
+  // -----------------------------------------------------------------------
+  // Articles
+  // -----------------------------------------------------------------------
+  const articles = allNodes.filter((n) => n.fields.collection === "articles");
+  const enArticles = articles
+    .filter((n) => n.fields.lang === "en")
+    .sort((a, b) => {
+      const dateA = a.frontmatter.date || "";
+      const dateB = b.frontmatter.date || "";
+      return dateB.localeCompare(dateA);
+    });
+
+  // Paginated article list (English only)
+  const articlesPerPage = 10;
+  const numPagesArticles = Math.ceil(enArticles.length / articlesPerPage);
+
   Array.from({ length: numPagesArticles }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/articles` : `/articles/${i + 1}`,
@@ -77,97 +100,59 @@ exports.createPages = async ({ graphql, actions, reporter, ...rest }) => {
     });
   });
 
-  // Create Articles pages
-  articles.forEach(({ node: article }) => {
+  // Individual article pages
+  articles.forEach((article) => {
+    const { lang, slug } = article.fields;
+    const urlPath =
+      lang === "en" ? `/articles/${slug}` : `/${lang}/articles/${slug}`;
+
     createPage({
-      path: `/articles/${article.slug}`,
+      path: urlPath,
       component: path.resolve("./src/templates/article.js"),
       context: {
         id: article.id,
-        originalArticle: article.originalArticle
-          ? article.originalArticle?.id
-          : article.id,
+        slug: slug, // for finding translations (same slug, different lang)
+        lang: lang,
       },
     });
   });
 
+  // -----------------------------------------------------------------------
+  // Manifesto
+  // -----------------------------------------------------------------------
+  const manifestos = allNodes.filter(
+    (n) => n.fields.collection === "manifesto"
+  );
 
-  // allDatoCmsProject(sort: { fields: meta___createdAt, order: DESC }) {
-  //   edges {
-  //     node {
-  //       id
-  //       slug
-  //     }
-  //   }
-  // }
+  manifestos.forEach((m) => {
+    const { lang } = m.fields;
+    const urlPath = lang === "en" ? "/manifesto" : `/${lang}/manifesto`;
 
-  // allDatoCmsWorkingGroup(
-  //   sort: { fields: meta___createdAt, order: DESC }
-  // ) {
-  //   edges {
-  //     node {
-  //       id
-  //       slug
-  //     }
-  //   }
-  // }
-  // Projects
-  /*
-const projects = result.data.allDatoCmsProject.edges;
-const projectsPerPage = 9;
-const numPagesProjects = Math.ceil(projects.length / projectsPerPage);
-
-
-// Create Project-list pages
-Array.from({ length: numPagesProjects }).forEach((_, i) => {
-  createPage({
-    path: i === 0 ? `/projects` : `/projects/${i + 1}`,
-    component: path.resolve("./src/templates/projects-list.js"),
-    context: {
-      limit: projectsPerPage,
-      skip: i * projectsPerPage,
-      numPages: numPagesProjects,
-      currentPage: i + 1,
-    },
-  });
-});
-
-// Create Projects pages
-projects.forEach(({ node: project }) => {
-  createPage({
-    path: `/projects/${project.slug}`,
-    component: path.resolve("./src/templates/project.js"),
-    context: {
-      id: project.id,
-    },
-  });
-});
-*/
-
-  // Manifesto Translation pages
-  const manifestoPages = result.data.allDatoCmsManifesto.edges;
-
-  manifestoPages.forEach(({ node: manifestoPage }) => {
     createPage({
-      path: `/${manifestoPage.slug}`,
+      path: urlPath,
       component: path.resolve("./src/templates/manifesto.js"),
       context: {
-        id: manifestoPage.id,
+        id: m.id,
+        lang: lang,
       },
     });
   });
 
+  // -----------------------------------------------------------------------
   // Flat pages
-  const flatPages = result.data.allDatoCmsFlatPage.edges;
-  // Create Working groups pages
-  flatPages.forEach(({ node: flatPage }) => {
+  // -----------------------------------------------------------------------
+  const flatPages = allNodes.filter((n) => n.fields.collection === "pages");
+
+  flatPages.forEach((page) => {
+    // Use frontmatter slug if available (supports nested slugs like "policy/steering-membership")
+    const slug = page.frontmatter.slug || page.fields.slug;
+
     createPage({
-      path: `/${flatPage.slug}`,
+      path: `/${slug}`,
       component: path.resolve("./src/templates/flat-page.js"),
       context: {
-        id: flatPage.id,
+        id: page.id,
       },
     });
   });
-
 };

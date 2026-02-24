@@ -1,0 +1,56 @@
+[
+  {
+    "companyName": "Google",
+    "companyWebsite": "about.google",
+    "logo": "logos/steering/google.png",
+    "logoWidth": 785,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Cisco",
+    "companyWebsite": "https://www.cisco.com/",
+    "logo": "logos/steering/cisco.svg",
+    "logoWidth": 216,
+    "logoHeight": 114,
+    "logoFormat": "svg",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Siemens",
+    "companyWebsite": "siemens.com",
+    "logo": "logos/steering/siemens.png",
+    "logoWidth": 1595,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "NTT DATA",
+    "companyWebsite": "nttdata.com",
+    "logo": "logos/steering/ntt-data.png",
+    "logoWidth": 1747,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "UBS",
+    "companyWebsite": "ubs.com",
+    "logo": "logos/steering/ubs.png",
+    "logoWidth": 706,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  },
+  {
+    "companyName": "Accenture",
+    "companyWebsite": "www.accenture.com",
+    "logo": "logos/steering/accenture.png",
+    "logoWidth": 2560,
+    "logoHeight": 675,
+    "logoFormat": "png",
+    "organisationType": "For-Profit"
+  }
+]

@@ -1,42 +1,36 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import Paginator from "../components/paginator";
+import NetlifyImage from "../components/netlify-image";
 
 // Styles
 import "../styles/templates/articles-list.scss";
 
 const ArticleCard = ({ article }) => {
+  const fm = article.frontmatter;
   return (
-    <Link to={`/articles/${article.slug}`} className="article-card-wrapper">
+    <Link to={`/articles/${article.fields.slug}`} className="article-card-wrapper">
       <div className="image-wrapper">
-        <GatsbyImage
-          className="image"
-          image={getImage(article.mainImage)}
-          alt={article.title}
-        />
+        {fm.mainImage?.publicURL && (
+          <NetlifyImage
+            className="image"
+            src={fm.mainImage.publicURL}
+            width={750}
+            alt={fm.title}
+          />
+        )}
       </div>
       <div className="content-wrapper">
         <div>
-          <small>{article.date}</small>
-          <h2>{article.title}</h2>
-          <p>{article.summary}</p>
+          <small>{fm.date}</small>
+          <h2>{fm.title}</h2>
+          <p>{fm.summary}</p>
         </div>
-        {/* <div className="author-wrapper flex-align-center ">
-          <div className="photo-wrapper flex-center-center">
-            <GatsbyImage
-              className="photo"
-              image={getImage(article.authors[0].photo)}
-              alt={article.authors[0].fullName}
-            />
-          </div>
-          <span>{article.authors[0].fullName}</span>
-        </div> */}
       </div>
     </Link>
   );
@@ -44,7 +38,7 @@ const ArticleCard = ({ article }) => {
 
 const ArticlesPage = ({
   data: {
-    allDatoCmsArticle: { nodes: articles },
+    allMarkdownRemark: { nodes: articles },
   },
   pageContext: { currentPage, numPages },
 }) => {
@@ -57,7 +51,7 @@ const ArticlesPage = ({
       <PageTitle>articles </PageTitle>
       <div className="articles-wrapper">
         {articles.map((article) => (
-          <ArticleCard key={article.title} article={article} />
+          <ArticleCard key={article.frontmatter.title} article={article} />
         ))}
       </div>
       <Paginator
@@ -71,32 +65,23 @@ const ArticlesPage = ({
 
 export const query = graphql`
   query ArticlesPageQuery($skip: Int!, $limit: Int!) {
-    allDatoCmsArticle(
-      sort: { fields: date, order: DESC }
-      filter: { isATranslatedArticle: { ne: true } }
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: {
+        fields: { collection: { eq: "articles" }, lang: { eq: "en" } }
+      }
       limit: $limit
       skip: $skip
     ) {
       nodes {
-        title
-        summary
-        slug
-        authors {
-          fullName
-          photo {
-            gatsbyImageData(
-              
-              width: 45
-              imgixParams: { sat: -100, auto: "compress" }
-            )
-          }
+        frontmatter {
+          title
+          summary
+          date(formatString: "MMMM Do, YYYY")
+          mainImage { publicURL }
         }
-        date
-        mainImage {
-          gatsbyImageData(
-            
-            imgixParams: { w: "750", auto: "compress" }
-          )
+        fields {
+          slug
         }
       }
     }

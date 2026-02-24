@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 // Components
 import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
+import NetlifyImage from "../components/netlify-image";
 
 // Styles
 import "../styles/pages/press.scss";
@@ -16,7 +17,7 @@ const PressCard = ({ press }) => (
     className="card-wrapper"
   >
     <div className="logo-wrapper">
-      <img src={press.logo.url} alt={press.headline} />
+      {press.logo?.publicURL && <NetlifyImage src={press.logo.publicURL} width={300} alt={press.headline} />}
     </div>
     <p>{press.headline}</p>
   </a>
@@ -24,7 +25,7 @@ const PressCard = ({ press }) => (
 
 const PressPage = ({
   data: {
-    allDatoCmsPress: { nodes: data },
+    allPressJson: { nodes: data },
   },
 }) => {
   return (
@@ -41,13 +42,11 @@ const PressPage = ({
 
 export const query = graphql`
   query PressPageQuery {
-    allDatoCmsPress {
+    allPressJson {
       nodes {
         articleLink
         headline
-        logo {
-          url
-        }
+        logo { publicURL }
       }
     }
   }

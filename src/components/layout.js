@@ -22,7 +22,7 @@ const Layout = ({ children, pageName, seo, className }) => {
 
   return (
     <>
-      <Seo title={seo?.title} meta={seo?.meta} />
+      <Seo title={seo?.title} description={seo?.description} />
       <div ref={pageContentEl}>
         <Banner />
         <main className={`${pageName}`}>

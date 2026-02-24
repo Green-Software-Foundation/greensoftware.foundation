@@ -59,10 +59,9 @@ const NewsletterForm = ({
           </small>
         )}
         {mailchimpResult?.result === "error" && (
-          <small
-            className={`error-msg ${hasDarkBg ? "hasDarkBg" : ""}`}
-            dangerouslySetInnerHTML={{ __html: mailchimpResult.msg }}
-          />
+          <small className={`error-msg ${hasDarkBg ? "hasDarkBg" : ""}`}>
+            {mailchimpResult.msg.replace(/<[^>]*>/g, "")}
+          </small>
         )}
       </div>
       <Button
