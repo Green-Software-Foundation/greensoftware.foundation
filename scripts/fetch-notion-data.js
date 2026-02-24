@@ -6,7 +6,9 @@
  * Requires: NOTION_API_KEY environment variable
  */
 
-require("dotenv").config();
+try { require("dotenv").config(); } catch (_) {
+  // dotenv is optional — on Netlify, env vars come from the dashboard
+}
 
 const { Client } = require("@notionhq/client");
 const fs = require("fs");
