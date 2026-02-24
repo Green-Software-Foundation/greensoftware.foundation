@@ -1,9 +1,7 @@
 import * as React from "react";
 
-const isDev =
-  typeof window !== "undefined" &&
-  (window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1");
+// Use Netlify Image CDN only when built on Netlify (set in netlify.toml)
+const useImageCDN = process.env.GATSBY_NETLIFY === "true";
 
 const NetlifyImage = ({ src, width, height, alt, className, style, ...props }) => {
   if (!src) return null;
@@ -11,8 +9,8 @@ const NetlifyImage = ({ src, width, height, alt, className, style, ...props }) =
   const isExternal = src.startsWith("http://") || src.startsWith("https://");
 
   let imgSrc;
-  if (isExternal || isDev) {
-    // In development or for external URLs, use the source as-is
+  if (isExternal || !useImageCDN) {
+    // Local builds or external URLs — use the source as-is
     imgSrc = src;
   } else {
     // On Netlify, use the Image CDN for on-the-fly transforms

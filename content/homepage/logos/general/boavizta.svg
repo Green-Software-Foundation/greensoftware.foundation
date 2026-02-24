@@ -1,18 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 106 146" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,2.19787,6.15432)">
-        <path d="M9.305,127.955L9.22,5.263" style="fill:none;stroke:rgb(98,192,139);stroke-width:12.67px;"/>
-    </g>
-    <g transform="matrix(1,0,0,1,2.19787,6.15432)">
-        <path d="M43.936,82.906L62.968,99.654" style="fill:none;stroke:rgb(0,140,141);stroke-width:12.67px;"/>
-    </g>
-    <g transform="matrix(1,0,0,1,2.19787,6.15432)">
-        <path d="M43.377,53.238L61.324,37.396" style="fill:none;stroke:rgb(0,140,141);stroke-width:12.67px;"/>
-    </g>
-    <g transform="matrix(1,0,0,1,2.19787,6.15432)">
-        <path d="M27.375,26.434C42.795,8.576 63.479,7.142 91.265,7.547C93.126,51.888 81.417,60.742 68.187,66.716" style="fill:none;stroke:rgb(0,140,141);stroke-width:12.67px;"/>
-    </g>
-    <g transform="matrix(1,0,0,-1,2.19787,139.362)">
-        <path d="M27.375,26.434C42.795,8.576 63.479,7.142 91.265,7.547C93.126,51.888 81.417,60.742 68.187,66.716" style="fill:none;stroke:rgb(0,140,141);stroke-width:12.67px;"/>
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 717.2 1012.24">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: #008c8d;
+      }
+
+      .st0, .st1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 11.1;
+        stroke-width: 93.72px;
+      }
+
+      .st1 {
+        stroke: #62c08b;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M53.9,958.86l-.63-907.58"/>
+  <path class="st0" d="M310.08,625.62l140.78,123.89"/>
+  <path class="st0" d="M305.94,406.16l132.76-117.19"/>
+  <path class="st0" d="M187.57,207.88c114.07-132.1,267.07-142.71,472.61-139.71,13.77,328-72.85,393.5-170.71,437.69"/>
+  <path class="st0" d="M187.57,802.17c114.07,132.1,267.07,142.71,472.61,139.71,13.77-328-72.85-393.5-170.71-437.69"/>
 </svg>

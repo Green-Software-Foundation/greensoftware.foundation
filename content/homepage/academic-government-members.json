@@ -1,0 +1,173 @@
+[
+  {
+    "companyName": "GovTech Singapore",
+    "companyWebsite": "https://www.tech.gov.sg/",
+    "logo": "logos/general/govtech-singapore.png",
+    "logoWidth": 656,
+    "logoHeight": 380,
+    "logoFormat": "png",
+    "organisationType": "Government"
+  },
+  {
+    "companyName": "Infocomm Media Development Authority",
+    "companyWebsite": "https://www.imda.gov.sg/",
+    "logo": "logos/general/infocomm-media-development-authority.png",
+    "logoWidth": 995,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Government"
+  },
+  {
+    "companyName": "University of Amsterdam",
+    "companyWebsite": "https://www.uva.nl/en",
+    "logo": "logos/general/university-of-amsterdam.svg",
+    "logoWidth": 500,
+    "logoHeight": 500,
+    "logoFormat": "svg",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Università degli Studi dell'Aquila",
+    "companyWebsite": "https://www.univaq.it/",
+    "logo": "logos/general/universit-degli-studi-dell-aquila.png",
+    "logoWidth": 490,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Concordia University",
+    "companyWebsite": "https://www.concordia.ca/",
+    "logo": "logos/general/concordia-university.png",
+    "logoWidth": 1065,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Metropolitan Police",
+    "companyWebsite": "met.police.uk",
+    "logo": "logos/general/metropolitan-police.png",
+    "logoWidth": 997,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Government"
+  },
+  {
+    "companyName": "University of Edinburgh",
+    "companyWebsite": "https://www.ed.ac.uk/",
+    "logo": "logos/general/university-of-edinburgh.png",
+    "logoWidth": 255,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Universidad Politécnica de Madrid",
+    "companyWebsite": "https://www.upm.es/",
+    "logo": "logos/general/universidad-polit-cnica-de-madrid.png",
+    "logoWidth": 324,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Chalmers University of Technology",
+    "companyWebsite": "https://www.chalmers.se/en/",
+    "logo": "logos/general/chalmers-university-of-technology.jpg",
+    "logoWidth": 201,
+    "logoHeight": 256,
+    "logoFormat": "jpg",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "University of Limerick",
+    "companyWebsite": "https://www.ul.ie/",
+    "logo": "logos/general/university-of-limerick.svg",
+    "logoWidth": 1480,
+    "logoHeight": 676,
+    "logoFormat": "svg",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "University of Huddersfield",
+    "companyWebsite": "hud.ac.uk/",
+    "logo": "logos/general/university-of-huddersfield.png",
+    "logoWidth": 367,
+    "logoHeight": 137,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Manchester Metropolitan University",
+    "companyWebsite": "https://www.mmu.ac.uk/",
+    "logo": "logos/general/manchester-metropolitan-university.svg",
+    "logoWidth": 156,
+    "logoHeight": 60,
+    "logoFormat": "svg",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "UCL",
+    "companyWebsite": "https://www.ucl.ac.uk/",
+    "logo": "logos/general/ucl.png",
+    "logoWidth": 863,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Indian Institute of Management Mumbai",
+    "companyWebsite": "https://iimmumbai.ac.in/",
+    "logo": "logos/general/indian-institute-of-management-mumbai.png",
+    "logoWidth": 199,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Renewable Energy Laboratory (NREL)",
+    "companyWebsite": "https://www.nrel.gov/",
+    "logo": "logos/general/renewable-energy-laboratory-nrel.png",
+    "logoWidth": 825,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Linnaeus University",
+    "companyWebsite": "https://lnu.se/en",
+    "logo": "logos/general/linnaeus-university.png",
+    "logoWidth": 154,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "Texas State University",
+    "companyWebsite": "https://www.txst.edu/",
+    "logo": "logos/general/texas-state-university.svg",
+    "logoWidth": 83,
+    "logoHeight": 60,
+    "logoFormat": "svg",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "University of Salento",
+    "companyWebsite": "https://www.unisalento.it/",
+    "logo": "logos/general/university-of-salento.png",
+    "logoWidth": 802,
+    "logoHeight": 256,
+    "logoFormat": "png",
+    "organisationType": "Academia"
+  },
+  {
+    "companyName": "University of Bristol",
+    "companyWebsite": "https://www.bristol.ac.uk/",
+    "logo": "logos/general/university-of-bristol.svg",
+    "logoWidth": 112,
+    "logoHeight": 34,
+    "logoFormat": "svg",
+    "organisationType": "Academia"
+  }
+]

@@ -115,29 +115,29 @@ const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
   </section>
 );
 
-const LogoSection = ({ id, title, logos }) => (
-  <section id={id} className={`${id === "steering-members" ? "section4" : "section5"} container`}>
+const LogoSection = ({ id, title, logos, className }) => (
+  <section id={id} className={`${className || "section5"} container`}>
     <h2 className="green-uppercase-title">{title}</h2>
-    <div className="logos-wrapper ">
+    <div className="logos-wrapper">
       {logos.map((member) => {
         const logoUrl = member.logo?.publicURL;
         if (!logoUrl) return null;
+        const w = member.logoWidth || 0;
+        const h = member.logoHeight || 0;
+        const ratio = h > 0 ? w / h : 1;
+        const orientationClass = ratio > 2 ? "horizontal" : "vertical";
         return (
           <a
-            className={`logo ${
-              member.logoWidth && member.logoHeight && member.logoWidth / member.logoHeight > 2
-                ? "horizontal"
-                : "vertical"
-            } ${member.logoFormat === "svg" ? "isSVG" : ""}`}
+            className={`logo ${orientationClass}`}
             target="_blank"
             rel="noopener noreferrer"
             href={member.companyWebsite}
             key={member.companyName}
           >
-            <NetlifyImage
+            <img
               src={logoUrl}
-              width={210}
               alt={member.companyName}
+              loading="lazy"
             />
           </a>
         );
@@ -173,13 +173,16 @@ const Section6 = () => (
 );
 
 const IndexPage = ({
-  data: { allStatsJson, allSteeringMembersJson, allGeneralMembersJson },
+  data: { allStatsJson, allSteeringMembersJson, allGeneralMembersJson, allAcademicGovernmentMembersJson },
 }) => {
   const stats = allStatsJson.nodes[0] || {};
   const steeringMembers = [...allSteeringMembersJson.nodes].sort((a, b) =>
     a.companyName.localeCompare(b.companyName)
   );
   const generalMembers = [...allGeneralMembersJson.nodes].sort((a, b) =>
+    a.companyName.localeCompare(b.companyName)
+  );
+  const academicGovMembers = [...allAcademicGovernmentMembersJson.nodes].sort((a, b) =>
     a.companyName.localeCompare(b.companyName)
   );
 
@@ -193,13 +196,21 @@ const IndexPage = ({
       />
       <LogoSection
         id="steering-members"
+        className="section4"
         title="OUR STEERING MEMBERS"
         logos={steeringMembers}
       />
       <LogoSection
         id="general-members"
-        title="OUR General MEMBERS"
+        className="section5"
+        title="OUR GENERAL MEMBERS"
         logos={generalMembers}
+      />
+      <LogoSection
+        id="academic-government-members"
+        className="section5"
+        title="OUR ACADEMIC & GOVERNMENT MEMBERS"
+        logos={academicGovMembers}
       />
       <Section6 />
     </Layout>
@@ -218,20 +229,27 @@ export const query = graphql`
       nodes {
         companyName
         companyWebsite
-        logo { publicURL }
         logoWidth
         logoHeight
-        logoFormat
+        logo { publicURL }
       }
     }
     allGeneralMembersJson {
       nodes {
         companyName
         companyWebsite
-        logo { publicURL }
         logoWidth
         logoHeight
-        logoFormat
+        logo { publicURL }
+      }
+    }
+    allAcademicGovernmentMembersJson {
+      nodes {
+        companyName
+        companyWebsite
+        logoWidth
+        logoHeight
+        logo { publicURL }
       }
     }
   }

@@ -1,9 +1,10 @@
 [build]
-  command = "yarn build"
+  command = "yarn build:full"
   publish = "public"
 
 [build.environment]
   NODE_VERSION = "18.5.0"
+  GATSBY_NETLIFY = "true"
 
 # DatoCMS migration redirects — translated articles
 

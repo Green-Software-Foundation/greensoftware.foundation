@@ -1,8 +1,8 @@
 # Feature Spec: Notion Integration for Members & Team Data
 
-**Status:** Planned
+**Status:** In Progress
 **Created:** 2026-02-23
-**Last Updated:** 2026-02-23
+**Last Updated:** 2026-02-24
 
 ## Overview
 
@@ -113,16 +113,146 @@ Alternatively, if dedicated Notion views or databases exist per group, the scrip
 
 ### Notion Database Mapping
 
-**TBD** — exact database IDs and field names to be filled in once Notion access is available. The script will need:
+#### Databases & IDs
 
-| Data | Notion Source | Notes |
-|------|--------------|-------|
-| Steering members | TBD — database or view | Company name, website, logo file |
-| General members | TBD — database or view | Company name, website, logo file |
-| Stats | TBD — could be computed or manual | Individual count, organisation count |
-| Team members | TBD — database or view | Name, role, company, photo, social links, group tags |
+| Database | Database ID | Data Source ID | Purpose |
+|----------|-------------|----------------|---------|
+| [DB] Members | `9b19c603-f9fb-4504-82bb-a72d39b01d59` | `13c561d4-30ca-47ef-92cc-5f59fe803c80` | Member organisations (Steering & General) |
+| [DB] Subscriptions | `468492d9-ecda-4e6c-bbd2-28be92208de6` | `9ac54c12-ae9b-43ae-8a46-db440a485cb2` | People subscribed to PWCIs (links Volunteers ↔ PWCIs) |
+| [DB] PWCIs | `d97a1aa9-26e1-42aa-a9f3-bb13723c049f` | `68118401-8eba-471d-bfec-fc09b5f99257` | Projects, Working Groups, Committees, Initiatives |
+| [DB] Volunteers | `f8282697-eb6e-4406-bd37-db8d55de9109` | `5274eabc-3b79-4eef-a254-4ed92879d86d` | Individual people (names, emails, photos, org membership) |
+| [DB] GSF Team | — | `123456c0-7cab-806c-86a0-000b10bfc753` | GSF staff (roles, status) — *needs integration access* |
 
-Consider using simplified Notion views that pre-filter the right members, so the script doesn't need complex filtering logic.
+#### Relationship Model
+
+```
+Members (Orgs)                 Volunteers (People)              PWCIs (Groups)
+├─ Member Name (title)         ├─ Work Email (title)            ├─ Name (title)
+├─ Membership Level            ├─ First Name                    ├─ Type (Committee/WG/Project)
+│  (Steering / General)        ├─ Last Name                     ├─ Parent
+├─ Status (Active/Archived)    ├─ Photo (files)                 ├─ Internal Status
+├─ Logo (files)                ├─ LinkedIn (url)                ├─ Subscriptions ←→ (relation)
+├─ Website (url)               ├─ Job Title                     └─ slug
+├─ Description                 ├─ Volunteer Status
+├─ Organisation Type           ├─ Member ←→ (relation to Members)
+└─ Volunteers Emails ←→        ├─ Subscriptions ←→ (relation to Subscriptions)
+                               └─ Position on behalf of Member
+                                  (Primary Org Lead, Secondary Org Lead, etc.)
+
+Subscriptions (join table)
+├─ Subscription Name (title)
+├─ Role for Subscription
+│  (Subscriber / Organization Lead / WG Chair / Project Lead /
+│   Committee Chair / Committee Vice-Chair / Committee Member / Contributor)
+├─ Subscription Status (Active/Archived/New)
+├─ Volunteers ←→ (relation to Volunteers)
+└─ PWCIs ←→ (relation to PWCIs)
+```
+
+#### Query 1: Active Steering Member Organisations (Homepage logos)
+
+```
+Database: [DB] Members (data source: 13c561d4-30ca-47ef-92cc-5f59fe803c80)
+Filter: Status = "Active" AND Membership Level = "Steering"
+Fields: Member Name, Website, Logo (files)
+```
+
+→ Writes `content/homepage/steering-members.json`
+→ Expected: ~6 organisations (Accenture, Cisco, Google, NTT DATA, Siemens, UBS)
+
+#### Query 2: Active General Member Organisations (Homepage logos)
+
+```
+Database: [DB] Members (data source: 13c561d4-30ca-47ef-92cc-5f59fe803c80)
+Filter: Status = "Active" AND Membership Level = "General"
+Fields: Member Name, Website, Logo (files)
+```
+
+→ Writes `content/homepage/general-members.json`
+→ Expected: ~65 organisations
+
+#### Query 3: Steering Committee People (Team page)
+
+This is a two-step query:
+
+**Step 1:** Find the Steering Committee PWCI.
+```
+Database: [DB] PWCIs (data source: 68118401-8eba-471d-bfec-fc09b5f99257)
+Filter: Name = "Steering Committee" AND Internal Status = "Active"
+```
+→ Returns PWCI page ID `246b6b2b-3780-4a7c-8f7c-9560eab16396`
+→ This page has a `Subscriptions` relation containing subscription IDs
+
+**Step 2:** Get active subscriptions with committee roles.
+```
+Database: [DB] Subscriptions (data source: 9ac54c12-ae9b-43ae-8a46-db440a485cb2)
+Filter: PWCIs contains "246b6b2b-3780-4a7c-8f7c-9560eab16396"
+        AND Subscription Status = "Active"
+        AND Role for Subscription is one of:
+            "Committee Chair", "Committee Vice-Chair", "Committee Member"
+```
+→ Returns subscription IDs (exclude "Subscriber" role — those are GSF staff observers)
+
+**Step 3:** Resolve names from Volunteers.
+```
+Database: [DB] Volunteers (data source: 5274eabc-3b79-4eef-a254-4ed92879d86d)
+Filter: Subscriptions contains <subscription_id> (for each subscription from Step 2)
+Fields: First Name, Last Name, Photo, LinkedIn, Job Title, Member (relation → org name)
+```
+
+→ Expected: ~9 people (Committee Chair, Vice-Chair, and Members)
+
+#### Query 4: Organisation Leads (Team page)
+
+```
+Database: [DB] Volunteers (data source: 5274eabc-3b79-4eef-a254-4ed92879d86d)
+Filter: Volunteer Status = "Active"
+        AND Position on behalf of Member contains "Primary Org Lead"
+Fields: First Name, Last Name, Photo, LinkedIn, Job Title, Member (relation → org name)
+```
+
+→ Writes org leads into `content/team/team.json` with `groups: ["organisationalLeads"]`
+→ Expected: ~22 people (verified 2026-02-24 — old DatoCMS data had ~48, Notion has fewer as it's more current)
+
+#### Query 5: Administrative Team / GSF Staff (Team page)
+
+**Option A (if GSF Team DB is shared):**
+```
+Database: [DB] GSF Team (data source: 123456c0-7cab-806c-86a0-000b10bfc753)
+Filter: Status = "Active"
+Fields: Role (title), Person, Location, Area
+```
+
+**Option B (fallback — filter Volunteers by GSF membership):**
+```
+Database: [DB] Volunteers (data source: 5274eabc-3b79-4eef-a254-4ed92879d86d)
+Filter: Member contains <GSF member page ID> AND Volunteer Status = "Active"
+```
+→ GSF's Member page ID: `5ab9b05b-5f47-4641-8453-fef4debcca03`
+
+→ Writes admin team into `content/team/team.json` with `groups: ["administrativeTeam"]`
+→ Expected: ~9 people
+
+#### Query 6: Stats (Homepage counters)
+
+```
+Computed from query results:
+- numberOfOrganisations = count of active Members (Query 1 + Query 2)
+- numberOfIndividuals = count of active Volunteers (or a manual figure from a Notion property)
+```
+
+→ Writes `content/homepage/stats.json`
+
+#### Output File Mapping
+
+| Website Data | Current File | Notion Queries |
+|-------------|-------------|----------------|
+| Steering member logos | `content/homepage/steering-members.json` | Query 1 |
+| General member logos | `content/homepage/general-members.json` | Query 2 |
+| Homepage stats | `content/homepage/stats.json` | Query 6 |
+| Steering Committee people | `content/team/team.json` (groups: steeringCommittee) | Query 3 |
+| Organisation Leads | `content/team/team.json` (groups: organisationalLeads) | Query 4 |
+| Administrative Team | `content/team/team.json` (groups: administrativeTeam) | Query 5 |
 
 ### Pre-Build Script
 

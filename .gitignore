@@ -3,6 +3,7 @@ node_modules/
 public
 **/.DS_Store
 .env
+.mcp.json
 .playwright-mcp/
 # Local Netlify folder
 .netlify
