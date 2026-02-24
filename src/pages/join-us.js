@@ -157,7 +157,7 @@ const Section1 = () => (
         <Link to="/working-groups/opensource">Opensource</Link>,{" "}
         <Link to="/working-groups/policy">Policy</Link> and{" "}
         <Link to="/working-groups/community">Community</Link> Working Groups as
-        well as our <Link to="/projects">list of Projects</Link>.
+        well as our <a href="https://directory.greensoftware.foundation/projects/" target="_blank" rel="noopener noreferrer">list of Projects</a>.
       </p>
     </div>
   </section>

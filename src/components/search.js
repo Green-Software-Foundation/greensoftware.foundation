@@ -13,6 +13,7 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 // Components
 import Spinner from "./spinner";
+import NetlifyImage from "./netlify-image";
 
 // Assets
 import SearchIcon from "../assets/icons/search.inline.svg";
@@ -87,7 +88,7 @@ const ArticlesHit = ({ hit, ...props }) => {
   return (
     <div className="article-hit">
       <Link to={`/articles/${hit.slug}`}>
-        <img src={hit.image} alt={hit.title} />
+        <NetlifyImage src={hit.image} width={300} alt={hit.title} />
         <Highlight className="title" hit={hit} attribute="title" />
         <Highlight className="summary" hit={hit} attribute="summary" />
       </Link>
@@ -99,7 +100,7 @@ const ProjectsHit = ({ hit, ...props }) => {
   return (
     <div className="project-hit ">
       <Link to={`/projects/${hit.slug}`}>
-        <img src={hit.image} alt={hit.title} />
+        <NetlifyImage src={hit.image} width={300} alt={hit.title} />
         <div>
           <Highlight className="title" hit={hit} attribute="title" />
           <Highlight

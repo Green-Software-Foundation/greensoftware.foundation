@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import Layout from "../components/layout";
 import NewsletterForm from "../components/newsletter-form";
 import Button from "../components/button";
+import NetlifyImage from "../components/netlify-image";
 
 // Assets
 import Section2Illustration from "../assets/illustrations/homepage-section2.inline.svg";
@@ -114,28 +115,29 @@ const Section3 = ({ numberOfIndividuals, numberOfOrganisations }) => (
   </section>
 );
 
-const Section4 = ({ logos }) => (
-  <section id="steering-members" className="section4 container">
-    <h2 className="green-uppercase-title">OUR STEERING MEMBERS</h2>
+const LogoSection = ({ id, title, logos }) => (
+  <section id={id} className={`${id === "steering-members" ? "section4" : "section5"} container`}>
+    <h2 className="green-uppercase-title">{title}</h2>
     <div className="logos-wrapper ">
-      {logos.map(({ companyLogo, companyName, companyWebsite }) => {
-        if (!companyLogo) return null;
+      {logos.map((member) => {
+        const logoUrl = member.logo?.publicURL;
+        if (!logoUrl) return null;
         return (
           <a
             className={`logo ${
-              companyLogo.width / companyLogo.height > 2
+              member.logoWidth && member.logoHeight && member.logoWidth / member.logoHeight > 2
                 ? "horizontal"
                 : "vertical"
-            } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
+            } ${member.logoFormat === "svg" ? "isSVG" : ""}`}
             target="_blank"
             rel="noopener noreferrer"
-            href={companyWebsite}
-            key={companyName}
+            href={member.companyWebsite}
+            key={member.companyName}
           >
-            <img
-              src={companyLogo.url}
-              alt={companyName}
-              {...companyLogo.fluid}
+            <NetlifyImage
+              src={logoUrl}
+              width={210}
+              alt={member.companyName}
             />
           </a>
         );
@@ -144,35 +146,6 @@ const Section4 = ({ logos }) => (
   </section>
 );
 
-const Section5 = ({ logos }) => (
-  <section id="general-members" className="section5 container">
-    <h2 className="green-uppercase-title">OUR General MEMBERS</h2>
-    <div className="logos-wrapper ">
-      {logos.map(({ companyLogo, companyName, companyWebsite }) => {
-        if (!companyLogo) return null;
-        return (
-          <a
-            className={`logo  ${
-              companyLogo.width / companyLogo.height > 2
-                ? "horizontal"
-                : "vertical"
-            } ${companyLogo.format === "svg" ? "isSVG" : ""}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={companyWebsite}
-            key={companyName}
-          >
-            <img
-              src={companyLogo.url}
-              alt={companyName}
-              {...companyLogo.fluid}
-            />
-          </a>
-        );
-      })}
-    </div>
-  </section>
-);
 const Section6 = () => (
   <section className="section6 container">
     <div className="pattern"></div>
@@ -198,25 +171,36 @@ const Section6 = () => (
     </div>
   </section>
 );
-const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
-  // Sort by company name
-  const steeringMembers = homepageData.steeringMembers.sort((a, b) =>
+
+const IndexPage = ({
+  data: { allStatsJson, allSteeringMembersJson, allGeneralMembersJson },
+}) => {
+  const stats = allStatsJson.nodes[0] || {};
+  const steeringMembers = [...allSteeringMembersJson.nodes].sort((a, b) =>
     a.companyName.localeCompare(b.companyName)
   );
-  const generalMembers = homepageData.generalMembers.sort((a, b) =>
+  const generalMembers = [...allGeneralMembersJson.nodes].sort((a, b) =>
     a.companyName.localeCompare(b.companyName)
   );
+
   return (
     <Layout pageName="homepage" seo={{ title: "Green Software Foundation" }}>
       <Section1 />
       <Section2 />
       <Section3
-        numberOfIndividuals={homepageData.numberOfIndividuals}
-        numberOfOrganisations={homepageData.numberOfOrganisations}
+        numberOfIndividuals={stats.numberOfIndividuals}
+        numberOfOrganisations={stats.numberOfOrganisations}
       />
-
-      <Section4 logos={steeringMembers} />
-      <Section5 logos={generalMembers} />
+      <LogoSection
+        id="steering-members"
+        title="OUR STEERING MEMBERS"
+        logos={steeringMembers}
+      />
+      <LogoSection
+        id="general-members"
+        title="OUR General MEMBERS"
+        logos={generalMembers}
+      />
       <Section6 />
     </Layout>
   );
@@ -224,40 +208,33 @@ const IndexPage = ({ data: { datoCmsHomepage: homepageData } }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    datoCmsHomepage {
-      numberOfIndividuals
-      numberOfOrganisations
-      steeringMembers {
-        companyLogo {
-          url
-          height
-          width
-          fluid {
-            src
-            srcSet
-            sizes
-          }
-          format
-        }
-        companyName
-        companyWebsite
+    allStatsJson {
+      nodes {
+        numberOfIndividuals
+        numberOfOrganisations
       }
-      generalMembers {
-        companyLogo {
-          url
-          height
-          width
-          fluid {
-            src
-            srcSet
-            sizes
-          }
-          format
-        }
+    }
+    allSteeringMembersJson {
+      nodes {
         companyName
         companyWebsite
+        logo { publicURL }
+        logoWidth
+        logoHeight
+        logoFormat
+      }
+    }
+    allGeneralMembersJson {
+      nodes {
+        companyName
+        companyWebsite
+        logo { publicURL }
+        logoWidth
+        logoHeight
+        logoFormat
       }
     }
   }
 `;
+
 export default IndexPage;

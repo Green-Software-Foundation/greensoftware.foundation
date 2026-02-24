@@ -1,7 +1,5 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
-import { StructuredText } from "react-datocms";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
@@ -10,159 +8,82 @@ import Layout from "../components/layout";
 import PageTitle from "../components/page-title";
 import PersonBlob from "../components/person-blob";
 import NewsletterForm from "../components/newsletter-form";
+import NetlifyImage from "../components/netlify-image";
 
 // Styles
 import "../styles/templates/single-article.scss";
 
 // Utils
-import { getLocaleNativeName } from "../utils/language-locale";
+import { getNativeNameByCode } from "../utils/language-locale";
 
-const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
-  article.seoMetaTags.tags[3].attributes.content = article.teaserText;
-  article.seoMetaTags.tags[4].attributes.content = article.teaserText;
-  article.seoMetaTags.tags[5].attributes.content = article.teaserText;
+const SingleArticleTemplate = ({
+  data: { article, translations },
+  pageContext: { lang, slug },
+}) => {
+  const fm = article.frontmatter;
+  const isTranslation = lang !== "en";
+  const otherTranslations = translations.nodes.filter(
+    (t) => t.fields.lang !== lang
+  );
+
   return (
     <Layout
       className="container"
       pageName="single-article"
-      seo={{ meta: article.seoMetaTags }}
+      seo={{ title: fm.title, description: fm.teaserText }}
     >
-      <PageTitle>{article.title}</PageTitle>
+      <PageTitle>{fm.title}</PageTitle>
       <div className="content-wrapper">
-        {translatedArticles.nodes.length ? (
+        {otherTranslations.length > 0 && (
           <div>
             <p>Read this article in </p>
             <ul>
-              {article.isATranslatedArticle && (
-                <li>
-                  <Link to={`/articles/${article.originalArticle.slug}`}>
-                    English
-                  </Link>
-                </li>
-              )}
-              {translatedArticles.nodes.map((translatedArticle, i) =>
-                translatedArticle.id === article.id ? (
-                  <React.Fragment key={translatedArticle.id}></React.Fragment>
-                ) : (
-                  <li key={translatedArticle.id}>
-                    <Link to={`/articles/${translatedArticle.slug}`}>
-                      {getLocaleNativeName(translatedArticle.language)}
+              {otherTranslations.map((t) => {
+                const tLang = t.fields.lang;
+                const tSlug = t.fields.slug;
+                const tPath =
+                  tLang === "en"
+                    ? `/articles/${tSlug}`
+                    : `/${tLang}/articles/${tSlug}`;
+                return (
+                  <li key={tLang}>
+                    <Link to={tPath}>
+                      {getNativeNameByCode(tLang)}
                     </Link>
                   </li>
-                )
-              )}
+                );
+              })}
             </ul>
           </div>
-        ) : (
-          <></>
         )}
         <div className="teaser-text">
-          <small>Posted on {article.date}</small>
-          <p>{article.teaserText}</p>
+          <small>Posted on {fm.date}</small>
+          <p>{fm.teaserText}</p>
         </div>
-        <div className="main-image">
-          <Zoom>
-            <GatsbyImage
-              className="article-image"
-              image={getImage(article.mainImage)}
-              alt={article.title}
-            />
-          </Zoom>
-        </div>
+        {fm.mainImage?.publicURL && (
+          <div className="main-image">
+            <Zoom>
+              <NetlifyImage
+                className="article-image"
+                src={fm.mainImage.publicURL}
+                width={1920}
+                alt={fm.title}
+                style={{ width: "100%" }}
+              />
+            </Zoom>
+          </div>
+        )}
         <div className="content">
-          <StructuredText
-            data={article.content}
-            renderLinkToRecord={({ record, children, transformedMeta }) => {
-              switch (record.__typename) {
-                case "DatoCmsArticle":
-                  return (
-                    <Link {...transformedMeta} to={`/articles/${record.slug}`}>
-                      {children}
-                    </Link>
-                  );
-                case "DatoCmsProject":
-                  return (
-                    <Link {...transformedMeta} to={`/projects/${record.slug}`}>
-                      {children}
-                    </Link>
-                  );
-                case "DatoCmsWorkingGroup":
-                  return (
-                    <Link
-                      {...transformedMeta}
-                      to={`/working-groups/${record.slug}`}
-                    >
-                      {children}
-                    </Link>
-                  );
-                default:
-                  return null;
-              }
-            }}
-            renderBlock={({ record }) => {
-              if (record.__typename === "DatoCmsArticleContentImage") {
-                return (
-                  <div className="article-image-wrapper">
-                    <Zoom>
-                      <GatsbyImage
-                        className="article-image"
-                        image={getImage(record.image)}
-                        alt={record.image.alt}
-                      />
-                    </Zoom>
-                    {record.image.title && (
-                      <small>
-                        <em>{record.image.title}</em>
-                      </small>
-                    )}
-                  </div>
-                );
-              } else if (record.__typename === "DatoCmsArticleContentTable") {
-                return (
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: record.tableNode.childMarkdownRemark.html,
-                    }}
-                  />
-                );
-              } else if (record.__typename === "DatoCmsArticleYoutubeVideo") {
-                const youtubeUrl = record.videoUrl.url;
-                const videoId = youtubeUrl.split("v=")[1];
-                const ampersandPosition = videoId.indexOf("&");
-                if (ampersandPosition !== -1) {
-                  videoId = videoId.substring(0, ampersandPosition);
-                }
-
-                return (
-                  <div className="article-image-wrapper">
-                    <iframe
-                      width="100%"
-                      height="480"
-                      src={`https://www.youtube.com/embed/${videoId}`}
-                      title={record.videoUrl.title}
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen={true}
-                    ></iframe>
-                  </div>
-                );
-              }
-              return (
-                <>
-                  <p>Don't know how to render a block!</p>
-                  <pre>{JSON.stringify(record, null, 2)}</pre>
-                </>
-              );
-            }}
-          />
-          {article.originBlogName && article.publishedOriginUrl ? (
+          <div dangerouslySetInnerHTML={{ __html: article.html }} />
+          {fm.originBlogName && fm.publishedOriginUrl ? (
             <p>
               Originally published in the{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={article.publishedOriginUrl}
+                href={fm.publishedOriginUrl}
               >
-                {article.originBlogName}
+                {fm.originBlogName}
               </a>
             </p>
           ) : (
@@ -182,7 +103,7 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
           <div className="pattern"></div>
           <h2>Stay updated with our articles updates</h2>
           <NewsletterForm
-            position={article.title}
+            position={fm.title}
             placeholder="Sign up to our newsletter..."
             buttoncolor="gray-lightest-2"
             buttonEdgeColor="gray-dark"
@@ -192,20 +113,19 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
         </div>
         <hr />
         <div className="authors-wrapper">
-          {article.authors.map((author) => (
-            <PersonBlob key={author.id} person={author} />
+          {(fm.authors || []).map((author) => (
+            <PersonBlob key={author.fullName} person={author} />
           ))}
         </div>
-        {!!article.translators.length && (
+        {fm.translators && fm.translators.length > 0 && (
           <>
             <hr />
             <h2 className="green-uppercase-title">Translators / Editors</h2>
           </>
         )}
-
         <div className="authors-wrapper">
-          {article.translators.map((translator) => (
-            <PersonBlob key={translator.id} person={translator} />
+          {(fm.translators || []).map((translator) => (
+            <PersonBlob key={translator.fullName} person={translator} />
           ))}
         </div>
       </div>
@@ -214,111 +134,50 @@ const SingleArticleTemplate = ({ data: { article, translatedArticles } }) => {
 };
 
 export const query = graphql`
-  query SingleArticleTemplateQuery($id: String, $originalArticle: String) {
-    article: datoCmsArticle(id: { eq: $id }) {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      id
-      slug
-      title
-      teaserText
-      date(formatString: "MMMM Do, YYYY")
-      mainImage {
-        gatsbyImageData(imgixParams: { w: "1920", auto: "compress" })
-      }
-      content {
-        value
-        links {
-          __typename
-          ... on DatoCmsArticle {
-            id: originalId
-            slug
-          }
-          ... on DatoCmsProject {
-            id: originalId
-            slug
-          }
-          ... on DatoCmsWorkingGroup {
-            id: originalId
-            slug
+  query SingleArticleTemplateQuery($id: String!, $slug: String!) {
+    article: markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM Do, YYYY")
+        teaserText
+        mainImage { publicURL }
+        originBlogName
+        publishedOriginUrl
+        authors {
+          fullName
+          role
+          company
+          companyWebsite
+          photo { publicURL }
+          socialMedia {
+            platform
+            link
           }
         }
-        blocks {
-          __typename
-          ... on DatoCmsArticleContentImage {
-            id: originalId
-            image {
-              title
-              alt
-              gatsbyImageData(imgixParams: { w: "1920", auto: "compress" })
-            }
+        translators {
+          fullName
+          role
+          company
+          companyWebsite
+          photo { publicURL }
+          socialMedia {
+            platform
+            link
           }
-          ... on DatoCmsArticleContentTable {
-            id: originalId
-            tableNode {
-              childMarkdownRemark {
-                html
-              }
-            }
-          }
-          ... on DatoCmsArticleYoutubeVideo {
-            id: originalId
-            videoUrl {
-              url
-              title
-              thumbnailUrl
-            }
-          }
-        }
-      }
-      authors {
-        id
-        company: companyName
-        companyWebsite
-        fullName
-        role
-        photo {
-          gatsbyImageData(
-            imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
-          )
-        }
-        socialMediaLink {
-          link
-          platform
-        }
-      }
-      publishedOriginUrl
-      originBlogName
-      isATranslatedArticle
-      originalArticle {
-        id
-        slug
-      }
-      translators {
-        id
-        company: companyName
-        companyWebsite
-        fullName
-        role
-        photo {
-          gatsbyImageData(
-            imgixParams: { sat: -100, w: "130", auto: "compress", fm: "jpg" }
-          )
-        }
-        socialMediaLink {
-          link
-          platform
         }
       }
     }
-    translatedArticles: allDatoCmsArticle(
-      filter: { originalArticle: { id: { eq: $originalArticle } } }
+    translations: allMarkdownRemark(
+      filter: {
+        fields: { collection: { eq: "articles" }, slug: { eq: $slug } }
+      }
     ) {
       nodes {
-        id
-        language
-        slug
+        fields {
+          lang
+          slug
+        }
       }
     }
   }

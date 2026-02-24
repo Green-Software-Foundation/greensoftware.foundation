@@ -1,45 +1,30 @@
-const StructureToPlain = require("datocms-structured-text-to-plain-text");
-
 const pageQuery = `
   {
-    articles: allDatoCmsArticle {
+    articles: allMarkdownRemark(
+      filter: {
+        fields: {
+          collection: {eq: "articles"}
+          lang: {eq: "en"}
+        }
+      }
+    ) {
       edges {
         node {
           id
-          slug
-          title
-          teaserText
-          summary
-          date
-          mainImage {
-            url
+          fields {
+            slug
           }
-          content {
-            value
+          frontmatter {
+            title
+            teaserText
+            summary
+            date
+            mainImage { publicURL }
+            authors {
+              fullName
+            }
           }
-          authors {
-            fullName
-          }
-        }
-      }
-    }
-
-    members: allDatoCmsMember {
-      edges {
-        node {
-          fullName
-          chairProjects {
-            id
-          }
-          chairWorkingGroups {
-            id
-          }
-          memberProjects {
-            id
-          }
-          memberWorkingGroups {
-            id
-          }
+          excerpt(pruneLength: 5000)
         }
       }
     }
@@ -47,14 +32,18 @@ const pageQuery = `
 `;
 
 function articleToAlgoliaRecord({
-  node: { id, mainImage, content, authors, ...rest },
+  node: { id, frontmatter, fields, excerpt },
 }) {
   return {
     objectID: id,
-    image: mainImage.url,
-    content: StructureToPlain.render(content),
-    authors: authors.flatMap((author) => [author.fullName]),
-    ...rest,
+    slug: fields.slug,
+    image: frontmatter.mainImage?.publicURL,
+    content: excerpt,
+    authors: (frontmatter.authors || []).map((a) => a.fullName),
+    title: frontmatter.title,
+    teaserText: frontmatter.teaserText,
+    summary: frontmatter.summary,
+    date: frontmatter.date,
   };
 }
 

@@ -1,11 +1,107 @@
+[build]
+  command = "yarn build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "18.5.0"
+
+# DatoCMS migration redirects — translated articles
+
 [[redirects]]
-from = "/projects/*"
-to = "/projects"
-status = 200
-force = true
+from = "/articles/10-recommendations-for-green-software-development"
+to = "/en/articles/10-recommendations-for-green-software-development-japanese"
+status = 301
+
+[[redirects]]
+from = "/articles/gsf-global-summit-2022-tokyo"
+to = "/en/articles/gsf-global-summit-2022dong-jing-hui-chang-kai-cui"
+status = 301
+
+[[redirects]]
+from = "/articles/gsf-global-summit-2022dong-jing-hui-chang-kai-cui"
+to = "/ja/articles/gsf-global-summit-2022-tokyo"
+status = 301
+
+[[redirects]]
+from = "/articles/what-is-green-software-japanese"
+to = "/ja/articles/what-is-green-software"
+status = 301
+
+[[redirects]]
+from = "/articles/10-recommendations-for-green-software-development-japanese"
+to = "/ja/articles/10-recommendations-for-green-software-development"
+status = 301
+
+[[redirects]]
+from = "/articles/huan-ying-lai-dao-lu-se-ruan-jian-ji-jin-hui"
+to = "/zh/articles/welcome-to-the-green-software-foundation"
+status = 301
+
+[[redirects]]
+from = "/articles/software-carbon-intensity-a"
+to = "/ja/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity"
+status = 301
+
+[[redirects]]
+from = "/articles/what-is-green-software-mandarin"
+to = "/zh/articles/what-is-green-software"
+status = 301
+
+[[redirects]]
+from = "/articles/o-que-e-software-sustentavel"
+to = "/pt/articles/what-is-green-software"
+status = 301
+
+# DatoCMS migration redirects — translated manifestos
+
+[[redirects]]
+from = "/manifesto-italian"
+to = "/it/manifesto"
+status = 301
+
+[[redirects]]
+from = "/manifesto-mandarin"
+to = "/zh/manifesto"
+status = 301
+
+[[redirects]]
+from = "/manifest-german"
+to = "/de/manifesto"
+status = 301
+
+[[redirects]]
+from = "/manifiesto-de-la-green-software-foundation"
+to = "/es/manifesto"
+status = 301
+
+[[redirects]]
+from = "/manifesto-japanese"
+to = "/ja/manifesto"
+status = 301
+
+[[redirects]]
+from = "/manifesto-brazilian-portuguese"
+to = "/pt/manifesto"
+status = 301
+
+# Removed pages
+
+[[redirects]]
+from = "/subscribe"
+to = "/"
+status = 301
 
 [[redirects]]
 from = "/onboarding"
-to = "https://docs.google.com/forms/d/e/1FAIpQLScuyMZ1ZbG-qN_3f_4SqhdN2wgjAXZRBctxBSaOw1XU_O2JuA/viewform"
-status = 200
-force = true
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/projects"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/projects/*"
+to = "/"
+status = 301

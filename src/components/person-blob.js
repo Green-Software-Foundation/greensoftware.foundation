@@ -1,5 +1,5 @@
 import * as React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import NetlifyImage from "./netlify-image";
 
 // Assets
 import FacebookIcon from "../assets/icons/facebook.inline.svg";
@@ -41,19 +41,32 @@ function getIcon(type) {
   }
 }
 
-const ImageBlob = ({ photo, alt }) => (
-  <div className="image-blob-wrapper flex-center-center">
-    <div className="pattern"></div>
-    <div className="person-photo">
-      <GatsbyImage image={photo} alt={alt} className="photo-img" />
+const ImageBlob = ({ photo, alt }) => {
+  const photoUrl = typeof photo === "object" && photo !== null ? photo.publicURL : photo;
+  return (
+    <div className="image-blob-wrapper flex-center-center">
+      <div className="pattern"></div>
+      <div className="person-photo">
+        {photoUrl && (
+          <NetlifyImage
+            src={photoUrl}
+            width={130}
+            alt={alt}
+            className="photo-img"
+            style={{ filter: "grayscale(100%)", width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const PersonBlob = ({ person }) => {
+  const socialLinks = person.socialMediaLink || person.socialMedia || [];
+
   return (
     <div className="person-blob">
-      <ImageBlob photo={getImage(person.photo)} alt={person.fullName} />
+      <ImageBlob photo={person.photo} alt={person.fullName} />
       <div className="person-data-wrapper">
         <span className="fullname">{person.fullName}</span>
         {person.role && <span className="role">{person.role}</span>}
@@ -72,9 +85,9 @@ const PersonBlob = ({ person }) => {
             )}
           </div>
         )}
-        {person.socialMediaLink && (
+        {socialLinks.length > 0 && (
           <div className="socials">
-            {person.socialMediaLink.map((social) => (
+            {socialLinks.map((social) => (
               <a
                 key={social.link}
                 href={social.link}

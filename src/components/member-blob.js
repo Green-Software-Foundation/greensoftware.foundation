@@ -1,32 +1,36 @@
 import * as React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import NetlifyImage from "./netlify-image";
 
 // Styles
 import "../styles/components/member-blob.scss";
 
 const MemberBlob = ({ member }) => {
   const companyName = member.companyName ? `/ ${member.companyName}` : "";
+  const socialLinks = member.socialMediaLink || member.socialMedia || [];
+  const photoUrl = typeof member.photo === "object" && member.photo !== null ? member.photo.publicURL : member.photo;
   let socialLink = "";
-  if (member.socialMediaLink === "string") {
-    socialLink = member.socialMediaLink;
-  } else {
-    if (member.socialMediaLink.length) {
-      socialLink = member.socialMediaLink[0].link;
-    }
+  if (typeof socialLinks === "string") {
+    socialLink = socialLinks;
+  } else if (socialLinks.length) {
+    socialLink = socialLinks[0].link;
   }
+
   if (!socialLink) {
     return (
       <div
         data-tooltip={`${member.fullName} ${companyName}`}
-        href={socialLink}
         className="member-blob-wrapper flex-center-center"
       >
         <div className="person-photo">
-          <GatsbyImage
-            className="photo"
-            image={getImage(member.photo)}
-            alt={member.fullName}
-          />
+          {photoUrl && (
+            <NetlifyImage
+              className="photo"
+              src={photoUrl}
+              width={130}
+              alt={member.fullName}
+              style={{ filter: "grayscale(100%)" }}
+            />
+          )}
         </div>
       </div>
     );
@@ -40,11 +44,15 @@ const MemberBlob = ({ member }) => {
       className="member-blob-wrapper flex-center-center"
     >
       <div className="person-photo">
-        <GatsbyImage
-          className="photo"
-          image={getImage(member.photo)}
-          alt={member.fullName}
-        />
+        {photoUrl && (
+          <img
+            className="photo"
+            src={photoUrl}
+            alt={member.fullName}
+            loading="lazy"
+            style={{ filter: "grayscale(100%)" }}
+          />
+        )}
       </div>
     </a>
   );

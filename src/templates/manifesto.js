@@ -14,7 +14,7 @@ import VisionIcon from "../assets/icons/vision.inline.svg";
 import "../styles/pages/manifesto.scss";
 
 // Utils
-import { getLocaleNativeName } from "../utils/language-locale";
+import { getNativeNameByCode } from "../utils/language-locale";
 
 const MVItem = ({ icon, title, text }) => (
   <div className="mv-item">
@@ -25,43 +25,51 @@ const MVItem = ({ icon, title, text }) => (
 );
 
 const ManifestoPage = ({
-  data: {
-    datoCmsManifesto: data,
-    allDatoCmsManifesto: { nodes: allManifesto },
-  },
+  data: { manifesto, allManifestos },
+  pageContext: { lang },
 }) => {
-  const allOtherManifesto = allManifesto.filter(({ id }) => id !== data.id);
+  const fm = manifesto.frontmatter;
+  const otherManifestos = allManifestos.nodes.filter(
+    (m) => m.fields.lang !== lang
+  );
+
   return (
     <Layout
       className="container"
       pageName="manifesto"
-      seo={{ title: data.title }}
+      seo={{ title: fm.title }}
     >
-      <PageTitle>{data.title}</PageTitle>
-      {Boolean(allOtherManifesto.length) && (
+      <PageTitle>{fm.title}</PageTitle>
+      {otherManifestos.length > 0 && (
         <div>
           <p>You can also read the Manifesto in: </p>
           <ul>
-            {allOtherManifesto.map(({ language, slug }) => (
-              <li key={language}>
-                <Link to={`/${slug}`}>{getLocaleNativeName(language)}</Link>
-              </li>
-            ))}
+            {otherManifestos.map((m) => {
+              const mLang = m.fields.lang;
+              const mPath = mLang === "en" ? "/manifesto" : `/${mLang}/manifesto`;
+              return (
+                <li key={mLang}>
+                  <Link to={mPath}>{getNativeNameByCode(mLang)}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
       <hr />
       <div className="main-paragraph">
-        <p>{data.mainParagraph}</p>
+        <p>{fm.mainParagraph}</p>
       </div>
       <div className="mission-vision-wrapper">
-        <MVItem icon={<MissionIcon />} title="Mission" text={data.mission} />
-        <MVItem icon={<VisionIcon />} title="Vision" text={data.vision} />
+        <MVItem icon={<MissionIcon />} title="Mission" text={fm.mission} />
+        <MVItem icon={<VisionIcon />} title="Vision" text={fm.vision} />
       </div>
-      {data.manifestoTopic.map((topic) => (
-        <section key={topic.id} className="topic-wrapper ">
+      {(fm.topics || []).map((topic, i) => (
+        <section key={i} className="topic-wrapper ">
           <div className="illustration-wrapper">
-            <img src={topic.illustration.url} alt={topic.title} />
+            {topic.illustration && (
+              <img src={topic.illustration} alt={topic.title} />
+            )}
           </div>
           <div className="content-wrapper">
             <h3 className="green-uppercase-title">{topic.title}</h3>
@@ -69,20 +77,20 @@ const ManifestoPage = ({
             <h4>Operationalise: </h4>
             <div
               dangerouslySetInnerHTML={{
-                __html: topic.operationaliseNode.childMarkdownRemark.html,
+                __html: topic.operationalise || "",
               }}
             />
           </div>
         </section>
       ))}
-      {Boolean(data.editors.length) && (
+      {fm.editors && fm.editors.length > 0 && (
         <>
           <hr />
           <section className="editors-section">
             <p>Translated and checked by: </p>
             <div className="editors-wrapper">
-              {data.editors.map((editor) => (
-                <PersonBlob key={editor.id} person={editor} />
+              {fm.editors.map((editor) => (
+                <PersonBlob key={editor.fullName} person={editor} />
               ))}
             </div>
           </section>
@@ -93,49 +101,39 @@ const ManifestoPage = ({
 };
 
 export const query = graphql`
-  query ManifestoPageQuery($id: String) {
-    datoCmsManifesto(id: { eq: $id }) {
-      id
-      title
-      mainParagraph
-      vision
-      mission
-      editors {
-        id
-        fullName
-        role
-        company
-        companyWebsite
-        photo {
-          gatsbyImageData(
-            
-            imgixParams: { sat: -100, w: "130", fm: "jpg", auto: "compress" }
-          )
-        }
-        socialMediaLink {
-          link
-          platform
-        }
-      }
-      manifestoTopic {
-        id
+  query ManifestoPageQuery($id: String!) {
+    manifesto: markdownRemark(id: { eq: $id }) {
+      frontmatter {
         title
-        illustration {
-          url
+        mainParagraph
+        mission
+        vision
+        topics {
+          title
+          description
+          operationalise
+          illustration
         }
-        description
-        operationaliseNode {
-          childMarkdownRemark {
-            html
+        editors {
+          fullName
+          role
+          company
+          companyWebsite
+          photo { publicURL }
+          socialMedia {
+            platform
+            link
           }
         }
       }
     }
-    allDatoCmsManifesto {
+    allManifestos: allMarkdownRemark(
+      filter: { fields: { collection: { eq: "manifesto" } } }
+    ) {
       nodes {
-        id
-        slug
-        language
+        fields {
+          lang
+        }
       }
     }
   }

@@ -1,57 +1,46 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import { HelmetDatoCms } from "gatsby-source-datocms";
 
-function Seo({ description, meta, title }) {
-  const {
-    datoCmsSite: { globalSeo },
-  } = useStaticQuery(
+function Seo({ description, title }) {
+  const { site } = useStaticQuery(
     graphql`
       query {
-        datoCmsSite {
-          globalSeo {
-            twitterAccount
+        site {
+          siteMetadata {
+            title
+            description
             titleSuffix
-            siteName
-            fallbackSeo {
-              description
-              title
-              twitterCard
-              image {
-                url
-              }
-            }
+            twitterAccount
+            ogImage
+            siteUrl
           }
         }
       }
     `
   );
-  if (meta) {
-    return <HelmetDatoCms seo={meta} />;
-  }
+
+  const meta = site.siteMetadata;
 
   return (
     <Helmet
       htmlAttributes={{
         lang: "en",
       }}
-      title={title || globalSeo.siteName}
-      titleTemplate={
-        globalSeo.titleSuffix ? `%s ${globalSeo.titleSuffix}` : null
-      }
+      title={title || meta.title}
+      titleTemplate={meta.titleSuffix ? `%s${meta.titleSuffix}` : null}
       meta={[
         {
           name: `description`,
-          content: description || globalSeo.fallbackSeo.description,
+          content: description || meta.description,
         },
         {
           property: `og:title`,
-          content: title || globalSeo.fallbackSeo.title,
+          content: title || meta.title,
         },
         {
           property: `og:description`,
-          content: description || globalSeo.fallbackSeo.description,
+          content: description || meta.description,
         },
         {
           property: `og:type`,
@@ -59,27 +48,27 @@ function Seo({ description, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: globalSeo.fallbackSeo.twitterCard,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:site`,
-          content: globalSeo.twitterAccount || ``,
+          content: meta.twitterAccount || ``,
         },
         {
           name: `twitter:title`,
-          content: title || globalSeo.fallbackSeo.title,
+          content: title || meta.title,
         },
         {
           name: `twitter:description`,
-          content: description || globalSeo.fallbackSeo.description,
+          content: description || meta.description,
         },
         {
           name: `og:image`,
-          content: globalSeo.fallbackSeo.image.url,
+          content: meta.ogImage,
         },
         {
           name: `twitter:image`,
-          content: globalSeo.fallbackSeo.image.url,
+          content: meta.ogImage,
         },
       ]}
     />
