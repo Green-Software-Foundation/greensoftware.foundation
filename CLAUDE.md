@@ -6,14 +6,82 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Green Software Foundation website — a Gatsby 4 static site (React 18, JavaScript, SCSS) with content sourced from DatoCMS. Deployed on Netlify.
+Green Software Foundation website — currently a Gatsby 4 site (legacy) being rebuilt using Astro 5 with a parameterised component library. The new site lives in `.microsites/component-showcase/` and will replace the Gatsby site.
 
-## Prerequisites
+## Site Rebuild (Active Work)
+
+The main website is being rebuilt using a **parameterised component library** approach. See `docs/features/site-rebuild-componentisation.md` for the full feature spec.
+
+### Key Principle
+
+**Content is separate from components** — all content is passed as props or data files, never hardcoded in component files. Pages are composed by importing components and passing content as props.
+
+### Architecture
+
+- **Framework:** Astro 5 with React 19 islands, Tailwind CSS 4, Radix UI
+- **Component styling:** CVA (Class Variance Authority) for variants, Tailwind utility classes
+- **Design tokens:** CSS custom properties (`--primary: #006d69`, `--accent: #aecc53`, etc.)
+- **Font:** Nunito Sans (weights 400, 600, 800, 900)
+
+### Three-Tier Component Library
+
+1. **UI Primitives** (Tier 1) — Radix UI components in `src/components/ui/` (button, navigation-menu, sheet, etc.). Already exist, shared across microsites.
+2. **Layout Components** (Tier 2) — Navbar, Footer, Hero. Parameterised with props for content.
+3. **Content Section Components** (Tier 3) — TextWithImage, FeatureGrid, CardGrid, StatsGrid, CTABanner, TextBlock, LogoMarquee, Testimonial. All content via props.
+
+### Key Directories (New Site)
+
+- `.microsites/component-showcase/src/pages/` — Pages (homepage.astro is the main homepage demo)
+- `.microsites/component-showcase/src/components/` — Parameterised Astro components
+- `.microsites/component-showcase/src/components/react/` — React islands (navbar.tsx uses Radix NavigationMenu)
+- `.microsites/component-showcase/src/components/ui/` — UI primitives (button, navigation-menu, sheet)
+- `.microsites/component-showcase/src/data/` — Data files (logos.json with 60+ member logos)
+- `.microsites/component-showcase/src/assets/` — SVG assets imported as components
+- `.microsites/component-showcase/public/assets/` — Static assets (images, SVGs)
+
+### Parameterised Components
+
+| Component | File | Key Props |
+|-----------|------|-----------|
+| Navbar | `navbar.astro` + `react/navbar.tsx` | navItems, logoSrc, topBar ("project-by"\|"utility"\|"none"), ctaText |
+| Hero | `hero.astro` | heading, headingAccent, body, ctas[], imageSrc, bgClass |
+| LogoMarquee | `logo-marquee.astro` | heading, greyscale, bgClass (auto-loads logos.json) |
+| Testimonial | `testimonial.astro` | quote, author, title, company |
+| TextBlock | `text-block.astro` | heading, headingAccent, body, imageSrc, card |
+| TextWithImage | `text-with-image.astro` | badge, heading, headingAccent, stats[], body, ctaText, reversed |
+| FeatureGrid | `feature-grid.astro` | heading, headingAccent, features[], columns (2\|3\|4) |
+| CardGrid | `card-grid.astro` | heading, headingAccent, body, cards[] (featured support), columns |
+| StatsGrid | `stats-grid.astro` | heading, headingAccent, body, stats[], cards[] |
+| CTABanner | `cta-banner.astro` | heading, body, ctaText, ctaHref, note |
+| Footer | `footer.astro` | logoSrc, description, sections[] with links/socialLinks |
+
+### Homepage Composition
+
+The homepage (`homepage.astro`) composes all the above components with content passed as props. It's ~170 lines of component composition (no inline HTML). The navbar uses `topBar="none"` with the full GSF logo (`gsf-logo-full.svg`, 52px height).
+
+### Dev Server (Component Showcase)
+
+```bash
+cd .microsites/component-showcase
+npm run dev    # Dev server on localhost:4322
+```
+
+The catalogue page (`/`) shows components with default content. The homepage demo (`/homepage`) shows the new main site design.
+
+### Microsites
+
+Other microsites exist in `.microsites/` (sci, wdpc, soft). They share the same UI primitives and design tokens. The component showcase sources patterns from across all microsites — lean on the catalogue as the reference for component patterns.
+
+## Legacy Gatsby Site
+
+The legacy Gatsby site still exists at the root level (`src/`, `gatsby-config.js`, etc.) and is deployed on Netlify. It will be replaced once the new Astro site is ready.
+
+### Legacy Prerequisites
 
 - **Node 18.5.0** (`.nvmrc` provided — run `nvm use`)
 - **Yarn 1.x**
 
-## Commands
+### Legacy Commands
 
 ```bash
 yarn develop    # Local dev server (localhost:8000)
@@ -22,60 +90,9 @@ yarn serve      # Serve production build locally
 yarn clean      # Clear Gatsby cache and public/
 ```
 
-No test suite or linter is configured.
-
-## Environment Variables
+### Legacy Environment Variables
 
 Copy `.env.example` and populate with Algolia keys:
 - `GATSBY_ALGOLIA_APP_ID`
 - `GATSBY_ALGOLIA_SEARCH_KEY`
 - `ALGOLIA_ADMIN_KEY`
-
-The DatoCMS API token is hardcoded in `gatsby-config.js`.
-
-## Architecture
-
-### Content Flow
-
-DatoCMS → Gatsby GraphQL layer → React page/template components → Static HTML
-
-### Key Directories
-
-- `src/pages/` — Static pages (file-system routing)
-- `src/templates/` — Dynamic pages created by `gatsby-node.js` (articles, manifestos, flat pages)
-- `src/components/` — Reusable React components (layout, navbar, footer, search, SEO)
-- `src/styles/` — SCSS organised by component, page, and template
-- `src/assets/icons/` — SVG icons (`.inline.svg` suffix for inline imports)
-- `src/assets/lottie/` — Lottie animation JSON files with responsive variants (mobile, tablet, desktop, large-screen)
-- `src/utils/` — Algolia query definitions, country list, locale helpers
-
-### Dynamic Page Generation (gatsby-node.js)
-
-`gatsby-node.js` queries DatoCMS and creates pages for:
-- **Articles** — paginated list (10/page) at `/articles/` + individual pages at `/{slug}`
-- **Manifestos** — multi-language pages at `/manifesto/{slug}`
-- **Flat pages** — generic content at `/{slug}`
-
-Translated articles are linked via `isATranslatedArticle` and `originalArticle` fields.
-
-### Integrations
-
-| Service | Purpose | Plugin/Config |
-|---------|---------|---------------|
-| DatoCMS | Headless CMS | `gatsby-source-datocms` |
-| Algolia | Site search | `gatsby-plugin-algolia` — queries defined in `src/utils/algolia-queries.js` |
-| Mailchimp | Newsletter | `gatsby-plugin-mailchimp` |
-| Google Tag Manager | Analytics | `gatsby-plugin-google-gtag` (GTM-WTDZZJF) |
-| Netlify | Hosting/deploys | `netlify.toml` for redirects |
-
-### Layout Pattern
-
-All pages wrap content in `<Layout>`, which provides the navbar, footer, search modal, and optional banner. Pages pass `pageName`, `seo`, and `className` props to Layout.
-
-### SEO Pattern
-
-DatoCMS provides `seoMetaTags` via GraphQL. Templates destructure these and pass them to `<Seo>` (which uses React Helmet) inside `<Layout>`.
-
-### Styling
-
-SCSS modules scoped per component/page/template. Global styles and typography in `src/styles/common.css`. Font: Nunito Sans (weights 400, 600, 800, 900 via @fontsource).
