@@ -1,0 +1,78 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface ResourceCard {
+  /** Card icon image path */
+  icon?: string;
+  /** Card title */
+  title: string;
+  /** Card description */
+  description: string;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA button link */
+  ctaHref?: string;
+}
+
+interface Props {
+  /** Heading text. Wrap words in *asterisks* for accent colour */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Array of resource cards */
+  cards?: ResourceCard[];
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body,
+  cards = [],
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+
+// Split heading into plain and accent segments
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+---
+
+<section class={`py-12 md:py-16 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+        {headingParts.map(part =>
+          part.accent
+            ? <span class="font-bold text-primary">{part.text}</span>
+            : part.text
+        )}
+      </h2>
+      {body && (
+        <p class="mt-4 text-lg max-w-3xl mx-auto">{body}</p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      {cards.map((card) => (
+        <div class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow">
+          {card.icon && (
+            <div class="mb-4">
+              <img src={card.icon} alt="" class="h-12 w-12" />
+            </div>
+          )}
+          <h3 class="text-xl font-bold mb-2">{card.title}</h3>
+          <p class="text-gray-darker mb-6 flex-grow">{card.description}</p>
+          {card.ctaText && (
+            <a href={card.ctaHref || "#"} class="w-full">
+              <Button variant="primary" className="w-full">{card.ctaText}</Button>
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+---
+import StandardizedIcon from "@/assets/standardized-icon.svg";
+import RealTimeIcon from "@/assets/realtime-icon.svg";
+import GridStabilityIcon from "@/assets/grid-icon.svg";
+import RenewableEnergyIcon from "@/assets/renewable-icon.svg";
+import { cn } from "@/lib/utils";
+
+const whatWDPCFeatures = [
+  {
+    icon: StandardizedIcon,
+    title: "Standardized Data Formats",
+    description:
+      "By establishing standardized temporal data formats and interfaces, WDPC creates a common language that enables compute workloads, data centers, and power grids to communicate effectively.",
+  },
+  {
+    icon: RealTimeIcon,
+    title: "Real-time Coordination",
+    description:
+      "This common language allows them to coordinate in real-time without relying on prescriptive control systems. Think of WDPC as the universal translator for the energy ecosystem.",
+  },
+  {
+    icon: GridStabilityIcon,
+    title: "Grid Stability Support",
+    description:
+      "It enables every component—from individual processors to municipal power grids—to share their needs, capabilities, and constraints in a format everyone understands, supporting a stable and responsive grid.",
+  },
+  {
+    icon: RenewableEnergyIcon,
+    title: "Renewable Energy Optimization",
+    description:
+      'This approach transforms isolated "energy islands" into an intelligent, connected network capable of handling demanding computational tasks while optimizing renewable energy use and overall grid stability.',
+  },
+];
+---
+
+<section class="py-12 md:py-16 lg:py-20">
+  <div class="container">
+    <div
+      class="rounded-2xl bg-accent-lighter/50 p-8 md:gap-x-12 md:px-16 md:py-12 lg:px-20 lg:py-16"
+    >
+      <!-- What is WDPC? -->
+      <div class="mx-auto max-w-5xl text-center">
+        <h1 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          What is
+          <span class="font-bold text-primary">WDPC</span>
+          ?
+        </h1>
+        <p class="mt-3 text-xl md:mt-4">
+          The Workload Dynamic Power and Cooling <span class="font-bold">(WDPC)</span> framework represents
+          a fundamental shift in how computational workloads and energy infrastructure communicate.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="mt-8 md:mt-10 lg:mt-12">
+        <div class="relative grid grid-cols-1 md:grid-cols-2">
+          {
+            whatWDPCFeatures.map((feature, index) => (
+              <div
+                class={cn(
+                  "relative z-10 px-2 py-4 md:p-10",
+                  "border-primary-lighter",
+                  index % 2 === 1 && "md:border-l md:pl-[10%]",
+                  index >= 2 && "md:border-t"
+                )}
+              >
+                <div class="flex flex-col items-start space-x-4">
+                  <div class="flex flex-shrink-0 items-center justify-center">
+                    <feature.icon />
+                  </div>
+                  <div class="mt-3 flex-1 md:mt-4">
+                    <h3 class="mb-2 text-xl font-semibold text-primary">{feature.title}</h3>
+                    <p>{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

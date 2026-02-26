@@ -1,0 +1,57 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface Props {
+  /** Main heading text */
+  heading?: string;
+  /** Body text */
+  body?: string;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA button link */
+  ctaHref?: string;
+  /** Illustration image source (shown on the left) */
+  imageSrc?: string;
+  /** Image alt text */
+  imageAlt?: string;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body = "",
+  ctaText = "",
+  ctaHref = "#",
+  imageSrc = "/assets/ready.svg",
+  imageAlt = "",
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+---
+
+<section class={`py-12 md:py-18 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <div
+      class="grid grid-cols-1 items-center justify-center gap-x-20 gap-y-12 rounded-2xl bg-accent-lighter p-8 md:gap-y-16 md:p-12 lg:grid-cols-2 lg:justify-end lg:px-20"
+    >
+      {imageSrc && (
+        <div class="hidden lg:flex lg:justify-center">
+          <img src={imageSrc} alt={imageAlt} class="object-cover" />
+        </div>
+      )}
+      <div>
+        <h2 class="mb-3 text-2xl font-bold md:mb-4 md:text-3xl lg:text-4xl">{heading}</h2>
+        {body && (
+          <p class="text-sm lg:text-xl">{body}</p>
+        )}
+        {ctaText && (
+          <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
+            <a href={ctaHref}>
+              <Button>{ctaText}</Button>
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

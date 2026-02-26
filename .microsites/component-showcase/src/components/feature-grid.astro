@@ -1,0 +1,126 @@
+---
+interface Feature {
+  icon?: string;
+  title: string;
+  description: string;
+  linkText?: string;
+  linkHref?: string;
+}
+
+interface Props {
+  /** Heading text. Wrap words in *asterisks* for accent colour */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Array of feature items */
+  features?: Feature[];
+  /** Number of columns (2, 3, or 4) */
+  columns?: 2 | 3 | 4;
+  /** Display variant: "cards" (default) or "bordered" (centred card with bordered grid) */
+  variant?: "cards" | "bordered";
+  /** Background class */
+  bgClass?: string;
+}
+
+const cardColumnClasses: Record<number, string> = {
+  2: "sm:grid-cols-2",
+  3: "sm:grid-cols-2 lg:grid-cols-3",
+  4: "sm:grid-cols-2 lg:grid-cols-4",
+};
+
+const borderedColumnClasses: Record<number, string> = {
+  2: "md:grid-cols-2",
+  3: "md:grid-cols-2 lg:grid-cols-3",
+  4: "md:grid-cols-2",
+};
+
+const {
+  heading = "",
+  body,
+  features = [],
+  columns = 3,
+  variant = "cards",
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+
+// Split heading into plain and accent segments
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container">
+    {variant === "bordered" && (
+      <div class="rounded-2xl bg-accent-lighter/50 p-8 md:px-16 md:py-12 lg:px-20 lg:py-16">
+        <div class="mx-auto max-w-5xl text-center">
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+            {headingParts.map(part =>
+              part.accent
+                ? <span class="font-bold text-primary">{part.text}</span>
+                : part.text
+            )}
+          </h2>
+          {body && (
+            <p class="mt-4 text-lg md:text-xl">{body}</p>
+          )}
+        </div>
+        <div class={`mt-8 grid grid-cols-1 md:mt-10 lg:mt-12 ${borderedColumnClasses[columns]}`}>
+          {features.map((feature, index) => (
+            <div class:list={[
+              "relative px-2 py-6 md:p-10",
+              "border-primary-lighter",
+              index % columns !== 0 && "md:border-l",
+              index >= columns && "md:border-t",
+            ]}>
+              <div class="flex flex-col items-start">
+                {feature.icon && (
+                  <img src={feature.icon} alt="" class="mb-3 h-12 w-12 md:mb-4" />
+                )}
+                <h3 class="text-xl font-semibold text-primary">{feature.title}</h3>
+                <p class="mt-2">{feature.description}</p>
+                {feature.linkText && (
+                  <a href={feature.linkHref || "#"} class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline">
+                    {feature.linkText}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {variant === "cards" && (
+      <>
+        <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">
+          {headingParts.map(part =>
+            part.accent
+              ? <span class="text-primary">{part.text}</span>
+              : part.text
+          )}
+        </h2>
+        {body && (
+          <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark">{body}</p>
+        )}
+        <div class={`mt-12 grid gap-6 ${cardColumnClasses[columns]}`}>
+          {features.map((feature) => (
+            <div class="rounded-lg border bg-white p-5 shadow-sm">
+              {feature.icon && <img src={feature.icon} alt="" class="mb-4 h-10 w-10" />}
+              <h3 class="text-lg font-bold">{feature.title}</h3>
+              <p class="mt-2 text-sm text-gray-darker">{feature.description}</p>
+              {feature.linkText && (
+                <a href={feature.linkHref || "#"} class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline">
+                  {feature.linkText}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </>
+    )}
+  </div>
+</section>

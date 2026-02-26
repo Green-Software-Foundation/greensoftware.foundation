@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" fill="none">
+  <rect width="1200" height="500" fill="transparent"/>
+  <!-- Simplified world map outline -->
+  <g opacity="0.15" stroke="#aecc53" stroke-width="1.5" fill="none">
+    <!-- North America -->
+    <path d="M150,120 Q180,80 250,90 Q300,70 340,100 Q360,120 350,160 Q330,200 280,220 Q240,240 200,230 Q160,220 140,180 Q130,150 150,120Z"/>
+    <!-- South America -->
+    <path d="M260,260 Q290,250 310,280 Q320,320 310,370 Q290,410 270,420 Q250,400 240,360 Q230,310 260,260Z"/>
+    <!-- Europe -->
+    <path d="M500,100 Q530,80 570,90 Q600,100 610,130 Q600,150 570,160 Q540,155 520,140 Q500,120 500,100Z"/>
+    <!-- Africa -->
+    <path d="M520,180 Q560,170 590,200 Q610,250 600,310 Q580,360 550,380 Q520,370 500,330 Q490,280 500,230 Q510,200 520,180Z"/>
+    <!-- Asia -->
+    <path d="M620,80 Q700,60 780,80 Q850,100 900,130 Q920,170 890,200 Q840,220 780,210 Q720,200 680,170 Q640,140 620,110 Q610,90 620,80Z"/>
+    <!-- Australia -->
+    <path d="M880,320 Q920,300 960,310 Q990,330 980,360 Q960,380 920,380 Q890,370 880,350 Q875,335 880,320Z"/>
+  </g>
+  <!-- Meetup location dots -->
+  <g fill="#aecc53">
+    <!-- North America -->
+    <circle cx="200" cy="150" r="4" opacity="0.9"/><circle cx="250" cy="140" r="4" opacity="0.9"/>
+    <circle cx="300" cy="130" r="3" opacity="0.7"/><circle cx="180" cy="170" r="3" opacity="0.7"/>
+    <circle cx="270" cy="180" r="3" opacity="0.7"/><circle cx="230" cy="120" r="3" opacity="0.7"/>
+    <!-- South America -->
+    <circle cx="280" cy="300" r="4" opacity="0.9"/><circle cx="290" cy="340" r="3" opacity="0.7"/>
+    <circle cx="270" cy="280" r="3" opacity="0.7"/>
+    <!-- Europe -->
+    <circle cx="530" cy="120" r="4" opacity="0.9"/><circle cx="560" cy="110" r="4" opacity="0.9"/>
+    <circle cx="580" cy="130" r="4" opacity="0.9"/><circle cx="550" cy="140" r="3" opacity="0.7"/>
+    <circle cx="510" cy="130" r="3" opacity="0.7"/><circle cx="570" cy="100" r="3" opacity="0.7"/>
+    <circle cx="540" cy="105" r="3" opacity="0.7"/><circle cx="590" cy="120" r="3" opacity="0.7"/>
+    <!-- Africa -->
+    <circle cx="550" cy="250" r="3" opacity="0.7"/><circle cx="570" cy="280" r="3" opacity="0.7"/>
+    <!-- Asia -->
+    <circle cx="700" cy="130" r="4" opacity="0.9"/><circle cx="780" cy="140" r="4" opacity="0.9"/>
+    <circle cx="850" cy="160" r="4" opacity="0.9"/><circle cx="750" cy="120" r="3" opacity="0.7"/>
+    <circle cx="820" cy="180" r="3" opacity="0.7"/><circle cx="680" cy="160" r="3" opacity="0.7"/>
+    <circle cx="900" cy="170" r="3" opacity="0.7"/>
+    <!-- Australia -->
+    <circle cx="930" cy="340" r="4" opacity="0.9"/><circle cx="950" cy="350" r="3" opacity="0.7"/>
+  </g>
+  <!-- Subtle glow on dots -->
+  <g fill="#aecc53" opacity="0.2">
+    <circle cx="200" cy="150" r="10"/><circle cx="530" cy="120" r="10"/>
+    <circle cx="560" cy="110" r="10"/><circle cx="700" cy="130" r="10"/>
+    <circle cx="850" cy="160" r="10"/><circle cx="930" cy="340" r="10"/>
+    <circle cx="280" cy="300" r="10"/>
+  </g>
+</svg>

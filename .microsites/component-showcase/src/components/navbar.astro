@@ -1,0 +1,117 @@
+---
+import { Button } from "@/components/ui/button";
+import NavigationComponent from "@/components/react/navbar";
+import type { NavItem } from "@/components/react/navbar";
+
+import DefaultLogo from "@/assets/sci-logo.svg";
+import GithubIcon from "@/assets/github-icon-navbar.svg";
+import GSFLogo from "@/assets/gsf-logo.svg";
+
+interface TopBarLink {
+  href: string;
+  label: string;
+  icon?: string;
+}
+
+interface Props {
+  /** Navigation items for the main menu */
+  navItems?: NavItem[];
+  /** Logo image source (URL string). If not provided, uses default SVG component */
+  logoSrc?: string;
+  /** Logo alt text */
+  logoAlt?: string;
+  /** Link target for the logo */
+  logoHref?: string;
+  /** Top bar variant: "project-by" shows "Project By GSF", "utility" shows custom links, "none" hides the top bar */
+  topBar?: "project-by" | "utility" | "none";
+  /** Custom top bar links (used when topBar="utility") */
+  topBarLinks?: TopBarLink[];
+  /** CTA button text. If not provided, shows GitHub icon button */
+  ctaText?: string;
+  /** CTA button href */
+  ctaHref?: string;
+  /** GitHub repo URL for the GitHub icon button */
+  githubUrl?: string;
+}
+
+const {
+  navItems,
+  logoSrc,
+  logoAlt = "Green Software Foundation",
+  logoHref = "#",
+  topBar = "project-by",
+  topBarLinks = [],
+  ctaText,
+  ctaHref = "#",
+  githubUrl = "https://github.com/Green-Software-Foundation/",
+} = Astro.props;
+---
+
+<header class="container pt-5">
+  {topBar !== "none" && (
+    <div class="border-b border-primary-lighter pb-3">
+      <div class="flex items-center justify-center gap-3 text-xs md:justify-end">
+        {topBar === "project-by" ? (
+          <>
+            <span>Project By</span>
+            <a
+              href="https://greensoftware.foundation"
+              class="block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GSFLogo class="h-4 w-auto" />
+            </a>
+          </>
+        ) : (
+          topBarLinks.map((link) => (
+            link.icon ? (
+              <a
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                class="hover:text-primary transition-colors"
+              >
+                <img src={link.icon} alt={link.label} class="h-4 w-4 inline-block" />
+              </a>
+            ) : (
+              <a
+                href={link.href}
+                class="hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          ))
+        )}
+      </div>
+    </div>
+  )}
+  <div class="flex items-center justify-between py-4">
+    <a href={logoHref} class="block shrink-0">
+      {logoSrc ? (
+        <img src={logoSrc} class="h-[52px] w-auto" alt={logoAlt} />
+      ) : (
+        <DefaultLogo class="h-16 w-auto" />
+      )}
+    </a>
+    <div class="flex items-center gap-1">
+      <NavigationComponent client:load items={navItems} />
+      {ctaText ? (
+        <a href={ctaHref}>
+          <Button variant="primary">{ctaText}</Button>
+        </a>
+      ) : (
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="p-2">
+            <GithubIcon />
+          </Button>
+        </a>
+      )}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,102 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface Stat {
+  /** Large number/value */
+  value: string;
+  /** Description label */
+  label: string;
+  /** Optional icon path */
+  icon?: string;
+}
+
+interface Props {
+  /** Heading text. Wrap words in *asterisks* for accent colour */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Full-width image shown between heading and stats (e.g. world map) */
+  imageSrc?: string;
+  /** Image alt text */
+  imageAlt?: string;
+  /** Array of stat items */
+  stats?: Stat[];
+  /** Number of columns */
+  columns?: 2 | 3 | 4 | 5;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA button link */
+  ctaHref?: string;
+  /** Background class */
+  bgClass?: string;
+}
+
+const columnClasses: Record<number, string> = {
+  2: "sm:grid-cols-2",
+  3: "sm:grid-cols-2 lg:grid-cols-3",
+  4: "sm:grid-cols-2 lg:grid-cols-4",
+  5: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5",
+};
+
+const {
+  heading = "",
+  body = "",
+  imageSrc,
+  imageAlt = "",
+  stats = [],
+  columns = 5,
+  ctaText,
+  ctaHref = "#",
+  bgClass = "bg-primary-darker",
+} = Astro.props;
+
+// Split heading into plain and accent segments
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl text-white">
+        {headingParts.map(part =>
+          part.accent
+            ? <span class="text-accent">{part.text}</span>
+            : part.text
+        )}
+      </h2>
+      {body && (
+        <p class="mx-auto mt-4 max-w-3xl text-base text-white/70">{body}</p>
+      )}
+    </div>
+    {imageSrc && (
+      <div class="mt-10">
+        <img src={imageSrc} alt={imageAlt} class="w-full" />
+      </div>
+    )}
+    {stats.length > 0 && (
+      <div class={`mt-12 grid gap-6 ${columnClasses[columns]}`}>
+        {stats.map((stat) => (
+          <div class="rounded-lg bg-white/10 p-6 text-center">
+            {stat.icon && (
+              <img src={stat.icon} alt="" class="mx-auto mb-3 h-8 w-8 opacity-70" />
+            )}
+            <p class="text-3xl font-extrabold text-accent">{stat.value}</p>
+            <p class="mt-2 text-sm text-white/80">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    )}
+    {ctaText && (
+      <div class="mt-10 flex justify-center">
+        <a href={ctaHref}>
+          <Button variant="primary-invert">{ctaText}</Button>
+        </a>
+      </div>
+    )}
+  </div>
+</section>

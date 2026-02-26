@@ -1,0 +1,68 @@
+---
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface InfoCard {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  /** Section heading (plain text) */
+  heading?: string;
+  /** Accent portion of heading */
+  headingAccent?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Array of stat items */
+  stats?: Stat[];
+  /** Array of info cards */
+  cards?: InfoCard[];
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "The Numbers Behind Our",
+  headingAccent = "Impact",
+  body = "",
+  stats = [],
+  cards = [],
+  bgClass = "bg-accent-lighter/30",
+} = Astro.props;
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container grid gap-10 md:grid-cols-2 md:gap-16">
+    <div>
+      <h2 class="text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl">
+        {heading} {headingAccent && <span class="text-primary">{headingAccent}</span>}
+      </h2>
+      {body && (
+        <p class="mt-4 text-base leading-relaxed text-primary-dark">{body}</p>
+      )}
+      {stats.length > 0 && (
+        <div class="mt-8 grid grid-cols-2 gap-6">
+          {stats.map((stat) => (
+            <div>
+              <p class="text-3xl font-extrabold text-primary">{stat.value}</p>
+              <p class="mt-1 text-sm text-gray-darker">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+    {cards.length > 0 && (
+      <div class="flex flex-col gap-5">
+        {cards.map((card) => (
+          <div class="rounded-lg border bg-white p-5 shadow-sm">
+            <h3 class="text-base font-bold">{card.title}</h3>
+            <p class="mt-2 text-sm text-gray-darker">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

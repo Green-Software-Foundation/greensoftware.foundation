@@ -1,0 +1,98 @@
+---
+import clsx from "clsx";
+import TimelineTrack from "@/components/react/timeline-track";
+import CheckIcon from "@/assets/check-icon.svg";
+
+const timelineItems = [
+  {
+    date: "June 2021",
+    description: `Vision Launched`,
+    icon: CheckIcon,
+    start: "2021-06-01",
+    end: "2021-06-30",
+  },
+  {
+    date: "March 2022",
+    description: `v1.0 Published`,
+    icon: CheckIcon,
+    start: "2022-03-01",
+    end: "2022-03-31",
+  },
+  {
+    date: "April 2024",
+    description: `ISO Accreditation Achieved`,
+    icon: CheckIcon,
+    start: "2024-04-01",
+    end: "2024-04-30",
+  },
+  {
+    date: "October 2024",
+    description: `v1.1 Released`,
+    icon: CheckIcon,
+    start: "2024-10-01",
+    end: "2024-10-31",
+  },
+  {
+    date: "Q1 2025",
+    description: `Dedicated SCI Course Launch`,
+    icon: CheckIcon,
+    start: "2025-01-01",
+    end: "2025-03-31",
+  },
+  {
+    date: "2025",
+    description: `Current`,
+    start: "2025-04-01",
+    end: "2025-12-31",
+  },
+];
+---
+
+<section class="bg-white py-12 md:py-18 lg:py-20">
+  <div class="container">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
+        Journey to Transformation
+      </h2>
+      <p class="mt-3 text-center text-lg md:mt-4 md:text-xl">
+        Current focus: The specification is actively developing, and experts, operators, and
+        sustainability practitioners are invited to refine and validate it.
+      </p>
+    </div>
+    <div class="relative mt-12 md:mt-18 lg:mt-20">
+      <TimelineTrack
+        client:load
+        count={timelineItems.length}
+        activeIndex={4}
+      />
+      <ol class="grid grid-cols-1 gap-6 md:grid-cols-7 md:gap-4 lg:gap-6">
+        {
+          timelineItems.map((item, index) => (
+            <li class="relative flex flex-col items-center gap-3 text-center md:gap-4">
+              <div class="relative">
+                {item.description === "Current" && (
+                  <span class="absolute -inset-2 inline-block animate-ping rounded-full bg-primary/40" />
+                )}
+                <div
+                  data-timeline-dot
+                  class={clsx(
+                    "relative z-10 flex size-8 items-center justify-center rounded-full bg-accent-lighter text-white",
+                    {
+                      "bg-primary": index <= 4,
+                    }
+                  )}
+                >
+                  {item.icon && <item.icon />}
+                </div>
+              </div>
+              <div>
+                <h3 class="mb-2 text-xl font-bold text-primary">{item.date}</h3>
+                <p set:html={item.description} class="text-sm" />
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>

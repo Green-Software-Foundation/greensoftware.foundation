@@ -1,0 +1,117 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9EWSQ2TH"
+    ></script>
+    <script>
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        // @ts-ignore
+        dataLayer.push(arguments);
+      }
+      // @ts-ignore
+      gtag("js", new Date());
+      // @ts-ignore
+      gtag("config", "G-GZ9EWSQ2TH");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      Software Carbon Intensity (SCI) Standard | Green Software Foundation
+    </title>
+    <meta
+      name="title"
+      content="Software Carbon Intensity (SCI) Standard | Green Software Foundation"
+    />
+    <meta
+      name="description"
+      content="The global standard for calculating and reducing the carbon emissions of your software. The Software Carbon Intensity (SCI) specification is an ISO-accredited methodology (ISO/IEC 21031:2024)."
+    />
+    <meta
+      name="keywords"
+      content="SCI, Software Carbon Intensity, ISO/IEC 21031:2024, carbon emissions, software sustainability, Green Software Foundation, carbon footprint, green software, measure carbon, carbon score"
+    />
+    <meta name="author" content="Green Software Foundation" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sci.greensoftware.foundation/" />
+    <meta
+      property="og:title"
+      content="Software Carbon Intensity (SCI) Standard"
+    />
+    <meta
+      property="og:description"
+      content="The global standard for calculating and reducing the carbon emissions of your software. ISO-accredited methodology to measure impact as a score."
+    />
+    <meta
+      property="og:image"
+      content="https://sci.greensoftware.foundation/assets/og-image.png"
+    />
+    <meta property="og:site_name" content="SCI - Green Software Foundation" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://sci.greensoftware.foundation/"
+    />
+    <meta
+      property="twitter:title"
+      content="Software Carbon Intensity (SCI) Standard"
+    />
+    <meta
+      property="twitter:description"
+      content="The global standard for calculating and reducing the carbon emissions of your software. ISO-accredited methodology to measure impact as a score."
+    />
+    <meta
+      property="twitter:image"
+      content="https://sci.greensoftware.foundation/assets/og-image.png"
+    />
+    <meta property="twitter:site" content="@gsfcommunity" />
+    <meta property="twitter:creator" content="@gsfcommunity" />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#22c55e" />
+    <link rel="canonical" href="https://sci.greensoftware.foundation/" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Green Software Foundation - SCI Project",
+        "url": "https://sci.greensoftware.foundation/",
+        "logo": "https://sci.greensoftware.foundation/assets/sci-logo.svg",
+        "description": "The Software Carbon Intensity (SCI) specification is an ISO-accredited standard (ISO/IEC 21031:2024) for measuring the carbon emissions of software applications.",
+        "sameAs": [
+          "https://github.com/Green-Software-Foundation/sci",
+          "https://greensoftware.foundation/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "help@greensoftware.foundation",
+          "contactType": "general inquiry"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

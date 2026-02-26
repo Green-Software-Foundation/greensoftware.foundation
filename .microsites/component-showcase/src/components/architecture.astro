@@ -1,0 +1,43 @@
+---
+import { ArchitectureTabs } from "@/components/react/architecture-tabs";
+
+const tabs = [
+  {
+    value: "workloads",
+    heading: "Workloads",
+    description:
+      "WDPC introduces a central data bus where components publish and consume information in real-time, enabling workload schedulers to react directly to grid carbon intensity without centralized control.",
+    image: {
+      src: "/assets/tabs-workloads.svg",
+    },
+  },
+  {
+    value: "power-grid",
+    heading: "Power Grid",
+    description:
+      "Power grid operators can provide real-time signals about energy availability, carbon intensity, and pricing, enabling intelligent resource allocation across the entire infrastructure.",
+    image: {
+      src: "/assets/tabs-powergrid.svg",
+    },
+  },
+  {
+    value: "data-centers",
+    heading: "Data Centers",
+    description:
+      "Data centers can provide real-time signals about energy availability, carbon intensity, and pricing, enabling intelligent resource allocation across the entire infrastructure.",
+    image: {
+      src: "/assets/tabs-datacenters.svg",
+    },
+  },
+];
+---
+
+<section id="architecture-vision">
+  <div class="container">
+    <ArchitectureTabs
+      client:load
+      heading="A New Architecture for Energy Intelligence"
+      tabs={tabs}
+    />
+  </div>
+</section>

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "Nunito Sans", sans-serif;
+
+  --color-primary-darkest-2: var(--primary-darkest-2);
+  --color-primary-darkest: var(--primary-darkest);
+  --color-primary-darker: var(--primary-darker);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-primary-lightest-2: var(--primary-lightest-2);
+  --color-primary-lightest-1: var(--primary-lightest-1);
+
+  --color-accent-darker: var(--accent-darker);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-lighter: var(--accent-lighter);
+  --color-accent-lightest-2: var(--accent-lightest-2);
+  --color-accent-lightest-1: var(--accent-lightest-1);
+
+  --color-gray-darker: var(--gray-darker);
+  --color-gray-dark: var(--gray-dark);
+  --color-gray: var(--gray);
+  --color-gray-light: var(--gray-light);
+  --color-gray-lighter: var(--gray-lighter);
+  --color-gray-lightest-2: var(--gray-lightest-2);
+  --color-gray-lightest-1: var(--gray-lightest-1);
+
+  --color-greige: var(--greige);
+
+  --color-black: var(--black);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --animate-ping: ping 1.5s cubic-bezier(0, 0, 0.8, 1) infinite;
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  --animate-marquee: marquee var(--marquee-duration, 60s) linear infinite;
+  --animate-tabs: tabs 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  @keyframes tabs { 0% { opacity: 0; } 100% { opacity: 1; } }
+}
+
+:root {
+  --primary-darkest-2: #002625;
+  --primary-darkest: #002c2a;
+  --primary-darker: #003734;
+  --primary-dark: #00524f;
+  --primary: #006d69;
+  --primary-light: #80b6b4;
+  --primary-lighter: #bfdbd9;
+  --primary-lightest-2: #e5f0f0;
+  --primary-lightest-1: #f2f8f7;
+
+  --accent-darker: #576629;
+  --accent-dark: #83993e;
+  --accent: #aecc53;
+  --accent-light: #d7e6a9;
+  --accent-lighter: #ebf2d4;
+  --accent-lightest-2: #f7faee;
+  --accent-lightest-1: #fbfcf6;
+
+  --gray-darker: #606060;
+  --gray-dark: #b2b2b2;
+  --gray: #ededed;
+  --gray-light: #f6f6f6;
+  --gray-lighter: #fbfbfb;
+  --gray-lightest-2: #fdfdfd;
+  --gray-lightest-1: #fefefe;
+
+  --greige: #d5d7da;
+
+  --black: #3c3c3c;
+
+  --border: #e5e5e5;
+  --input: #ededed;
+  --ring: #0a0a0a;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-accent-lightest-2 text-primary-darker font-sans;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility container {
+  @apply max-w-screen-2xl px-[5%] mx-auto w-full;
+}

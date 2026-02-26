@@ -1,0 +1,52 @@
+---
+import { TabbedSection as TabbedSectionReact } from "@/components/react/tabbed-section";
+import type { Tab } from "@/components/react/tabbed-section";
+
+interface Props {
+  /** Small label above the heading (e.g. "EDUCATION") */
+  badge?: string;
+  /** Main heading text */
+  heading?: string;
+  /** Array of tab items with value, heading, and description */
+  tabs?: Tab[];
+  /** Image shown on the right side */
+  imageSrc?: string;
+  /** Image alt text */
+  imageAlt?: string;
+  /** CTA link text */
+  ctaText?: string;
+  /** CTA link href */
+  ctaHref?: string;
+  /** Reduce vertical padding */
+  compact?: boolean;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  badge,
+  heading,
+  tabs = [],
+  imageSrc,
+  imageAlt = "",
+  ctaText,
+  ctaHref = "#",
+  compact = false,
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+---
+
+<section class={`${compact ? "py-6 md:py-8 lg:py-10" : "py-12 md:py-16 lg:py-20"} ${bgClass}`}>
+  <div class="container">
+    <TabbedSectionReact
+      client:load
+      badge={badge}
+      heading={heading}
+      tabs={tabs}
+      imageSrc={imageSrc}
+      imageAlt={imageAlt}
+      ctaText={ctaText}
+      ctaHref={ctaHref}
+    />
+  </div>
+</section>

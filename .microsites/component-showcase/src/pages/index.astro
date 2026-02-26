@@ -1,0 +1,441 @@
+---
+import Layout from "@/layouts/showcase.astro";
+
+// Layout components
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+
+// Content section components (from SCI)
+import Hero from "@/components/hero.astro";
+import Logo from "@/components/logo.astro";
+import WhatSCI from "@/components/what-sci.astro";
+import WhatWDPC from "@/components/what-wdpc.astro";
+import WhatSOFT from "@/components/what-soft.astro";
+import WhySCI from "@/components/why-sci.astro";
+import HowItWorks from "@/components/how-it-works.astro";
+import SuccessStories from "@/components/success-stories.astro";
+import Testimonial from "@/components/testimonial.astro";
+import Research from "@/components/research.astro";
+import AudienceBenefits from "@/components/audience-benefits.astro";
+import Resources from "@/components/resources.astro";
+import Timeline from "@/components/timeline.astro";
+import Team from "@/components/team.astro";
+import AboutGSF from "@/components/about-gsf.astro";
+
+// Additional components (from WDPC/SOFT)
+import CTABanner from "@/components/cta.astro";
+import AudienceCards from "@/components/audience-cards.astro";
+import Features from "@/components/features.astro";
+import MissionCard from "@/components/mission-card.astro";
+import ReadyToImplement from "@/components/ready-to-implement.astro";
+import GetInvolved from "@/components/get-involved.astro";
+---
+
+<Layout>
+  <!-- TABLE OF CONTENTS -->
+  <nav class="sticky top-0 z-[100] bg-primary-darkest-2 text-white py-4 shadow-lg">
+    <div class="container">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="font-bold text-lg whitespace-nowrap">GSF Component Catalogue</span>
+        <span class="text-accent">|</span>
+        <div class="flex gap-3 flex-wrap text-sm">
+          <a href="#navbar" class="hover:text-accent transition-colors">Navbar</a>
+          <a href="#hero" class="hover:text-accent transition-colors">Hero</a>
+          <a href="#logo-marquee" class="hover:text-accent transition-colors">LogoMarquee</a>
+          <a href="#text-block" class="hover:text-accent transition-colors">TextBlock</a>
+          <a href="#text-with-image" class="hover:text-accent transition-colors">TextWithImage</a>
+          <a href="#benefits-list" class="hover:text-accent transition-colors">BenefitsList</a>
+          <a href="#equation-block" class="hover:text-accent transition-colors">EquationBlock</a>
+          <a href="#feature-grid" class="hover:text-accent transition-colors">FeatureGrid</a>
+          <a href="#success-stories" class="hover:text-accent transition-colors">SuccessStories</a>
+          <a href="#testimonial" class="hover:text-accent transition-colors">Testimonial</a>
+          <a href="#stats-grid" class="hover:text-accent transition-colors">StatsGrid</a>
+          <a href="#audience-tabs" class="hover:text-accent transition-colors">AudienceTabs</a>
+          <a href="#audience-cards" class="hover:text-accent transition-colors">AudienceCards</a>
+          <a href="#resource-cards" class="hover:text-accent transition-colors">ResourceCards</a>
+          <a href="#mission-card" class="hover:text-accent transition-colors">MissionCard</a>
+          <a href="#get-started-cta" class="hover:text-accent transition-colors">GetStartedCTA</a>
+          <a href="#get-involved" class="hover:text-accent transition-colors">GetInvolved</a>
+          <a href="#timeline" class="hover:text-accent transition-colors">Timeline</a>
+          <a href="#team-section" class="hover:text-accent transition-colors">TeamSection</a>
+          <a href="#about-gsf" class="hover:text-accent transition-colors">AboutGSF</a>
+          <a href="#cta-banner" class="hover:text-accent transition-colors">CTABanner</a>
+          <a href="#footer" class="hover:text-accent transition-colors">Footer</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INTRO -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="container max-w-4xl text-center">
+      <h1 class="text-4xl font-bold text-primary-darker md:text-5xl mb-4">
+        GSF Component Catalogue
+      </h1>
+      <p class="text-lg text-primary-dark mb-6">
+        Every reusable component from the GSF microsites (SCI, WDPC, SOFT), displayed with live examples.
+        Use the component names as labels when specifying page layouts for the new main website.
+      </p>
+      <p class="text-sm text-gray-darker">
+        Scroll down to browse each component, or use the navigation bar above to jump to a specific one.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 1. NAVBAR -->
+  <!-- ============================================================ -->
+  <div id="navbar" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">1. Navbar</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/navbar.astro</code> + <code>src/components/react/navbar.tsx</code>
+      </p>
+      <p class="mt-2">Fixed navigation bar. Top row: "Project By [GSF Logo]". Bottom row: project logo, nav links, GitHub button. Mobile: hamburger menu opens a Sheet drawer. Used on every page of every microsite.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT (all pages)</p>
+    </div>
+  </div>
+  <Navbar />
+
+  <!-- ============================================================ -->
+  <!-- 2. HERO -->
+  <!-- ============================================================ -->
+  <div id="hero" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">2. Hero</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/hero.astro</code>
+      </p>
+      <p class="mt-2">Full-width hero with cream background. Left: H1 headline, subtitle, body text, 1-2 CTA buttons. Right: SVG illustration with optional Lottie animation. Below: steering member logos.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT (top of every microsite)</p>
+      <p class="mt-1 text-sm"><strong>Variants:</strong> Content and illustration change per site. Layout structure is identical.</p>
+    </div>
+  </div>
+  <Hero />
+
+  <!-- ============================================================ -->
+  <!-- 3. LOGO MARQUEE -->
+  <!-- ============================================================ -->
+  <div id="logo-marquee" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">3. LogoMarquee</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/logo.astro</code>
+      </p>
+      <p class="mt-2">Two rows of member logos scrolling horizontally in opposite directions (infinite marquee animation). Logos fetched from Notion at build time. Steering members shown prominently first.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT</p>
+      <p class="mt-1 text-sm"><strong>Data source:</strong> Notion API via <code>src/lib/fetch-logos.mjs</code></p>
+    </div>
+  </div>
+  <Logo />
+
+  <!-- ============================================================ -->
+  <!-- 4. TEXT BLOCK (What Is...) -->
+  <!-- ============================================================ -->
+  <div id="text-block" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">4. TextBlock</h2>
+      <p class="mt-2">Three layout variants of the introductory "What is...?" section. Each has a distinct structure but shares the same visual language. Currently hardcoded — would become a single parameterised component with a <code>variant</code> prop.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT (one variant each)</p>
+    </div>
+  </div>
+
+  <!-- Variant A: Centred Text + Scrolling Ticker -->
+  <div class="scroll-mt-20">
+    <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
+      <h3 class="text-lg font-bold text-blue-900">Variant A: Centred Text + Ticker</h3>
+      <p class="text-sm text-blue-800 mt-1">
+        <strong>File:</strong> <code>src/components/what-sci.astro</code>
+      </p>
+      <p class="text-sm text-blue-800 mt-1">Centred heading and body paragraph on white background, with a scrolling keyword ticker banner beneath.</p>
+    </div>
+  </div>
+  <WhatSCI />
+
+  <!-- Variant B: Centred Text + 2x2 Feature Grid -->
+  <div class="scroll-mt-20">
+    <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
+      <h3 class="text-lg font-bold text-blue-900">Variant B: Centred Text + Feature Grid</h3>
+      <p class="text-sm text-blue-800 mt-1">
+        <strong>File:</strong> <code>src/components/what-wdpc.astro</code>
+      </p>
+      <p class="text-sm text-blue-800 mt-1">Centred heading and body paragraph on a cream rounded card, with a 2x2 icon feature grid below.</p>
+    </div>
+  </div>
+  <WhatWDPC />
+
+  <!-- Variant C: Two-Column with Image -->
+  <div class="scroll-mt-20">
+    <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
+      <h3 class="text-lg font-bold text-blue-900">Variant C: Two-Column with Image</h3>
+      <p class="text-sm text-blue-800 mt-1">
+        <strong>File:</strong> <code>src/components/what-soft.astro</code>
+      </p>
+      <p class="text-sm text-blue-800 mt-1">Two-column layout on a cream card — text with eyebrow label on left, illustration on right. Best for product overviews.</p>
+    </div>
+  </div>
+  <WhatSOFT />
+
+  <!-- ============================================================ -->
+  <!-- 5. TEXT WITH IMAGE (Industry Impact / Environmental Impact) -->
+  <!-- ============================================================ -->
+  <div id="text-with-image" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">5. TextWithImage + BenefitsList</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/why-sci.astro</code> (or why-wdpc, why-soft)
+      </p>
+      <p class="mt-2">This component contains multiple sub-patterns used across all microsites:</p>
+      <ul class="mt-2 ml-4 list-disc text-sm space-y-1">
+        <li><strong>SectionHeader:</strong> Centred H1 + subtitle paragraph to introduce a topic</li>
+        <li><strong>TextWithImage:</strong> Two-column layout — text on one side, illustration on the other. Alternates sides.</li>
+        <li id="benefits-list"><strong>BenefitsList:</strong> Numbered items (1, 2, 3, 4) with green checkmark icons + descriptions.</li>
+      </ul>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT (Industry Impact, Business Benefits, Environmental Impact sections)</p>
+    </div>
+  </div>
+  <WhySCI />
+
+  <!-- ============================================================ -->
+  <!-- 6. EQUATION BLOCK -->
+  <!-- ============================================================ -->
+  <div id="equation-block" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">6. EquationBlock</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/how-it-works.astro</code>
+      </p>
+      <p class="mt-2">Centred section with heading, explanatory text, then a large styled equation display (e.g., "SCI = (E x I + M) per R"). Great for any formula, methodology, or key concept that needs visual emphasis.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI only. Unique and reusable for any formula/concept display.</p>
+    </div>
+  </div>
+  <HowItWorks />
+
+  <!-- ============================================================ -->
+  <!-- 7. FEATURE GRID (from SOFT) -->
+  <!-- ============================================================ -->
+  <div id="feature-grid" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">7. FeatureGrid</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/features.astro</code>
+      </p>
+      <p class="mt-2">Grid of 4 cards. Each card has: icon with decorative background, H3 title, description paragraph. Responsive: 1 col mobile, 2 col tablet, 4 col desktop. Used for core pillars or capabilities.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SOFT ("The SOFT Framework" — 4 pillars), WDPC ("What is WDPC?" — 4 features)</p>
+    </div>
+  </div>
+  <Features />
+
+  <!-- ============================================================ -->
+  <!-- 8. SUCCESS STORIES CAROUSEL -->
+  <!-- ============================================================ -->
+  <div id="success-stories" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">8. SuccessStoriesCarousel</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/success-stories.astro</code> + <code>src/components/react/success-stories-carousel.tsx</code>
+      </p>
+      <p class="mt-2">Interactive horizontal Embla carousel of case study cards. Each card: organisation badge, H3 title, summary, "Read Case Study" link. Arrow buttons for navigation. Responsive: 1/2/3 cards visible.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI only. Reusable for any card carousel (articles, case studies, testimonials).</p>
+      <p class="mt-1 text-sm"><strong>Interactive:</strong> Yes (React component with client:visible hydration)</p>
+    </div>
+  </div>
+  <SuccessStories />
+
+  <!-- ============================================================ -->
+  <!-- 9. TESTIMONIAL QUOTE -->
+  <!-- ============================================================ -->
+  <div id="testimonial" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">9. TestimonialQuote</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/testimonial.astro</code>
+      </p>
+      <p class="mt-2">Wide section with large blockquote in italics, flanked by decorative quotation mark SVGs. Below: person name, title, company. Cream background.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI only. Reusable for any quote/testimonial.</p>
+    </div>
+  </div>
+  <Testimonial />
+
+  <!-- ============================================================ -->
+  <!-- 10. STATS GRID -->
+  <!-- ============================================================ -->
+  <div id="stats-grid" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">10. StatsGrid</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/research.astro</code>
+      </p>
+      <p class="mt-2">Split layout. Left: heading, body, 2x2 stat boxes (e.g., "ISO/IEC", "15+ Papers", "10+ Implementations", "ACM & IEEE"). Right: 3 linked reference cards with titles and arrow links.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI ("Validated by Academia and Industry"). Reusable for any stats/evidence section.</p>
+    </div>
+  </div>
+  <Research />
+
+  <!-- ============================================================ -->
+  <!-- 11. AUDIENCE TABS -->
+  <!-- ============================================================ -->
+  <div id="audience-tabs" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">11. AudienceTabs</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/audience-benefits.astro</code> + <code>src/components/react/architecture-tabs.tsx</code>
+      </p>
+      <p class="mt-2">Tabbed interface. Left column: tab triggers (audience names). Clicking reveals description text. Right column: illustration that changes per tab. Uses Radix UI Tabs + Framer Motion transitions.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI ("Built for Every Role"), WDPC ("A New Architecture for Energy Intelligence")</p>
+      <p class="mt-1 text-sm"><strong>Interactive:</strong> Yes (React with client:visible)</p>
+    </div>
+  </div>
+  <AudienceBenefits />
+
+  <!-- ============================================================ -->
+  <!-- 12. AUDIENCE CARDS (from WDPC) -->
+  <!-- ============================================================ -->
+  <div id="audience-cards" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">12. AudienceCards</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/blog.astro</code> (WDPC/SOFT)
+      </p>
+      <p class="mt-2">Three side-by-side cards. Each card: large illustration on top, icon + heading, body paragraph. Used for different audience segments. Alternative to AudienceTabs when you want all audiences visible at once.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> WDPC ("WDPC Audience"), SOFT ("SOFT Works for Everyone")</p>
+    </div>
+  </div>
+  <AudienceCards />
+
+  <!-- ============================================================ -->
+  <!-- 13. RESOURCE CARDS -->
+  <!-- ============================================================ -->
+  <div id="resource-cards" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">13. ResourceCards</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/resources.astro</code>
+      </p>
+      <p class="mt-2">H2 heading + row of 3 cards. Each card: SVG icon/illustration at top, H3 title, body text, CTA button at bottom. Subtle shadows and rounded corners.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI ("Everything You Need to Get Started"), SOFT ("Get Involved"), WDPC ("Shape the Future")</p>
+    </div>
+  </div>
+  <Resources />
+
+  <!-- ============================================================ -->
+  <!-- 14. MISSION CARD (from WDPC) -->
+  <!-- ============================================================ -->
+  <div id="mission-card" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">14. MissionCard</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/mission-card.astro</code>
+      </p>
+      <p class="mt-2">Centred card with decorative border, top ornament, H1 title, and italic body text. Great for mission statements, key quotes, or important callouts that need visual emphasis without being a full section.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> WDPC ("The 200MW Challenge"), SOFT</p>
+    </div>
+  </div>
+  <MissionCard />
+
+  <!-- ============================================================ -->
+  <!-- 15. GET STARTED CTA (from SOFT) -->
+  <!-- ============================================================ -->
+  <div id="get-started-cta" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">15. GetStartedCTA</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/ready-to-implement.astro</code>
+      </p>
+      <p class="mt-2">Compact mid-page call-to-action. Rounded card with accent background colour. Illustration on left, heading + body text + CTA button on right. Breaks up content sections nicely.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SOFT ("Ready to Explore?")</p>
+    </div>
+  </div>
+  <ReadyToImplement />
+
+  <!-- ============================================================ -->
+  <!-- 16. GET INVOLVED (from SOFT) -->
+  <!-- ============================================================ -->
+  <div id="get-involved" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">16. GetInvolved</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/get-involved.astro</code>
+      </p>
+      <p class="mt-2">4-column grid of action cards. Each card: icon, divider, title, description, CTA button. First card has dark background (featured). Good for presenting multiple ways to participate or multiple entry points.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SOFT ("Get Involved"), WDPC ("Shape the Future of Sustainable Computing")</p>
+    </div>
+  </div>
+  <GetInvolved />
+
+  <!-- ============================================================ -->
+  <!-- 17. TIMELINE -->
+  <!-- ============================================================ -->
+  <div id="timeline" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">17. Timeline</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/timeline.astro</code> + <code>src/components/react/timeline-track.tsx</code>
+      </p>
+      <p class="mt-2">Horizontal timeline with connected milestone nodes. Each node: date (H3) + description. Progress track fills based on current status. Completed = green filled circles. Upcoming = outlined. Current node has pulsing ping animation.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT</p>
+      <p class="mt-1 text-sm"><strong>Interactive:</strong> Yes (React with Framer Motion animation)</p>
+    </div>
+  </div>
+  <Timeline />
+
+  <!-- ============================================================ -->
+  <!-- 18. TEAM SECTION -->
+  <!-- ============================================================ -->
+  <div id="team-section" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">18. TeamSection</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/team.astro</code>
+      </p>
+      <p class="mt-2">H2 "Project Leadership" + subtitle. 2 team member cards side by side. Each card: circular photo, name, role, company, LinkedIn link. Decorative leaf illustration to one side.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI (2 members), WDPC (1 member + recruiting badge), SOFT (2 members)</p>
+    </div>
+  </div>
+  <Team />
+
+  <!-- ============================================================ -->
+  <!-- 19. ABOUT GSF -->
+  <!-- ============================================================ -->
+  <div id="about-gsf" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">19. AboutGSF</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/about-gsf.astro</code>
+      </p>
+      <p class="mt-2">Two-column layout. Left: GSF logo illustration. Right: heading, 2 body paragraphs, "Learn more about GSF" button. Content nearly identical across all sites.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT</p>
+    </div>
+  </div>
+  <AboutGSF />
+
+  <!-- ============================================================ -->
+  <!-- 20. CTA BANNER (from WDPC) -->
+  <!-- ============================================================ -->
+  <div id="cta-banner" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">20. CTABanner</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/cta.astro</code>
+      </p>
+      <p class="mt-2">Full-width dark green section with centred H1 heading and body paragraph. Closing statement before the footer. No buttons — purely inspirational/motivational text.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> WDPC, SOFT (not on SCI)</p>
+    </div>
+  </div>
+  <CTABanner />
+
+  <!-- ============================================================ -->
+  <!-- 21. FOOTER -->
+  <!-- ============================================================ -->
+  <div id="footer" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">21. Footer</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>File:</strong> <code>src/components/footer.astro</code>
+      </p>
+      <p class="mt-2">Dark green footer with 4 columns: Logo + copyright, Project links, About GSF links, Legal links, Contact with social icons (GitHub, LinkedIn, Email).</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT (all pages)</p>
+    </div>
+  </div>
+  <Footer />
+</Layout>

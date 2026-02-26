@@ -1,0 +1,151 @@
+---
+import LinkedInIcon from "@/assets/linkedin-icon.svg";
+import GitHubIcon from "@/assets/github-icon-footer.svg";
+import EmailIcon from "@/assets/email-icon.svg";
+
+const iconMap = {
+  linkedin: LinkedInIcon,
+  github: GitHubIcon,
+  email: EmailIcon,
+};
+
+interface FooterLink {
+  href: string;
+  text: string;
+}
+
+interface SocialLink {
+  href: string;
+  icon: string;
+  label: string;
+}
+
+interface FooterSection {
+  title: string;
+  type?: "links" | "contact";
+  links?: FooterLink[];
+  socialLinks?: SocialLink[];
+}
+
+interface Props {
+  /** Logo image source */
+  logoSrc?: string;
+  /** Description text below the logo */
+  description?: string;
+  /** Footer note (e.g. "Ready to implement SCI?") as HTML string */
+  footerNote?: string;
+  /** Footer link sections */
+  sections?: FooterSection[];
+}
+
+const year = new Date().getFullYear();
+
+const defaultSections: FooterSection[] = [
+  {
+    title: "SCI Resources",
+    links: [
+      { href: "https://sci.greensoftware.foundation", text: "SCI Specification" },
+      { href: "https://movement.greensoftware.foundation/collections/2996409", text: "Take the Course" },
+      { href: "https://github.com/Green-Software-Foundation/sci/discussions", text: "Ask Questions" },
+    ],
+  },
+  {
+    title: "About GSF",
+    links: [
+      { href: "https://greensoftware.foundation/manifesto", text: "Our Mission" },
+      { href: "https://directory.greensoftware.foundation/projects/", text: "All Projects" },
+      { href: "https://greensoftware.foundation/blog", text: "Blog" },
+      { href: "mailto:help@greensoftware.foundation", text: "Contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { href: "https://greensoftware.foundation/policy/terms", text: "Privacy Policy" },
+      { href: "https://greensoftware.foundation/policy/terms", text: "Terms of Use" },
+      { href: "https://creativecommons.org/licenses/by/4.0/", text: "License: Creative Commons" },
+    ],
+  },
+  {
+    title: "Contact",
+    type: "contact",
+    socialLinks: [
+      { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+      { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+      { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+    ],
+  },
+];
+
+const {
+  logoSrc = "/assets/footer-logo.svg",
+  description = "The Green Software Foundation is a non-profit under the Linux Foundation with a mission to create a trusted ecosystem of people, standards, tooling, and best practices for green software.",
+  footerNote,
+  sections = defaultSections,
+} = Astro.props;
+---
+
+<footer class="bg-primary-darker">
+  <div class="container">
+    <div
+      class="grid grid-cols-1 py-12 md:py-18 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:gap-16 lg:py-20"
+    >
+      <div class="flex w-full flex-col gap-4">
+        <img src={logoSrc} class="w-20" />
+        <p class="pt-4 text-xs font-normal text-white/50">
+          Copyright &copy; {year} Green Software Foundation. All rights reserved.
+        </p>
+        {description && (
+          <p class="text-xs font-normal text-white/50">{description}</p>
+        )}
+      </div>
+
+      {sections.map((section) => (
+        <div class="mt-8 flex flex-col gap-4 lg:mt-0">
+          <h1 class="relative text-xs font-bold text-accent lg:mb-4">
+            {section.title}
+            <span class="hidden lg:absolute lg:-bottom-2 lg:left-0 lg:flex lg:h-1 lg:w-6 lg:bg-accent" />
+          </h1>
+
+          <div class="flex flex-col gap-4">
+            {section.type === "contact" ? (
+              <div class="flex gap-4">
+                {section.socialLinks?.map((social) => {
+                  const Icon = iconMap[social.icon as keyof typeof iconMap];
+                  const isExternal = social.href.startsWith("http");
+                  return (
+                    <a
+                      href={social.href}
+                      class="text-white/50 transition-colors hover:text-accent"
+                      aria-label={social.label}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                    >
+                      {Icon ? (
+                        <Icon class="text-accent" width={20} height={20} />
+                      ) : null}
+                    </a>
+                  );
+                })}
+              </div>
+            ) : (
+              section.links?.map((link) => {
+                const isExternal = link.href.startsWith("http");
+                return (
+                  <a
+                    href={link.href}
+                    class="text-xs text-white/50"
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  >
+                    {link.text}
+                  </a>
+                );
+              })
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</footer>

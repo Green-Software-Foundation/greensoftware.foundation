@@ -1,0 +1,84 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface Props {
+  /** Badge label (e.g. "EDUCATION", "MEASUREMENT") */
+  badge?: string;
+  /** Main heading text (plain text before the accent span) */
+  heading?: string;
+  /** Accent portion of the heading (displayed in text-primary) */
+  headingAccent?: string;
+  /** Stat highlights displayed between heading and body */
+  stats?: string[];
+  /** Body paragraph text */
+  body?: string;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA button href */
+  ctaHref?: string;
+  /** Image source */
+  imageSrc?: string;
+  /** Image alt text */
+  imageAlt?: string;
+  /** Whether image appears on the left (true) or right (false) */
+  reversed?: boolean;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  badge,
+  heading = "",
+  headingAccent = "",
+  stats = [],
+  body = "",
+  ctaText,
+  ctaHref = "#",
+  imageSrc,
+  imageAlt = "",
+  reversed = false,
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container grid items-center gap-10 md:grid-cols-2 md:gap-16">
+    {reversed && (
+      <div class="order-2 md:order-1 flex justify-center">
+        <img src={imageSrc} alt={imageAlt} class="w-full max-w-md" />
+      </div>
+    )}
+    <div class={reversed ? "order-1 md:order-2" : ""}>
+      {badge && (
+        <span class="inline-block rounded-full bg-accent-lighter px-3 py-1 text-xs font-semibold text-accent-darker">
+          {badge}
+        </span>
+      )}
+      <h2 class={`${badge ? 'mt-4' : ''} text-2xl font-extrabold leading-tight md:text-3xl`}>
+        {heading} {headingAccent && <span class="text-primary">{headingAccent}</span>}
+      </h2>
+      {stats.length > 0 && (
+        <div class="mt-5 flex flex-wrap gap-6 text-sm font-bold text-primary">
+          {stats.map((stat) => <span>{stat}</span>)}
+        </div>
+      )}
+      {body && (
+        <p class="mt-4 text-base leading-relaxed text-primary-dark">
+          {body}
+        </p>
+      )}
+      {ctaText && (
+        <div class="mt-6">
+          <a href={ctaHref}>
+            <Button variant="primary">{ctaText}</Button>
+          </a>
+        </div>
+      )}
+    </div>
+    {!reversed && (
+      <div class="flex justify-center">
+        <img src={imageSrc} alt={imageAlt} class="w-full max-w-md" />
+      </div>
+    )}
+  </div>
+</section>

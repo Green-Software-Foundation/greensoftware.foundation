@@ -1,0 +1,68 @@
+---
+interface Logo {
+  name: string;
+  logo: string;
+  website: string;
+}
+
+const logos: Logo[] = (await import("../data/logos.json")).default;
+
+// --animate-marquee: marquee {logos.length * 4}s linear infinite;
+const marqueeDuration = logos.length * 3;
+---
+
+<section class="pb-12 md:pb-16 lg:pb-20" style={`--marquee-duration: ${marqueeDuration}s`}>
+  <div class="relative container overflow-hidden">
+    <h1 class="mb-6 text-center text-base font-medium md:mb-8">
+      ISO-accredited and endorsed by leading technology organizations
+    </h1>
+    <div class="relative flex items-center overflow-hidden pt-7 md:pt-0">
+      <div
+        class="absolute top-0 bottom-0 left-0 z-10 w-20 bg-gradient-to-r from-accent-lightest-2 to-transparent"
+      >
+      </div>
+      <div
+        class="absolute top-0 right-0 bottom-0 z-10 w-20 bg-gradient-to-l from-accent-lightest-2 to-transparent"
+      >
+      </div>
+      <div class="flex shrink-0 animate-marquee items-center gap-12">
+        {
+          logos.map((logo) => (
+            <a
+              href={`//${logo.website.replace(/^https?:\/\//, '').replace(/^www\./, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mx-6 flex h-12 w-32 shrink-0 items-center justify-center md:h-14 md:w-40"
+            >
+              <img
+                class="max-h-full max-w-full object-contain"
+                src={logo.logo}
+                alt={logo.name}
+                loading="lazy"
+              />
+            </a>
+          ))
+        }
+      </div>
+      <div class="flex shrink-0 animate-marquee items-center gap-12">
+        {
+          logos.map((logo) => (
+            <a
+              href={`//${logo.website.replace(/^https?:\/\//, '').replace(/^www\./, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mx-6 flex h-12 w-32 shrink-0 items-center justify-center md:h-14 md:w-40"
+            >
+              <img
+                class="max-h-full max-w-full object-contain"
+                src={logo.logo}
+                alt={logo.name}
+                loading="lazy"
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
