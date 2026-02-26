@@ -3,8 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node src/lib/fetch-logos.mjs && astro dev",
-    "build": "node src/lib/fetch-logos.mjs && astro build",
+    "dev": "astro dev",
+    "fetch-notion": "node scripts/fetch-notion-data.cjs",
+    "build": "astro build",
+    "build:full": "npm run fetch-notion && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

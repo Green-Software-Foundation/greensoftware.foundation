@@ -20,6 +20,7 @@ pnpm-debug.log*
 .microsites/
 # Dev session screenshots
 /*.png
-# Generated data
+# Generated data (fetched from Notion)
 public/assets/logos/
+public/assets/team/
 src/data/

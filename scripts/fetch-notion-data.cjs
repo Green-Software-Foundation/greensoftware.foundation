@@ -45,13 +45,12 @@ const DB = {
   VOLUNTEERS: "f8282697-eb6e-4406-bd37-db8d55de9109",
 };
 
-// Output paths
-const CONTENT_DIR = path.resolve(__dirname, "..", "content");
-const HOMEPAGE_DIR = path.join(CONTENT_DIR, "homepage");
-const TEAM_DIR = path.join(CONTENT_DIR, "team");
-const STEERING_LOGOS_DIR = path.join(HOMEPAGE_DIR, "logos", "steering");
-const GENERAL_LOGOS_DIR = path.join(HOMEPAGE_DIR, "logos", "general");
-const PHOTOS_DIR = path.join(TEAM_DIR, "photos");
+// Output paths — JSON data goes to src/data/, images to public/assets/
+const ROOT_DIR = path.resolve(__dirname, "..");
+const DATA_DIR = path.join(ROOT_DIR, "src", "data");
+const STEERING_LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos", "steering");
+const GENERAL_LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos", "general");
+const PHOTOS_DIR = path.join(ROOT_DIR, "public", "assets", "team");
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -441,7 +440,7 @@ async function fetchAdminTeam() {
           const ext = path.extname(origName).toLowerCase() || ".jpg";
           const filename = slugify(fullName) + ext;
           const savedName = await downloadFile(photoUrl, PHOTOS_DIR, filename);
-          if (savedName) photoPath = `photos/${savedName}`;
+          if (savedName) photoPath = `/assets/team/${savedName}`;
         }
       }
     } catch (_) {
@@ -500,7 +499,7 @@ async function extractPerson(vol, role) {
     const filename = slugify(fullName) + ext;
     const savedName = await downloadFile(photoUrl, PHOTOS_DIR, filename);
     if (savedName) {
-      photoPath = `photos/${savedName}`;
+      photoPath = `/assets/team/${savedName}`;
     }
   }
 
@@ -530,6 +529,7 @@ async function main() {
   console.log(`Started at ${new Date().toISOString()}\n`);
 
   // Ensure output directories exist
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.mkdirSync(STEERING_LOGOS_DIR, { recursive: true });
   fs.mkdirSync(GENERAL_LOGOS_DIR, { recursive: true });
   fs.mkdirSync(PHOTOS_DIR, { recursive: true });
@@ -549,16 +549,30 @@ async function main() {
   console.log(`  Split: ${generalMembers.length} general, ${academicGovMembers.length} academic/government`);
 
   fs.writeFileSync(
-    path.join(HOMEPAGE_DIR, "steering-members.json"),
+    path.join(DATA_DIR, "steering-members.json"),
     JSON.stringify(steeringMembers, null, 2)
   );
   fs.writeFileSync(
-    path.join(HOMEPAGE_DIR, "general-members.json"),
+    path.join(DATA_DIR, "general-members.json"),
     JSON.stringify(generalMembers, null, 2)
   );
   fs.writeFileSync(
-    path.join(HOMEPAGE_DIR, "academic-government-members.json"),
+    path.join(DATA_DIR, "academic-government-members.json"),
     JSON.stringify(academicGovMembers, null, 2)
+  );
+
+  // logos.json — combined flat list for the logo marquee component
+  const allMembers = [...steeringMembers, ...generalMembers, ...academicGovMembers];
+  const logos = allMembers
+    .filter((m) => m.logo)
+    .map((m) => ({
+      name: m.companyName,
+      logo: `/assets/${m.logo}`,
+      website: m.companyWebsite,
+    }));
+  fs.writeFileSync(
+    path.join(DATA_DIR, "logos.json"),
+    JSON.stringify(logos, null, 2)
   );
 
   // --- Homepage: Stats ---
@@ -575,7 +589,7 @@ async function main() {
     numberOfIndividuals,
   }];
   fs.writeFileSync(
-    path.join(HOMEPAGE_DIR, "stats.json"),
+    path.join(DATA_DIR, "stats.json"),
     JSON.stringify(stats, null, 2)
   );
 
@@ -620,7 +634,7 @@ async function main() {
   }));
 
   fs.writeFileSync(
-    path.join(TEAM_DIR, "team.json"),
+    path.join(DATA_DIR, "team.json"),
     JSON.stringify(teamJson, null, 2)
   );
 
