@@ -6,11 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Green Software Foundation website — currently a Gatsby 4 site (legacy) being rebuilt using Astro 5 with a parameterised component library. The new site lives in `.microsites/component-showcase/` and will replace the Gatsby site.
+Green Software Foundation website — an Astro 5 site with a parameterised component library. The legacy Gatsby 4 site has been moved to `_legacy/`.
 
-## Site Rebuild (Active Work)
+## Site Architecture
 
-The main website is being rebuilt using a **parameterised component library** approach. See `docs/features/site-rebuild-componentisation.md` for the full feature spec.
+The site is built using a **parameterised component library** approach. See `docs/features/site-rebuild-componentisation.md` for the full feature spec.
 
 ### Key Principle
 
@@ -25,7 +25,7 @@ The main website is being rebuilt using a **parameterised component library** ap
 
 ### Brand & Design Tokens
 
-Tokens are defined in `.microsites/component-showcase/src/styles/global.css` and shared across all microsites.
+Tokens are defined in `src/styles/global.css`.
 
 **Primary palette (teal):**
 | Token | Hex | Tailwind class | Usage |
@@ -71,19 +71,20 @@ Tokens are defined in `.microsites/component-showcase/src/styles/global.css` and
 
 ### Three-Tier Component Library
 
-1. **UI Primitives** (Tier 1) — Radix UI components in `src/components/ui/` (button, navigation-menu, sheet, etc.). Already exist, shared across microsites.
+1. **UI Primitives** (Tier 1) — Radix UI components in `src/components/ui/` (button, navigation-menu, sheet, etc.).
 2. **Layout Components** (Tier 2) — Navbar, Footer, Hero. Parameterised with props for content.
 3. **Content Section Components** (Tier 3) — TextWithImage, FeatureGrid, CardGrid, StatsGrid, CTABanner, CTACard, TextBlock, LogoMarquee, Testimonial, TabbedSection, CommunityReach, ArticleCarousel, ResourceCards. All content via props.
 
-### Key Directories (New Site)
+### Key Directories
 
-- `.microsites/component-showcase/src/pages/` — Pages (homepage.astro is the main homepage demo)
-- `.microsites/component-showcase/src/components/` — Parameterised Astro components
-- `.microsites/component-showcase/src/components/react/` — React islands (navbar.tsx uses Radix NavigationMenu)
-- `.microsites/component-showcase/src/components/ui/` — UI primitives (button, navigation-menu, sheet)
-- `.microsites/component-showcase/src/data/` — Data files (logos.json with 60+ member logos)
-- `.microsites/component-showcase/src/assets/` — SVG assets imported as components
-- `.microsites/component-showcase/public/assets/` — Static assets (images, SVGs)
+- `src/pages/` — Pages (homepage.astro is the main homepage)
+- `src/components/` — Parameterised Astro components
+- `src/components/react/` — React islands (navbar.tsx uses Radix NavigationMenu)
+- `src/components/ui/` — UI primitives (button, navigation-menu, sheet)
+- `src/data/` — Data files (logos.json with 60+ member logos)
+- `src/assets/` — SVG assets imported as components
+- `public/assets/` — Static assets (images, SVGs)
+- `.microsites/` — Reference microsites (sci, wdpc, soft) — separate repos, used as design reference
 
 ### Parameterised Components
 
@@ -114,40 +115,14 @@ Many components support inline accent text in headings using `*asterisks*` synta
 
 The homepage (`homepage.astro`) composes ~260 lines of component composition (no inline HTML). Structure: Navbar → Hero (with scroll indicator) → LogoMarquee → Testimonial → TextBlock (heading) → 5× TabbedSection (problem-solution pairs, all compact) → CTACard → CommunityReach (5 stats + world map) → FeatureGrid (bordered variant, 2×2) → ResourceCards (3 cards) → ArticleCarousel (4 articles with multi-org logos) → CTABanner → Footer. The navbar uses `topBar="none"` with the full GSF logo (`gsf-logo-full.svg`, 52px height).
 
-### Dev Server (Component Showcase)
+### Dev Server
 
 ```bash
-cd .microsites/component-showcase
 npm run dev    # Dev server on localhost:4322
 ```
 
-The catalogue page (`/`) shows components with default content. The homepage demo (`/homepage`) shows the new main site design.
-
-### Microsites
-
-Other microsites exist in `.microsites/` (sci, wdpc, soft). They share the same UI primitives and design tokens. The component showcase sources patterns from across all microsites — lean on the catalogue as the reference for component patterns.
+The catalogue page (`/`) shows components with default content. The homepage demo (`/homepage`) shows the main site design.
 
 ## Legacy Gatsby Site
 
-The legacy Gatsby site still exists at the root level (`src/`, `gatsby-config.js`, etc.) and is deployed on Netlify. It will be replaced once the new Astro site is ready.
-
-### Legacy Prerequisites
-
-- **Node 18.5.0** (`.nvmrc` provided — run `nvm use`)
-- **Yarn 1.x**
-
-### Legacy Commands
-
-```bash
-yarn develop    # Local dev server (localhost:8000)
-yarn build      # Production build
-yarn serve      # Serve production build locally
-yarn clean      # Clear Gatsby cache and public/
-```
-
-### Legacy Environment Variables
-
-Copy `.env.example` and populate with Algolia keys:
-- `GATSBY_ALGOLIA_APP_ID`
-- `GATSBY_ALGOLIA_SEARCH_KEY`
-- `ALGOLIA_ADMIN_KEY`
+The legacy Gatsby site has been moved to `_legacy/`. It was previously deployed on Netlify and may still be needed for reference.
