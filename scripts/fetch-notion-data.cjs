@@ -22,8 +22,29 @@ const http = require("http");
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 if (!NOTION_API_KEY) {
-  console.error("ERROR: NOTION_API_KEY environment variable is required");
-  process.exit(1);
+  console.warn("WARNING: NOTION_API_KEY not set — skipping Notion data fetch.");
+  // Ensure src/data/ exists with empty fallback files so the build doesn't break
+  const ROOT_DIR = path.resolve(__dirname, "..");
+  const fallbackDir = path.join(ROOT_DIR, "src", "data");
+  fs.mkdirSync(fallbackDir, { recursive: true });
+  const fallbacks = {
+    "logos.json": [],
+    "steering-members.json": [],
+    "general-members.json": [],
+    "academic-government-members.json": [],
+    "team.json": [],
+    "stats.json": {},
+  };
+  for (const [file, data] of Object.entries(fallbacks)) {
+    const filePath = path.join(fallbackDir, file);
+    if (!fs.existsSync(filePath)) {
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      console.warn(`  Created fallback ${file}`);
+    } else {
+      console.warn(`  Using existing cached ${file}`);
+    }
+  }
+  process.exit(0);
 }
 
 const notion = new Client({ auth: NOTION_API_KEY });
