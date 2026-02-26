@@ -5,7 +5,7 @@ interface Logo {
   website: string;
 }
 
-const logos: Logo[] = (await import("../data/logos.json")).default;
+const logos: Logo[] = (await import("@/data/logos.json")).default;
 
 // --animate-marquee: marquee {logos.length * 4}s linear infinite;
 const marqueeDuration = logos.length * 3;
