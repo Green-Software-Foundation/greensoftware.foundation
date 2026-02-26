@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Created:** 2026-02-25
-**Last Updated:** 2026-02-25
+**Last Updated:** 2026-02-26
 
 ## Overview
 
@@ -58,7 +58,19 @@ Scrolling member logos. Grayscale, colour on hover. Subtle, not too large. Must 
 
 ---
 
+### Sections 4–8: Problem-Solution Blocks
+
+**Section Header**
+**Component:** `TextBlock` (centred)
+
+**Title:** "You're not the first to face these challenges"
+
+**Subtitle:** "Our members identified the biggest problems in software sustainability — then solved them together."
+
+---
+
 ### Section 4: Problem-Solution #1 — Organisational Upskilling
+
 **Component:** `TextWithImage` (text left, image right)
 
 **Problem Title:** "Your engineers can't deliver on your climate commitments"
@@ -159,17 +171,30 @@ Stats to include:
 
 ---
 
-### Section 11: What Else We Do
-**Component:** `FeatureGrid` (3 or 4 column)
+### Section 11: What We Do
+**Component:** `TextBlock` (centred) + `FeatureGrid` (4 column, with links)
 
-Quick visual grid, each item: icon + title + one line + link
+**Title:** "What we do"
 
-- **Events & Summits** — Global assemblies bringing members together
-- **Hackathons** — Competitive problem-solving events
-- **White Papers & Research** — Deep dives on emerging challenges
-- **Meetup Network** — Local communities worldwide
-- **Podcast** — Conversations with sustainability leaders
-- **Movement Platform** — [one-liner TBD]
+**Subtitle:** "Four functions. Each one driven by member needs. Each one producing results the industry adopts."
+
+Four pillar cards, each with: title, 2-3 sentence description, and link to dedicated page.
+
+**Standards**
+Setting the benchmarks the industry measures against. Our members develop vendor-neutral specifications — from SCI to SOFT — through a collaborative process that's achieved ISO certification in record time.
+→ Explore our standards
+
+**Policy**
+Translating technical reality into regulatory language. Our policy working group tracks emerging legislation, publishes position papers, and gives members a voice before regulations are finalised.
+→ See our policy work
+
+**Education**
+Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programmes — the learning journey that turns commitments into competence.
+→ Start learning
+
+**Research**
+The evidence behind every decision. White papers, technical reports, and the State of Green Software — giving members and the industry the data to make the case internally and externally.
+→ Read our research
 
 ---
 
