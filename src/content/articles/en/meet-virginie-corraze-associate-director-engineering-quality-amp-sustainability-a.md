@@ -57,12 +57,12 @@ Along with the move of applications to the cloud, other areas such as FinOps can
 ## It seems that Amadeus is making significant steps. Are there any other sustainability initiatives that you can share?
 Sustainability has been a focus of Amadeus for some time. I can give you a few examples of Amadeus’ commitment:
 
-·      Our carbon-neutral facility - [Amadeus Data Center](https://corporate.amadeus.com/documents/en/resources/corporate-information/corporate-documents/global-reports/2020/7-environmental-sustainability.pdf)
+- Our carbon-neutral facility - [Amadeus Data Center](https://corporate.amadeus.com/documents/en/resources/corporate-information/corporate-documents/global-reports/2020/7-environmental-sustainability.pdf)
 
-·      Our [investment and partnership with CHOOOSE](https://amadeus.com/en/insights/press-release/amadeus-invests-chooose-carbon-emissions-information-climate-action-options) provides detailed emissions information as well as climate action options to travelers looking to take actions to prioritize the impact of travel on the climate.
+- Our [investment and partnership with CHOOOSE](https://amadeus.com/en/insights/press-release/amadeus-invests-chooose-carbon-emissions-information-climate-action-options) provides detailed emissions information as well as climate action options to travelers looking to take actions to prioritize the impact of travel on the climate.
 
-·      [Travel4Impact](https://amadeus.com/en/insights/press-release/amadeus-and-ie-university-expand-travel4impact-network-for-smes-across-europe) - an initiative to foster digitalization, collaboration, and sustainability as part of the value proposition for SMEs in the travel and tourism industry.
+- [Travel4Impact](https://amadeus.com/en/insights/press-release/amadeus-and-ie-university-expand-travel4impact-network-for-smes-across-europe) - an initiative to foster digitalization, collaboration, and sustainability as part of the value proposition for SMEs in the travel and tourism industry.
 
-·      [Green is the New Blue](https://amadeus.com/en/insights/blog/green-is-the-new-blue-sustainable-communities) - an initiative to build awareness of the importance of sustainability and build meaningful corporate partnerships.
+- [Green is the New Blue](https://amadeus.com/en/insights/blog/green-is-the-new-blue-sustainable-communities) - an initiative to build awareness of the importance of sustainability and build meaningful corporate partnerships.
 
 ![Green Software Foundation and Amadeus logos with portrait of Virginie Corraze](/assets/articles/meet-virginie-corraze-associate-director-engineering-quality-amp-sustainability-a/image.png)

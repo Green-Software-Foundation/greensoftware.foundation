@@ -23,8 +23,6 @@ As we transform our own operations and supply chain to net zero by 2030 or soone
 ## What challenges and opportunities can you share as you look to reduce the environmental impacts of software?
 In recent years, there has been a lack of industry-wide best practices and education on how technology can help engineers contribute to net zero. Now, we see the opportunity to join forces with the industry leaders to agree on a starting point and continue to strive for the best and cleanest energy transition across the finance industry.
 
-
-
 ## How do you hope to contribute and benefit from the GSF?
 
 At HSBC, we want to give our technology teams tools and resources to learn about green software best practices and patterns and contribute to the GSF's working groups. Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software. 

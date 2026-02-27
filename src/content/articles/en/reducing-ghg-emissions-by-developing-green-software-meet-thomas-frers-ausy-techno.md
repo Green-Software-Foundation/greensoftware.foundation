@@ -39,7 +39,6 @@ One of the main challenges at the moment is to raise awareness and foster invest
 Another big challenge is the measurement of emissions. Thanks to the [(SCI) Specification](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/15958033/Standards+SCI), we have an excellent indicator. But we need to gather appropriate data to calculate it. Getting ahead will require that we build solid tooling and work with assumptions at first.
 
 
-
-*Ausy Technologies is now Randstad Digital Germany
+*Ausy Technologies is now Randstad Digital Germany*
 
 ![Green Software Foundation and AUSY logos on illustrated green nature background](/assets/articles/reducing-ghg-emissions-by-developing-green-software-meet-thomas-frers-ausy-techno/image.png)

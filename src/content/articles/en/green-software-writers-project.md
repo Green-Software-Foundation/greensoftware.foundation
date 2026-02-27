@@ -16,7 +16,6 @@ I really like the Writer’s project because we get to share the work the GSF is
 
 Our project has three main areas. The first is writing and curating articles about green software, how to be more energy efficient, hardware efficient and carbon aware. We also share interviews and work and news from within the GSF. Our objective is to be a learning resource for both for people with feet on the ground and hands in the code, but also for people interested in green software who aren’t necessarily engineers or developers. Like one of the philosophies in the principals of green software engineering says; everyone has a role to play in the climate solution.
 
-
 The second area of our project is translating articles into more languages than English. For example, our [GSF Manifesto](https://greensoftware.foundation/manifesto) is currently available in Brazilian Portuguese, Mandarin, German, Spanish, Japanese and Italian. Our core values in the GSF include being inclusive and open to all, and in the Writer’s project a big part of operationalizing this is to ensure more people have access to our content.
 
 The third area of the Writer’s project is our external newsletter! You can [sign up for our newsletter here](https://grnsft.org/newsletter) if you want to receive it too. We want to increase the reach of the work within GSF by sharing articles, upcoming events and news from the GSF to everyone who is interested to learn more.

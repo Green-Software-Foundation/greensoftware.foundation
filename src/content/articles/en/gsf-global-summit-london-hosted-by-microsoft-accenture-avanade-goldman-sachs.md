@@ -14,8 +14,6 @@ authors:
 
 [Recorded meeting](https://zoom.us/rec/play/Xxivfir6y8ZhR4dE16pt3lqvG2TDF_r-piuIYdHBUlZzbJElEj01_40VTR9tJJuNtsIVL0MBeYjaoFbR.bUWt2v_s-vqc96NP?startTime=1654604814000)
 
-
-
 **Agenda & Speakers**
 
 - Intro to Green Software Foundation & Company Intros

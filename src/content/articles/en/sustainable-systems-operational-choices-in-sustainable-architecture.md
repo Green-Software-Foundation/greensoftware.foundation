@@ -25,7 +25,7 @@ The first in the series, [Sustainable Tech Choices for Cloud](https://greensoftw
 
 ---
 
-As we discussed in the [first part of this series ](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud), at the end of 2021, AWS added [sustainability](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [well-architected pillars](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their* “key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.” *A year earlier, Azure had posted their [sustainable architecture guide](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. 
+As we discussed in the [first part of this series ](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud), at the end of 2021, AWS added [sustainability](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [well-architected pillars](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their *”key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.”* A year earlier, Azure had posted their [sustainable architecture guide](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. 
 
 Their cloud recommendations are covered in a [new whitepaper on sustainable architecture for the cloud](https://docs.google.com/document/d/1Lym55mXRVO8pldUfrcpRqFKvE9biX93jhz-HLi_c99Y/edit?usp=sharing) from the Coed:Ethics community in London, which the GSF is closely connected to.
 
@@ -59,7 +59,7 @@ Operational efficiency improvements are about achieving the same output with few
 
 ### High Server Density
 
-The main way to reduce the emissions per unit of useful work is by running systems at very high utilisation for processors, memory, disk space, and networking. This is often called operating at* high server density*. It improves both energy and hardware efficiency.
+The main way to reduce the emissions per unit of useful work is by running systems at very high utilisation for processors, memory, disk space, and networking. This is often called operating at *high server density*. It improves both energy and hardware efficiency.
 
 A good example of it can be seen in the work Google did last decade to improve their internal system utilisation using cluster scheduling, as described in their [Borg paper](https://research.google/pubs/pub43438/). More mundane examples, which can be applied both on prem and in the cloud, include not over provisioning systems—e.g. downsizing machines that are larger than necessary—or using autoscaling to avoid provisioning machines before they are required.
 

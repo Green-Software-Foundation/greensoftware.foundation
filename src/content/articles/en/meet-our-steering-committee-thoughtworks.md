@@ -20,7 +20,7 @@ Sustainability is foundational to being a modern digital business and we develop
 
  Climate change is one of the most pressing challenges faced by humanity and the tech sector contributes a rapidly escalating amount of emissions. At Thoughtworks, we believe that issues like climate change can only be resolved through global solidarity, with businesses, government and individuals working together to affect change. We joined the Green Software Foundation as founding members to help our clients, partners and the broader industry drive toward a more sustainable future together.
 
-**How does Thoughtworks see the future of green software? **
+**How does Thoughtworks see the future of green software?**
 
  For the technology industry to do its part in helping curb climate change, everyone involved in the design, development and delivery of software needs to be involved. There needs to be a cultural shift towards shared action and accountability for making our software more sustainable. We imagine a not-too-distant future where carbon footprint is a central consideration in how software is built—similar to the considerations of performance, cost, quality and accessibility today.  
 
@@ -34,4 +34,4 @@ Adoption will also be a challenge. We need to make it easy for everyone involved
 
 Read about our Steering Committee members, what they say about working with the Foundation and their thoughts on the future of green software.  
 
-[Accenture](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [GitHub](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Globant](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Microsoft ](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture)|  [NTT Data](https://greensoftware.foundation/articles/meet-our-steering-committee-ntt-data)
+[Accenture](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [GitHub](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Globant](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Microsoft](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture)|  [NTT Data](https://greensoftware.foundation/articles/meet-our-steering-committee-ntt-data)

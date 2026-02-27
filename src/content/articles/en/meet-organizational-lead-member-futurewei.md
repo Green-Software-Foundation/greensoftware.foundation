@@ -26,7 +26,7 @@ Sustainability is a global issue that must be addressed with international colla
 
 The GSF’s unique combination of open-source developing and the standard setting might be the right way to tackle the complexities of green software metrics. We look forward to working with the community and the partners to answer the green software challenges.
 
-**How does your organization see the future of green software? **
+**How does your organization see the future of green software?**
 
 Green is becoming the new mandate for future software not only because of global warming but also because the hardware technologies slow down quite a bit while the demands for ICT usage are growing unprecedentedly; thus, we need the software to do more work using less energy. Green software innovations will need to re-visit and break many of the established limits and boundaries to achieve significant improvement over the status quo.
 

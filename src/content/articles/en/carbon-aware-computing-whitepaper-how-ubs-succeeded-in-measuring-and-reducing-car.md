@@ -10,9 +10,9 @@ The first enterprise-scale implementation of carbon-aware computing using the so
 
 Had we heard this statement 20 years ago, most of us would have chuckled. Insignificant, we would have said, pointing to the role that software played in producing carbon emissions. But boy, has the world changed! More than ever, we are relying on computer technology in our daily lives and for our business operations, especially in the service industry, especially for a global bank like UBS.
 
-## “The way we design and build our applications has a direct relationship to how much carbon they emit. With a better understanding of the impact our application designs have on the environment, we can make choices which have a more positive impact on the planet.”
-
-— Paul McEwen, Global Head of Technology Services for UBS
+> “The way we design and build our applications has a direct relationship to how much carbon they emit. With a better understanding of the impact our application designs have on the environment, we can make choices which have a more positive impact on the planet.”
+>
+> — Paul McEwen, Global Head of Technology Services for UBS
 
 This trend is not slowing down in the slightest. More complex systems mean more software operations, which generally results in higher energy consumption. And with a grid that is nowhere near to being clean, this inevitably translates into rising carbon emissions. Problematic indeed, but herein also lies the opportunity: reducing emissions by shaping the electricity demand of our applications.
 
@@ -54,7 +54,6 @@ The logical next step would be to add location selection abilities to choose reg
 
 To capture the absolute impact, energy consumption and embodied carbon as per the SCI would have to be included as well. Accurate energy telemetry is needed from cloud and hardware providers. A full SCI score will provide a higher degree of accuracy in determining the carbon output of running software.
 
-
 **Read the full white paper on the Microsoft website:** [https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/](https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/)
 
 # How to get involved
@@ -62,5 +61,4 @@ To capture the absolute impact, energy consumption and embodied carbon as per th
 Improving the measurement of the carbon intensity of software with the SCI is a foundational GSF initiative. Organizations and software engineers are invited to contribute directly to the[ SCI repository](https://github.com/Green-Software-Foundation/software_carbon_intensity). 
 
 Consider carbon-aware computing when building new software solutions or when modernizing existing ones. The GSF organizes an annual hackathon for carbon-aware computing. Read about the great ideas that emerged from[ CarbonHack22](https://greensoftware.foundation/articles/carbonhack22-a-big-leap-in-carbon-aware-computing) and dig deeper into the[ carbon-aware-sdk](https://github.com/Green-Software-Foundation/carbon-aware-sdk) to leverage or extend the MVP.
-
 

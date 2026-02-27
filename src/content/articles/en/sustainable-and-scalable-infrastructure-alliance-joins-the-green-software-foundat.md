@@ -25,14 +25,10 @@ No organization has effectively unified these domains to collaborate and help th
 
 [**Sign up**](https://workshops.greensoftware.foundation/mycelium-workshop)** to express your interest in joining the Hardware Standards Working Group and upcoming workshops.**
 
-
-
 #### About Sustainable and Scalable Infrastructure Alliance 
 The Sustainable and Scalable Infrastructure Alliance (SSIA) is the world’s leading community-based organization advancing infrastructure technologies and standards that power our digital world in a sustainable, scalable way. Founded in 2016 as the Open19 Foundation, the SSIA is committed to solving the cost, efficiency, and operational challenges of modern data centers with a focus on environmental sustainability and efficient cloud-to-edge deployment models. In 2021, the organization joined the Linux Foundation, bringing its hardware and datacenter innovators community to the world’s largest open-source ecosystem. For more information, visit: [ ](https://www.ssia.org/)[SSIA website](https://www.ssia.org/). 
 
 #### About Green Software Foundation
 The Green Software Foundation (GSF) is a nonprofit organization under the Linux Foundation. It aims to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. Members of the GSF represent a balanced mix of for-profits, nonprofits, and academia from around the globe and include several Fortune Global 500 firms. The Foundation operates by consensus. Four Working Groups — Standards, Policy, Opensource, and Community — currently oversee the Foundation's ongoing projects.
-
-
 
 GSF Contact: Sean Mcilroy - sean@greensoftware.foundation

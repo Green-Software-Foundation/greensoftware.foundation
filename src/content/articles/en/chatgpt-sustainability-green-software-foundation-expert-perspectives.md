@@ -8,8 +8,6 @@ mainImage: "/assets/articles/chatgpt-sustainability-green-software-foundation-ex
 
 # ChatGPT & Sustainability - Green Software Foundation “Expert Perspectives”
 
-
-
 Artificial intelligence systems use vast amounts of energy. ChatGPT is arguably the most well-known AI application in today's IT landscape. How do experts see the role of ChatGPT and other Large Language Models (LLM) in light of the climate crisis? What are the benefits of AI, and how can they outweigh the negative aspects of increased energy consumption and, more specifically, carbon emissions attributed to developing, testing, and operating such applications?
 
 ## LLM a major source of competitive advantage for businesses
@@ -71,8 +69,4 @@ Microsoft has been at the vanguard of system level optimization for years. In th
 Microsoft has also helped develop a framework for measuring software carbon intensity and collaborated with leading universities, the Allen Institute, and Hugging Face to create [a tool that measures the electricity usage](https://techcommunity.microsoft.com/t5/green-tech-blog/charting-the-path-towards-sustainable-ai-with-azure-machine/ba-p/2866923) of machine-learning programs that run on Azure.   
 
 “We’ve made advances with [DeepSpeed](https://learn.microsoft.com/en-us/azure/machine-learning/concept-onnx), for training efficiency and [ONNX Runtime](https://learn.microsoft.com/en-us/azure/machine-learning/concept-onnx), which gives high-performance inference support for large Transformer-based models, helping to optimize consumption and latency,” adds Chanezon.
-
-
-
-
 

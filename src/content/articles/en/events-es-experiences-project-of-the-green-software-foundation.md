@@ -79,4 +79,3 @@ When you are targeting global impact, you must empower others to take ownership 
 
 Get involved, get your company involved, and share the opportunity with your networks!
 
-

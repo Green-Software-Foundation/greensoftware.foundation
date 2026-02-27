@@ -32,4 +32,3 @@ Collaboration is essential at every level: within teams, across organizations, a
 
 I want to continue my studies and contribute more to the discussion around green information technology and software. Being actively involved within the GSF and engaging on different issues with other member organizations will be essential to developing research findings that add to academic theory, companies, and communities. I also intend to maintain an open conversation in the workplace, inside the foundation, and across communities so that I can share the results of my work along the way and learn as I go.
 
-

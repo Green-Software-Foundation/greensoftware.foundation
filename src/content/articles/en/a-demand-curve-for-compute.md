@@ -30,10 +30,7 @@ This means that some kinds of generation need to be running *almost all the time
 
 We can look at the properties of these different kinds of generation, as creating a kind of *demand curve.*
 
-<figure>
-<img src="/assets/articles/a-demand-curve-for-compute/a-chart-showing-how-cost-of-electricity-increases-with-the-total-load-of-electricity.png" alt="A-chart-showing-how-cost-of electricity-increases-with-the total-load-of-electricity" />
-<figcaption>*As the total electricity load increases, so does the cost of electricity*</figcaption>
-</figure>
+![As the total electricity load increases, so does the cost of electricity](/assets/articles/a-demand-curve-for-compute/a-chart-showing-how-cost-of-electricity-increases-with-the-total-load-of-electricity.png)
 
 ## What this has to with computers and cloud – a demand curve for compute
 This concept of a demand curve is useful when thinking about how we compose systems from different kinds of infrastructure services too.
@@ -42,7 +39,7 @@ Over the last few years, computing workloads themselves have become more portabl
 
 This first happened as virtual machine images, and then more recently as containers, and in 2021, we now have a plethora of options from micro-kernels, micro-vms, and so on.
 
-Let’s assume as an example, we have a relatively portable computing job that we want to run somewhere. It might be a WordPress website, or it might be a machine learning job we need to run on a regular basis. Because it doesn’t matter that much what it is, let’s just call it a *workload, *to represent that’s something we need to run, but one where we have some degree of freedom where we run it.
+Let’s assume as an example, we have a relatively portable computing job that we want to run somewhere. It might be a WordPress website, or it might be a machine learning job we need to run on a regular basis. Because it doesn’t matter that much what it is, let’s just call it a *workload,*to represent that’s something we need to run, but one where we have some degree of freedom where we run it.
 
 ## Matching the job to the infrastructure
 Once we have a computing job that’s relatively portable, we are then able to make decisions about *how* we run it, and match the properties of that workload to the choice of digital infrastructure that fits it best.
@@ -59,10 +56,7 @@ You might run the same workload on a range of different providers, who are all a
 
 Let’s look at them in turn, [like we did with the different forms of power generation](https://greensoftware.foundation/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack).
 
-<figure>
-<img src="/assets/articles/a-demand-curve-for-compute/c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction.png" alt="c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction" />
-<figcaption>*Pros and cons of the different ways of computing*</figcaption>
-</figure>
+![Pros and cons of the different ways of computing](/assets/articles/a-demand-curve-for-compute/c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction.png)
 
 ## Different ways to run a computing job 
 ### Bare metal: low unit cost, less abstraction, harder to scale up and down
@@ -114,10 +108,7 @@ It may be the case that what compute you end up consuming is *even more expensiv
 If you only have a single, minute-long compute job to run at midnight, you probably don’t want to keep that machine running the other 23 hours and 59 minutes every day if you can help it.
 
 ## Visualising a demand curve for compute
-<figure>
-<img src="/assets/articles/a-demand-curve-for-compute/graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need.png" alt="graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need" />
-<figcaption>*Having more options lets you match workloads to an appropriate kid of compute *</figcaption>
-</figure>
+![Having more options lets you match workloads to an appropriate kind of compute](/assets/articles/a-demand-curve-for-compute/graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need.png)
 
 This is how I visualise the different ways you might run a single computing job these days: I picture a demand curve just like how we might picture one in the energy sector, and the myriad ways to generate electricity.
 
@@ -128,10 +119,7 @@ Getting back to the subject of compute powered by green energy, if we know we ar
 
 #### An interesting example
 
-<figure>
-<img src="/assets/articles/a-demand-curve-for-compute/a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png" alt="A-top-down-view-of-the-inside-of-a-wind-turbine-with-an-Examesh-datacentre-inside" />
-<figcaption>*A top down view of the inside of a wind turbine with an Examesh datacentre inside*</figcaption>
-</figure>
+![A top down view of the inside of a wind turbine with an Examesh datacentre inside](/assets/articles/a-demand-curve-for-compute/a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png)
 
 One interesting example here would be the German company, [Examesh](https://examesh.de/). They build datacentres into the base of wind turbines, to take advantage of power that would otherwise be wasted, or to use the energy jargon, *curtailed*.
 

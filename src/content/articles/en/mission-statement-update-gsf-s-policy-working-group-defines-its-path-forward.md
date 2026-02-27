@@ -12,7 +12,7 @@ To address this challenge, we're defining the Policy Working Group's approach. H
 
 ## What Does Our Mission Mean for Green Software?
 
-> *"Rather than traditional lobbying, we focus on translating our deep technical expertise into accessible insights that inform better policy decisions around software sustainability." *
+> *"Rather than traditional lobbying, we focus on translating our deep technical expertise into accessible insights that inform better policy decisions around software sustainability."*
 
 The Green Software Foundation's Policy Working Group (PWG), led by Chris Adams (Green Web Foundation) and Aya Saed (Scope3), represents a strategic evolution in how we approach sustainable software advocacy. 
 

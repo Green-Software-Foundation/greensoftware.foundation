@@ -17,7 +17,7 @@ authors:
 
 The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. 
 
-*Please *[*read this article*](/articles/what-is-green-software)* to understand what we mean by green software.*
+*Please [read this article](/articles/what-is-green-software) to understand what we mean by green software.*
 
 The Foundation has been created for people who are in the business of building software. We are tasked with giving them answers about what they can do to reduce the software emissions they are responsible for.
 

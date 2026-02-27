@@ -37,15 +37,15 @@ Identified challenges were broken down into eight distinct themes:
 7. Enterprise Architecture
 8. Infrastructure & Architecture 
 
-A better understanding of the potential limitations and how the users might interact with the Catalog laid the ground for defining user-specific “jobs to be done,” such as: 
+A better understanding of the potential limitations and how the users might interact with the Catalog laid the ground for defining user-specific “jobs to be done,”* such as: 
 
-*“As a CTO,” every time I “want to understand how to make my existing software applications greener,” I need “provide clear guidance to my teams on which applications to decarbonize and the priority patterns to implement” but “lack of knowledge about green patterns and how they apply to my applications” gets in the way, and that means “we end up making poor choices based on lack of information or we do nothing.” *
+*“As a CTO,”* every time I “want to understand how to make my existing software applications greener,” I need “provide clear guidance to my teams on which applications to decarbonize and the priority patterns to implement” but “lack of knowledge about green patterns and how they apply to my applications” gets in the way, and that means “we end up making poor choices based on lack of information or we do nothing.” *
 
 Or
 
-*“As an Architect,” every time I “modernize an app (e.g., migrate to the cloud) I need a way so simply and easily get the SCI score,” but “the time it takes” gets in the way, and that means “it is given less (no) focus.”*
+*“As an Architect,”* every time I “modernize an app (e.g., migrate to the cloud) I need a way so simply and easily get the SCI score,” but “the time it takes” gets in the way, and that means “it is given less (no) focus.”*
 
-Understanding user needs and the problems they want to solve, members had a clear starting point for mapping “jobs to be done.” 
+Understanding user needs and the problems they want to solve, members had a clear starting point for mapping “jobs to be done.”*
 
 ## Green by Default 
 
@@ -58,7 +58,7 @@ During the workshops, members discussed expanding the Catalog’s reach and stre
 
 ## Roadmap
 
-In the final stage of the workshop, participants reflected on each step to define their vision of the “Green Software Nirvana” for 2030 and outlined a strategy to achieve it.
+In the final stage of the workshop, participants reflected on each step to define their vision of the “Green Software Nirvana”* for 2030 and outlined a strategy to achieve it.
 
 **Green Software Nirvana**
 

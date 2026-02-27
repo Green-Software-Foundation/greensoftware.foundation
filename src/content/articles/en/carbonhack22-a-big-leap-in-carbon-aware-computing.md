@@ -26,8 +26,6 @@ The [Carbon Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware
 
 ### 1st place - Lowcarb
 
-
-
 ![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 
 To learn more about this project, watch the [YouTube video](https://www.youtube.com/watch?v=N4z8XqcgZ7A).
@@ -44,8 +42,6 @@ Congratulations to the winners Philipp Wiesner, Dennis Grinwald and Martin Schel
 
 ### 2nd place - Carbon-Aware DNN Training with Zeus
 
-
-
 ![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 
 To learn more about this project, watch the [YouTube video](https://www.youtube.com/watch?v=iOy8Yg9C2z8).
@@ -55,8 +51,6 @@ Zeus is an energy optimization framework for DNN training. The solution extends 
 Congratulations to Jae-Won Chung, Zhenning Yang and Luoxi Meng.
 
 ### 3rd place - Circa 
-
-
 
 ![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 

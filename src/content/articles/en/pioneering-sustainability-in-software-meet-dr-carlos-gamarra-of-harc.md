@@ -7,7 +7,6 @@ mainImage: "/assets/articles/pioneering-sustainability-in-software-meet-dr-carlo
 ---
 
 
-
 Carlos Gamarra joined Houston Advanced Research Center (HARC) in 2017 after a fulfilling career as an energy engineer in Spain. His work involved designing and constructing industrial plants and renewable energy-based power plants. Now, he leads HARC’s efforts to provide end-to-end research, technical assistance, and customized decision-making solutions. He also serves as the energy manager for their building, the first certified net zero commercial building in Texas.
 
 # Can you highlight your organization’s work toward tackling environmental challenges?

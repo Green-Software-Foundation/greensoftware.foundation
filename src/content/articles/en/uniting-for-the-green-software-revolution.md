@@ -63,9 +63,6 @@ A recent study by the University of California Riverside and the University of T
 
 AI training workloads are generally not latency sensitive, so there is significant flexibility as to where to run them. The challenge is aligning carbon efficiency with water consumption. Asim added, “You may be trying to time-shift or location-shift a workload, only to land in a data center in a dry place. Now you have transformed the carbon problem into a water problem.” 
 
-
-
-
 *If you want to dive deeper into green software, here are a few interesting resources that we shared during the panel discussion:*
 
 [State of Green Software Report](https://stateof.greensoftware.foundation/)
@@ -75,5 +72,4 @@ AI training workloads are generally not latency sensitive, so there is significa
 [Environment Variables Podcast](https://podcast.greensoftware.foundation/)
 
 [GSF Newsletter Signup](https://greensoftware.foundation/)
-
 

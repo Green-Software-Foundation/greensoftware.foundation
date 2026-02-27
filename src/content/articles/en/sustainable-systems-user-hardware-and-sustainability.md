@@ -17,7 +17,7 @@ authors:
         link: "https://www.annecurrie.com/"
 ---
 
-As we have raised in every part of this series (because it’s important!), at the end of 2021, AWS added [sustainability](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [well-architected pillars](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their* “key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.” *A year earlier, Azure had posted their [sustainable architecture guide](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. Their cloud recommendations are covered in a [new whitepaper on sustainable architecture for the cloud](https://docs.google.com/document/d/1Lym55mXRVO8pldUfrcpRqFKvE9biX93jhz-HLi_c99Y/edit?usp=sharing).
+As we have raised in every part of this series (because it’s important!), at the end of 2021, AWS added [sustainability](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [well-architected pillars](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their *”key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.”* A year earlier, Azure had posted their [sustainable architecture guide](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. Their cloud recommendations are covered in a [new whitepaper on sustainable architecture for the cloud](https://docs.google.com/document/d/1Lym55mXRVO8pldUfrcpRqFKvE9biX93jhz-HLi_c99Y/edit?usp=sharing).
 
 ## Demand Destruction
 
@@ -44,7 +44,7 @@ Observe how small the proportion of emissions during use compared to the emissio
 
 Inevitably, the future for physical user devices in a carbon zero world is that they will need to last a lot longer. This will be driven in part by physical design and manufacture, but also by avoiding software-induced obsolescence by operating systems and applications that stop providing security patches or depend on new hardware or new features. 
 
-> *The future for physical user devices in a carbon zero world is that they will need to last a lot longer. *
+> *The future for physical user devices in a carbon zero world is that they will need to last a lot longer.*
 
 As time goes on, Moore’s law and other forms of progress mean that devices get new features, which developers want to exploit in their new app releases. Mobile phones, for example, have got faster, evolved to have dedicated GPU and machine learning chips, and acquired more memory. 
 
@@ -52,7 +52,7 @@ Apps take advantage of this progress, and that is fine and unavoidable. However,
 
 When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible. None of us want users to bin working kit. Phone OSes do provide some [information](https://developer.android.com/training/search/backward-compat) and tooling to help applications be backwards compatible, but it usually requires action from application developers. 
 
-> *When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible. *
+> *When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible.*
 
 At the moment, the best company for prolonging device lifespans is probably Apple. The new iOS 15 [supports](https://www.computerworld.com/article/3621780/wwdc-12-small-but-important-improvements-you-may-have-missed.html) phones that are up to six years old. However, all providers need to improve, even Apple. Life expectancies must be much longer than six years. 
 

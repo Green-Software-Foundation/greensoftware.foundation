@@ -37,5 +37,3 @@ And that is just what the GSF is doing right - it's changing the culture around 
 Great software engineers are not born but created. They are formed by acquiring and honing great design and development principles. In the same way, organizations need to create a culture where we celebrate carbon awareness and its implementation into the application life cycle.
 
 We can also better set the right incentives for developers and management, ensuring that sustainability is an essential topic in each organization. It's crucial to change the mindset and create more awareness. Then the budgeting needs to follow suit; if we allocate no funding to greening software, we can't expect any results. Change can happen much faster in any organization with a strong push from the top.
-
-# 

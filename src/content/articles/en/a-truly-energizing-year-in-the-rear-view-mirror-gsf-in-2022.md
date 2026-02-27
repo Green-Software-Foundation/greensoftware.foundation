@@ -6,7 +6,7 @@ teaserText: "A truly energizing year in the rear view mirror - GSF in 2022"
 mainImage: "/assets/articles/a-truly-energizing-year-in-the-rear-view-mirror-gsf-in-2022/main.png"
 ---
 
-[**View the report online**](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)** or** [**download the slide deck****.**](https://docs.google.com/presentation/d/1Dk6lfmvn8vbFUNAETM3Ldn8vuGlXvHtUE_WNRfiSrsw/edit)
+[**View the report online**](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing) **or** [**download the slide deck.**](https://docs.google.com/presentation/d/1Dk6lfmvn8vbFUNAETM3Ldn8vuGlXvHtUE_WNRfiSrsw/edit)
 
 The GSF has grown to 38 member organizations. We are proud to count some of the most prestigious representatives of the ICT industry as our members. The [GSF Annual Report ](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)covers our activities and achievements throughout last year. It’s a quick and exciting read, so don’t miss out on going through the full report. Here is a short overview.
 
@@ -21,9 +21,6 @@ All our projects are taking big strides. Take the launch of speakers bureau, our
 ## Laying the groundwork with the Theory of Change
 
 The GSF refines its purpose and spells out a strategy. We aim to change how we build software, so there are zero harmful environmental effects. Our Theory of Change is the basis and the process we need in order to get to that future. We have identified three main areas where we will focus our resources and make a significant impact: Tech Culture, Knowledge and Tooling.
-
-
-
 
 
 

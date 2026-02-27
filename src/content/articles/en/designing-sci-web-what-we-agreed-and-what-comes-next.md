@@ -9,8 +9,6 @@ mainImage: "/assets/articles/designing-sci-web-what-we-agreed-and-what-comes-nex
 > 
 > "Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need".
 
-
-
 As the Software Carbon Intensity (SCI) specification matured into an [ISO standard](https://www.iso.org/standard/86612.html), our members recognized that we needed a domain-specific, SCI-aligned approach to make it easier for developers, engineers, and product teams to measure and compare web emissions.
 
 In Autumn 2025, fourteen GSF members with web-specific expertise piloted an AI-assisted assembly process to build a design document for SCI for Web. In ten weeks, the assembly moved from a blank page to a consensus document that will inform the specification’s development. 

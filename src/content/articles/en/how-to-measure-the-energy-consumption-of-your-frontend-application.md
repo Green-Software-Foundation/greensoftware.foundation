@@ -41,7 +41,7 @@ If your application is a suitable candidate for this approach, here are a few co
 
 ## Use tools to measure or estimate energy use
 
-What do we need to measure? On a device, the largest energy consumers are usually the screen, central processing unit (CPU), graphics processing unit (GPU), and memory. ]
+What do we need to measure? On a device, the largest energy consumers are usually the screen, central processing unit (CPU), graphics processing unit (GPU), and memory.
 
 Estimating and measuring the impact of the CPU, GPU, and memory is relatively straight-forward. 
 

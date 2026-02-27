@@ -38,11 +38,7 @@ Bernhard Wardin
 
 Phone: +49 (173) 3270510; e-mail: bernhard.wardin@siemens.com 
 
-
-
 **The Green Software Foundation** is a non-profit formed under the Linux Foundation with the mission to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. Members of the Green Software Foundation represent a balanced mix of for profits, nonprofits and academia from around the globe and include a number of Fortune Global 500 firms. The Foundation operates by consensus. Four Working Groups — Standards, Policy, Opensource and Community — currently oversee the ongoing projects of the Foundation.
-
-
 
 **Siemens AG** (Berlin and Munich) is a technology company focused on industry, infrastructure, transport, and healthcare. From more resource-efficient factories, resilient supply chains, and smarter buildings and grids, to cleaner and more comfortable transportation as well as advanced healthcare, the company creates technology with purpose adding real value for customers. By combining the real and the digital worlds, Siemens empowers its customers to transform their industries and markets, helping them to transform the everyday for billions of people. Siemens also owns a majority stake in the publicly listed company Siemens Healthineers, a globally leading medical technology provider shaping the future of healthcare. In addition, Siemens holds a minority stake in Siemens Energy, a global leader in the transmission and generation of electrical power. 
 

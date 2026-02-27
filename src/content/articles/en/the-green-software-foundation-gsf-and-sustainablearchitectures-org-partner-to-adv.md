@@ -44,8 +44,6 @@ Through these collaborative efforts, both organizations aim to make sustainabili
 
 ## Driving the Future of Low-Carbon Technology
 
-
-
 > As the climate crisis accelerates, architecture and software leaders must rise to the challenge by embedding sustainability into their core design principles. Our partnership with GSF will help operationalize this vision by equipping enterprises with actionable frameworks and measurable guidance. This collaboration connects the dots between enterprise architecture and engineering. Together, we can establish a shared responsibility model for reducing digital carbon footprints—without compromising innovation.
 > Architects make decisions that ripple through entire technology ecosystems—from infrastructure design to application deployment. By connecting IASA's architecture frameworks with GSF's measurement standards like the Software Carbon Intensity specification, we're giving architects the tools to quantify impact and make sustainability decisions based on data, not guesswork. This collaboration helps us reach the decision-makers who can drive green software adoption at enterprise scale.
 ## Next Steps

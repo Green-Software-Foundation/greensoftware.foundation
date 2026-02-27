@@ -38,5 +38,3 @@ It's the "Don't Look Up!" issue. How do we get attention? Green, sustainable pra
 [Sustainable Systems: Sustainable Tech Choices for Cloud](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud)
 
 [Sustainable Systems: Operational Choices in Sustainable Architecture](https://greensoftware.foundation/articles/sustainable-systems-operational-choices-in-sustainable-architecture)
-
-

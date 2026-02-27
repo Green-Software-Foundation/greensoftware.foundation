@@ -27,10 +27,7 @@ The good news is that Kubernetes is built in a way that it can make carbon-aware
 
 ## System Overview
 
-<figure>
-<img src="/assets/articles/carbon-aware-kubernetes/green-software-foundation-illustration-of-core-components-of-kubernetes.jpg" alt="green-software-foundation-illustration-of-core-components-of-kubernetes" />
-<figcaption>*The core components of Kubernetes*</figcaption>
-</figure>
+![The core components of Kubernetes](/assets/articles/carbon-aware-kubernetes/green-software-foundation-illustration-of-core-components-of-kubernetes.jpg)
 
 The bulk of the functionality comes from the Kubernetes Scheduler itself and a research paper titled “[A Low Carbon Kubernetes Scheduler](http://ceur-ws.org/Vol-2382/ICT4S2019_paper_28.pdf)“. In short, the Scheduler takes Pods (one or more of your containers) and assigns them to run on Nodes (virtual or physical machines). It does a good job on its own of placing Pods to keep an even distribution across Nodes and ensure enough resources (memory, CPU, etc.) are available to run workloads. However, the Scheduler also lets you define your own rules for how to assign Nodes to Pods. This is where we can inject carbon intensity data as another factor for the Scheduler to use when placing Pods. 
 
@@ -87,7 +84,7 @@ In this scenario, running machines in UK South will cost a little under 4% more 
 | Europe     | $1.07                 | 1114                   |
 
 
-* Cost calculated using 5 D4as v4 machines. MOER values calculated at time of writing.*
+*Cost calculated using 5 D4as v4 machines. MOER values calculated at time of writing.*
 
 ### MOER values fluctuate over time
 

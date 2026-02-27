@@ -26,13 +26,11 @@ Gupta outlines three core challenges embodied in today’s AI paradigm:
 
 Large-scale AI models rely on enormous datasets, raising ethical concerns such as lack of informed consent, the inability to retract consent, and challenges in addressing fairness, privacy, and labeling issues. Data often comes from public sources without clear guidelines, allowing for potential misuse and unforeseen consequences, as seen with the repurposing of datasets during the COVID-19 pandemic. Encouraging such exploitative data practices can have significant negative long-term impacts.
 
-
 **2. Massive energy footprints**
 
 The environmental impact of AI, notably large models like GPT-3 (and now GPT-4), gained public attention due to concerns about their environmental costs. For instance, a single large NLP model can emit carbon equivalent to five cars in their lifetime. Although standardized methods for [measuring these impacts are lacking](https://devblogs.microsoft.com/sustainable-software/the-current-state-of-affairs-and-a-roadmap-for-effective-carbon-accounting-tooling-in-ai/), various metrics are considered. Assessing AI's environmental effects requires a [holistic approach](https://branch.climateaction.tech/issues/issue-3/beyond-single-dimensional-metrics-for-digital-sustainability/), including hardware and supply chains.
 
 With the urgency of addressing climate change, immediate action is necessary. Data centers now rival the airline industry in emissions, making adopting eco-friendly practices throughout the AI system lifecycle crucial.
-
 
 **3. Centralization of power and homogenization**
 
@@ -50,8 +48,6 @@ Sustainable AI offers an approach that harmonizes these issues and presents a po
 
 ## Approaches to solving the challenges of the existing paradigm
 
-
-
 **Elevating smaller models**
 
 Various research efforts are working on training more efficient AI models, employing techniques like pruning, compression, distillation, and quantization. These methods aim to reduce model size and computational demands, ultimately cutting financial and environmental costs.
@@ -63,7 +59,6 @@ Additionally, the growth of edge computing and IoT devices with limited resource
 To reduce the environmental impact of AI systems, three strategies can be employed: (1) using specialized hardware like ASICs and TPUs to accelerate tasks, (2) increasing the utilization of existing hardware to prevent wasteful power consumption, and (3) optimizing the use of general-purpose CPUs to reduce the need for new hardware production. Selecting the proper hardware can yield significant savings in terms of embodied carbon.
 
 Federated learning, a decentralized training technique that keeps data on-device, offers privacy protection and the potential to shift compute-intensive AI tasks to regions with lower carbon intensity, achieving dual objectives with a single change.
-
 
 **Carbon-efficiency and carbon-awareness**
 
@@ -84,5 +79,4 @@ Instrumenting AI systems to collect and report energy consumption data is the ne
 Organizations in the AI industry need to make an active choice to prioritize carbon impacts alongside functional and business imperatives. According to Gupta, this is a choice for ethics and strategy. Informed consumers increasingly favor environmentally friendly products and services, directly affecting businesses. Implementing greener AI systems will yield cost savings, bolstering the business case. Even when immediate financial benefits are unclear, committing to sustainability secures a competitive market position and aligns with ESG efforts. While standardized environmental reporting for software and AI is lacking, organizations like the [Green Software Foundation](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) are working towards creating interoperable and actionable approaches to inform consumers and guide regulatory efforts. Taking recommended actions at research, practitioner, and management levels will help organizations future-proof and move ahead of the pack.
 
 Join us on October 5 for the virtual GSF event: [Responsible AI: Tackling AI's Environmental Challenge](https://www.meetup.com/gsf-global/events/295596991/)
-
 

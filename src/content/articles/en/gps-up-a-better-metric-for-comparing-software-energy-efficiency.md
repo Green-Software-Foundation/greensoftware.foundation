@@ -48,7 +48,7 @@ The units for energy, power and time are Joule, Watt, and Second respectively. A
 
 There are very few existing metrics for software energy efficiency. Energy Delay Product (EDP) is the well-known one among them that considers both energy and run-time simultaneously. 
 
-Basically,** EDP = Energy x Run-time. **
+Basically, **EDP = Energy x Run-time.**
 
 EDP is certainly useful, but it is not adequate. Why is that? 
 

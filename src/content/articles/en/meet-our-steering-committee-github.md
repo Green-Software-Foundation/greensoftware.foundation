@@ -47,6 +47,6 @@ The concept of sustainability means something different to different people, and
 ## Meet the other Steering Committee Members of Green Software Foundation:
 Read about our Steering Committee members, what they say about working with the Foundation and their thoughts on the future of green software.  
 
-[Accenture](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Globant](https://greensoftware.foundation/articles/meet-our-steering-committee-globant) |  [Microsoft](https://greensoftware.foundation/articles/meet-our-steering-committee-microsoft) | [NTT Data](https://greensoftware.foundation/articles/meet-our-steering-committee-ntt-data)[ ](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture)| [Thoughtworks](https://greensoftware.foundation/articles/meet-our-steering-committee-thoughtworks)
+[Accenture](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [Globant](https://greensoftware.foundation/articles/meet-our-steering-committee-globant) |  [Microsoft](https://greensoftware.foundation/articles/meet-our-steering-committee-microsoft) | [NTT Data](https://greensoftware.foundation/articles/meet-our-steering-committee-ntt-data)| [Thoughtworks](https://greensoftware.foundation/articles/meet-our-steering-committee-thoughtworks)
 
 

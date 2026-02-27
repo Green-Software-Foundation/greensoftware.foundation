@@ -80,6 +80,6 @@ We have also worked on the [Sustainable Software Practice Framework with Microso
 
  
 
- ** Source: [ICT industry to reduce greenhouse gas emissions by 45 per cent by 2030](https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx)
+**Source:** [ICT industry to reduce greenhouse gas emissions by 45 per cent by 2030](https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx)
 
 ![Green Software Foundation and IMDA Singapore partnership logos on illustrated background](/assets/articles/energizing-the-ict-sector-meet-dr-ong-chen-hui-of-singapore-s-imda/image.png)

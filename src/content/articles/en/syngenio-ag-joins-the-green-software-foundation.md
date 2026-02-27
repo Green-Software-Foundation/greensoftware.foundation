@@ -82,7 +82,7 @@ Oh, lots of things! That’s why we are so enthusiastic about joining. Creating,
 
 I would like to answer with a quote:
 
-
-> As for the future, our task is not to foresee it, but to make it possible.> ~ Antoine de Saint-Exupéry
+> As for the future, our task is not to foresee it, but to make it possible.
+> ~ Antoine de Saint-Exupéry
 
 Green Software addresses the root cause of emissions caused by IT. We can and want to make a contribution to this endeavour. Together with the initiators and members of the GSF, this will give carbon reduction an enormous boost and have a real impact.

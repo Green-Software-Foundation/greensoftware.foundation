@@ -6,8 +6,6 @@ teaserText: "On the foothills of COP28, we hosted Decarbonize Software on Novemb
 mainImage: "/assets/articles/decarbonize-software-2023-redefining-the-future-of-software/main.jpg"
 ---
 
-
-
 The event celebrated progress in green software and provided a forum to showcase community-driven initiatives to decarbonize software. Given the increasing role of software in contemporary life, discussions centered on what engineers, developers, designers, and solution architects can do to enhance energy efficiency and reduce resource consumption.
 
 Here, we revisit the announcements, stories, and insights shared at Decarb.
@@ -80,7 +78,6 @@ Software practitioners can test Impact Framework at Carbon Hack, scheduled for t
 
 We hope you enjoyed this recap of Decarb 2023! 
 
-
 A big thank you to our incredible line-up of speakers for making this year's event a resounding success:
 
 Angel Cataron, Asim Hussain, Charlotte Degot, Chris Howard, Dan Benitah, Diana Dimitrova, Jesse McCrosky, Johann Hemmann, Navveen Balani, Srinivasan Rakhunathan, Stefanie Wolf, Tammy Adkins McClellan, Vaughan Knight, and Yvette Nartey. 
@@ -88,6 +85,5 @@ Angel Cataron, Asim Hussain, Charlotte Degot, Chris Howard, Dan Benitah, Diana D
 **Decarb 2023 is made possible through the support of GSF's Steering Committee Members:**
 
 Accenture, Avanade, Boston Consulting Group, GitHub, Globant, Intel, Microsoft, NTT DATA, Siemens, Thoughtworks, and UBS.
-
 
 **Dive deeper into the community-led sessions and GSF announcements.** [**Watch Decarbonize Software on-demand**](https://decarb.greensoftware.foundation/)**. **

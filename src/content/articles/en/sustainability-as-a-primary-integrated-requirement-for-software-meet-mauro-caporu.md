@@ -62,6 +62,4 @@ Sustainability is deeply ingrained in the fabric of LNU. We are currently involv
 - [https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/](https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/)
 - [https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/](https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/) 
 
-
-
 ![Green Software Foundation and Linnaeus University logos on illustrated green nature background](/assets/articles/sustainability-as-a-primary-integrated-requirement-for-software-meet-mauro-caporu/image.jpg)

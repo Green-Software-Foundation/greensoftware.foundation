@@ -40,6 +40,4 @@ This commitment is reflected in our concept of “absolute digital.” For Almav
 
 As our values align with the principles expressed in the GSF Manifesto, we envision a shared path to enable fairer and more sustainable technological progress. 
 
-
-
 To learn more about our sustainability initiatives, visit our latest Sustainability Report and Almaviva’s website: [Sustainability | AlmavivA](https://www.almaviva.it/en_GB/Sustainability).

@@ -18,8 +18,6 @@ Find a [GSF Global Summit](https://summit.greensoftware.foundation/) near you. 
 
 # GSF Global Summit 2024 Event Schedule
 
-
-
 **October 1, 2024**
 
 - **BCG X | London, UK**
@@ -32,8 +30,6 @@ Time: 1:00 PM CEST
 Time: 6:00 – 9:00 PM CEST
 [Register here](https://grnsft.org/HamburgGlobalSummit2024)
 
-
-
 **October 2, 2024**
 
 - **Globant | São Paulo, Brazil**
@@ -44,22 +40,17 @@ Time: 2:00 – 6:00 PM GMT
 Address: Centenary Way, Birmingham B3 3AY, United Kingdom
 [Register here](https://www.meetup.com/goldman-sachs-birmingham-engineering/events/303464862/?isFirstPublish=true)
 
-
-
 **October 3, 2024**
 
 - **Globant | Buenos Aires, Argentina**
 Time: 10:30 AM ART
 [Follow the GSF Summit website for registration details](https://summit.greensoftware.foundation/)
 
-
 **October 8, 2024**
 
 - **Mastercard | Dublin, Ireland**
 Time: 9:00 AM BST
 [Register here](https://grnsft.org/DublinGlobalSummit2024)
-
-
 
 **October 9, 2024**
 
@@ -72,8 +63,6 @@ Time: 9:00 AM SGT
 - **NTT DATA, Microsoft & Intel | Tokyo, Japan**
 Time: 6:00 – 9:00 PM JST
 [Register here](https://grnsft.org/TokyoGlobalSummit2024)
-
-
 
 **October 10, 2024**
 

@@ -6,7 +6,6 @@ teaserText: "“Green Software is a necessary pathway to a sustainable and prosp
 mainImage: "/assets/articles/fostering-carbon-aware-operating-strategies-meet-jared-temanson-of-nrel/main.jpg"
 ---
 
-
 Jared started his career at NREL in 2009. He worked for several clean tech software startups from 2017-2023, before returning to NREL. He now runs the [Joint Institute for Strategic Energy Analysis’s (JISEA)](https://www.jisea.org/) Catalyzer Initiative. The program focuses on planning and assessment activities around novel, cross-cutting research areas of emerging critical importance and develops new capabilities to support those topics.
 
 # Can you tell us more about NREL?

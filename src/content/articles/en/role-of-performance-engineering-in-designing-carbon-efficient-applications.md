@@ -81,7 +81,6 @@ Tuning techniques like asynchronous callback, caching and explicit garbage colle
 
 ### After Tuning
 
- 
 
 ![Graph showing CPU and memory utilisation percentages over time after performance tuning](/assets/articles/role-of-performance-engineering-in-designing-carbon-efficient-applications/image.png)
 

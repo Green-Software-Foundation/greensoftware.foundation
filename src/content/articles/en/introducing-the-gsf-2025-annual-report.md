@@ -6,7 +6,7 @@ teaserText: "A year in the rearview, and what’s next in 2026"
 mainImage: "/assets/articles/introducing-the-gsf-2025-annual-report/main.png"
 ---
 
-[**Read the 2025 Annual Report **](https://grnsft.org/annual-report-2025)
+[**Read the 2025 Annual Report **](https://grnsft.org/annual-report-2025)
 
 As we look back on the past year, we are proud to share our 2025 Annual Report. It reflects on GSF’s work across the ecosystem, highlights key milestones and achievements, and previews our priorities for 2026. It also helps our members, partners, and broader community stay informed about how we are advancing sustainability.
 
@@ -24,7 +24,7 @@ Last year was marked by several milestones, including: 
 
 Explore the full timeline, growth highlights, and what we are prioritizing next: 
 
-[**Read the Report **](https://grnsft.org/annual-report-2025)
+[**Read the Report **](https://grnsft.org/annual-report-2025)
 
 ## Building on Our Values
 
@@ -34,6 +34,6 @@ Our 2025 achievements show what happens when sustainability is built in the open
 
 See what project teams delivered in 2025 and what is ahead in 2026, including work across the SCI pathway and emerging standards areas. This report shows where the industry is moving and how your organization can contribute to global sustainability efforts. 
 
-[**Read the full Report **](https://grnsft.org/annual-report-2025)
+[**Read the full Report **](https://grnsft.org/annual-report-2025)
 
 Want to become a member? Learn how your organization can [join the GSF](https://greensoftware.foundation/join-us) and help shape the standards defining sustainable software and hardware.

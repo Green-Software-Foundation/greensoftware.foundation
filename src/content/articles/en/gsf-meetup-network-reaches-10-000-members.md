@@ -44,4 +44,3 @@ If you want to start or grow a Meetup group,[ our guide](https://wiki.greensoftw
 
 To find active groups worldwide, attend a local event, and engage with the community, explore the[ GSF Meetup Network. ](https://www.meetup.com/members/341583241/)
 
-

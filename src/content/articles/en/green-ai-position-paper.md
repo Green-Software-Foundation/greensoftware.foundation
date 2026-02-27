@@ -54,8 +54,6 @@ Exploring these concepts would broaden the focus beyond the environmental impact
 
 Given the evolving nature of AI and its applications, the committee will periodically reassess this scope to ensure it remains aligned with the core objectives of Green AI and GAIC’s mission. 
 
-
-
 ![Infographic titled What Is Green AI showing the AI lifecycle stages: Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, and End of Life](/assets/articles/green-ai-position-paper/image.png)
 
 ## Understanding the AI Lifecycle 
@@ -118,7 +116,6 @@ The end-of-life stage refers to decommissioning a no longer maintained AI system
 | **Runtime Operations**       | Model Deployment: <br>- Deployment, roll-out, and people training.<br>Model Operation (including inferencing):<br>- Inferencing  <br> Monitoring:<br>- Monitoring, iteration & reporting<br>- Model Performance Monitoring<br>- FinOps<br>- Consumer (Edge) Device / Datacenter / Cloud Usage<br>Maintenance (for example, model degradation)                                                                                                                                                                                               |
 | **End-of-Life/ Disposal**    | Decommissioning an AI system                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-
 ## Why Is Green AI Important?
 
 In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [water usage](https://arxiv.org/pdf/2304.03271), and [energy consumption](https://arxiv.org/pdf/2301.11047). Some predictions expect data centre emissions [to rise from 180 Mt to 300 Mt in the Base Case by 2035](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions. 
@@ -163,9 +160,7 @@ We encourage AI hardware organizations to actively participate in this conversat
 
 **Become a member**: To actively participate in the work of the Green AI Committee and shape standards and policy in green software, [join us](https://greensoftware.foundation/join-us/). To ensure clarity, a Steering Member status is typically required for a guaranteed seat on the committee, while standard members may be considered through a nomination process. We’re committed to making this process open and straightforward for all who wish to contribute.
 
-
-
-**Further reading **
+**Further reading**
 
 - [https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path](https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path) 
 - [https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B](https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B) 

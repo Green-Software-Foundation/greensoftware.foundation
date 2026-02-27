@@ -11,7 +11,7 @@ This document describes the testing of the SCI of two software applications. The
 
 We used the SCI as defined by its specification. The SCI is a rate; carbon emissions per one unit of R (R pertains to the functional unit - per user, API call etc.).
 
-The equation is as follows:​ ***SCI = (Operational Emissions + eMbodied Emissions) per R*****​**
+The equation is as follows: ***SCI = (Operational Emissions + eMbodied Emissions) per R***
 
 The calculations do not include the embodied emissions of the rest of the computing infrastructure (e.g. the network switches, cooling equipment and other devices that power the network), which are difficult to quantify given that we do not have the necessary information regarding their distribution and usage.
 
@@ -31,12 +31,11 @@ The functional unit or “R” in the SCI equation can be scaled using volumes, 
 ### Operational Emissions (O)
 In the SCI specification, the operational emissions are calculated as:
 
-***O  (Operational emissions) = ( E  (Energy) * I  (Location-based marginal carbon intensity) )*****​
-**
+***O (Operational emissions) = ( E (Energy) * I (Location-based marginal carbon intensity) )***
 
 To calculate the total operational emissions, we also factored in virtual machine usage through the metric value “Resource Share” and the time the software is operating on the hardware per hour using the metric value “Operating Time”. 
 
-***Total operational emissions = ( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share)  * OT (Operating time*)  )  ***
+***Total operational emissions = ( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share) * OT (Operating time) )***
 
 *Energy (E)* – the maximum energy used by the hardware. This data is captured for all servers in the central application database.
 
@@ -46,12 +45,12 @@ To calculate the total operational emissions, we also factored in virtual machin
 
 *Operating Time* (OT) – we assumed the software is running 365 days a year, 24 hours a day. The total hours per year equates to 8760 hours. To determine the hourly operational emissions, we performed the following calculation:
 
-**Total operational emissions per hour = *( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share)  )***
+***Total operational emissions per hour = ( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share) )***
 
 ### Embodied Emissions (M)
 In the SCI specification, the embodied emissions are calculated as:
 
-***M  (Embodied Emissions) = TE  (Total Embodied Emissions) * TS  (Time Share) * RS  (Resource Share)*****​**
+***M (Embodied Emissions) = TE (Total Embodied Emissions) * TS (Time Share) * RS (Resource Share)***
 
 To calculate the total embodied emissions, we calculated individual embodied emissions using the above equation and then summed up all the servers for total embodied emissions:
 

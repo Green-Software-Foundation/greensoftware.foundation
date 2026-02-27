@@ -36,8 +36,6 @@ When it comes to building green software, I’d say:
 2. Consider how much you import when using an open source package - does it come with a tree of dependencies, features, and unused code paths?
 3. [Talk to your peers](https://github.com/orgs/Green-Software-Foundation/discussions), [join a meetup](https://www.meetup.com/pro/gsf/), stay updated on the best practices and technologies that promote sustainability, and never underestimate the difference a single person can make.
 
-
-
 ## How relevant are collaboration and partnerships for green software?
 
 Collaboration and partnerships are essential in driving sustainable practices in technology. Companies can share knowledge, resources, and innovation by working together, speeding up the transition to green software. This cooperative approach fosters collective responsibility for our planet and helps us achieve greater sustainability in the tech industry.

@@ -9,8 +9,6 @@ authors:
     photo: "/assets/articles/authors/arne-tarara.png"
 ---
 
-
-
 By supplying specific input variables and instrumenting the software to output a unit of work variable, the GMT automatically calculates the [SCI metric](https://github.com/Green-Software-Foundation/sci-guide/blob/dev/use-case-submissions/Automated_SCI_Measurements_with_Green_Metrics_Tool.md). Teams can integrate this instrumentation into a standard DevOps infrastructure as code, such as Docker compose files, and into a Git repository, enabling businesses to easily include carbon footprint assessments in their software development processes.
 
 # Limitations of the SCI as a starting point
@@ -63,8 +61,5 @@ In today's rapidly evolving tech landscape, the need for sustainable, energy-eff
 
 The power of automation cannot be understated. With manual processes often proving cumbersome and error-prone, our software streamlines the process by automatically generating the SCI metric, which saves valuable time and ensures precision and consistency.
 
-
-
-*Did you know you can submit your own use case to the GSF? *[*Here is how to get started.*](https://github.com/Green-Software-Foundation/sci-guide/issues/new?assignees=atg-abhishek%2C+Henry-WattTime%2C+navveenb%2C+srini1978&labels=Case-study+submissions&template=case-study-template.md&title=Case-study+submissions)
-
+*Did you know you can submit your own use case to the GSF?* [*Here is how to get started.*](https://github.com/Green-Software-Foundation/sci-guide/issues/new?assignees=atg-abhishek%2C+Henry-WattTime%2C+navveenb%2C+srini1978&labels=Case-study+submissions&template=case-study-template.md&title=Case-study+submissions)
 

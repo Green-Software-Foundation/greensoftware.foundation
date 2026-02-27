@@ -8,8 +8,6 @@ mainImage: "/assets/articles/the-eu-ai-act-insights-from-the-green-ai-committee/
 
 *The views expressed in this article are personal and do not represent the official positions of our member organizations or consensus view of the GSF or the Green AI Committee.*
 
-
-
 The European Union's [**recently published EU AI Act**](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689) is a milestone in AI governance. It is the [first binding regulation](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2021)698792#:~:text=The%20AI%20act%2C%20the%20first%20binding%20worldwide%20horizontal%20regulation%20on%20AI) on AI globally to address the [negative impacts of AI](https://www.cnbc.com/2024/08/01/eu-ai-act-goes-into-effect-heres-what-it-means-for-us-tech-firms.html#:~:text=to%20address%20the%20negative%20impacts%20of%20AI). A few member representatives on the recently formed [Green AI Committee](https://wiki.greensoftware.foundation/governance/committees/green-ai-committee) share their thoughts on the publication of this Act and what it can mean for greening AI:
 
 ## Sanjay Podder, Managing Director at Accenture, Chairperson of the Green Software Foundation, and Co-Chair of the Green AI Committee
@@ -50,11 +48,8 @@ Moreover, the EU AI Act’s demands for disclosure—like energy consumption for
 
 This could deter providers, with companies like Apple and Meta[ citing](https://www.theverge.com/2024/7/18/24201041/meta-multimodal-llama-ai-model-launch-eu-regulations) regulatory unpredictability as reasons for withholding services from the EU. There's a real concern that the Act might push key AI providers away from the European market.
 
-
 ## Yusuke Kobayashi, Manager, Green Innovation Office, NTT DATA
 At NTT DATA, we perceive this Act as the first instance where AI governance has been concretely socially implemented through a risk-based approach. It’s a framework that not only regulates but also ensures accountability while advancing future business and technological developments. It is expected to prevent incidents that may occur due to the premature use of technology. Vendors are anticipated to be judged not only by their ability to develop component technologies but also by their comprehensive ability to implement them socially. There is a concern that it might lead to excessive self-regulation by businesses. Therefore, we look forward to the detailed conditions for applicability and conditions for extraterritorial application.
-
-
 
 ## Nisha Menon, Technical Expert  - Data & AI Architecture at Siemens
 The EU AI act must not have a negative impact on the speed of innovation, also with a view to international competition. Therefore, industry sees a continuous dialog – to which we are happy to contribute – as highly necessary during its implementation to make the best possible use of AI’s potential.   
@@ -63,8 +58,6 @@ Siemens is a global pioneer in Industrial AI and has for many years continuously
 
 On another note, it is highly important not to regulate AI as such nor the underlying mathematics. Also, the “high risk AI systems” will need further detailed implementing measures and guidelines for their risk classification to avoid that the complete sectors would be classified as high-risk.
 
-
-
 ## Jose Lopez, Head of Data Science and Artificial Intelligence at Globant
 The publication of the EU AI Act is undeniably a milestone in the global landscape of AI regulation during a very challenging and uncertain time. The principles and values on AI development align with ethical standards and human rights while also emphasizing the importance of environmental sustainability. These principles deeply resonate with Globant’s AI Manifesto. In the last decade Globant has shown how it can impact sustainable solutions with AI. As a member of the Green Software Foundation, we recognize the Act's significance in promoting a human-centric and trustworthy approach to AI.    
 
@@ -72,16 +65,12 @@ In relation to the business implications, as the Act is just coming into force, 
 
 Regarding environmental concerns, the EU AI Act makes a commendable attempt by including provisions for energy consumption reporting (Article 40.2). We welcome these efforts to integrate environmental considerations into AI development, promoting sustainable practices throughout the AI lifecycle. The Act could have been a great opportunity to create incentives for reducing the software environmental footprint or fostering AI-powered environmental solutions. For a truly green AI future, it is crucial to have clear incentives and robust standards that not only minimize environmental impact but also encourage innovation in sustainable AI solutions.
 
-
-
 ## Vincent Caldeira, APAC CTO for Red Hat representing IBM
 The EU AI Act marks a significant regulatory step forward by setting standards that aim to integrate environmental sustainability into the lifecycle of AI systems. Articles like [4a(f), 12(2a), 28b(2)(d), and 29a(g)](https://www.linkedin.com/pulse/green-codes-evaluating-eu-artificial-intelligence-acts-caldeira-hyyic/) expand a regulatory framework that promotes environmentally sustainable practices in AI alongside goals of fundamental rights protection and sustainable development within the EU.
 
 The Act presents a complex regulatory framework and has gaps that might limit how well it can reduce AI's environmental impact. In the final version of the act, key environmental provisions were watered down, and became mostly voluntary rather than mandatory.. This may require a heavy reliance on standardization bodies, which are often influenced by industry players.
 
 The Act also offers exemptions for open-source AI systems, which could free them from some strict controls placed on high-risk categories. While the intent is good, the tech industry hasn’t agreed on a clear definition of open source AI yet. Without consensus, these exemptions could fail to protect consumers or limit innovation by deviating from open source principles.
-
-
 
 ## Federica Sarro, Professor of Software Engineering at University College London 
 The EU AI Act is a necessary step towards regulating a rapidly evolving field with profound societal implications such as the AI field. It represents both a pioneering framework for ethical AI and a potential catalyst for more sustainable growth.

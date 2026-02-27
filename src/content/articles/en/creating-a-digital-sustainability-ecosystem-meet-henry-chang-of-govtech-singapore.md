@@ -42,7 +42,7 @@ Some examples of our priorities under this three-pronged approach are:
 
 ·       Implementing tools for measuring and analyzing our software and cloud carbon footprint measurements to optimize workloads for lower emissions
 
-## *How can green software help GovTech in achieving its sustainability goals?                         *
+## *How can green software help GovTech in achieving its sustainability goals?*
 Software is a critical enabler of our Smart Nation and Digital Government efforts. While we develop software that enhances Singapore’s liveability, we recognize the need to develop solutions that do not harm the very city that we are working tirelessly to empower.
 
 Today, GovTech operates the government’s digital infrastructure and networks, including government data centers and cloud platforms. We also own and run many products enjoyed by citizens, businesses, and government agencies, and the Singapore Government Tech Stack (SG Tech Stack), a collection of component technologies used by government agencies to deliver digital services seamlessly. Where possible, we adopt the “*Build Once, Use Often*” approach to use standard and reusable components that reduce our digital carbon footprint and result in cost-savings.

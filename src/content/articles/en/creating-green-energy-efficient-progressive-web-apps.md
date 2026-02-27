@@ -29,10 +29,7 @@ Let’s briefly review the various areas where a website consumes energy.
 
 First, start with the server that hosts your site. All countries do not produce electricity in the same way with some electricity emitting more carbon in its creation than others. The [Electricity map ](https://www.electricitymap.org/map)shows you how clean or dirty the electricity is in different parts of the world. For instance, in France, we have particularly decarbonated energy thanks to nuclear power. The Nordic countries offer even greener energy thanks to renewables. Many countries have dirtier energy sources. 
 
-<figure>
-<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-electricity-map-of-europe-showing-clean-and-dirty-electricity-by-nation.png" alt="green-software-foundation-Electricity-map-of-Europe-showing-clean-and-dirty-electricity-by-nation" />
-<figcaption>*Source: Electricitymap.org *</figcaption>
-</figure>
+![Source: Electricitymap.org](/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-electricity-map-of-europe-showing-clean-and-dirty-electricity-by-nation.png)
 
 Where your server is hosted is a choice that can impact your footprint. But this is not as simple as that and I encourage you to read [The Principles of Sustainable Software Engineering](https://principles.green/) as well as [How to measure the power consumption of your backend service](https://greensoftware.foundation/articles/how-to-measure-the-energy-consumption-of-your-backend-service).
 
@@ -53,12 +50,9 @@ Here are some interesting points:
 
 Now let’s quickly review how it works on a smartphone. 
 
-<figure>
-<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component.png" alt="green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component" />
-<figcaption>*Smart phone energy consumption*</figcaption>
-</figure>
+![Smart phone energy consumption](/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component.png)
 
-*Graph extracted from *[*Understanding and Reducing Smartphone Energy Consumption*](https://ts.data61.csiro.au/publications/papers/Carroll:phd.pdf)* by Aaron Carroll*
+*Graph extracted from [Understanding and Reducing Smartphone Energy Consumption](https://ts.data61.csiro.au/publications/papers/Carroll:phd.pdf) by Aaron Carroll*
 
 The element that consumes by far the most energy is the screen and especially its backlight if it is LCD. An OLED screen will consume less energy because each pixel is independent in its lighting. This allows an “absolute” black and especially much lower energy used. 
 
@@ -71,10 +65,7 @@ Thanks to this study, [*How is energy consumed in smartphone display application
 
 I’ve created three web pages: one completely blue, one totally red, and the last one, all black.
 
-<figure>
-<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages.png" alt="green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages" />
-<figcaption>*Comparing smartphone energy consumption for three different web pages*</figcaption>
-</figure>
+![Comparing smartphone energy consumption for three different web pages](/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages.png)
 
 I measured the energy consumption with a power meter on a smartphone with an OLED display: the blue page consumes 1.4W, the red 1.3W, and the black 1W. Indeed, blue light consumes more than red! 
 

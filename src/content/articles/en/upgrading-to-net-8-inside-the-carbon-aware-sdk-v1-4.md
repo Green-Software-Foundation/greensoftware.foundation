@@ -6,8 +6,7 @@ teaserText: "We're revealing what took place behind the scenes and how NTT and N
 mainImage: "/assets/articles/upgrading-to-net-8-inside-the-carbon-aware-sdk-v1-4/main.png"
 ---
 
-*Takuya Iwatsuka, Damien Roux and Yasumasa Suenaga from NTT and NTT DATA explain the .NET8 update for the Carbon Aware SDK.
-*
+*Takuya Iwatsuka, Damien Roux and Yasumasa Suenaga from NTT and NTT DATA explain the .NET8 update for the Carbon Aware SDK.*
 
 As most software nowadays, the [Carbon Aware SDK](https://greensoftware.foundation/articles/celebrating-the-graduation-of-the-carbon-aware-sdk) relies on a stack of utilities, and while adding a new feature is often what’s most appealing for a project, it’s also critical to maintain the stack, especially in a community effort.
 
@@ -99,13 +98,9 @@ The team investigated the logs (Fig. 2), as a container image for AMD64 and Arm6
 
 *Fig.2 Logs in dotnet publish on GitHub Actions*
 
-
-
 Further investigation, aided by a [.NET blog](https://devblogs.microsoft.com/dotnet/improving-multiplatform-container-support/) on multi-platform container support, revealed that an unsupported approach was used for the build and needed to be corrected. Specifically, since .NET 6, QEMU static binaries were used to build container images for multi platforms.
 
 Fortunately .NET blog guides how to build multi platform container images.The workflow was fixed accordingly in [Pull Request #498](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pull/498). Now, the WebAPI container image with .NET 8 can be pulled from [GitHub Packages](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pkgs/container/carbon-aware-sdk) now!
-
-
 
 ## .NET8 Upgrade in Action
 ### Carbon Intensity map

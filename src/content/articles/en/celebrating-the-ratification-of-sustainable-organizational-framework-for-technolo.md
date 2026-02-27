@@ -22,7 +22,7 @@ The framework recognizes that carbon emissions from software don't fall solely u
 
 It provides decision trees, capability assessments, and clear action steps, supported by templates, checklists, and maturity matrices. Addressing the needs of different personas, from CTOs to developers to sustainability leads, SOFT offers an actionable path forward. 
 
-> *"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business." *
+> *"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business."*
 
 ## A Closer Look at SOFT
 

@@ -8,8 +8,6 @@ mainImage: "/assets/articles/theory-of-change/main.png"
 
 > "Our mission and vision tell us the place we want to reach, our Theory Of Change tells us how we will get there." - Asim Hussain, Green Software Foundation.
 
-
-
 ## From Vision and Mission to TOC
 
 Our Vision and our Mission hold the top level values: “Change how we build software, so there are zero harmful environmental effects,” and “Build a trusted ecosystem of people, standards, tooling, and best practices for creating and building green software,” give us the general direction in which we are headed.
@@ -45,7 +43,6 @@ The following are examples of GSF initiatives in the Knowledge domain:
 - Incentivizing organizations to provide internal training for employees
 - Developing custom training programs for organizations
 - Developing training materials and learning programs for leaders
-
 
 ## Pillar 2 - Tech Culture
 

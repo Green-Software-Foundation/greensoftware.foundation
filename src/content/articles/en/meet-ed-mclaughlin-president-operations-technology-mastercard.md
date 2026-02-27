@@ -24,14 +24,13 @@ We are proud of the work we have done to date, but also realize there is always 
 
 We know that the climate crisis requires collective action and that by partnering with like-minded organizations such as the Green Software Foundation (GSF), we can continue to forge new pathways for technology companies to make a positive impact on the environment.  Our aim at Mastercard is to build a digital economy that is both inclusive and sustainable, one that continuously works for – not against – the environment. And the only way we can do that is through collaboration and innovation.
 
-**How does your organization see the future of green software? **
+**How does your organization see the future of green software?**
 
 We are embedding our “[doing well by doing good](https://www.mastercard.com/global/en/vision/corp-responsibility.html)” philosophy in everything we do. In fact, to create shared accountability, we are [now linking compensation](https://www.reuters.com/business/finance/mastercard-link-all-employee-bonuses-esg-goals-2022-04-19/) for all employees directly to priorities across Environmental, Social and Governance (ESG) goals, including decarbonization of our operations.
 
 As we continue to embed sustainability across our business, we are considering all the ways our company can drive positive change – and that includes the work of our technology and engineering teams.
 
 We understand that software, hardware, energy consumption, and emissions are all linked. As an organization with ambitious goals related to net zero, we continue to reduce our own carbon footprint and see green software as another way to further move that needle.
-
 
 Since software drives infrastructure use, creating more sustainable software will increase efficiency of our data centers and generate beneficial impacts across the enterprise. By developing and using “green software,” we envision creating and deploying applications that require fewer hardware resources, less computational energy, and lower associated carbon. 
 

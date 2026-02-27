@@ -6,8 +6,6 @@ teaserText: "Siemens develops state-of-the-art software solutions that help comp
 mainImage: "/assets/articles/creating-technology-with-purpose-meet-carolin-rubner-head-of-research-group-at-si/main.png"
 ---
 
-
-
 As Head of Research Group, Carolin Rubner leads the Sustainable Software Engineering and industrial-grade DevOps practice, part of Siemens[ Company Core Technologies (CCT)](https://www.siemens.com/global/en/company/innovation/siemens-core-technologies.html). Her focus is on the ‘how’ of digitalization and how new solutions and products are developed efficiently with the least resources and carbon emissions.
 
 # How does Siemens pursue sustainability?

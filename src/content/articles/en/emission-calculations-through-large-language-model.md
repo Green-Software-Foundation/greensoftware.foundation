@@ -72,18 +72,13 @@ By following these steps, the solution can effectively estimate software emissio
 
 For more information, connect with [Navveen Balani](https://www.linkedin.com/in/naveenbalani/) or [Srinivasan Rakhunathan](https://www.linkedin.com/in/srinivasanrakhunathan/) on LinkedIn or [GSF Discussions](https://github.com/orgs/Green-Software-Foundation/discussions/new?category=standards-working-group) @navveenb and @srini1978.  
 
-
-
 ## About the Authors
-
 
 **Srinivasan Rakhunathan **
 
 *Srini is a Technical Product Manager with Microsoft. He has a software engineering background and has performed various roles including Developer, Architect, Program Manager etc. He has been involved with the GSF since 2021 and has contributed to projects like SCI specifications, Impact Framework, Green software practices.*
 
 *Srini is also a regular speaker at GSF and Microsoft conferences. His interests are sustainable software engineering, architecture and product management. *
-
-
 
 **Navveen Balani **
 

@@ -20,7 +20,7 @@ Sustainability is at the core of Responsible Tech – our sustainable tech solut
 
 We work with software engineers and technology leaders who see environmental concerns as a much more motivating factor than cost reductions. So, having an organizational structure and the right tools that provide granular data on cost and emissions performance, like the open-source tool that we created, [Cloud Carbon Footprint](https://www.cloudcarbonfootprint.org/) (CCF), enables agency amongst platform teams, which is critical for lasting change. 
 
-We're also proud of the [Responsible Tech Playbook ](https://www.thoughtworks.com/insights/e-books/responsible-tech-playbook-un)we co-created with our client, the United Nations. It has a section on sustainability with links to several GSF resources (e.g., the State of Green Software report, [page 102](https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_responsible_tech_playbook_united_nations.pdf)). 
+We're also proud of the [Responsible Tech Playbook](https://www.thoughtworks.com/insights/e-books/responsible-tech-playbook-un)we co-created with our client, the United Nations. It has a section on sustainability with links to several GSF resources (e.g., the State of Green Software report, [page 102](https://www.thoughtworks.com/content/dam/thoughtworks/documents/e-book/tw_ebook_responsible_tech_playbook_united_nations.pdf)). 
 
 # What is your main goal concerning sustainability and tech?
 

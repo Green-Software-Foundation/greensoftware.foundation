@@ -39,7 +39,7 @@ Having a common terminology to define the software boundary of the SCI applicati
 
 Once the common terminology and software boundary is defined, the scope can be extended to include various use cases like visualising the ontology model, using the model as a lightweight storage format or understanding what changed between two versions of SCI applications by comparing their software boundary. 
 
-For example, assume the first version of SCI application uses three instances of the same hardware types for running the application**.** And** after hardware optimization, **the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
+For example, assume the first version of SCI application uses three instances of the same hardware types for running the application. And after hardware optimization, the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
 
 ## Please elaborate different areas of the project. 
 The project is broken down into several milestones. In each milestone, we would accomplish a specific goal which would help realise the larger vision of the SCI Ontology Project. 

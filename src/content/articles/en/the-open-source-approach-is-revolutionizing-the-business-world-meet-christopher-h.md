@@ -24,8 +24,6 @@ Our engineering excellence courses teach our engineers the very best of coding a
 
  Supporting our clients is a core part of the whole engineering mindset, and it’s about ensuring that we consider challenges such as the negative impact of carbon emissions and do our utmost to reduce them. Having sensible conversations with our clients, such as supporting them to understand the reasons why all their solutions don’t require 100% uptime when jobs are only running for 2 hours a day. Leveraging our skilled architects to help guide a client in the right direction from an ESG perspective around cloud usage and its possible impacts alongside accessibility consulting is also something we’re keen to continue doing.
 
-
-
 ## You’re doing everything right; why join the GSF?
 
 As someone who lives and breathes the open source world as well as sitting on the Open UK leadership I was fortunate enough to attend COP26 a little over a year ago. At this global meeting of world leaders and decision-makers, we spoke about the role of open source in a sustainable future and saw so many synergies between EPAM’s work and the need to build a better world. At an elementary level, e.g., the idea of just reusing code and its impact in terms of not needing additional energy with all its implied carbon emissions was something that immediately aligned with the open source methodology.
@@ -51,8 +49,6 @@ We don't necessarily see green software as a silo, or something to differentiate
 Education is at the core of many of the environmental challenges that the world is facing. There's still a culture of “Oh, that's not for me” or “This isn't relevant to the world that I'm living in.” So, when we talk about the environment, ESG targets, and sustainability, it's about making people wake up and realize that it is indeed relevant to them. In an organization the scale of EPAM, the challenge is getting its nearly 60,000 team members to understand that greening software is something we must be working towards, and we’ve already started with some great steps in this direction.
 
 Education is the hurdle we've got to overcome in order to convince people. So, whether you're an engineer, a product owner, a delivery manager, an account manager, or even a VP, sustainability has to be built into your ways of working, much like we've done with topics such as diversity and inclusion over the last few years.
-
-
 
 ## What’s next for EPAM in terms of sustainability and green software?
 

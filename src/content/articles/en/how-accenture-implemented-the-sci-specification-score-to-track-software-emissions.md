@@ -16,10 +16,6 @@ The SCI specification describes a methodology for calculating the rate of carbon
 ## Technology Stack of Reference Application
 The following graph defines the technology stack for the reference application.
 
-
-
-
-
 ![Architecture diagram showing mobile and desktop clients, API Gateway, Kubernetes compute cluster, and managed database with reporting, security, and monitoring](/assets/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/image.png)
 
 The architecture has an API Gateway that exposes all the required APIs that any web or mobile application can invoke. The API is implemented using microservices and deployed as containers using a container managed service like Azure Kubernetes Service (AKS) or Google Kubernetes Engine (GKE). Autoscaling is configured for the Kubernetes cluster, which scales up or down based on actual runtime workloads.
@@ -49,9 +45,6 @@ Based on the CPU utilization of the nodes, we got the energy curves. Leveraging�
 
 The team then used the data presented to generate an SCI score.
 
-
-
-
 ![Architecture diagram showing mobile and desktop clients, API Gateway, Kubernetes compute cluster, and managed database with reporting, security, and monitoring](/assets/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/image.png)
 
 The VM1 to VM8 represent the nodes running containers that auto-scale based on actual runtime loads. The Database Node provides CPU utilization for the database. Reporting node is the reporting tool, and App Gateway provides API functionality.  Since the cloud vendor abstracted the utilization and node details for API Gateway, the team attributed 5% of the total application emissions to the Managed API Gateway.
@@ -73,21 +66,16 @@ We gained three major takeaways while working on the implementation of the SCI s
 
 1. **Energy calculation** – There are various approaches to calculating energy curves. Some are based on coefficient values (like how many watt-hours it takes to run a virtual server), some are based on statistical methods, and some provide their methodology through APIs. Most of these energy calculation strategies are based on certain approximations. There is no single source of truth, and the intent here is to use the same method for future calculations to compare against the baseline. We documented the various approaches as part of [SCI guidance ](https://sci-data.greensoftware.foundation/E/)to help software practitioners calculate the energy of the software systems. 
 
-
 2. **Embodied emissions** – The type of underlying hardware for running VMs and its embodied emissions are currently abstracted by the cloud vendors. We are forced to use certain approximations based on VM type to calculate the embodied emissions. We have documented our learnings and approaches [here](https://sci-data.greensoftware.foundation/M/).
-
 
 3. **Cloud-managed services emissions** – There are certain managed and shared services like API Gateway, Load Balancer, etc., where the type of hardware is not listed. In such scenarios, you can apply some approximation as we did with the API gateway. Similarly, we used an approximation based on usage (utilization, time) for serverless components.
 
 ## What’s Next   
 The SCI score provided us with a benchmark for the carbon emissions of the reference application. Please note that the data used was approximated and should not be reported as part of carbon accounting. The intent was to develop an SCI score that we track and reduce. Our next step is to reduce the SCI score by applying the three fundamental principles: developing energy-efficient code, using less and efficient hardware for the same amount of workload and making applications carbon-aware.
 
-
 *About Accenture*
 
 [Accenture](http://www.accenture.com/) is a leading global professional services company that helps the world’s leading businesses, governments and other organizations build their digital core, optimize their operations, accelerate revenue growth and enhance citizen services—creating tangible value at speed and scale. We are a talent and innovation led company with 738,000 people serving clients in more than 120 countries. As a founding member of the Green Software Foundation, Accenture has made significant contributions toward the GSF mission of enabling sustainable software. Accenture is particularly active in developing the Software Carbon Intensity (SCI) specification, which is the first methodology that describes how to calculate the rate of carbon emissions for a software system.
-
-
 
 *About the Authors*
 

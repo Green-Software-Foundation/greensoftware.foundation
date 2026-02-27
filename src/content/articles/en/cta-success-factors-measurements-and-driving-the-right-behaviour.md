@@ -83,7 +83,7 @@ Secondly, your software can be optimised to run only when necessary. This could 
 In both situations, your cloud usage is reduced, which then reduces your cloud spending.
 
 ## Key performance indicators (KPIs)
-Having identified our success factors, key performance indicators (KPIs) are the measurements that relate to those factors. We might want to measure the absolute carbon emissions of our software, the software carbon intensity or *rate *of carbon emissions for our software, our cloud spends, or the electricity usage. We might want to measure individual teams, and the amount of time they spend optimising or maintaining code.
+Having identified our success factors, key performance indicators (KPIs) are the measurements that relate to those factors. We might want to measure the absolute carbon emissions of our software, the software carbon intensity or *rate* of carbon emissions for our software, our cloud spends, or the electricity usage. We might want to measure individual teams, and the amount of time they spend optimising or maintaining code.
 
 Ultimately, deciding your KPIs will be up to you and your organisation. But, you should strive to also identify measurements that will prompt discussions if they go awry, to ensure your green initiative is on the right track.
 

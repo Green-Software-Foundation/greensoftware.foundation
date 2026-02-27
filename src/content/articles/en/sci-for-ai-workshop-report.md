@@ -10,8 +10,6 @@ The Software Carbon Intensity (SCI) specification provides a standardized method
 
 > "The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance." (Navveen Balani, Software Standards Working Group Chair)
 
-
-
 SCI for AI builds on the core principles of the SCI specification. However, it also expands and refines these principles in order to address the distinct architecture, deployment patterns, and operational complexity of AI systems.
 
 In early 2025, AI experts from GSF member organizations participated in a series of workshops hosted by the Software Standards Working Group. These sessions were designed to define the GSF approach to AI measurement as well as evaluate existing metrics. The outcomes laid the groundwork for creating the SCI for AI specification, which extends the Software Carbon Intensity (SCI) specification with AI-specific considerations—a major step toward addressing the complexities of measuring AI-related carbon emissions. The material presented in this document reflects a consensus among participating members: 
@@ -50,7 +48,6 @@ Each paradigm has different carbon implications, depending on factors like hardw
 - Music, Video, and Speech Generation
 - Code Generation 
 - Agentic AI (Autonomous Decision-Making)
-
 
 As agentic AI systems grow in autonomy, we must be mindful of their design and environmental impact. Carbon accounting becomes especially complex when these systems trigger multiple downstream, often non-AI, services. Accountability in such chains is still in the early stages of exploration. 
 
@@ -148,7 +145,7 @@ However, this simplicity comes with limitations in scope and transparency, as th
 
 Energy consumption and environmental impacts are tracked using Gen AI models through APIs. It supports major LLM providers such as OpenAI, Anthropic, Mistral AI, and others. 
 
-### [EnergyScore ](https://huggingface.github.io/AIEnergyScore/)
+### [EnergyScore](https://huggingface.github.io/AIEnergyScore/)
 
 #### Description 
 
@@ -279,8 +276,6 @@ The Committee identified these lifecycle stages that apply to Green AI: 
 | **Runtime Operations** | **Model Deployment:**<br>• Deployment, roll-out, and people training<br><br>**Model Operation (including inferencing):**<br>• Inferencing<br><br>**Monitoring:**<br>• Monitoring, iteration & reporting<br>• Model Performance Monitoring<br>• FinOps<br>• Consumer (Edge) Device / Datacenter / Cloud Usage<br><br>**Maintenance (for example, model degradation)** |
 | **End-of-Life/Disposal** | **Decommissioning an AI system** |
 
-
-
 The SCI measurement framework shall be designed to incentivize optimizations across all stages of the AI lifecycle, considering both software and hardware impacts and encompassing all supporting infrastructure and services throughout the lifecycle.
 
 | | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
@@ -328,7 +323,6 @@ ToR = Total Resources: the total number of resources available.
 Given the significant emissions associated with model development (training, testing, and evaluation), these stages should be included in the calculation of embodied emissions. A clear apportionment method is needed, as attribution is more complex than for hardware. 
 
 This level of specificity ensures that even complex or shared components can be measured fairly and consistently, enabling adoption at scale while maintaining accuracy and comparability.
-
 
 | | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
 |---|---|---|---|---|

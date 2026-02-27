@@ -69,8 +69,6 @@ If you have multiple GPUs on your device, you can choose the GPU you want to use
 |  For 1-minute video playing with GPU acceleration      |  49,169        |  256,061           |  154            |  305,384          |
 |  For 1-minute video playback without GPU acceleration  |  799,157       |  245,231           |  131            |  1,044,519        |
 
-
-
 By default, in the task manager you can see the power usage here without GPU acceleration:
 
 ![green-software-foundation-VLC-media-player-power-settings](/assets/articles/vlc-energy-optimization-with-gpu/green-software-foundation-vlc-media-player-power-settings.png)
