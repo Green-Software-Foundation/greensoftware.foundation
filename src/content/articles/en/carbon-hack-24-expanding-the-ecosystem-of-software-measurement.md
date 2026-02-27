@@ -97,36 +97,36 @@ Ioannis Kolaxis (Accenture), Eleonore Gueit (Amadeus), Daniel Lazaro (AVEVA), Ra
 
 
 
-*"More and more clients want to measure their carbon emissions and reduce them. The challenges come when assessing what tools they should use and the methodologies and data used by these tools. The Impact Framework is one tool that can scale measurement across the software industry," shared Ioannis Kolaxis, Director of Technology Sustainability Innovation at Accenture.  *
+> "More and more clients want to measure their carbon emissions and reduce them. The challenges come when assessing what tools they should use and the methodologies and data used by these tools. The Impact Framework is one tool that can scale measurement across the software industry," shared Ioannis Kolaxis, Director of Technology Sustainability Innovation at Accenture.
 
 
 
-*"The one question we get all the time is, 'How do we measure?' Everyone is craving measurement,” noted Eleonore Gueit, Sustainable Engineering Advocate at Amadeus. *
+> "The one question we get all the time is, 'How do we measure?' Everyone is craving measurement,” noted Eleonore Gueit, Sustainable Engineering Advocate at Amadeus.
 
 
 
-"Two things need to happen for greater adoption of IF. The first is that regulators need to demand that companies report using tools like Impact Framework. The second is to apply AI to the framework so it's baked into the tooling," suggests Daniel Lazaro, Senior Technical Program Manager at AVEVA. 
+> “Two things need to happen for greater adoption of IF. The first is that regulators need to demand that companies report using tools like Impact Framework. The second is to apply AI to the framework so it's baked into the tooling,” suggests Daniel Lazaro, Senior Technical Program Manager at AVEVA.
 
 
 
-*"Sustainability is not a top metric for most companies. It is our job to emphasize its benefits and influence our clients to apply similar initiatives and best practices that we have across our internal accelerators and initiatives," shared Raghu Krovvidi, Associate Director at BCG X, the tech build & design unit of Boston Consulting Group. *
+> "Sustainability is not a top metric for most companies. It is our job to emphasize its benefits and influence our clients to apply similar initiatives and best practices that we have across our internal accelerators and initiatives," shared Raghu Krovvidi, Associate Director at BCG X, the tech build & design unit of Boston Consulting Group.
 
 
 
-*"It's not easy for us to measure the carbon footprint of LLMs given their training, inference, and use of different providers. Hence, we are running green software trials in Singapore to measure carbon emissions and are also learning to use the SCI Specification for Generative AI," shared Clifton Phua, Director of Labs at BizTech Group at IMDA.*
+> "It's not easy for us to measure the carbon footprint of LLMs given their training, inference, and use of different providers. Hence, we are running green software trials in Singapore to measure carbon emissions and are also learning to use the SCI Specification for Generative AI," shared Clifton Phua, Director of Labs at BizTech Group at IMDA.
 
 
 
-*"Once you make measurement of KPIs mandatory, as part of your non-functional requirements, and provide an ecosystem of tools and standards, it will lead to greater adoption and improved practice in measuring software for sustainability," highlighted Gadhu Sundaram, Vice President of Application Services at NTT DATA.*
+> "Once you make measurement of KPIs mandatory, as part of your non-functional requirements, and provide an ecosystem of tools and standards, it will lead to greater adoption and improved practice in measuring software for sustainability," highlighted Gadhu Sundaram, Vice President of Application Services at NTT DATA.
 
 
 
-*"We need standards. Measuring carbon emissions in software makes the energy in carbon observable, in other words, traceable," highlighted Bertrand Martin, CEO of Sentry Software.*
+> "We need standards. Measuring carbon emissions in software makes the energy in carbon observable, in other words, traceable," highlighted Bertrand Martin, CEO of Sentry Software.
 
 
 
 ## Get Involved: Contribute to IF
-> *"Through IF, the sustainability world will have watchers. This is how we are going to change the world." *
+> “Through IF, the sustainability world will have watchers. This is how we are going to change the world.”
 
 
 

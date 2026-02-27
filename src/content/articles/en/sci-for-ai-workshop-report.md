@@ -8,9 +8,9 @@ mainImage: "/assets/articles/sci-for-ai-workshop-report/main.png"
 
 The Software Carbon Intensity (SCI) specification provides a standardized method for measuring the carbon emissions associated with software systems. As Artificial Intelligence (AI) becomes an increasingly resource-intensive component of modern software, it is crucial to extend SCI methodology to account for the unique characteristics of AI. 
 
-*“The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance.”*
+> "The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance." (Navveen Balani, Software Standards Working Group Chair)
 
-*(Navveen Balani, Software Standards Working Group Chair) *
+
 
 SCI for AI builds on the core principles of the SCI specification. However, it also expands and refines these principles in order to address the distinct architecture, deployment patterns, and operational complexity of AI systems.
 
@@ -187,17 +187,17 @@ Below are the key dimensions of the rubric, grouped by focus area: 
 
 ### Adoption 
 
-- **Flexibility**:** **Can the metric adapt to emerging AI architectures, including agentic AI, multi-modal systems, or AI that interacts with third-party APIs during inference?
-- **Granularity: **Does the framework break down emissions by component, system stage, or time? Can it provide actionable insight on where emissions come from and where reductions can be made?
-- **Run-Time & Design-Time Applicability: **Is it possible to estimate the environmental impact of an AI system before deployment, during design, planning, or procurement?
-- **Explainability (1–5): **How understandable is the method to non-technical audiences? Can the results be clearly communicated to stakeholders, end-users, or policymakers?
-- **Broad Scope: **Can the framework be applied to the full spectrum of AI paradigms and applications, including symbolic AI, generative AI, and predictive models, as defined in the scope?
+- **Flexibility:** Can the metric adapt to emerging AI architectures, including agentic AI, multi-modal systems, or AI that interacts with third-party APIs during inference?
+- **Granularity:** Does the framework break down emissions by component, system stage, or time? Can it provide actionable insight on where emissions come from and where reductions can be made?
+- **Run-Time & Design-Time Applicability:** Is it possible to estimate the environmental impact of an AI system before deployment, during design, planning, or procurement?
+- **Explainability (1–5):** How understandable is the method to non-technical audiences? Can the results be clearly communicated to stakeholders, end-users, or policymakers?
+- **Broad Scope:** Can the framework be applied to the full spectrum of AI paradigms and applications, including symbolic AI, generative AI, and predictive models, as defined in the scope?
 - **Open Source & Proprietary Applicability:** Is it usable for both open models (e.g., LLaMA running locally) and closed models (e.g., ChatGPT or Claude), either through direct measurement or disclosure-based methodologies?
 
 ### Pathway to Policy & Certification
 
-- **Consensus-Based Development: **Was the framework developed through collaboration across sectors, including organizations with competing interests? Standards developed through consensus are far more likely to be eventually adopted as policy, as broad participation ensures trust and adoption.
-- **IPR Considerations: **Has the metric been developed and released with a Patent Policy, for example, W3C or RAND? 
+- **Consensus-Based Development:** Was the framework developed through collaboration across sectors, including organizations with competing interests? Standards developed through consensus are far more likely to be eventually adopted as policy, as broad participation ensures trust and adoption.
+- **IPR Considerations:** Has the metric been developed and released with a Patent Policy, for example, W3C or RAND? 
 
 ### Existing Standards Alignment:
 
@@ -259,8 +259,7 @@ Other Green AI patterns as detailed here: [https://patterns.greensoftware.founda
 | Use efficient file formats | ✅ | ❌ | ❌ | ❌ |
 | Evaluate tradeoffs between accuracy and efficiency | ❌ | ❌ | ❌ | ❌ |
 
-*[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.
-](https://huggingface.github.io/AIEnergyScore/)
+*[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.](https://huggingface.github.io/AIEnergyScore/)
 
 ## Green AI 
 

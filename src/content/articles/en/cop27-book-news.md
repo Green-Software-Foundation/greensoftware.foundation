@@ -10,13 +10,13 @@ The Foundation wants a future where software produces no harmful environmental e
 
 The most significant bottleneck has been a need for more data and tools to facilitate green software development. Developers are faced with an abundance of choices when building their solutions. They have access to multiple languages and frameworks, each with its strengths and weaknesses, and a wide range of patterns. But, without a clear view of how code impacts the climate, it's unclear which approach is safer for our environment.
 
-The Green Software Foundation aims to ensure practitioners have the tools and resources to write better code for our planet. **This past year was all about making substantial strides in this area. **We set out with a few objectives in mind: 
+The Green Software Foundation aims to ensure practitioners have the tools and resources to write better code for our planet. **This past year was all about making substantial strides in this area.** We set out with a few objectives in mind: 
 
 - Demystify carbon awareness
 - Consolidate relevant information on how to approach carbon computing when building for AI and machine learning, web applications or the cloud
 - Augment formal education in software engineering to fill critical knowledge gaps
 
-**During COP27 at our **[**Decarbonize Software**](https://grnsft.org/decarb-cop27/gsf)** event, we announced significant advancements toward decarbonizing software, which included:**
+**During COP27 at our** [**Decarbonize Software**](https://grnsft.org/decarb-cop27/gsf)** event, we announced significant advancements toward decarbonizing software, which included:**
 
 1. State of Green Software Report
 2. The Green Software Practitioner Course
@@ -54,7 +54,7 @@ Expect insights and answers into: 
 - Green Software across regions and sectors
 - Leading tools for decarbonizing software 
 
-All software practitioners are welcome to contribute their feedback. [**Take the survey now.**](https://stateof.greensoftware.org)** **
+All software practitioners are welcome to contribute their feedback. [**Take the survey now.**](https://stateof.greensoftware.org)
 
 
 
@@ -78,9 +78,7 @@ What practitioners will learn: 
 - Mechanisms of carbon reduction
 - How to score software for carbon emissions
 
-The course consists of multiple online modules. Developers can get trained quickly and acquire the necessary knowledge at their own pace. Each module concludes with a knowledge check. Those who pass the course will receive a certificate of completion. For anyone interested in a career in green software, we encourage you to enroll in this free course. [**Register today**.
-
-](https://learn.greensoftware.foundation)
+The course consists of multiple online modules. Developers can get trained quickly and acquire the necessary knowledge at their own pace. Each module concludes with a knowledge check. Those who pass the course will receive a certificate of completion. For anyone interested in a career in green software, we encourage you to enroll in this free course. [**Register today**.](https://learn.greensoftware.foundation)
 
 ---
 
@@ -116,7 +114,7 @@ C = Grams of carbon emitted 
 
 R = Functional Unit; this is how software scales, for example, per user or per device
 
-We can now measure the rate of carbon emissions for any type of application: console games, cloud applications, mobile applications, web applications, or internet of things (IoT) devices. **With the SCI specification, we have a standardized protocol to measure the carbon emissions of software to achieve wide industry and academic adoption. **
+We can now measure the rate of carbon emissions for any type of application: console games, cloud applications, mobile applications, web applications, or internet of things (IoT) devices. **With the SCI specification, we have a standardized protocol to measure the carbon emissions of software to achieve wide industry and academic adoption.**
 
 The “per R” makes the SCI specification unique and a tool during the development phase for every software domain, every use case, and every person to draw comparisons between similar software and reduce a software's carbon emissions even before it runs.  
 
@@ -155,4 +153,4 @@ We currently have a catalog of 30 speakers with subject-matter expertise willing
 
 ---
 
-**We hope you saw value in our COP 27 Book of News. If you have any questions or feedback, please email **[**media@greensoftware.foundation.**](mailto:media@greensoftware.foundation.)
+**We hope you saw value in our COP 27 Book of News. If you have any questions or feedback, please email** [**media@greensoftware.foundation.**](mailto:media@greensoftware.foundation.)

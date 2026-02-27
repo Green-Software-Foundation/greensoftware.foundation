@@ -38,5 +38,4 @@ In addition to upcoming events organized by peers, members, and supporters, the 
 | Dec 7-8                                                                                                                                                         | [DevTernity](https://devternity.com/)                                                    | Virtual        | Worldwide     | Turning developers into architects and engineering leaders                                                                                                                                                                                        |
 
 Looking for more information on this year’s GSF Decarbonize Software event?
-[Go here.
-](https://decarb.greensoftware.foundation/)
+[Go here.](https://decarb.greensoftware.foundation/)

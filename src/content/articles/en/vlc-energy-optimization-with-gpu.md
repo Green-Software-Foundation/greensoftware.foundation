@@ -62,10 +62,9 @@ If you have multiple GPUs on your device, you can choose the GPU you want to use
 ![green-software-foundation-screenshot-of-graphics-preferences](/assets/articles/vlc-energy-optimization-with-gpu/green-software-foundation-screenshot-of-graphics-preferences.jpg)
 
 ## Energy consumption CPU vs GPU
-**Here's what we get when measuring energy consumption:
-**
+**Here's what we get when measuring energy consumption:**
 
-| **Energy Consumption (millijoules)**                   | **CPU Energy** | **Display Energy** | **Disk Energy** | **Total Energy ** |
+| **Energy Consumption (millijoules)**                   | **CPU Energy** | **Display Energy** | **Disk Energy** | **Total Energy** |
 |-------------------------------------------------------:|---------------:|-------------------:|----------------:|------------------:|
 |  For 1-minute video playing with GPU acceleration      |  49,169        |  256,061           |  154            |  305,384          |
 |  For 1-minute video playback without GPU acceleration  |  799,157       |  245,231           |  131            |  1,044,519        |

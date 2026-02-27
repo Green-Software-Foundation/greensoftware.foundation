@@ -56,7 +56,7 @@ A few sponsors share their reason for supporting a revolution in software measur
 
 
 
-***“If we see a future with Industrial Digital Twins with AI insights then we see more power consumption from compute. We're proud to be sponsoring Carbon Hack 24 and driving more focus on green software development.” Daniel Lazaro, Senior Technical Program Manager, Aveva ***
+***“If we see a future with Industrial Digital Twins with AI insights then we see more power consumption from compute. We're proud to be sponsoring Carbon Hack 24 and driving more focus on green software development.” Daniel Lazaro, Senior Technical Program Manager, Aveva** *
 
 
 

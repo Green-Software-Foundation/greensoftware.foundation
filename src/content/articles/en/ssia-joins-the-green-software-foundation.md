@@ -12,7 +12,7 @@ Software and hardware have traditionally been developed in isolation from one an
 
 For the first time in hardware’s history, software is becoming the central thread that ties everything together to drive sustainability forward. Through the standards working groups and projects led by the Developer Relations Committee, practitioners will have the necessary ecosystems and mechanisms to create standards that integrate seamlessly with hardware, share workload insights to bridge knowledge gaps, and contribute to hardware standards that ensure interoperability across different platforms.
 
-*“In the past, making tech more sustainable has focused heavily on hardware efficiency, often relegating software to a secondary role,” said Sanjay Podder, Former Chair of the GSF Board. “Uniting hardware and software standards creates an opportunity for software to lead the ICT sector in reducing emissions.”*
+> "In the past, making tech more sustainable has focused heavily on hardware efficiency, often relegating software to a secondary role," said Sanjay Podder, Former Chair of the GSF Board. "Uniting hardware and software standards creates an opportunity for software to lead the ICT sector in reducing emissions."
 
 ## 
 A Closer Look at SSIA Joining the GSF

@@ -2,6 +2,8 @@
 
 **IMPORTANT: Never commit directly to `main`. All work must go into the `claude` branch. Create feature branches off `claude` and merge back into `claude`. Only the project owner merges `claude` into `main` for production deploys.**
 
+**IMPORTANT: Never commit without explicit permission from the user. Always ask before committing, even if the work appears complete.**
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview

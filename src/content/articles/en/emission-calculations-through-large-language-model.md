@@ -31,7 +31,7 @@ There is an opportunity to leverage all this information and estimate software e
 
 System designers and architects design software systems. When they create software, they evaluate several technical design options and consider the pros and cons of each. These choices are made upstream in the software development lifecycle, long before lines of code are written, and can significantly affect the software's carbon emissions during operation.
 
-Consider these** **case study examples:
+Consider these case study examples:
 
 1. **E-commerce Site Architecture**: Choosing an Active-Active setup for both primary and secondary regions without evaluating Green Design principles could lead to unnecessary carbon emissions.
 2. **Web Application**: Deciding whether to use an in-memory cache for frequently accessed data can significantly affect energy usage.

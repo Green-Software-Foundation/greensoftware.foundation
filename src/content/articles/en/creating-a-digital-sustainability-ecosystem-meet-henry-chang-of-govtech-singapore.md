@@ -13,7 +13,7 @@ GovTech drives Singapore’s public sector digital transformation by harnessing 
 
 1.     **Products and engineering** – GovTech manages the Whole-of-Government’s infrastructure and network, and develops digital government products and services for citizens, businesses, and government.
 
-2.     **Services **– GovTech provides CIO services for two-thirds of the government agencies in Singapore, supporting their digitalization aspirations and running their      ICT      projects.
+2.     **Services** – GovTech provides CIO services for two-thirds of the government agencies in Singapore, supporting their digitalization aspirations and running their      ICT      projects.
 
 3.     **Governance** – GovTech's Governance Group sets the Whole-of-Government ICT policies and guidelines to ensure the safety and security of Singapore’s government digital infrastructure.
 

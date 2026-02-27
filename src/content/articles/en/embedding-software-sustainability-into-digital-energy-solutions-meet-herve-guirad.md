@@ -62,7 +62,7 @@ We have to think big but start small. Be transparent in our sustainability journ
 
 We aim to embed sustainability into the software domain by leveraging our expertise in energy efficiency and decarbonization and contribute to GSF across various initiatives: 
 
-- **Expertise in Energy Management: ** Our best practices and innovative approaches to energy management solutions and carbon reduction can help shape the standards and tools for green software development. 
+- **Expertise in Energy Management:**  Our best practices and innovative approaches to energy management solutions and carbon reduction can help shape the standards and tools for green software development. 
 - **AI Hub Development**: Our AI Hub, located in India, France, and the US, focuses on using AI to address pressing challenges such as climate change and energy efficiency. By integrating AI with sustainable practices, we can contribute advanced methodologies and insights. 
 - **Committee Participation:** Schneider Electric has a history of participating in committees related to electrical safety and other domains. We plan to replicate this involvement in the digital space by actively participating in GSF committees and developing standards and best practices. 
 

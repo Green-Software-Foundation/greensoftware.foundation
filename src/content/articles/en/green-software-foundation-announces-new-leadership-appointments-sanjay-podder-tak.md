@@ -31,4 +31,4 @@ Director of Communications & Member Relations
 
 namrata@greensoftware.foundation
 
-**The Green Software Foundation (GSF) **is a nonprofit organization under the Linux Foundation. It aims to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. Members of the GSF represent a balanced mix of for-profits, nonprofits, and academia from around the globe and include several Fortune Global 500 firms. The Foundation operates by consensus. Four Working Groups — Standards, Policy, Opensource, and Community — currently oversee the Foundation's ongoing projects.
+**The Green Software Foundation (GSF)** is a nonprofit organization under the Linux Foundation. It aims to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. Members of the GSF represent a balanced mix of for-profits, nonprofits, and academia from around the globe and include several Fortune Global 500 firms. The Foundation operates by consensus. Four Working Groups — Standards, Policy, Opensource, and Community — currently oversee the Foundation's ongoing projects.

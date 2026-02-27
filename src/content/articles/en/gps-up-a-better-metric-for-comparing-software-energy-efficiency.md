@@ -66,13 +66,13 @@ So if EDP is not an effective tool for comparing the efficiency of two programs,
 
 In parallel programming there is a metric Speedup, which is defined as: 
 
-**S**up = **T**ϕ /**T**o
+**S**up =** T**ϕ /**T**o
 
 where **T**ϕ  is the runtime of the baseline code and To is the runtime of the parallelized code. 
 
 Similarly we define a metric Powerup to be: 
 
-**P**up = **P**o /**P**ϕ
+**P**up =** P**o /**P**ϕ
 
 where **P**ϕ is the average power of the baseline code and Po is the average power of the optimized code. 
 
@@ -80,11 +80,11 @@ Here, note that the optimized code goes on top. This gives us a ratio, so if the
 
 The last and most important metric we will introduce is what we call Greenup:
 
-**G**up =** E**ϕ  / **E**o
+**G**up =** E**ϕ  /** E**o
 
 It is worth noting that, because the energy for a program is the product of the runtime and the average power consumption:  
 
-**G**up = (**T**ϕ  × **P**ϕ ) / (**T**o × **P**o) = **S**up /** P**up
+**G**up = (**T**ϕ  ×** P**ϕ ) / (**T**o ×** P**o) =** S**up /** P**up
 
 <figure>
 <img src="/assets/articles/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png" alt="A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants " />
@@ -101,17 +101,17 @@ With Speedup, Powerup and Greenup,  software optimizations of all kinds can be 
 
 This graph covers all possible scenarios and reveals the big picture of software energy efficiency.
 
-**Category 1 **represents a type of optimization where you are using less average power and seeing Speedup. This is the ideal case, and it is often the result of optimizations like making better use of cache to avoid main memory access. 
+**Category 1** represents a type of optimization where you are using less average power and seeing Speedup. This is the ideal case, and it is often the result of optimizations like making better use of cache to avoid main memory access. 
 
 **Category 8** represents the opposite. It is pretty much the worst thing you can do, invest in more power but the program runs slower.
 
-**Category 2 **on the horizontal axis represents optimizations that have no effect on power but decrease overall run-time. This class of optimization is often found from improvements of serial code. That is, the energy gain is purely from performance gain. 
+**Category 2** on the horizontal axis represents optimizations that have no effect on power but decrease overall run-time. This class of optimization is often found from improvements of serial code. That is, the energy gain is purely from performance gain. 
 
 **Category 7** indicates that the modified version of code consumes the same power but degrades performance.
 
-**Categories 3 and 5 **represent cases of higher power compared to the baseline code. These often represent two scenarios of parallelizing serial code. Either the increase in Speedup helps the program finish fast enough that it results in energy savings as in section 3, or the extra power does not lead to sufficient performance improvement thereby consuming more energy as in section 5.
+**Categories 3 and 5** represent cases of higher power compared to the baseline code. These often represent two scenarios of parallelizing serial code. Either the increase in Speedup helps the program finish fast enough that it results in energy savings as in section 3, or the extra power does not lead to sufficient performance improvement thereby consuming more energy as in section 5.
 
-**Categories 4 and 6 **represent cases of lower power compared to the baseline code. This is often the case when using Dynamic Voltage and Frequency Scaling (DVFS) to reduce power consumption by a processor.
+**Categories 4 and 6** represent cases of lower power compared to the baseline code. This is often the case when using Dynamic Voltage and Frequency Scaling (DVFS) to reduce power consumption by a processor.
 
 Category 4 represents a program that runs slower because of DVFS but ultimately consumes less energy. Category 6 represents a program running slower but consuming more energy than the original program.
 

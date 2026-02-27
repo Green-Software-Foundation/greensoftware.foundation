@@ -48,12 +48,12 @@ In the next articles in this series, we will discuss the four areas covered by t
 
 In summary, the paper recommends the following steps for enterprises that operate in the cloud:
 
-- **Select or transition to hosting providers with a **[**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)** to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress towards it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
-- **Host in regions that provide excellent options for sustainable electricity provision. **Cloud providers should indicate which are their preferred regions for sustainable expansion.
-- **Assess the hosting efficiency of cloud providers. **You can do so by asking whether the current strategy for machine utilisation is good enough. Use high density managed services where possible.
+- **Select or transition to hosting providers with a** [**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)** to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress towards it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
+- **Host in regions that provide excellent options for sustainable electricity provision.** Cloud providers should indicate which are their preferred regions for sustainable expansion.
+- **Assess the hosting efficiency of cloud providers.** You can do so by asking whether the current strategy for machine utilisation is good enough. Use high density managed services where possible.
 - **Turn off unnecessary, unused workloads, introduce autoscaling, and rightsize machines.**
 - **Review architecture for expensive tasks** that are on demand or always on but do not need to be.  These are tasks that are expensive in terms of processing, but this often corresponds to $$$. Separate them out and use spot (AWS/Azure) or preemptible (GCP) instances to run them or flexible (e.g. burstable) instance types wherever possible.
-- **Reduce the carbon impact of costly tasks that must be executed on demand. **For example this can be achieved by using more lightweight languages, frameworks or services or by moving more work to the client or edge.  
+- **Reduce the carbon impact of costly tasks that must be executed on demand.** For example this can be achieved by using more lightweight languages, frameworks or services or by moving more work to the client or edge.  
 - **Have a ten year policy on user device longevity.** And don’t let apps that the enterprise has created be a nail in the coffin of working hardware for end users.
 
 Most importantly, enterprises need to measure carbon emissions—or their cost proxy where appropriate—and pick their battles. There is considerable work to do and it’s vital not to waste precious time and resources optimizing software that has little impact. 

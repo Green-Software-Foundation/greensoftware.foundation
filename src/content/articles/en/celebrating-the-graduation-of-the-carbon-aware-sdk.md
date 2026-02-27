@@ -78,11 +78,11 @@ As a project, we’re looking to add geolocation support to the SDK, in a respon
 
 
 
-If you are using the Carbon Aware SDK, you can** **[**submit a use case for review**](https://github.com/Green-Software-Foundation/carbon-aware-sdk/issues/new?assignees=vaughanknight&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions). 
+If you are using the Carbon Aware SDK, you can [**submit a use case for review**](https://github.com/Green-Software-Foundation/carbon-aware-sdk/issues/new?assignees=vaughanknight&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions). 
 
 
 
-If you’re not yet using the Carbon Aware SDK, read about [**Setting up and using the Carbon Aware SDK **](https://carbon-aware-sdk.greensoftware.foundation/docs/quickstart)and [**Selecting a Data Source**](https://carbon-aware-sdk.greensoftware.foundation/docs/tutorial-extras/selecting-a-data-source). 
+If you’re not yet using the Carbon Aware SDK, read about [**Setting up and using the Carbon Aware SDK** ](https://carbon-aware-sdk.greensoftware.foundation/docs/quickstart)and [**Selecting a Data Source**](https://carbon-aware-sdk.greensoftware.foundation/docs/tutorial-extras/selecting-a-data-source). 
 
 
 

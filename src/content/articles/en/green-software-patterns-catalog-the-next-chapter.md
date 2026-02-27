@@ -77,6 +77,6 @@ As the Catalog grows and evolves, we're excited to announce that GS Patterns v2 
 
 To offer your support,[ join the GSF as a member](https://greensoftware.foundation/join-us/). 
 
-Project Leads:** Franziska Warncke (NTT DATA)** and **Liya Mathew (Goldman Sachs)** are driving the vision and execution of GS Patterns v2, aiming to make it more actionable and impactful for the community.
+Project Leads: **Franziska Warncke (NTT DATA)** and **Liya Mathew (Goldman Sachs)** are driving the vision and execution of GS Patterns v2, aiming to make it more actionable and impactful for the community.
 
-A special **thank you **to[*** ***Peter Wadsworth](https://www.linkedin.com/in/petewadsworth/) (Innovation Consultant) and Russ Trow (GSF) for designing and facilitating these workshops.
+A special **thank you** to [Peter Wadsworth](https://www.linkedin.com/in/petewadsworth/) (Innovation Consultant) and Russ Trow (GSF) for designing and facilitating these workshops.

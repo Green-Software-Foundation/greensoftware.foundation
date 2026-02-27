@@ -42,7 +42,7 @@ In this post we will focus on the first: how to improve how your software is run
 
 ## What is Green Software?
 
-Sustainable, aka green, software is designed and coded to require less power and fewer machines (aka **carbon efficiency**) to perform the same tasks. It also aims to draw power at times and in places where the available electricity comes from low carbon sources like wind, solar, geothermal, hydro, or nuclear. This is called **carbon awareness **and is a fundamental concept of sustainable computing**.**   
+Sustainable, aka green, software is designed and coded to require less power and fewer machines (aka **carbon efficiency**) to perform the same tasks. It also aims to draw power at times and in places where the available electricity comes from low carbon sources like wind, solar, geothermal, hydro, or nuclear. This is called **carbon awareness** and is a fundamental concept of sustainable computing.   
 
  
 
@@ -53,7 +53,7 @@ Sustainable, aka green, software is designed and coded to require less power and
 
 ## Operational Efficiency
 
-It is possible to operate software applications in ways that are **carbon aware**, **hardware efficient,** and **energy efficient. **Unfortunately, that isn’t always the default. This concept of operational resource efficiency was pioneered by [Google](https://www.google.com/), although [Azure](https://azure.microsoft.com/en-us/) and [AWS](https://aws.amazon.com/) are catching up.
+It is possible to operate software applications in ways that are **carbon aware**, **hardware efficient**, and **energy efficient**. Unfortunately, that isn’t always the default. This concept of operational resource efficiency was pioneered by [Google](https://www.google.com/), although [Azure](https://azure.microsoft.com/en-us/) and [AWS](https://aws.amazon.com/) are catching up.
 
 Operational efficiency improvements are about achieving the same output with fewer machines and resources. This can potentially [cut carbon emissions by five to tenfold](https://aws.amazon.com/blogs/architecture/optimizing-your-aws-infrastructure-for-sustainability-part-i-compute/). It is comparatively straightforward compared to other sustainability upgrades because services and tools already exist to support operational efficiency, particularly in the cloud. 
 
@@ -80,9 +80,9 @@ You should always close down applications and services that don’t do anything 
 Even if you run your work loads on the public cloud—i.e. operated by someone else—there are still operational efficiency configurations within your control.
 
 - **Spot instances on AWS or Azure, and preemptible instances on GCP** are a key part of allowing the clouds to achieve their high utilisation because they give orchestrators and schedulers discretion over **when** jobs are run. In the immediate term, using them everywhere that you can will make your systems more carbon efficient and cheaper. In the longer term, it will help your systems be more carbon aware, as Google implies [in their recent paper](https://arxiv.org/pdf/2106.11750.pdf) on carbon aware data centre operations.
-- **Overprovisioning reduces hardware and energy efficiency. **Machines can be right sized using, for example, [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) or [Azure’s cost analysis](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis). A simple audit can often identify those ‘zombie’ services which just need to be shut off.
+- **Overprovisioning reduces hardware and energy efficiency.** Machines can be right sized using, for example, [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) or [Azure’s cost analysis](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis). A simple audit can often identify those ‘zombie’ services which just need to be shut off.
 - **Autoscaling**—having machines come online only when they are required—can be linked to CPU usage or network traffic levels or even configured predictively. Autoscaling minimizes the number of machines needed to run a system resiliently. [AWS offers an excellent primer](https://aws.amazon.com/blogs/architecture/architecting-for-reliable-scalability/) on microservice-driven auto-scalability. However, increasing architectural complexity by going overboard on the number of microservices can result in overprovisioning. There’s a balance here. Try to still keep it simple.
-- **Completely on demand or dedicated instance types have no carbon awareness. **Choosing instance types that give the provider more flexibility will increase machine utilisation and cut carbon emissions and costs. For example consider [AWS T3 Instances](https://aws.amazon.com/ec2/instance-types/t3/) or [Azure B-series](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable) or [Google shared-core machine types](https://cloud.google.com/compute/docs/machine-types) that offer bursting capabilities.
+- **Completely on demand or dedicated instance types have no carbon awareness.** Choosing instance types that give the provider more flexibility will increase machine utilisation and cut carbon emissions and costs. For example consider [AWS T3 Instances](https://aws.amazon.com/ec2/instance-types/t3/) or [Azure B-series](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable) or [Google shared-core machine types](https://cloud.google.com/compute/docs/machine-types) that offer bursting capabilities.
 
 It is worth noting that architectures that recognise low priority and/or delayable tasks are easier to operate at high machine utilisation. In the future, the same architectures will be better at carbon awareness. These include serverless, microservice, and other asynchronous (event-driven) architectures. 
 

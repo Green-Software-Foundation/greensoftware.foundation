@@ -18,7 +18,7 @@ With industries paying increasingly more attention to AI’s environmental impac
 
 The belief that sustainability cannot be an afterthought when pursuing technological advancements shined through. As one of the hosts, Dr. Ong Chen Hui, Assistant Chief Executive of BizTech Group, IMDA, put it: 
 
-*“Driving Singapore’s digital sustainability, we want to ensure emerging technologies such as AI are sustainable by design. IMDA believes that innovation and sustainability can be complementary. Working with global partners such as GSF underscores our commitment to co-develop green compute solutions and deliver the impact towards sustainability goals.”*
+> "Driving Singapore's digital sustainability, we want to ensure emerging technologies such as AI are sustainable by design. IMDA believes that innovation and sustainability can be complementary. Working with global partners such as GSF underscores our commitment to co-develop green compute solutions and deliver the impact towards sustainability goals."
 
 We looked ahead and considered necessary steps to shape the next generation of green software and green software engineers, but there seems to be a shared recognition that the pivotal moment to drive sustainability is now. With reducing carbon footprint a leading consideration for most companies, measuring and reporting emissions has become a vital standard that must guide every aspect of software design, development, and deployment.
 
@@ -34,9 +34,9 @@ BCG X, CAST, Globant, Goldman Sachs, IMDA, Intel Japan, Mastercard, Microsoft Ja
 
 A future where software has a zero harmful impact on the environment can only be achieved if we work together—the GSF Global Summit was a joint experience that inspired collective action.    
 
-*“Hosting the Green Software Foundation Summit was an experience that allowed us to connect with leaders and experts committed to a more sustainable future. This event not only reinforced our mission to integrate sustainability into IT strategies, but also inspired our teams and customers to act more consciously.” – Irene Martín, Marketing Manager at Iberia & LatAm | CAST*
+> "Hosting the Green Software Foundation Summit was an experience that allowed us to connect with leaders and experts committed to a more sustainable future. This event not only reinforced our mission to integrate sustainability into IT strategies, but also inspired our teams and customers to act more consciously." – Irene Martín, Marketing Manager at Iberia & LatAm | CAST
 
-*"Events like the Green Software Foundation's London Summit play a vital role in advancing the shift toward sustainable software. BCG X was pleased to host the event, bringing together over 70 leaders in tech, AI, and data science to drive collective progress toward greener, more responsible software solutions." – Laurent Acharian, Senior Marketing Director at BCG X*
+> "Events like the Green Software Foundation's London Summit play a vital role in advancing the shift toward sustainable software. BCG X was pleased to host the event, bringing together over 70 leaders in tech, AI, and data science to drive collective progress toward greener, more responsible software solutions." – Laurent Acharian, Senior Marketing Director at BCG X
 
 Watch [the summit video](https://www.youtube.com/watch?v=U9zIW7OTI4Y&t=55s) and hear GSF Chair Sanjay Podder reflect on how the summit events underpin our global mission to advance sustainable software by educating, inspiring, and empowering participants with actionable solutions for a greener future.
 

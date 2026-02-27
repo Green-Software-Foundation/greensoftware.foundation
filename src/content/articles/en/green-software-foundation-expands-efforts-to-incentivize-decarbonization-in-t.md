@@ -40,7 +40,7 @@ A few of GSF’s steering committee members share their thoughts on the latest d
 
 Please read our [COP27 Book of News](https://docs.google.com/document/d/189dVe6jImIbtOvzYM4pMRBVQnPvnoYpxnT-gjzbqrWI/edit?usp=sharing) for more insight into the latest developments to decarbonize software. 
 
-**Media Contact: **Namrata Narayan | +1 647-886-7179 | namrata@greensoftware.foundation
+**Media Contact:** Namrata Narayan | +1 647-886-7179 | namrata@greensoftware.foundation
 
 **About the Green Software Foundation**
 

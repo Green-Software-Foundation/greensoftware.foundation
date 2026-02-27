@@ -37,7 +37,7 @@ While lowering costs may lead to reduced carbon emissions, it may not since soft
 
 
 
-**Companies should use financial metrics to promote environmental sustainability in the tech sector and tailor their approach to consider the unique environmental impacts of both development and operations. **
+**Companies should use financial metrics to promote environmental sustainability in the tech sector and tailor their approach to consider the unique environmental impacts of both development and operations.** 
 
 
 
@@ -65,8 +65,8 @@ At the GSF, we're working towards a future where data centers operate synergisti
 
 
 
-**We're asking organizations to use tools like the **[**SCI Specification**](https://greensoftware.foundation/articles/software-carbon-intensity-sci-specification-project)** and **[**Impact Framework**](https://if.greensoftware.foundation/)** to examine their software emissions more closely and improve our trajectory towards a net zero future. **
+**We're asking organizations to use tools like the** [**SCI Specification**](https://greensoftware.foundation/articles/software-carbon-intensity-sci-specification-project)** and** [**Impact Framework**](https://if.greensoftware.foundation/)** to examine their software emissions more closely and improve our trajectory towards a net zero future.** 
 
 
 
-**You can **[**hear the full episode**](https://podcasts.bcast.fm/e/xnykm67n-ai-legislation)** on Environment Variables.**
+**You can** [**hear the full episode**](https://podcasts.bcast.fm/e/xnykm67n-ai-legislation)** on Environment Variables.**

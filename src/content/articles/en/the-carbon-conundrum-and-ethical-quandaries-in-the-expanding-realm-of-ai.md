@@ -69,7 +69,7 @@ Federated learning, a decentralized training technique that keeps data on-device
 
 Carbon-efficiency means optimizing software and hardware to achieve the desired output with the least computation and energy expenditure. Carbon awareness, on the other hand, involves adjusting an AI system's operational parameters based on the energy grid's carbon intensity. The system's carbon footprint can be reduced by dynamically selecting the most environmentally friendly times and locations for operation. 
 
-Energy grid disparities, with up to a 30x difference in carbon intensity, highlight the importance of considering **where **AI systems are trained and deployed. Tools like the Azure Sustainability Calculator and cloud providers' internal load balancing contribute to [achieving sustainability goals](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems) in this context.
+Energy grid disparities, with up to a 30x difference in carbon intensity, highlight the importance of considering **where** AI systems are trained and deployed. Tools like the Azure Sustainability Calculator and cloud providers' internal load balancing contribute to [achieving sustainability goals](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems) in this context.
 
 ## An appeal to software developers
 

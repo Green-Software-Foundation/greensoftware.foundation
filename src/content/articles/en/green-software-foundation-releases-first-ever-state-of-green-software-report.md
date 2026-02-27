@@ -18,7 +18,7 @@ The GSF encourages software practitioners to use the SOGS report as a resource t
 
 To help celebrate this momentous occasion, the GSF is hosting a [**live event on June 5th**](https://www.meetup.com/gsf-global/events/293634147) for World Environment Day to introduce green software and key insights shared in the report. 
 
-**Media Contact: **Namrata Narayan | +1 647-886-7179 | namrata@greensoftware.foundation
+**Media Contact:** Namrata Narayan | +1 647-886-7179 | namrata@greensoftware.foundation
 
 [**Click here**](https://drive.google.com/drive/folders/14x_emRJyjcON9Q2vBWIteB9b4Ij22erz?usp=sharing)** for the State of Green Software Media Kit.** 
 

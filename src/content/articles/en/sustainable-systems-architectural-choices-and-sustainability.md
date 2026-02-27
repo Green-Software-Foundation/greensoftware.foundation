@@ -32,7 +32,7 @@ In this post we will focus on the second, how to improve the way your software i
 
 ## What is Green Software?
 
-Sustainable or green software is designed and coded to require less power and fewer machines to perform the same tasks. This is also known as **carbon efficiency. **It also aims to draw power at times and in places where the available electricity is from low carbon sources like wind, solar, geothermal, hydro, or nuclear. This is called **carbon awareness **and is a fundamental concept of sustainable computing**.**   
+Sustainable or green software is designed and coded to require less power and fewer machines to perform the same tasks. This is also known as **carbon efficiency.** It also aims to draw power at times and in places where the available electricity is from low carbon sources like wind, solar, geothermal, hydro, or nuclear. This is called **carbon awareness** and is a fundamental concept of sustainable computing.   
 
 ## Architecting for Minimum Carbon
 
@@ -53,7 +53,7 @@ The techniques involved are often referred to as demand shifting or demand shapi
 
 - **Genuinely time critical, on demand, tasks** that will draw on high carbon electricity are designed efficiently so as to use as little of it as possible.
 - **Jobs are not run at higher urgency than they need**, so that if they can wait for cleaner electricity they will.
-- **Where possible, calculations are pushed to the client and the edge or data is cached in Content Delivery Networks (CDNs) **to minimise network traffic, reduce the need to run on demand processes in data centres, and take full advantage of the energy stored in client batteries (which as time goes on is increasingly likely to be renewably sourced). Patrick Ferris of OCamlLabs says, “p2p, offline-first applications have a role to play in this space. Both aspects work together to remove the need for a centralised service with a high percentage uptime.”
+- **Where possible, calculations are pushed to the client and the edge or data is cached in Content Delivery Networks (CDNs)** to minimise network traffic, reduce the need to run on demand processes in data centres, and take full advantage of the energy stored in client batteries (which as time goes on is increasingly likely to be renewably sourced). Patrick Ferris of OCamlLabs says, “p2p, offline-first applications have a role to play in this space. Both aspects work together to remove the need for a centralised service with a high percentage uptime.”
 - **Data storage policies are frugal.** Databases are optimised; that is data stored is minimised and queries are tuned. Data is compressed before storage, especially when it is for long term storage, and data isn’t stored unless absolutely necessary. 
 
 The above often relies on a microservice or a distributed systems architecture.

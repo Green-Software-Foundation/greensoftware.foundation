@@ -8,7 +8,7 @@ mainImage: "/assets/articles/carbonhack22/main.png"
 
 As the first event of its kind, the CarbonHack22 will run from 13th October - 11th November, coinciding with COP27 Decarbonization Day. Talented developers from around the globe will be engaged to build the best carbon aware application using the GSF Carbon Aware SDK.
 
-*“Carbon Awareness is one of the hottest topics in the green software space, and now with the Carbon Aware SDK, it’s easier than ever to build a carbon aware application,” said Asim Hussain, chairperson of GSF.*
+> "Carbon Awareness is one of the hottest topics in the green software space, and now with the Carbon Aware SDK, it's easier than ever to build a carbon aware application," said Asim Hussain, chairperson of GSF.
 
 Learn more about the CarbonHack22 at [grnsft.org/hack22](http://grnsft.org/hack22)
 

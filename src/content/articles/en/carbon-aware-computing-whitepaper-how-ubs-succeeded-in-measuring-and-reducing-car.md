@@ -55,7 +55,7 @@ The logical next step would be to add location selection abilities to choose reg
 To capture the absolute impact, energy consumption and embodied carbon as per the SCI would have to be included as well. Accurate energy telemetry is needed from cloud and hardware providers. A full SCI score will provide a higher degree of accuracy in determining the carbon output of running software.
 
 
-**Read the full white paper on the Microsoft website: **[https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/](https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/)
+**Read the full white paper on the Microsoft website:** [https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/](https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/)
 
 # How to get involved
 

@@ -6,7 +6,7 @@ teaserText: "Learn about the three main pillars of the GSF strategy: Knowledge, 
 mainImage: "/assets/articles/theory-of-change/main.png"
 ---
 
-*“Our mission and vision tell us the place we want to reach, our Theory Of Change tells us how we will get there.” - Asim Hussain, Green Software Foundation.*
+> "Our mission and vision tell us the place we want to reach, our Theory Of Change tells us how we will get there." - Asim Hussain, Green Software Foundation.
 
 
 

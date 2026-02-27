@@ -46,7 +46,7 @@ To calculate the total operational emissions, we also factored in virtual machin
 
 *Operating Time* (OT) – we assumed the software is running 365 days a year, 24 hours a day. The total hours per year equates to 8760 hours. To determine the hourly operational emissions, we performed the following calculation:
 
-**Total operational emissions per hour = *****( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share)  )***
+**Total operational emissions per hour = *( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share)  )***
 
 ### Embodied Emissions (M)
 In the SCI specification, the embodied emissions are calculated as:

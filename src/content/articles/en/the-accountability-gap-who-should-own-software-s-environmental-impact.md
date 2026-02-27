@@ -28,9 +28,9 @@ We've refined this process using a human-in-the-loop AI-supported system to deli
 
 ### What This Process Will Surface
 
-- **Collective intelligence: **The AI-supported process will uncover how hundreds of practitioners think about accountability as it unfolds. Each individual perspective is woven into broader patterns. Anonymous peer insights challenge or reinforce participants’ views.
+- **Collective intelligence:** The AI-supported process will uncover how hundreds of practitioners think about accountability as it unfolds. Each individual perspective is woven into broader patterns. Anonymous peer insights challenge or reinforce participants’ views.
 - **Comprehensive report:** We'll map where the community finds alignment, where tensions remain, and what that means for practitioners and decision-makers driving change in their organizations.
-- **Proven approach at a new scale: **This applies GSF's consensus-building methodology, enhanced with AI support to work at conference scale. The January report will document both the accountability findings and how this AI-supported approach performed with 800 participants.
+- **Proven approach at a new scale:** This applies GSF's consensus-building methodology, enhanced with AI support to work at conference scale. The January report will document both the accountability findings and how this AI-supported approach performed with 800 participants.
 
 ## Get Involved
 

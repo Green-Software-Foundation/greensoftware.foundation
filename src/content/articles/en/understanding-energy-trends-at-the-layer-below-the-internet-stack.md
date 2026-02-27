@@ -78,7 +78,7 @@ There are different properties for different sources of power on the grid. For e
 
 ### Nuclear power
 
-Nuclear—or at least the current generation nuclear we see generating power on lots of grids today—is known for taking a really long time to build, and is expensive to build. But once it’s set up, you can get a lot of electricity for each unit of nuclear fuel. This means that generators might be able to sell electricity at a low price. But because the plant was so expensive to set up, it pretty much *has to *sell a high volume of power.*** ***That is the only way to really recoup the upfront costs. Often one of the best ways to do this is to agree to sell a lot of it at a low unit price into the market.
+Nuclear—or at least the current generation nuclear we see generating power on lots of grids today—is known for taking a really long time to build, and is expensive to build. But once it’s set up, you can get a lot of electricity for each unit of nuclear fuel. This means that generators might be able to sell electricity at a low price. But because the plant was so expensive to set up, it pretty much *has to* sell a high volume of power. That is the only way to really recoup the upfront costs. Often one of the best ways to do this is to agree to sell a lot of it at a low unit price into the market.
 
 This is compounded by the fact that it’s not easy for nuclear plants to ramp the power output up or down at short notice. If you can’t easily control how much power you’re generating, you’ll again need to ensure you have people agreeing to pay to use it. One way to do this is to sell your power into a wholesale energy market at a lower price than you might otherwise. This is why you can see nuclear represented on the chart as selling at a lower cost of electricity than the other forms of generation.
 
@@ -119,7 +119,7 @@ Also, because you have this variable source of energy feeding into the grid, man
 
 As mentioned earlier, it can be complicated and risky to scale back generation for some generators, especially for big nuclear plants. Because of this, grid operators might sometimes have to *pay* a generator to scale back their power, to account for the extra expense and risk of damage to the power station incurred when doing so. Another option is to just reduce the price so much that people will use more power, balancing things out by increasing demand, instead of reducing supply.
 
-This means that sometimes demand can go so low that it goes *negative.**** ***That is, you can be paid to use power if you are able to tap into wholesale power markets.
+This means that sometimes demand can go so low that it goes *negative.* That is, you can be paid to use power if you are able to tap into wholesale power markets.
 
 ## Cheaper storage and batteries change this even more
 
@@ -132,7 +132,7 @@ Renewables and batteries have effectively created a pincer movement on fossil fu
 
 Over the last decade, we’ve *also* seen the price of battery storage fall. Today they’re between eight and ten times cheaper than they were in 2010. Batteries on the grid can do all kinds of interesting things to help the grid run more smoothly. But, for the purposes of this post, we’re just going to focus on two things they do:
 
-- **Batteries draw power from the grid when energy is cheap** **to charge.** If we’re on a grid where the price of power can go very low or negative, you can see how this would work for them.
+- **Batteries draw power from the grid when energy is cheap to charge.** If we’re on a grid where the price of power can go very low or negative, you can see how this would work for them.
 - **Batteries discharge this energy back into the grid when demand for energy is high.** We know that, as demand increases so does the price people are prepared to pay for power. They can take advantage of this, selling the same kilowatt hours for a higher price than when they went into the battery.
 
 Just like gas fired power stations, batteries don’t need to be running all the time to make money. They just need to be able to store enough energy for it to be useful enough for people to be prepared to pay for it. A lot of the time, you don’t even need hours and hours of storage for this to be useful enough to recoup the costs of the battery, because a battery can cycle its charge so many times over a month or year.

@@ -27,7 +27,7 @@ I have a passion for creating innovative products and applying exponential techn
 
 Technology itself has a carbon footprint. And in my view, the way we design, develop and deploy applications—be it in cloud, on-premises, or standalone software—need to include sustainability as one of the key outcomes. Our first focus should be on reducing the carbon footprint and creating energy efficient applications.
 
-With Software Carbon Intensity Specification (SCI), we are not just looking at measurement, but how to reduce carbon emissions. We can do this by either creating energy** **efficient applications, using less hardware for the same amount of work, or by building carbon aware applications.
+With Software Carbon Intensity Specification (SCI), we are not just looking at measurement, but how to reduce carbon emissions. We can do this by either creating energy efficient applications, using less hardware for the same amount of work, or by building carbon aware applications.
 
 One of the key first steps in SCI is defining the software boundary. This is an interesting problem to solve where we can help enterprises define the software boundary of the SCI application in a unified way. 
 
@@ -39,7 +39,7 @@ Having a common terminology to define the software boundary of the SCI applicati
 
 Once the common terminology and software boundary is defined, the scope can be extended to include various use cases like visualising the ontology model, using the model as a lightweight storage format or understanding what changed between two versions of SCI applications by comparing their software boundary. 
 
-For example, assume the first version of SCI application uses three instances of the same hardware types for running the application**.** And **after hardware optimization, **the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
+For example, assume the first version of SCI application uses three instances of the same hardware types for running the application**.** And** after hardware optimization, **the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
 
 ## Please elaborate different areas of the project. 
 The project is broken down into several milestones. In each milestone, we would accomplish a specific goal which would help realise the larger vision of the SCI Ontology Project. 

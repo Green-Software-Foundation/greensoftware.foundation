@@ -29,7 +29,7 @@ As a result, we’ve had to reset our emissions reduction targets to align with 
 **Our targets:**
 
 - **Scope 1 & 2:** Cut emissions by 60% by 2034
-- **Scope 3:** Reduce emissions by 35% and ensure 70% of our suppliers set science-based targets by 2034 and **Net Zero ambition** by 2050
+- **Scope 3:** Reduce emissions by 35% and ensure 70% of our suppliers set science-based targets by 2034 and** Net Zero ambition** by 2050
 
 **What we’re focusing on:**
 

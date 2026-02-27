@@ -10,7 +10,7 @@ With the approval and publication of version 1.0, the ISO confirms that the SCI 
 
 
 
-"Reaching this milestone represents a collective effort from GSF member organizations," said Sanjay Podder, Responsible AI CTO and Lead for Tech Sustainability Innovation at Accenture, and Chairperson of the GSF. "This achievement unlocks the potential to achieve industry-wide adoption of the SCI Specification, which is crucial in empowering organizations to achieve real-world emissions reductions."
+> "Reaching this milestone represents a collective effort from GSF member organizations," said Sanjay Podder, Responsible AI CTO and Lead for Tech Sustainability Innovation at Accenture, and Chairperson of the GSF. "This achievement unlocks the potential to achieve industry-wide adoption of the SCI Specification, which is crucial in empowering organizations to achieve real-world emissions reductions."
 
 
 
@@ -26,11 +26,13 @@ By adopting the SCI Specification, ICT and Technology companies gain access to a
 
 
 
-"We believe that the opensource SCI Specification will catalyze a new era of sustainable innovation within the technology industry," added Henry Richardson, Senior Analyst at WattTime and Co-chair of the Standards Working Group at the GSF. "And, hopefully, is another indicator for how important collective contributions from the opensource community are to scale green software."
+> "We believe that the opensource SCI Specification will catalyze a new era of sustainable innovation within the technology industry," added Henry Richardson, Senior Analyst at WattTime and Co-chair of the Standards Working Group at the GSF. "And, hopefully, is another indicator for how important collective contributions from the opensource community are to scale green software."
 
 
 
-Technology sustainability is a shared responsibility, and having the right set of tools is crucial for realizing SCI specifications at scale. "We are also making it easy to calculate SCI scores using tools such as the Impact Framework," added Navveen Balani, Co-chair of the Standards Working Group and Impact Framework at the GSF. "We envision that SCI measurement will become a standard part of every developer’s toolbox and the norm in the future."
+Technology sustainability is a shared responsibility, and having the right set of tools is crucial for realizing SCI specifications at scale.
+
+> "We are also making it easy to calculate SCI scores using tools such as the Impact Framework," added Navveen Balani, Co-chair of the Standards Working Group and Impact Framework at the GSF. "We envision that SCI measurement will become a standard part of every developer's toolbox and the norm in the future."
 
 
 

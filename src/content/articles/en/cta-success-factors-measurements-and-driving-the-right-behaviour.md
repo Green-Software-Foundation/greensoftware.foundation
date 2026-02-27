@@ -115,5 +115,4 @@ Feel free to reach out on [Twitter](https://twitter.com/gsfcommunity), [Linkedin
 
 ## Other Articles in the *CTA on Green Software* Series
 
-[CTA: Spreading the Message on Green Software
-](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
+[CTA: Spreading the Message on Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)

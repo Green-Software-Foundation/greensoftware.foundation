@@ -23,9 +23,9 @@ authors:
 
 ## Why do you both find this project exciting? 
 
-**Jenny: **Sustainability and environmental activism can be overwhelming, especially if you are addressing it alone. The opportunity to bring together a community of like-minded and passionate individuals is what motivates us to offer experiences that excite, motivate, and educate others. We are all learning together and events can offer collaborative experiences to grow networks and offer vast opportunities across the globe. 
+**Jenny:** Sustainability and environmental activism can be overwhelming, especially if you are addressing it alone. The opportunity to bring together a community of like-minded and passionate individuals is what motivates us to offer experiences that excite, motivate, and educate others. We are all learning together and events can offer collaborative experiences to grow networks and offer vast opportunities across the globe. 
 
-**Tammy: **Making an impact in any way I can is exciting and fulfilling to me. Working with other technology peers with the same mindset, all working together to learn and discover new ways to accelerate our impact has tremendous value.
+**Tammy:** Making an impact in any way I can is exciting and fulfilling to me. Working with other technology peers with the same mindset, all working together to learn and discover new ways to accelerate our impact has tremendous value.
 
 ## Tell us more about the project 
 
@@ -33,19 +33,19 @@ Our goals are to create inclusive, global experiences for Green Software Foundat
 
 ## What progress have you made so far?
 
-**Jenny: **Planning is underway and we are thrilled to see the global and organisational representation! There are eight host organisations and over 30 regional summits currently being planned for the June Summit. 
+**Jenny:** Planning is underway and we are thrilled to see the global and organisational representation! There are eight host organisations and over 30 regional summits currently being planned for the June Summit. 
 
 The GSF Global Summit will be hosted both virtually and in-person over June 6 to June 17th. Regional hosts can pick the specific date and time they would like to offer the workshop, sessions, and networking opportunities to their attendees. We will then bring the entire globe together in a virtual closing ceremony on June 17, 2022 to bring us all together. 
 
 Responsibilities and projects within the Global Summit include event logistics, content and workshop leaders, designers, demand generation and promotion, community engagement, sustainability leaders, sponsorship management, and video production. 
 
-**Tammy: **I’m focusing on the content for workshops and sustainability aspects of a global event. Reviewing and adding content for the workshops and uncovering use cases, innovation, and sharing that information has been a labour of love. In addition, thinking about how we can change physical event venues to be more sustainable from using local foods and farmers to supply food for the physical venue is exciting!
+**Tammy:** I’m focusing on the content for workshops and sustainability aspects of a global event. Reviewing and adding content for the workshops and uncovering use cases, innovation, and sharing that information has been a labour of love. In addition, thinking about how we can change physical event venues to be more sustainable from using local foods and farmers to supply food for the physical venue is exciting!
 
 ## Why is this project important?
 
-**Jenny: **The Green Software Foundation is driving the narrative around sustainable development. The messaging is publicly available and now is the time to bring together those who are interested in learning more and meeting others. Live events allow attendees to ask questions, gain knowledge in real time, meet others in the industry, gain valuable memories, and adopt behavioural change. 
+**Jenny:** The Green Software Foundation is driving the narrative around sustainable development. The messaging is publicly available and now is the time to bring together those who are interested in learning more and meeting others. Live events allow attendees to ask questions, gain knowledge in real time, meet others in the industry, gain valuable memories, and adopt behavioural change. 
 
-**Tammy: **This project has such a large potential to impact software development with regards to determining the impact of CO2e that software has. The project can help spread the message on how we can reduce that impact and continue to measure and benchmark and share that information globally.
+**Tammy:** This project has such a large potential to impact software development with regards to determining the impact of CO2e that software has. The project can help spread the message on how we can reduce that impact and continue to measure and benchmark and share that information globally.
 
 ## How does Events & Experiences project work?
 
@@ -71,7 +71,7 @@ When you are targeting global impact, you must empower others to take ownership 
 
 ## What can we expect from your project in the near future?
 
-**Jenny: **Growth and expansion. We are looking for progress, not perfection. This is our first GSF Global Summit and we are thrilled with the results thus far. I can only imagine what we will learn from this event, how the membership will grow, and then how we can continue growing engagement through events and experiences. It is an exciting time for the Green Software Foundation!
+**Jenny:** Growth and expansion. We are looking for progress, not perfection. This is our first GSF Global Summit and we are thrilled with the results thus far. I can only imagine what we will learn from this event, how the membership will grow, and then how we can continue growing engagement through events and experiences. It is an exciting time for the Green Software Foundation!
 
 **Tammy:** I’m super excited about having the opportunity to work on standards, innovation, and content for the first GSF Global Summit. I’m looking forward to seeing how it expands and what types of new innovative ways we can test, promote and use to have a meaningful impact.
 

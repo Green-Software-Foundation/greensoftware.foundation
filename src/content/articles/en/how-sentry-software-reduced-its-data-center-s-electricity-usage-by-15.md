@@ -38,11 +38,11 @@ Once Sentry Software had identified its primary source of carbon emissions and t
 
 ### Assessing the energy usage of the data center 
 
-Sentry Software first referred to its **monthly electricity bill** to understand energy usage and carbon emissions. Although valuable, this document provided little information about how the energy was consumed and by what. DCIM tools could have provided a more granular view, but these solutions were too expensive and complex to implement for an SME like Sentry Software. Sentry Software needed a cost-effective and easy-to-implement solution. It opted for its own monitoring tool, **Hardware Sentry**, to obtain the** power consumed by each system** and calculate the **energy consumed by the overall IT infrastructure**.
+Sentry Software first referred to its **monthly electricity bill** to understand energy usage and carbon emissions. Although valuable, this document provided little information about how the energy was consumed and by what. DCIM tools could have provided a more granular view, but these solutions were too expensive and complex to implement for an SME like Sentry Software. Sentry Software needed a cost-effective and easy-to-implement solution. It opted for its own monitoring tool,** Hardware Sentry**, to obtain the** power consumed by each system** and calculate the** energy consumed by the overall IT infrastructure**.
 
 ![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
-To make the information available to the stakeholders, the Sentry Team created specific [Grafana dashboards](https://grafana.com/grafana/dashboards/17223-hardware-sentry-main/) displaying in [real-time](https://hws-demo.sentrysoftware.com/d/-GV2ChOnz/hardware-sentry-main?orgId=1) the **overall power consumption** of the data center, the energy consumed **daily**, **monthly**, and **yearly** and the resulting **CO₂ emissions**.
+To make the information available to the stakeholders, the Sentry Team created specific [Grafana dashboards](https://grafana.com/grafana/dashboards/17223-hardware-sentry-main/) displaying in [real-time](https://hws-demo.sentrysoftware.com/d/-GV2ChOnz/hardware-sentry-main?orgId=1) the **overall power consumption** of the data center, the energy consumed** daily**,** monthly**, and** yearly** and the resulting** CO₂ emissions**.
 
 ![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
@@ -64,6 +64,6 @@ Every morning, the system administrators configured the air conditioning system 
 
 ### Assessing the results 
 
-Increasing the data center temperature from 18°C to 27°C resulted in **a decrease of 15% in energy required for air conditioning** and **7% in carbon emissions**. These impressive results have been obtained by optimizing the server room's temperature – no additional actions have been performed. Even though the energy reduction of 15% was lower than anticipated, Sentry Software believes that other data centers could achieve similar energy reductions. 
+Increasing the data center temperature from 18°C to 27°C resulted in **a decrease of 15% in energy required for air conditioning** and** 7% in carbon emissions**. These impressive results have been obtained by optimizing the server room's temperature – no additional actions have been performed. Even though the energy reduction of 15% was lower than anticipated, Sentry Software believes that other data centers could achieve similar energy reductions. 
 
 Sentry Software hopes that other companies will follow their path and encourages anyone interested in reducing the environmental impact of their IT infrastructure to download the free-to-use solution [Hardware Sentry](https://www.sentrysoftware.com/products/hardware-sentry.html) and the associated [Grafana dashboards](https://grafana.com/about/events/grafanacon/2023/session/grafana-opentelemetry-to-reduce-electricity-usage-at-sentry-software/).

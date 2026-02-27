@@ -63,7 +63,7 @@ There are three effective ways to use the energy-saving functions of the hardwar
 Software is important to make hardware work effectively as well as hardware itself. We can make efficient and low-carbon software by understanding hardware functions and utilizing libraries.
 
 ### 6. Panel discussion on future Green Software:
-**Moderator: **
+**Moderator:** 
 
 - Kenichiro Hamano, NTT DATA
 

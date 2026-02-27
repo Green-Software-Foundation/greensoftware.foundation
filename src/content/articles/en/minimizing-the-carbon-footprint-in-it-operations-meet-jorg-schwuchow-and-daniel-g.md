@@ -12,12 +12,12 @@ Daniel Geisel has been with Mercedes-Benz since 2009 and took over as CEO of Mer
 
 # Can you give us an idea about the solutions your organization provides?
 
-- **Jörg Schwuchow: **As part of the global IT organization of Mercedes-Benz, we provide the IT Infrastructure and hardware, software-ecosystems, and digital solutions to our internal business partners across the company.  
+- **Jörg Schwuchow:** As part of the global IT organization of Mercedes-Benz, we provide the IT Infrastructure and hardware, software-ecosystems, and digital solutions to our internal business partners across the company.  
 - **Daniel Geisel:** As a subsidiary, strategic partner, and innovation driver, Mercedes-Benz Tech Innovation develops digital products and software solutions exclusively for Mercedes-Benz.
 
 # What is your main goal concerning sustainability within your organization?
 
-- **Jörg Schwuchow: **A core element of our sustainable business strategy is “Ambition 2039”. The ambition is to make our entire fleet of new vehicles net carbon-neutral along the entire value chain and over the vehicles' entire life cycle by 2039. In the IT organization we support this ambition with a clear strategy to minimize our carbon footprint by focusing on avoiding and reducing carbon emissions in our own IT operational business and along our value chain. To achieve this, we are raising awareness among our employees and business partners for sustainability and establishing standards and tools for an easy, intuitive, and holistic measurement of CO2. 
+- **Jörg Schwuchow:** A core element of our sustainable business strategy is “Ambition 2039”. The ambition is to make our entire fleet of new vehicles net carbon-neutral along the entire value chain and over the vehicles' entire life cycle by 2039. In the IT organization we support this ambition with a clear strategy to minimize our carbon footprint by focusing on avoiding and reducing carbon emissions in our own IT operational business and along our value chain. To achieve this, we are raising awareness among our employees and business partners for sustainability and establishing standards and tools for an easy, intuitive, and holistic measurement of CO2. 
 
 # What does green software mean to you?
 

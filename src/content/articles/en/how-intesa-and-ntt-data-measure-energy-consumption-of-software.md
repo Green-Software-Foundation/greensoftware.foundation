@@ -7,36 +7,36 @@ mainImage: "/assets/articles/how-intesa-and-ntt-data-measure-energy-consumption-
 ---
 
 # Executive Summary 
-**Intesa Sanpaolo (ISP)**, as a responsible business entity, acknowledges the importance of adopting sustainable practices to minimize its environmental impact. One of the key challenges that the bank faces in this regard is to **track and measure **energy consumption and** carbon emissions associated with software and hardware usage.** To address this challenge, Intesa Sanpaolo requires a monitoring tool that can provide accurate data on its environmental impact and help identify opportunities for improvement.
+**Intesa Sanpaolo (ISP)**, as a responsible business entity, acknowledges the importance of adopting sustainable practices to minimize its environmental impact. One of the key challenges that the bank faces in this regard is to **track and measure** energy consumption and **carbon emissions associated with software and hardware usage.** To address this challenge, Intesa Sanpaolo requires a monitoring tool that can provide accurate data on its environmental impact and help identify opportunities for improvement.
 
 To tackle this need, **NTT Data**, as a leading IT services provider, **has developed several assets framed in a conceptual framework based on 4 phases of intervention: Design, Development, Monitoring, Refactoring.**
 
 ![Process flow diagram with four phases: Design, Develop and Deploy, Monitoring, and Refactoring](/assets/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software/image.png)
 
 ## Following this framework, ISP started with Development and Monitoring phases.
-In the context of **development phase**,** **ISP developed the Green Index, a measure of code sustainability that helps ensure our software products are more efficient and environmentally friendly.
+In the context of **development phase**, ISP developed the Green Index, a measure of code sustainability that helps ensure our software products are more efficient and environmentally friendly.
 
 In the context of **monitoring phase**, thanks to **NTT Data’s proprietary monitoring tool** Intesa Sanpaolo is currently able to track and monitor its IT’s energy and carbon footprint. The primary purpose of this tool is to help the bank gain a comprehensive understanding of its environmental impact and identify areas where it can reduce its carbon footprint and optimize its software and hardware usage.
 
-The monitoring tool uses two main key performance indicators (KPIs):** CO2eq** for overall carbon emissions and **SCI** for emission rates, as recommended by the Green Software Foundation (GSF). By using these KPIs, the tool enables Intesa Sanpaolo to measure its carbon emissions and energy consumption accurately and **identify opportunities for improvement**.
+The monitoring tool uses two main key performance indicators (KPIs): **CO2eq** for overall carbon emissions and **SCI** for emission rates, as recommended by the Green Software Foundation (GSF). By using these KPIs, the tool enables Intesa Sanpaolo to measure its carbon emissions and energy consumption accurately and **identify opportunities for improvement**.
 
 Using these solutions, Intesa Sanpaolo has gained valuable insights into its energy and carbon footprint, aligning the IT Department with the bank's commitment to sustainability and responsible business practices, demonstrating its dedication to environmental stewardship and promoting sustainable growth.
 
 ## Description of problem
 As one of the largest banking institutions in Italy, Intesa Sanpaolo operates a complex network of IT systems that support its business operations. These systems include servers, storage devices, and other hardware components.
 
-With the increasing focus on sustainability and the need to reduce carbon emissions, Intesa Sanpaolo recognized the importance of** measuring and reducing the energy consumption and carbon emissions related to its IT systems. **However, tracking these metrics across a large and complex IT infrastructure presented a significant challenge.
+With the increasing focus on sustainability and the need to reduce carbon emissions, Intesa Sanpaolo recognized the importance of **measuring and reducing the energy consumption and carbon emissions related to its IT systems.** However, tracking these metrics across a large and complex IT infrastructure presented a significant challenge.
 
 Intesa Sanpaolo's IT system managers understood the **need to address the impact of IT systems on the environment**, and their search for solutions focused on finding ways to reduce this impact while still meeting business needs. With a clear recognition of the importance of complying with the business plan, which included specific ESG goals, they sought to **align the function of IT with the overall business strategy**, and to identify **opportunities for IT to contribute to the achievement of ESG objectives**. This required a comprehensive understanding of the impact of IT systems on the environment, and a commitment to finding ways to reduce this impact while still maintaining effective and efficient business operations.
 
-One of the challenges is to introduce a methodology for developing new software that is designed sustainably. Additionally, implementing a** reliable and accurate** monitoring tool to identify areas of high energy consumption and carbon emissions is essential to prioritize areas for improvement. This tool will serve as a compass for refactoring existing solutions in order to optimize energy efficiency and reduce the carbon footprint of Intesa Sanpaolo.
+One of the challenges is to introduce a methodology for developing new software that is designed sustainably. Additionally, implementing a **reliable and accurate** monitoring tool to identify areas of high energy consumption and carbon emissions is essential to prioritize areas for improvement. This tool will serve as a compass for refactoring existing solutions in order to optimize energy efficiency and reduce the carbon footprint of Intesa Sanpaolo.
 
 ## How the use case solves the problem
 A more efficient IT is achieved through a recursive system that is based on four steps: Design, Develop, Measure and Refactor through improvement strategies, and implementing the improvement. The four steps are replicated, until the desired level of performance is achieved.
 
 ![Process flow diagram with four phases: Design, Develop and Deploy, Monitoring, and Refactoring](/assets/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software/image.png)
 
-With the final objective of introducing software sustainability in the **development phase**,** **ISP introduced the **Green Index**, a measure of code sustainability that helps ensure software products are environmentally friendly and efficient. This **indicator is** used to **measure how sustainable ISP developers (as well as partners & suppliers) are in writing code.**
+With the final objective of introducing software sustainability in the **development phase**, ISP introduced the **Green Index**, a measure of code sustainability that helps ensure software products are environmentally friendly and efficient. This **indicator is** used to **measure how sustainable ISP developers (as well as partners & suppliers) are in writing code.**
 
 **The score is based on** **static analysis of code**, which is performed using **SonarQube**, a widely used code quality management tool that helps to continuously inspect code for bugs, vulnerabilities, and code smells. The rules used to calculate the Green Index are derived from the analysis of standards provided by the Consortium for Information and Software Quality (**CISQ**). The CISQ standards cover various aspects of software quality, such as security, maintainability, reliability, and efficiency, and are widely recognized and adopted in the software industry. By leveraging the power of SonarQube and the expertise of CISQ, software products can be not only functional and reliable but also environmentally friendly and efficient: in fact, with the Automated Source Code CISQ Performance Efficiency Measure (**ASCPEM™**) specification we can establish a standard measure of performance efficiency by **detecting violations of good architectural and coding practices that may result in inefficient operation**, such as performance degradation or excessive use of processor resources.[[1]](#_msocom_1) 
 
@@ -75,7 +75,7 @@ The monitoring tool helped Intesa Sanpaolo to monitor and manage the carbon emis
 
 By optimizing these services for energy efficiency, Intesa Sanpaolo was able to **reduce its carbon emissions** while maintaining a high level of service quality.
 
-In addition to reducing carbon emissions, Intesa Sanpaolo's collaboration with NTT Data also contributed to **advancements in the issue of standard setting for software sustainability**. By working closely with NTT Data, Intesa Sanpaolo was able to **identify and adopt best practices for sustainable IT systems** and** share these practices with others in the industry**.
+In addition to reducing carbon emissions, Intesa Sanpaolo's collaboration with NTT Data also contributed to **advancements in the issue of standard setting for software sustainability**. By working closely with NTT Data, Intesa Sanpaolo was able to **identify and adopt best practices for sustainable IT systems** and **share these practices with others in the industry**.
 
 The implementation of the monitoring tool and the adoption of sustainable IT practices is helping Intesa Sanpaolo to **achieve its environmental targets** and reduce its carbon emissions by a significant margin. This not only contributed to the bank's commitment to sustainability and responsible business practices, but also resulted in cost savings and improved operational efficiency.
 

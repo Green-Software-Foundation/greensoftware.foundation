@@ -90,4 +90,4 @@ Angel Cataron, Asim Hussain, Charlotte Degot, Chris Howard, Dan Benitah, Diana D
 Accenture, Avanade, Boston Consulting Group, GitHub, Globant, Intel, Microsoft, NTT DATA, Siemens, Thoughtworks, and UBS.
 
 
-**Dive deeper into the community-led sessions and GSF announcements. **[**Watch Decarbonize Software on-demand**](https://decarb.greensoftware.foundation/)**. **
+**Dive deeper into the community-led sessions and GSF announcements.** [**Watch Decarbonize Software on-demand**](https://decarb.greensoftware.foundation/)**. **
