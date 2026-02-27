@@ -22,9 +22,35 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
   month: "long",
   year: "numeric",
 });
+
+const seoDescription = article.data.description || article.data.summary || article.data.teaserText || "";
+const authorNames = article.data.authors?.map((a) => a.fullName) || [];
 ---
 
-<Layout>
+<Layout
+  title={`${article.data.title} | Green Software Foundation`}
+  description={seoDescription}
+  ogImage={article.data.mainImage}
+  ogType="article"
+  article={{
+    publishedTime: article.data.date.toISOString(),
+    authors: authorNames,
+  }}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.data.title,
+    "description": seoDescription,
+    "datePublished": article.data.date.toISOString(),
+    "image": article.data.mainImage ? new URL(article.data.mainImage, "https://greensoftware.foundation").href : undefined,
+    "author": authorNames.length > 0 ? authorNames.map((name) => ({ "@type": "Person", "name": name })) : { "@type": "Organization", "name": "Green Software Foundation" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Green Software Foundation",
+      "url": "https://greensoftware.foundation",
+    },
+  })} />
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"
