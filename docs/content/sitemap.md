@@ -6,160 +6,245 @@
 
 ## Overview
 
-Navigation structure and full sitemap for the GSF website rebuild. Uses a mega-menu pattern with 4 top-level hoverable items, a standalone Assemblies link, search, and a persistent CTA button.
+Navigation structure and full sitemap for the GSF website rebuild. Uses a mega-menu pattern with 4 top-level hoverable items, search, and a persistent CTA button.
 
 ## Navigation Bar
 
-```
-[Logo]   What We Do ▾   Resources ▾   Assemblies   About ▾   [🔍]   [Discuss your challenges]
+```text
+[Logo]   Standards ▾   Adoption ▾   Community ▾   About ▾   [🔍]   [Discuss your challenges]
 ```
 
-- **What We Do** — mega-menu (5 columns)
-- **Resources** — mega-menu (3 columns)
-- **Assemblies** — single page, no dropdown
-- **About** — mega-menu (2-3 columns)
+- **Standards** — mega-menu (3 columns: Software, Hardware, Process)
+- **Adoption** — mega-menu (3 columns: Education, Policy & Research, Tools)
+- **Community** — mega-menu (3 columns + sub-section: Listen & Learn, Connect, Get Recognised, Events)
+- **About** — mega-menu (3 columns: Organisation, Impact, For Members)
 - **Search** — icon, opens search overlay
 - **CTA** — styled as button, links to /membership/
 
 ## Mega-Menu Panels
 
-### What We Do
+### Standards
 
-```
-Standards           Policy          Education             Research
-──────────          ──────          ──────────            ──────────
-Overview            Overview        Overview              Overview
-SCI                 Policy Radar    Practitioner Course   State of Green
-SOFT                                SOFT Essentials         Software
-WDPC                                SCI for AI Course
-SCI for AI                          IF Course
-Certification                       Patterns
-                                    Awesome Green Software
-```
+```text
+Software                     Hardware                Process
+──────────                   ──────────              ──────────
+SCI                          WDPC                    Certification
+  ISO-certified metric         Data centre             Get certified in
+  for software carbon           power and               green software
+  intensity                     cooling                 specifications
+                                efficiency
+SOFT                                                 Assemblies
+  Framework for              SEE                       AI-facilitated
+  organisational               Software Energy          consensus at
+  transformation               Efficiency               scale
 
-**Notes:**
-- Policy Radar is a dedicated sub-page under Policy
-- Education courses mostly redirect to external platforms
-- Patterns redirects to external
-- Awesome Green Software redirects to external
-- Research Overview page includes white papers inline; State of Green Software is a separate linked item
-- Standards Overview covers how we develop standards and our process
+SCI for AI
+  Carbon measurement
+  for AI systems
 
-### Resources
+SWE
+  Software Water
+  Efficiency
 
-```
-Tools                   Articles            Community
-──────                  ──────────          ──────────
-Carbon Aware SDK        All Articles        Environment Variables (podcast)
-Carmen                  (filtered by:       CXO Bytes (podcast)
-Impact Framework          member Q&As,      Community Platform
-                          research,         Badges Platform
-                          updates,          Events
-                          news,               Summit
-                          etc.)               Carbon Hack
-
-**Notes:**
-- Tools lives under Resources only (not duplicated in What We Do)
+All standards →
 ```
 
 **Notes:**
-- Articles is a single listing page with a filter/tag system, not separate pages per type
-- Community sub-pages may be a mix of internal pages and external redirects
-- Badges Platform links to badges.greensoftware.foundation
 
-### Assemblies (no dropdown)
+- Each standard has a short description line underneath
+- Software and Hardware tracks separated to highlight that GSF covers both
+- "All standards →" links to `/standards/` which lists all standards including those in flight
+- Certification description: get certified on the specifications
+- Assemblies description: AI-facilitated consensus at scale
 
-Single page. AI-facilitated consensus process. What it is, how it works, past assemblies, upcoming events.
+### Adoption
+
+```text
+Education               Policy & Research       Tools
+──────────              ─────────────────       ──────
+Courses →               Manifesto               Carbon Aware SDK
+Patterns →              Policy Radar              SDK for building
+Awesome Green             Track emerging            carbon-aware
+  Software →              legislation and           applications
+                          regulatory trends
+                        Policy Engagement       Carmen
+                        State of Green            Automated carbon
+                          Software                  reporting for
+                        All research →              cloud workloads
+
+                                                Impact Framework
+                                                  Measure the carbon
+                                                  footprint of your
+                                                  software
+```
+
+**Notes:**
+
+- Education items all link externally (courses to learning platform, patterns and awesome green software to their own sites)
+- Policy Radar is a dedicated sub-page under `/policy/`
+- Tools each have a description line
+- "All research →" links to `/research/`
+
+### Community
+
+```text
+Listen & Learn          Connect                 Events
+──────────              ──────────              ──────
+Environment Variables   Community Platform      Summit
+  Practitioner-focused  Newsletter              Carbon Hack
+  podcast →               (sign up + archive)
+CXO Bytes
+  C-suite focused       Get Recognised
+  podcast →             ──────────────
+Articles                Badges
+                        Champions Programme
+
+About our community →
+```
+
+**Notes:**
+
+- Podcasts link externally
+- Community Platform links externally
+- Newsletter is a sign-up page that also shows the archive
+- Articles links to `/articles/` (single page with filter system)
+- "About our community →" links to `/community/` landing page
 
 ### About
 
-```
-Organisation            Impact              For Members
-──────────              ──────              ────────────
-Overview                Success Stories     Member Directory → external
-Governance &            Press & Media       Member Playbook → external
-  Leadership
-History
-Partnerships
-Brand & Assets
+```text
+Organisation            Impact                  For Members
+──────────              ──────                  ────────────
+About                   Success Stories         Member Playbook →
+Governance &            Articles                Member Onboarding
+  Leadership            Press & Media           Employee Registration
+History                                           If you're an employee
+Brand & Assets                                    of an existing member
+Member Directory →                                organisation, register
+Partner Directory →                               here to join working
+Working Groups →                                  groups and initiatives
+Committees →
+Projects →
 ```
 
 **Notes:**
-- Impact is a single page featuring success stories and press/media
-- Member Directory and Playbook are external links (footer also)
-- Brand & Assets includes press kit, style guide, illustration library, logo downloads
+
+- "About" is the mission/how we work page
+- Governance covers leadership, steering committee, other committees
+- Member Directory, Partner Directory, Working Groups, Committees, and Projects all link to the external directory site
+- Impact is a single page featuring success stories, articles (cross-linked), and press & media
+- Member Playbook links externally
+- Employee Registration includes explanatory text for employees of existing member organisations
 
 ## Full Sitemap
 
-> **Note:** WHAT WE DO, RESOURCES, ABOUT etc. are mega-menu grouping labels only — not URL segments. All routes are top-level (e.g. `/standards/`, not `/what-we-do/standards/`).
+> **Note:** STANDARDS, ADOPTION, COMMUNITY, ABOUT are mega-menu grouping labels only — not URL segments. All routes are top-level (e.g. `/standards/`, not `/standards-menu/standards/`).
 
-```
+```text
 greensoftware.foundation
 │
 ├── / (Homepage)
 │
-├── # WHAT WE DO (menu group — not a URL)
-│   ├── /standards/
-│   │   ├── Overview (how we develop standards, our process)
-│   │   ├── /standards/sci/
-│   │   ├── /standards/soft/
-│   │   ├── /standards/wdpc/
-│   │   ├── /standards/sci-ai/
-│   │   └── /standards/certification/
-│   ├── /policy/
-│   │   ├── Overview
-│   │   └── /policy/radar/
-│   ├── /education/
-│   │   ├── Overview (links to all courses)
-│   │   ├── Practitioner Course → external
-│   │   ├── SOFT Essentials → external
-│   │   ├── SCI for AI Course → external
-│   │   ├── IF Course → external
-│   │   ├── /patterns/ → external
-│   │   └── Awesome Green Software → external
-│   └── /research/
-│       ├── Overview (includes white papers)
-│       └── State of Green Software
+├── # STANDARDS (menu group — not a URL)
+│   └── /standards/
+│       ├── /standards/sci/
+│       ├── /standards/soft/
+│       ├── /standards/wdpc/
+│       ├── /standards/sci-ai/
+│       ├── /standards/swe/
+│       ├── /standards/see/
+│       ├── /standards/certification/
+│       └── /assemblies/ (single page, includes upcoming events)
 │
-├── # RESOURCES (menu group — not a URL)
-│   ├── /tools/
-│   │   ├── Carbon Aware SDK
-│   │   ├── Carmen
-│   │   └── Impact Framework
+├── # ADOPTION (menu group — not a URL)
+│   ├── Courses → external (learning platform)
+│   ├── Patterns → external
+│   ├── Awesome Green Software → external
+│   ├── /policy/
+│   │   └── /policy/radar/
+│   ├── /research/ (includes white papers, State of Green Software)
+│   └── /tools/
+│       ├── Carbon Aware SDK → external (GitHub/microsite)
+│       ├── Carmen → external
+│       └── Impact Framework → external
+│
+├── # COMMUNITY (menu group — not a URL)
+│   ├── Environment Variables (podcast) → external
+│   ├── CXO Bytes (podcast) → external
 │   ├── /articles/ (single page with filter system)
 │   │   ├── Filter: Member Q&As
 │   │   ├── Filter: Research Reports
 │   │   ├── Filter: Blog Posts / Updates
 │   │   └── Filter: News
-│   └── /community/
-│       ├── Environment Variables (podcast)
-│       ├── CXO Bytes (podcast)
-│       ├── Community Platform
-│       ├── Badges Platform → badges.greensoftware.foundation
-│       └── /events/
-│           ├── Summit
-│           └── Carbon Hack
-│
-├── /assemblies/ (single page — top-level nav item, no dropdown)
+│   ├── Community Platform → external
+│   ├── /newsletter/ (sign up + archive)
+│   ├── Badges → badges.greensoftware.foundation
+│   ├── Champions Programme → external
+│   ├── /events/
+│   │   ├── Summit
+│   │   └── Carbon Hack
+│   └── /community/ (landing page describing community)
 │
 ├── # ABOUT (menu group — not a URL)
-│   ├── /about/ (overview)
-│   ├── /governance/ (leadership, committees, working groups, projects directory)
-│   ├── /history/
-│   ├── /partnerships/
-│   ├── /brand/ (guidelines, assets, press kit)
-│   └── /impact/ (success stories, press & media)
+│   ├── /about/ (mission, how we work)
+│   ├── /governance/ (leadership, committees)
+│   ├── /history/ (timeline, origin story)
+│   ├── /brand/ (guidelines, assets, press kit, illustrations)
+│   ├── Member Directory → external directory
+│   ├── Partner Directory → external directory
+│   ├── Working Groups → external directory
+│   ├── Committees → external directory
+│   ├── Projects → external directory
+│   ├── /impact/ (success stories, press & media)
+│   ├── Member Playbook → external
+│   ├── Member Onboarding → TBD
+│   └── Employee Registration → external
 │
 ├── /membership/ (CTA destination — steering-led narrative)
 │
-└── Footer-only links
-    ├── /members/ → external directory
-    └── /playbook/ → external
+└── Footer links
+    ├── /articles/
+    ├── /membership/
+    ├── Member Directory → external
+    └── Partner Directory → external
 ```
+
+## Internal Pages to Build
+
+| Page | Route | Notes |
+| ---- | ----- | ----- |
+| Homepage | `/` | Hero's journey narrative |
+| Membership | `/membership/` | CTA destination, steering-led |
+| Standards listing | `/standards/` | All standards + how we develop them |
+| SCI | `/standards/sci/` | From microsite |
+| SOFT | `/standards/soft/` | From microsite |
+| WDPC | `/standards/wdpc/` | From microsite |
+| SCI for AI | `/standards/sci-ai/` | From microsite |
+| SWE | `/standards/swe/` | TBD |
+| SEE | `/standards/see/` | TBD |
+| Certification | `/standards/certification/` | |
+| Assemblies | `/assemblies/` | Single page, includes upcoming events |
+| Policy | `/policy/` | Manifesto, engagement |
+| Policy Radar | `/policy/radar/` | Track legislation and regulatory trends |
+| Research | `/research/` | Papers + State of Green Software |
+| Articles | `/articles/` | Filtered listing |
+| Newsletter | `/newsletter/` | Sign up + archive |
+| Events | `/events/` | Summit, Carbon Hack |
+| Community | `/community/` | Landing page |
+| About | `/about/` | Mission, how we work |
+| Governance | `/governance/` | Leadership, committees |
+| History | `/history/` | Timeline |
+| Brand & Assets | `/brand/` | Guidelines, press kit, illustrations |
+| Impact | `/impact/` | Success stories, press & media |
+
+**~23 internal pages** + 4 microsite ports (SCI, SOFT, WDPC, SCI for AI).
+
+External redirects: courses, patterns, awesome green software, tools, community platform, badges, champions, member directory, partner directory, working groups, committees, projects, playbook, employee registration.
 
 ## Mega-Menu Component Notes
 
 The current microsite component library does not include a mega-menu. This will need to be built using Radix UI `NavigationMenu` primitives, which handle:
+
 - Hover behaviour and delays
 - Keyboard navigation
 - Screen reader accessibility
@@ -169,8 +254,8 @@ On mobile, the mega-menu collapses into the existing `Sheet` (hamburger menu) co
 
 ## Open Questions
 
-- Assemblies naming — keeping "Assemblies" for now but may evolve
-- Whether Tools appears in both What We Do and Resources or just one
-- "Awesome Green Software" naming
-- How articles filter categories map to existing CMS tags/categories
-- Whether community sub-pages are internal or all external redirects
+- SWE and SEE descriptions (standards still in development)
+- Whether events page is one page or separate pages per event
+- Member onboarding — internal page or external?
+- Which directory links point where (all may go to same external directory site with different filters)
+- Footer link selection — what else belongs in the footer?

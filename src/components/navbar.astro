@@ -32,6 +32,8 @@ interface Props {
   ctaHref?: string;
   /** GitHub repo URL for the GitHub icon button */
   githubUrl?: string;
+  /** Show search icon placeholder */
+  showSearch?: boolean;
 }
 
 const {
@@ -44,6 +46,7 @@ const {
   ctaText,
   ctaHref = "#",
   githubUrl = "https://github.com/Green-Software-Foundation/",
+  showSearch = false,
 } = Astro.props;
 ---
 
@@ -96,7 +99,7 @@ const {
       )}
     </a>
     <div class="flex items-center gap-1">
-      <NavigationComponent client:load items={navItems} />
+      <NavigationComponent client:load items={navItems} showSearch={showSearch} />
       {ctaText ? (
         <a href={ctaHref}>
           <Button variant="primary">{ctaText}</Button>

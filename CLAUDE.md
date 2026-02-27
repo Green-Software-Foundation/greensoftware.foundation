@@ -23,6 +23,28 @@ The site is built using a **parameterised component library** approach. See `doc
 - **Design tokens:** CSS custom properties defined in `src/styles/global.css`, mapped to Tailwind via `--color-*` aliases
 - **Font:** Nunito Sans (Google Fonts, weights 200–900, normal + italic)
 
+### Technology Stack Explained
+
+The UI stack has four layers, each with a distinct role:
+
+1. **Tailwind CSS** — A utility-first CSS framework. Unlike Bootstrap which gives pre-built components (`class="btn btn-primary"`), Tailwind provides atomic utility classes that each do one thing (`bg-primary text-white px-4 py-2 rounded-lg`). You compose styles directly in HTML. No opinions about what a "button" looks like — you build it yourself from small pieces. The advantage is full design control with no framework aesthetics to override.
+
+2. **Radix UI** — A headless (unstyled) React component library. It provides accessible interactive behaviour for things like tabs, dropdown menus, dialogs, and navigation menus — handling keyboard navigation, ARIA attributes, focus management — but renders with **zero styling**. You get a perfectly accessible tabs component that looks like nothing until you style it.
+
+3. **shadcn/ui** — Not a package you install, but a **code generator**. Running `npx shadcn@latest add button` copies a ready-made component file into `src/components/ui/`. That file wraps a Radix primitive with Tailwind styling. You own the code and can freely modify it. It bridges the gap between Radix (behaviour only) and a fully styled component.
+
+4. **CVA (Class Variance Authority)** — A small utility for defining component variants. Instead of writing conditionals for different button styles, you declare a variants map (e.g. `primary`, `outline`, `secondary`) and CVA generates the right Tailwind classes.
+
+**How they connect in practice:**
+```
+Astro (framework — builds pages, handles routing)
+  └── React islands (interactive components that need JS)
+        └── shadcn/ui components (src/components/ui/ — copied, owned code)
+              └── Radix UI (accessible behaviour) + Tailwind (styling) + CVA (variants)
+```
+
+**Theming:** The entire site theme is controlled by ~20 CSS variables in `src/styles/global.css` (lines 66-89). Tailwind maps these via `--color-*` aliases so that classes like `bg-primary` resolve to `var(--color-primary)` which resolves to `var(--primary)` which is `#006d69`. Changing the hex values re-themes the entire site — no component code needs to change.
+
 ### Brand & Design Tokens
 
 Tokens are defined in `src/styles/global.css`.
@@ -115,13 +137,30 @@ Many components support inline accent text in headings using `*asterisks*` synta
 
 The homepage (`homepage.astro`) composes ~260 lines of component composition (no inline HTML). Structure: Navbar → Hero (with scroll indicator) → LogoMarquee → Testimonial → TextBlock (heading) → 5× TabbedSection (problem-solution pairs, all compact) → CTACard → CommunityReach (5 stats + world map) → FeatureGrid (bordered variant, 2×2) → ResourceCards (3 cards) → ArticleCarousel (4 articles with multi-org logos) → CTABanner → Footer. The navbar uses `topBar="none"` with the full GSF logo (`gsf-logo-full.svg`, 52px height).
 
+### Data Fetching
+
+All site data (members, logos, team, stats) is fetched from Notion via `scripts/fetch-notion-data.cjs`. Requires `NOTION_API_KEY` env var (in `.env` locally, configured in Netlify dashboard for deploys).
+
+- `npm run fetch-notion` — fetch fresh data from Notion into `src/data/` and `public/assets/`
+- `npm run build` — build with cached data (no Notion fetch)
+- `npm run build:full` — fetch Notion data then build (used by Netlify)
+
+The fetch script exits gracefully if `NOTION_API_KEY` is missing, creating empty fallback JSON files so the build still succeeds.
+
 ### Dev Server
 
 ```bash
 npm run dev    # Dev server on localhost:4322
 ```
 
-The catalogue page (`/`) shows components with default content. The homepage demo (`/homepage`) shows the main site design.
+The homepage is at `/` and the component catalogue is at `/catalogue`.
+
+### Deployment (Netlify)
+
+- Deployed on Netlify, site: `green-software-foundation`
+- Build command: `npm run build:full` (via `netlify.toml`)
+- Node version: 22 (set in both `.nvmrc` and `netlify.toml`)
+- **Use the `netlify` CLI** to inspect deploy logs, site config, and environment variables when debugging build failures (e.g. `netlify deploy --build`, `netlify env:list`, `netlify logs`)
 
 ## Legacy Gatsby Site
 
