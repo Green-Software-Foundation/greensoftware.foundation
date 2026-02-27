@@ -1,0 +1,413 @@
+---
+import Layout from "@/layouts/showcase.astro";
+
+// Parameterised components
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import MemberStories from "@/components/member-stories.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={[
+      {
+        label: "Standards",
+        footerLink: { href: "/standards/", label: "All standards →" },
+        sections: [
+          {
+            title: "Software",
+            links: [
+              { href: "/standards/sci/", label: "SCI", description: "ISO-certified metric for software carbon intensity", iconSrc: "/assets/icons/sci-mark.svg" },
+              { href: "/standards/soft/", label: "SOFT", description: "Framework for organisational transformation", iconSrc: "/assets/icons/soft-mark.svg" },
+              { href: "/standards/sci-ai/", label: "SCI for AI", description: "Carbon measurement for AI systems", icon: "bot" },
+              { href: "/standards/swe/", label: "SWE", description: "Software Water Efficiency", icon: "droplets" },
+              { href: "/standards/see/", label: "SEE", description: "Software Energy Efficiency", icon: "zap" },
+            ],
+          },
+          {
+            title: "Hardware",
+            links: [
+              { href: "/standards/wdpc/", label: "WDPC", description: "Data centre power and cooling efficiency", iconSrc: "/assets/icons/wdpc-mark.svg" },
+            ],
+          },
+          {
+            title: "Process",
+            links: [
+              { href: "/standards/certification/", label: "Certification", description: "Get certified in green software specifications", icon: "award" },
+              { href: "/assemblies/", label: "Assemblies", description: "AI-facilitated consensus at scale", icon: "messages-square" },
+            ],
+          },
+        ],
+      },
+      {
+        label: "Adoption",
+        footerLink: { href: "/research/", label: "All research →" },
+        sections: [
+          {
+            title: "Education",
+            links: [
+              { href: "https://learn.greensoftware.foundation", label: "Courses", external: true },
+              { href: "https://patterns.greensoftware.foundation", label: "Patterns", external: true },
+              { href: "https://github.com/Green-Software-Foundation/awesome-green-software", label: "Awesome Green Software", external: true },
+            ],
+          },
+          {
+            title: "Policy & Research",
+            links: [
+              { href: "/policy/", label: "Manifesto" },
+              { href: "/policy/radar/", label: "Policy Radar", description: "Track emerging legislation and regulatory trends" },
+              { href: "/policy/#engagement", label: "Policy Engagement" },
+              { href: "/research/state-of-green-software/", label: "State of Green Software" },
+            ],
+          },
+          {
+            title: "Tools",
+            links: [
+              { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", label: "Carbon Aware SDK", description: "SDK for building carbon-aware applications", external: true },
+              { href: "https://github.com/Green-Software-Foundation/carmen", label: "Carmen", description: "Automated carbon reporting for cloud workloads", external: true },
+              { href: "https://if.greensoftware.foundation", label: "Impact Framework", description: "Measure the carbon footprint of your software", external: true },
+            ],
+          },
+        ],
+      },
+      {
+        label: "Community",
+        footerLink: { href: "/community/", label: "About our community →" },
+        sections: [
+          {
+            title: "Listen & Learn",
+            links: [
+              { href: "https://podcast.greensoftware.foundation", label: "Environment Variables", description: "Practitioner-focused podcast", external: true },
+              { href: "https://podcast.greensoftware.foundation/cxo-bytes", label: "CXO Bytes", description: "C-suite focused podcast", external: true },
+              { href: "/articles/", label: "Articles" },
+            ],
+          },
+          {
+            title: "Connect",
+            links: [
+              { href: "https://community.greensoftware.foundation", label: "Community Platform", external: true },
+              { href: "https://newsletter.greensoftware.foundation", label: "Newsletter", external: true },
+              { href: "https://badges.greensoftware.foundation", label: "Badges", external: true },
+              { href: "https://champions.greensoftware.foundation", label: "Champions Programme", external: true },
+            ],
+          },
+          {
+            title: "Events",
+            links: [
+              { href: "https://summit.greensoftware.foundation", label: "Summit", external: true },
+              { href: "https://carbonhack.greensoftware.foundation", label: "Carbon Hack", external: true },
+            ],
+          },
+        ],
+      },
+      {
+        label: "About",
+        sections: [
+          {
+            title: "Organisation",
+            links: [
+              { href: "/about/", label: "About" },
+              { href: "/governance/", label: "Governance & Leadership" },
+              { href: "/history/", label: "History" },
+              { href: "/brand/", label: "Brand & Assets" },
+              { href: "https://directory.greensoftware.foundation/members", label: "Member Directory", external: true },
+              { href: "https://directory.greensoftware.foundation/partners", label: "Partner Directory", external: true },
+              { href: "https://directory.greensoftware.foundation/working-groups", label: "Working Groups", external: true },
+              { href: "https://directory.greensoftware.foundation/committees", label: "Committees", external: true },
+              { href: "https://directory.greensoftware.foundation/projects", label: "Projects", external: true },
+            ],
+          },
+          {
+            title: "Impact",
+            links: [
+              { href: "/impact/", label: "Success Stories" },
+              { href: "/articles/", label: "Articles" },
+              { href: "/impact/#press", label: "Press & Media" },
+            ],
+          },
+          {
+            title: "For Members",
+            links: [
+              { href: "https://playbook.greensoftware.foundation", label: "Member Playbook", external: true },
+              { href: "https://onboarding.greensoftware.foundation", label: "Member Onboarding", external: true },
+              { href: "https://register.greensoftware.foundation", label: "Employee Registration", description: "If you're an employee of an existing member organisation, register here to join working groups and initiatives", external: true },
+            ],
+          },
+        ],
+      },
+    ]}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Section 1: Hero -->
+  <Hero
+    heading="You've been handed a sustainability mandate"
+    headingAccent="with no playbook"
+    body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results."
+    ctas={[
+      { text: "Discuss your challenges with us", variant: "primary" },
+    ]}
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Membership illustration"
+    bgClass="bg-accent-lightest-2"
+    scrollIndicator
+  />
+
+  <!-- Section 2: The Room — intro text above the logos -->
+  <TextBlock
+    heading="These organisations don't just use our standards — they *shape* them"
+    body="They bring their hardest problems to the foundation, and together we build solutions that benefit the entire industry."
+    compact
+  />
+
+  <LogoMarquee
+    heading="Our steering members include some of the world's most influential technology organisations"
+    greyscale={false}
+    bgClass="bg-white"
+    fadeBgClass="from-white"
+  />
+
+  <!-- Section 3: Steering Proposition -->
+  <TextWithImage
+    heading="Bring us your"
+    headingAccent="hardest problem"
+    body="Steering membership isn't a subscription — it's a partnership. You bring the challenge your organisation is facing. We put the foundation's resources, expertise, and member network behind solving it. Bespoke."
+    imageSrc="/assets/dive-illustration.svg"
+    imageAlt="Partnership illustration"
+  />
+
+  <FeatureGrid
+    heading="What *steering members* get"
+    columns={2}
+    features={[
+      {
+        icon: "/assets/shape-icon-1.svg",
+        title: "A bespoke plan for your biggest problem",
+        description: "We combine assemblies, policy work, standards proposals, networking events, and educational material into a tailored offering that addresses your specific challenge.",
+      },
+      {
+        icon: "/assets/shape-icon-2.svg",
+        title: "Guaranteed seat on the governing board",
+        description: "Direct influence on the foundation's direction and priorities.",
+      },
+      {
+        icon: "/assets/shape-icon-3.svg",
+        title: "Quarterly executive deep dives",
+        description: "High-bandwidth conversations with the GSF leadership team to surface challenges, discuss engagement, and refine your roadmap.",
+      },
+      {
+        icon: "/assets/shape-icon-4.svg",
+        title: "Guaranteed seats on all committees and assemblies",
+        description: "You'll never be shut out of the room where decisions are made.",
+      },
+    ]}
+  />
+
+  <!-- Section 4: Proof — Member Stories -->
+  <MemberStories
+    heading="How members are *solving real problems*"
+    body="Every story starts the same way: an organisation brings us a problem they can't solve alone."
+    stories={[
+      {
+        title: "We need to measure carbon at travel industry scale",
+        description: "Amadeus built Carmen — an open-source carbon measurement engine delivering application-level emissions visibility across hundreds of services processing 3 billion daily flight searches.",
+        organizations: [
+          { name: "Amadeus", logoSrc: "/assets/logos/amadeus.png" },
+        ],
+        imageSrc: "/assets/blog-illustration-1.svg",
+        href: "/impact/",
+        cta: "Read the story →",
+      },
+      {
+        title: "Our pilots work but nothing scales across the org",
+        description: "HSBC co-chaired the SOFT framework with Microsoft to build the playbook for embedding green software practices systematically across every function — not just IT.",
+        organizations: [
+          { name: "HSBC", logoSrc: "/assets/logos/hsbc.png" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.webp" },
+        ],
+        imageSrc: "/assets/blog-illustration-2.svg",
+        href: "/impact/",
+        cta: "Read the story →",
+      },
+      {
+        title: "We can't shift workloads to clean energy",
+        description: "UBS deployed the first enterprise-scale carbon-aware computing system on a production banking platform, using the Carbon Aware SDK developed collaboratively through the GSF.",
+        organizations: [
+          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.webp" },
+        ],
+        imageSrc: "/assets/blog-illustration-3.svg",
+        href: "/impact/",
+        cta: "Read the story →",
+      },
+      {
+        title: "We can't measure software carbon",
+        description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
+        organizations: [
+          { name: "Accenture", logoSrc: "/assets/logos/accenture.png" },
+          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+        ],
+        imageSrc: "/assets/blog-1.svg",
+        href: "/impact/",
+        cta: "Read the story →",
+      },
+    ]}
+    footerCtaText="Browse the rest of our case studies"
+    footerCtaHref="/impact/"
+  />
+
+  <!-- Section 5: General Membership -->
+  <TextBlock
+    heading="Start with access to *everything* our members have built — general membership *includes*"
+    body="General membership gives you immediate access to the standards, training, and community that 130,000+ practitioners already use."
+    compact
+  />
+
+  <FeatureGrid
+    columns={3}
+    compact
+    features={[
+      {
+        icon: "/assets/standardized-icon.svg",
+        title: "Attend project and working group meetings",
+        description: "Participate in the development of standards and frameworks.",
+      },
+      {
+        icon: "/assets/co2-icon.svg",
+        title: "Propose projects",
+        description: "Bring ideas to the foundation for consideration.",
+      },
+      {
+        icon: "/assets/renewable-icon.svg",
+        title: "Access to cohort-based training",
+        description: "Join structured learning programmes with peers.",
+      },
+      {
+        icon: "/assets/cost-icon.svg",
+        title: "In-house training licensing",
+        description: "Integrate GSF courses into your own internal training platforms.",
+      },
+      {
+        icon: "/assets/realtime-icon.svg",
+        title: "Participate in events",
+        description: "Summit, Carbon Hack, and other member events.",
+      },
+      {
+        icon: "/assets/dive-icon-1.svg",
+        title: "Ability to chair working groups",
+        description: "Lead initiatives that shape the future of green software.",
+      },
+    ]}
+  />
+
+  <!-- Section 6: How It Works -->
+  <FeatureGrid
+    heading="From first conversation to *active member*"
+    variant="bordered"
+    columns={2}
+    features={[
+      {
+        icon: "/assets/dive-icon-1.svg",
+        title: "1. Book a meeting",
+        description: "Meet with our Head of Partnerships to discuss your sustainability challenges and objectives.",
+      },
+      {
+        icon: "/assets/dive-icon-2.svg",
+        title: "2. We understand your problem",
+        description: "We extract the core challenges, connect the dots between your needs and existing projects, and identify members who might want to collaborate.",
+      },
+      {
+        icon: "/assets/dive-icon-3.svg",
+        title: "3. We build a bespoke proposal",
+        description: "Leveraging our ecosystem — projects, standards, assemblies, policy work, educational resources — we create a tailored plan that addresses your specific challenge.",
+      },
+      {
+        icon: "/assets/dive-icon-4.svg",
+        title: "4. We present it back to you",
+        description: "Review the proposal together, refine it, and agree on the path forward.",
+      },
+      {
+        icon: "/assets/shape-icon-1.svg",
+        title: "5. Application and approval",
+        description: "Complete the formal application. For steering-level membership, existing steering members approve new members — maintaining the calibre and exclusivity of the group.",
+      },
+      {
+        icon: "/assets/shape-icon-2.svg",
+        title: "6. Onboarding",
+        description: "An onboarding call with the Director of Operations. We onboard your key staff, walk through our systems, show how meetings work, and connect you to the community.",
+      },
+      {
+        icon: "/assets/shape-icon-3.svg",
+        title: "7. Quarterly touchpoints",
+        description: "Regular check-ins with the Director of Operations to discuss progress, surface new challenges, and ensure you're getting value from your membership.",
+      },
+      {
+        icon: "/assets/shape-icon-4.svg",
+        title: "8. Monthly reports",
+        description: "Personalised monthly reports showing where your organisation is engaging, surfacing important activities and opportunities — so you never have to worry about missing a meeting or email.",
+      },
+    ]}
+  />
+
+  <!-- Section 7: Final CTA -->
+  <CTABanner
+    heading="Every member's journey starts with a conversation"
+    body="Tell us what you're trying to solve. We'll tell you how membership can help."
+    ctaText="Discuss your challenges with us"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/sci/", text: "SCI Specification" },
+          { href: "/standards/soft/", text: "SOFT Framework" },
+          { href: "https://learn.greensoftware.foundation", text: "Green Software Practitioner" },
+          { href: "/standards/sci-ai/", text: "SCI for AI" },
+          { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", text: "Carbon Aware SDK" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "Our Mission" },
+          { href: "/governance/", text: "Governance" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+          { href: "/impact/#press", text: "Press & Media" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "/events/", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

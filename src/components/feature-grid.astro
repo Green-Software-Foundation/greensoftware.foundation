@@ -18,6 +18,8 @@ interface Props {
   columns?: 2 | 3 | 4;
   /** Display variant: "cards" (default) or "bordered" (centred card with bordered grid) */
   variant?: "cards" | "bordered";
+  /** Reduce vertical padding (useful when used as a section heading) */
+  compact?: boolean;
   /** Background class */
   bgClass?: string;
 }
@@ -40,6 +42,7 @@ const {
   features = [],
   columns = 3,
   variant = "cards",
+  compact = false,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
 
@@ -52,7 +55,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
 });
 ---
 
-<section class={`py-16 md:py-20 ${bgClass}`}>
+<section class={`${compact ? "py-8 md:py-10" : "py-16 md:py-20"} ${bgClass}`}>
   <div class="container">
     {variant === "bordered" && (
       <div class="rounded-2xl bg-accent-lighter/50 p-8 md:px-16 md:py-12 lg:px-20 lg:py-16">
