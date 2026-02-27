@@ -1,13 +1,16 @@
 ---
 import "../styles/global.css";
+
+const canonicalURL = new URL(Astro.url.pathname, "https://greensoftware.foundation");
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSF Component Catalogue</title>
+    <title>Green Software Foundation</title>
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="canonical" href={canonicalURL.href} />
   </head>
   <body>
     <slot />
