@@ -4,6 +4,7 @@ import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 import CTABanner from "@/components/cta-banner.astro";
+import NewsletterSignup from "@/components/newsletter-signup.astro";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
@@ -206,6 +207,7 @@ const authorNames = article.data.authors?.map((a) => a.fullName) || [];
       </div>
     </div>
   </article>
+  <NewsletterSignup />
   <CTABanner
     heading="Every member's journey starts with a conversation"
     body="Tell us what you're trying to solve. We'll tell you how membership can help."

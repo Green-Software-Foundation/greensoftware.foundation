@@ -1,0 +1,50 @@
+---
+interface Props {
+  heading?: string;
+  body?: string;
+}
+
+const {
+  heading = "Stay up to date",
+  body = "Get the latest green software news, articles, and industry insights from the GSF in our weekly newsletter.",
+} = Astro.props;
+
+const mailchimpUrl = "https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=c5376a805c&f_id=003e64e9f0";
+---
+
+<div class="container pb-8">
+  <div class="max-w-3xl mx-auto">
+    <div class="bg-accent-lighter rounded-xl p-8 md:p-10">
+      <h3 class="text-xl font-extrabold text-primary mb-2">
+        {heading}
+      </h3>
+      <p class="text-sm text-primary-dark mb-5">
+        {body}
+      </p>
+      <form
+        action={mailchimpUrl}
+        method="POST"
+        target="_blank"
+        class="flex flex-col sm:flex-row gap-3"
+      >
+        <input
+          type="email"
+          name="EMAIL"
+          required
+          placeholder="Your email address"
+          class="flex-1 px-4 py-2.5 rounded-lg text-primary-dark bg-white border border-primary-lighter placeholder:text-gray-darker focus:outline-none focus:ring-2 focus:ring-accent text-sm"
+        />
+        <!-- Mailchimp bot protection -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_ddc99c7db248c3df0ef4f7d24_c5376a805c" tabindex="-1" value="" />
+        </div>
+        <button
+          type="submit"
+          class="px-5 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-primary-dark transition-colors whitespace-nowrap text-sm"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
