@@ -1,0 +1,149 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import { navItems } from "@/lib/nav-items";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const articles = await getCollection("articles");
+
+  const englishArticles = articles
+    .filter((a) => a.data.lang === "en")
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+  return paginate(englishArticles, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<Layout
+  title={`Articles${page.currentPage > 1 ? ` — Page ${page.currentPage}` : ""} | Green Software Foundation`}
+  description="News, insights, and technical articles on green software engineering from the Green Software Foundation."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+  <div class="bg-accent-lightest-2">
+    <!-- Header -->
+    <div class="container pt-10 pb-12 md:pt-14 md:pb-16">
+      <div class="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-gray-darker">
+            <li>
+              <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-gray-dark">/</li>
+            <li class="text-primary-dark">Articles</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-4">
+          Articles
+        </h1>
+        <p class="text-xl text-primary-dark max-w-3xl">
+          News, insights, and technical deep-dives on green software from the GSF community.
+        </p>
+      </div>
+    </div>
+
+    <!-- Article grid -->
+    <div class="container pb-16 md:pb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {page.data.map((article) => {
+          const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          });
+          return (
+            <a
+              href={`/articles/${article.id}`}
+              class="group rounded-xl border border-border bg-white shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow"
+            >
+              {article.data.mainImage && (
+                <div class="aspect-[16/9] overflow-hidden bg-gray-light">
+                  <img
+                    src={article.data.mainImage}
+                    alt={article.data.mainImageAlt || article.data.title}
+                    class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div class="flex flex-col justify-between flex-grow p-6">
+                <div>
+                  <time datetime={article.data.date.toISOString()} class="text-xs font-semibold text-primary mb-2 block">
+                    {formattedDate}
+                  </time>
+                  <h2 class="text-lg font-bold text-primary-dark leading-tight mb-2 group-hover:text-primary transition-colors">
+                    {article.data.title}
+                  </h2>
+                  <p class="text-sm text-gray-darker line-clamp-3">
+                    {article.data.summary}
+                  </p>
+                </div>
+                <span class="inline-flex items-center text-sm font-bold text-primary mt-4">
+                  Read article →
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- Pagination -->
+      {page.lastPage > 1 && (
+        <nav aria-label="Pagination" class="mt-12 flex items-center justify-center gap-4">
+          {page.url.prev ? (
+            <a
+              href={page.url.prev}
+              class="px-4 py-2 rounded-lg border border-border bg-white text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors"
+            >
+              ← Previous
+            </a>
+          ) : (
+            <span class="px-4 py-2 rounded-lg border border-border bg-gray-light text-sm font-bold text-gray-darker cursor-not-allowed">
+              ← Previous
+            </span>
+          )}
+
+          <span class="text-sm text-gray-darker">
+            Page {page.currentPage} of {page.lastPage}
+          </span>
+
+          {page.url.next ? (
+            <a
+              href={page.url.next}
+              class="px-4 py-2 rounded-lg border border-border bg-white text-sm font-bold text-primary hover:bg-primary hover:text-white transition-colors"
+            >
+              Next →
+            </a>
+          ) : (
+            <span class="px-4 py-2 rounded-lg border border-border bg-gray-light text-sm font-bold text-gray-darker cursor-not-allowed">
+              Next →
+            </span>
+          )}
+        </nav>
+      )}
+    </div>
+  </div>
+  <CTABanner
+    heading="Every member's journey starts with a conversation"
+    body="Tell us what you're trying to solve. We'll tell you how membership can help."
+    ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
+  />
+  <Footer />
+</Layout>
