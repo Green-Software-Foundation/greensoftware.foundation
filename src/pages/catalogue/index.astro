@@ -27,6 +27,9 @@ import Features from "@/components/_catalogue/features.astro";
 import MissionCard from "@/components/_catalogue/mission-card.astro";
 import ReadyToImplement from "@/components/_catalogue/ready-to-implement.astro";
 import GetInvolved from "@/components/_catalogue/get-involved.astro";
+
+// Markdown demo
+import { Content as MarkdownDemo } from "../../content/demo/markdown-demo.md";
 ---
 
 <Layout>
@@ -59,6 +62,8 @@ import GetInvolved from "@/components/_catalogue/get-involved.astro";
           <a href="#about-gsf" class="hover:text-accent transition-colors">AboutGSF</a>
           <a href="#cta-banner" class="hover:text-accent transition-colors">CTABanner</a>
           <a href="#footer" class="hover:text-accent transition-colors">Footer</a>
+          <span class="text-accent">|</span>
+          <a href="#markdown" class="hover:text-accent transition-colors">Markdown</a>
         </div>
       </div>
     </div>
@@ -436,4 +441,25 @@ import GetInvolved from "@/components/_catalogue/get-involved.astro";
     </div>
   </div>
   <Footer />
+
+  <!-- ============================================================ -->
+  <!-- 22. MARKDOWN & TYPOGRAPHY -->
+  <!-- ============================================================ -->
+  <div id="markdown" class="scroll-mt-20">
+    <div class="bg-accent-lighter border-l-4 border-accent py-4 px-6 mx-4 my-8 rounded-r-lg">
+      <h2 class="text-2xl font-bold text-primary-darker">22. Markdown & Typography</h2>
+      <p class="text-sm text-primary-dark mt-1">
+        <strong>Styles:</strong> <code>@tailwindcss/typography</code> with GSF brand overrides in <code>global.css</code>
+      </p>
+      <p class="mt-2">Prose styles for article and content pages. Uses the <code>.prose</code> class with branded headings, links, blockquotes, code blocks, and tables.</p>
+      <p class="mt-1 text-sm"><strong>Used on:</strong> Articles, policy pages, manifesto (future content pages)</p>
+    </div>
+  </div>
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container">
+      <div class="prose prose-lg mx-auto max-w-3xl">
+        <MarkdownDemo />
+      </div>
+    </div>
+  </section>
 </Layout>
