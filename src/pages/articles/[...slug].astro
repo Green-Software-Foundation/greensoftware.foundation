@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
+import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
@@ -23,10 +24,30 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
 ---
 
 <Layout>
-  <Navbar />
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
   <article class="py-16 md:py-20 bg-white">
     <div class="container">
       <div class="max-w-3xl mx-auto">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-gray-darker">
+            <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+            <li class="text-gray-dark">/</li>
+            <li><a href="/articles/" class="hover:text-primary transition-colors">Articles</a></li>
+            <li class="text-gray-dark">/</li>
+            <li class="text-primary-dark truncate max-w-[300px]">{article.data.title}</li>
+          </ol>
+        </nav>
+
         <!-- Article header -->
         <header class="mb-12">
           {article.data.mainImage && (
@@ -39,7 +60,7 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
           <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">
             {article.data.title}
           </h1>
-          <div class="flex items-center gap-4 text-gray-darker text-sm">
+          <div class="flex flex-wrap items-center gap-4 text-gray-darker text-sm">
             <time datetime={article.data.date.toISOString()}>
               {formattedDate}
             </time>

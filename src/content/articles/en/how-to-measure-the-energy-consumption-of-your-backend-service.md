@@ -23,7 +23,7 @@ This post is operating system agnostic and is primarily meant for applications r
 The most reliable way is also the simplest way. Buy a cheap watt hour meter, plug it into the socket between your wall and your server and you are golden. This will always be the best way to measure power consumption because it will measure exactly what your server consumes.  
 
 <figure>
-<img src="../images/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-measuring-power-consumption-from-socket-by-software-creators-illustration.png" alt="green-software-foundation-measuring-power-consumption-from -socket-by-software-creators-illustration" />
+<img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-measuring-power-consumption-from-socket-by-software-creators-illustration.png" alt="green-software-foundation-measuring-power-consumption-from -socket-by-software-creators-illustration" />
 <figcaption><em>Measuring energy consumption directly from the socket</em></figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ If we approximate the TDP with the energy consumption of each component we will 
 > To get energy, we multiply by time: **E[kWh] = P*t**
 
 <figure>
-<img src="../images/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components.png" alt="green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components" />
+<img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components.png" alt="green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components" />
 <figcaption><em>A formula for estimating power consumption </em></figcaption>
 </figure>
 

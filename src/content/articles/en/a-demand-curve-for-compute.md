@@ -32,7 +32,7 @@ This means that some kinds of generation need to be running *almost all the time
 We can look at the properties of these different kinds of generation, as creating a kind of *demand curve.*
 
 <figure>
-<img src="../images/a-demand-curve-for-compute/a-chart-showing-how-cost-of-electricity-increases-with-the-total-load-of-electricity.png" alt="A-chart-showing-how-cost-of electricity-increases-with-the total-load-of-electricity" />
+<img src="/assets/articles/a-demand-curve-for-compute/a-chart-showing-how-cost-of-electricity-increases-with-the-total-load-of-electricity.png" alt="A-chart-showing-how-cost-of electricity-increases-with-the total-load-of-electricity" />
 <figcaption><em>As the total electricity load increases, so does the cost of electricity</em></figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ You might run the same workload on a range of different providers, who are all a
 Let’s look at them in turn, [<u>like we did with the different forms of power generation</u>](https://greensoftware.foundation/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack).
 
 <figure>
-<img src="../images/a-demand-curve-for-compute/c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction.png" alt="c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction" />
+<img src="/assets/articles/a-demand-curve-for-compute/c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction.png" alt="c0st-per-unit-of-compute-for-different-ways-of-computing-plotted-against-their-degree-of-abstraction" />
 <figcaption><em>Pros and cons of the different ways of computing</em></figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ If you only have a single, minute-long compute job to run at midnight, you proba
 ## **Visualising a demand curve for compute**
 
 <figure>
-<img src="../images/a-demand-curve-for-compute/graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need.png" alt="graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need" />
+<img src="/assets/articles/a-demand-curve-for-compute/graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need.png" alt="graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need" />
 <figcaption><em>Having more options lets you match workloads to an appropriate kid of compute </em></figcaption>
 </figure>
 
@@ -141,7 +141,7 @@ Getting back to the subject of compute powered by green energy, if we know we ar
 #### An interesting example
 
 <figure>
-<img src="../images/a-demand-curve-for-compute/a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png" alt="A-top-down-view-of-the-inside-of-a-wind-turbine-with-an-Examesh-datacentre-inside" />
+<img src="/assets/articles/a-demand-curve-for-compute/a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png" alt="A-top-down-view-of-the-inside-of-a-wind-turbine-with-an-Examesh-datacentre-inside" />
 <figcaption><em>A top down view of the inside of a wind turbine with an Examesh datacentre inside</em></figcaption>
 </figure>
 

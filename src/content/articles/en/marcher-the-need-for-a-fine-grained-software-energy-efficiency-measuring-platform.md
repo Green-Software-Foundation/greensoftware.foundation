@@ -26,7 +26,7 @@ Energy efficient computing is big business. With data centers now at 2% of all U
  
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/data-center-electricity-consumption-and-savings-from-2000-to-2020.png" alt="Data-Center-Electricity-Consumption-and-savings-from 2000-to-2020" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/data-center-electricity-consumption-and-savings-from-2000-to-2020.png" alt="Data-Center-Electricity-Consumption-and-savings-from 2000-to-2020" />
 <figcaption><em>Data center electricity consumption and savings  from the US Department of Energy, Lawrence Berkeley National Laboratory</em></figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ Server virtualization is here, and it is hard to imagine another magic bullet so
 This period of 1-3% growth in yearly data center energy consumption could also come crashing to a halt as what we call big data becomes huge data. By 2025 we will be creating more data in one year than in all of previous recorded history. Quickly, 4k and 8k streaming may become the norm. And 5G networks will allow mobile users to consume more data than ever before. Power hungry deep neural networks will be rolled out to an increasingly wider range of applications.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/chart-showing-big-data-becoming-huge-data-by-2025-data-created-in-zettabytes-from-2010-to-2025-estimated.png" alt="Chart-showing-big-data-becoming-huge-data-by-2025.-Data-created-in-zettabytes-from 2010 to 2025 (estimated) " />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/chart-showing-big-data-becoming-huge-data-by-2025-data-created-in-zettabytes-from-2010-to-2025-estimated.png" alt="Chart-showing-big-data-becoming-huge-data-by-2025.-Data-created-in-zettabytes-from 2010 to 2025 (estimated) " />
 <figcaption><em>Data created in zettabytes from 2010 to 2025 (estimated); Source: IDC’s Data Age 2025 study, sponsored by Seagate, April 2017</em></figcaption>
 </figure>
 
@@ -64,21 +64,21 @@ In addition to this cloud service, for processes which require multiple nodes or
 The power profiling of the CPUS, GPUs, and Xeon Phis are handled by the Intel RAPL interface, the NVIDIA NVML interface and the Intel MICAccessAPI respectively. For all other components that do not have built-in sensors—such as Solid State and Hard Drives—we developed external power sensors called Power Data Acquisition Cards (PODAC). This collection of profiling tools allow us to find in a fine granularity how much power a program is consuming from each component at any given time.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/photo-of-podac-connected-to-a-marcher-server.png" alt="photo-of-PODAC-connected-to-a-Marcher-server" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/photo-of-podac-connected-to-a-marcher-server.png" alt="photo-of-PODAC-connected-to-a-Marcher-server" />
 <figcaption><em>PODAC connected to a Marcher server</em></figcaption>
 </figure>
 
 And here's the [<u>**Marcher System**</u>](https://greensoft.cs.txstate.edu)
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-photo-of-the-marcher-system.png" alt="A-photo-of-the-Marcher-system" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-photo-of-the-marcher-system.png" alt="A-photo-of-the-Marcher-system" />
 <figcaption><em>The Marcher System</em></figcaption>
 </figure>
 
 Between the web and command line interfaces sits our custom power profiling and job scheduling layer which dispatches jobs, as well as collects, aggregates, performs calculations and saves power data.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-flowchart-of-workflow-and-power-profiling.png" alt="a-flowchart-of-workflow-and-power-profiling" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-flowchart-of-workflow-and-power-profiling.png" alt="a-flowchart-of-workflow-and-power-profiling" />
 <figcaption><em>The workflow of job scheduling and power profiling</em></figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ As mentioned earlier, we wanted these systems to be able to measure power for re
 Here we see power data obtained from a Xeon Phi coprocessor running the Single Source Shortest Paths (a.ka. Dijkstra’s algorithm) OpenMP program on a single Marcher node.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/power-data-from-a-xeon-phi-coprocessor-running-the-sssp-openmp-program-on-a-single-marcher-node.png" alt="Power-data-from-a-Xeon-Phi-coprocessor-running-the-SSSP-OpenMP-program-on-a-single-Marcher-node" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/power-data-from-a-xeon-phi-coprocessor-running-the-sssp-openmp-program-on-a-single-marcher-node.png" alt="Power-data-from-a-Xeon-Phi-coprocessor-running-the-SSSP-OpenMP-program-on-a-single-Marcher-node" />
 <figcaption><em>Power data from a Xeon Phi coprocessor running the SSSP OpenMP program on a single Marcher node</em></figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Here we see power data obtained from a Xeon Phi coprocessor running the Single S
 The following graph shows the power data collected on two marcher nodes running an MPI-2007 benchmark application.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/marcher-power-data-on-two-marcher-nodes-running-an-mpi-2007-benchmark-application.png" alt="Marcher-power-data-on-two-marcher-nodes-running-an-MPI-2007-benchmark-application" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/marcher-power-data-on-two-marcher-nodes-running-an-mpi-2007-benchmark-application.png" alt="Marcher-power-data-on-two-marcher-nodes-running-an-MPI-2007-benchmark-application" />
 <figcaption><em>Power data on two Marcher nodes running an MPI-2007 benchmark application</em></figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ The following graph shows the power data collected on two marcher nodes running 
 This graph plots the real-time power consumption data of CPU, DRAM, and GPU when training the AlexNet with Caffe on a Marcher server.
 
 <figure>
-<img src="../images/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/real-time-power-consumption-data-when-training-the-alexnet-with-caffe-on-a-marcher-server.png" alt="Real-time-power-consumption-data-when-training-the-AlexNet-with-Caffe-on-a-Marcher-server" />
+<img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/real-time-power-consumption-data-when-training-the-alexnet-with-caffe-on-a-marcher-server.png" alt="Real-time-power-consumption-data-when-training-the-AlexNet-with-Caffe-on-a-Marcher-server" />
 <figcaption><em>Real-time power consumption data when training the AlexNet with Caffe on a Marcher server</em></figcaption>
 </figure>
 

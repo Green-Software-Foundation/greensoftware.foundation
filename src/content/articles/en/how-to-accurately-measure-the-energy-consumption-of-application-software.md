@@ -33,12 +33,12 @@ The system architecture:
 ![](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
 
 <figure>
-<img src="../images/how-to-accurately-measure-the-energy-consumption-of-application-software/hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png" alt="" />
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png" alt="" />
 <figcaption><em>Hardware configuration as deployed in the AVEVA demo lab in Lake Forest</em></figcaption>
 </figure>
 
 <figure>
-<img src="../images/how-to-accurately-measure-the-energy-consumption-of-application-software/raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg" alt="" />
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg" alt="" />
 <figcaption><em>Raspberry PI, located at the back of the hardware cluster</em></figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ The baseline and loaded system measurements can be performed in parallel by runn
 A critical part of the system is its ability to archive data in Data Hub. The following graphic shows the power measurements of the baseline and loaded system (parallel configuration) over time.
 
 <figure>
-<img src="../images/how-to-accurately-measure-the-energy-consumption-of-application-software/power-trends-of-baseline-and-loaded-system-side-by-side.png" alt="" />
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/power-trends-of-baseline-and-loaded-system-side-by-side.png" alt="" />
 <figcaption><em>Power trends of Baseline and Loaded system side by side</em></figcaption>
 </figure>
 

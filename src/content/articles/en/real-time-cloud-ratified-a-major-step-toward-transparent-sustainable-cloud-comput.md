@@ -41,7 +41,7 @@ Additionally, the Real Time Cloud has advocated for cloud providers to align the
 We officially released the collected data in August 2024, and several updates have been made since, with the most recent one in December 2024. To access these updates, visit the [<u>project’s GitHub repository</u>](https://github.com/Green-Software-Foundation/real-time-cloud?tab=readme-ov-file). 
 
 <figure>
-<img src="../images/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/real-time-cloud-miro-flow-july-2024.png" alt="" />
+<img src="/assets/articles/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/real-time-cloud-miro-flow-july-2024.png" alt="" />
 <figcaption><em>Real Time Cloud Miro flow, July 2024</em></figcaption>
 </figure>
 

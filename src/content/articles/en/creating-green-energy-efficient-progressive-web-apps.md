@@ -30,7 +30,7 @@ Let’s briefly review the various areas where a website consumes energy.
 First, start with the server that hosts your site. All countries do not produce electricity in the same way with some electricity emitting more carbon in its creation than others. The [<u>Electricity map </u>](https://www.electricitymap.org/map)shows you how clean or dirty the electricity is in different parts of the world. For instance, in France, we have particularly decarbonated energy thanks to nuclear power. The Nordic countries offer even greener energy thanks to renewables. Many countries have dirtier energy sources. 
 
 <figure>
-<img src="../images/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-electricity-map-of-europe-showing-clean-and-dirty-electricity-by-nation.png" alt="green-software-foundation-Electricity-map-of-Europe-showing-clean-and-dirty-electricity-by-nation" />
+<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-electricity-map-of-europe-showing-clean-and-dirty-electricity-by-nation.png" alt="green-software-foundation-Electricity-map-of-Europe-showing-clean-and-dirty-electricity-by-nation" />
 <figcaption><em>Source: Electricitymap.org </em></figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Here are some interesting points:
 Now let’s quickly review how it works on a smartphone. 
 
 <figure>
-<img src="../images/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component.png" alt="green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component" />
+<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component.png" alt="green-software-foundation-graph-showing-smart-phone-energy-consumption-by-component" />
 <figcaption><em>Smart phone energy consumption</em></figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ Thanks to this study, [<u>*How is energy consumed in smartphone display applicat
 I’ve created three web pages: one completely blue, one totally red, and the last one, all black.
 
 <figure>
-<img src="../images/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages.png" alt="green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages" />
+<img src="/assets/articles/creating-green-energy-efficient-progressive-web-apps/green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages.png" alt="green-software-foundation-illustration-showing-comparison-of-smart-phone-energy-consupmtion-of-three-different-web-pages" />
 <figcaption><em>Comparing smartphone energy consumption for three different web pages</em></figcaption>
 </figure>
 

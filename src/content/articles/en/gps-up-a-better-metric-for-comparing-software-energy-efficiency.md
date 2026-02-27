@@ -40,7 +40,7 @@ To better illustrate the problem, let us take a step back and look at the physic
 The units for energy, power and time are Joule, Watt, and Second respectively. A basic way to understand the correlations between performance, power, and energy consumption is that the energy consumed during a program’s run-time is the area under the curve of the power of the run-time of the program.
 
 <figure>
-<img src="../images/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-power-against-runtime-to-show-energy-consumed.png" alt="A-chart-with-power-against-runtime-to-show-energy-consumed" />
+<img src="/assets/articles/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-power-against-runtime-to-show-energy-consumed.png" alt="A-chart-with-power-against-runtime-to-show-energy-consumed" />
 <figcaption><em>Energy consumed during a program’s run-time</em></figcaption>
 </figure>
 
@@ -87,7 +87,7 @@ It is worth noting that, because the energy for a program is the product of the 
 **G**up = (**T**ϕ  × **P**ϕ ) / (**T**o × **P**o) = **S**up /** P**up
 
 <figure>
-<img src="../images/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png" alt="A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants " />
+<img src="/assets/articles/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png" alt="A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants " />
 <figcaption><em>Software optimizations of all kinds categorized into eight quadrants </em></figcaption>
 </figure>
 

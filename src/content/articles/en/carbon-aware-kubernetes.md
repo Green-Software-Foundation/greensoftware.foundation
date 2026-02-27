@@ -28,7 +28,7 @@ The good news is that Kubernetes is built in a way that it can make carbon-aware
 ## System Overview
 
 <figure>
-<img src="../images/carbon-aware-kubernetes/green-software-foundation-illustration-of-core-components-of-kubernetes.jpg" alt="green-software-foundation-illustration-of-core-components-of-kubernetes" />
+<img src="/assets/articles/carbon-aware-kubernetes/green-software-foundation-illustration-of-core-components-of-kubernetes.jpg" alt="green-software-foundation-illustration-of-core-components-of-kubernetes" />
 <figcaption><em>The core components of Kubernetes</em></figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ Carbon intensity data for electrical grids around the world is available through
 We can query the API to get the carbon intensity of the location of each of our Nodes and feed this to the Scheduler’s algorithm to make a carbon-aware decision about where to place the new Pod.
 
 <figure>
-<img src="../images/carbon-aware-kubernetes/green-software-foundation-screenshot-of-carbon-scheduler-yaml-file.jpg" alt="green-software-foundation-screenshot-of-carbon-scheduler-yaml-file" />
+<img src="/assets/articles/carbon-aware-kubernetes/green-software-foundation-screenshot-of-carbon-scheduler-yaml-file.jpg" alt="green-software-foundation-screenshot-of-carbon-scheduler-yaml-file" />
 <figcaption><em>Sample carbon scheduler YAML file</em></figcaption>
 </figure>
 

@@ -49,7 +49,7 @@ One of the key objectives of performance tests—apart from verifying the respon
 Here's how the carbon intensity of software is defined by the Green Software Foundation:
 
 <figure>
-<img src="../images/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/the-definition-of-software-carbon-intensity-sci-by-the-green-software-foundation.png" alt="The Definition of Software Carbon Intensity (SCI) by the Green Software Foundation" />
+<img src="/assets/articles/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/the-definition-of-software-carbon-intensity-sci-by-the-green-software-foundation.png" alt="The Definition of Software Carbon Intensity (SCI) by the Green Software Foundation" />
 <figcaption><em>The Definition of Software Carbon Intensity (SCI) by the Green Software Foundation</em></figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ A high utilization means more electricity is drawn to sustain the processor cont
 The following graphs show the utilization levels when running a sample ecommerce application on a single core machine (left) and a dual core machine (right). For a single core machine, the CPU utilization spikes up to 100% and does not reduce for about 4 to 5 minutes.  Due to this, higher power is drawn during this timeframe to ensure the CPU server is able to serve all the requests. This increases the SCI value. 
 
 <figure>
-<img src="../images/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/graphs-comparing-server-utilization-with-single-core-and-dual-core-machines.png" alt="Graphs comparing Server Utilization with Single Core and Dual Core Machines" />
+<img src="/assets/articles/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/graphs-comparing-server-utilization-with-single-core-and-dual-core-machines.png" alt="Graphs comparing Server Utilization with Single Core and Dual Core Machines" />
 <figcaption><em>Comparison of Server Utilization with Single Core and Dual Core Machines</em></figcaption>
 </figure>
 
@@ -87,14 +87,14 @@ In case of a single core machine, the HTTP requests to the server get queued. Th
 See the results below, where the dual core machine has almost double the throughput of the single core while maintaining the response times below 1 second. 
 
 <figure>
-<img src="../images/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/comparison-of-single-core-and-dual-core-machines-with-response-times-and-throughput.png" alt="Comparison of single core and dual core machines with response times and throughput" />
+<img src="/assets/articles/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/comparison-of-single-core-and-dual-core-machines-with-response-times-and-throughput.png" alt="Comparison of single core and dual core machines with response times and throughput" />
 <figcaption><em>Comparison of single core and dual core machines with response times and throughput</em></figcaption>
 </figure>
 
 Running the SCI calculations for both these server configurations using a sample application[ using <u>eShoponWeb</u>](https://github.com/dotnet-architecture/eShopOnWeb), we find that the operational emissions of the dual core machine are almost half that of the single core machine. 
 
 <figure>
-<img src="../images/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/server-response-time-vs-number-of-cores.png" alt="server-response-time-vs-number-of-cores" />
+<img src="/assets/articles/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha/server-response-time-vs-number-of-cores.png" alt="server-response-time-vs-number-of-cores" />
 <figcaption><em>Response Times vs Number of Cores</em></figcaption>
 </figure>
 

@@ -32,7 +32,7 @@ We live in the cloud era where we are enabled by platforms like Azure that have 
 Performance testing helps optimize the infrastructure needed for running a workload. Consider a web application that connects to the database and is used concurrently by more than 1,000 users within a geo-region. A typical infrastructure setup is as per this architecture [<u>Basic web application – Azure Reference Architectures | Microsoft Docs</u>](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/basic-web-app?tabs=cli) .
 
 <figure>
-<img src="../images/role-of-performance-engineering-in-designing-carbon-efficient-applications/diagram-of-infrastructure-setup-for-a-basic-web-application.png" alt="diagram-of-infrastructure-setup-for-a-basic-web-application" />
+<img src="/assets/articles/role-of-performance-engineering-in-designing-carbon-efficient-applications/diagram-of-infrastructure-setup-for-a-basic-web-application.png" alt="diagram-of-infrastructure-setup-for-a-basic-web-application" />
 <figcaption><em>Typical infrastructure set up for a basic web application</em></figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ Running [<u>Azure Database tuning advisor</u>](https://docs.microsoft.com/en-us/
 ### Before Tuning
 
 <figure>
-<img src="../images/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-before-tuning.png" alt="A-graph-of-resource-utilization-before-tuning" />
+<img src="/assets/articles/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-before-tuning.png" alt="A-graph-of-resource-utilization-before-tuning" />
 <figcaption><em>Resource utilization before tuning</em></figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ Running [<u>Azure Database tuning advisor</u>](https://docs.microsoft.com/en-us/
 Incorporating the recommendations helped bring down the database utilization as you can see in the “After Tuning” graph. Now the same database at the same pricing tier can handle additional application querying.
 
 <figure>
-<img src="../images/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
+<img src="/assets/articles/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
 <figcaption><em>Resource utilization after tuning</em></figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ This is another scenario where we could have iteratively tried provisioning more
 ### Before tuning
 
 <figure>
-<img src="../images/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
+<img src="/assets/articles/role-of-performance-engineering-in-designing-carbon-efficient-applications/a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
 <figcaption><em>Resource utilization before tuning</em></figcaption>
 </figure>
 

@@ -70,7 +70,7 @@ Not every form of electricity generation is used all the time, even if they coul
 We can use these terms to help understand how the economics of electricity are changing, by looking at the economics of various forms of generation in turn.
 
 <figure>
-<img src="../images/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-coal-and-fossil-gas.png" alt="Comparing-marginal-costs-of-nuclear-coal-and-fossil-gas" />
+<img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-coal-and-fossil-gas.png" alt="Comparing-marginal-costs-of-nuclear-coal-and-fossil-gas" />
 <figcaption><em>Comparing marginal costs of nuclear, coal and fossil gas (not to scale)</em></figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ To use our terminology, if you run a gas generator, you can still make money eve
 Over the last 10 years we’ve seen the price of solar absolutely plummet. It is nearly ten times cheaper than it was in 2010. Wind’s price has come down less quickly, but it was also cheaper to begin with too. We’ve represented these with the blue block in our diagram.
 
 <figure>
-<img src="../images/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewable-sources-in-the-mix.png" alt="Comparing-marginal-costs-of-nuclear-and-fossil-fuels-with renewable-sources-in-the-mix" />
+<img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewable-sources-in-the-mix.png" alt="Comparing-marginal-costs-of-nuclear-and-fossil-fuels-with renewable-sources-in-the-mix" />
 <figcaption><em>Comparing marginal costs of nuclear and fossil fuels with renewable sources in the mix (not to scale)</em></figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ This means that sometimes demand can go so low that it goes *negative.**** ***Th
 ## Cheaper storage and batteries change this even more
 
 <figure>
-<img src="../images/understanding-energy-trends-at-the-layer-below-the-internet-stack/illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and-storage-in-the-mix.png" alt="Illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and storage-in-the-mix " />
+<img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and-storage-in-the-mix.png" alt="Illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and storage-in-the-mix " />
 <figcaption><em>Comparing marginal costs of nuclear and fossil fuels with renewables and batteries in the mix (not to scale)</em></figcaption>
 </figure>
 

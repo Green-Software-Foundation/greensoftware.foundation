@@ -23,7 +23,7 @@ This blog post focuses on measuring energy cost for applications running client-
 Measuring energy consumption directly from the wall socket is the same approach as for backend applications. Using a watt-hour meter, you can measure the total power consumption of your device, which helps you calculate energy cost. This will always be the best way to measure power consumption because it will measure exactly what your hardware consumes. 
 
 <figure>
-<img src="../images/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-measuring-power-consumption-directly-from-wall-socket.png" alt="illustration-measuring-power-consumption-directly-from-wall-socket" />
+<img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-measuring-power-consumption-directly-from-wall-socket.png" alt="illustration-measuring-power-consumption-directly-from-wall-socket" />
 <figcaption><em>Measuring power consumption directly from the wall socket</em></figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ Measuring the energy consumption for a device’s screen is more challenging, be
  
 
 <figure>
-<img src="../images/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed.png" alt="Illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed" />
+<img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed.png" alt="Illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed" />
 <figcaption><em>Using tools to measure energy consumption of your backend service</em></figcaption>
 </figure>
 

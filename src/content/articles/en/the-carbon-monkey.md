@@ -32,7 +32,7 @@ According to [<u>Principles of chaos engineering</u>](https://principlesofchaos.
 Let’s start with the first step: a steady state behavior is the condition our application should aspire to be in. If we translate this principle into a sustainable one, this becomes the most beautiful and efficient state of an application: *one where no energy is wasted, and efficiency and performance is at its best*.
 
 <figure>
-<img src="../images/the-carbon-monkey/green-software-foundation-carbon-monkey-illustration-paola-annis2.png" alt="green-software-foundation-carbon-monkey-illustration-paola-annis2" />
+<img src="/assets/articles/the-carbon-monkey/green-software-foundation-carbon-monkey-illustration-paola-annis2.png" alt="green-software-foundation-carbon-monkey-illustration-paola-annis2" />
 <figcaption><em>Call for more "carbon monkeys"</em></figcaption>
 </figure>
 

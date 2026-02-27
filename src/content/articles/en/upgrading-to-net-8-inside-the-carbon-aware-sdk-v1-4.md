@@ -34,7 +34,7 @@ Even without being a C# expert, it's interesting to look at the PR and see the i
 For the nitty-gritty (next paragraph), the core work is in updating the target framework version. This can be done in the property window of each C# project, for example, in the Japanese version of Visual Studio (Fig.1).
 
 <figure>
-<img src="../images/upgrading-to-net-8-inside-the-carbon-aware-sdk-v1-4/fig-1-property-window-of-c-project-in-carbon-aware-sdk-on-visual-studio-community-edition.png" alt="" />
+<img src="/assets/articles/upgrading-to-net-8-inside-the-carbon-aware-sdk-v1-4/fig-1-property-window-of-c-project-in-carbon-aware-sdk-on-visual-studio-community-edition.png" alt="" />
 <figcaption><em>Fig.1 Property window of C# project in Carbon Aware SDK on Visual Studio Community Edition</em></figcaption>
 </figure>
 

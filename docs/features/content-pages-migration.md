@@ -306,6 +306,19 @@ A `/articles` page that lists all articles with:
 3. Migrate translated articles (4 JA, 2 PT, 1 ZH)
 4. Migrate manifesto translations (7 languages)
 
+### Phase 4a: Legacy Markdown Cleanup
+
+The DatoCMS export produced markdown with several systematic issues that need automated cleanup across all 195 articles. Run these as batch find-and-replace operations:
+
+| Issue | Count | Pattern | Fix |
+|-------|-------|---------|-----|
+| Broken italic spacing | ~12 articles | `*word, *` or `*word *` (space before closing `*`) | Remove space before closing asterisk |
+| Bold-wrapped headings | 58 articles | `## **Heading**` | Strip inner `**` — headings are already bold |
+| Unnecessary `<u>` tags | 147 articles | `[<u>link text</u>](url)` | Strip `<u></u>` tags — prose links are already styled |
+| Raw HTML figures | 16 articles | `<figure><img src="..."><figcaption>` | Convert to markdown `![alt](src)` or `:::figure` directive |
+
+These are all DatoCMS export artefacts. The fixes should be scripted rather than manual — a single cleanup script can handle all four patterns across all articles in one pass.
+
 ## Legacy Content Inventory
 
 | Content | Count | Legacy Path | Notes |
