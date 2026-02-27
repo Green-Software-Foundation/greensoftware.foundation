@@ -1,0 +1,853 @@
+[
+  {
+    "file": "meet-a-steering-committee-member-matthew-kropp-of-bcg-gamma.md",
+    "title": "Meet a Steering Committee Member: Matthew Kropp of BCG GAMMA",
+    "date": "2022-02-08",
+    "type": "member-qa",
+    "companies": ["BCG GAMMA", "BCG"],
+    "people": [{"name": "Matthew Kropp", "title": "Managing Director and Partner", "company": "BCG GAMMA"}],
+    "projects": [],
+    "themes": ["measurement", "adoption", "community"],
+    "key_quotes": [
+      "We must make it stupidly simple to measure the climate impact of our code and we must elevate the conversation in the industry so that we all care about it.",
+      "The tech sector should become green in order to gain the moral authority to help drive other industries forward.",
+      "We have already built a library called CodeCarbon that measures the carbon footprint of data science code."
+    ],
+    "summary": "Matthew Kropp of BCG GAMMA discusses how his software background and climate passion led him to GSF, and how BCG's CodeCarbon library measures carbon footprint of data science code.",
+    "potential_story": true,
+    "story_note": "BCG GAMMA built CodeCarbon, an open-source tool for measuring data science carbon footprint; strong motivation story from a Fortune 500 consulting firm."
+  },
+  {
+    "file": "meet-a-steering-committee-member-sanjay-podder-of-accenture.md",
+    "title": "Meet a Steering Committee Member: Sanjay Podder of Accenture",
+    "date": "2022-03-17",
+    "type": "member-qa",
+    "companies": ["Accenture", "Microsoft"],
+    "people": [{"name": "Sanjay Podder", "title": "Global Lead for Sustainable Technology", "company": "Accenture"}],
+    "projects": ["Carbon Aware SDK"],
+    "themes": ["standards", "education", "tools", "community"],
+    "key_quotes": [
+      "Being a very new area, skill sets for green software is one of the challenges we face. Many software developers and engineers lack the knowledge or the avenues to learn and develop expertise to put Green Software Engineering into actual practice.",
+      "In 2020, I wrote an article -- How Green is your Software? -- for the Harvard Business Review.",
+      "We have trained about 40,000 software engineers across Accenture."
+    ],
+    "summary": "Sanjay Podder describes how his personal sustainability interest and Accenture's agenda merged with Microsoft's to conceive the GSF, and how Accenture trained 40,000 engineers on green software.",
+    "potential_story": true,
+    "story_note": "GSF origin story: Sanjay and Jeff Sandquist independently working on the same problem, then connecting to co-found GSF. Also a compelling metric: 40,000 trained engineers at Accenture."
+  },
+  {
+    "file": "meet-a-steering-committee-member-santiago-fontannarosa-of-globant.md",
+    "title": "Meet a Steering Committee Member: Santiago Fontanarrosa of Globant",
+    "date": "2021-11-05",
+    "type": "member-qa",
+    "companies": ["Globant"],
+    "people": [{"name": "Santiago Fontanarrosa", "title": "VP of Technology, Sustainable Business Studio", "company": "Globant"}],
+    "projects": [],
+    "themes": ["adoption", "standards", "tools"],
+    "key_quotes": [
+      "I believe that we all need to become aware of the impact software has on the environment and that with small changes we can achieve a huge impact.",
+      "Two of the most important challenges we need to address now, are to get the software community to agree on a common corpus and to develop the tools and practices that give teams the ability to measure energy impact of software."
+    ],
+    "summary": "Santiago Fontanarrosa of Globant describes how discovering digital sustainability shaped his personal and professional goals, leading him to join the GSF.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-a-steering-committee-member-toru-shimogaki-of-ntt-data.md",
+    "title": "Meet a Steering Committee Member: Toru Shimogaki of NTT DATA",
+    "date": "2021-11-22",
+    "type": "member-qa",
+    "companies": ["NTT DATA"],
+    "people": [{"name": "Toru Shimogaki", "title": "Head of Green Innovation Office and Head of Advanced Computing Technology Center", "company": "NTT DATA"}],
+    "projects": [],
+    "themes": ["standards", "measurement", "adoption"],
+    "key_quotes": [
+      "The first obstacle is that it is not intuitive and difficult to understand how software can contribute to CO2 emission reduction.",
+      "As someone who has dealt with big data infrastructure, I have been using computational resources without awareness."
+    ],
+    "summary": "Toru Shimogaki of NTT DATA discusses developing emission standards for software and making them easy to use to help people see the link between software and emissions reduction.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-a-steering-committee-member-yusuke-kobayashi-of-ntt-data.md",
+    "title": "Meet a Steering Committee Member: Yusuke Kobayashi of NTT DATA",
+    "date": "2021-12-03",
+    "type": "member-qa",
+    "companies": ["NTT DATA"],
+    "people": [{"name": "Yusuke Kobayashi", "title": "Manager, Green Innovation Office", "company": "NTT DATA"}],
+    "projects": [],
+    "themes": ["standards", "measurement", "tools"],
+    "key_quotes": [
+      "I want to help establish standards that correctly reflect the reduction efforts in software development and standardize them so that all developers know whether they are developing green software.",
+      "New innovative IT technologies and their benefits make people blinded so they forget to consider whether they are green or not."
+    ],
+    "summary": "Yusuke Kobayashi of NTT DATA describes his data science background and desire to establish green software standards so all developers can assess whether their software is green.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-ahmad-antar-digital-emissions.md",
+    "title": "Understanding the Environmental Footprint of our Digital Activities - Meet Ahmad Antar, Digital Emissions",
+    "date": "2024-02-27",
+    "type": "member-qa",
+    "companies": ["Digital Emissions"],
+    "people": [{"name": "Ahmad Antar", "title": "Founder and Executive Director", "company": "Digital Emissions"}],
+    "projects": ["Green Software Practitioner"],
+    "themes": ["measurement", "education", "tools"],
+    "key_quotes": [
+      "I can remember the time when software security used to be considered an afterthought. Well, this is where sustainable IT is today.",
+      "We are excited to be part of the vibrant community of green software practitioners at GSF, and it's promising to see the diversity of initiatives underway.",
+      "We have a program for all joining fellows to get green software training, including earning the Green Software Practitioner LFC131 certificate."
+    ],
+    "summary": "Ahmad Antar describes how Digital Emissions, a nonprofit born during the pandemic, uses digital carbon footprint modelling (conceived at Harvard) to raise awareness of the environmental impact of digital activities.",
+    "potential_story": true,
+    "story_note": "Non-profit started at Harvard classroom, building DCF Lifestyle calculator and crypto environmental footprint tool; strong origin story and practical tool development."
+  },
+  {
+    "file": "meet-ed-mclaughlin-president-operations-technology-mastercard.md",
+    "title": "Meet Ed McLaughlin - President, Operations & Technology, Mastercard",
+    "date": "2022-05-16",
+    "type": "member-qa",
+    "companies": ["Mastercard", "Doconomy"],
+    "people": [{"name": "Ed McLaughlin", "title": "President, Operations & Technology", "company": "Mastercard"}],
+    "projects": [],
+    "themes": ["measurement", "adoption", "tools"],
+    "key_quotes": [
+      "Not only are we developing sustainable software that produces more positive outcomes for the environment from an energy usage perspective, but we're also creating digital products that support 'green' thinking and behaviors.",
+      "We want to be able to quantify the results of our sustainability focused actions, so we can embed those practices within our technical operations."
+    ],
+    "summary": "Ed McLaughlin explains Mastercard's approach to green software, including the Carbon Calculator with Doconomy, ESG-linked compensation, and embedding sustainability across its 90M-merchant network.",
+    "potential_story": true,
+    "story_note": "Mastercard linking all employee compensation to ESG goals; Carbon Calculator tool embedded across global network; concrete metric: 90M merchants, 3B consumers."
+  },
+  {
+    "file": "meet-elmar-borgmeier-green-software-foundation-organisation-lead-for-syngenio-ag.md",
+    "title": "Meet Elmar Borgmeier, Green Software Foundation Organisation Lead for SYNGENIO AG",
+    "date": "2022-05-05",
+    "type": "member-qa",
+    "companies": ["Syngenio AG"],
+    "people": [{"name": "Elmar Borgmeier", "title": "Co-founder, Innovation Lead", "company": "Syngenio AG"}],
+    "projects": ["SCI"],
+    "themes": ["standards", "measurement", "education", "tools"],
+    "key_quotes": [
+      "Once you begin to think about it, you find it unbelievable that green software has been neglected for such a long time.",
+      "In Germany, power usage of data centers grew by 60 percent during the last decade and the trend continues.",
+      "If you have anything to do with software development, I strongly recommend joining the first group because green software will happen fast. It is a matter of a few years for it to become the new normal."
+    ],
+    "summary": "Elmar Borgmeier of Syngenio AG describes building a parallel Green Software Design community in Germany, creating the Expertyzer tool for rating software sustainability, and integrating SCI into their rating.",
+    "potential_story": true,
+    "story_note": "Parallel community story: Syngenio built greensoftwaredesign.com independently of GSF, then joined forces. Created practical tools (Expertyzer) and technology ratings. Strong coaching model."
+  },
+  {
+    "file": "meet-gsf-org-leads-adam-jordan-of-shell.md",
+    "title": "Meet GSF Org Leads: Adam Jordan of Shell",
+    "date": "2022-02-18",
+    "type": "member-qa",
+    "companies": ["Shell", "Microsoft"],
+    "people": [{"name": "Adam Jordan", "title": "Distinguished Software Engineer", "company": "Shell"}],
+    "projects": [],
+    "themes": ["adoption", "standards"],
+    "key_quotes": [
+      "I don't see it as something that needs popularising as much as a core element of solution delivery in the future.",
+      "The ability to understand, improve, and convey your green software strategy and its execution will be a competitive edge in the coming years and a required way of working in the decades that follow."
+    ],
+    "summary": "Adam Jordan of Shell explains how green software is a key element of Shell's energy transition strategy, with GSF providing the link to industry standards and tooling.",
+    "potential_story": true,
+    "story_note": "Energy company undergoing transition using green software as competitive edge; Shell discovered GSF through Microsoft Build announcement."
+  },
+  {
+    "file": "meet-gsf-org-leads-anne-currie-of-container-solutions.md",
+    "title": "Meet GSF Org Leads: Anne Currie of Container Solutions",
+    "date": "2022-02-16",
+    "type": "member-qa",
+    "companies": ["Container Solutions", "Microsoft", "AWS"],
+    "people": [{"name": "Anne Currie", "title": "Technologist", "company": "Container Solutions"}],
+    "projects": [],
+    "themes": ["adoption", "community"],
+    "key_quotes": [
+      "We want to help shape the direction of tech architecture so our industry is directly responsible for a lot less carbon dioxide going into the atmosphere. That's not because we are a bunch of do-gooders. It is because it's the future.",
+      "It's the 'Don't Look Up!' issue. How do we get attention?"
+    ],
+    "summary": "Anne Currie of Container Solutions describes her path from high-performance server engineering to sustainable development consultancy and her drive to get the whole tech industry on board with green practices.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-gsf-org-leads-colleen-josephson-of-vmware.md",
+    "title": "Meet GSF Org Leads: Colleen Josephson of VMware",
+    "date": "2022-01-31",
+    "type": "member-qa",
+    "companies": ["VMware", "UC Santa Cruz"],
+    "people": [{"name": "Colleen Josephson", "title": "Research Scientist", "company": "VMware"}],
+    "projects": [],
+    "themes": ["tools", "measurement", "community"],
+    "key_quotes": [
+      "Our interest comes from a passion for doing what is right, willingness to tackle hard problems, and a belief that doing good for the planet aligns strongly with doing good for our customers.",
+      "Right now, we have a lot of tools to help us analyze memory usage, code duplication, concurrency, and so on. We have very few to help us analyze energy consumption and carbon intensity."
+    ],
+    "summary": "Colleen Josephson of VMware describes the team effort behind their GSF engagement and highlights the need for energy consumption analysis tools comparable to existing performance tools.",
+    "potential_story": true,
+    "story_note": "VMware team effort story with multiple named contributors; dual role of research scientist and professor bridging academia and industry."
+  },
+  {
+    "file": "meet-gsf-org-leads-henry-richardson-of-watttime.md",
+    "title": "Meet GSF Org Leads: Henry Richardson of WattTime",
+    "date": "2022-02-11",
+    "type": "member-qa",
+    "companies": ["WattTime", "Climate TRACE"],
+    "people": [{"name": "Henry Richardson", "title": "Environmental Impact Analyst", "company": "WattTime"}],
+    "projects": ["SCI"],
+    "themes": ["standards", "measurement", "tools"],
+    "key_quotes": [
+      "I eventually realised I was focusing on the wrong culprit, and that the makeup of the electric grid was really what was driving much of the carbon emissions produced by buildings.",
+      "Developers need to look beyond their organisations to become more aware of the global impact their software may have. The new SCI specification makes this so much easier than it has been before."
+    ],
+    "summary": "Henry Richardson of WattTime describes his journey from green buildings to grid-focused carbon reduction, and how WattTime supports carbon-aware software through the SCI specification and grid data.",
+    "potential_story": true,
+    "story_note": "WattTime's pivot from architecture to grid emissions; co-founded Climate TRACE coalition; direct contribution to SCI specification from grid perspective."
+  },
+  {
+    "file": "meet-gsf-org-leads-sarah-hsu-of-goldman-sachs.md",
+    "title": "Meet GSF Organisational Leads: Sarah Hsu of Goldman Sachs",
+    "date": "2022-03-15",
+    "type": "member-qa",
+    "companies": ["Goldman Sachs"],
+    "people": [{"name": "Sarah Hsu", "title": "Associate, Site Reliability Engineering", "company": "Goldman Sachs"}],
+    "projects": [],
+    "themes": ["education", "community", "standards"],
+    "key_quotes": [
+      "I would like to see green software engineering become an integral part of the educational curriculum for anyone learning to code.",
+      "Sustainability and reliability are different concepts but are closely related and should go hand in hand with one another. We can think of sustainability as reliability over time."
+    ],
+    "summary": "Sarah Hsu of Goldman Sachs draws parallels between SRE and green software, chairs the Principles of Green Software Engineering revision project, and champions education as key to adoption.",
+    "potential_story": true,
+    "story_note": "Goldman Sachs as founding member hosting GSF summit in London; Sarah chairing revision of Principles of Green Software Engineering; SRE-sustainability parallel is a novel framing."
+  },
+  {
+    "file": "meet-gsf-org-leads-timo-muller-of-leaders-for-climate-action.md",
+    "title": "Meet GSF Org Leads: Timo Muller of Leaders for Climate Action",
+    "date": "2022-01-27",
+    "type": "member-qa",
+    "companies": ["Leaders for Climate Action"],
+    "people": [{"name": "Timo Muller", "title": "Co-founder", "company": "Leaders for Climate Action"}],
+    "projects": [],
+    "themes": ["adoption", "community", "tools"],
+    "key_quotes": [
+      "Building truly carbon aware software is exciting and I am looking forward to being an early adopter of new tech in this field.",
+      "The reality for CTOs of big corporations is that green software is not their first priority. Stability, security and speed of development will come first in most cases, and we should not expect this to change.",
+      "I met Asim through the CAT (Climate Action Tech) community quite a while ago when LFCA was still in its infancy."
+    ],
+    "summary": "Timo Muller of LFCA describes how his personal environmental journey led to founding a 1,500-company community, and how LFCA bridges the private and public sectors for green software adoption.",
+    "potential_story": true,
+    "story_note": "LFCA founding story - 1,500 companies strong; met GSF Chair Asim through Climate Action Tech community; bridge between private/public sector."
+  },
+  {
+    "file": "meet-gsf-org-leads-ziliang-zong-of-texas-state-university.md",
+    "title": "Meet GSF Org Leads: Ziliang Zong of Texas State University",
+    "date": "2022-01-25",
+    "type": "member-qa",
+    "companies": ["Texas State University", "Auburn University"],
+    "people": [{"name": "Ziliang Zong", "title": "Director, Energy Efficient Computing and Systems Laboratory", "company": "Texas State University"}],
+    "projects": [],
+    "themes": ["education", "measurement", "tools"],
+    "key_quotes": [
+      "Hundreds of thousands of CS students are graduated every year worldwide without the 'green thinking' mindset and proper training.",
+      "Software is eating the world and gets bloated faster. As hardware improvement quickly slows down in the post Moore era, it becomes the responsibility and inevitable mission of the software community to take the lead."
+    ],
+    "summary": "Ziliang Zong describes nearly a decade of promoting green computing education, creating the GreenCode platform (31,000+ code submissions), the Marcher energy measurement system, and teaching three green computing courses.",
+    "potential_story": true,
+    "story_note": "Academic pioneer: created GreenCode platform used globally (31,000+ submissions), Marcher system (20+ papers), 3 green computing courses, ~200 students trained over 8 years."
+  },
+  {
+    "file": "meet-organizational-lead-member-aveva.md",
+    "title": "Meet organizational lead member AVEVA",
+    "date": "2022-08-25",
+    "type": "member-qa",
+    "companies": ["AVEVA", "Schneider Electric"],
+    "people": [{"name": "Simon Bennett", "title": "Global Head of Research", "company": "AVEVA"}],
+    "projects": [],
+    "themes": ["adoption", "standards", "education"],
+    "key_quotes": [
+      "AVEVA is committed to leading on sustainable innovation and working in partnership with customers, peers and other stakeholders to make a more equitable, net-zero world a reality for the next generation.",
+      "We have defined sustainability through the lens of our operational footprint, our technology handprint, and our inclusive culture."
+    ],
+    "summary": "Simon Bennett of AVEVA describes their three-pillar sustainability approach (footprint, handprint, culture), center of excellence for sustainability software, and academic partnerships training 20,000+ students.",
+    "potential_story": true,
+    "story_note": "AVEVA serves 20,000+ enterprises across 12 industrial sectors; established sustainability software center of excellence; First Movers' Coalition member; 20,000 students trained via academic partnerships."
+  },
+  {
+    "file": "meet-organizational-lead-member-futurewei.md",
+    "title": "Meet organizational lead member Futurewei",
+    "date": "2022-09-30",
+    "type": "member-qa",
+    "companies": ["Futurewei"],
+    "people": [{"name": "", "title": "Technology Strategy Team Lead", "company": "Futurewei"}],
+    "projects": ["SCI"],
+    "themes": ["standards", "measurement", "tools"],
+    "key_quotes": [
+      "Global network infrastructure and data centers can have more greenhouse gas emissions than the airline industry if following the current energy consumption path.",
+      "The GSF's unique combination of open-source developing and the standard setting might be the right way to tackle the complexities of green software metrics."
+    ],
+    "summary": "Futurewei's technology strategy lead describes how the R&D unit views sustainability as both challenge and opportunity for ICT, and how GSF's SCI can drive green software adoption.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-our-steering-committee-accenture.md",
+    "title": "Meet Our Steering Committee: Accenture",
+    "date": "2021-09-01",
+    "type": "member-qa",
+    "companies": ["Accenture"],
+    "people": [],
+    "projects": [],
+    "themes": ["standards", "education", "adoption"],
+    "key_quotes": [
+      "Companies need to make software an integral part of their sustainability efforts by taking its carbon footprint into account in the way it is designed, developed, and deployed.",
+      "One critical challenge in developing green software is that there are no commonly agreed standards, practices, metrics and tools to measure and minimize software related carbon emissions."
+    ],
+    "summary": "Accenture's company-level profile for the GSF Steering Committee, emphasising the need for standards, measurement tools, and industry education around green software engineering.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-our-steering-committee-bcg-gamma.md",
+    "title": "Meet Our Steering Committee: BCG GAMMA",
+    "date": "2022-01-26",
+    "type": "member-qa",
+    "companies": ["BCG GAMMA", "BCG"],
+    "people": [],
+    "projects": [],
+    "themes": ["standards", "adoption", "measurement"],
+    "key_quotes": [
+      "We envision a future where sustainability is a cornerstone of software development.",
+      "We see two key challenges on the road to adoption: awareness and action. It requires a change in culture and ways of working to build software that abates emissions, not just neutralizes them.",
+      "The next decade will be one of transformation. Software engineering is and will be the central piece of the puzzle."
+    ],
+    "summary": "BCG GAMMA's company-level Steering Committee profile describing their vision of sustainability as a cornerstone of software development and commitment to Net Zero by 2030.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-our-steering-committee-github.md",
+    "title": "Meet Our Steering Committee: GitHub",
+    "date": "2021-08-17",
+    "type": "member-qa",
+    "companies": ["GitHub"],
+    "people": [],
+    "projects": [],
+    "themes": ["adoption", "tools", "community"],
+    "key_quotes": [
+      "Every line of code has an environmental impact, with the resulting software consuming earth's resources.",
+      "GitHub has been carbon neutral since 2019 and all development on and use of GitHub.com since then has been carbon neutral.",
+      "We see a future where every software developer can incorporate sustainable-forward thinking into their workflows."
+    ],
+    "summary": "GitHub's Steering Committee profile discussing carbon-neutral operations since 2019, the GitHub Sponsors program for green software projects, and the need for standardised sustainable practices.",
+    "potential_story": true,
+    "story_note": "GitHub carbon neutral since 2019; GitHub Sponsors programme for green software funding; concrete platform impact on millions of developers."
+  },
+  {
+    "file": "meet-our-steering-committee-globant.md",
+    "title": "Meet Our Steering Committee: Globant",
+    "date": "2021-08-24",
+    "type": "member-qa",
+    "companies": ["Globant", "Google", "Rockwell Automation", "Electronic Arts", "Santander"],
+    "people": [],
+    "projects": [],
+    "themes": ["adoption", "measurement"],
+    "key_quotes": [
+      "Poorly written and badly performing code can push us to misuse resources that are not necessarily required.",
+      "We started operating with 100% renewable electricity resources in 2020."
+    ],
+    "summary": "Globant's Steering Committee profile describing their Be Kind to the Planet initiative, 100% renewable electricity since 2020, and goal of becoming carbon neutral.",
+    "potential_story": true,
+    "story_note": "Globant achieved 100% renewable electricity in 2020; pursuing carbon neutrality; Be Kind initiative with clear progression."
+  },
+  {
+    "file": "meet-our-steering-committee-ntt-data.md",
+    "title": "Meet Our Steering Committee: NTT DATA",
+    "date": "2021-09-07",
+    "type": "member-qa",
+    "companies": ["NTT DATA", "NTT Group"],
+    "people": [],
+    "projects": [],
+    "themes": ["standards", "measurement", "tools"],
+    "key_quotes": [
+      "NTT DATA aims to achieve zero environmental impact following the vision, 'NTT Green Innovation toward 2040'.",
+      "The challenge for the software field will be to strike a balance between introducing technologies that enrich society and reducing CO2 emissions."
+    ],
+    "summary": "NTT DATA's Steering Committee profile outlining their NTT Green Innovation toward 2040 vision and goal of reducing CO2 emissions by 45% as an IT service provider.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-our-steering-committee-thoughtworks.md",
+    "title": "Meet Our Steering Committee: Thoughtworks",
+    "date": "2021-08-10",
+    "type": "member-qa",
+    "companies": ["Thoughtworks"],
+    "people": [],
+    "projects": [],
+    "themes": ["standards", "adoption", "measurement"],
+    "key_quotes": [
+      "Climate change is one of the most pressing challenges faced by humanity and the tech sector contributes a rapidly escalating amount of emissions.",
+      "We imagine a not-too-distant future where carbon footprint is a central consideration in how software is built -- similar to the considerations of performance, cost, quality and accessibility today."
+    ],
+    "summary": "Thoughtworks' Steering Committee profile as a founding GSF member, emphasising the need for cultural shift toward shared accountability and better measurement tools.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "meet-savannah-goodman-of-google.md",
+    "title": "Green Software Ingrained in the Corporate Fabric - Meet Savannah Goodman of Google",
+    "date": "2023-08-31",
+    "type": "member-qa",
+    "companies": ["Google", "Tesla"],
+    "people": [{"name": "Savannah Goodman", "title": "Lead, Data and Software Climate Solutions", "company": "Google"}],
+    "projects": ["Carbon Aware SDK", "Impact Framework"],
+    "themes": ["measurement", "tools", "education"],
+    "key_quotes": [
+      "By 2030, we aim to achieve net-zero emissions across our operations and value chain. We aim to run on carbon-free energy 24/7 on every grid where we operate.",
+      "In 2022, we matched 64% of our data center and office electricity use with regional carbon-free sources on an hourly basis.",
+      "We are working to combine GreenOps with FinOps to raise customer awareness and more closely tie sustainability with cost optimization."
+    ],
+    "summary": "Savannah Goodman describes Google's systematic sustainability integration including Cloud Carbon Footprint, carbon-intelligent computing platform, TPU efficiency improvements, and joining GSF to contribute to Carbon Aware SDK and Impact Framework.",
+    "potential_story": true,
+    "story_note": "Google's comprehensive green software story: 24/7 carbon-free energy goal, TPUv4 2x more efficient than v3, Cloud Carbon Footprint tool, carbon-intelligent compute platform shifting workloads by time/location. Major company with concrete metrics."
+  },
+  {
+    "file": "meet-steering-committee-member-and-orglead-niels-freier-of-bcg-gamma.md",
+    "title": "Meet Steering Committee Member and OrgLead: Niels Freier of BCG GAMMA",
+    "date": "2022-02-21",
+    "type": "member-qa",
+    "companies": ["BCG GAMMA", "BCG"],
+    "people": [{"name": "Niels Freier", "title": "Associate Director", "company": "BCG GAMMA"}],
+    "projects": [],
+    "themes": ["adoption", "measurement", "standards"],
+    "key_quotes": [
+      "Technology alone is not sufficient; we need to change the mindset of the companies as a whole.",
+      "Do we really need to deploy a large cluster to run simple mathematical operations when we would maybe simply optimize the code a little bit?"
+    ],
+    "summary": "Niels Freier of BCG GAMMA discusses how a mindset change alongside technology is necessary for a low-carbon world, and highlights BCG's CO2 AI tool for granular activity footprinting.",
+    "potential_story": true,
+    "story_note": "BCG's CO2 AI tool for granular corporate footprinting; Niels' journey from CTO to sustainability advocate; mindset change narrative."
+  },
+  {
+    "file": "meet-steering-committee-member-of-green-software-foundation-kin-chiu-of-ubs.md",
+    "title": "Meet Steering Committee Member of Green Software Foundation: Kin Chiu of UBS",
+    "date": "2022-04-14",
+    "type": "member-qa",
+    "companies": ["UBS", "JP Morgan", "Morgan Stanley", "Deutsche Bank", "Microsoft"],
+    "people": [{"name": "Kin Chiu", "title": "Executive Director, Sustainable Technology Lead", "company": "UBS"}],
+    "projects": [],
+    "themes": ["adoption", "standards", "measurement"],
+    "key_quotes": [
+      "As the father of two young children, and someone who works in a technology organisation that enables and creates software, I feel a responsibility to ensure that this digital world isn't delivered at the expense of the natural world.",
+      "Carbon Aware Computing could recommend or even automatically refactor software to be greener."
+    ],
+    "summary": "Kin Chiu of UBS describes how the bank's cloud migration strategy, Sustainable Technology Guild, and Microsoft partnership led to GSF engagement, driven by personal responsibility as a parent.",
+    "potential_story": true,
+    "story_note": "UBS formed Sustainable Technology Guild; cloud strategy converged with sustainability goals; personal motivation from parenthood; vision of auto-refactoring for green software."
+  },
+  {
+    "file": "meet-sunil-aggarwal-hcltech.md",
+    "title": "Cost Savings a Key Driver for Green Software Adoption - Meet Sunil Aggarwal, Sr. Vice President at HCLTech",
+    "date": "2023-11-17",
+    "type": "member-qa",
+    "companies": ["HCLTech", "Microsoft"],
+    "people": [{"name": "Sunil Aggarwal", "title": "Sr. Vice President and Global Client Partner", "company": "HCLTech"}],
+    "projects": ["SCI", "Green Software Practitioner"],
+    "themes": ["tools", "education", "measurement", "adoption"],
+    "key_quotes": [
+      "We have formed a Sustainability Center of Excellence with more than one hundred engineers trained in green engineering guidelines.",
+      "HCLTech has also launched a sustainability school where around 100k employees are getting training on sustainability guidelines.",
+      "We are setting up a Green Software Engineering Lab in Redmond, WA."
+    ],
+    "summary": "Sunil Aggarwal describes HCLTech's green software journey: 100+ engineer CoE, 100K employees in sustainability training, 30+ products, SCI-based solutions, and a new Green Software Engineering Lab in Redmond.",
+    "potential_story": true,
+    "story_note": "Exceptional metrics: 100K employees in sustainability training, 100+ engineer CoE, 30+ green products, Green Software Engineering Lab in Redmond, 50+ engineers trained on Microsoft Sustainability Manager."
+  },
+  {
+    "file": "meet-virginie-corraze-associate-director-engineering-quality-amp-sustainability-a.md",
+    "title": "Meet Virginie Corraze, Associate Director, Engineering Quality & Sustainability, Amadeus",
+    "date": "2022-08-18",
+    "type": "member-qa",
+    "companies": ["Amadeus", "IATA"],
+    "people": [{"name": "Virginie Corraze", "title": "Associate Director, Engineering Quality & Sustainability", "company": "Amadeus"}],
+    "projects": ["SCI"],
+    "themes": ["measurement", "tools", "adoption", "standards"],
+    "key_quotes": [
+      "Our main aim is for every engineer within Amadeus to understand that sustainability is at the core of everything we do.",
+      "We will apply SCI as an internal measure for the most extensive Amadeus application in terms of volumes of transactions migrating to the cloud.",
+      "Customers are looking for low carbon solutions and employees often ask in job interviews what we are doing for the environment."
+    ],
+    "summary": "Virginie Corraze describes Amadeus' approach to green software in the travel industry, including applying SCI to their largest cloud application, collaborating with IATA on search efficiency, and using FinOps for sustainability mindset change.",
+    "potential_story": true,
+    "story_note": "Travel tech provider applying SCI to largest app; IATA collaboration on AI-driven search efficiency; FinOps-sustainability convergence; 1.9B travellers connected in 2019."
+  },
+  {
+    "file": "minimizing-the-carbon-footprint-in-it-operations-meet-jorg-schwuchow-and-daniel-g.md",
+    "title": "Minimizing the Carbon Footprint in IT Operations - Meet Jorg Schwuchow and Daniel Geisel of Mercedes-Benz",
+    "date": "2024-04-30",
+    "type": "member-qa",
+    "companies": ["Mercedes-Benz", "Mercedes-Benz Tech Innovation"],
+    "people": [
+      {"name": "Jorg Schwuchow", "title": "Vice President IT Infrastructure & Cross Functions", "company": "Mercedes-Benz"},
+      {"name": "Daniel Geisel", "title": "CEO", "company": "Mercedes-Benz Tech Innovation"}
+    ],
+    "projects": [],
+    "themes": ["measurement", "standards", "adoption", "education"],
+    "key_quotes": [
+      "We need to continue to reduce our carbon footprint and for this, green software is one of the most important levers for the future.",
+      "How can we measure the environmental impact of software in a standardized way, so that not every company does it in its own way?"
+    ],
+    "summary": "Jorg Schwuchow and Daniel Geisel describe Mercedes-Benz's Ambition 2039 strategy and how green software is a key lever, with internal initiatives covering green UX, green coding frameworks, and sustainability workshops.",
+    "potential_story": true,
+    "story_note": "Major automotive brand with Ambition 2039 net-zero target; grassroots sustainability group at Mercedes-Benz Tech Innovation; green UX and green coding frameworks; cross-industry knowledge exchange motivation."
+  },
+  {
+    "file": "mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward.md",
+    "title": "Mission Statement Update: GSF's Policy Working Group Defines its Path Forward",
+    "date": "2025-08-07",
+    "type": "announcement",
+    "companies": ["Green Web Foundation", "Scope3"],
+    "people": [
+      {"name": "Chris Adams", "title": "Co-lead, Policy Working Group", "company": "Green Web Foundation"},
+      {"name": "Aya Saed", "title": "Co-lead, Policy Working Group", "company": "Scope3"}
+    ],
+    "projects": ["Policy Radar"],
+    "themes": ["policy", "standards"],
+    "key_quotes": [
+      "Rather than traditional lobbying, we focus on translating our deep technical expertise into accessible insights that inform better policy decisions around software sustainability.",
+      "In conversations with policymakers, we've found they are genuinely hungry for more information and guidance in navigating this complex technical terrain into actionable policy."
+    ],
+    "summary": "The GSF Policy Working Group defines its refined mission as a nonpartisan technical resource for policymakers, with priorities including NY Corporate Climate Accountability Act, European Green Digital Coalition, and US state AI regulations.",
+    "potential_story": true,
+    "story_note": "Policy Working Group evolution: from formation to refined mission; concrete policy engagement examples (NY Senate, EU Green Digital Coalition); progression narrative."
+  },
+  {
+    "file": "new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson.md",
+    "title": "New Leadership Appointment: Gadhu Sundaram Elected as the GSF Chairperson",
+    "date": "2025-01-21",
+    "type": "announcement",
+    "companies": ["NTT DATA", "Accenture", "Avanade", "BCG X", "Google", "Microsoft", "Siemens", "UBS"],
+    "people": [
+      {"name": "Gadhu Sundaram", "title": "Vice President of Application Services", "company": "NTT DATA UK"},
+      {"name": "Sanjay Podder", "title": "Managing Director, Global Lead for Technology Sustainability Innovation", "company": "Accenture"}
+    ],
+    "projects": ["SCI"],
+    "themes": ["community", "standards", "education"],
+    "key_quotes": [
+      "NTT Data's commitment to becoming sustainable by design across its entire portfolio creates a dynamic ecosystem where challenges can be brought back to GSF to shape standards, while simultaneously allowing us to adopt and apply those standards to address real-world challenges.",
+      "I had the privilege of growing up in one of the world's top ten biodiversity hotspots, the Nilgiri Biosphere Reserve."
+    ],
+    "summary": "Gadhu Sundaram succeeds Sanjay Podder as GSF Chair, with priorities including SSIA integration, domain-specific SCI standards, certification programme, and expanding educational offerings.",
+    "potential_story": true,
+    "story_note": "Leadership transition story with personal narrative: Gadhu grew up in Nilgiri Biosphere Reserve, connecting nature and technology; SSIA merger; 2025 strategic priorities."
+  },
+  {
+    "file": "observability-across-complex-environments-meet-bertrand-martin-ceo-of-sentry-soft.md",
+    "title": "Observability Across Complex Environments - Meet Bertrand Martin, CEO of Sentry Software",
+    "date": "2023-06-19",
+    "type": "member-qa",
+    "companies": ["Sentry Software", "OpenTelemetry", "Cloud Native Computing Foundation"],
+    "people": [{"name": "Bertrand Martin", "title": "CEO and President", "company": "Sentry Software"}],
+    "projects": ["SCI"],
+    "themes": ["measurement", "tools", "standards"],
+    "key_quotes": [
+      "I believe observability is paramount on our path to reduce carbon emissions.",
+      "Can you imagine that researchers are still estimating the power consumed by a PC's processor only by measuring its heat dissipation and not using a power meter?",
+      "I am working on the authorship of an Internet Draft, which proposes a new RFC with the IETF for a new HTTP response header reporting carbon emissions associated with processing each HTTP request."
+    ],
+    "summary": "Bertrand Martin describes Sentry Software's OpenTelemetry-based observability tools for data centre energy measurement and carbon footprint reporting, plus a proposed IETF RFC for HTTP carbon emissions headers.",
+    "potential_story": true,
+    "story_note": "Proposing IETF RFC for HTTP carbon emissions header - if adopted, would give visibility into browsing-related carbon emissions. Working with OpenTelemetry on sustainability semantic conventions. Monitoring since 2008."
+  },
+  {
+    "file": "open-source-tooling-at-the-core-of-innovation-meet-lisa-mcnally-head-of-sustainab.md",
+    "title": "Open Source Tooling at the Core of Innovation - Meet Lisa McNally, Head of Sustainability Solutions at Thoughtworks",
+    "date": "2023-11-29",
+    "type": "member-qa",
+    "companies": ["Thoughtworks", "United Nations"],
+    "people": [{"name": "Lisa McNally", "title": "Head of Sustainability Solutions", "company": "Thoughtworks"}],
+    "projects": [],
+    "themes": ["tools", "policy", "education"],
+    "key_quotes": [
+      "A recurring theme has become clear: the same approaches to improve decarbonization outcomes are applicable across all sectors: awareness - gathering meaningful data to make the best choices, and efficiency - doing more with less.",
+      "We're also proud of the Responsible Tech Playbook we co-created with our client, the United Nations."
+    ],
+    "summary": "Lisa McNally describes Thoughtworks' sustainability approach including Cloud Carbon Footprint open-source tool, Responsible Tech Playbook co-created with the UN, and her role on the GSF board and Policy Working Group.",
+    "potential_story": true,
+    "story_note": "Thoughtworks co-created Responsible Tech Playbook with UN (references GSF resources); Cloud Carbon Footprint open-source tool; Lisa's 20-year career across transportation, buildings, and tech sectors."
+  },
+  {
+    "file": "pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un.md",
+    "title": "Pioneering Digital Sustainability in Higher Education - Meet Emma Horrell of the University of Edinburgh",
+    "date": "2025-09-02",
+    "type": "member-qa",
+    "companies": ["University of Edinburgh", "EPCC", "University of Manchester", "University of Southampton"],
+    "people": [{"name": "Emma Horrell", "title": "User Experience Manager", "company": "University of Edinburgh"}],
+    "projects": ["SCI", "SCI for Web"],
+    "themes": ["measurement", "education", "community"],
+    "key_quotes": [
+      "We discovered our image formats were unnecessarily heavy, and through simple changes, achieved 13 tonnes of CO2 reduction per year.",
+      "Sustainable digital transformation is fundamentally about behavioral change, not just technical solutions."
+    ],
+    "summary": "Emma Horrell describes the University of Edinburgh's practical approach to digital sustainability, achieving 13 tonnes CO2 reduction through homepage image optimisation, and interest in SCI for Web specification.",
+    "potential_story": true,
+    "story_note": "Concrete result: 13 tonnes CO2 saved per year from image optimisation alone. University as GSF member. Learning-by-doing approach with documented case studies. SSI secured GBP 10.2M funding."
+  },
+  {
+    "file": "pioneering-sustainability-in-software-meet-dr-carlos-gamarra-of-harc.md",
+    "title": "Pioneering Sustainability in Software - Meet Dr. Carlos Gamarra of HARC",
+    "date": "2024-03-19",
+    "type": "member-qa",
+    "companies": ["HARC"],
+    "people": [{"name": "Carlos Gamarra", "title": "Director of Clean Energy", "company": "HARC"}],
+    "projects": [],
+    "themes": ["tools", "measurement", "community"],
+    "key_quotes": [
+      "My main goal is to assist both private companies and public entities in decarbonizing their operations.",
+      "We strategically schedule computations for times when there is surplus solar energy, ensuring the operations are carbon emission-free.",
+      "Introducing a certification similar to the EPA's Energy Star program could elevate awareness and encourage both developers and users to opt for greener choices."
+    ],
+    "summary": "Dr. Carlos Gamarra describes HARC's unique approach: building a zero-carbon DOE software tool that runs on on-premise solar-powered servers, scheduling computations during solar surplus, with user choice for zero-carbon vs. faster analysis.",
+    "potential_story": true,
+    "story_note": "Building a truly zero-carbon (not net-zero) software tool for DOE; first certified net-zero commercial building in Texas; solar-powered on-premise compute with user-facing carbon choice. Exceptional case study."
+  },
+  {
+    "file": "reading-list-on-green-software.md",
+    "title": "It's World Environment Day: Here's Our Reading List on Green Software",
+    "date": "2024-06-05",
+    "type": "other",
+    "companies": ["Accenture", "Wholegrain Digital"],
+    "people": [
+      {"name": "Anne Currie", "title": "Author", "company": "Container Solutions"},
+      {"name": "Sarah Hsu", "title": "Author", "company": "Goldman Sachs"},
+      {"name": "Sara Bergman", "title": "Author", "company": ""},
+      {"name": "Sanjay Podder", "title": "Author", "company": "Accenture"},
+      {"name": "Navveen Balani", "title": "Author", "company": "Accenture"},
+      {"name": "Niklas Sundberg", "title": "Author", "company": "ASSA ABLOY"},
+      {"name": "Tom Greenwood", "title": "Author", "company": "Wholegrain Digital"},
+      {"name": "Tim Frick", "title": "Author", "company": ""},
+      {"name": "Ioannis Kolaxis", "title": "Author", "company": ""}
+    ],
+    "projects": ["Green Software Practitioner"],
+    "themes": ["education"],
+    "key_quotes": [
+      "Software practitioners have an outsized impact on global carbon emissions compared to most. Our day-to-day work influences an industry estimated to emit 14% of total emissions by 2040.",
+      "All we need is 3% of software practitioners to embrace green software practices to make a significant impact on reducing tech's carbon footprint."
+    ],
+    "summary": "Curated reading list of six green software books for World Environment Day, including Building Green Software by Currie/Hsu/Bergman, and works on sustainable web design, IT sustainability, and practical guides.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput.md",
+    "title": "Real Time Cloud Ratified: A Major Step Toward Transparent, Sustainable Cloud Computing",
+    "date": "2025-04-08",
+    "type": "announcement",
+    "companies": ["UBS", "AWS", "Microsoft", "Google"],
+    "people": [
+      {"name": "Adrian Cockcroft", "title": "Project Lead", "company": ""},
+      {"name": "Pindy Bhullar", "title": "Co-lead", "company": "UBS"}
+    ],
+    "projects": ["RTC", "Impact Framework"],
+    "themes": ["standards", "measurement", "tools"],
+    "key_quotes": [
+      "All models are wrong, some models are useful.",
+      "Despite being the world's largest purchaser of renewable energy, cloud providers have only released carbon data to customers on a monthly basis, with delays of a few months."
+    ],
+    "summary": "The Real Time Cloud standard is ratified, standardising how AWS, Azure, and GCP share energy and carbon metrics to enable real-time, comparable emissions reporting for cloud users, supporting CSRD compliance.",
+    "potential_story": true,
+    "story_note": "Progression story: launched July 2023 to ratification April 2025. Multi-stakeholder (AWS, Azure, GCP data in single table). Addresses CSRD compliance need. Impact Framework integration. Adrian Cockcroft leading."
+  },
+  {
+    "file": "reducing-emissions-through-awareness-and-collective-action-meet-stacy-cline-of-gi.md",
+    "title": "Reducing Emissions Through Awareness and Collective Action - Meet Stacy Cline of GitLab",
+    "date": "2025-06-12",
+    "type": "member-qa",
+    "companies": ["GitLab", "Mammoth Climate"],
+    "people": [{"name": "Stacy Cline", "title": "Sustainability Director", "company": "GitLab"}],
+    "projects": ["SCI", "SCI for AI"],
+    "themes": ["measurement", "education", "community"],
+    "key_quotes": [
+      "Sustainable software development requires collective action and shared knowledge.",
+      "The challenges of green software are far too complex for a single organization to solve alone, and only by working together can we accelerate progress for everyone."
+    ],
+    "summary": "Stacy Cline describes GitLab's sustainability strategy as an all-remote company with a four-pillar climate action programme (Measure, Act, Engage, Accelerate), including a Mammoth Climate education partnership.",
+    "potential_story": true,
+    "story_note": "All-remote company sustainability model; grassroots initiatives predated formal programme; Mammoth Climate partnership for employee education; interested in SCI for AI."
+  },
+  {
+    "file": "reducing-ghg-emissions-by-developing-green-software-meet-thomas-frers-ausy-techno.md",
+    "title": "Reducing GHG Emissions by Developing Green Software - Meet Thomas Frers of Randstad Digital",
+    "date": "2023-08-03",
+    "type": "member-qa",
+    "companies": ["Randstad Digital"],
+    "people": [{"name": "Thomas Frers", "title": "Digital Solution Architect", "company": "Randstad Digital"}],
+    "projects": ["SCI", "Carbon Aware SDK", "Green Software Practitioner", "Green Software Patterns"],
+    "themes": ["adoption", "measurement", "tools", "education"],
+    "key_quotes": [
+      "Over the past two decades, hardware and energy have become cheaper, relatively speaking, and cloud technologies supply virtually unlimited hardware resources to development teams.",
+      "Greener software is also more cost-effective. This argument is often one of the keys to getting upper management on board."
+    ],
+    "summary": "Thomas Frers describes Randstad Digital's green software framework using agile methodology, SCI for measurement, the Practitioner Course for team training, and coaching clients on sustainable development processes.",
+    "potential_story": true,
+    "story_note": "Using SCI in practice with client solutions; green software development framework; cost-effectiveness as key argument for adoption; client coaching model."
+  },
+  {
+    "file": "reducing-software-s-carbon-footprint-with-chatgpt-driven-devops-environments-meet.md",
+    "title": "Reducing Software's Carbon Footprint with ChatGPT-driven DevOps Environments - Meet Rishi Yadav, Founder & CEO, Roost.ai",
+    "date": "2023-02-23",
+    "type": "member-qa",
+    "companies": ["Roost.ai", "Netflix", "Cisco", "Wells Fargo"],
+    "people": [{"name": "Rishi Yadav", "title": "Founder & CEO", "company": "Roost.ai"}],
+    "projects": [],
+    "themes": ["tools", "adoption"],
+    "key_quotes": [
+      "We believe green software has to be green at every stage, not only after its deployment.",
+      "I have been a software developer for most of my life. But all these years, nobody thought about carbon awareness; it never crossed our minds.",
+      "The GSF is doing right - it's changing the culture around green software, providing knowledge to developers, and giving them the tools to find solutions."
+    ],
+    "summary": "Rishi Yadav describes how Roost.ai's ChatGPT-driven DevOps platform naturally reduces carbon by minimising compute cycles in the release process, with on-demand environments that wake up and go back to sleep.",
+    "potential_story": true,
+    "story_note": "DevOps-as-green-software angle: ephemeral environments reduce compute waste; product naturally aligned with sustainability; startup perspective on green software culture change."
+  },
+  {
+    "file": "role-of-performance-engineering-in-designing-carbon-efficient-applications.md",
+    "title": "Role of Performance Engineering in Designing Carbon Efficient Applications",
+    "date": "2021-11-24",
+    "type": "opinion",
+    "companies": ["Microsoft"],
+    "people": [{"name": "Srinivasan Rakhunathan", "title": "Senior Program Manager, Cloud Supply Chain Sustainability", "company": "Microsoft"}],
+    "projects": [],
+    "themes": ["measurement", "tools"],
+    "key_quotes": [
+      "Carbon emissions are directly proportional to the servers we set up.",
+      "Code written poorly is never identified and the infrastructure used is not optimal for the workload."
+    ],
+    "summary": "Technical article demonstrating how performance engineering and testing techniques (tuning, caching, async callbacks) can reduce Azure infrastructure utilisation and thereby carbon emissions, with before/after examples.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "scaling-green-software-culture-a-grassroots-approach-blossoms-for-avanade.md",
+    "title": "Scaling Green Software Culture - A Grassroots Approach Blossoms for Avanade",
+    "date": "2024-01-22",
+    "type": "case-study",
+    "companies": ["Avanade"],
+    "people": [{"name": "Chris Lloyd-Jones", "title": "Head of Open Innovation", "company": "Avanade"}],
+    "projects": ["Green Software Practitioner"],
+    "themes": ["adoption", "education", "community"],
+    "key_quotes": [
+      "The people are driving our green software success today.",
+      "We managed to engage a core group of about 20-30 people who were really interested in green software. To get everyone else involved seemed like a daunting task in a company of about 60,000 people.",
+      "Consistent messaging and empowering our people with information and resources has made all the difference."
+    ],
+    "summary": "Case study of Avanade's grassroots green software culture change: from initial small group to 3,200 trained employees, ~1,000 practitioner-certified, 104 GSF contributors, 900 State of Green Software survey participants, and organic local groups forming independently.",
+    "potential_story": true,
+    "story_note": "Exemplary adoption case study with clear progression: small team to 60,000-person org. Concrete metrics: 3,200 trained, ~1,000 certified, 104 GSF contributors. Grassroots to organisational change model that other companies are following."
+  },
+  {
+    "file": "sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the.md",
+    "title": "SCI for AI Specification Ratified: Standard for Measuring AI Emissions Across the Lifecycle",
+    "date": "2025-12-17",
+    "type": "announcement",
+    "companies": ["Accenture", "WattTime", "Google", "Avanade", "BCG X", "Cisco", "Microsoft", "NTT DATA", "Siemens", "UBS"],
+    "people": [
+      {"name": "Navveen Balani", "title": "Software Standards Working Group Chair", "company": "Accenture"},
+      {"name": "Henry Richardson", "title": "Senior Analyst", "company": "WattTime"},
+      {"name": "Jonathan Turnbull", "title": "Environment & AI Lead", "company": "Google"}
+    ],
+    "projects": ["SCI for AI", "SCI"],
+    "themes": ["standards", "measurement"],
+    "key_quotes": [
+      "To understand AI's carbon footprint, we first need a consistent way to measure it. The SCI for AI is an important step to give the industry a shared standard to track emissions across the entire lifecycle, not just parts of it.",
+      "The purpose of this specification is to assist AI practitioners -- developers, data scientists, engineers, and decision-makers -- in understanding and reducing the carbon footprint of AI systems."
+    ],
+    "summary": "Announcement of the ratified SCI for AI specification, the first consensus-based standard for measuring AI carbon footprint across the full lifecycle, with provider and consumer scores, built on ISO SCI methodology.",
+    "potential_story": true,
+    "story_note": "Major milestone: first consensus-based AI carbon measurement standard. Progression from SCI to SCI for AI. 20+ member organisations contributed. Covers classical ML through generative AI and agentic systems."
+  },
+  {
+    "file": "sci-for-ai-workshop-report.md",
+    "title": "SCI for AI Workshop Report",
+    "date": "2025-07-03",
+    "type": "workshop-report",
+    "companies": ["Accenture", "Siemens", "Scope3", "IMDA Singapore", "AVEVA", "University of Bristol", "Globant", "WattTime", "Amadeus", "Schneider Electric", "Electricity Maps", "ACIS", "German Informatics Society", "BCG", "Boavitza", "Trustwise", "Google", "IBM", "Microsoft", "UBS"],
+    "people": [
+      {"name": "Navveen Balani", "title": "Software Standards Working Group Chair", "company": "Accenture"},
+      {"name": "Angel Cataron", "title": "", "company": "Siemens"},
+      {"name": "Henry Richardson", "title": "", "company": "WattTime"},
+      {"name": "Tamar Eilam", "title": "", "company": "IBM"},
+      {"name": "Tammy McClellan", "title": "", "company": "Microsoft"},
+      {"name": "Stuart Sweeney Smith", "title": "", "company": "Google"}
+    ],
+    "projects": ["SCI for AI", "SCI", "Green Software Patterns"],
+    "themes": ["standards", "measurement"],
+    "key_quotes": [
+      "The purpose of this proposed specification is to assist AI practitioners in understanding and reducing the carbon footprint of AI systems.",
+      "If you focus on developing a metric without paying attention to what that metric incentivizes, you will end up promoting the wrong behaviors."
+    ],
+    "summary": "Detailed workshop report on developing the SCI for AI specification, featuring evaluation of existing AI measurement metrics (Green AI Index, EcoLogits, EnergyScore), rubric development, lifecycle stage definitions, and multi-stakeholder consensus from 20 organisations.",
+    "potential_story": true,
+    "story_note": "20 organisations collaborating on AI carbon measurement; comprehensive evaluation of competing metrics; establishes lifecycle stages (Prepare through End-of-Life); consensus-building process documented."
+  },
+  {
+    "file": "sci-open-ontology-project-of-the-green-software-foundation.md",
+    "title": "SCI Open Ontology Project of the Green Software Foundation",
+    "date": "2022-03-08",
+    "type": "announcement",
+    "companies": ["Accenture"],
+    "people": [{"name": "Navveen Balani", "title": "Chief Technologist, Technology Sustainability Innovation", "company": "Accenture"}],
+    "projects": ["SCI"],
+    "themes": ["standards", "tools"],
+    "key_quotes": [
+      "Creating the software boundary is an important first step in calculating the SCI score.",
+      "In the future, we also plan to build tools to generate ontology models and software boundary automatically by inspecting the cloud infrastructure environment."
+    ],
+    "summary": "Navveen Balani describes the SCI Open Ontology Project, which creates a common terminology and reference models for defining software boundaries in SCI applications across four iterative milestones.",
+    "potential_story": false,
+    "story_note": ""
+  },
+  {
+    "file": "sci-specification-achieves-iso-standard-status.md",
+    "title": "Software Carbon Intensity (SCI) Specification Achieves ISO Standard Status, Advancing Green Software Development",
+    "date": "2024-04-25",
+    "type": "announcement",
+    "companies": ["Accenture", "AVEVA", "CAST Software", "Intesa", "Microsoft", "NTT DATA", "UBS", "WattTime"],
+    "people": [
+      {"name": "Sanjay Podder", "title": "Responsible AI CTO and Lead for Tech Sustainability Innovation, GSF Chairperson", "company": "Accenture"},
+      {"name": "Henry Richardson", "title": "Senior Analyst, Co-chair Standards Working Group", "company": "WattTime"},
+      {"name": "Navveen Balani", "title": "Co-chair Standards Working Group and Impact Framework", "company": "Accenture"}
+    ],
+    "projects": ["SCI", "Impact Framework", "SCI Guide"],
+    "themes": ["standards", "measurement"],
+    "key_quotes": [
+      "Reaching this milestone represents a collective effort from GSF member organizations.",
+      "We believe that the opensource SCI Specification will catalyze a new era of sustainable innovation within the technology industry.",
+      "We envision that SCI measurement will become a standard part of every developer's toolbox and the norm in the future."
+    ],
+    "summary": "The SCI Specification v1.0 achieves ISO standard status (ISO/IEC 21031:2024), confirming it as a reliable, fair, and comparable protocol for measuring software carbon footprint, with multiple member organisations contributing use cases.",
+    "potential_story": true,
+    "story_note": "Major progression milestone: from proposal to ratification to ISO standard. Multiple companies (AVEVA, CAST, Intesa, Microsoft, NTT DATA, UBS) contributed use cases. Industry-wide validation."
+  },
+  {
+    "file": "shaping-the-future-of-sustainable-software-engineering-meet-birgit-penzenstadler.md",
+    "title": "Shaping the Future of Sustainable Software Engineering - Meet Birgit Penzenstadler",
+    "date": "2025-09-18",
+    "type": "member-qa",
+    "companies": ["Chalmers University of Technology", "Gothenburg University", "Lappeenranta University of Technology", "Volvo", "ABB", "Vattenfall"],
+    "people": [{"name": "Birgit Penzenstadler", "title": "Associate Professor", "company": "Chalmers University of Technology"}],
+    "projects": [],
+    "themes": ["education", "community", "standards"],
+    "key_quotes": [
+      "We strive to educate a new generation of software engineers who will emphasize the sustainability of software as well as the sustainability effects of software on society.",
+      "Sustainable digital transformation is fundamentally about behavioral change, not just technical solutions."
+    ],
+    "summary": "Birgit Penzenstadler describes Chalmers University's 15-year commitment to software engineering for sustainability, the SE4GD programme, Sustainability Awareness Framework, and industry partnerships with Volvo, ABB, and Vattenfall.",
+    "potential_story": true,
+    "story_note": "15-year academic pioneer in software sustainability; SE4GD programme (first SE programme with sustainability as main goal); SusAF framework freely available; UNESCO Chair since 2006; partnerships with Volvo, ABB, Vattenfall."
+  }
+]
