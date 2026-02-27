@@ -18,7 +18,7 @@ One of the most profound challenges in green software is measuring energy consum
 
 AVEVA aims to complete power consumption benchmark testing of its top energy-consuming products and improve policies and practices for product development in the current financial year.  Working with low-carbon cloud service providers will leverage learnings as a member of the Green Software Foundation to lower the sustainability impacts of AVEVA’s digital products.
 
-![](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
+![Four-phase process diagram: Groundwork, Initial Calculations, Automation, and Expand Coverage](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
 
 The purpose of measuring software power consumption is twofold: enable emissions reporting for compliance and provide a mechanism for improving and tracking progress when applying green software design principles to make software more sustainable.
 
@@ -30,16 +30,16 @@ For that purpose, AVEVA developed a generic system and methodology that can accu
 
 The system architecture:
 
-![](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
+![Four-phase process diagram: Groundwork, Initial Calculations, Automation, and Expand Coverage](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
 
 <figure>
-<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png" alt="" />
-<figcaption><em>Hardware configuration as deployed in the AVEVA demo lab in Lake Forest</em></figcaption>
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png" alt="Two Rigol benchtop power supplies mounted in a server rack displaying voltage, current, and power readings" />
+<figcaption>*Hardware configuration as deployed in the AVEVA demo lab in Lake Forest*</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg" alt="" />
-<figcaption><em>Raspberry PI, located at the back of the hardware cluster</em></figcaption>
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg" alt="Raspberry Pi board with Ethernet cable connected, mounted at the back of a server rack" />
+<figcaption>*Raspberry PI, located at the back of the hardware cluster*</figcaption>
 </figure>
 
 Two measurements are required to calculate the power consumption:
@@ -58,13 +58,13 @@ The baseline and loaded system measurements can be performed in parallel by runn
 A critical part of the system is its ability to archive data in Data Hub. The following graphic shows the power measurements of the baseline and loaded system (parallel configuration) over time.
 
 <figure>
-<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/power-trends-of-baseline-and-loaded-system-side-by-side.png" alt="" />
-<figcaption><em>Power trends of Baseline and Loaded system side by side</em></figcaption>
+<img src="/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/power-trends-of-baseline-and-loaded-system-side-by-side.png" alt="AVEVA Data Hub trend view showing power consumption traces for baseline and loaded systems over time" />
+<figcaption>*Power trends of Baseline and Loaded system side by side*</figcaption>
 </figure>
 
 The Raspberry PI (Voltage, Current, Power, and Energy) collects the measurements and stores them in AVEVA Datahub for data archival and further consumption and analysis. The following diagram illustrates the data flow in detail:
 
-![](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
+![Four-phase process diagram: Groundwork, Initial Calculations, Automation, and Expand Coverage](/assets/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/image.png)
 
 The power usage of an application can be predicted using supervised machine learning. Performance metrics like CPU, Memory, and I/O transactions must be recorded in addition to the power usage data. A supervised machine learning algorithm, e.g., a neural network or regression, can be trained using this data. Finally, the trained machine learning model can predict power consumption based on given performance metrics.
 
@@ -82,5 +82,5 @@ Lazaro adds: “We are in the process of defining and implementing a green softw
 
 Link to detailed case study:
 
-- [<u>https://sci-guide.greensoftware.foundation/CaseStudies/#aveva-case-study</u>](https://sci-guide.greensoftware.foundation/CaseStudies/#aveva-case-study)
-- [<u>https://github.com/Green-Software-Foundation/sci-guide/blob/dev/use-case-submissions/AVEVA_case_study.md</u>](https://github.com/Green-Software-Foundation/sci-guide/blob/dev/use-case-submissions/AVEVA_case_study.md)
+- [https://sci-guide.greensoftware.foundation/CaseStudies/#aveva-case-study](https://sci-guide.greensoftware.foundation/CaseStudies/#aveva-case-study)
+- [https://github.com/Green-Software-Foundation/sci-guide/blob/dev/use-case-submissions/AVEVA_case_study.md](https://github.com/Green-Software-Foundation/sci-guide/blob/dev/use-case-submissions/AVEVA_case_study.md)

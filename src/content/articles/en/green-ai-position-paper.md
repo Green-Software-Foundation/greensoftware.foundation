@@ -56,7 +56,7 @@ Given the evolving nature of AI and its applications, the committee will periodi
 
 
 
-![](/assets/articles/green-ai-position-paper/image.png)
+![Infographic titled What Is Green AI showing the AI lifecycle stages: Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, and End of Life](/assets/articles/green-ai-position-paper/image.png)
 
 ## Understanding the AI Lifecycle 
 
@@ -121,9 +121,9 @@ The end-of-life stage refers to decommissioning a no longer maintained AI system
 
 ## Why Is Green AI Important?
 
-In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [<u>water usage</u>](https://arxiv.org/pdf/2304.03271), and [<u>energy consumption</u>](https://arxiv.org/pdf/2301.11047). Some predictions expect data centre emissions [<u>to rise from 180 Mt to 300 Mt in the Base Case by 2035</u>](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions. 
+In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [water usage](https://arxiv.org/pdf/2304.03271), and [energy consumption](https://arxiv.org/pdf/2301.11047). Some predictions expect data centre emissions [to rise from 180 Mt to 300 Mt in the Base Case by 2035](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions. 
 
-The rapid and divergent nature of AI development has led to [<u>growing concerns and controversies</u>](https://unctad.org/publication/digital-economy-report-2024) around balancing its potential benefits and negative environmental consequences. 
+The rapid and divergent nature of AI development has led to [growing concerns and controversies](https://unctad.org/publication/digital-economy-report-2024) around balancing its potential benefits and negative environmental consequences. 
 
 While the challenges are significant, the GAIC believes a more sustainable future for AI is achievable. It is crucial to underline that Green AI is not a standalone solution but a fundamental pillar of a broader sustainability ecosystem. By adopting Green AI practices alongside collaboration, policy innovation, and technological advances, we can align AI’s growth with planetary boundaries.
 
@@ -161,14 +161,14 @@ By championing open tools, the committee aims to ensure that sustainability prac
 
 We encourage AI hardware organizations to actively participate in this conversation. Involving a broad spectrum of AI and ICT organizations will help drive consensus on best practices, optimize energy efficiency in model training and deployment, and ensure that sustainability is a fundamental design principle rather than an afterthought.
 
-**Become a member**: To actively participate in the work of the Green AI Committee and shape standards and policy in green software, [<u>join us</u>](https://greensoftware.foundation/join-us/). To ensure clarity, a Steering Member status is typically required for a guaranteed seat on the committee, while standard members may be considered through a nomination process. We’re committed to making this process open and straightforward for all who wish to contribute.
+**Become a member**: To actively participate in the work of the Green AI Committee and shape standards and policy in green software, [join us](https://greensoftware.foundation/join-us/). To ensure clarity, a Steering Member status is typically required for a guaranteed seat on the committee, while standard members may be considered through a nomination process. We’re committed to making this process open and straightforward for all who wish to contribute.
 
 
 
 **Further reading **
 
-- [<u>https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path</u>](https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path) 
-- [<u>https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B</u>](https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B) 
-- [<u>https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117</u>](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117)
-- [<u>https://www.computer.org/csdl/magazine/so/2024/05/10629208/1Zdj4SWzTIQ</u>](https://www.computer.org/csdl/magazine/so/2024/05/10629208/1Zdj4SWzTIQ) 
-- [<u>https://dl.acm.org/doi/10.1145/3630106.3658542</u>](https://dl.acm.org/doi/10.1145/3630106.3658542) 
+- [https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path](https://www.unep.org/news-and-stories/press-release/new-coalition-aims-put-artificial-intelligence-more-sustainable-path) 
+- [https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B](https://wedocs.unep.org/handle/20.500.11822/46288;jsessionid=81D6D7C73D7BA6E37CF4AC150AE8849B) 
+- [https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117)
+- [https://www.computer.org/csdl/magazine/so/2024/05/10629208/1Zdj4SWzTIQ](https://www.computer.org/csdl/magazine/so/2024/05/10629208/1Zdj4SWzTIQ) 
+- [https://dl.acm.org/doi/10.1145/3630106.3658542](https://dl.acm.org/doi/10.1145/3630106.3658542) 

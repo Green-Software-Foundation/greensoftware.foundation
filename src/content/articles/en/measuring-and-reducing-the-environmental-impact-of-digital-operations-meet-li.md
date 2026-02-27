@@ -34,13 +34,13 @@ AI will transform the world, and its rapid adoption brings both challenges and o
 
 Beyond our core work in measuring and reducing digital emissions, we maintain several key sustainability initiatives:
 
-We are developing a platform to provide real-time usage, cost, and environmental metrics for AI operations, helping organizations make informed decisions about model efficiency. This is in addition to our existing platform for anyone to visualize and[ <u>learn more about the emissions from digital advertising. </u>](https://scope3.com/)
+We are developing a platform to provide real-time usage, cost, and environmental metrics for AI operations, helping organizations make informed decisions about model efficiency. This is in addition to our existing platform for anyone to visualize and[ learn more about the emissions from digital advertising. ](https://scope3.com/)
 
-- We published industry-first research about the size of the emissions problem in advertising and the impact our efforts were having in driving systemic change. This included[ the <u>State of Sustainable Advertising</u>](https://scope3.com/news/the-state-of-sustainable-advertising-december-2023) reports, as well as[ <u>Sustainable Media Buying best practices</u>](https://scope3.com/news/ana-releases-report-in-partnership-with-scope3-on-how-to-reduce-marketing-emissions-while-driving-growth).
+- We published industry-first research about the size of the emissions problem in advertising and the impact our efforts were having in driving systemic change. This included[ the State of Sustainable Advertising](https://scope3.com/news/the-state-of-sustainable-advertising-december-2023) reports, as well as[ Sustainable Media Buying best practices](https://scope3.com/news/ana-releases-report-in-partnership-with-scope3-on-how-to-reduce-marketing-emissions-while-driving-growth).
 
-We are actively working on AI measurement pilots and have joined[ <u>NVIDIA Inception. </u>](https://www.nvidia.com/en-us/startups/)
+We are actively working on AI measurement pilots and have joined[ NVIDIA Inception. ](https://www.nvidia.com/en-us/startups/)
 
-- We invested $1 million in a carbon removal portfolio with[ <u>Carbon Direct</u>](https://www.carbon-direct.com/?utm_term=carbon%20direct&utm_campaign=CarbonDirect_US_SEM_BKWS_Carbon_Direct_Hyb+~+Exact&utm_source=adwords&utm_medium=ppc&hsa_acc=1774755788&hsa_cam=21056377641&hsa_grp=163050904761&hsa_ad=692341965590&hsa_src=g&hsa_tgt=kwd-335378135208&hsa_kw=carbon%20direct&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAh6y9BhBREiwApBLHC3h1JNpsqBvd1mTuUuT7xAbDAsnZVFyMeVIc6S0oIRFvOdrqidoM9hoC8RIQAvD_BwE), making it accessible to our clients without additional fees. 
+- We invested $1 million in a carbon removal portfolio with[ Carbon Direct](https://www.carbon-direct.com/?utm_term=carbon%20direct&utm_campaign=CarbonDirect_US_SEM_BKWS_Carbon_Direct_Hyb+~+Exact&utm_source=adwords&utm_medium=ppc&hsa_acc=1774755788&hsa_cam=21056377641&hsa_grp=163050904761&hsa_ad=692341965590&hsa_src=g&hsa_tgt=kwd-335378135208&hsa_kw=carbon%20direct&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAh6y9BhBREiwApBLHC3h1JNpsqBvd1mTuUuT7xAbDAsnZVFyMeVIc6S0oIRFvOdrqidoM9hoC8RIQAvD_BwE), making it accessible to our clients without additional fees. 
 - We launched programs like "I Cannes Remove Carbon" to address emissions from industry events. 
 
 **How do you hope to contribute to and benefit from the GSF?**

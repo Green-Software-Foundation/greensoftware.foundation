@@ -27,7 +27,7 @@ There is an opportunity to leverage all this information and estimate software e
 
 ## Background:
 
-![](/assets/articles/emission-calculations-through-large-language-model/image.jpg)
+![Software development lifecycle diagram showing left-shifting emission calculations from deployment to design phase](/assets/articles/emission-calculations-through-large-language-model/image.jpg)
 
 System designers and architects design software systems. When they create software, they evaluate several technical design options and consider the pros and cons of each. These choices are made upstream in the software development lifecycle, long before lines of code are written, and can significantly affect the software's carbon emissions during operation.
 
@@ -66,7 +66,7 @@ The following steps can help estimate software emissions during the system desig
 
 Below is a reference architecture overview of how the above building blocks can work to build an LLM platform. The architecture is meant to be logical.
 
-![](/assets/articles/emission-calculations-through-large-language-model/image.jpg)
+![Software development lifecycle diagram showing left-shifting emission calculations from deployment to design phase](/assets/articles/emission-calculations-through-large-language-model/image.jpg)
 
 By following these steps, the solution can effectively estimate software emissions during the design phase and provide actionable insights to system designers and architects, enabling them to make greener design choices and reduce software systems' carbon footprint.
 
@@ -74,8 +74,7 @@ For more information, connect with [Navveen Balani](https://www.linkedin.com/in/
 
 
 
-## **About the Authors**
-
+## About the Authors
 
 
 **Srinivasan Rakhunathan **

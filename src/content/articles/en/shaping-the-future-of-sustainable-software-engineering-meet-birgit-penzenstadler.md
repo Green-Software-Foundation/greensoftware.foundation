@@ -24,9 +24,9 @@ These targets build on Chalmers’ long tradition of integrating sustainability 
 
 We collaborate with other universities on climate programs and are signatories to the Climate Framework for Swedish Higher Education, contributing to the 1.5°C target.
 
-Energy is one of the university's areas of advance and tops the budget list for our strategic research and educational plan. Notably, we offer specialized programs, including the [<u>MSc in Sustainable Energy Systems</u>](https://www.educations.com/institutions/chalmers/msc-in-sustainable-energy-systems), Architecture and Planning Beyond Sustainability, and Sustainable Electric Power Engineering. 
+Energy is one of the university's areas of advance and tops the budget list for our strategic research and educational plan. Notably, we offer specialized programs, including the [MSc in Sustainable Energy Systems](https://www.educations.com/institutions/chalmers/msc-in-sustainable-energy-systems), Architecture and Planning Beyond Sustainability, and Sustainable Electric Power Engineering. 
 
-Finally, we partnered on the [<u>SE4GD (Software Engineers for Green Deal)</u>](https://research.chalmers.se/en/project/11278) program, the first software engineering program that considers sustainability as the main goal of software engineers.
+Finally, we partnered on the [SE4GD (Software Engineers for Green Deal)](https://research.chalmers.se/en/project/11278) program, the first software engineering program that considers sustainability as the main goal of software engineers.
 
 **Why did you join GSF?**
 
@@ -40,11 +40,11 @@ With initiatives such as SE4GD,  we strive to educate a new generation of softwa
 
 Beyond our formal programs, Chalmers Students for Sustainability actively promotes positive change, with over half of our students engaged in sustainability activities. Our "practice what we preach" philosophy embeds sustainability in campus operations, from climate-friendly mobility to sustainable investment practices.
 
-Our [<u>three-pillar transformation strategy,</u>](https://www.researchgate.net/publication/235291318_The_university_and_transformation_towards_sustainability_The_strategy_used_at_Chalmers_University_of_Technology#:~:text=Abstract,share%20their%20good%20teaching%20examples.) which involves creating neutral arenas for collaboration, building on individual engagement, and ensuring clear management commitment, has been documented as a model for other universities pursuing sustainability transformations.
+Our [three-pillar transformation strategy,](https://www.researchgate.net/publication/235291318_The_university_and_transformation_towards_sustainability_The_strategy_used_at_Chalmers_University_of_Technology#:~:text=Abstract,share%20their%20good%20teaching%20examples.) which involves creating neutral arenas for collaboration, building on individual engagement, and ensuring clear management commitment, has been documented as a model for other universities pursuing sustainability transformations.
 
-Through active involvement in events such as [<u>the 2025 Green and Sustainable Software Engineering Summer School</u>](https://unilag.edu.ng/unilag-hosts-2025-green-and-sustainable-software-engineering-summer-school-may-5-9/) in Nigeria, we’re helping to spread green software education globally.
+Through active involvement in events such as [the 2025 Green and Sustainable Software Engineering Summer School](https://unilag.edu.ng/unilag-hosts-2025-green-and-sustainable-software-engineering-summer-school-may-5-9/) in Nigeria, we’re helping to spread green software education globally.
 
-Complementing these educational efforts, I co-developed [<u>the Sustainability Awareness Framework (SusAF)</u>](https://research.chalmers.se/project/11316), a tool for thinking through short, medium- and long-term impacts of socio-technical systems on their surrounding environment. It has been referenced in various[<u> publications</u>](https://dl.acm.org/doi/full/10.1145/3649597) , and the [<u>workbook</u>](https://zenodo.org/records/7342575) is freely available on Zenodo. 
+Complementing these educational efforts, I co-developed [the Sustainability Awareness Framework (SusAF)](https://research.chalmers.se/project/11316), a tool for thinking through short, medium- and long-term impacts of socio-technical systems on their surrounding environment. It has been referenced in various[ publications](https://dl.acm.org/doi/full/10.1145/3649597) , and the [workbook](https://zenodo.org/records/7342575) is freely available on Zenodo. 
 
 **How do you hope to contribute to and benefit from the GSF?**
 

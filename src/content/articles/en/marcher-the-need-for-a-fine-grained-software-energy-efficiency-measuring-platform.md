@@ -27,7 +27,7 @@ Energy efficient computing is big business. With data centers now at 2% of all U
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/data-center-electricity-consumption-and-savings-from-2000-to-2020.png" alt="Data-Center-Electricity-Consumption-and-savings-from 2000-to-2020" />
-<figcaption><em>Data center electricity consumption and savings  from the US Department of Energy, Lawrence Berkeley National Laboratory</em></figcaption>
+<figcaption>*Data center electricity consumption and savings  from the US Department of Energy, Lawrence Berkeley National Laboratory*</figcaption>
 </figure>
 
 This trend has been driven largely by super-efficient, hyper-scaling centers from the likes of Google, Amazon, and Facebook, built from the ground up to be as thermally efficient as possible; as well as widespread industry adoption of server virtualization technology and better job schedulers. The low hanging fruit, however, will soon all be taken. 
@@ -40,7 +40,7 @@ This period of 1-3% growth in yearly data center energy consumption could also c
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/chart-showing-big-data-becoming-huge-data-by-2025-data-created-in-zettabytes-from-2010-to-2025-estimated.png" alt="Chart-showing-big-data-becoming-huge-data-by-2025.-Data-created-in-zettabytes-from 2010 to 2025 (estimated) " />
-<figcaption><em>Data created in zettabytes from 2010 to 2025 (estimated); Source: IDC’s Data Age 2025 study, sponsored by Seagate, April 2017</em></figcaption>
+<figcaption>*Data created in zettabytes from 2010 to 2025 (estimated); Source: IDC’s Data Age 2025 study, sponsored by Seagate, April 2017*</figcaption>
 </figure>
 
 If you are committed to energy efficient computing for the future and sustainable growth of infrastructure and capacity, it becomes clear that hardware and data center design alone will no longer be a long-term solution. Software efficiency must be a primary pillar in achieving these goals. 
@@ -53,11 +53,11 @@ To improve software energy efficiency, we would have to measure it accurately fi
 
 All of these factors were the motivation for creating the Marcher system. We wanted to create a platform to help developers, researchers and students study the energy efficiency of their code. And we wanted the devices to be equipped to measure the kind of workloads seen in industry—such as for deep learning and big data processing—as well as in typical high performance computing systems like in the clustered parallel processing of batch jobs.
 
-With funding from the [<u>National Science Foundation</u>](https://www.nsf.gov/) (NSF), we have built our custom systems with two Intel Xeon processors, a Nvidia GPU compatible with CUDA, and an Intel Xeon Phi coprocessor, 32 GB of DDR3 DRAM, one 160 GB SSD and one 1 TB HDD.
+With funding from the [National Science Foundation](https://www.nsf.gov/) (NSF), we have built our custom systems with two Intel Xeon processors, a Nvidia GPU compatible with CUDA, and an Intel Xeon Phi coprocessor, 32 GB of DDR3 DRAM, one 160 GB SSD and one 1 TB HDD.
 
 The system supports 20+ popular programming languages including C/C++, Python, Java, CUDA and C#. 
 
-To facilitate ease of access and use we have provided what we call Power Profiling as a Service (PPaaS) allowing users to submit and run code directly in-browser through [<u>GreenCode</u>](http://greencode.cs.txstate.edu/).
+To facilitate ease of access and use we have provided what we call Power Profiling as a Service (PPaaS) allowing users to submit and run code directly in-browser through [GreenCode](http://greencode.cs.txstate.edu/).
 
 In addition to this cloud service, for processes which require multiple nodes or longer capture times, we have also built robust command line tools users can access over ssh after applying for credentials.
 
@@ -65,21 +65,21 @@ The power profiling of the CPUS, GPUs, and Xeon Phis are handled by the Intel RA
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/photo-of-podac-connected-to-a-marcher-server.png" alt="photo-of-PODAC-connected-to-a-Marcher-server" />
-<figcaption><em>PODAC connected to a Marcher server</em></figcaption>
+<figcaption>*PODAC connected to a Marcher server*</figcaption>
 </figure>
 
-And here's the [<u>**Marcher System**</u>](https://greensoft.cs.txstate.edu)
+And here's the [**Marcher System**](https://greensoft.cs.txstate.edu)
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-photo-of-the-marcher-system.png" alt="A-photo-of-the-Marcher-system" />
-<figcaption><em>The Marcher System</em></figcaption>
+<figcaption>*The Marcher System*</figcaption>
 </figure>
 
 Between the web and command line interfaces sits our custom power profiling and job scheduling layer which dispatches jobs, as well as collects, aggregates, performs calculations and saves power data.
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/a-flowchart-of-workflow-and-power-profiling.png" alt="a-flowchart-of-workflow-and-power-profiling" />
-<figcaption><em>The workflow of job scheduling and power profiling</em></figcaption>
+<figcaption>*The workflow of job scheduling and power profiling*</figcaption>
 </figure>
 
 ## Examples of measurements with the Marcher System
@@ -92,7 +92,7 @@ Here we see power data obtained from a Xeon Phi coprocessor running the Single S
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/power-data-from-a-xeon-phi-coprocessor-running-the-sssp-openmp-program-on-a-single-marcher-node.png" alt="Power-data-from-a-Xeon-Phi-coprocessor-running-the-SSSP-OpenMP-program-on-a-single-Marcher-node" />
-<figcaption><em>Power data from a Xeon Phi coprocessor running the SSSP OpenMP program on a single Marcher node</em></figcaption>
+<figcaption>*Power data from a Xeon Phi coprocessor running the SSSP OpenMP program on a single Marcher node*</figcaption>
 </figure>
 
 ### Example 2
@@ -101,7 +101,7 @@ The following graph shows the power data collected on two marcher nodes running 
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/marcher-power-data-on-two-marcher-nodes-running-an-mpi-2007-benchmark-application.png" alt="Marcher-power-data-on-two-marcher-nodes-running-an-MPI-2007-benchmark-application" />
-<figcaption><em>Power data on two Marcher nodes running an MPI-2007 benchmark application</em></figcaption>
+<figcaption>*Power data on two Marcher nodes running an MPI-2007 benchmark application*</figcaption>
 </figure>
 
 ### Example 3
@@ -110,7 +110,7 @@ This graph plots the real-time power consumption data of CPU, DRAM, and GPU when
 
 <figure>
 <img src="/assets/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform/real-time-power-consumption-data-when-training-the-alexnet-with-caffe-on-a-marcher-server.png" alt="Real-time-power-consumption-data-when-training-the-AlexNet-with-Caffe-on-a-Marcher-server" />
-<figcaption><em>Real-time power consumption data when training the AlexNet with Caffe on a Marcher server</em></figcaption>
+<figcaption>*Real-time power consumption data when training the AlexNet with Caffe on a Marcher server*</figcaption>
 </figure>
 
-Marcher provides easy to use tools for fine grain software energy profiling, which empowers developers, students, and researchers to learn more about the energy consumption of their software. It provides Power Profiling as a Service through both web-based and command line interfaces. If you would like to read more details about the development of the Marcher system, [<u>read our paper here</u>](http://greensoft.cs.txstate.edu/wp-content/uploads/2018/05/journal_of_big_data.pdf). 
+Marcher provides easy to use tools for fine grain software energy profiling, which empowers developers, students, and researchers to learn more about the energy consumption of their software. It provides Power Profiling as a Service through both web-based and command line interfaces. If you would like to read more details about the development of the Marcher system, [read our paper here](http://greensoft.cs.txstate.edu/wp-content/uploads/2018/05/journal_of_big_data.pdf). 

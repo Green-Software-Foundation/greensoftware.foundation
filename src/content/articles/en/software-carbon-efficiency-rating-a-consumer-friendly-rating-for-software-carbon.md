@@ -24,11 +24,11 @@ For organizations seeking to manage their carbon emissions and make progress tow
 
 # How will the new SCER standard work?
 
-The GSF’s goal is for the SCER to provide comparable scores for software with the same functionality. Defining standard workloads for different types of software and measuring them is step one. This involves categorizing software and setting standards based on the functional unit of the [<u>SCI standard</u>](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/15958033/Standards+SCI). For instance, the functional unit could be "per non-cached minute of streamed music" for a music streaming service. It also requires defining hardware standards for testing these workloads and the boundaries of the software under test.
+The GSF’s goal is for the SCER to provide comparable scores for software with the same functionality. Defining standard workloads for different types of software and measuring them is step one. This involves categorizing software and setting standards based on the functional unit of the [SCI standard](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/15958033/Standards+SCI). For instance, the functional unit could be "per non-cached minute of streamed music" for a music streaming service. It also requires defining hardware standards for testing these workloads and the boundaries of the software under test.
 
 # Where does the project stand today?
 
 The approach is to build on GSF member research. Aveva has developed a test platform using standard hardware to assess various energy consumption levels for different software configurations. The next step is to establish specific parameters for software of a particular category (e.g., databases) to make them comparable on this platform. The challenge will be to develop guidelines that help make informed decisions without being overwhelmed by the complexities of modern software architectures.
 
 
-To find out more about SCER and how you can contribute, visit the <u>project rep</u>[ https://github.com/Green-Software-Foundation/scer]( https://github.com/Green-Software-Foundation/scer).
+To find out more about SCER and how you can contribute, visit the project rep[ https://github.com/Green-Software-Foundation/scer]( https://github.com/Green-Software-Foundation/scer).

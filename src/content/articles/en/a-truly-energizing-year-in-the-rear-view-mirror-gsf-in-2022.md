@@ -6,9 +6,9 @@ teaserText: "A truly energizing year in the rear view mirror - GSF in 2022"
 mainImage: "/assets/articles/a-truly-energizing-year-in-the-rear-view-mirror-gsf-in-2022/main.png"
 ---
 
-[<u>**View the report online**</u>](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)** or **[<u>**download the slide deck**</u>**.**](https://docs.google.com/presentation/d/1Dk6lfmvn8vbFUNAETM3Ldn8vuGlXvHtUE_WNRfiSrsw/edit)
+[**View the report online**](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)** or **[**download the slide deck****.**](https://docs.google.com/presentation/d/1Dk6lfmvn8vbFUNAETM3Ldn8vuGlXvHtUE_WNRfiSrsw/edit)
 
-The GSF has grown to 38 member organizations. We are proud to count some of the most prestigious representatives of the ICT industry as our members. The [<u>GSF Annual Report</u> ](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)covers our activities and achievements throughout last year. It’s a quick and exciting read, so don’t miss out on going through the full report. Here is a short overview.
+The GSF has grown to 38 member organizations. We are proud to count some of the most prestigious representatives of the ICT industry as our members. The [GSF Annual Report ](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing)covers our activities and achievements throughout last year. It’s a quick and exciting read, so don’t miss out on going through the full report. Here is a short overview.
 
 ## Impactful Events
 
@@ -27,4 +27,4 @@ The GSF refines its purpose and spells out a strategy. We aim to change how we b
 
 
 
-Discover the great things we have planned for 2023 and read the full [<u>2022 Report</u>](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing).
+Discover the great things we have planned for 2023 and read the full [2022 Report](https://drive.google.com/file/d/19J1PuAbcGQjwYrS06QY_WPcwgLv5DcRv/view?usp=sharing).

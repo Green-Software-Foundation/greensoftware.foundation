@@ -39,8 +39,8 @@ By working together, GSF and W3C are creating a foundation for a more sustainabl
 
 This agreement was established under the joint leadership of the Software Standards Working Group at the Green Software Foundation (GSF) and the Web Sustainability Interest Group of the World Wide Web Consortium (W3C), and shall be governed by designated member representatives and their respective executive committees.
 
-**For GSF members**: Applications for the SCI for Web assembly close on September 12, 2025. [<u>Apply here.</u>](https://assemblies.greensoftware.foundation/sci-for-web) 
+**For GSF members**: Applications for the SCI for Web assembly close on September 12, 2025. [Apply here.](https://assemblies.greensoftware.foundation/sci-for-web) 
 
 The assembly will start on September 16, 2025. 
 
-To follow future announcements about the SCI for Web standard, visit: [<u>https://assemblies.greensoftware.foundation/sci-for-web</u>](https://assemblies.greensoftware.foundation/sci-for-web)
+To follow future announcements about the SCI for Web standard, visit: [https://assemblies.greensoftware.foundation/sci-for-web](https://assemblies.greensoftware.foundation/sci-for-web)

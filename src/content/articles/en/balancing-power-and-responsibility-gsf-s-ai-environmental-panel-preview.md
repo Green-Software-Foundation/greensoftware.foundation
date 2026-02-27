@@ -8,7 +8,7 @@ mainImage: "/assets/articles/balancing-power-and-responsibility-gsf-s-ai-environ
 
 Imagine AI as the superhero swooping in to save our planet from environmental threats. It's a story everyone wants to tell! 
 
-Yet, here's the paradox: this hero may unwittingly contribute to our growing appetite for computing resources and energy. Is this an unintended adversary threatening to escalate software's carbon emissions? A look at[<u> Stanford’s Artificial Intelligence Index Report 2023</u>](https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report-2023_CHAPTER_2.pdf) reveals that training GPT-3 took the equivalent of 502 tons of carbon dioxide emissions, and close to 1,300 megawatt hours of electricity.
+Yet, here's the paradox: this hero may unwittingly contribute to our growing appetite for computing resources and energy. Is this an unintended adversary threatening to escalate software's carbon emissions? A look at[ Stanford’s Artificial Intelligence Index Report 2023](https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report-2023_CHAPTER_2.pdf) reveals that training GPT-3 took the equivalent of 502 tons of carbon dioxide emissions, and close to 1,300 megawatt hours of electricity.
 
 On October 5, we will convene experts to answer the question, and explore how we can make AI greener and carbon-aware, giving it the badge of Environmental Crusader so many want.
 
@@ -57,6 +57,6 @@ We are not just narrating this story; we're giving you a front-row seat to be pa
 
 We look forward to your participation! 
 
-<[<u>Register Online</u>](https://www.meetup.com/gsf-global/events/295596991/)>
+<[Register Online](https://www.meetup.com/gsf-global/events/295596991/)>
 
 

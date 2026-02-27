@@ -43,4 +43,4 @@ Daniel Geisel has been with Mercedes-Benz since 2009 and took over as CEO of Mer
 
 - **Daniel Geisel:** Yes, we have attended our first appointment with the community group. We will also make the registration available to all employees soon, expand membership, and include anyone who is interested in participating in working groups and projects that align with their interests and strengths. 
 
-![](/assets/articles/minimizing-the-carbon-footprint-in-it-operations-meet-jorg-schwuchow-and-daniel-g/image.jpeg)
+![Green Software Foundation and Mercedes-Benz Tech Innovation logos on a nature-themed illustration](/assets/articles/minimizing-the-carbon-footprint-in-it-operations-meet-jorg-schwuchow-and-daniel-g/image.jpeg)

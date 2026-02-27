@@ -12,7 +12,7 @@ Our aim was to bring together green software thought leaders, practitioners, and
 
 ## What We Focused On and What We Learned 
 
-The sessions offered actionable steps for practitioners starting their green software journey and in-depth insights for those looking to advance their efforts. The talks ranged from fundamentals of [<u>green software principles, patterns, and practices</u>](https://learn.greensoftware.foundation/introduction) to use cases illustrating how global companies reduce their resource footprint and technical training sessions exploring sustainable LLM training and AI development. 
+The sessions offered actionable steps for practitioners starting their green software journey and in-depth insights for those looking to advance their efforts. The talks ranged from fundamentals of [green software principles, patterns, and practices](https://learn.greensoftware.foundation/introduction) to use cases illustrating how global companies reduce their resource footprint and technical training sessions exploring sustainable LLM training and AI development. 
 
 With industries paying increasingly more attention to AI’s environmental impacts, a number of events revolved around AI systems, the role of government in powering Green AI, and the potential and risks related to the rapidly developing technology field. 
 
@@ -22,7 +22,7 @@ The belief that sustainability cannot be an afterthought when pursuing technolog
 
 We looked ahead and considered necessary steps to shape the next generation of green software and green software engineers, but there seems to be a shared recognition that the pivotal moment to drive sustainability is now. With reducing carbon footprint a leading consideration for most companies, measuring and reporting emissions has become a vital standard that must guide every aspect of software design, development, and deployment.
 
-Measurements as a way to stay accountable and inform action played an important role in the discussion. The audience had an opportunity to explore the concept of calculation parameters and data acquisition methods for applying [<u>the SCI Standard</u>](https://www.iso.org/standard/86612.html) to embedded devices, measuring emissions of serverless applications on AWS, and a reporting tool for allocating all scope emissions to customer workloads in the Cloud. 
+Measurements as a way to stay accountable and inform action played an important role in the discussion. The audience had an opportunity to explore the concept of calculation parameters and data acquisition methods for applying [the SCI Standard](https://www.iso.org/standard/86612.html) to embedded devices, measuring emissions of serverless applications on AWS, and a reporting tool for allocating all scope emissions to customer workloads in the Cloud. 
 
 ## Big Thank You! 
 

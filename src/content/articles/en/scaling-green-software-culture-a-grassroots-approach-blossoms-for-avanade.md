@@ -16,13 +16,13 @@ A project plan had to be pulled together to spell out how to achieve the sustain
 
 Chris wrote two articles for the GSF during that time. Both highlight how to foster a green software culture within an organization:
 
-[<u>Spreading the Message of Green Software</u>](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
+[Spreading the Message of Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
 
-[<u>Establishing a Centre of Excellence</u>](https://greensoftware.foundation/articles/call-to-action-on-green-software-establishing-a-centre-of-excellence)
+[Establishing a Centre of Excellence](https://greensoftware.foundation/articles/call-to-action-on-green-software-establishing-a-centre-of-excellence)
 
 # Planting the green software seeds
 
-Avanade started educating its employees shortly after joining the GSF. The training focused on basic conventions and principles of green software. This was before the GSF established its [<u>Practitioner Course</u>](https://learn.greensoftware.foundation/). By training 3,200 employees, Avanade ensured that folks across the organization had a basic understanding of green software and that everyone was speaking the same language.
+Avanade started educating its employees shortly after joining the GSF. The training focused on basic conventions and principles of green software. This was before the GSF established its [Practitioner Course](https://learn.greensoftware.foundation/). By training 3,200 employees, Avanade ensured that folks across the organization had a basic understanding of green software and that everyone was speaking the same language.
 
 “We started to talk across our organization, setting up special interest groups and looking at groups across the organization that already had a similar role. We tried to mobilize their interest in speaking and learning more. We also looked at our software development lifecycle to define where carbon emissions were potentially coming from.”  
 
@@ -42,7 +42,7 @@ According to Chris, the tipping point was reached with the GSF Global Summit in 
 
 # Excellence manifests after consistent messaging
 
-In July 2023, Avanade added dedicated sustainability teams. With sustainable IT as one of three sustainability pillars, all teams have committed to fostering green software in their region. Apart from promoting the [<u>Green Software Practitioner Course</u>](https://learn.greensoftware.foundation/), Avanade also encourages its employees to get involved with the GSF. To date, close to 1,000 employees have the practitioner certification, and 104 are actively contributing to GSF working groups.
+In July 2023, Avanade added dedicated sustainability teams. With sustainable IT as one of three sustainability pillars, all teams have committed to fostering green software in their region. Apart from promoting the [Green Software Practitioner Course](https://learn.greensoftware.foundation/), Avanade also encourages its employees to get involved with the GSF. To date, close to 1,000 employees have the practitioner certification, and 104 are actively contributing to GSF working groups.
 
 “All of a sudden, we’re seeing initiative. As a result of our steady efforts, we see local activity groups popping up, totally independent from our team. France has the Gallia Green Week, which organizes their own green IT webinars, for example. Consistent messaging and empowering our people with information and resources has made all the difference.” 
 

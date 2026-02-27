@@ -6,8 +6,7 @@ teaserText: "UBS shows in their use case how the SCI specification can be applie
 mainImage: "/assets/articles/baselining-software-carbon-emissions-ubs-use-case/main.jpg"
 ---
 
-# **Overview**
-
+# Overview
 This document describes the testing of the SCI of two software applications. The first software application is for an  Investment Bank and the other in Asset Management. We wanted to baseline the carbon emissions for these two software applications, to determine the data that is currently available in the organization for the calculations. 
 
 We used the SCI as defined by its specification. The SCI is a rate; carbon emissions per one unit of R (R pertains to the functional unit - per user, API call etc.).
@@ -20,21 +19,16 @@ Applying the SCI specification to the two use cases, involved the availability o
 
 We recognize this is the first step in reporting the carbon emissions from our software applications and it will require further automated processes, additional data, and the ability to use the rates in order to make meaningful decisions. 
 
-# **Procedure**
-
-## **(What) Software boundary**
-
+# Procedure
+## (What) Software boundary
 - On-prem software solution - Single scalable and reliable source of truth for reference data and metadata for research applications
 - On-prem software solution – Trading and order execution platform  
 
-## **(Scale) Functional unit**
-
+## (Scale) Functional unit
 The functional unit or “R” in the SCI equation can be scaled using volumes, API calls, users etc. For the calculations for these case studies, we took "number of users". This data was collected from the application administration page where users are registered to access the associated application. 
 
-## **(How) Quantification method**
-
-### **Operational Emissions (O)**
-
+## (How) Quantification method
+### Operational Emissions (O)
 In the SCI specification, the operational emissions are calculated as:
 
 ***O  (Operational emissions) = ( E  (Energy) * I  (Location-based marginal carbon intensity) )*****​
@@ -54,8 +48,7 @@ To calculate the total operational emissions, we also factored in virtual machin
 
 **Total operational emissions per hour = *****( E (Energy) * I (Location based marginal carbon intensity) * RS (Resource share)  )***
 
-### **Embodied Emissions (M)**
-
+### Embodied Emissions (M)
 In the SCI specification, the embodied emissions are calculated as:
 
 ***M  (Embodied Emissions) = TE  (Total Embodied Emissions) * TS  (Time Share) * RS  (Resource Share)*****​**
@@ -77,8 +70,7 @@ To calculate the total embodied emissions, we calculated individual embodied emi
 - We assumed the average embodied emissions in the Total Embodied Emissions per Server calculation.
 - We did not factor in network energy usage.
 
-## **(Quantify) SCI Value Calculation**
-
+## (Quantify) SCI Value Calculation
 **SCI Calculations**
 
 The process of calculating the SCI rate was conducted in the following steps:
@@ -93,8 +85,8 @@ The process of calculating the SCI rate was conducted in the following steps:
 
 3a) SCI Rate Calculation
 
-![](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)
+![Tables showing CO2 operational emissions calculations per hour and per year for Investment Bank and Asset Management apps](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)
 
-![](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)
+![Tables showing CO2 operational emissions calculations per hour and per year for Investment Bank and Asset Management apps](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)
 
-![](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)
+![Tables showing CO2 operational emissions calculations per hour and per year for Investment Bank and Asset Management apps](/assets/articles/baselining-software-carbon-emissions-ubs-use-case/image.png)

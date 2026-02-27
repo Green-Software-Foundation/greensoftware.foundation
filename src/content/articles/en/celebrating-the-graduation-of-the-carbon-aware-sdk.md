@@ -24,7 +24,7 @@ Today, the Carbon Aware SDK is a WebApi and Command Line Interface (CLI) tool th
 
 
 
-The SDK is mature and stable, supported by an active community. It has successfully met the [<u>necessary acceptance criteria</u>](https://oc.greensoftware.foundation/project-lifecycle.html#graduated) for graduation, including having a public release (latest v1.3), clear documentation and evidence of usefulness, like the use case from [<u>UBS</u>](https://greensoftware.foundation/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car). We recognize and appreciate the contributions from Avanade, Microsoft, UBS and NTT DATA in helping us achieve this milestone. 
+The SDK is mature and stable, supported by an active community. It has successfully met the [necessary acceptance criteria](https://oc.greensoftware.foundation/project-lifecycle.html#graduated) for graduation, including having a public release (latest v1.3), clear documentation and evidence of usefulness, like the use case from [UBS](https://greensoftware.foundation/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car). We recognize and appreciate the contributions from Avanade, Microsoft, UBS and NTT DATA in helping us achieve this milestone. 
 
 
 
@@ -42,7 +42,7 @@ Continued collaboration and knowledge-sharing offered significant insight into r
 
 
 
-[<u>Carbon Hack 22</u>](https://greensoftware.foundation/articles/carbonhack22-a-big-leap-in-carbon-aware-computing) helped accelerate our understanding of the needs of practitioners globally, which positioned the project team to resolve bugs and enhance the quality of life decisions for configuration management and deployment.
+[Carbon Hack 22](https://greensoftware.foundation/articles/carbonhack22-a-big-leap-in-carbon-aware-computing) helped accelerate our understanding of the needs of practitioners globally, which positioned the project team to resolve bugs and enhance the quality of life decisions for configuration management and deployment.
 
 
 
@@ -50,7 +50,7 @@ Continued collaboration and knowledge-sharing offered significant insight into r
 
 
 
-Through emission reporting and hypothetical scenario analysis, adopters of the SDK were now assessing the potential impact of relocating large compute workloads to greener data centers or adjusting scheduling during times of cleaner energy. For example, the SDK enabled location shifting and time shifting of [<u>Vesta’s</u>](https://www.youtube.com/watch?v=4zKSSK8BdN8) compute power for their wind turbine simulation.
+Through emission reporting and hypothetical scenario analysis, adopters of the SDK were now assessing the potential impact of relocating large compute workloads to greener data centers or adjusting scheduling during times of cleaner energy. For example, the SDK enabled location shifting and time shifting of [Vesta’s](https://www.youtube.com/watch?v=4zKSSK8BdN8) compute power for their wind turbine simulation.
 
 
 
@@ -78,12 +78,12 @@ As a project, we’re looking to add geolocation support to the SDK, in a respon
 
 
 
-If you are using the Carbon Aware SDK, you can** **[<u>**submit a use case for review**</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk/issues/new?assignees=vaughanknight&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions). 
+If you are using the Carbon Aware SDK, you can** **[**submit a use case for review**](https://github.com/Green-Software-Foundation/carbon-aware-sdk/issues/new?assignees=vaughanknight&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions). 
 
 
 
-If you’re not yet using the Carbon Aware SDK, read about [<u>**Setting up and using the Carbon Aware SDK **</u>](https://carbon-aware-sdk.greensoftware.foundation/docs/quickstart)and [<u>**Selecting a Data Source**</u>](https://carbon-aware-sdk.greensoftware.foundation/docs/tutorial-extras/selecting-a-data-source). 
+If you’re not yet using the Carbon Aware SDK, read about [**Setting up and using the Carbon Aware SDK **](https://carbon-aware-sdk.greensoftware.foundation/docs/quickstart)and [**Selecting a Data Source**](https://carbon-aware-sdk.greensoftware.foundation/docs/tutorial-extras/selecting-a-data-source). 
 
 
 
-For organizations eager to make a substantial impact, aligning with industry leaders such as Accenture, Avanade, BCG X, GitHub, Intel Corp, Microsoft, NTT DATA Corporation, Siemens, UBS, and other influential collaborators, we invite you to [<u>**join our community**</u>](https://greensoftware.foundation/join-us/). 
+For organizations eager to make a substantial impact, aligning with industry leaders such as Accenture, Avanade, BCG X, GitHub, Intel Corp, Microsoft, NTT DATA Corporation, Siemens, UBS, and other influential collaborators, we invite you to [**join our community**](https://greensoftware.foundation/join-us/). 

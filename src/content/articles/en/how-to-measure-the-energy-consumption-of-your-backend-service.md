@@ -14,7 +14,7 @@ originBlogName: "Microsoft Developer Blogs"
 publishedOriginUrl: "https://devblogs.microsoft.com/sustainable-software/how-to-measure-the-power-consumption-of-your-backend-service/"
 ---
 
-The second principle of [<u>Sustainable Software Engineering</u>](https://principles.green/) is to build energy efficient applications. The very first stepping stone in that direction is to measure the energy your application consumes. Being able to measure or estimate the energy cost of your application allows you to start reasoning over how your application can become more energy efficient. It will also allow you to observe when you are improving or when you are regressing. Which automatically leads us to the question, what is the best way to measure the energy consumption of your backend service?
+The second principle of [Sustainable Software Engineering](https://principles.green/) is to build energy efficient applications. The very first stepping stone in that direction is to measure the energy your application consumes. Being able to measure or estimate the energy cost of your application allows you to start reasoning over how your application can become more energy efficient. It will also allow you to observe when you are improving or when you are regressing. Which automatically leads us to the question, what is the best way to measure the energy consumption of your backend service?
 
 This post is operating system agnostic and is primarily meant for applications running on backend only.
 
@@ -24,7 +24,7 @@ The most reliable way is also the simplest way. Buy a cheap watt hour meter, plu
 
 <figure>
 <img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-measuring-power-consumption-from-socket-by-software-creators-illustration.png" alt="green-software-foundation-measuring-power-consumption-from -socket-by-software-creators-illustration" />
-<figcaption><em>Measuring energy consumption directly from the socket</em></figcaption>
+<figcaption>*Measuring energy consumption directly from the socket*</figcaption>
 </figure>
 
 There are tricks to ensure you get reliable data:
@@ -50,7 +50,7 @@ If we approximate the TDP with the energy consumption of each component we will 
 
 <figure>
 <img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-backend-service/green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components.png" alt="green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components" />
-<figcaption><em>A formula for estimating power consumption </em></figcaption>
+<figcaption>*A formula for estimating power consumption *</figcaption>
 </figure>
 
 For our estimate to account for things such as cooling in a data center, this number needs to be multiplied with the PUE or the Power Usage Effectiveness (PUE) of your datacenter. 
@@ -59,11 +59,11 @@ The PUE is a ratio that determines how effective a datacenter is at utilizing en
 
 ## Estimate power consumption before deployment
 
-If you are more interested in a hardware agnostic approach, or if it is more important to compare software over time or against one another, an option is to calculate the number of FLOPs (floating point operations, not FLOP per second in this post). The number of FLOPs can be computed analytically by obtaining, or defining, the cost of two basic CPU operations, ADD and MUL. From those two basic operations the cost of all others can be defined. This was suggested in the paper [<u>Green AI</u>](https://arxiv.org/abs/1907.10597) by Schwartz et al. where the authors, in addition to suggesting this metric, measured several machine learning models to find trends over time.
+If you are more interested in a hardware agnostic approach, or if it is more important to compare software over time or against one another, an option is to calculate the number of FLOPs (floating point operations, not FLOP per second in this post). The number of FLOPs can be computed analytically by obtaining, or defining, the cost of two basic CPU operations, ADD and MUL. From those two basic operations the cost of all others can be defined. This was suggested in the paper [Green AI](https://arxiv.org/abs/1907.10597) by Schwartz et al. where the authors, in addition to suggesting this metric, measured several machine learning models to find trends over time.
 
-This approach has also been used in several other studies. Examples: Tom Veniat and Ludovic Denoyer Learning time/memory-efficient deep architectures with budgeted super networks, [<u>In Proc. of CVPR</u>](https://openaccess.thecvf.com/content_cvpr_2018/html/Veniat_Learning_TimeMemory-Efficient_Deep_CVPR_2018_paper.html), 2018, and Polosukhin et al. Attention is all you need, [<u>In Proc. of NeurIPS</u>](http://papers.nips.cc/paper/7181-attention-is-all-you-need), 2017. 
+This approach has also been used in several other studies. Examples: Tom Veniat and Ludovic Denoyer Learning time/memory-efficient deep architectures with budgeted super networks, [In Proc. of CVPR](https://openaccess.thecvf.com/content_cvpr_2018/html/Veniat_Learning_TimeMemory-Efficient_Deep_CVPR_2018_paper.html), 2018, and Polosukhin et al. Attention is all you need, [In Proc. of NeurIPS](http://papers.nips.cc/paper/7181-attention-is-all-you-need), 2017. 
 
-Hardware providers sometimes release software for calculating FLOPs and there are also specialized open-source software for calculating FLOPs of different scenarios, for example of [<u>neural networks</u>](https://github.com/sovrasov/flops-counter.pytorch).
+Hardware providers sometimes release software for calculating FLOPs and there are also specialized open-source software for calculating FLOPs of different scenarios, for example of [neural networks](https://github.com/sovrasov/flops-counter.pytorch).
 
 What do FLOPs have to do with energy, you wonder? Counting the FLOPs is a good time and hardware agnostic way to measure the amount of work a running machine performs to execute a piece of software. The amount of work a machine does corresponds well to the energy it consumes and therefore it can be used as an approximation. FLOPs are also correlated with the run time of software, which also has an impact on energy consumption. Another big win of this solution is that it can be analyzed on the code stage without being deployed anywhere. This makes it feasible to compare solutions to each other early in the development phase.
 

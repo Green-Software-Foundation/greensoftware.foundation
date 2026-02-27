@@ -46,4 +46,4 @@ AVEVA’s software is increasingly leveraged by industries to advance the low-ca
 
 With digitalization being one of the most crucial drivers of industrial decarbonization, innovation and growth, we see the adoption of green software initiatives as vital to both our own ambitions and our customers’ broader net zero goals. As members of the Green Software Foundation, we look forward to collaborating with like-minded innovators to develop standards and best practices that will help accelerate our efforts to further embed sustainability principles both in our software portfolio and across our ecosystem. We also hope to help raise awareness and inspire others to take action on helping progress our net zero future.  
 
-![](/assets/articles/meet-organizational-lead-member-aveva/image.png)
+![Green Software Foundation and AVEVA logos on a dark nature-themed illustration](/assets/articles/meet-organizational-lead-member-aveva/image.png)

@@ -6,7 +6,7 @@ teaserText: "Green software is yet to reach the tipping point—that magic momen
 mainImage: "/assets/articles/call-to-action-on-green-software-establishing-a-centre-of-excellence/main.png"
 ---
 
-In my first article, I talked about [<u>spreading the message of green software</u>](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software) within organisations. I addressed grassroots change and the importance of organisational support for change. In the second article, I talked about [<u>success factors, measurements and metrics</u>](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour) to ensure your organisation is fully supportive of greening software.
+In my first article, I talked about [spreading the message of green software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software) within organisations. I addressed grassroots change and the importance of organisational support for change. In the second article, I talked about [success factors, measurements and metrics](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour) to ensure your organisation is fully supportive of greening software.
 
 After having identified the business benefits of adopting green software—as well as the broader societal reasons for this adoption!—and gained early buy-in for this change, you'll eventually hit your next challenge: who drives this change? 
 
@@ -53,7 +53,7 @@ For the rest of this article, I'm going to focus on a Centre of Excellence, the 
 
 ## Centres of Excellence: Getting started 
 
-By this point, I'm assuming you have an understanding of who your business sponsor is for this initiative, and the success factors you're driving towards. If not, you might want to refer back to articles one and two, [<u>spreading the message of Green Software</u>](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software),[ <u>and measuring success</u>](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour), respectively. 
+By this point, I'm assuming you have an understanding of who your business sponsor is for this initiative, and the success factors you're driving towards. If not, you might want to refer back to articles one and two, [spreading the message of Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software),[ and measuring success](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour), respectively. 
 
 ### First steps 
 
@@ -107,16 +107,15 @@ In future articles, I'll be focussing on more detailed activities and approaches
 
  As your community comes together, please remember that we, at the Green Software Foundation, need your help. Your community will be well placed to support our open-source projects including: 
 
-- [<u>The Principles of Green Software Engineering</u>](https://greensoftware.foundation/projects/principles-of-green-software-engineering) - Training on reducing the carbon emissions of a software system. Your community can contribute their thoughts. 
-- [<u>Awesome Green Software</u>](https://greensoftware.foundation/projects/awesome-green-software) - As your community contributes tools and ideas, promote them here.  
-- [<u>Green Software Writers</u>](https://greensoftware.foundation/projects/writers) - As I've done, ask your community members to write about their experience with green software. 
+- [The Principles of Green Software Engineering](https://greensoftware.foundation/projects/principles-of-green-software-engineering) - Training on reducing the carbon emissions of a software system. Your community can contribute their thoughts. 
+- [Awesome Green Software](https://greensoftware.foundation/projects/awesome-green-software) - As your community contributes tools and ideas, promote them here.  
+- [Green Software Writers](https://greensoftware.foundation/projects/writers) - As I've done, ask your community members to write about their experience with green software. 
 
-And finally,[ <u>you could reach out to our Green Software Speakers community</u>](https://greensoftware.foundation/projects/speakers), to speak at an event your community runs. Or you may want to speak about green software yourself. Either way, you can find a lot of resources and support from us. 
+And finally,[ you could reach out to our Green Software Speakers community](https://greensoftware.foundation/projects/speakers), to speak at an event your community runs. Or you may want to speak about green software yourself. Either way, you can find a lot of resources and support from us. 
 
 Feel free to reach out on [Twitter](https://twitter.com/gsfcommunity), [LinkedIn](https://www.linkedin.com/company/green-software-foundation) and other forums and share with me other topics you'd like me to cover regarding practical actions you can take to spread the message of green software. 
 
-## **Other Articles in the *****CTA on Green Software***** Series**
+## Other Articles in the *CTA on Green Software* Series
+[CTA: Spreading the Message on Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
 
-[<u>CTA: Spreading the Message on Green Software</u>](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
-
-[<u>CTA: Success Factors, Measurements and Driving the Right Behaviour</u>](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour)
+[CTA: Success Factors, Measurements and Driving the Right Behaviour](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour)

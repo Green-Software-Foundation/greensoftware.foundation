@@ -12,7 +12,7 @@ authors:
     photo: "/assets/articles/authors/green-software-foundation.png"
 ---
 
-[<u>Thoughtworks</u>](https://www.thoughtworks.com/) is a global technology consultancy that integrates strategy, design and software engineering to enable enterprises and technology disruptors across the globe to thrive as modern digital businesses.
+[Thoughtworks](https://www.thoughtworks.com/) is a global technology consultancy that integrates strategy, design and software engineering to enable enterprises and technology disruptors across the globe to thrive as modern digital businesses.
 
 Sustainability is foundational to being a modern digital business and we develop technology solutions  that enable our clients to visualize, assess and take action on their carbon footprint.
 

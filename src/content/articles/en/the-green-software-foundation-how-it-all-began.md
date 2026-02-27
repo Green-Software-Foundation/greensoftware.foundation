@@ -31,9 +31,9 @@ We realized very early on that there was a need for knowledge. There was a deep 
 
 ## Principles of sustainable software engineering
 
-We came up with the [<u>principles of sustainable software engineering</u>](https://docs.microsoft.com/en-us/learn/modules/sustainable-software-engineering-overview/) on the Microsoft Learn platform.
+We came up with the [principles of sustainable software engineering](https://docs.microsoft.com/en-us/learn/modules/sustainable-software-engineering-overview/) on the Microsoft Learn platform.
 
-Green software is still at a very early space. There were some thoughts out there, but having some clarity around the space was incredibly valuable at the start. We gathered together all the people at Microsoft who cared about the same subject and got them writing for [<u>our blog</u>](https://aka.ms/sse/blog). The Microsoft Learn module really facilitated the conversations because suddenly you could give somebody a quick half an hour training and then everybody in that room could be on the same page regarding green software. We were then all using the same language and could understand the same concept, so it really helped ‘level set‘ discussions. 
+Green software is still at a very early space. There were some thoughts out there, but having some clarity around the space was incredibly valuable at the start. We gathered together all the people at Microsoft who cared about the same subject and got them writing for [our blog](https://aka.ms/sse/blog). The Microsoft Learn module really facilitated the conversations because suddenly you could give somebody a quick half an hour training and then everybody in that room could be on the same page regarding green software. We were then all using the same language and could understand the same concept, so it really helped ‘level set‘ discussions. 
 
 Fast forward one year, it turned out that a number of other organizations were also looking at the same space. First off Accenture reached out, then Thoughtworks and then our partners at GitHub. We were all talking about  the same space. There's a number of other organizations like Goldman Sachs which we started speaking to about green software. There were various nonprofits like the Green Web Foundation, Leaders for Climate Action and WattTime, we were all talking about the same things at the same time. 
 
@@ -77,8 +77,7 @@ Why we feel this is important is because we need to capture all voices if we are
 
 Building software will be the responsibility of everyone on the development team, much like when we look at security, or performance or reliability today. I am excited about the opportunity with the Green Software Foundation to partner with the community on standards, curriculum and support.
 
-## **Meet the other Steering Committee Members of Green Software Foundation:**
-
+## Meet the other Steering Committee Members of Green Software Foundation:
 Read about our Steering Committee members, what they say about working with the Foundation and their thoughts on the future of green software.  
 
 [Accenture](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture) | [GitHub](https://greensoftware.foundation/articles/meet-our-steering-committee-github) | [Globant](https://greensoftware.foundation/articles/meet-our-steering-committee-globant) |  [NTT Data](https://greensoftware.foundation/articles/meet-our-steering-committee-ntt-data)[ ](https://greensoftware.foundation/articles/meet-our-steering-committee-accenture)| [Thoughtworks](https://greensoftware.foundation/articles/meet-our-steering-committee-thoughtworks)

@@ -8,7 +8,7 @@ mainImage: "/assets/articles/decarbonizing-software-how-cast-applied-the-sci-met
 
 In the battle against climate change, the tech industry's carbon footprint has emerged as a silent yet significant contributor to global emissions. This challenge is sparking innovative approaches to decarbonizing software. 
 
-Using [<u>CAST Highlight</u>](https://www.castsoftware.com/highlight) and the [<u>SCI Specification</u>](https://sci-guide.greensoftware.foundation/), CAST demonstrates that decarbonizing a single software application can potentially reduce annual CO2 emissions by an estimated 400 kg—a testament to the tangible impact of green software practices. The optimized version of the application also showed a 5% improvement in execution duration compared to its original state.
+Using [CAST Highlight](https://www.castsoftware.com/highlight) and the [SCI Specification](https://sci-guide.greensoftware.foundation/), CAST demonstrates that decarbonizing a single software application can potentially reduce annual CO2 emissions by an estimated 400 kg—a testament to the tangible impact of green software practices. The optimized version of the application also showed a 5% improvement in execution duration compared to its original state.
 
 ## The Challenge: Measuring and Reducing the Carbon Footprint of Software
 
@@ -36,8 +36,7 @@ Furthermore, the energy consumption associated with running the optimized applic
 
 ## Decarbonizing Software Up-close: Technical Details of the Case Study
 
-### **1) Components and Architecture**
-
+### 1) Components and Architecture
 The following components constitute the architecture of the case study:
 
 - **Desktop Client App** - Locally installed end-user application used for analyzing local files and producing results of the analysis to be uploaded to the SaaS application for visualization. Primarily developed in JavaScript and Node.js.
@@ -47,12 +46,11 @@ The following components constitute the architecture of the case study:
 - **CVEDB** - Reference database used by some reports updated from the National Vulnerability Database via API. Developed in Java and SpringBoot.
 - **Knowledgebase** - Proprietary metadata database used by some reports and dashboards. Developed in Java, NoSQL, and PostgreSQL.
 
-![](/assets/articles/decarbonizing-software-how-cast-applied-the-sci-metric/image.jpg)
+![CAST software architecture diagram showing desktop client, SaaS portal, database, storage, and external services](/assets/articles/decarbonizing-software-how-cast-applied-the-sci-metric/image.jpg)
 
-<u>**Download the Green Impact Case Study**</u>
+**Download the Green Impact Case Study**
 
-### **2) Procedure**
-
+### 2) Procedure
 The following process was aimed at the source code of the application to identify green deficiencies (inefficient code patterns) and replace them with alternate, more efficient code. As a result, CAST fixed ten green deficiencies.
 
 **(What) Software boundary**
@@ -84,7 +82,7 @@ The following process was aimed at the source code of the application to identif
 - O, via the E factor, as the E for the measured software, would stop requiring energy when all its operations are done.
 - M, via the TiR factor as the measured software, would allow the use of resources for other software when all its operations are done.
 
-![](/assets/articles/decarbonizing-software-how-cast-applied-the-sci-metric/image.png)
+![SCI formula diagram: SCI equals E times I plus M per R, with annotations explaining each variable](/assets/articles/decarbonizing-software-how-cast-applied-the-sci-metric/image.png)
 
 **(Report)**
 
@@ -104,4 +102,4 @@ CAST’s application of the SCI specification offers a blueprint for action. It 
 
 For those inspired by CAST's journey and on a path to decarbonize software, begin assessing your software's impact and explore how market tools, when integrated with the  SCI specification, can enhance your optimization efforts. 
 
-To learn how to apply the SCI specification, view the [<u>SCI Guide</u>](https://sci-guide.greensoftware.foundation/). 
+To learn how to apply the SCI specification, view the [SCI Guide](https://sci-guide.greensoftware.foundation/). 

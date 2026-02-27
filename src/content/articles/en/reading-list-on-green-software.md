@@ -30,7 +30,7 @@ Starting with an in-depth analysis of sustainability and its historical backgrou
 
 Have you ever wondered if efficiency and sustainability can exist side-by-side in the digital space? 
 
-GSF founding members Sanjay Podder and Navveen Balani draw on this concept and the environmental implications of digital products and services to create a robust framework for understanding and applying green software practices. Starting from a call to action to [<u>join the green software movement</u>](https://grnsft.org/newsletter), each chapter of the publication focuses on an individual topic, exploring foundational concepts, practical guidance, and out-of-the-box approaches that lay the basis for responsible innovation. 
+GSF founding members Sanjay Podder and Navveen Balani draw on this concept and the environmental implications of digital products and services to create a robust framework for understanding and applying green software practices. Starting from a call to action to [join the green software movement](https://grnsft.org/newsletter), each chapter of the publication focuses on an individual topic, exploring foundational concepts, practical guidance, and out-of-the-box approaches that lay the basis for responsible innovation. 
 
 A critical tool for architects, developers, and industry leaders who aim to advance technology and sustainability, the book offers actionable advice and insights presented in the accessible form of a Q&A, reflecting the curiosity and progressive learning approach fundamental to software development.
 

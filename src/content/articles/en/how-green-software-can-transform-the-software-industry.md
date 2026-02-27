@@ -14,7 +14,7 @@ The benefits of integrating sustainability into business operations achieves a l
 
 
 
-Drawing from insights from recent discussions on [<u>Environment Variables</u>](https://podcasts.bcast.fm/e/1n365448-building-green-software) with Anne Currie, Sara Bergman (Microsoft), and Sarah Hsu (Goldman Sachs), we share how businesses can use green software to make strides in sustainability.
+Drawing from insights from recent discussions on [Environment Variables](https://podcasts.bcast.fm/e/1n365448-building-green-software) with Anne Currie, Sara Bergman (Microsoft), and Sarah Hsu (Goldman Sachs), we share how businesses can use green software to make strides in sustainability.
 
 
 
@@ -28,7 +28,7 @@ The choice of networking method significantly impacts energy efficiency. Wireles
 
 
 
-[<u>According to Anne Currie</u>](https://podcasts.bcast.fm/e/1n365448-building-green-software), the “last mile” of data transmission—delivering the connection to the end users’ premises, is crucial in the overall footprint of networking. Fiber optics emerges as the most efficient technology due to its capacity for high-speed data transfer with minimal energy loss, leading the space before copper cables and wireless technologies respectively. 
+[According to Anne Currie](https://podcasts.bcast.fm/e/1n365448-building-green-software), the “last mile” of data transmission—delivering the connection to the end users’ premises, is crucial in the overall footprint of networking. Fiber optics emerges as the most efficient technology due to its capacity for high-speed data transfer with minimal energy loss, leading the space before copper cables and wireless technologies respectively. 
 
 
 
@@ -66,8 +66,7 @@ Judging by the current trends, we can anticipate further developments in cloud c
 
 
 
-> “Carbon is just another metric to monitor.” 
-
+> Carbon is just another metric to monitor.
 
 
 The green software movement extends beyond coding and engineering; from those managing on-premise data centers to product to ops managers, each can play a role in building a more sustainable future. 

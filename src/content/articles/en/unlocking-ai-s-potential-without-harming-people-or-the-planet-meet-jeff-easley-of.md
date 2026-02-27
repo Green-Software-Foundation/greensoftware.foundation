@@ -12,7 +12,7 @@ Leveraging product leadership and team-building expertise, he aims to drive memb
 
 ## Can you tell us about the Responsible AI Institute?
 
-Founded in 2016, the[ <u>Responsible AI (RAI) Institute</u>](https://www.responsible.ai/) is a global and member-driven non-profit dedicated to enabling the successful implementation of responsible AI in organizations. We accelerate and simplify responsible AI adoption by providing our members with AI conformity assessments, benchmarks, and certifications closely aligned with global standards and emerging regulations.
+Founded in 2016, the[ Responsible AI (RAI) Institute](https://www.responsible.ai/) is a global and member-driven non-profit dedicated to enabling the successful implementation of responsible AI in organizations. We accelerate and simplify responsible AI adoption by providing our members with AI conformity assessments, benchmarks, and certifications closely aligned with global standards and emerging regulations.
 
 RAI Institute members include leading companies such as Amazon Web Services, Boston Consulting Group, KPMG, ATB Financial, and many others dedicated to bringing responsible AI to all industry sectors. 
 
@@ -28,7 +28,7 @@ We strive to provide key metrics and resources for organizations looking to impl
 
 ## Why did you join GSF?
 
-RAI Institute recognizes the growing importance of environmental sustainability in AI development. In our latest e-publication: "[<u>AI's Impact on Our Sustainable Future: A Guiding Framework for Responsible AI Integration Into ESG Paradigms,</u>](https://20965052.fs1.hubspotusercontent-na1.net/hubfs/20965052/AIs%20Impact%20on%20Our%20Sustainable%20Future%20White%20Paper%20V1.pdf)" we emphasize how relevant this issue has become in today's landscape. 
+RAI Institute recognizes the growing importance of environmental sustainability in AI development. In our latest e-publication: "[AI's Impact on Our Sustainable Future: A Guiding Framework for Responsible AI Integration Into ESG Paradigms,](https://20965052.fs1.hubspotusercontent-na1.net/hubfs/20965052/AIs%20Impact%20on%20Our%20Sustainable%20Future%20White%20Paper%20V1.pdf)" we emphasize how relevant this issue has become in today's landscape. 
 
  
 

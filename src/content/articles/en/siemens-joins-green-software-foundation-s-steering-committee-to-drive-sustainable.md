@@ -22,7 +22,7 @@ Siemens joins Accenture, Avanade, BCG X, GitHub, Globant, Intel, Microsoft, NTT 
 
 “We’re thrilled to expand GSF’s steering committee with Siemens and we’re hopeful that the contributions its engineers and researchers will make will advance green software patterns and tools compatible with intricate, multi-tiered computing systems for broader industry adoption of green software,” shared Asim Hussain, Chairperson and Executive Director of the GSF.
 
-Follow us on Twitter at[ <u>www.twitter.com/</u>](http://www.twitter.com/siemens_press)<u>gsfcommunity</u>
+Follow us on Twitter at[ www.twitter.com/](http://www.twitter.com/siemens_press)gsfcommunity
 
 Contacts for journalists:
 
@@ -46,4 +46,4 @@ Phone: +49 (173) 3270510; e-mail: bernhard.wardin@siemens.com 
 
 **Siemens AG** (Berlin and Munich) is a technology company focused on industry, infrastructure, transport, and healthcare. From more resource-efficient factories, resilient supply chains, and smarter buildings and grids, to cleaner and more comfortable transportation as well as advanced healthcare, the company creates technology with purpose adding real value for customers. By combining the real and the digital worlds, Siemens empowers its customers to transform their industries and markets, helping them to transform the everyday for billions of people. Siemens also owns a majority stake in the publicly listed company Siemens Healthineers, a globally leading medical technology provider shaping the future of healthcare. In addition, Siemens holds a minority stake in Siemens Energy, a global leader in the transmission and generation of electrical power. 
 
-In fiscal 2022, which ended on September 30, 2022, the Siemens Group generated revenue of €72.0 billion and net income of €4.4 billion. As of September 30, 2022, the company had around 311,000 employees worldwide. Further information is available on the Internet at[ <u>www.siemens.com</u>](http://www.siemens.com). 
+In fiscal 2022, which ended on September 30, 2022, the Siemens Group generated revenue of €72.0 billion and net income of €4.4 billion. As of September 30, 2022, the company had around 311,000 employees worldwide. Further information is available on the Internet at[ www.siemens.com](http://www.siemens.com). 

@@ -12,7 +12,7 @@ Is it developers making daily trade-offs? CTOs allocating budgets? Policymakers 
 
 Green IO Paris brings together 800+ responsible technologists: a rare gathering of global expertise in sustainable software. The GSF, an official Green IO partner, is using this opportunity to answer a question the field hasn't resolved: where does accountability for software's environmental impact actually sit—and where should it sit. 
 
-Using the same approach that helped develop industry standards such as [<u>the ISO-approved Software Carbon Intensity specification</u>](https://www.iso.org/standard/86612.html), we'll capture the collective perspective on the accountability gap and publish findings in our January 2026 report, identifying where our efforts can have the greatest potential for real change. 
+Using the same approach that helped develop industry standards such as [the ISO-approved Software Carbon Intensity specification](https://www.iso.org/standard/86612.html), we'll capture the collective perspective on the accountability gap and publish findings in our January 2026 report, identifying where our efforts can have the greatest potential for real change. 
 
 ## How It Works 
 
@@ -40,7 +40,7 @@ Find the GSF booth at CNIT, La Défense, during Green IO, December 9-11, to part
 
 ### Want to attend?
 
-As a non-profit sponsor, we have two tickets left to Green IO Paris to share with the community. Email [<u>help@greensoftware.foundation</u>](mailto:help@greensoftware.foundation)—first come, first served.
+As a non-profit sponsor, we have two tickets left to Green IO Paris to share with the community. Email [help@greensoftware.foundation](mailto:help@greensoftware.foundation)—first come, first served.
 
 ### For organizations:
 

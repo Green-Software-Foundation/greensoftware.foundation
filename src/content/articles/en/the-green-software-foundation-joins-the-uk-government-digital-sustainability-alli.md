@@ -12,16 +12,14 @@ As part of this partnership, the GSF will support the Department for Environment
 
 ## What Joining GDSA Means for Green Software
 
-> "This partnership represents a pivotal moment where green software principles move from industry practice to government policy. By working directly with GDSA, we're helping establish how governments worldwide will measure and reduce their digital carbon footprint. When the UK government adopts these practices, it sends a powerful signal to its entire supply chain and beyond."
-
+> This partnership represents a pivotal moment where green software principles move from industry practice to government policy. By working directly with GDSA, we're helping establish how governments worldwide will measure and reduce their digital carbon footprint. When the UK government adopts these practices, it sends a powerful signal to its entire supply chain and beyond.
 The partnership creates value for both organizations and the broader ecosystem.
 
-By joining the alliance, GSF will contribute expertise to the UK Government's digital policy and expand its reach across government supply chains. GDSA will gain specialized green software expertise, proven frameworks such as the [<u>Software Carbon Intensity specification</u>](https://www.iso.org/standard/86612.html), and global credibility to accelerate progress toward Net Zero. 
+By joining the alliance, GSF will contribute expertise to the UK Government's digital policy and expand its reach across government supply chains. GDSA will gain specialized green software expertise, proven frameworks such as the [Software Carbon Intensity specification](https://www.iso.org/standard/86612.html), and global credibility to accelerate progress toward Net Zero. 
 
 Through this work, we will shape government procurement standards and establish replicable best practices for both the public and private sectors, supported by two-way knowledge exchange. 
 
-> “The GDSA is delighted to welcome the Green Software Foundation (GSF) into the Alliance and to draw on their expertise on green software practices into the GDSA community.” 
-
+> The GDSA is delighted to welcome the Green Software Foundation (GSF) into the Alliance and to draw on their expertise on green software practices into the GDSA community.
 ## How GSF and GDSA Will Work Together  
 
 As part of the membership, we will attend GDSA quarterly meetings and actively contribute to four working groups, each focused on critical sustainability challenges:
@@ -43,6 +41,6 @@ By working together, we are establishing a model for how governments can measure
 
 ## Get Involved 
 
-**Become a GSF Member**: Align with global leaders and help shape the next generation of software sustainability standards. Your expertise can influence how governments worldwide approach digital sustainability.[ <u>Join the Green Software Foundation today</u>](https://greensoftware.foundation).
+**Become a GSF Member**: Align with global leaders and help shape the next generation of software sustainability standards. Your expertise can influence how governments worldwide approach digital sustainability.[ Join the Green Software Foundation today](https://greensoftware.foundation).
 
 **Participate in Working Groups**: GSF members can contribute their expertise to GDSA initiatives, attend quarterly meetings, and help develop educational materials for the entire government supply chain. Contact sean@greensoftware.foundation to explore contribution opportunities.

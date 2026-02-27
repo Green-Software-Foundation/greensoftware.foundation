@@ -14,7 +14,7 @@ Get ready for the 2024 GSF Global Summit—a series of in-person events hosted b
 
 After two years, we’re excited to bring the Summit back to elevate our community, spark conversations, and drive the adoption of green software principles, patterns, and tools. Whether you’re looking to expand your knowledge, meet like-minded people, or be part of a global green software movement, a GSF Global Summit is calling you.
 
-Find a [<u>GSF Global Summit</u>](https://summit.greensoftware.foundation/) near you.  
+Find a [GSF Global Summit](https://summit.greensoftware.foundation/) near you.  
 
 # GSF Global Summit 2024 Event Schedule
 
@@ -24,13 +24,13 @@ Find a [<u>GSF Global Summit</u>](https://summit.greensoftware.foundation/) near
 
 - **BCG X | London, UK**
 Time: 6:00 – 9:00 PM BST
-[<u>Register</u>](https://grnsft.org/LondonGlobalSummit2024) by September 25
+[Register](https://grnsft.org/LondonGlobalSummit2024) by September 25
 - **Siemens, NTT DATA & CAST | Munich, Germany**
 Time: 1:00 PM CEST
-[<u>Register here</u>](https://eveeno.com/140350708)
+[Register here](https://eveeno.com/140350708)
 - **Thoughtworks | Hamburg, Germany**
 Time: 6:00 – 9:00 PM CEST
-[<u>Register here</u>](https://grnsft.org/HamburgGlobalSummit2024)
+[Register here](https://grnsft.org/HamburgGlobalSummit2024)
 
 
 
@@ -38,11 +38,11 @@ Time: 6:00 – 9:00 PM CEST
 
 - **Globant | São Paulo, Brazil**
 Time: 9:00 AM BRT
-[<u>Follow the GSF Summit website for registration details</u>](https://summit.greensoftware.foundation/)
+[Follow the GSF Summit website for registration details](https://summit.greensoftware.foundation/)
 - **Goldman Sachs | Birmingham, UK**
 Time: 2:00 – 6:00 PM GMT
 Address: Centenary Way, Birmingham B3 3AY, United Kingdom
-[<u>Register here</u>](https://www.meetup.com/goldman-sachs-birmingham-engineering/events/303464862/?isFirstPublish=true)
+[Register here](https://www.meetup.com/goldman-sachs-birmingham-engineering/events/303464862/?isFirstPublish=true)
 
 
 
@@ -50,14 +50,14 @@ Address: Centenary Way, Birmingham B3 3AY, United Kingdom
 
 - **Globant | Buenos Aires, Argentina**
 Time: 10:30 AM ART
-[<u>Follow the GSF Summit website for registration details</u>](https://summit.greensoftware.foundation/)
+[Follow the GSF Summit website for registration details](https://summit.greensoftware.foundation/)
 
 
 **October 8, 2024**
 
 - **Mastercard | Dublin, Ireland**
 Time: 9:00 AM BST
-[<u>Register here</u>](https://grnsft.org/DublinGlobalSummit2024)
+[Register here](https://grnsft.org/DublinGlobalSummit2024)
 
 
 
@@ -65,13 +65,13 @@ Time: 9:00 AM BST
 
 - **Thoughtworks | Berlin, Germany**
 Time: 6:00 – 9:00 PM CEST
-[<u>Register here</u>](https://www.meetup.com/de-DE/thoughtworks-berlin/events/303072079/?eventorigin=group_events_list)
+[Register here](https://www.meetup.com/de-DE/thoughtworks-berlin/events/303072079/?eventorigin=group_events_list)
 - **IMDA | Singapore**
 Time: 9:00 AM SGT
-[<u>Register here</u>](https://grnsft.org/SingaporeGlobalSummit2024)
+[Register here](https://grnsft.org/SingaporeGlobalSummit2024)
 - **NTT DATA, Microsoft & Intel | Tokyo, Japan**
 Time: 6:00 – 9:00 PM JST
-[<u>Register here</u>](https://grnsft.org/TokyoGlobalSummit2024)
+[Register here](https://grnsft.org/TokyoGlobalSummit2024)
 
 
 
@@ -79,7 +79,7 @@ Time: 6:00 – 9:00 PM JST
 
 - **CAST & NTT DATA | Madrid, Spain**
 Time: TBD
-[<u>Follow the GSF Summit website for registration details</u>](https://summit.greensoftware.foundation/)
+[Follow the GSF Summit website for registration details](https://summit.greensoftware.foundation/)
 
 # Key themes you’ll encounter:
 
@@ -91,4 +91,4 @@ Time: TBD
 
 ## How to Get Involved
 
-The in-person events are free for the public to attend. However, some of the events have limited capacity; check the registration links for more details. Visit [<u>grnsft.org/summit</u>](http://grnsft.org/summit) today. 
+The in-person events are free for the public to attend. However, some of the events have limited capacity; check the registration links for more details. Visit [grnsft.org/summit](http://grnsft.org/summit) today. 

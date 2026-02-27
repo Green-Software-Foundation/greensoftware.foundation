@@ -6,7 +6,7 @@ teaserText: "Guiding organizations in adopting, implementing, and transforming s
 mainImage: "/assets/articles/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo/main.png"
 ---
 
-In 2021, we began building methods, tools, standards, and patterns to help practitioners embed green software practices. As these tools, including [<u>the Software Carbon Intensity specification</u>](https://sci.greensoftware.foundation/), [<u>Impact Framework</u>](https://if.greensoftware.foundation/), and [<u>Carbon Aware SDK</u>](https://carbon-aware-sdk.greensoftware.foundation/), matured within a wider landscape of sustainability frameworks and methodologies, a pattern surfaced: organizations had the tools, yet they struggled to use them systematically across their operations.
+In 2021, we began building methods, tools, standards, and patterns to help practitioners embed green software practices. As these tools, including [the Software Carbon Intensity specification](https://sci.greensoftware.foundation/), [Impact Framework](https://if.greensoftware.foundation/), and [Carbon Aware SDK](https://carbon-aware-sdk.greensoftware.foundation/), matured within a wider landscape of sustainability frameworks and methodologies, a pattern surfaced: organizations had the tools, yet they struggled to use them systematically across their operations.
 
 A common need emerged: organizations needed more than measurement tools—they needed a framework to embed green software practices systematically across their operations, from board-level strategy to developer workflows.
 
@@ -33,7 +33,7 @@ SOFT's framework covers four essential areas:
 - **Operational**: Embedding practices into daily operations: code review checklists that include carbon considerations, deployment strategies that favor cleaner energy periods, and procurement guidelines that factor in embodied carbon.
 - **Compliance & Regulations**: Ensuring alignment with evolving sustainability regulations, helping you stay ahead as governments worldwide introduce digital sustainability requirements.
 
-Built to complement the [<u>GSF's Maturity Matrix Model</u>](https://maturity-matrix.greensoftware.foundation/), SOFT enables businesses to assess their current sustainability maturity, identify gaps, and identify clear next steps. 
+Built to complement the [GSF's Maturity Matrix Model](https://maturity-matrix.greensoftware.foundation/), SOFT enables businesses to assess their current sustainability maturity, identify gaps, and identify clear next steps. 
 
 ### Charting Progress
 
@@ -57,11 +57,11 @@ As the industry looks ahead, the project plays a central role in translating GSF
 
 We warmly invite organizations from around the world to explore the SOFT Framework, adopt it, and share their feedback. Your input will help us refine and grow its positive impact together. 
 
-- [<u>SOFT GitHub documentation</u>](https://github.com/Green-Software-Foundation/SOFT/blob/main/Sustainable-Organisational-Framework-for-Technology.md)
+- [SOFT GitHub documentation](https://github.com/Green-Software-Foundation/SOFT/blob/main/Sustainable-Organisational-Framework-for-Technology.md)
 
-**Join the Community**: Visit [<u>the Green Software Movement platform</u>](https://movement.greensoftware.foundation/share/j53ZQiXvaEmzIVWI?utm_source=manual) to connect with others implementing sustainable frameworks like SOFT and access training resources.
+**Join the Community**: Visit [the Green Software Movement platform](https://movement.greensoftware.foundation/share/j53ZQiXvaEmzIVWI?utm_source=manual) to connect with others implementing sustainable frameworks like SOFT and access training resources.
 
 **Work with us**: GSF projects are developed under the guidance of our Steering Members: Avanade, BCG X, Cisco, Google, Microsoft, NTT DATA Corporation, Siemens, and UBS.
 
 
-[<u>Become a GSF Member</u>](https://greensoftware.foundation/join-us) to join industry leaders shaping the future of sustainable software.
+[Become a GSF Member](https://greensoftware.foundation/join-us) to join industry leaders shaping the future of sustainable software.

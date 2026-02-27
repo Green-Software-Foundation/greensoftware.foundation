@@ -17,13 +17,13 @@ authors:
         link: "https://www.annecurrie.com/"
 ---
 
-As we have raised in every part of this series (because it’s important!), at the end of 2021, AWS added [<u>sustainability</u>](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [<u>well-architected pillars</u>](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their* “key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.” *A year earlier, Azure had posted their [<u>sustainable architecture guide</u>](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. Their cloud recommendations are covered in a [<u>new whitepaper on sustainable architecture for the cloud</u>](https://docs.google.com/document/d/1Lym55mXRVO8pldUfrcpRqFKvE9biX93jhz-HLi_c99Y/edit?usp=sharing).
+As we have raised in every part of this series (because it’s important!), at the end of 2021, AWS added [sustainability](https://aws.amazon.com/blogs/aws/sustainability-pillar-well-architected-framework/) to the [well-architected pillars](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) that define their* “key concepts, design principles, and architectural best practices for designing and running workloads in the cloud.” *A year earlier, Azure had posted their [sustainable architecture guide](https://docs.microsoft.com/en-gb/learn/modules/sustainable-software-engineering-overview/1-introduction), written by our own GSF chair, Asim Hussain. Their cloud recommendations are covered in a [new whitepaper on sustainable architecture for the cloud](https://docs.google.com/document/d/1Lym55mXRVO8pldUfrcpRqFKvE9biX93jhz-HLi_c99Y/edit?usp=sharing).
 
 ## Demand Destruction
 
 The hyperclouds haven’t started shouting about this because they are a bunch of social justice warriors. They’re doing it because sustainable power is going to revolutionise the pricing of electricity. We are going to have to work hard to accommodate those changes, and we need to start now.
 
-In the [<u>first article in this series</u>](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud), we outlined the four main approaches to tech sustainability that we have to take on board:
+In the [first article in this series](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud), we outlined the four main approaches to tech sustainability that we have to take on board:
 
 1. Operational efficiency: improving how software is run.
 2. Architecting for minimal carbon: improving how software is designed.
@@ -50,13 +50,13 @@ As time goes on, Moore’s law and other forms of progress mean that devices get
 
 Apps take advantage of this progress, and that is fine and unavoidable. However, It is vital that those apps also continue to work on older phones without the features, so they do not contribute to avoidable obsolescence by causing people to throw those old phones away.
 
-When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible. None of us want users to bin working kit. Phone OSes do provide some [<u>information</u>](https://developer.android.com/training/search/backward-compat) and tooling to help applications be backwards compatible, but it usually requires action from application developers. 
+When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible. None of us want users to bin working kit. Phone OSes do provide some [information](https://developer.android.com/training/search/backward-compat) and tooling to help applications be backwards compatible, but it usually requires action from application developers. 
 
 > *When developers create new software, it is imperative that it is backwards compatible with existing devices as far as possible. *
 
-At the moment, the best company for prolonging device lifespans is probably Apple. The new iOS 15 [<u>supports</u>](https://www.computerworld.com/article/3621780/wwdc-12-small-but-important-improvements-you-may-have-missed.html) phones that are up to six years old. However, all providers need to improve, even Apple. Life expectancies must be much longer than six years. 
+At the moment, the best company for prolonging device lifespans is probably Apple. The new iOS 15 [supports](https://www.computerworld.com/article/3621780/wwdc-12-small-but-important-improvements-you-may-have-missed.html) phones that are up to six years old. However, all providers need to improve, even Apple. Life expectancies must be much longer than six years. 
 
-All current phones are beaten on longevity by games consoles. The XBox One was designed to last ten years, and even after the release of the newest series that appears to be [<u>holding up</u>](https://phenixxgaming.com/2020/07/22/how-long-will-the-xbox-one-last-into-next-gen/). Unlike phones, the business model of games consoles means they are not planned to be so disposable. This demonstrates that devices can last longer if manufacturers choose it, and at least ten years should be our expectation for all new devices from now on.
+All current phones are beaten on longevity by games consoles. The XBox One was designed to last ten years, and even after the release of the newest series that appears to be [holding up](https://phenixxgaming.com/2020/07/22/how-long-will-the-xbox-one-last-into-next-gen/). Unlike phones, the business model of games consoles means they are not planned to be so disposable. This demonstrates that devices can last longer if manufacturers choose it, and at least ten years should be our expectation for all new devices from now on.
 
 ## Conclusion
 
@@ -64,8 +64,8 @@ When you write an application, you take on responsibility for the devices that a
 
 ## Read previous articles by Anne Currie in the Sustainable Systems Series
 
-[<u>Sustainable Tech Choices for Cloud</u>](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud)
+[Sustainable Tech Choices for Cloud](https://greensoftware.foundation/articles/sustainable-tech-choices-for-cloud)
 
-[<u>Sustainable Systems: Operational Choices in Sustainable Architecture</u>](https://greensoftware.foundation/articles/sustainable-systems-operational-choices-in-sustainable-architecture)
+[Sustainable Systems: Operational Choices in Sustainable Architecture](https://greensoftware.foundation/articles/sustainable-systems-operational-choices-in-sustainable-architecture)
 
-[<u>Sustainable Systems: Architectural Choices and Sustainability</u>](https://greensoftware.foundation/articles/sustainable-systems-architectural-choices-and-sustainability)
+[Sustainable Systems: Architectural Choices and Sustainability](https://greensoftware.foundation/articles/sustainable-systems-architectural-choices-and-sustainability)

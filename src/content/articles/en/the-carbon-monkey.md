@@ -19,7 +19,7 @@ originBlogName: "Microsoft Developer Blogs"
 publishedOriginUrl: "https://devblogs.microsoft.com/sustainable-software/the-carbon-monkey/"
 ---
 
-According to [<u>Principles of chaos engineering</u>](https://principlesofchaos.org/), Chaos Engineering is the discipline of experimenting on a system in order to build confidence in that system’s capability to withstand turbulent conditions in production. I have followed this discipline through the years finding it fascinating, especially when applied to large scale applications and systems. As the site explains:
+According to [Principles of chaos engineering](https://principlesofchaos.org/), Chaos Engineering is the discipline of experimenting on a system in order to build confidence in that system’s capability to withstand turbulent conditions in production. I have followed this discipline through the years finding it fascinating, especially when applied to large scale applications and systems. As the site explains:
 
 > *“Even when all of the individual services in a distributed system are functioning properly, the interactions between those services can cause unpredictable outcomes. Unpredictable outcomes, compounded by rare but disruptive real-world events that affect production environments, make these distributed systems inherently chaotic.*
 
@@ -27,19 +27,17 @@ According to [<u>Principles of chaos engineering</u>](https://principlesofchaos.
 
 > *We need a way to manage the chaos inherent in these systems, take advantage of increasing flexibility and velocity, and have confidence in our production deployments despite the complexity that they represent. An empirical, systems-based approach addresses the chaos in distributed systems at scale and builds confidence in the ability of those systems to withstand realistic conditions. We learn about the behavior of a distributed system by observing it during a controlled experiment. We call this Chaos Engineering.”*
 
-### **Build a Hypothesis around Steady State Behavior**
-
+### Build a Hypothesis around Steady State Behavior
 Let’s start with the first step: a steady state behavior is the condition our application should aspire to be in. If we translate this principle into a sustainable one, this becomes the most beautiful and efficient state of an application: *one where no energy is wasted, and efficiency and performance is at its best*.
 
 <figure>
 <img src="/assets/articles/the-carbon-monkey/green-software-foundation-carbon-monkey-illustration-paola-annis2.png" alt="green-software-foundation-carbon-monkey-illustration-paola-annis2" />
-<figcaption><em>Call for more "carbon monkeys"</em></figcaption>
+<figcaption>*Call for more "carbon monkeys"*</figcaption>
 </figure>
 
 The most difficult part is how to measure and set this initial state. My colleagues have shared numerous ideas on the [Sustainable Software Engineering blog](https://aka.ms/sse/blog) that might help you jumpstart your measurement. However, I feel that at some point, this will have to reach a standardized and widely accepted form where we have a “carbon limit” where an application is considered inefficient and not sustainable.
 
-### **Vary Real-world Events**
-
+### Vary Real-world Events
 This is the principle that represents how close chaos engineering and sustainable software engineering are. There is no steady and predictable flow of energy coming from the same renewable source. From the challenging big picture of using solar, wind or hydro energy down to when we plug our device into the outlet, we still have limited ways to retrieve exactly how the energy that is powering the device is produced in that exact moment in time. Doing so precisely requires considering things like seasonality, time of day, peak hours as well as weather conditions that trigger renewable power supplies usage. The variables around this concept are too many!
 
 Imagine now that your application is running on a virtual datacenter where you have even less information of its carbon impact. We still need to start somewhere, though, and set an amount of carbon usage for the application. This will be useful to measure its increase and decrease to drive efficiency.

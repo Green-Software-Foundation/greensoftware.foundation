@@ -22,7 +22,7 @@ Green software provides the framework to minimize the carbon footprint of these 
 
 ## Why did you join GSF?
 
-While pursuing the development of decentralized technology, we recognize the importance of aligning our efforts with established standards like those offered by the GSF, including the[ <u>Carbon Aware SDK</u>](https://greensoftware.foundation/projects/#:~:text=Carbon%20Aware%20SDK,it%20does%20not.) and the[ <u>Software Carbon Intensity (SCI)</u>](https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status) Specification. 
+While pursuing the development of decentralized technology, we recognize the importance of aligning our efforts with established standards like those offered by the GSF, including the[ Carbon Aware SDK](https://greensoftware.foundation/projects/#:~:text=Carbon%20Aware%20SDK,it%20does%20not.) and the[ Software Carbon Intensity (SCI)](https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status) Specification. 
 
 Joining the GSF provides an opportunity to leverage and contribute to its initiatives, collaborate with industry leaders in developing and promoting best practices for sustainability in blockchain and decentralized systems, and actively contribute to advancing green software.
 

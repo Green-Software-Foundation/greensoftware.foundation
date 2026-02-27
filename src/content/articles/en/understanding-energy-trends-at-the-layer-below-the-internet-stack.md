@@ -71,7 +71,7 @@ We can use these terms to help understand how the economics of electricity are c
 
 <figure>
 <img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-coal-and-fossil-gas.png" alt="Comparing-marginal-costs-of-nuclear-coal-and-fossil-gas" />
-<figcaption><em>Comparing marginal costs of nuclear, coal and fossil gas (not to scale)</em></figcaption>
+<figcaption>*Comparing marginal costs of nuclear, coal and fossil gas (not to scale)*</figcaption>
 </figure>
 
 There are different properties for different sources of power on the grid. For example, when there isn’t much load on the grid, nuclear generation might sell into the grid ‘first’. Let’s look at why.
@@ -106,7 +106,7 @@ Over the last 10 years we’ve seen the price of solar absolutely plummet. It is
 
 <figure>
 <img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewable-sources-in-the-mix.png" alt="Comparing-marginal-costs-of-nuclear-and-fossil-fuels-with renewable-sources-in-the-mix" />
-<figcaption><em>Comparing marginal costs of nuclear and fossil fuels with renewable sources in the mix (not to scale)</em></figcaption>
+<figcaption>*Comparing marginal costs of nuclear and fossil fuels with renewable sources in the mix (not to scale)*</figcaption>
 </figure>
 
 Renewables, as you might guess, don’t rely on fuel to make energy. Once you’ve set them up, they harvest energy from the environment around them. Essentially, the fuel for renewables is *free*.
@@ -125,7 +125,7 @@ This means that sometimes demand can go so low that it goes *negative.**** ***Th
 
 <figure>
 <img src="/assets/articles/understanding-energy-trends-at-the-layer-below-the-internet-stack/illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and-storage-in-the-mix.png" alt="Illustation-comparing-marginal-costs-of-nuclear-and-fossil-fuels-with-renewables-and storage-in-the-mix " />
-<figcaption><em>Comparing marginal costs of nuclear and fossil fuels with renewables and batteries in the mix (not to scale)</em></figcaption>
+<figcaption>*Comparing marginal costs of nuclear and fossil fuels with renewables and batteries in the mix (not to scale)*</figcaption>
 </figure>
 
 Renewables and batteries have effectively created a pincer movement on fossil fuels.
@@ -161,8 +161,7 @@ We also introduced how renewables are changing the economics of generating power
 
 This is one of the reasons we think a fossil free internet by 2030 is both plausible and desirable. There is an obvious moral case for avoiding needless harm, but there is also a very strong economic one.
 
-### **Using these ideas in future posts**
-
+### Using these ideas in future posts
 In a future post, we’ll show how these same ideas can be used to help us think about a demand curve for compute.
 
 Similar to how different forms of electricity generation can be combined to meet demand on the grid efficiently and sustainably, in a kind of demand curve, we think the same is possible at the next layer up the stack to match the kind of compute services you use to the workloads they’re used for.

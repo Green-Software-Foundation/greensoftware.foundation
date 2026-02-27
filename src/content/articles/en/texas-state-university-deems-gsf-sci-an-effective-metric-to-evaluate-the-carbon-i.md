@@ -12,7 +12,7 @@ Foundation models are large software applications for artificial intelligence (A
 
 ## Explosion of AI applications in the past decade
 
-Added capabilities have led to an exponential increase in model size and complexity in the past ten years. Increased size and complexity automatically bring more computing. [<u>OpenAI</u>](https://openai.com/blog/ai-and-compute/) reported that the required computing to train state-of-the-art deep learning models had increased 300,000-fold since 2012. For example, training the GPT-3 model consumed approximately 190,000 kWh of energy and produced 85,000 kg of CO2.
+Added capabilities have led to an exponential increase in model size and complexity in the past ten years. Increased size and complexity automatically bring more computing. [OpenAI](https://openai.com/blog/ai-and-compute/) reported that the required computing to train state-of-the-art deep learning models had increased 300,000-fold since 2012. For example, training the GPT-3 model consumed approximately 190,000 kWh of energy and produced 85,000 kg of CO2.
 
 But what about after the training phase, when a model is deployed? This is where we have been facing an information gap. Previous studies had primarily focussed on energy use during the training phase of the model. The TSU study is bridging the gap by taking on the inference stage, where the model is put into action on live data to produce actionable output.
 
@@ -55,4 +55,4 @@ The study concludes that:
 
 You can find a full copy of the final report here:
 
-[<u>https://github.com/Green-Software-Foundation/eval_sci_of_foundation_models/blob/main/Report/Final_Report.pdf</u>](https://github.com/Green-Software-Foundation/eval_sci_of_foundation_models/blob/main/Report/Final_Report.pdf)
+[https://github.com/Green-Software-Foundation/eval_sci_of_foundation_models/blob/main/Report/Final_Report.pdf](https://github.com/Green-Software-Foundation/eval_sci_of_foundation_models/blob/main/Report/Final_Report.pdf)

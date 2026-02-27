@@ -16,7 +16,7 @@ Together with Ernest, a Reader in Digital Education at Manchester Met, they’ve
 
 McrMet celebrated its 200th anniversary this year, marking two centuries of driving progress through the power of education and research.
 
-We aim to be a sustainability leader in the education sector. We are proud of our achievements, including the second place in the 1st Class University in [<u>the People and Planet University League 2023/24</u>](https://peopleandplanet.org/university-league) and runner-up in the Sustainable University of the Year in The Times and Sunday Times Good University Guide 2025 ranking. 
+We aim to be a sustainability leader in the education sector. We are proud of our achievements, including the second place in the 1st Class University in [the People and Planet University League 2023/24](https://peopleandplanet.org/university-league) and runner-up in the Sustainable University of the Year in The Times and Sunday Times Good University Guide 2025 ranking. 
 
 ## How important is software sustainability to McrMet?
 
@@ -47,5 +47,5 @@ In our work, we place a strong focus on researching how best to support students
 If you would like to discuss and collaborate, drop us a line:
 
 
-Michael Bane: [<u>https://helward.mmu.ac.uk/STAFF/M.Bane/</u>](https://helward.mmu.ac.uk/STAFF/M.Bane/)  [<u>https://greencompute.uk/</u>](https://greencompute.uk/)
-Ernest Edifor: [<u>https://www.mmu.ac.uk/staff/profile/dr-ernest-edem-edifor</u>](https://www.mmu.ac.uk/staff/profile/dr-ernest-edem-edifor)
+Michael Bane: [https://helward.mmu.ac.uk/STAFF/M.Bane/](https://helward.mmu.ac.uk/STAFF/M.Bane/)  [https://greencompute.uk/](https://greencompute.uk/)
+Ernest Edifor: [https://www.mmu.ac.uk/staff/profile/dr-ernest-edem-edifor](https://www.mmu.ac.uk/staff/profile/dr-ernest-edem-edifor)

@@ -53,7 +53,7 @@ The core planning team meets on a bi-weekly basis and regional leads meet on the
 
 ## How can someone get involved?
 
-Email us! You can email us ([<u>Jenny</u>](mailto:jenny.morgan@microsoft.com) or [<u>Tammy</u>](mailto:tammy.mcclellan@microsoft.com)) to get connected and contribute to our GSF Global Summit and other events that follow.
+Email us! You can email us ([Jenny](mailto:jenny.morgan@microsoft.com) or [Tammy](mailto:tammy.mcclellan@microsoft.com)) to get connected and contribute to our GSF Global Summit and other events that follow.
 
 ## Is it only GSF members who can contribute? Is there a path for non member participation?
 

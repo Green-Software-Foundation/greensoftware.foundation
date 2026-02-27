@@ -6,7 +6,7 @@ teaserText: "A spotlight on how our members are decarbonizing software with the 
 mainImage: "/assets/articles/building-green-software-through-standards-and-collaboration/main.png"
 ---
 
-This year, we hit a big milestone in green software. The Software Carbon Intensity (SCI) Specification became an [<u>**ISO Standard**</u>](https://www.iso.org/standard/86612.html), and many organizations, both big and small, around the world have started using the [<u>**Carbon Aware SDK**</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk). This toolkit helps software run more when electricity is clean and less when it's dirty. 
+This year, we hit a big milestone in green software. The Software Carbon Intensity (SCI) Specification became an [**ISO Standard**](https://www.iso.org/standard/86612.html), and many organizations, both big and small, around the world have started using the [**Carbon Aware SDK**](https://github.com/Green-Software-Foundation/carbon-aware-sdk). This toolkit helps software run more when electricity is clean and less when it's dirty. 
 
 Earlier this month, representatives from CAST, NTT DATA, and UBS shared real-world examples and practical tools that any organization can use to reduce its software emissions and lay a solid foundation for a greener digital future.
 
@@ -16,7 +16,7 @@ Let's dive into key insights shared during the event.
 
 Figuring out where emissions come from and measuring a company's environmental impact, both inside and out, is a big challenge for all sectors. This is why the topic of software measurement has taken center stage.
 
-Pindy Bhullar, ESG Technology and Sustainable Technology Lead at UBS, started the discussion by sharing a step-by-step process on how UBS applied [<u>the SCI Specification</u>](https://sci.greensoftware.foundation/),  outlining three key stages of obtaining an SCI score: 
+Pindy Bhullar, ESG Technology and Sustainable Technology Lead at UBS, started the discussion by sharing a step-by-step process on how UBS applied [the SCI Specification](https://sci.greensoftware.foundation/),  outlining three key stages of obtaining an SCI score: 
 
 1. Understanding the boundaries of software. 
 2. Defining what is the functional unit (R) to describe how the application scales up. 
@@ -36,7 +36,7 @@ Starting next year, the CSRD will require sustainability reports to undergo an e
 
 Depending on the organization's efficiency level, Massimo shared that between 67% and 93% of emissions stem from applications only, making computation a crucial part of reporting. 
 
-The introduction of the SCI Specification allowed CAST to understand the critical GHG subset that needs to be addressed in the reporting. As the next step, CAST and Autostrade used the [<u>Automated Source Code Resource Sustainability Measure</u>](https://www.omg.org/spec/ASCRSM/1.0/Beta1/About-ASCRSM) (ASCRSM) standard from OMG to measure the sustainability level of each application by identifying common weak points that affect the use of energy and other resources.
+The introduction of the SCI Specification allowed CAST to understand the critical GHG subset that needs to be addressed in the reporting. As the next step, CAST and Autostrade used the [Automated Source Code Resource Sustainability Measure](https://www.omg.org/spec/ASCRSM/1.0/Beta1/About-ASCRSM) (ASCRSM) standard from OMG to measure the sustainability level of each application by identifying common weak points that affect the use of energy and other resources.
 
 Using both standards was crucial for setting emission targets for each asset. It helped CAST develop a transition plan based on a clear understanding of the resources and actions required to reduce its greenhouse gasses. In 2024, using the calculation, Autostrade targeted 60 applications and obtained, on average, 15.1% of CO2 saved per application. 
 
@@ -52,15 +52,15 @@ For instance, NTT DATA Italy teamed up with their client, Intesa San Paolo (ISP)
 
 With this dashboard, users can easily access emissions data for different periods and filter the data by services, offices, application, and environments. It shows real-time values for the current SCI score, for CO2e emissions in kilograms and a percentage breakdown of emissions by resource usage. Plus, it highlights areas where resources consume and produce the most emissions, allowing for targeted optimization efforts.
 
-Measuring an SCI score has been key in identifying and prioritizing actions to reduce carbon footprint and optimize software and hardware usage. A detailed description of how NTT DATA and ISP worked together to understand, measure, and reduce energy consumption and emissions of the bank’s complex IT system can be found [<u>here.</u>](https://greensoftware.foundation/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software) 
+Measuring an SCI score has been key in identifying and prioritizing actions to reduce carbon footprint and optimize software and hardware usage. A detailed description of how NTT DATA and ISP worked together to understand, measure, and reduce energy consumption and emissions of the bank’s complex IT system can be found [here.](https://greensoftware.foundation/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software) 
 
 Gadhu also shared stories of how teams in Japan and Germany contributed to developing green software projects. 
 
 Leveraging the Carbon Aware SDK and working closely with CNCF’s Kepler project for monitoring capabilities, NTT DATA Japan built the Carbon Aware Kubernetes scheduler. This tool allows users to run workloads in the greenest available locations with the lowest carbon footprint. 
 
-Further west, NTT DATA Germany worked with the [<u>**Green Software Patterns**</u>](https://patterns.greensoftware.foundation/) project, a repository of patterns proven to reduce your software emissions, to build an accelerator that allows testing of each pattern before and after implementation to calculate the SCI value of the application. 
+Further west, NTT DATA Germany worked with the [**Green Software Patterns**](https://patterns.greensoftware.foundation/) project, a repository of patterns proven to reduce your software emissions, to build an accelerator that allows testing of each pattern before and after implementation to calculate the SCI value of the application. 
 
-At UBS, the Sustainable Technology Guild, an internal group at UBS formed once UBS became a member of the GSF, has been helping the firm cut emissions by sharing best practices and developing practical tools. Pindy also raised the [<u>**Transforming Organizations for Sustainable Software**</u>](https://github.com/Green-Software-Foundation/toss) (TOSS) project within Standards WG. The project focuses on how to implement patterns and principles within the organizations. The project provides support in reaching net-zero targets by developing a framework that outlines the approach and methodology for organizations to embed, transform, and utilize software emissions data. 
+At UBS, the Sustainable Technology Guild, an internal group at UBS formed once UBS became a member of the GSF, has been helping the firm cut emissions by sharing best practices and developing practical tools. Pindy also raised the [**Transforming Organizations for Sustainable Software**](https://github.com/Green-Software-Foundation/toss) (TOSS) project within Standards WG. The project focuses on how to implement patterns and principles within the organizations. The project provides support in reaching net-zero targets by developing a framework that outlines the approach and methodology for organizations to embed, transform, and utilize software emissions data. 
 
 ## Shaping the Future of Green Software
 

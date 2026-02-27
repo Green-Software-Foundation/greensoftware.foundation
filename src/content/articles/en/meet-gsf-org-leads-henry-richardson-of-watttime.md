@@ -23,7 +23,7 @@ authors:
 
 ## First, tell us about WattTime and the association with the Green Software Foundation (GSF).
 
-[<u>WattTime</u>](https://www.watttime.org/) is an environmental tech nonprofit that offers technology solutions that make it easy for anyone to achieve emissions reductions without compromising cost, comfort, and function. We develop data-driven tools and policies that increase environmental and social good, including[ <u>Automated Emissions Reduction</u>](https://www.watttime.org/solutions/automated-emissions-reduction-aer/) (AER) and[ <u>emissionality</u>](https://www.watttime.org/solutions/renewable-energy-siting-emissionality/). WattTime is also the convening member and cofounder of the global[ <u>Climate TRACE</u>](https://climatetrace.org/) coalition, which is collecting and sharing global greenhouse gas emissions data with unprecedented detail, speed, and transparency.
+[WattTime](https://www.watttime.org/) is an environmental tech nonprofit that offers technology solutions that make it easy for anyone to achieve emissions reductions without compromising cost, comfort, and function. We develop data-driven tools and policies that increase environmental and social good, including[ Automated Emissions Reduction](https://www.watttime.org/solutions/automated-emissions-reduction-aer/) (AER) and[ emissionality](https://www.watttime.org/solutions/renewable-energy-siting-emissionality/). WattTime is also the convening member and cofounder of the global[ Climate TRACE](https://climatetrace.org/) coalition, which is collecting and sharing global greenhouse gas emissions data with unprecedented detail, speed, and transparency.
 
 ## Tell us about your career path, your interest in green software and your journey to GSF. 
 
@@ -35,7 +35,7 @@ Working at WattTime, I’m now supporting real change for the grid. We’re focu
 
 ## What does WattTime expect to achieve by working with the GSF and in green software in general? 
 
-Through our work with the Green Software Foundation, our goal is to drive emissions reductions in yet another important sector that touches so many aspects of our lives—software. We believe people and companies should be empowered with the data they need to make the best decisions for the planet, and by supporting the development of the [<u>SCI specification</u>](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity), we’re equipping developers with critical tools to do just that.  
+Through our work with the Green Software Foundation, our goal is to drive emissions reductions in yet another important sector that touches so many aspects of our lives—software. We believe people and companies should be empowered with the data they need to make the best decisions for the planet, and by supporting the development of the [SCI specification](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity), we’re equipping developers with critical tools to do just that.  
 
 The Green Software Foundation has identified three key insights about software that WattTime is eager to support: 
 
@@ -45,20 +45,20 @@ The Green Software Foundation has identified three key insights about software t
 
 In our work with the GSF, WattTime is primarily focused on making software smarter by changing the time and location of its operation to optimise for emissions reductions. In addition, we hope to help identify new opportunities for software to reduce global emissions, create tools to help developers have a more positive climate impact, and make the emissions impact of software a key consideration in the development process.
 
-The GSF has taken a strong position on these efforts by [<u>creating the SCI specification</u>](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity) and associated tools. This new forum creates a solid foundation to usher in the change we hope to see. 
+The GSF has taken a strong position on these efforts by [creating the SCI specification](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity) and associated tools. This new forum creates a solid foundation to usher in the change we hope to see. 
 
 ## What obstacles do you see to popularising  green software? How do you think we can overcome them? 
 
 A general lack of awareness around the emissions impacts linked to software is definitely a problem at this stage. Making that connection clear to developers through GSF’s work is an important step to correct that. We need developers to understand which decisions they can make to reduce the emissions intensity of their software and give them the tools to do something about it.
 
-Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [<u>Greenhouse Gas Protocol</u>](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organisations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
+Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [Greenhouse Gas Protocol](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organisations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
 
 Developers need to look beyond their organisations alone to become more aware of the many global impacts their software may have. The new SCI specification makes this so much easier than it has been before. 
 
 ## Any other matters you would like to share with us? 
 
-WattTime is always looking for creative ways to give people more choice in the energy they use. Historically, WattTime has focused on [<u>Automated Emissions Reduction (AER) technology</u>](https://www.watttime.org/solutions/automated-emissions-reduction-aer/), which makes devices “smarter” and allows users to opt for clean energy without a second thought. 
+WattTime is always looking for creative ways to give people more choice in the energy they use. Historically, WattTime has focused on [Automated Emissions Reduction (AER) technology](https://www.watttime.org/solutions/automated-emissions-reduction-aer/), which makes devices “smarter” and allows users to opt for clean energy without a second thought. 
 
-We’re also working to leverage the concept of [<u>“emissionality,”</u>](https://www.watttime.org/solutions/renewable-energy-siting-emissionality/) helping corporations and others choose renewable energy investments in locations that will allow for greater emissions avoidance. 
+We’re also working to leverage the concept of [“emissionality,”](https://www.watttime.org/solutions/renewable-energy-siting-emissionality/) helping corporations and others choose renewable energy investments in locations that will allow for greater emissions avoidance. 
 
-Our work with the GSF is allowing us to expand to other means of reducing global emissions. And as we expand our work, we’re also expanding our team. If this work sounds as intriguing as it did for me, WattTime is currently hiring for several software engineers positions. I encourage anyone who wants to support climate action and global decarbonization goals to take a look at the [<u>open roles here</u>](https://watttime.hire.trakstar.com/?).
+Our work with the GSF is allowing us to expand to other means of reducing global emissions. And as we expand our work, we’re also expanding our team. If this work sounds as intriguing as it did for me, WattTime is currently hiring for several software engineers positions. I encourage anyone who wants to support climate action and global decarbonization goals to take a look at the [open roles here](https://watttime.hire.trakstar.com/?).

@@ -49,6 +49,6 @@ Right now, we have a lot of tools to help us analyze memory usage, code duplicat
 
  Your readers may want to check out these links to VMware’s relevant work in the sustainability space: 
 
-- [<u>*The Path Toward Sustainable 6G*</u>](https://octo.vmware.com/the-path-toward-sustainable-6g/)
-- [<u>*Pathways to Sustainable Clouds*</u>](https://octo.vmware.com/pathways-to-sustainable-clouds/)
-- [<u>*Accelerating Decarbonization of the World’s Digital Infrastructure*</u>](https://octo.vmware.com/accelerating-decarbonization-of-world-digital-infrastructure/)
+- [*The Path Toward Sustainable 6G*](https://octo.vmware.com/the-path-toward-sustainable-6g/)
+- [*Pathways to Sustainable Clouds*](https://octo.vmware.com/pathways-to-sustainable-clouds/)
+- [*Accelerating Decarbonization of the World’s Digital Infrastructure*](https://octo.vmware.com/accelerating-decarbonization-of-world-digital-infrastructure/)

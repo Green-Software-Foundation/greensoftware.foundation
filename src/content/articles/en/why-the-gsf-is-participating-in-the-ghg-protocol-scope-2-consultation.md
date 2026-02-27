@@ -44,6 +44,6 @@ We believe carbon accounting should help **practitioners take action and make de
 
 **The deadline to submit feedback has been extended to January 31, 2026.**
 
-We encourage GSF members to review the consultation materials and consider participating: [<u>https://ghgprotocol.org/ghg-protocol-public-consultations</u>](https://ghgprotocol.org/ghg-protocol-public-consultations)
+We encourage GSF members to review the consultation materials and consider participating: [https://ghgprotocol.org/ghg-protocol-public-consultations](https://ghgprotocol.org/ghg-protocol-public-consultations)
 
 Your contribution helps influence standards that advance industry decarbonization efforts. 

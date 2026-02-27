@@ -28,8 +28,7 @@ The biggest obstacle to green software is the lack of consciousness of the impac
 
 ---
 
-## **Check out what our other Steering Committee members say about green software**
-
+## Check out what our other Steering Committee members say about green software
 [Dan Lewis-Toakley](https://greensoftware.foundation/articles/meet-a-steering-committee-member-dan-lewis-toakley) of Thougtworks 
 
 [Elise Zelechowski](https://greensoftware.foundation/articles/meet-our-steering-committee-elise-zelechowski) of Thoughtworks 

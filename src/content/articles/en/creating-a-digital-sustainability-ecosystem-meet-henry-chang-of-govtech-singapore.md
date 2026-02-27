@@ -8,8 +8,7 @@ mainImage: "/assets/articles/creating-a-digital-sustainability-ecosystem-meet-he
 
 GovTech established its Sustainability Framework and Strategy in 2023 to support the nation’s ambition in becoming a net-zero government around 2045. One key initiative led by GovTech is the consolidation of standalone data centers and the migration of government systems to the cloud. 70% of the eligible government workload will be migrated to the cloud by 2023, bringing about sizable reductions in the Singapore government’s digital carbon footprint.
 
-## ***Can you provide an overview of GovTech’s activities, and your responsibilities as the Deputy Chief Executive and Chairman of the Sustainability committee?***
-
+## *Can you provide an overview of GovTech’s activities, and your responsibilities as the Deputy Chief Executive and Chairman of the Sustainability committee?*
 GovTech drives Singapore’s public sector digital transformation by harnessing technology and data to deliver user-centric services to make a difference in the everyday lives of people in Singapore. Our work can be broadly categorized into four areas:
 
 1.     **Products and engineering** – GovTech manages the Whole-of-Government’s infrastructure and network, and develops digital government products and services for citizens, businesses, and government.
@@ -24,8 +23,7 @@ In my role, I oversee the work for Services, Governance, and Cybersecurity. As c
 
 GovTech also leads the ICT and smart systems practice for Singapore’s public sector. There is growing appreciation amongst our board and senior leadership members that driving sustainable digitalization practices and outcomes for the Singapore government will necessarily be an important area of focus for GovTech moving forward.
 
-## ***What are some of GovTech’s priorities in the area of sustainability?***
-
+## *What are some of GovTech’s priorities in the area of sustainability?*
 We are taking a three-pronged strategy:
 
 i.               Putting in place programs that ensure we operate as a sustainable organization and workforce
@@ -44,8 +42,7 @@ Some examples of our priorities under this three-pronged approach are:
 
 ·       Implementing tools for measuring and analyzing our software and cloud carbon footprint measurements to optimize workloads for lower emissions
 
-## ***How can green software help GovTech in achieving its sustainability goals?                         ***
-
+## *How can green software help GovTech in achieving its sustainability goals?                         *
 Software is a critical enabler of our Smart Nation and Digital Government efforts. While we develop software that enhances Singapore’s liveability, we recognize the need to develop solutions that do not harm the very city that we are working tirelessly to empower.
 
 Today, GovTech operates the government’s digital infrastructure and networks, including government data centers and cloud platforms. We also own and run many products enjoyed by citizens, businesses, and government agencies, and the Singapore Government Tech Stack (SG Tech Stack), a collection of component technologies used by government agencies to deliver digital services seamlessly. Where possible, we adopt the “*Build Once, Use Often*” approach to use standard and reusable components that reduce our digital carbon footprint and result in cost-savings.
@@ -56,8 +53,7 @@ Of course, we continue to push for migration to greener hosting options – firs
 
 Aside from greening our software, GovTech also sees technology as providing tremendous opportunities for generating sustainable outcomes. For example, GovTech has developed the [Open Digital Platform](https://www.developer.tech.gov.sg/products/categories/sensor-platforms-and-internet-of-things/open-digital-platform/overview.html) to power Singapore’s first Digital District by integrating various smart city solutions and creating digital twins for more innovative district planning. Leveraging the potential of the ODP, the district planners expect to progressively reduce energy and water consumption by as much as 30% compared to the national average.
 
-## ***What obstacles do you foresee in implementing green software in government operations, and what do you think can help GovTech overcome these challenges?***
-
+## *What obstacles do you foresee in implementing green software in government operations, and what do you think can help GovTech overcome these challenges?*
 There are three key challenges:
 
 The first challenge is incorporating and codifying environmental sustainability into our operating DNA, such that it becomes part of our initial considerations rather than an afterthought. This will take time, because it will involve breaking existing processes, replacing old policies, and re-engineering business models to align costs and benefits.
@@ -66,12 +62,11 @@ The second challenge is the lack of awareness and understanding of green softwar
 
 The third challenge lies in the lack of standards and data for quantifying the exact environmental impact of digital operations to help us establish the appropriate benchmarks and performance metrics to develop the right interventions. We are exchanging ideas and learnings with other like-minded international government agencies and industry partners and plan to form a government digital alliance to tackle this challenge holistically.
 
-## ***How does GovTech see the future of green software, and what is GovTech’s view on creating the right ecosystem to support this area of work?***
-
+## *How does GovTech see the future of green software, and what is GovTech’s view on creating the right ecosystem to support this area of work?*
 I am observing a solid push to advance and acquire green software capabilities globally, predominantly within the technology industry. With mounting pressures for organizations to be more efficient and sustainable in their operations, I am hopeful green software will become mainstream across organizations in the near future. My colleagues and I are already seeing such mindset shift in our public sector agencies.
 
 The right ecosystem will consist of strong internal and external partnerships. At GovTech, we are actively working towards fostering a culture of sustainability where every aspect of our work integrates sustainability considerations. We strongly believe that regardless of their designations at work, all GovTech employees play an essential role in enabling our sustainability goals.
 
 Externally, we are working to build partnerships with governments, NGOs, industry players, academia, and other stakeholders to drive innovation and collaboration in the development of green software. Through our membership with the GSF, we hope to meet like-minded practitioners and explore tools and methods that will contribute to lowering the software carbon intensity of our products and services.
 
-![](/assets/articles/creating-a-digital-sustainability-ecosystem-meet-henry-chang-of-govtech-singapore/image.png)
+![Green Software Foundation and GovTech Singapore partnership logos on illustrated background](/assets/articles/creating-a-digital-sustainability-ecosystem-meet-henry-chang-of-govtech-singapore/image.png)

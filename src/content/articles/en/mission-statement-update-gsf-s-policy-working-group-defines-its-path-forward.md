@@ -25,7 +25,7 @@ We respond to this need by:
 - Converting complex research into clear frameworks: We transform technical concepts into language policymakers can act on 
 - Facilitating evidence-based dialogue: We connect software practitioners with policymakers to ensure regulations reflect technical reality 
 - Providing technical expertise: We submit consultation responses grounded in measurement data and implementation experience 
-- Tracking emerging policies: Through our [<u>newly ratified Policy Radar</u>](https://greensoftware.foundation/articles/celebrating-the-ratification-of-the-policy-radar), we give members early visibility into regulations that will impact their work 
+- Tracking emerging policies: Through our [newly ratified Policy Radar](https://greensoftware.foundation/articles/celebrating-the-ratification-of-the-policy-radar), we give members early visibility into regulations that will impact their work 
 
 ### What We Don’t Do 
 
@@ -47,6 +47,6 @@ We are working to ensure that green software policies are rooted in technical re
 - Engaging with international initiatives like the European Green Digital Coalition
 - Strengthening strategic partnerships while actively tracking state-level AI regulations across the US 
 
-To help bridge the gap between technical expertise and policy impact, [<u>join GSF</u>](https://greensoftware.foundation/join-us) as a member. 
+To help bridge the gap between technical expertise and policy impact, [join GSF](https://greensoftware.foundation/join-us) as a member. 
 
-Learn more about the work of the [<u>Policy Working Group</u>](https://github.com/Green-Software-Foundation/policy-wg).
+Learn more about the work of the [Policy Working Group](https://github.com/Green-Software-Foundation/policy-wg).

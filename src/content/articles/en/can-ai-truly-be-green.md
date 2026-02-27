@@ -10,7 +10,7 @@ The debate on the topic is dynamic, oscillating between optimism and skepticism.
 
 ## Identifying the main culprit of AI’s environmental footprint
 
-Training of LLMs leaves a considerable carbon footprint. To put it into perspective, training a LLM results in approximately [<u>500 tons of CO2 emissions</u>](https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf), equivalent to the environmental cost of a gas-powered car traversing approximately 2 million kilometers. That’s a significant volume of CO2 from training and inference. 
+Training of LLMs leaves a considerable carbon footprint. To put it into perspective, training a LLM results in approximately [500 tons of CO2 emissions](https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf), equivalent to the environmental cost of a gas-powered car traversing approximately 2 million kilometers. That’s a significant volume of CO2 from training and inference. 
 
 Navveen Balani, Chief Technologist at the Technology Sustainability Innovation Group at Accenture, made sure to emphasize that the environmental impact of AI extends beyond algorithms. Infrastructure supporting AI, including data centers, racks, and cooling systems, contributes to adverse environmental effects, such as generating vast quantities of wastewater. Moreover, hardware utilized in AI systems generates embodied emissions–carbon emissions generated during the production and transportation of materials.
 
@@ -24,7 +24,7 @@ To comprehensively address these issues, Balani shared three pivotal angles from
 
 Advanced AI systems, such as GPT-3 and its successors, have revolutionized various sectors, from language processing to content creation, opening up exciting possibilities. However, the pace of innovation has far outstripped the establishment of comprehensive legal, ethical, and regulatory frameworks. 
 
-Kiesow Cortez, Director of Quantum & AI at Ethicqual and Research Fellow at Stanford University, discussed the importance of software practitioners staying informed about potential upcoming regulations related to environmental considerations in AI because they are coming. For example, the European Union, committed to green and digital transitions, has a proposed [<u>AI Act</u>](https://www.europarl.europa.eu/news/en/headlines/society/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence). 
+Kiesow Cortez, Director of Quantum & AI at Ethicqual and Research Fellow at Stanford University, discussed the importance of software practitioners staying informed about potential upcoming regulations related to environmental considerations in AI because they are coming. For example, the European Union, committed to green and digital transitions, has a proposed [AI Act](https://www.europarl.europa.eu/news/en/headlines/society/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence). 
 
 She went on to share that amendments from the European Parliament include greater emphasis on green goals, some of which are binding requirements. An example of a binding requirement, Kiesow Cortez shared, is the identification, assessment, and mitigation of foreseeable and emergent environmental risks in high-risk AI systems throughout their lifecycle. She noted that the discussed regulations are part of a draft act and proposed amendments that may not be final or enforceable.
 
@@ -73,7 +73,7 @@ Cortez also addressed the rise of new roles, such as Digital Sustainability Offi
 
 ## The Limitations Aren’t Technical
 
-Our moderator, Dawn Nafus, Anthropologist and Senior Research Scientist at Intel Labs, noted that developers, like everyone else, are social beings. This means that in practice, all of the optimizations discussed might or might not be within their power to implement. For example, changing AI architectures may only be within scope if there is a more profound project rethink. Carbon awareness, a key method of decarbonization that pauses or geographically shifts workloads to find the lowest carbon energy available, can hit limitations when developers are facing tight deadlines or if they are geographically limited by where their data or compute needs to be. As [<u>researchers</u>](https://dl.acm.org/doi/pdf/10.1145/3531146.3533234) have noted, it is possible to decarbonize a very short workload by up to 80%. But this only gets us so far. In aggregate, there is a finite number of workloads that can be shifted before we reach capacity in areas with low carbon density. Within organizations, there needs to be better coordination between teams providing the infrastructure, and making decisions about location, and those responsible for software development. This synergy underscores the importance of organizational incentives and creating a broader culture of sustainability.   
+Our moderator, Dawn Nafus, Anthropologist and Senior Research Scientist at Intel Labs, noted that developers, like everyone else, are social beings. This means that in practice, all of the optimizations discussed might or might not be within their power to implement. For example, changing AI architectures may only be within scope if there is a more profound project rethink. Carbon awareness, a key method of decarbonization that pauses or geographically shifts workloads to find the lowest carbon energy available, can hit limitations when developers are facing tight deadlines or if they are geographically limited by where their data or compute needs to be. As [researchers](https://dl.acm.org/doi/pdf/10.1145/3531146.3533234) have noted, it is possible to decarbonize a very short workload by up to 80%. But this only gets us so far. In aggregate, there is a finite number of workloads that can be shifted before we reach capacity in areas with low carbon density. Within organizations, there needs to be better coordination between teams providing the infrastructure, and making decisions about location, and those responsible for software development. This synergy underscores the importance of organizational incentives and creating a broader culture of sustainability.   
 
 ## AI's impact on Net Zero
 
@@ -87,13 +87,13 @@ McClean was more skeptical about the consistent achievement of Green AI but stre
 
 Balani provided practical solutions by highlighting the availability of greener deployment options offered by many cloud providers. For example, Google supplies data on regions powered by carbon-free energy. Additionally, APIs like WattTime and ElectricityMaps allow users to access carbon intensity data based on geographical regions. Developers have provider options and readily available APIs to make informed decisions about where to run their applications, whether considering region shifting or time shifting to reduce the environmental impact.
 
-In line with efforts to promote sustainable app development, the panel highlighted the significance of the [<u>Software Carbon Intensity (SCI) Specification</u>](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/15958033/Standards+SCI), providing developers with a framework for measuring and actively reducing carbon emissions.
+In line with efforts to promote sustainable app development, the panel highlighted the significance of the [Software Carbon Intensity (SCI) Specification](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/15958033/Standards+SCI), providing developers with a framework for measuring and actively reducing carbon emissions.
 
 The SCI Specification presents a standardized approach for measuring carbon emissions. It’s unique because of its focus on reduction, giving developers a practical means to not only report carbon emissions but also to actively reduce them (e.g., by designing energy-efficient architectures).
 
-<u>**View our case studies**</u>
+**View our case studies**
 
-You can watch a recording of the event [<u>**here**</u>](https://www.youtube.com/watch?v=0CX9J3oAipM). 
+You can watch a recording of the event [**here**](https://www.youtube.com/watch?v=0CX9J3oAipM). 
 
 A big thank you to our Moderator, Dawn Nafus and panelists Chris McClean, Dr. Elif Kiesow Cortez and Navveen Balani for their time and efforts. 
 

@@ -12,7 +12,7 @@ We are putting a spotlight on upcoming events that are set to change the way we 
 
 Many of the events listed below feature sessions influenced by the principles, patterns, and tools contributed by the GSF community. These sessions are led by individuals actively involved in GSF or helping to promote our initiatives.
 
-In addition to upcoming events organized by peers, members, and supporters, the GSF is hosting a virtual [<u>Panel on Responsible AI</u>](https://www.meetup.com/gsf-global/events/295596991/) on October 5 and its flagship event, [<u>Decarbonize Software</u>](https://decarb.greensoftware.foundation/), on November 16. We hope you join us! 
+In addition to upcoming events organized by peers, members, and supporters, the GSF is hosting a virtual [Panel on Responsible AI](https://www.meetup.com/gsf-global/events/295596991/) on October 5 and its flagship event, [Decarbonize Software](https://decarb.greensoftware.foundation/), on November 16. We hope you join us! 
 
 | Dates                                                                                                                                                           | Event/Content                                                 | Type           | Location      | Details                                                                                                                                                                                                                                             |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|----------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,5 +38,5 @@ In addition to upcoming events organized by peers, members, and supporters, the 
 | Dec 7-8                                                                                                                                                         | [DevTernity](https://devternity.com/)                                                    | Virtual        | Worldwide     | Turning developers into architects and engineering leaders                                                                                                                                                                                        |
 
 Looking for more information on this year’s GSF Decarbonize Software event?
-[<u>Go here.</u>
+[Go here.
 ](https://decarb.greensoftware.foundation/)

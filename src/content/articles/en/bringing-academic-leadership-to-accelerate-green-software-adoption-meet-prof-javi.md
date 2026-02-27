@@ -10,7 +10,7 @@ Javier is a full professor at the School of Computer Engineering. He is a foundi
 
 ## Can you tell us about Universidad Politécnica de Madrid and your role within the organization?
 
-[<u>Universidad Politécnica de Madrid</u>](http://sustainable-campus-network.org/).) (UPM) is the oldest and largest technical university in Spain, specializing in Computer Science, Engineering, Architecture, Sport Science, and Fashion Design. 
+[Universidad Politécnica de Madrid](http://sustainable-campus-network.org/).) (UPM) is the oldest and largest technical university in Spain, specializing in Computer Science, Engineering, Architecture, Sport Science, and Fashion Design. 
 
 Founded in 1971 by merging classical Spanish Engineering and Architecture Schools, some dating back to the eighteenth century, UPM excels in international rankings. We rank 55th worldwide in Engineering and Technology according to QS rankings, leading Spanish universities in this field.
 
@@ -28,7 +28,7 @@ Our climate strategy, coordinated by the Ecological Transition Commission since 
 
 Our Artificial Intelligence Research Center leads multiple green software and green AI initiatives. We're collaborating with Accenture, a founding GSF member, on Spain's National Green Algorithms Programme. This includes developing standards for measuring algorithm energy consumption and creating a Green Tech quality label.
 
-We've worked with the Spanish Association for Standardisation (UNE) to develop the UNE 0086 Specification for measuring AI systems' energy consumption, carbon footprint, and water consumption, currently in final voting. We're also members of [<u>the Coalition for Sustainable AI</u>](https://www.sustainableaicoalition.org/) and recently participated in ISO's consultation on resource-efficient software. 
+We've worked with the Spanish Association for Standardisation (UNE) to develop the UNE 0086 Specification for measuring AI systems' energy consumption, carbon footprint, and water consumption, currently in final voting. We're also members of [the Coalition for Sustainable AI](https://www.sustainableaicoalition.org/) and recently participated in ISO's consultation on resource-efficient software. 
 
 ## How do you hope to contribute to and benefit from the GSF?
 
@@ -36,6 +36,6 @@ As a technical university with deep connections across academia and industry, we
 
 Through GSF membership, we hope to gain access to insights and methodologies that we can integrate into our research and teaching. Direct connection to the GSF's global network of practitioners and industry leaders can enrich our academic programs and strengthen our position as a sustainability leader in European higher education.
 
-Our immediate contribution includes showcasing GSF at major scientific forums. We're organizing [<u>IEEE COMPSAC 2026</u>](https://ieeecompsac.computer.org/2026/) in Madrid, one of the world's premier software conferences, where we've embedded sustainability into the core program through the "Ethics, Social & Safety Considerations" track.
+Our immediate contribution includes showcasing GSF at major scientific forums. We're organizing [IEEE COMPSAC 2026](https://ieeecompsac.computer.org/2026/) in Madrid, one of the world's premier software conferences, where we've embedded sustainability into the core program through the "Ethics, Social & Safety Considerations" track.
 
 As a partner based in Spain, we also hope to bring a unique national and European perspective to the GSF, helping ensure that GSF's work aligns with European sustainability frameworks. We aim to promote green software tools and standards through our projects and contracts with public bodies, agencies, and companies, supporting practitioners and organizations to better understand and reduce their software's environmental impact.

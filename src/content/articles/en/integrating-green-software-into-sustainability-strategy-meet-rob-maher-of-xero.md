@@ -24,7 +24,7 @@ Our engineering teams have been critical in driving efforts to reduce emissions 
 
 In 2024, we made changes to how we calculate our carbon footprint. We recalibrated our baseline and adjusted our reporting boundary to better reflect how our company has evolved. This resulted in a significant increase in the share of Scope 3 emissions, which now account for 98% of our total footprint. 
 
-As a result, we’ve had to reset our emissions reduction targets to align with the [<u>Science-Based Targets initiative (SBTi)</u>](https://sciencebasedtargets.org/) and [<u>Climate Active</u>](https://www.climateactive.org.au/). 
+As a result, we’ve had to reset our emissions reduction targets to align with the [Science-Based Targets initiative (SBTi)](https://sciencebasedtargets.org/) and [Climate Active](https://www.climateactive.org.au/). 
 
 **Our targets:**
 

@@ -40,8 +40,8 @@ The GSF Meetup network thrives because of its passionate organizers and engaged 
 
 “My advice is to keep reaching out to people who might be interested in the project. So many people have been incredibly helpful,” she adds.
 
-If you want to start or grow a Meetup group,[ <u>our guide</u>](https://wiki.greensoftware.foundation/meetup-organiser-guide?pvs=25) provides everything you need to know to run a successful meetup.
+If you want to start or grow a Meetup group,[ our guide](https://wiki.greensoftware.foundation/meetup-organiser-guide?pvs=25) provides everything you need to know to run a successful meetup.
 
-To find active groups worldwide, attend a local event, and engage with the community, explore the[<u> GSF Meetup Network. </u>](https://www.meetup.com/members/341583241/)
+To find active groups worldwide, attend a local event, and engage with the community, explore the[ GSF Meetup Network. ](https://www.meetup.com/members/341583241/)
 
 

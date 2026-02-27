@@ -30,11 +30,11 @@ GSF Global Summit is a series of free events. Regional events were held in June 
 5. The way to utilize the energy-saving functions of hardware with software - Hideaki Doki, Intel
 6. Panel discussion on future Green Software
 
-### 1.[**Introduction to Green Software Foundation – To achieve Green Software **](https://www.youtube.com/watch?v=yFOubumGt60)[**development - Toru Shimogaki, NTT DATA**](https://www.youtube.com/watch?v=yFOubumGt60)
+### 1.[Introduction to Green Software Foundation – To achieve Green Software ](https://www.youtube.com/watch?v=yFOubumGt60)[development - Toru Shimogaki, NTT DATA](https://www.youtube.com/watch?v=yFOubumGt60)
 
 Green Software Foundation is a non-profit foundation with 32 organizations and 694 individuals in various industries and consists of four working groups. Our mission is to build a trusted ecosystem for green software engineering. Green software is software that is responsible for emitting fewer greenhouse gases and the focus is reduction, not neutralization. We contribute to the reduction of the environmental impact and will send a message at the time of COP27 in November 2022.
 
-### 2. [**What is Green Software & the latest trend - Daiyu Hatakeyama, Microsoft Japan**](https://docs.google.com/presentation/d/1aUvsxOe3FiXXgJDigvitOKim3LrAWTH9/edit#slide=id.p2)
+### 2. [What is Green Software & the latest trend - Daiyu Hatakeyama, Microsoft Japan](https://docs.google.com/presentation/d/1aUvsxOe3FiXXgJDigvitOKim3LrAWTH9/edit#slide=id.p2)
 
 Green software requires the following three points in the aspect of Scope1 – 3 in GHG Protocol.
 
@@ -44,15 +44,15 @@ Green software requires the following three points in the aspect of Scope1 – 3
 
 It is important to calculate the carbon emissions of software. Green Software Foundation developed an alpha version of Software Carbon Intensity (SCI), a method for scoring the carbon emissions of software operations. Software engineering can manage both business and sustainability successfully.
 
-### 3. [**What is Software Carbon Intensity - Yasumasa Suenaga, NTT DATA**](https://drive.google.com/file/d/1a9FZ4bMsheVVwVYymoGoCvNFuVPLm3uW/view)
+### 3. [What is Software Carbon Intensity - Yasumasa Suenaga, NTT DATA](https://drive.google.com/file/d/1a9FZ4bMsheVVwVYymoGoCvNFuVPLm3uW/view)
 
 Our biggest pain point is how we measure the carbon emissions of software. Green Software Foundation has developed SCI to define a methodology for calculating the rate of carbon emissions for a software system. SCI has become a common language for evaluating green software and we can change the software future with it.
 
-### 4. [**Ecodesign of digital services Kohei Ogawa & Shohei Nagata, Microsoft Japan**](https://drive.google.com/file/d/1-7H5Vr_IxXpDKvDogJXy3m2qdRET8D-r/view)
+### 4. [Ecodesign of digital services Kohei Ogawa & Shohei Nagata, Microsoft Japan](https://drive.google.com/file/d/1-7H5Vr_IxXpDKvDogJXy3m2qdRET8D-r/view)
 
 The use of digital services has negative impacts on the environment. We should evaluate the needs to avoid adding unnecessary capabilities. There are some books and websites on eco-design and tools that can measure the efficiency of websites. It is essential to keep thinking and learning sustainability in the aspect of software engineering.
 
-### 5. [**The way to utilize the energy-saving functions of hardware with software - Hideaki Doki, Intel**](https://drive.google.com/file/d/1FCEoaN9F-b1UQcnb7cAvoPfGqUp2OpOe/view)
+### 5. [The way to utilize the energy-saving functions of hardware with software - Hideaki Doki, Intel](https://drive.google.com/file/d/1FCEoaN9F-b1UQcnb7cAvoPfGqUp2OpOe/view)
 
 There are three effective ways to use the energy-saving functions of the hardware.
 
@@ -62,8 +62,7 @@ There are three effective ways to use the energy-saving functions of the hardwar
 
 Software is important to make hardware work effectively as well as hardware itself. We can make efficient and low-carbon software by understanding hardware functions and utilizing libraries.
 
-### **6. Panel discussion on future Green Software:**
-
+### 6. Panel discussion on future Green Software:
 **Moderator: **
 
 - Kenichiro Hamano, NTT DATA

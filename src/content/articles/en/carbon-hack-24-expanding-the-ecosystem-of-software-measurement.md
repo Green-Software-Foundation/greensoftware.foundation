@@ -12,8 +12,7 @@ Thanks to the generous support from our sponsors—Accenture, Amadeus, AVEVA, BC
 
 On Earth Day, we highlight the winners of this year’s hackathon, the thought leadership that will take us forward, and how the GSF plans to turn everyone into watchers for greener software–those who choose to observe impacts, verify findings, challenge assumptions, and measure observable metrics!
 
-## **Celebrating Innovation: Winners and Projects**
-
+## Celebrating Innovation: Winners and Projects
 The hackathon concluded with 47 impressive submissions across six categories, showcasing the Impact Framework's (IF) diverse applications and potential to revolutionize software measurement.
 
 
@@ -22,7 +21,7 @@ Our judges voted from 15 shortlisted submissions to reveal our winners:
 
 
 
-### **Best Content: **[<u>**C--**</u>](https://github.com/Green-Software-Foundation/hack/issues/63)
+### Best Content: [C--](https://github.com/Green-Software-Foundation/hack/issues/63)
 
 Project: Evaluating LLM carbon footprints
 
@@ -32,7 +31,7 @@ Affiliated Organization: Thoughtworks
 
 
 
-### **Best Contribution: **[<u>**Green HighTech #Innovators**</u>](https://github.com/Green-Software-Foundation/hack/issues/66)
+### Best Contribution: [Green HighTech #Innovators](https://github.com/Green-Software-Foundation/hack/issues/66)
 
 Project: The Green Mile: Streamlining Impact Framework Accessibility
 
@@ -42,7 +41,7 @@ Affiliated Organization: Hightech ICT
 
 
 
-### **Beyond Carbon: **[<u>**Opencast Carbon 24**</u>](https://github.com/Green-Software-Foundation/hack/issues/91)
+### Beyond Carbon: [Opencast Carbon 24](https://github.com/Green-Software-Foundation/hack/issues/91)
 
 Project: Environmental Impact Risk Scorecard
 
@@ -52,7 +51,7 @@ Affiliated Organization: Opencast Software Europe
 
 
 
-### **Best Under 18: **[<u>**GreenerMeet**</u>](https://github.com/Green-Software-Foundation/hack/issues/142)
+### Best Under 18: [GreenerMeet](https://github.com/Green-Software-Foundation/hack/issues/142)
 
 Project: Assessing Energy & Carbon in Zoom Conferences
 
@@ -60,7 +59,7 @@ Eliana Raizman (Team lead), Oliver Zhang, Anthony Li
 
 
 
-### **Best Undergraduate: **[<u>**Code Green**</u>](https://github.com/Green-Software-Foundation/hack/issues/65)
+### Best Undergraduate: [Code Green](https://github.com/Green-Software-Foundation/hack/issues/65)
 
 Project: Manifest Generator
 
@@ -70,7 +69,7 @@ Affiliated Organization: The Munich University of Applied Sciences
 
 
 
-### **Best Plugin: **[<u>**Code Green**</u>](https://github.com/Green-Software-Foundation/hack/issues/84)
+### Best Plugin: [Code Green](https://github.com/Green-Software-Foundation/hack/issues/84)
 
 Project: K8s importer and visualization
 
@@ -80,22 +79,20 @@ Affiliated Organization: Nedbank
 
 
 
-[<u>**View submissions here.**</u>](https://github.com/Green-Software-Foundation/hack/issues?q=is%3Aissue+is%3Aopen+label%3AWINNER%21)
+[**View submissions here.**](https://github.com/Green-Software-Foundation/hack/issues?q=is%3Aissue+is%3Aopen+label%3AWINNER%21)
 
 
 
-## **IF Expansion**
-
+## IF Expansion
 The hackathon's objectives were to get people comfortable sharing how they measure their software and to engage contributors to build the software measurement ecosystem using the IF by creating more plugins and sharing more data to help everyone better assess the environmental impacts of running software. 
 
 
 
-The IF project team looks forward to adopting key learnings from the submissions to enhance the IF ecosystem. The team is also developing a public database of supportive plugins, and the 30 new plugins developed during Carbon Hack 24 will be incorporated. [<u>**Learn more**</u>](http://grnsft.org/if-whats-next). 
+The IF project team looks forward to adopting key learnings from the submissions to enhance the IF ecosystem. The team is also developing a public database of supportive plugins, and the 30 new plugins developed during Carbon Hack 24 will be incorporated. [**Learn more**](http://grnsft.org/if-whats-next). 
 
 
 
-### **Industry Perspectives on Software Sustainability**
-
+### Industry Perspectives on Software Sustainability
 Ioannis Kolaxis (Accenture), Eleonore Gueit (Amadeus), Daniel Lazaro (AVEVA), Raghu Krovvidi (BCG X), Clifton Phua (IMDA), Gadhu Sundaram (NTT DATA) and Bertrand Martin (Sentry Software), emphasized how businesses are asking for solutions and models to decarbonize their software, the importance of leading by example, and the benefits of adopting available and proven tools like the Carbon Aware SDK, Software Carbon Intensity Specification, and Impact Framework, to meet reduction targets.
 
 
@@ -128,8 +125,7 @@ Ioannis Kolaxis (Accenture), Eleonore Gueit (Amadeus), Daniel Lazaro (AVEVA), Ra
 
 
 
-## **Get Involved: Contribute to IF**
-
+## Get Involved: Contribute to IF
 > *"Through IF, the sustainability world will have watchers. This is how we are going to change the world." *
 
 
@@ -138,7 +134,7 @@ We are pioneering a movement to transform software measurement, much like how op
 
 
 
-Your involvement is crucial in shaping the future of IF. Visit [<u>**grnsft.org/if-whats-next**</u>](http://grnsft.org/if-whats-next) to learn more about how you can contribute and be an integral part of the software sustainability measurement transformation.
+Your involvement is crucial in shaping the future of IF. Visit [**grnsft.org/if-whats-next**](http://grnsft.org/if-whats-next) to learn more about how you can contribute and be an integral part of the software sustainability measurement transformation.
 
 
 
@@ -146,4 +142,4 @@ Join the GSF in redefining software measurement for sustainability.
 
 
 
-[<u>Learn What’s Next</u>](http://grnsft.org/if-whats-next) | [<u>Become a Member</u>](https://greensoftware.foundation/join-us/)
+[Learn What’s Next](http://grnsft.org/if-whats-next) | [Become a Member](https://greensoftware.foundation/join-us/)

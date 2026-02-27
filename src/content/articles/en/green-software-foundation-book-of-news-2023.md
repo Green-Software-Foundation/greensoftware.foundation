@@ -27,7 +27,7 @@ As a result, the updates, releases, and new announcements we're sharing are set 
 - Carbon Aware SDK 1.1
 - SCER
 - Green Software Champions Program
-- In the works: [<u>Green Maturity Matrix</u>](https://github.com/Green-Software-Foundation/oc/issues/46) 
+- In the works: [Green Maturity Matrix](https://github.com/Green-Software-Foundation/oc/issues/46) 
 
 If you have any questions or feedback, please email media@greensoftware.foundation. If you want to speak with someone from the GSF about news announcements or the foundation's broader strategy and projects, please get in touch with namrata@greensoftware.foundation.
 
@@ -37,7 +37,7 @@ If you have any questions or feedback, please email media@greensoftware.foundati
 
 Software has diverse environmental effects, including carbon, water, and energy usage, which need optimization. However, measuring these metrics is a challenging task. Modern applications consist of various software components operating on different platforms, some out of an organization's control. 
 
-The [<u>Impact Engine Framework</u>](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/17072136/Opensource+Impact+Engine+Framework) is an Open Source Working Group project. The objective is to Model, Measure, siMulate and Monitor the environmental impacts of software. Modern applications are composed of many smaller pieces of software (components) running on many different environments, for example, private cloud, public cloud, bare-metal, virtualized, containerized, mobile, laptops, and desktops. Every environment requires a different measurement model, and no single solution calculates the environmental impacts for all components on all environments.
+The [Impact Engine Framework](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/17072136/Opensource+Impact+Engine+Framework) is an Open Source Working Group project. The objective is to Model, Measure, siMulate and Monitor the environmental impacts of software. Modern applications are composed of many smaller pieces of software (components) running on many different environments, for example, private cloud, public cloud, bare-metal, virtualized, containerized, mobile, laptops, and desktops. Every environment requires a different measurement model, and no single solution calculates the environmental impacts for all components on all environments.
 
 With SCI use cases beginning to take shape, software measurement is becoming a mainstream practice with industry professionals dedicated to decarbonizing software. Formalizing software measurement into a discipline with standards and tooling is crucial. While the SCI Specification serves as the standard, the Impact Engine Framework provides the necessary tooling for this endeavor.
 
@@ -52,7 +52,7 @@ We have:
 
 We expect an Alpha version to be ready within a few short weeks.
 
-[<u>Read more and get involved.</u>](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/17072136/Opensource+Impact+Engine+Framework)
+[Read more and get involved.](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/17072136/Opensource+Impact+Engine+Framework)
 
 ---
 
@@ -60,9 +60,9 @@ We expect an Alpha version to be ready within a few short weeks.
 
 Cloud providers hold a crucial position in sustainability, but we've been missing real-time carbon metrics up until now. As integral components of the information technology supply chain, cloud providers must now provide real-time carbon metrics that they can consolidate based on workloads, allocate, and distribute throughout the supply chain. This action is essential to comply with the regulations currently enforced in Europe and California and those emerging in other regions.
 
-Our latest project, part of the [<u>Standards Working Group</u>](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group), has a clear mission: establishing a benchmark for measuring carbon emissions. This initiative marks a significant shift from the traditional practice of monthly reporting to the adoption of minute-by-minute metrics for all cloud providers. It's a pioneering step towards greater transparency and sustainability in the cloud computing industry.
+Our latest project, part of the [Standards Working Group](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group), has a clear mission: establishing a benchmark for measuring carbon emissions. This initiative marks a significant shift from the traditional practice of monthly reporting to the adoption of minute-by-minute metrics for all cloud providers. It's a pioneering step towards greater transparency and sustainability in the cloud computing industry.
 
-[<u>Find out how to contribute.</u>](https://github.com/orgs/Green-Software-Foundation/discussions/34)
+[Find out how to contribute.](https://github.com/orgs/Green-Software-Foundation/discussions/34)
 
 ---
 
@@ -72,9 +72,9 @@ The Carbon Aware SDK empowers developers to create environmentally-conscious sof
 
 Version 1.1 launched earlier this year to support ElectricityMaps as a fresh data source, offering paid and free APIs. This update also enhances the overall usability and stability of the Carbon Aware SDK. It provides a library for DLL import usage for seamless integration into your projects without deploying an API.
 
-The project will be undergoing review to achieve a [<u>Graduated status</u>](https://oc.greensoftware.foundation/project-lifecycle.html) under GSF. 
+The project will be undergoing review to achieve a [Graduated status](https://oc.greensoftware.foundation/project-lifecycle.html) under GSF. 
 
-[<u>Explore the latest version of the Carbon Aware SDK here</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk). 
+[Explore the latest version of the Carbon Aware SDK here](https://github.com/Green-Software-Foundation/carbon-aware-sdk). 
 
 ---
 
@@ -82,13 +82,13 @@ The project will be undergoing review to achieve a [<u>Graduated status</u>](htt
 
 The SCER aims to provide consumers and organizations with a clear and consumer-friendly benchmark for assessing the environmental impact of software to make pro-planet choices when selecting digital products. 
 
-The goal is to provide comparable ratings for software with similar functionalities. This involves defining standard workloads for different types of software, categorizing them, and setting standards based on the functional unit of the [<u>Software Carbon Intensity (SCI) Specification</u>](https://github.com/Green-Software-Foundation/sci/tree/dev). Hardware standards for testing these workloads and the boundaries of the software under test are also part of the process.
+The goal is to provide comparable ratings for software with similar functionalities. This involves defining standard workloads for different types of software, categorizing them, and setting standards based on the functional unit of the [Software Carbon Intensity (SCI) Specification](https://github.com/Green-Software-Foundation/sci/tree/dev). Hardware standards for testing these workloads and the boundaries of the software under test are also part of the process.
 
 For consumers, SCER is a vital tool to gauge the carbon intensity of applications. For businesses, SCER is a powerful procurement tool, enabling teams to make sustainable choices when contracting services or purchasing software, having a positive return on operational efficiency and emissions reduction. 
 
 The project is advancing with creating a test platform that assesses energy consumption levels for various software configurations. The next phase involves establishing parameters for software categories, such as databases, to make them comparable. The ultimate challenge is to provide clear guidelines for informed decision-making, all while considering the complexities of modern software architectures. 
 
-[<u>Get more details on SCER.</u>](https://github.com/Green-Software-Foundation/scer)
+[Get more details on SCER.](https://github.com/Green-Software-Foundation/scer)
 
 ---
 
@@ -100,7 +100,7 @@ This project aligns perfectly with our Theory of Change's Community pillar. It a
 
 The program is open to recognizing developers, architects, designers, testers, researchers, educators, and advocates. The GSF will promote the program through multiple online channels, including website, blog, newsletter, social media, and podcast, as well as in working groups, projects, events, webinars, and Meetups. Member organizations part of the Community Working Group will help qualify contributors and their status in the program using clear and transparent criteria and nomination and approval process. 
 
-[<u>Find out more.</u>](https://greensoftwarefoundation.atlassian.net/l/cp/gAv0rYJt)
+[Find out more.](https://greensoftwarefoundation.atlassian.net/l/cp/gAv0rYJt)
 
 ---
 
@@ -110,9 +110,9 @@ In today's rapidly evolving world, where the urgency of environmental sustainabi
 
 The Green Software Maturity Matrix is a new project in incubation that aims to mature into a self-evaluation tool for organizations to gauge how much they have incorporated green principles, practices, and processes in developing and operating their software systems. Geared toward enterprise CTOs and consultants, the Matrix will display carbon efficiency and awareness in a poster-style diagram and a short guide. 
 
-This project is open source and welcomes public contributions via issues, discussions, and pull requests. Instructions for how to contribute to this project can be found in the [<u>CONTRIBUTING.md</u>](https://github.com/Green-Software-Foundation/green-software-maturity-matrix/blob/main/CONTRIBUTING.md) file.
+This project is open source and welcomes public contributions via issues, discussions, and pull requests. Instructions for how to contribute to this project can be found in the [CONTRIBUTING.md](https://github.com/Green-Software-Foundation/green-software-maturity-matrix/blob/main/CONTRIBUTING.md) file.
 
-[<u>Visit the project.</u>](https://github.com/Green-Software-Foundation/green-software-maturity-matrix)
+[Visit the project.](https://github.com/Green-Software-Foundation/green-software-maturity-matrix)
 
 ---
 
@@ -130,4 +130,4 @@ Numerous member organizations are taking action, incorporating the course as a m
 
 In the coming months, the foundation will continue to work with member organizations to support their efforts in disseminating the training to their technical and non-technical workforce.
 
-[<u>Visit the Learning Center. </u>](https://learn.greensoftware.foundation/)
+[Visit the Learning Center. ](https://learn.greensoftware.foundation/)

@@ -12,8 +12,7 @@ As this year ends, we're thrilled to share our 2024 Annual Report. The report pr
 
 This is a resource to help our members, partners, and broader network stay informed about how our global consortium of members is navigating sustainability in the age of AI and their approach in developing standards and tools to minimize software's environmental impacts.
 
-### **A Closer Look at the 2024 Annual Report**
-
+### A Closer Look at the 2024 Annual Report
 This year marked several milestones, including:
 
 - The Software Carbon Intensity Specification becoming an ISO-approved standard for measuring software emissions.
@@ -24,12 +23,10 @@ This year marked several milestones, including:
 
 Access the full report to explore how these developments are shaping the future of green software. [**Read the 2024 Annual Report**](https://drive.google.com/file/d/1grzqNwVt3eaOfkLAYkv2rAHDq9Nc6mib/view?usp=sharing).
 
-### **Building on Our Values**
-
+### Building on Our Values
 GSF's activities and achievements in 2024 reflect a commitment to making sustainability in tech open source and promoting collaboration and consensus to build impact-driven solutions for wide-scale industry adoption and benefit.
 
-### **Get Involved**
-
+### Get Involved
 Learn more about what our project teams did this year and what they have projected for 2025, and see how your organization can align with global sustainability efforts. 
 
 [**Download the 2024 Annual Report**](https://drive.google.com/file/d/1grzqNwVt3eaOfkLAYkv2rAHDq9Nc6mib/view?usp=sharing).

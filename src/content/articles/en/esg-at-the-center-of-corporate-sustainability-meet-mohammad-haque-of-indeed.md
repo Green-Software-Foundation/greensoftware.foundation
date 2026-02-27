@@ -34,7 +34,7 @@ Another aspect is the resources involved in maintaining our systems and making s
 
 # Are you currently applying any principles of green software engineering and development?
 
-Not yet. We've been trying to set up our tooling and to get accurate measurements. Ideally, we'd like to take advantage of demand shifting, where we run specific tasks when the energy is clean ([<u>learn more about carbon aware computing</u>](https://hackernoon.com/our-code-is-harming-the-planet-we-need-carbon-aware-design-patterns)). 
+Not yet. We've been trying to set up our tooling and to get accurate measurements. Ideally, we'd like to take advantage of demand shifting, where we run specific tasks when the energy is clean ([learn more about carbon aware computing](https://hackernoon.com/our-code-is-harming-the-planet-we-need-carbon-aware-design-patterns)). 
 
 # How do you see the future of green software?
 
@@ -48,4 +48,4 @@ The main challenge is awareness. When I started our guild, I remember a comment 
 
 I've signed up for the opensource, community and standards working groups. I know that the GSF is already working on some of the internal tooling that we've been trying to build around measuring and benchmarking emissions. We can leverage that without having to reinvent the wheel. I want to actively contribute to the development of those projects.
 
-![](/assets/articles/esg-at-the-center-of-corporate-sustainability-meet-mohammad-haque-of-indeed/image.jpg)
+![Green Software Foundation and Indeed partnership logos on teal illustrated background](/assets/articles/esg-at-the-center-of-corporate-sustainability-meet-mohammad-haque-of-indeed/image.jpg)

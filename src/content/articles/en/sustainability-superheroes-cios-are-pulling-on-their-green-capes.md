@@ -31,22 +31,19 @@ Accenture research also tells us that 75% of companies believe their [investment
 
 The role of the CIO must not be underestimated. In fact, IT departments can again be the changemakers, superheroes of the current green revolution, as they lead from the front to enable organizational sustainability. And there’s an obvious place to start.
 
-## **1. Cloud migrations cut carbon**
-
+## 1. Cloud migrations cut carbon
 It’s pretty obvious the data center is carbon intensive with all its power requirements, and it’s clearly something of an anomaly in an environmentally conscious world. When you go to bed you don’t leave the lights on all night, you simply switch a light on when you need it. In commercial buildings it’s common for lights to be on sensors – they’re only on if people are moving. And it’s the same when you think about the datacenter – if a resource is not in use there’s no need for it to run. Why should it be any different for servers?
 
 We know that most organizations have made some moves to the cloud, but did you know that [moving to the Microsoft cloud can lower your carbon footprint by up to 98%](https://blogs.microsoft.com/on-the-issues/2018/05/17/microsoft-cloud-delivers-when-it-comes-to-energy-efficiency-and-carbon-emission-reductions-study-finds/)? And, with Microsoft’s commitment to being 100% renewable powered by 2025, and carbon negative by 2030, the sustainability benefits speak for themselves. And of course, the more you use [Azure](https://www.avanade.com/en/technologies/azure), the greater the potential for reducing your carbon footprint.
 
 But let’s not pretend that simply moving to the [cloud](https://www.avanade.com/en/solutions/cloud-and-application-services/cloud-platform-services) is enough, that’s just the start. 
 
-## **2. The power of the cloud enables greater change**
-
+## 2. The power of the cloud enables greater change
 The cloud enables an organization to measure, monitor and act, to become future ready by enabling the business to take action through support, tracking and empowerment. The first place to look is cost and consumption. While Azure will be powered by 100% renewable energy by 2025, it’s best practice to optimize the cloud for cost, which is tightly coupled to energy usage. If you’re mismanaging costs, you’re likely mismanaging carbon. And consider another core part of sustainability, recycling; if resources are running but unused, they should be reallocated – reducing wastage is critical to cloud optimization, and sustainability.
 
 Beyond cloud migration, consumption and efficiency, the incredible power of Azure provides organizations with ways to not only collect and store carbon related data, but more importantly, the ability to uncover insights, ideas and recommendations. And, the power to react quickly and at scale, through automation. Imagine for example, the ways in which you could analyze data to optimize your logistics and bring carbon efficiencies to your fleet, the dashboards you could create for facilities teams to track and improve energy use across your buildings. Technology can be the starting point for an ecosystem of sustainability opportunities. 
 
-## **3. You need a rounded sustainability strategy**
-
+## 3. You need a rounded sustainability strategy
 You’ll already have dashboards within your business, but do you have one for sustainability? Many of those dashboards can be viewed through a sustainability lens, but without a dedicated, focused view, any strategies you do have will be lacking. If you’re not accurately measuring, you’re not going to drive significant change. But a note of caution is due here – there’s nothing more frustrating than seeing an issue and being unable to act. It’s key to empower for accountability, but critically, organizations must empower their people to act.
 
 Some organizations will have a Chief Sustainability Officer, some will have sustainability as an additional executive responsibility, while others will not have determined who is responsible. Whatever the scenario in a business, the CIO will have a fundamental role in developing, enabling and driving the strategy. Whoever owns the strategy, it must cover Scope 1-3 emissions (emissions from owned sources, emissions from purchased energy and all other emissions), and progress must be carefully tracked.

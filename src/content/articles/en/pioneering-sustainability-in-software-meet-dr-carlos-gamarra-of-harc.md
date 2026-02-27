@@ -60,4 +60,4 @@ HARC leads a variety of sustainability-focused projects. Our Energy team leads a
 
 We are also partners in the HyVelocity Gulf Coast Hydrogen Hub, a project slated to be funded by the DOE at up to $1.2 billion, on the community engagement and community benefits plans. And we’re currently leading a residential weatherization program for disadvantaged communities, and working on a multi-year project that would result in providing solar for those communities. 
 
-![](/assets/articles/pioneering-sustainability-in-software-meet-dr-carlos-gamarra-of-harc/image.png)
+![Green Software Foundation and HARC logos on a dark nature-themed illustration](/assets/articles/pioneering-sustainability-in-software-meet-dr-carlos-gamarra-of-harc/image.png)

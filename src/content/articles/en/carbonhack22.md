@@ -10,7 +10,7 @@ As the first event of its kind, the CarbonHack22 will run from 13th October - 11
 
 *“Carbon Awareness is one of the hottest topics in the green software space, and now with the Carbon Aware SDK, it’s easier than ever to build a carbon aware application,” said Asim Hussain, chairperson of GSF.*
 
-Learn more about the CarbonHack22 at [<u>grnsft.org/hack22</u>](http://grnsft.org/hack22)
+Learn more about the CarbonHack22 at [grnsft.org/hack22](http://grnsft.org/hack22)
 
 ## What’s the purpose of the contest?
 
@@ -18,7 +18,7 @@ With climate change looming, carbon awareness in software is becoming a must-hav
 
 ## Carbon Aware SDK as starting point
 
-The Green Software Foundation is creating the [<u>Carbon Aware SDK</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk), an open source toolkit for building carbon aware applications. A collaborative effort from multiple corporate and non-profit partners, the Carbon Aware SDK will reduce the barriers for software practitioners in creating carbon aware applications. The carbon aware SDK has two parts, a hosted API as well as a client library available in 40 different programming languages.
+The Green Software Foundation is creating the [Carbon Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware-sdk), an open source toolkit for building carbon aware applications. A collaborative effort from multiple corporate and non-profit partners, the Carbon Aware SDK will reduce the barriers for software practitioners in creating carbon aware applications. The carbon aware SDK has two parts, a hosted API as well as a client library available in 40 different programming languages.
 
 ## Who stands behind the CarbonHack22?
 
@@ -26,4 +26,4 @@ The CarbonHack is a new annual contest hosted by the Green Software Foundation, 
 
 ## How can I participate?
 
-To learn more and to enter the contest, go [<u>here</u>](http://grnsft.org/hack22).
+To learn more and to enter the contest, go [here](http://grnsft.org/hack22).

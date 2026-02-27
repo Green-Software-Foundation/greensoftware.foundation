@@ -19,7 +19,7 @@ originBlogName: "Microsoft Developer Blogs"
 publishedOriginUrl: "https://devblogs.microsoft.com/sustainable-software/carbon-aware-kubernetes/"
 ---
 
-If you are running microservices these days there is a high probability you are managing them with [<u>Kubernetes</u>](http://kubernetes.io/). Kubernetes makes container management easy and its website boasts of “Planet Scale”, “Never Outgrow”, and “Run Anywhere” as some of its key features. 
+If you are running microservices these days there is a high probability you are managing them with [Kubernetes](http://kubernetes.io/). Kubernetes makes container management easy and its website boasts of “Planet Scale”, “Never Outgrow”, and “Run Anywhere” as some of its key features. 
 
 As a Sustainable Software Engineer, I read those phrases as more of a warning of runaway infrastructure that consumes with no boundary or regard to the impact on the planet or checkbook. 
 
@@ -29,23 +29,33 @@ The good news is that Kubernetes is built in a way that it can make carbon-aware
 
 <figure>
 <img src="/assets/articles/carbon-aware-kubernetes/green-software-foundation-illustration-of-core-components-of-kubernetes.jpg" alt="green-software-foundation-illustration-of-core-components-of-kubernetes" />
-<figcaption><em>The core components of Kubernetes</em></figcaption>
+<figcaption>*The core components of Kubernetes*</figcaption>
 </figure>
 
-The bulk of the functionality comes from the Kubernetes Scheduler itself and a research paper titled “[<u>A Low Carbon Kubernetes Scheduler</u>](http://ceur-ws.org/Vol-2382/ICT4S2019_paper_28.pdf)“. In short, the Scheduler takes Pods (one or more of your containers) and assigns them to run on Nodes (virtual or physical machines). It does a good job on its own of placing Pods to keep an even distribution across Nodes and ensure enough resources (memory, CPU, etc.) are available to run workloads. However, the Scheduler also lets you define your own rules for how to assign Nodes to Pods. This is where we can inject carbon intensity data as another factor for the Scheduler to use when placing Pods. 
+The bulk of the functionality comes from the Kubernetes Scheduler itself and a research paper titled “[A Low Carbon Kubernetes Scheduler](http://ceur-ws.org/Vol-2382/ICT4S2019_paper_28.pdf)“. In short, the Scheduler takes Pods (one or more of your containers) and assigns them to run on Nodes (virtual or physical machines). It does a good job on its own of placing Pods to keep an even distribution across Nodes and ensure enough resources (memory, CPU, etc.) are available to run workloads. However, the Scheduler also lets you define your own rules for how to assign Nodes to Pods. This is where we can inject carbon intensity data as another factor for the Scheduler to use when placing Pods. 
 
-Carbon intensity data for electrical grids around the world is available through APIs like [<u>WattTime</u>](https://www.watttime.org/). They provide a Marginal Operating Emissions Rate (MOER) value that represents the pounds of carbon emitted to create a megawatt of energy — the lower the MOER, the cleaner the energy. [<u>WattTime’s API</u>](https://www.watttime.org/api-documentation/#introduction) provides both a real-time and projected carbon intensity value for a location like zip code or Latitude and Longitude coordinate (GPS). 
+Carbon intensity data for electrical grids around the world is available through APIs like [WattTime](https://www.watttime.org/). They provide a Marginal Operating Emissions Rate (MOER) value that represents the pounds of carbon emitted to create a megawatt of energy — the lower the MOER, the cleaner the energy. [WattTime’s API](https://www.watttime.org/api-documentation/#introduction) provides both a real-time and projected carbon intensity value for a location like zip code or Latitude and Longitude coordinate (GPS). 
 
 We can query the API to get the carbon intensity of the location of each of our Nodes and feed this to the Scheduler’s algorithm to make a carbon-aware decision about where to place the new Pod.
 
-<figure>
-<img src="/assets/articles/carbon-aware-kubernetes/green-software-foundation-screenshot-of-carbon-scheduler-yaml-file.jpg" alt="green-software-foundation-screenshot-of-carbon-scheduler-yaml-file" />
-<figcaption><em>Sample carbon scheduler YAML file</em></figcaption>
-</figure>
+*Sample carbon scheduler YAML file:*
+
+```yaml
+- location: eastus
+  moer: 1699.8105
+  gridSupplier: PJM_WEST
+  lastMeasured: '2020-09-28T14:20:00Z'
+  weight: 35
+- location: westus
+  moer: 914.0984
+  gridSupplier: CAISO_NP15
+  lastMeasured: '2020-09-28T14:20:00Z'
+  weight: 65
+```
 
 With a MOER value assigned to each Node, we need to account for assigning a weight across multiple Nodes. A simplified approach is to take the MOER value of an individual node and divide it by the total MOER values across all nodes to get a normalized percentage weighting of each Node. Save these weightings to a YAML file and by applying them as a Priority for the Scheduler, your Pods will now be assigned to Nodes with lower MOER values where possible.
 
-This [<u>sample YAML file</u>](https://gist.github.com/dubrie/ea5df4c831d3a240061262eda7bf1aae) should be periodically updated as carbon intensities change and re-applied to the Scheduler. Executing the weighting calculation as its own process will allow you to add additional factors to your weighting algorithm, like latency or predicted MOER values. 
+This [sample YAML file](https://gist.github.com/dubrie/ea5df4c831d3a240061262eda7bf1aae) should be periodically updated as carbon intensities change and re-applied to the Scheduler. Executing the weighting calculation as its own process will allow you to add additional factors to your weighting algorithm, like latency or predicted MOER values. 
 
 These three pieces together–Scheduler, Carbon Intensity Data and Weighting Algorithm–allows any Kubernetes instance to become carbon aware. It can take advantage of natural fluctuations in carbon intensity to ensure your application requires the least amount of carbon to meet your business and customer needs. There are a lot of positive changes in carbon reduction, having an automated way of shifting your workloads around like this allows you to quickly take advantage of improvements and help reduce demand on higher carbon emitting sources.
 
@@ -55,7 +65,7 @@ Kubernetes can run physical and virtual machines anywhere but let’s look at a 
 
 ### Comparisons within the US
 
-According to [<u>current prices</u>](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/) you would be paying about $0.96/hour to run them in the East US region. The MOER value for the East US fluctuates, but averages about 1550 lbs of CO2/megawatt. By comparison, the West US region MOER value stays around 850 lbs of CO2/megawatt or a little more than half of what East US emits for the same machine type. Your costs for these machines in the West US are $1.12/hour so *you will pay a small premium to cut your carbon emissions roughly in half*.
+According to [current prices](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/) you would be paying about $0.96/hour to run them in the East US region. The MOER value for the East US fluctuates, but averages about 1550 lbs of CO2/megawatt. By comparison, the West US region MOER value stays around 850 lbs of CO2/megawatt or a little more than half of what East US emits for the same machine type. Your costs for these machines in the West US are $1.12/hour so *you will pay a small premium to cut your carbon emissions roughly in half*.
 
 | **Region** | **Total cost / hour** | **lbs CO2 / megawatt** |
 |-----------:|----------------------:|-----------------------:|
@@ -69,7 +79,7 @@ According to [<u>current prices</u>](https://azure.microsoft.com/en-us/pricing/d
 
 Let's take the same scenario as above but this time using a couple regions in Europe: UK South and North Europe. UK South offers D4as v4 machines at $0.222 per hour and North Europe at $0.214 per hour currently. However, the MOER values for the two are much closer at 965 lbs of CO2/megawatt for UK South and 1114 lbs of CO2/megawatt for North Europe. 
 
-In this scenario, running machines in UK South will cost a little under 4% more but save 149 pounds of carbon for each megawatt you consume. To put this in context that amounts to more than [<u>8,600 smartphone charges</u>](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator).
+In this scenario, running machines in UK South will cost a little under 4% more but save 149 pounds of carbon for each megawatt you consume. To put this in context that amounts to more than [8,600 smartphone charges](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator).
 
 | **Region** | **Total cost / hour** | **lbs CO2 / megawatt** |
 |-----------:|----------------------:|-----------------------:|
@@ -81,7 +91,7 @@ In this scenario, running machines in UK South will cost a little under 4% more 
 
 ### MOER values fluctuate over time
 
-It’s worth noting that both VM prices and MOER values will fluctuate over time, but that is also the point. While it may take about 50% less carbon to run in West US compared to the East US now, if the sun isn’t shining or the wind isn’t blowing those numbers will move closer together. Electrical grids are adding more renewable energy all the time and are starting to remove heavy polluting coal plants so these MOER numbers will (hopefully) come down over time. Microsoft is helping this trend by announcing a [<u>new datacenter in Sweden</u>](https://news.microsoft.com/europe/2019/05/29/building-for-the-future-microsofts-new-swedish-datacentres-have-sustainability-firmly-in-mind/) that will be powered by 100 percent renewable energy sources. Being mindful of your carbon consumption and how your system is able to evolve and shift to be aware of those changes is one of the primary drivers of Sustainable Software Engineering.
+It’s worth noting that both VM prices and MOER values will fluctuate over time, but that is also the point. While it may take about 50% less carbon to run in West US compared to the East US now, if the sun isn’t shining or the wind isn’t blowing those numbers will move closer together. Electrical grids are adding more renewable energy all the time and are starting to remove heavy polluting coal plants so these MOER numbers will (hopefully) come down over time. Microsoft is helping this trend by announcing a [new datacenter in Sweden](https://news.microsoft.com/europe/2019/05/29/building-for-the-future-microsofts-new-swedish-datacentres-have-sustainability-firmly-in-mind/) that will be powered by 100 percent renewable energy sources. Being mindful of your carbon consumption and how your system is able to evolve and shift to be aware of those changes is one of the primary drivers of Sustainable Software Engineering.
 
 Being mindful of your carbon consumption and how your system is able to evolve and shift to be aware of those changes is one of the primary drivers of Sustainable Software Engineering.
 

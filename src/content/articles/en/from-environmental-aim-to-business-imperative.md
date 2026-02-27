@@ -26,8 +26,7 @@ While we're experiencing a shift in individual priorities toward sustainability,
 
 
 
-> "If an organization ran a security review and turned off all its unused machines, they would boost security and sustainability performance."    
-
+> If an organization ran a security review and turned off all its unused machines, they would boost security and sustainability performance.
 
 
 It's time we close the perception gap and align sustainability with security and resilience efforts to improve cost and resource optimization.

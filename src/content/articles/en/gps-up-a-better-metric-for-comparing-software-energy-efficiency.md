@@ -27,7 +27,7 @@ In this blog, we will talk about Greenup, Powerup and Speedup (GPS-UP), an easy 
 
 In the past decades, industry and researchers have made substantial efforts and significant progress in improving the energy efficiency of hardware and facility infrastructure. However, the energy efficiency of software has been historically overlooked. In fact, the vast majority of today’s software developers either do not consider software energy efficiency at all or consider it merely as an after-thought (usually too late). When the room for hardware improvement is narrowing down, software energy efficiency will play an increasingly important role in further advancing green computing.
 
-To improve software energy efficiency, we need a platform (e.g. Marcher) that can easily and accurately measure the energy consumption of various programs is necessary. We [<u>discussed this in a previous article</u>](https://greensoftware.foundation/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform). Equally important are metrics that can evaluate and compare the energy efficiency of software. Without good metrics, developers get confused and arguments may arise. For example, one can argue that energy efficiency is merely a byproduct of performance improvement because faster code tends to be more energy-efficient. Meanwhile, others can argue that energy efficiency and performance are conflicting goals. To reduce energy consumption, software performance must be sacrificed or vice versa. Both arguments are legitimate under certain circumstances but neither of them has revealed the big picture.
+To improve software energy efficiency, we need a platform (e.g. Marcher) that can easily and accurately measure the energy consumption of various programs is necessary. We [discussed this in a previous article](https://greensoftware.foundation/articles/marcher-the-need-for-a-fine-grained-software-energy-efficiency-measuring-platform). Equally important are metrics that can evaluate and compare the energy efficiency of software. Without good metrics, developers get confused and arguments may arise. For example, one can argue that energy efficiency is merely a byproduct of performance improvement because faster code tends to be more energy-efficient. Meanwhile, others can argue that energy efficiency and performance are conflicting goals. To reduce energy consumption, software performance must be sacrificed or vice versa. Both arguments are legitimate under certain circumstances but neither of them has revealed the big picture.
 
 ## The physics of energy consumption and power
 
@@ -41,7 +41,7 @@ The units for energy, power and time are Joule, Watt, and Second respectively. A
 
 <figure>
 <img src="/assets/articles/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-power-against-runtime-to-show-energy-consumed.png" alt="A-chart-with-power-against-runtime-to-show-energy-consumed" />
-<figcaption><em>Energy consumed during a program’s run-time</em></figcaption>
+<figcaption>*Energy consumed during a program’s run-time*</figcaption>
 </figure>
 
 ## Energy Delay Product
@@ -88,7 +88,7 @@ It is worth noting that, because the energy for a program is the product of the 
 
 <figure>
 <img src="/assets/articles/gps-up-a-better-metric-for-comparing-software-energy-efficiency/a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png" alt="A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants " />
-<figcaption><em>Software optimizations of all kinds categorized into eight quadrants </em></figcaption>
+<figcaption>*Software optimizations of all kinds categorized into eight quadrants *</figcaption>
 </figure>
 
 With Speedup, Powerup and Greenup,  software optimizations of all kinds can be categorized into one of the eight quadrants, as shown in the above graph. 
@@ -121,4 +121,4 @@ Recall the hypothetical example that the EDP fails to distinguish, optimization 
 
 If you would like to test your own code to see which category your optimizations fall into, you can run your programs on [GreenCode](http://greencode.cs.txstate.edu/), which has built-in abilities to calculate Greenup, Speedup, and Powerup between two versions of programs, as shown in the picture below.
 
-If you would like to see examples for each category and learn more about the GPS-UP metric, you can read our paper: [<u>Using the Greenup, Powerup, and Speedup Metrics to Evaluate Software Energy Efficiency</u>](https://greensoft.cs.txstate.edu/wp-content/uploads/2018/05/Greenup_Powerup_Speedup.pdf).
+If you would like to see examples for each category and learn more about the GPS-UP metric, you can read our paper: [Using the Greenup, Powerup, and Speedup Metrics to Evaluate Software Energy Efficiency](https://greensoft.cs.txstate.edu/wp-content/uploads/2018/05/Greenup_Powerup_Speedup.pdf).

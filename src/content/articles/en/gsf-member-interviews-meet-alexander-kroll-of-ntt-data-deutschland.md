@@ -51,7 +51,7 @@ I try to follow the best practices of building green software solutions and brin
 
 ## What obstacles do you see to using green software on a wider scale within your company and in general? 
 
-At work, I see more opportunities than obstacles as our company has a strong focus on the [<u>sustainability goals of the United Nations</u>](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organisation NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
+At work, I see more opportunities than obstacles as our company has a strong focus on the [sustainability goals of the United Nations](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organisation NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
 
 ## How can companies get more young software engineers onboard the green software movement?
 

@@ -21,7 +21,7 @@ authors:
         link: "https://diyunuwablog.com/"
 ---
 
-New Green Software Foundation member [<u>Syngenio AG</u>](http://www.syngenio.de) is an IT consulting and software development house based in Germany with subsidiaries in seven cities. Since 2001, Syngenio has focused on bringing IT and business departments together, specialising in digital payments, next generation banking, the Internet of Things (IoT) and green software. Syngenio continuously improves its climate impact since 2019 and is climate neutral since 2021.
+New Green Software Foundation member [Syngenio AG](http://www.syngenio.de) is an IT consulting and software development house based in Germany with subsidiaries in seven cities. Since 2001, Syngenio has focused on bringing IT and business departments together, specialising in digital payments, next generation banking, the Internet of Things (IoT) and green software. Syngenio continuously improves its climate impact since 2019 and is climate neutral since 2021.
 
 In this interview with Jürgen Funke, a technology enthusiast and Board member at Syngenio, we discuss Syngenio’s plans with the Green Software Foundation and why green software is a key consideration for the company and its people. 
 
@@ -66,13 +66,13 @@ As far as the additional workload is concerned, there are two measures. One is a
 
 The second factor is even more important: Product Owners need to explicitly include greenness as a project goal. Let’s treat it the way we treat security, as a non-functional requirement that is always part of every development project. This way, developers can focus on resource efficiency as part of their normal work. And since it is an interesting challenge to address, most of them are quite keen to do it.
 
-There are many reasons why Product Owners really should include greenness as a development goal. The increasing demand for sustainable products in general is not the least of these. Customers are actively looking for sustainability when choosing products and they will soon begin to check apps and websites and basically any software as well for sustainability. This is why we created the [<u>*Green Software Design Label*</u>](https://www.greensoftwaredesign.com/en/green-software-design-label/) which allows customers to identify green software. It can be obtained by following the recommendations from our web-based tool, the [<u>*Green Software Expertyzer*</u>](https://www.greensoftwaredesign.com/en/expertyzer/)*.*
+There are many reasons why Product Owners really should include greenness as a development goal. The increasing demand for sustainable products in general is not the least of these. Customers are actively looking for sustainability when choosing products and they will soon begin to check apps and websites and basically any software as well for sustainability. This is why we created the [*Green Software Design Label*](https://www.greensoftwaredesign.com/en/green-software-design-label/) which allows customers to identify green software. It can be obtained by following the recommendations from our web-based tool, the [*Green Software Expertyzer*](https://www.greensoftwaredesign.com/en/expertyzer/)*.*
 
 This brings us to the second obstacle we need to tackle: The lack of knowledge. To support teams getting started on green software, we created the *Green Software Expertyzer*. It includes known factors and measures that lead to more efficient software. You can think of it as a question-and-answer tool that shows where you stand with your software and how to improve it. Expertyzer is limited to web- or app-based multilayered applications for now, because that is our main area of expertise. 
 
 ## How can companies get more young software engineers onboard the green software movement?
 
-Today, many software engineers include sustainability into their lifestyle, especially young talents. And since all developers are keen on exploring leading edge tech, let us give them tools to measure and improve their code. Let us turn it into a challenge: Who is best at developing resource efficient software? Some kind of focus point might be useful as well. Maybe a *Green Manifesto*, like the [<u>*Agile Manifesto*</u>](https://agilemanifesto.org/).      
+Today, many software engineers include sustainability into their lifestyle, especially young talents. And since all developers are keen on exploring leading edge tech, let us give them tools to measure and improve their code. Let us turn it into a challenge: Who is best at developing resource efficient software? Some kind of focus point might be useful as well. Maybe a *Green Manifesto*, like the [*Agile Manifesto*](https://agilemanifesto.org/).      
 
 ## What can the Green Software Foundation do on that front?
 
@@ -83,7 +83,6 @@ Oh, lots of things! That’s why we are so enthusiastic about joining. Creating,
 I would like to answer with a quote:
 
 
-> "As for the future, our task is not to foresee it, but to make it possible."
-> ~ Antoine de Saint-Exupéry
+> As for the future, our task is not to foresee it, but to make it possible.> ~ Antoine de Saint-Exupéry
 
 Green Software addresses the root cause of emissions caused by IT. We can and want to make a contribution to this endeavour. Together with the initiators and members of the GSF, this will give carbon reduction an enormous boost and have a real impact.

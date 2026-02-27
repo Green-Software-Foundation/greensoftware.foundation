@@ -50,8 +50,8 @@ My thoughts and prayers are with this community, the community he served and his
 
 – – –
 
-The Montreal AI Ethics Institute (which he was a Founder of) has posted a wonderful in-memoriam of his life and accomplishments here: [<u>https://montrealethics.ai/in-memoriam-abhishek-gupta-dec-20-1992-sep-30-2024/</u>](https://montrealethics.ai/in-memoriam-abhishek-gupta-dec-20-1992-sep-30-2024/)
+The Montreal AI Ethics Institute (which he was a Founder of) has posted a wonderful in-memoriam of his life and accomplishments here: [https://montrealethics.ai/in-memoriam-abhishek-gupta-dec-20-1992-sep-30-2024/](https://montrealethics.ai/in-memoriam-abhishek-gupta-dec-20-1992-sep-30-2024/)
 
-For those who wish to share stories, personal anecdotes, and photos of Abhishek, please visit [<u>www.forevermissed.com/abhishekgupta</u>](http://www.forevermissed.com/abhishekgupta) — your contributions will be greatly appreciated by his family and loved ones.
+For those who wish to share stories, personal anecdotes, and photos of Abhishek, please visit [www.forevermissed.com/abhishekgupta](http://www.forevermissed.com/abhishekgupta) — your contributions will be greatly appreciated by his family and loved ones.
 
-If you’re part of the GSF community and would like to add to this in-memoriam, please email Namrata at [<u>namrata@greensoftware.foundation</u>](mailto:namrata@greensoftware.foundation). 
+If you’re part of the GSF community and would like to add to this in-memoriam, please email Namrata at [namrata@greensoftware.foundation](mailto:namrata@greensoftware.foundation). 

@@ -41,8 +41,7 @@ Once the common terminology and software boundary is defined, the scope can be e
 
 For example, assume the first version of SCI application uses three instances of the same hardware types for running the application**.** And **after hardware optimization, **the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
 
-## **Please elaborate different areas of the project. **
-
+## Please elaborate different areas of the project. 
 The project is broken down into several milestones. In each milestone, we would accomplish a specific goal which would help realise the larger vision of the SCI Ontology Project. 
 
 The first milestone is creating the SCI Ontology, followed by creating the Software Development Kit (SDK) which can be used for instantiating the SCI ontology. Once the SDK is completed, we move on to advance topics around storage, reporting, versioning and even comparison of SCI enabled applications.
@@ -65,15 +64,14 @@ In the third iteration, we will extend the SDK to generate reports based on the 
 
 In this iteration, we would look at some of the advanced concepts like comparing two versions of SCI ontology models. This maps to the version example I have given earlier in explaining why this project is important.
 
-## **What does a GSF member get from joining the Project? **
-
+## What does a GSF member get from joining the Project? 
 Creating the software boundary is an important first step in calculating the SCI score. We are looking for architects, ontology and domain experts, software practitioners who would help design the generic SCI application ontology model based on their expertise and consensus. The reference applications would help SCI implementers with readymade ontology models to visualise and quickly start their SCI application journey. 
 
 The project provides an excellent collaboration and knowledge sharing opportunity to help shape and drive the unified SCI ontology model representation across organisations. Green software is a relatively new area and through this project, you can innovate, build community and contribute to the journey of this open source project.
 
 ## How does your project work?
 
-We work entirely through GitHub. [<u>Here’s our GitHub repository</u>](https://github.com/Green-Software-Foundation/SCI_open_ontology). We first discuss ideas in the discussions tab. Once we are happy with the state of the discussion and are ready to make a change, we move the discussion to a GitHub issue and start working on details of the pull request. Eventually one of the team members creates a pull request and we then have a process by which we agree on the merging of the pull request.
+We work entirely through GitHub. [Here’s our GitHub repository](https://github.com/Green-Software-Foundation/SCI_open_ontology). We first discuss ideas in the discussions tab. Once we are happy with the state of the discussion and are ready to make a change, we move the discussion to a GitHub issue and start working on details of the pull request. Eventually one of the team members creates a pull request and we then have a process by which we agree on the merging of the pull request.
 
 ## How does someone get involved in the Project? 
 

@@ -17,9 +17,9 @@ I really like the Writer’s project because we get to share the work the GSF is
 Our project has three main areas. The first is writing and curating articles about green software, how to be more energy efficient, hardware efficient and carbon aware. We also share interviews and work and news from within the GSF. Our objective is to be a learning resource for both for people with feet on the ground and hands in the code, but also for people interested in green software who aren’t necessarily engineers or developers. Like one of the philosophies in the principals of green software engineering says; everyone has a role to play in the climate solution.
 
 
-The second area of our project is translating articles into more languages than English. For example, our [<u>GSF Manifesto</u>](https://greensoftware.foundation/manifesto) is currently available in Brazilian Portuguese, Mandarin, German, Spanish, Japanese and Italian. Our core values in the GSF include being inclusive and open to all, and in the Writer’s project a big part of operationalizing this is to ensure more people have access to our content.
+The second area of our project is translating articles into more languages than English. For example, our [GSF Manifesto](https://greensoftware.foundation/manifesto) is currently available in Brazilian Portuguese, Mandarin, German, Spanish, Japanese and Italian. Our core values in the GSF include being inclusive and open to all, and in the Writer’s project a big part of operationalizing this is to ensure more people have access to our content.
 
-The third area of the Writer’s project is our external newsletter! You can [<u>sign up for our newsletter here</u>](https://grnsft.org/newsletter) if you want to receive it too. We want to increase the reach of the work within GSF by sharing articles, upcoming events and news from the GSF to everyone who is interested to learn more.
+The third area of the Writer’s project is our external newsletter! You can [sign up for our newsletter here](https://grnsft.org/newsletter) if you want to receive it too. We want to increase the reach of the work within GSF by sharing articles, upcoming events and news from the GSF to everyone who is interested to learn more.
 
 ## What progress have you made so far? 
 
@@ -43,11 +43,11 @@ For writing new articles we have both writers and reviewers, the writer will cra
 
 The best way to get involved is to check out our 3 “Help Wanted” issues of GitHub:
 
-[<u>[GSF Writers] Translating articles and other GSF content to other languages · Issue #3 · Green-Software-Foundation/community_wg · GitHub</u>](https://github.com/Green-Software-Foundation/community_wg/issues/3)
+[[GSF Writers] Translating articles and other GSF content to other languages · Issue #3 · Green-Software-Foundation/community_wg · GitHub](https://github.com/Green-Software-Foundation/community_wg/issues/3)
 
-[<u>[GSF Writers] Interested in helping with the monthly *public* Green Software Newsletter? · Issue #5 · Green-Software-Foundation/community_wg · GitHub</u>](https://github.com/Green-Software-Foundation/community_wg/issues/5)
+[[GSF Writers] Interested in helping with the monthly *public* Green Software Newsletter? · Issue #5 · Green-Software-Foundation/community_wg · GitHub](https://github.com/Green-Software-Foundation/community_wg/issues/5)
 
-[<u>[GSF Writers] Interested in writing an article for the Green Software Foundation? · Issue #4 · Green-Software-Foundation/community_wg · GitHub</u>](https://github.com/Green-Software-Foundation/community_wg/issues/4)
+[[GSF Writers] Interested in writing an article for the Green Software Foundation? · Issue #4 · Green-Software-Foundation/community_wg · GitHub](https://github.com/Green-Software-Foundation/community_wg/issues/4)
 
 ## Is it only GSF members who can get involved? Is there a way for non members?
 

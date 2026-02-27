@@ -24,7 +24,7 @@ Our TOC is the basis and the process we need in order to get to that future. We 
 
 What we are proposing is hard; adopting green software principles and patterns of working is not an easy choice. But changing the culture in the tech industry so that sustainability is a regular occurrence in conversations and discussions will make it easier to adopt green software patterns. Changing and widening the tooling will make it easier to adopt green software. And to enable both, we need changes in knowledge about the environmental effects of software.
 
-![](/assets/articles/theory-of-change/image.png)
+![GSF three-pillar strategy illustration showing Knowledge, Tech Culture, and Tooling](/assets/articles/theory-of-change/image.png)
 
 ## Pillar 1 - Knowledge
 

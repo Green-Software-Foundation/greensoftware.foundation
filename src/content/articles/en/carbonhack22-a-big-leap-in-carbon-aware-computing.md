@@ -12,7 +12,7 @@ authors:
     photo: "/assets/articles/authors/green-software-foundation.png"
 ---
 
-[<u>CarbonHack22</u>](http://grnsft.org/hack22) ran from October 13 to November 10th, as the first event of it’s kind. The most talented developers from around the globe were engaged in building the best carbon aware application using the GSF Carbon Aware SDK. We had 51 eligible projects and a total of 395 participants. The winners were announced at the GSF [<u>Decarbonize Software</u>](https://decarb.greensoftware.foundation/) event during COP27.
+[CarbonHack22](http://grnsft.org/hack22) ran from October 13 to November 10th, as the first event of it’s kind. The most talented developers from around the globe were engaged in building the best carbon aware application using the GSF Carbon Aware SDK. We had 51 eligible projects and a total of 395 participants. The winners were announced at the GSF [Decarbonize Software](https://decarb.greensoftware.foundation/) event during COP27.
 
 # Why CarbonHack22?
 
@@ -20,7 +20,7 @@ We are on a mission to reduce carbon emissions caused by software. Carbon aware 
 
 # What is the Carbon Aware SDK?
 
-The [<u>Carbon Aware SDK</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk) is an open source toolkit reducing the barriers for software practitioners when building carbon aware applications. The carbon aware SDK has two parts, a hosted API as well as a client library available in 40 different programming languages.
+The [Carbon Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware-sdk) is an open source toolkit reducing the barriers for software practitioners when building carbon aware applications. The carbon aware SDK has two parts, a hosted API as well as a client library available in 40 different programming languages.
 
 # The winners and their projects
 
@@ -28,9 +28,9 @@ The [<u>Carbon Aware SDK</u>](https://github.com/Green-Software-Foundation/carbo
 
 
 
-![](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
+![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 
-To learn more about this project, watch the [<u>YouTube video</u>](https://www.youtube.com/watch?v=N4z8XqcgZ7A).
+To learn more about this project, watch the [YouTube video](https://www.youtube.com/watch?v=N4z8XqcgZ7A).
 
 Lowcarb is a carbon-aware client selection strategy for Flower powered by the Carbon Aware SDK.
 
@@ -46,9 +46,9 @@ Congratulations to the winners Philipp Wiesner, Dennis Grinwald and Martin Schel
 
 
 
-![](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
+![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 
-To learn more about this project, watch the [<u>YouTube video</u>](https://www.youtube.com/watch?v=iOy8Yg9C2z8).
+To learn more about this project, watch the [YouTube video](https://www.youtube.com/watch?v=iOy8Yg9C2z8).
 
 Zeus is an energy optimization framework for DNN training. The solution extends Zeus to be carbon-aware. It changes the power limit on the system GPU and can be easily integrated into any DNN training job. In it’s use case, the application showed carbon emission reductions of 24% while decreasing the learning time by only 3%.
 
@@ -58,9 +58,9 @@ Congratulations to Jae-Won Chung, Zhenning Yang and Luoxi Meng.
 
 
 
-![](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
+![Lowcarb team: Philipp Wiesner, Martin Schellenberger, and Dennis Grinwald with project title Privacy-Aware Carbon-Aware Machine Learning](/assets/articles/carbonhack22-a-big-leap-in-carbon-aware-computing/image.png)
 
-To learn more about this project, watch the [<u>YouTube video</u>](https://www.youtube.com/watch?v=U1T4_wA2KR8).
+To learn more about this project, watch the [YouTube video](https://www.youtube.com/watch?v=U1T4_wA2KR8).
 
 The solution consults the carbon aware SDK for the best time to run a program in a particular timeframe. An easy to use, nice-like command for scripting that waits for the lowest carbon-density energy in a given timeframe. 
 
@@ -68,19 +68,19 @@ Congratulations to Andy Wood.
 
 ### Category winners
 
-**Most Innovative** - [<u>Sustainable UI</u>](https://youtu.be/aKOKBu7stPI)
+**Most Innovative** - [Sustainable UI](https://youtu.be/aKOKBu7stPI)
 
 A framework for building carbon aware user interfaces.
 
-**Most Polished** - [<u>GreenCourier</u>](https://youtu.be/wpjrnWCcQI8) 
+**Most Polished** - [GreenCourier](https://youtu.be/wpjrnWCcQI8) 
 
 Carbon aware server less computing
 
-**Most Insightful** - [<u>Carbon Optimised Process Scheduler</u>](https://youtu.be/pF-g7VJ1h94)
+**Most Insightful** - [Carbon Optimised Process Scheduler](https://youtu.be/pF-g7VJ1h94)
 
 A tool for time/space shifting multiple processes. 
 
-**Most Actionable** - [<u>HEDGE.earth</u>](https://youtu.be/rXqkTkR0kyI)
+**Most Actionable** - [HEDGE.earth](https://youtu.be/rXqkTkR0kyI)
 
 A carbon aware reverse proxy and so much more!
 
@@ -90,4 +90,4 @@ Even though prizes are not the only reason for participation, they are essential
 
 # Can I get involved?
 
-One of our next projects is the State of Green Software Report. Be part of the largest green software survey to ever be conducted: [<u>https://</u>stateof.greensoftware.org](https://stateof.greensoftware.org)
+One of our next projects is the State of Green Software Report. Be part of the largest green software survey to ever be conducted: [https://stateof.greensoftware.org](https://stateof.greensoftware.org)

@@ -6,7 +6,7 @@ teaserText: "Increasing the data center temperature from 18°C to 27°C resulted
 mainImage: "/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/main.png"
 ---
 
-*This article highlights how GSF member *[*Sentry Software*](https://www.sentrysoftware.com/)* successfully raised the temperature of its data center from 18°C to 27°C, resulting in significant energy savings and carbon emissions reductions. A full recording of this Green IT success story can be found *[*here*](https://grafana.com/about/events/grafanacon/2023/session/grafana-opentelemetry-to-reduce-electricity-usage-at-sentry-software/)<u>*.*</u>
+*This article highlights how GSF member *[*Sentry Software*](https://www.sentrysoftware.com/)* successfully raised the temperature of its data center from 18°C to 27°C, resulting in significant energy savings and carbon emissions reductions. A full recording of this Green IT success story can be found *[*here*](https://grafana.com/about/events/grafanacon/2023/session/grafana-opentelemetry-to-reduce-electricity-usage-at-sentry-software/)*.*
 
 ## A commitment was the trigger to take action 
 
@@ -40,27 +40,27 @@ Once Sentry Software had identified its primary source of carbon emissions and t
 
 Sentry Software first referred to its **monthly electricity bill** to understand energy usage and carbon emissions. Although valuable, this document provided little information about how the energy was consumed and by what. DCIM tools could have provided a more granular view, but these solutions were too expensive and complex to implement for an SME like Sentry Software. Sentry Software needed a cost-effective and easy-to-implement solution. It opted for its own monitoring tool, **Hardware Sentry**, to obtain the** power consumed by each system** and calculate the **energy consumed by the overall IT infrastructure**.
 
-![](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
+![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
 To make the information available to the stakeholders, the Sentry Team created specific [Grafana dashboards](https://grafana.com/grafana/dashboards/17223-hardware-sentry-main/) displaying in [real-time](https://hws-demo.sentrysoftware.com/d/-GV2ChOnz/hardware-sentry-main?orgId=1) the **overall power consumption** of the data center, the energy consumed **daily**, **monthly**, and **yearly** and the resulting **CO₂ emissions**.
 
-![](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
+![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
 ### Estimating the proper temperature 
 
 Sentry Software had maintained its data center at 18 degrees Celsius to prevent unplanned outages due to overheating. This temperature was low compared to the acceptable operating temperature range recommended by the [American Society of Heating, Refrigerating, and Air-Conditioning Engineers](https://www.ashrae.org/) (18-27°C for server rooms). To estimate the most appropriate temperature for its data center, the Sentry team checked the maximum temperature recommended by [Hardware Sentry](https://www.sentrysoftware.com/products/hardware-sentry.html). On Day 1, the data center was operating at 17.7°C, but Hardware Sentry indicated that there was no heating margin. The solution even recommended lowering the ambient temperature to 17°C to ensure the safety of the server room.
 
-![](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
+![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
 Because Hardware Sentry monitors the temperature sensors of each system, the Sentry team could identify which systems were at risk of overheating and move them closer to the source of airflow. The heating margin immediately went up, giving the green light to the Sentry team to gradually increase the data center's temperature. 
 
-![](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
+![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
 ### Gradually increasing the temperature 
 
 Every morning, the system administrators configured the air conditioning system to a new target temperature and observed the changes in their dashboards. If Hardware Sentry triggered no warnings or alerts, they continued rising the cooling setpoint. The temperature of the data center could go up to 27 degrees Celsius before Hardware Sentry issued a warning.
 
-![](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
+![Hardware Sentry monitoring diagram showing connections to Cisco, Dell, Fujitsu, HP, IBM, and Pure Storage servers](/assets/articles/how-sentry-software-reduced-its-data-center-s-electricity-usage-by-15/image.png)
 
 ### Assessing the results 
 

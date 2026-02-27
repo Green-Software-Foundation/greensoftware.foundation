@@ -18,7 +18,7 @@ This trend is not slowing down in the slightest. More complex systems mean more 
 
 # Green computing sparked by collaboration
 
-The whitepaper explains the functionality of the GSF [<u>Software Carbon Intensity (SCI)</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity) specification and [<u>carbon-aware-sdk</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk) tooling. It shows the cooperation between the two global organizations, UBS and Microsoft, in using GSF’s new standard of measurement in a UBS risk modeling application. The findings provide architectural guidance that can help other organizations reduce their carbon footprint.
+The whitepaper explains the functionality of the GSF [Software Carbon Intensity (SCI)](https://github.com/Green-Software-Foundation/software_carbon_intensity) specification and [carbon-aware-sdk](https://github.com/Green-Software-Foundation/carbon-aware-sdk) tooling. It shows the cooperation between the two global organizations, UBS and Microsoft, in using GSF’s new standard of measurement in a UBS risk modeling application. The findings provide architectural guidance that can help other organizations reduce their carbon footprint.
 
 ## “At Microsoft, we are committed to helping organizations reach their sustainability goals. Carbon-aware computing advances the measurement and reduction of carbon emissions associated with software technology at a global scale.”
 
@@ -39,14 +39,14 @@ UBS and Microsoft used the carbon-aware-sdk to validate the impact of time-shift
 3. Measure carbon intensity of the optimized workload - the actual can be different from the forecast; the query is placed for the above time window and it returns a measured 642g.
 4. Use step 1-3 to identify potential savings over time - this shows savings achieved when running the workload within the ideal time window, e.g. over the course of a week.
 
-![](/assets/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/image.png)
+![Bar chart showing carbon-aware SDK potential savings over 5 days comparing original, forecasted, and measured emissions](/assets/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/image.png)
 
 # Implementation/Architecture
 
-The[ carbon-aware-<u>sdk</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk) has been integrated into the UBS ACQA risk platform. Each joib reads Application Insights’ custom telemetry record, and then queries the carbon-aware-sdk via REST to calculate carbon intensity. This is ingested into the ACQA databricks data lake, and made available alongside other production data. This allows for generation of reports in Power BI.
+The[ carbon-aware-sdk](https://github.com/Green-Software-Foundation/carbon-aware-sdk) has been integrated into the UBS ACQA risk platform. Each joib reads Application Insights’ custom telemetry record, and then queries the carbon-aware-sdk via REST to calculate carbon intensity. This is ingested into the ACQA databricks data lake, and made available alongside other production data. This allows for generation of reports in Power BI.
 Currently, the integration is under pilot to ensure everything is production-ready; the next phase will be to begin delaying the jobs themselves, and reporting the carbon savings. Here’s the architecture they used:
 
-![](/assets/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/image.png)
+![Bar chart showing carbon-aware SDK potential savings over 5 days comparing original, forecasted, and measured emissions](/assets/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/image.png)
 
 # Taking it to the next level
 
@@ -55,12 +55,12 @@ The logical next step would be to add location selection abilities to choose reg
 To capture the absolute impact, energy consumption and embodied carbon as per the SCI would have to be included as well. Accurate energy telemetry is needed from cloud and hardware providers. A full SCI score will provide a higher degree of accuracy in determining the carbon output of running software.
 
 
-**Read the full white paper on the Microsoft website: **[<u>https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/</u>](https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/)
+**Read the full white paper on the Microsoft website: **[https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/](https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/)
 
 # How to get involved
 
-Improving the measurement of the carbon intensity of software with the SCI is a foundational GSF initiative. Organizations and software engineers are invited to contribute directly to the[ <u>SCI repository</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity). 
+Improving the measurement of the carbon intensity of software with the SCI is a foundational GSF initiative. Organizations and software engineers are invited to contribute directly to the[ SCI repository](https://github.com/Green-Software-Foundation/software_carbon_intensity). 
 
-Consider carbon-aware computing when building new software solutions or when modernizing existing ones. The GSF organizes an annual hackathon for carbon-aware computing. Read about the great ideas that emerged from[ <u>CarbonHack22</u>](https://greensoftware.foundation/articles/carbonhack22-a-big-leap-in-carbon-aware-computing) and dig deeper into the[<u> carbon-aware-sdk</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk) to leverage or extend the MVP.
+Consider carbon-aware computing when building new software solutions or when modernizing existing ones. The GSF organizes an annual hackathon for carbon-aware computing. Read about the great ideas that emerged from[ CarbonHack22](https://greensoftware.foundation/articles/carbonhack22-a-big-leap-in-carbon-aware-computing) and dig deeper into the[ carbon-aware-sdk](https://github.com/Green-Software-Foundation/carbon-aware-sdk) to leverage or extend the MVP.
 
 

@@ -13,7 +13,7 @@ Ahmad is the founder and executive director of Digital Emissions, a non-profit c
 We continually strive to raise awareness about the environmental impact of our digital actions, encompassing lifestyle, business decisions, and technology choices. Knowledge is power, and the more we delve into how our choices impact our environment, the more control we have to steer changes that minimize the negatives.
 
 
-For example, the [<u>DCF Lifestyle calculator</u>](https://www.digitalemissions.org/dcf) provides an overview of the environmental footprint of daily digital interactions with common apps on productivity, social media, entertainment, and crypto. This data offers users results that can help them make effective decisions about their digital lifestyle. For instance, armed with impact data, users can more proactively choose to opt for eco-friendly apps, modify application and device settings to minimize energy consumption, and reduce time spent on high-footprint applications. 
+For example, the [DCF Lifestyle calculator](https://www.digitalemissions.org/dcf) provides an overview of the environmental footprint of daily digital interactions with common apps on productivity, social media, entertainment, and crypto. This data offers users results that can help them make effective decisions about their digital lifestyle. For instance, armed with impact data, users can more proactively choose to opt for eco-friendly apps, modify application and device settings to minimize energy consumption, and reduce time spent on high-footprint applications. 
 
 The concept of digital carbon footprint modeling started at a Harvard Extension classroom where I teach Sustainable IT. The topic has garnered significant interest, so it made sense to pursue it further through a nonprofit tech startup, and here we are today.  
 
@@ -49,4 +49,4 @@ The adoption of green software principles needs to increase to unlock its real v
 
 For example, we have a program for all joining fellows to get green software training, including earning the Green Software Practitioner LFC131 certificate. From my point of view, we still have a lot of ground to cover in that area.
 
-![](/assets/articles/meet-ahmad-antar-digital-emissions/image.jpg)
+![Green Software Foundation and Digital Emissions logos on a nature-themed illustration](/assets/articles/meet-ahmad-antar-digital-emissions/image.jpg)

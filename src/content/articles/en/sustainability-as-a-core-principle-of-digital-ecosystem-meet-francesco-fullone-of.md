@@ -6,13 +6,13 @@ teaserText: "Fostering initiatives that bring environmental responsibility to th
 mainImage: "/assets/articles/sustainability-as-a-core-principle-of-digital-ecosystem-meet-francesco-fullone-of/main.png"
 ---
 
-As president of GrUSP since 2005, Francesco focuses on building partnerships, overseeing strategic initiatives, and identifying new areas for development. In recent years, he has led efforts to launch several projects related to diversity, equity, and inclusion, such as [<u>the Diversity and Inclusion Fund</u>](https://www.grusp.org/en/conferences_/diversity-inclusion-fund/) and scholarship programs.
+As president of GrUSP since 2005, Francesco focuses on building partnerships, overseeing strategic initiatives, and identifying new areas for development. In recent years, he has led efforts to launch several projects related to diversity, equity, and inclusion, such as [the Diversity and Inclusion Fund](https://www.grusp.org/en/conferences_/diversity-inclusion-fund/) and scholarship programs.
 
 ## Can you tell us about GrUSP? 
 
 GrUSP (Gruppo Utenti e Sviluppatori PHP) was founded in 2003 as a community focused on PHP. It has since evolved into a non-profit organization that promotes best practices in web development across a wide range of technologies. Today, GrUSP is the main point of reference in Italy for developers and professionals interested in improving the quality, accessibility, inclusiveness, and sustainability of the web. 
 
-We organize numerous [<u>conferences and community events, </u>](https://www.grusp.org/en/conferences/)including those dedicated to front-end development, DevOps, accessibility, and sustainability, to foster knowledge sharing, networking, and professional growth within the Italian and international tech community. 
+We organize numerous [conferences and community events, ](https://www.grusp.org/en/conferences/)including those dedicated to front-end development, DevOps, accessibility, and sustainability, to foster knowledge sharing, networking, and professional growth within the Italian and international tech community. 
 
 ## How does environmental sustainability fit into your organization?
 
@@ -40,6 +40,6 @@ We’re particularly interested in supporting the GSF’s outreach to developers
 
 One concrete way we hope to contribute is by translating key GSF materials, such as documents and courses, into Italian, making them accessible to a broader audience. We’re also open to organizing and hosting Italian-language GSF meetups, a community that Francesco is already actively following.
 
-In addition, we’re organizing [<u>Better Software,</u>](https://www.bettersoftware.it/) an Italian conference that takes a holistic view of Sustainable IT, including environmental, social, organizational, and economic aspects. Green software is a key theme of the event, and we would love to involve the GSF in this initiative to help inspire and educate even more professionals in our region.
+In addition, we’re organizing [Better Software,](https://www.bettersoftware.it/) an Italian conference that takes a holistic view of Sustainable IT, including environmental, social, organizational, and economic aspects. Green software is a key theme of the event, and we would love to involve the GSF in this initiative to help inspire and educate even more professionals in our region.
 
 Through all of this, we hope to learn from other GSF members, collaborate on meaningful projects, and integrate cutting-edge sustainability practices into our events, community activities, and educational efforts.

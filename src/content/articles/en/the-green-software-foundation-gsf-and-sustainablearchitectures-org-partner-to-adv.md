@@ -46,18 +46,16 @@ Through these collaborative efforts, both organizations aim to make sustainabili
 
 
 
-> “As the climate crisis accelerates, architecture and software leaders must rise to the challenge by embedding sustainability into their core design principles. Our partnership with GSF will help operationalize this vision by equipping enterprises with actionable frameworks and measurable guidance. This collaboration connects the dots between enterprise architecture and engineering. Together, we can establish a shared responsibility model for reducing digital carbon footprints—without compromising innovation.” 
-
-> "Architects make decisions that ripple through entire technology ecosystems—from infrastructure design to application deployment. By connecting IASA's architecture frameworks with GSF's measurement standards like the Software Carbon Intensity specification, we're giving architects the tools to quantify impact and make sustainability decisions based on data, not guesswork. This collaboration helps us reach the decision-makers who can drive green software adoption at enterprise scale."
-
+> As the climate crisis accelerates, architecture and software leaders must rise to the challenge by embedding sustainability into their core design principles. Our partnership with GSF will help operationalize this vision by equipping enterprises with actionable frameworks and measurable guidance. This collaboration connects the dots between enterprise architecture and engineering. Together, we can establish a shared responsibility model for reducing digital carbon footprints—without compromising innovation.
+> Architects make decisions that ripple through entire technology ecosystems—from infrastructure design to application deployment. By connecting IASA's architecture frameworks with GSF's measurement standards like the Software Carbon Intensity specification, we're giving architects the tools to quantify impact and make sustainability decisions based on data, not guesswork. This collaboration helps us reach the decision-makers who can drive green software adoption at enterprise scale.
 ## Next Steps
 
 Led by the SustainableArchitectures.org leadership team and representatives from the Green Software Foundation, the collaboration will be coordinated through designated executives from both organizations who will meet quarterly to align on priorities, track progress on shared initiatives, and ensure both communities benefit from collaborative resources and programs.
 
 We invite technology professionals, sustainability leaders, architecture practitioners, and software engineers to engage in this global movement. Learn more or join the initiative at:
 
-- [<u>www.SustainableArchitectures.org</u>](http://www.sustainablearchitectures.org)
-- [<u>https://greensoftware.foundation/</u>](https://greensoftware.foundation/) 
+- [www.SustainableArchitectures.org](http://www.sustainablearchitectures.org)
+- [https://greensoftware.foundation/](https://greensoftware.foundation/) 
 
 **Media Contact:**
 

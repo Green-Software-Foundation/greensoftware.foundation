@@ -24,7 +24,7 @@ This partnership was led by the Policy Working Group at the GSF and board direct
 
 
 
-<u>For media inquiries, please contact:</u>
+For media inquiries, please contact:
 
 Namrata Narayan
 Director of Communications & Member Relations

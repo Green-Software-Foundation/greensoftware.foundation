@@ -6,9 +6,9 @@ teaserText: "Building the data foundation for verifiable impact."
 mainImage: "/assets/articles/establishing-software-carbon-transparency-why-we-re-exploring-sci-disclosure-cert/main.png"
 ---
 
-In recent years, we've seen [<u>growing momentum across industries</u>](https://stateof.greensoftware.foundation/en/insights/green-software-business-case/) to measure and reduce the carbon impact of software. Governments, companies, and researchers are increasingly aligned in their goal to drive meaningful sustainability outcomes. Yet a common barrier persists: software carbon data isn’t easily available, especially across the supply chain.
+In recent years, we've seen [growing momentum across industries](https://stateof.greensoftware.foundation/en/insights/green-software-business-case/) to measure and reduce the carbon impact of software. Governments, companies, and researchers are increasingly aligned in their goal to drive meaningful sustainability outcomes. Yet a common barrier persists: software carbon data isn’t easily available, especially across the supply chain.
 
-Although [<u>the Software Carbon Intensity (SCI)</u>](https://www.iso.org/standard/86612.html) specification provides a clear, standardized method for calculating software emissions, many organizations remain stuck. Without a straightforward way to access supplier emissions data, most are left relying on estimates or proxy measures.
+Although [the Software Carbon Intensity (SCI)](https://www.iso.org/standard/86612.html) specification provides a clear, standardized method for calculating software emissions, many organizations remain stuck. Without a straightforward way to access supplier emissions data, most are left relying on estimates or proxy measures.
 
 This limits the quality of carbon accounting, slows methodological progress, and prevents organizations from making confident, informed decisions about their software’s environmental impact.
 
@@ -33,18 +33,16 @@ This approach unlocks two valuable feedback loops:
 - **Supply Chain Accuracy**: As more software suppliers share their SCI data, their customers can replace estimates with real values. This helps create a more accurate and connected view of emissions across the ecosystem.
 - **Methodological Learning**: Public disclosures provide much-needed insights for academic researchers and peer organizations. Access to real-world data supports iterative improvements to the SCI framework and enables the development of tools and best practices.
 
-![](/assets/articles/establishing-software-carbon-transparency-why-we-re-exploring-sci-disclosure-cert/image.png)
+![SCI Certificate of Disclosure mockup showing key sections: SCI score, component breakdown, auditing organisation, and methodology](/assets/articles/establishing-software-carbon-transparency-why-we-re-exploring-sci-disclosure-cert/image.png)
 
-## **Building on Our Values **
-
+## Building on Our Values 
 This approach reflects our mission to build a trusted, transparent ecosystem that enables measurable change. By creating a structure that supports disclosure, we’re helping organizations take a meaningful first step toward carbon accountability, without requiring them to have all the answers upfront.
 
 We’ve also seen firsthand how eager many of our member organizations are to contribute. Enabling recognition for openness today helps build confidence, encourage adoption, and foster knowledge-sharing across the industry.
 
-Tools such as the [<u>Impact Framework</u>](https://if.greensoftware.foundation/) and community-contributed resources continue to make SCI measurement more accessible. A certification rooted in transparency would mark a new chapter in software measurement adoption.
+Tools such as the [Impact Framework](https://if.greensoftware.foundation/) and community-contributed resources continue to make SCI measurement more accessible. A certification rooted in transparency would mark a new chapter in software measurement adoption.
 
-## **What’s Next**
-
+## What’s Next
 We’re in the early stages of exploring how structured disclosure could be recognized and supported, but its potential impact is significant.
 
 A disclosure-first approach wouldn’t replace formal certification programs; it would make them possible by building the empirical foundation they require. Organizations would receive immediate recognition for their transparency while contributing to the collective knowledge that advances the entire field.
@@ -53,4 +51,4 @@ As we continue to shape this work, we remain committed to openness about our own
 
 Together, we can drive the future of green software forward, powered by transparency, collaboration, and shared progress.
 
-The Green Software Foundation is led by global leaders in technology and sustainability, including Avanade, BCG X, Cisco, Google, Microsoft, NTT DATA, Siemens, and UBS. To align with our work and help shape the adoption of software sustainability standards, consider [<u>becoming a member</u>](https://greensoftware.foundation/join-us/).
+The Green Software Foundation is led by global leaders in technology and sustainability, including Avanade, BCG X, Cisco, Google, Microsoft, NTT DATA, Siemens, and UBS. To align with our work and help shape the adoption of software sustainability standards, consider [becoming a member](https://greensoftware.foundation/join-us/).

@@ -7,11 +7,11 @@ mainImage: "/assets/articles/fostering-carbon-aware-operating-strategies-meet-ja
 ---
 
 
-Jared started his career at NREL in 2009. He worked for several clean tech software startups from 2017-2023, before returning to NREL. He now runs the [<u>Joint Institute for Strategic Energy Analysis’s (JISEA)</u>](https://www.jisea.org/) Catalyzer Initiative. The program focuses on planning and assessment activities around novel, cross-cutting research areas of emerging critical importance and develops new capabilities to support those topics.
+Jared started his career at NREL in 2009. He worked for several clean tech software startups from 2017-2023, before returning to NREL. He now runs the [Joint Institute for Strategic Energy Analysis’s (JISEA)](https://www.jisea.org/) Catalyzer Initiative. The program focuses on planning and assessment activities around novel, cross-cutting research areas of emerging critical importance and develops new capabilities to support those topics.
 
 # Can you tell us more about NREL?
 
-The [<u>National Renewable Energy Laboratory (NREL)</u>](https://www.nrel.gov/about/) is a U.S. federal research facility dedicated to the development of renewable energy and energy efficiency technologies. NREL focuses on a broad spectrum of energy research areas to solve today’s energy challenges. Our aim is to advance and increase the adoption of sustainable energy solutions to reduce dependency on fossil fuels and curb climate change. NREL plays a crucial role in supporting the United States' clean energy transition, offering technical expertise to government and industry partners.
+The [National Renewable Energy Laboratory (NREL)](https://www.nrel.gov/about/) is a U.S. federal research facility dedicated to the development of renewable energy and energy efficiency technologies. NREL focuses on a broad spectrum of energy research areas to solve today’s energy challenges. Our aim is to advance and increase the adoption of sustainable energy solutions to reduce dependency on fossil fuels and curb climate change. NREL plays a crucial role in supporting the United States' clean energy transition, offering technical expertise to government and industry partners.
 
 # How does that tie into green IT?
 

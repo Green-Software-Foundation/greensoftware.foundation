@@ -23,7 +23,7 @@ authors:
 
 ## Most of us know Shell as an energy company. How does software come into the picture?
 
-[Shell](http://www.shell.com/) is both a leader in the energy industry and a leader of the energy transformation, moving towards clean and renewable energy sources by implementing Shell’s [<u>Powering Progress strategy</u>](https://www.shell.com/powering-progress.html). 
+[Shell](http://www.shell.com/) is both a leader in the energy industry and a leader of the energy transformation, moving towards clean and renewable energy sources by implementing Shell’s [Powering Progress strategy](https://www.shell.com/powering-progress.html). 
 
 As a leader in the energy industry, it’s very important that we’re not only building solutions to meet the needs of the future energy business, but that we’re also understanding the impact of the solutions themselves. The ability to build solutions that are aware of their energy and carbon impact allows us to build solutions with a complete picture of what our impact is and how we can continue to improve it. That makes Green Software a key element of all future software solutions at Shell. Partnering with the Green Software Foundation allows us to make sure we’re bringing the latest standards, practices, and guidance into our team, and contribute back our learnings and input as a company looking to implement at a large scale.
 
@@ -35,7 +35,7 @@ In practice, I spend about half my time as a technical delivery leader such as a
 
 My role allows me the opportunity to keep an eye on where the software industry is moving, what Shell’s needs are, and how we can tie them together to meet Shell’s strategic needs. 
 
-Shell is now deep in energy transition. We’ve been leveraging some capabilities to build ‘smarter’ software for a few years now, which includes understanding our energy and carbon footprint. Earlier this year, the announcement at [<u>Microsoft Build gave us the awareness of the Green Software Foundation</u>](https://blogs.microsoft.com/blog/2021/05/25/accenture-github-microsoft-and-thoughtworks-launch-the-green-software-foundation-with-the-linux-foundation-to-put-sustainability-at-the-core-of-software-engineering/). It seemed to be a great alignment with where Shell both needed and wanted to go. In the months since, we've been building the engagement, relationships, and strategy to start bringing green software into the core of our development and operational approach.
+Shell is now deep in energy transition. We’ve been leveraging some capabilities to build ‘smarter’ software for a few years now, which includes understanding our energy and carbon footprint. Earlier this year, the announcement at [Microsoft Build gave us the awareness of the Green Software Foundation](https://blogs.microsoft.com/blog/2021/05/25/accenture-github-microsoft-and-thoughtworks-launch-the-green-software-foundation-with-the-linux-foundation-to-put-sustainability-at-the-core-of-software-engineering/). It seemed to be a great alignment with where Shell both needed and wanted to go. In the months since, we've been building the engagement, relationships, and strategy to start bringing green software into the core of our development and operational approach.
 
 ## What do you expect to achieve by working with the GSF and in green software in general?
 

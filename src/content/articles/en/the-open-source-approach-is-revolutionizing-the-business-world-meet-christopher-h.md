@@ -36,7 +36,7 @@ EPAM’s motivation was to join the Green Software Foundation, not just to show 
 
 EPAM’s culture. An internal hackathon, which kicked off in April 2023, will steer us in the direction of discovering where we might be able to contribute most effectively to the Foundation’s objectives.
 
-![](/assets/articles/the-open-source-approach-is-revolutionizing-the-business-world-meet-christopher-h/image.jpeg)
+![Christopher Howard presenting at a conference podium with presentation slides visible behind him](/assets/articles/the-open-source-approach-is-revolutionizing-the-business-world-meet-christopher-h/image.jpeg)
 
 ## Is Open-Source changing the way we do business?
 

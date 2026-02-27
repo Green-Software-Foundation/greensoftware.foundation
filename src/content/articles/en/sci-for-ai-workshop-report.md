@@ -75,11 +75,11 @@ This section summarizes selected existing metrics and evaluates them using the r
 
 The characteristics of each metric may vary regarding specific user needs. Because each metric serves different purposes and audiences, it’s important to clarify why a metric is useful and who benefits most from it. This helps users select the right tools to meet their specific sustainability goals.
 
-### [<u>Green AI Index</u>](https://www.uasdf.org/whitepaper-ai/blog-post-title-one-4g6n3?srsltid=AfmBOorSqyciv1U-ytB1sUfYR7aewFfduTI5-oQzApweeXyk35gbmnBq)
+### [Green AI Index](https://www.uasdf.org/whitepaper-ai/blog-post-title-one-4g6n3?srsltid=AfmBOorSqyciv1U-ytB1sUfYR7aewFfduTI5-oQzApweeXyk35gbmnBq)
 
 #### Description
 
-Released by the [<u>Green AI Institute</u>](https://www.greenai.institute/) in 2024, the tool aims to “promote transparency, encourage more sustainable practices, incentivize carbon-efficient innovations, and guide policymakers, organizations, and developers in reducing their environmental footprint.”
+Released by the [Green AI Institute](https://www.greenai.institute/) in 2024, the tool aims to “promote transparency, encourage more sustainable practices, incentivize carbon-efficient innovations, and guide policymakers, organizations, and developers in reducing their environmental footprint.”
 
 The metric comes in two variants: the Data Center Index, which maps GHG Protocol scopes 1–3 to data center operations, and the AI Model Index, which is more relevant to SCI for AI. Unlike traditional function-based breakdowns (e.g., training vs. inference), the model index categorizes emissions into operational and embodied components and includes hardware such as GPUs, CPUs, SSDs, and renewable infrastructure.
 
@@ -116,7 +116,7 @@ Requires highly detailed measurement data. Currently, it doesn’t provide an ac
 
 **⚠️ NOTE Carbon offsets are mentioned as a valid inventory item for the Data Center index** but not mentioned for the Green AI model index–the suggestion is to make decisions based on the jurisdiction you are operating in.
 
-### [<u>EcoLogits</u>](https://ecologits.ai/latest/methodology/llm_inference/) 
+### [EcoLogits](https://ecologits.ai/latest/methodology/llm_inference/) 
 
 #### Description
 
@@ -148,7 +148,7 @@ However, this simplicity comes with limitations in scope and transparency, as th
 
 Energy consumption and environmental impacts are tracked using Gen AI models through APIs. It supports major LLM providers such as OpenAI, Anthropic, Mistral AI, and others. 
 
-### [<u>EnergyScore </u>](https://huggingface.github.io/AIEnergyScore/)
+### [EnergyScore ](https://huggingface.github.io/AIEnergyScore/)
 
 #### Description 
 
@@ -243,7 +243,7 @@ For SCI for AI to achieve its intended impact, it must *incentivize* a clear and
 - Evaluate tradeoffs between accuracy and efficiency.
 - Realizing cost savings through improved efficiency (e.g., reduced cloud time)
 
-Other Green AI patterns as detailed here: [<u>https://patterns.greensoftware.foundation/catalog/ai</u>](https://patterns.greensoftware.foundation/catalog/ai)
+Other Green AI patterns as detailed here: [https://patterns.greensoftware.foundation/catalog/ai](https://patterns.greensoftware.foundation/catalog/ai)
 
 | | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
 |---|---|---|---|---|
@@ -259,14 +259,14 @@ Other Green AI patterns as detailed here: [<u>https://patterns.greensoftware.fou
 | Use efficient file formats | ✅ | ❌ | ❌ | ❌ |
 | Evaluate tradeoffs between accuracy and efficiency | ❌ | ❌ | ❌ | ❌ |
 
-*[<u>The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.
-</u>](https://huggingface.github.io/AIEnergyScore/)
+*[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.
+](https://huggingface.github.io/AIEnergyScore/)
 
 ## Green AI 
 
 ### Lifecycle stages 
 
-The Green AI Committee (GAIC) at the GSF [<u>has defined Green AI </u>](https://greensoftware.foundation/articles/green-ai-position-paper)as: 
+The Green AI Committee (GAIC) at the GSF [has defined Green AI ](https://greensoftware.foundation/articles/green-ai-position-paper)as: 
 
 *Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.*
 
@@ -293,9 +293,9 @@ The SCI measurement framework shall be designed to incentivize optimizations acr
 | Runtime operations | ✅ | ☑️** | ☑️*** | ✅ |
 | End of life | ❌ | ❌ | ❌ | ❌ |
 
-** [<u>Refers to the computation of the GPU-equipped servers. </u>](https://ecologits.ai/latest/methodology/)
+** [Refers to the computation of the GPU-equipped servers. ](https://ecologits.ai/latest/methodology/)
 
-***[<u> The score excludes CPU, RAM, networking, and storage energy, which can contribute to an additional consumption of 30% or more.</u>](https://huggingface.github.io/AIEnergyScore/#methodology)
+***[ The score excludes CPU, RAM, networking, and storage energy, which can contribute to an additional consumption of 30% or more.](https://huggingface.github.io/AIEnergyScore/#methodology)
 
 ## Clarity and Consistency
 
@@ -357,12 +357,12 @@ To help shape standards, tools, and best practices in green software, consider [
 
 ## Further reading: 
 
-[<u>https://arxiv.org/pdf/2407.10237</u>](https://arxiv.org/pdf/2407.10237) 
+[https://arxiv.org/pdf/2407.10237](https://arxiv.org/pdf/2407.10237) 
 
-[<u>https://cloud.google.com/blog/topics/sustainability/tpus-improved-carbon-efficiency-of-ai-workloads-by-3x</u>](https://cloud.google.com/blog/topics/sustainability/tpus-improved-carbon-efficiency-of-ai-workloads-by-3x) 
+[https://cloud.google.com/blog/topics/sustainability/tpus-improved-carbon-efficiency-of-ai-workloads-by-3x](https://cloud.google.com/blog/topics/sustainability/tpus-improved-carbon-efficiency-of-ai-workloads-by-3x) 
 
-[<u>https://www.sciencedirect.com/science/article/pii/S2212827124001173</u>](https://www.sciencedirect.com/science/article/pii/S2212827124001173) 
+[https://www.sciencedirect.com/science/article/pii/S2212827124001173](https://www.sciencedirect.com/science/article/pii/S2212827124001173) 
 
-[<u>https://wiki.greensoftware.foundation/governance-consensus</u>](https://wiki.greensoftware.foundation/governance-consensus) 
+[https://wiki.greensoftware.foundation/governance-consensus](https://wiki.greensoftware.foundation/governance-consensus) 
 
-[<u>https://www.uasdf.org/whitepaper-fullaccess</u>](https://www.uasdf.org/whitepaper-fullaccess) 
+[https://www.uasdf.org/whitepaper-fullaccess](https://www.uasdf.org/whitepaper-fullaccess) 

@@ -10,7 +10,7 @@ mainImage: "/assets/articles/green-software-patterns-catalog-the-next-chapter/ma
 
 Early in our journey, members like AVEVA and Mastercard recognized that if we are to succeed in significantly reducing software’s carbon emissions, we need a knowledge base of trusted guidelines. In an effort to audit what was available, it became clear that one of the biggest challenges was finding resources, which were scattered across various publications, articles, and videos. 
 
-In response, we launched [<u>Green Software Patterns</u>](https://patterns.greensoftware.foundation/) in 2022. The Catalog offered the first batch of examples of how to apply a [<u>set of competencies</u>](https://learn.greensoftware.foundation/) to build greener software–50 patterns covering AI, Cloud & Web. Each pattern went through a review and consensus process, ensuring relevance and applicability across diverse industries and use cases. 
+In response, we launched [Green Software Patterns](https://patterns.greensoftware.foundation/) in 2022. The Catalog offered the first batch of examples of how to apply a [set of competencies](https://learn.greensoftware.foundation/) to build greener software–50 patterns covering AI, Cloud & Web. Each pattern went through a review and consensus process, ensuring relevance and applicability across diverse industries and use cases. 
 
 Early in 2024, members including Daniel Lazaro (AVEVA), Denis Angeletta (NTT DATA), Evan Price (Mastercard), Felipe Almeida (Microsoft), Filippo Galeazzi (Shell), Franziska Warncke (NTT DATA), Greg Rivera (CAST), Ioannis Kolaxis (Accenture), Joseph Rossetto (AVEVA), Karthikeyan Kumar (Shell), Klaus Graefensteiner (AVEVA), Michael Mueller (re:cinq), Paula De Matos (AVEVA), Philipp Quaet-Faslem (Siemens), Simon Thurman (Microsoft), Carolin Rubner (Siemens), Sean O'Keefe (Microsoft), Santiago Fontanarrosa (Globant), and Thomas Lewis (Microsoft), participated in a Design Thinking workshop focused on evolving the Green Software Pattern project. Members were eager to make the catalog more relevant to a larger audience and individual roles, providing real-world examples and guidance on implementation. 
 
@@ -53,7 +53,7 @@ During the workshops, members discussed expanding the Catalog’s reach and stre
 
 - **The Developer experience needs to be green by default**. Green software patterns should be easy to embed into practitioners' tools–including software development Integrated Development Environments, DevOps, repos, and management tools–to enable sustainability improvements in the design phase. 
 - **Patterns must enable sustainability-led informed decision-making**. While many important choices are made during the design phase, the Catalog needs to provide guidance on what patterns to implement through use cases.
-- **Measurement matters**. Organizations worldwide should be able to automatically assess the green impact of their software and continuously apply green software patterns using tools like [<u>Impact Framework</u>](https://if.greensoftware.foundation/) (IF) to measure emissions before and after implementation.
+- **Measurement matters**. Organizations worldwide should be able to automatically assess the green impact of their software and continuously apply green software patterns using tools like [Impact Framework](https://if.greensoftware.foundation/) (IF) to measure emissions before and after implementation.
 - **AI is a key enabler**. AI can be a powerful agent to advance sustainable software development. However, the environmental impact of AI itself must be measurable and, ideally, carbon-neutral.
 
 ## Roadmap
@@ -67,16 +67,16 @@ In the final stage of the workshop, participants reflected on each step to defin
 *Disclaimer: The vision above only reflects the perspectives of the workshop participants. It does not represent a consensus view of the project team or the Green Software Foundation.*
 
 <figure>
-<img src="/assets/articles/green-software-patterns-catalog-the-next-chapter/gs-patterns-catalog-roadmap.png" alt="" />
-<figcaption><em>GS Patterns Catalog Roadmap</em></figcaption>
+<img src="/assets/articles/green-software-patterns-catalog-the-next-chapter/gs-patterns-catalog-roadmap.png" alt="Roadmap timeline from today to 2027 showing milestones for the Green Software Patterns Catalog" />
+<figcaption>*GS Patterns Catalog Roadmap*</figcaption>
 </figure>
 
 ## How to Contribute
 
 As the Catalog grows and evolves, we're excited to announce that GS Patterns v2 will include persona-based and behavioral patterns. We would love to have your contributions to make it even better. Join us in shaping the future of this project!
 
-To offer your support,[ <u>join the GSF as a member</u>](https://greensoftware.foundation/join-us/). 
+To offer your support,[ join the GSF as a member](https://greensoftware.foundation/join-us/). 
 
 Project Leads:** Franziska Warncke (NTT DATA)** and **Liya Mathew (Goldman Sachs)** are driving the vision and execution of GS Patterns v2, aiming to make it more actionable and impactful for the community.
 
-A special **thank you **to[*** ***<u>Peter Wadsworth</u>](https://www.linkedin.com/in/petewadsworth/) (Innovation Consultant) and Russ Trow (GSF) for designing and facilitating these workshops.
+A special **thank you **to[*** ***Peter Wadsworth](https://www.linkedin.com/in/petewadsworth/) (Innovation Consultant) and Russ Trow (GSF) for designing and facilitating these workshops.

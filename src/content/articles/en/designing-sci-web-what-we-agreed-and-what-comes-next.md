@@ -97,7 +97,7 @@ We’re excited for SCI for Web to become a credible and usable standard across 
 **If you’re a GSF member:  **
 
 - **Become a project co-chair **to support Chris Adams (Green Web Foundation) in leading the SCI for Web project. Co-chairs help facilitate working sessions and review draft content. **Get in touch with the project team: sci-for-web@greensoftware.foundation **
-- **Join **[<u>**the Software Standards Working Group**</u>](https://directory.greensoftware.foundation/working-groups/software-standards-working-group/) and help shape the specification through draft review, implementation testing, and technical feedback.
+- **Join **[**the Software Standards Working Group**](https://directory.greensoftware.foundation/working-groups/software-standards-working-group/) and help shape the specification through draft review, implementation testing, and technical feedback.
 
 **Not a member yet?**
 

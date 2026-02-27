@@ -6,7 +6,7 @@ teaserText: "What merging SSIA into the GSF means for green software"
 mainImage: "/assets/articles/ssia-joins-the-green-software-foundation/main.jpg"
 ---
 
-Read the full announcement [<u>here</u>](https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat).
+Read the full announcement [here](https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat).
 
 Software and hardware have traditionally been developed in isolation from one another, each with their set of standards and protocols, without necessarily considering the other. Now, as we dive deeper into an AI-driven world, the opportunity to better understand the challenges of digital infrastructure and actively participate in the development of hardware standards comes at a defining time for software.
 
@@ -33,6 +33,6 @@ We’re looking forward to continuing to provide spaces where individuals can sh
 
 ## Get Involved
 
-**Become a Member:** If you’re not already a member, [<u>join the Green Software Foundation</u>](https://greensoftware.foundation/join-us) to help develop the next generation of software and hardware standards.
+**Become a Member:** If you’re not already a member, [join the Green Software Foundation](https://greensoftware.foundation/join-us) to help develop the next generation of software and hardware standards.
 
-**Participate in the Hardware Standards Workshop:** member organizations can [<u>express interest</u>](https://workshops.greensoftware.foundation/mycelium-workshop) in joining the initial Hardware Standards Workshop in Q1 2025. This invite-only session will bring together leading voices in software and hardware sustainability to collaborate on the Hardware Standards Working Group charter and initial projects.
+**Participate in the Hardware Standards Workshop:** member organizations can [express interest](https://workshops.greensoftware.foundation/mycelium-workshop) in joining the initial Hardware Standards Workshop in Q1 2025. This invite-only session will bring together leading voices in software and hardware sustainability to collaborate on the Hardware Standards Working Group charter and initial projects.

@@ -21,7 +21,7 @@ authors:
         link: "https://diyunuwablog.com/"
 ---
 
-Abhishek Gupta of Microsoft and Henry Richardson of WattTime are Co-Chairs of the Software Carbon Intensity (SCI) Specification Project of the [<u>Standards Working Group</u>](https://greensoftware.foundation/working-groups/standards). The [<u>alpha version of the SCI</u>](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity) was launched in December 2021. You can read more about the process of [<u>how the SCI specification was crafted</u>](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) in an earlier article from Abhishek. In this interview the Co-Chairs talk about what the future holds for the SCI Specification. 
+Abhishek Gupta of Microsoft and Henry Richardson of WattTime are Co-Chairs of the Software Carbon Intensity (SCI) Specification Project of the [Standards Working Group](https://greensoftware.foundation/working-groups/standards). The [alpha version of the SCI](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity) was launched in December 2021. You can read more about the process of [how the SCI specification was crafted](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) in an earlier article from Abhishek. In this interview the Co-Chairs talk about what the future holds for the SCI Specification. 
 
 ## First, tell us why each of you find this project exciting.
 
@@ -59,11 +59,11 @@ The main areas of the project are development of the SCI itself which involves w
 
 We work via consensus and voting. Our aim is to ensure all members agree on all changes to the specification, in the case where we cannot reach consensus we hold a vote.
 
-We work entirely through GitHub. Here’s [<u>our GitHub repo</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity). We first discuss ideas in the discussions tab. Once we are happy with the state of the discussion and are ready to make a change to the specification, we move the discussion to a GitHub issue and start working on details of the pull request (PR). Eventually one of the team members creates a PR and we then have a process by which we agree on the merging of the PR.
+We work entirely through GitHub. Here’s [our GitHub repo](https://github.com/Green-Software-Foundation/software_carbon_intensity). We first discuss ideas in the discussions tab. Once we are happy with the state of the discussion and are ready to make a change to the specification, we move the discussion to a GitHub issue and start working on details of the pull request (PR). Eventually one of the team members creates a PR and we then have a process by which we agree on the merging of the PR.
 
 ## How can someone get involved? Is it only GSF members who can get involved? Is there a way for non members?
 
-Since all of our work, meeting notes, and agenda items are publicly visible on the GitHub repo, we encourage anyone who is interested in the domain to bring their ideas to those discussions. The live [<u>Standards Working Group</u>](https://greensoftware.foundation/working-groups/standards) meetings are reserved for GSF members though there is the potential to invite guest speakers and external contributors on occasion. We also now have a [<u>Discourse forum</u>](https://discourse.greensoftware.foundation/) where we invite the broader green software engineering community to come and engage with us on the subject.
+Since all of our work, meeting notes, and agenda items are publicly visible on the GitHub repo, we encourage anyone who is interested in the domain to bring their ideas to those discussions. The live [Standards Working Group](https://greensoftware.foundation/working-groups/standards) meetings are reserved for GSF members though there is the potential to invite guest speakers and external contributors on occasion. We also now have a [Discourse forum](https://discourse.greensoftware.foundation/) where we invite the broader green software engineering community to come and engage with us on the subject.
 
 ## What does an individual GSF member get from becoming involved in your project? 
 
@@ -71,13 +71,13 @@ GSF members participating in this project have the opportunity to engage with pe
 
 GSF members who are interested in joining the project should email the Co-Chairs or contact them via GSF Slack. 
 
-Case studies and use cases are central to the roadmap for v1 of the SCI. We actively invite contributions from practitioners who are exploring how to apply the SCI to their projects with a view to meet their sustainability commitments. There is a handy template available on the [<u>SCI GitHub repo</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity) that one can use to make this contribution. 
+Case studies and use cases are central to the roadmap for v1 of the SCI. We actively invite contributions from practitioners who are exploring how to apply the SCI to their projects with a view to meet their sustainability commitments. There is a handy template available on the [SCI GitHub repo](https://github.com/Green-Software-Foundation/software_carbon_intensity) that one can use to make this contribution. 
 
 ## What challenges do you see for the project and how do you plan to overcome them?
 
 The biggest barrier at the moment is a dearth of case studies. 
 
-Another is the broader inertia in the domain around existing ways of carbon accounting like the [<u>Greenhouse Gas (GHG) Protocol</u>](https://ghgprotocol.org/) which is attributional vs. the consequentialist approach that is advocated within the SCI. Through our publications and engaging with the software community, we’ve seen momentum in using our approach and how it is better suited to carbon impacts assessment for software compared to existing methods. 
+Another is the broader inertia in the domain around existing ways of carbon accounting like the [Greenhouse Gas (GHG) Protocol](https://ghgprotocol.org/) which is attributional vs. the consequentialist approach that is advocated within the SCI. Through our publications and engaging with the software community, we’ve seen momentum in using our approach and how it is better suited to carbon impacts assessment for software compared to existing methods. 
 
 ## What can we expect from your project in the near future? 
 

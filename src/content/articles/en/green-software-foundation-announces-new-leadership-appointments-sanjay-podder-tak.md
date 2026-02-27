@@ -8,7 +8,7 @@ mainImage: "/assets/articles/green-software-foundation-announces-new-leadership-
 
 Delaware, February 8, 2024 – The Green Software Foundation (GSF) proudly announces new leadership appointments within its Steering Committee. Sanjay Podder, managing director and global lead for Technology Sustainability Innovation at Accenture, takes on the role of Chair of the Board, succeeding Asim Hussain, recently appointed as Executive Director. Joining Sanjay as vice chair is Chris Lloyd-Jones, Head Architect and Strategy, Next Architecture and Transformation for the Office of the CTO at Avanade.
 
-Accenture is a [<u>founding member</u>](https://newsroom.accenture.com/news/2021/accenture-github-microsoft-and-thoughtworks-launch-the-green-software-foundation-with-the-linux-foundation-to-put-sustainability-at-the-core-of-software-engineering) of the Green Software Foundation, and Sanjay Podder brings tremendous knowledge and experience in sustainable digital practices. His leadership has already catalyzed significant advancements across the Foundation, rallying leaders from multiple enterprises to adopt and advocate for green software engineering standards and practices. Sanjay’s forward-thinking approach applies advancements in AI technology to drive sustainability in software design and deployment.
+Accenture is a [founding member](https://newsroom.accenture.com/news/2021/accenture-github-microsoft-and-thoughtworks-launch-the-green-software-foundation-with-the-linux-foundation-to-put-sustainability-at-the-core-of-software-engineering) of the Green Software Foundation, and Sanjay Podder brings tremendous knowledge and experience in sustainable digital practices. His leadership has already catalyzed significant advancements across the Foundation, rallying leaders from multiple enterprises to adopt and advocate for green software engineering standards and practices. Sanjay’s forward-thinking approach applies advancements in AI technology to drive sustainability in software design and deployment.
 
 "We see technology as pivotal in forging a sustainable future for both businesses and society," Sanjay said. “We are committed to working alongside the Green Software Foundation to transform this vision into actionable solutions.”
 
@@ -18,7 +18,7 @@ Chris Lloyd-Jones is dedicated to leveraging open source for sustainable softwar
 
 The Steering Committee remains steadfast in its commitment to accelerating industry-wide adoption of green software principles, expanding the global network of trained green software practitioners, and advancing knowledge, culture, and tooling to reduce the environmental impacts of software. Chairs serve a two-year term.
 
-The Foundation invites all stakeholders to congratulate Sanjay and Chris on their new roles. The Steering Committee includes Accenture, Avanade, BCG X, GitHub, Globant, Intel, Microsoft, NTT Data, Siemens, Thoughtworks, and UBS. Additional organizations are welcome to [<u>**contribute to GSF’s governance**</u>](https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy).
+The Foundation invites all stakeholders to congratulate Sanjay and Chris on their new roles. The Steering Committee includes Accenture, Avanade, BCG X, GitHub, Globant, Intel, Microsoft, NTT Data, Siemens, Thoughtworks, and UBS. Additional organizations are welcome to [**contribute to GSF’s governance**](https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy).
 
 
 

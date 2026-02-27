@@ -21,7 +21,7 @@ Data scientists, machine learning engineers, and other technical stakeholders in
 
 Yes! Particularly because it has implications towards both the environment and societal implications of AI systems. 
 
-Incorporating sustainability in AI can allow us to (1) achieve social justice when we utilize this approach, and (2) especially so when these systems operate in an inherently socio-technical context. Indeed, a [<u>harmonized approach accounting for both societal and environmental considerations</u>](https://arxiv.org/abs/2006.06217) in the design, development, and deployment of AI systems can lead us to gains that support the triple bottom line: profits, people, and planet.
+Incorporating sustainability in AI can allow us to (1) achieve social justice when we utilize this approach, and (2) especially so when these systems operate in an inherently socio-technical context. Indeed, a [harmonized approach accounting for both societal and environmental considerations](https://arxiv.org/abs/2006.06217) in the design, development, and deployment of AI systems can lead us to gains that support the triple bottom line: profits, people, and planet.
 
 ### Challenges with the current paradigm 
 
@@ -37,13 +37,13 @@ Such large systems also hinder democratization of AI; they require huge computat
 
 #### Centered on business and functional requirements ignoring environmental costs
 
-Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers towards their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [<u>MLCommons</u>](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
+Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers towards their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [MLCommons](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
 
 ## What is sustainable AI?
 
 In a nutshell, sustainable AI refers to cognizance and efforts invested in making sustainability an equal first-class citizen with business and functional requirements in the design, development, and deployment of AI systems. 
 
-It should take a lifecycle approach to [<u>accounting for the carbon impacts</u>](https://devblogs.microsoft.com/sustainable-software/the-current-state-of-affairs-and-a-roadmap-for-effective-carbon-accounting-tooling-in-ai/?WT.mc_id=green-30456-cxa) of such systems from the hardware running the systems to the software and back up to the hardware that consumes the applications on the users’ side. 
+It should take a lifecycle approach to [accounting for the carbon impacts](https://devblogs.microsoft.com/sustainable-software/the-current-state-of-affairs-and-a-roadmap-for-effective-carbon-accounting-tooling-in-ai/?WT.mc_id=green-30456-cxa) of such systems from the hardware running the systems to the software and back up to the hardware that consumes the applications on the users’ side. 
 
 This includes:
 
@@ -59,6 +59,6 @@ There are some immediate next steps that you can take to make sustainable AI sys
 - Explore the efficiency of various hardware configurations and separate out utilization based on training or inference phases of the AI lifecycle.
 - Explore distilled networks and compressed architectures as a way of reducing the size of the AI models.
 
-If you find other ways to reduce the impact of AI systems on the environment, please don’t hesitate to reach out to us at the [<u>Green Software Foundation</u>](https://greensoftware.foundation/). Consider getting involved in our work on constructing a [<u>Software Carbon Intensity Standard</u>](https://github.com/green-software-foundation/software_carbon_intensity/) (SCI). It will create a standardized and interoperable way to measure the impact of software systems empowering both developers and consumers to make informed greener choices. 
+If you find other ways to reduce the impact of AI systems on the environment, please don’t hesitate to reach out to us at the [Green Software Foundation](https://greensoftware.foundation/). Consider getting involved in our work on constructing a [Software Carbon Intensity Standard](https://github.com/green-software-foundation/software_carbon_intensity/) (SCI). It will create a standardized and interoperable way to measure the impact of software systems empowering both developers and consumers to make informed greener choices. 
 
-*This article is based on a research article published by *[<u>*Abhishek Gupta*</u>](https://twitter.com/atg_abhishek)* for *[<u>*The Gradient*</u>](https://thegradient.pub/)* titled “*[<u>*The Imperative for Sustainable AI Systems*</u>](https://thegradient.pub/sustainable-ai/)*”. Follow the link to read a more extended version of this article. *
+*This article is based on a research article published by *[*Abhishek Gupta*](https://twitter.com/atg_abhishek)* for *[*The Gradient*](https://thegradient.pub/)* titled “*[*The Imperative for Sustainable AI Systems*](https://thegradient.pub/sustainable-ai/)*”. Follow the link to read a more extended version of this article. *

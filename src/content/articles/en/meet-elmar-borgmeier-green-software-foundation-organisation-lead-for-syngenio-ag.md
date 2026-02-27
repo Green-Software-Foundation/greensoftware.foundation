@@ -21,7 +21,7 @@ authors:
         link: "https://diyunuwablog.com/"
 ---
 
-We talked about [<u>Syngenio and how the company started</u>](https://greensoftware.foundation/articles/syngenio-ag-joins-the-green-software-foundation) in an earlier interview. 
+We talked about [Syngenio and how the company started](https://greensoftware.foundation/articles/syngenio-ag-joins-the-green-software-foundation) in an earlier interview. 
 
 ## Now tell us about you and your current work at Syngenio
 
@@ -39,9 +39,9 @@ Brokat rapidly became a major success, but drowned even more rapidly when the do
 
 ## How did you get interested in green software?
 
-I’ve been concerned about global warming for many years. For example, I’ve been using car sharing instead of owning a car for ages. So, when our board member Jürgen Funke—[<u>his GSF interview is here</u>](https://greensoftware.foundation/articles/syngenio-ag-joins-the-green-software-foundation)—came up with the idea that we could apply our expertise in software development to make the software itself more eco-friendly, I loved the idea. We got some colleagues together and worked it out. I’d like to mention Wilhelm Kuhn and Marina Emsing here, and of course Stephanie Kamp. Jürgen gave it a go, and I am very happy he did so. 
+I’ve been concerned about global warming for many years. For example, I’ve been using car sharing instead of owning a car for ages. So, when our board member Jürgen Funke—[his GSF interview is here](https://greensoftware.foundation/articles/syngenio-ag-joins-the-green-software-foundation)—came up with the idea that we could apply our expertise in software development to make the software itself more eco-friendly, I loved the idea. We got some colleagues together and worked it out. I’d like to mention Wilhelm Kuhn and Marina Emsing here, and of course Stephanie Kamp. Jürgen gave it a go, and I am very happy he did so. 
 
-Our *Green Software Design* team became a reality right at the time when the idea took root outside academic circles. When I first heard about GSF, I was immediately excited. It is very similar to what we are working on in a more local version. We call it the [<u>*Green Software Design Community*</u>](https://www.greensoftwaredesign.com/en/gsd-our-members/). It was almost funny to see the two websites, [<u>greensoftware.foundation</u>](https://greensoftware.foundation/) and greensoftwaredesign.com, grow in parallel. They even ended up having similar designs, probably because both focused on being remarkably green websites. 
+Our *Green Software Design* team became a reality right at the time when the idea took root outside academic circles. When I first heard about GSF, I was immediately excited. It is very similar to what we are working on in a more local version. We call it the [*Green Software Design Community*](https://www.greensoftwaredesign.com/en/gsd-our-members/). It was almost funny to see the two websites, [greensoftware.foundation](https://greensoftware.foundation/) and greensoftwaredesign.com, grow in parallel. They even ended up having similar designs, probably because both focused on being remarkably green websites. 
 
 ## What do you expect to achieve by working with the GSF and in green software in general? 
 
@@ -69,7 +69,7 @@ Think of session failover for example. When it comes to online brokerage, seamle
 
 Coaching works best. Add someone to the team who knows about green software. This will help the team with practical issues, like, should we include this in the Definition of Done (DoD), or should it be a separate use case? The coach can also consult the Product Owner on the impact of requirements.
 
-I’m aware that as of today, way too few persons are ready to be valuable coaches. This is why we created the [<u>*Expertyzer*</u>](https://www.greensoftwaredesign.com/en/expertyzer/), which you can use for free on greensoftwaredesign.com. It is supposed to kickstart mobile and web-application development projects. You answer a series of questions about your project and the software architecture, and Expertyzer gives you feedback and suggests possible improvements. This, of course, cannot fully replace a detailed review. But it provides a valid starting point, if you don’t have access to a coach. 
+I’m aware that as of today, way too few persons are ready to be valuable coaches. This is why we created the [*Expertyzer*](https://www.greensoftwaredesign.com/en/expertyzer/), which you can use for free on greensoftwaredesign.com. It is supposed to kickstart mobile and web-application development projects. You answer a series of questions about your project and the software architecture, and Expertyzer gives you feedback and suggests possible improvements. This, of course, cannot fully replace a detailed review. But it provides a valid starting point, if you don’t have access to a coach. 
 
 ## How can companies get more young software engineers onboard the green software movement?
 
@@ -83,7 +83,7 @@ The Foundation brings together many large, global companies. Their combined weig
 
 GSF can set standards for green software, and I’m happy to be part of that process. These standards will be a guideline for both software teams and corporations. They give you direction and make it easier to communicate results between teams.
 
-The communication itself will then continue within other circles as well. We plan to make the [<u>*Green Software Design Community*</u>](https://www.greensoftwaredesign.com/en/gsd-our-members/) such a circle, by building on the results of GSF standards and projects. The community can then provide coaches to transfer know-how into more teams. This in turn increases awareness of the GSF standards. It will all come together. I am sure about that.
+The communication itself will then continue within other circles as well. We plan to make the [*Green Software Design Community*](https://www.greensoftwaredesign.com/en/gsd-our-members/) such a circle, by building on the results of GSF standards and projects. The community can then provide coaches to transfer know-how into more teams. This in turn increases awareness of the GSF standards. It will all come together. I am sure about that.
 
 ## Any other thoughts on green software and sustainability?
 

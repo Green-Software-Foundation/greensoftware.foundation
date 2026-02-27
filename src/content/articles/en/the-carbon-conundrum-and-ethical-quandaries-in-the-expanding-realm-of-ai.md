@@ -6,7 +6,7 @@ teaserText: "In this blog, we'll provide a summary of the key messages and conce
 mainImage: "/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/main.jpg"
 ---
 
-Abhishek Gupta is the Founder and Principal Researcher at Montreal AI Ethics Institute and Chair of the Green Software Foundation’s Standards Working Group. [<u>**Click here**</u>](https://thegradient.pub/sustainable-ai/) for the full article.
+Abhishek Gupta is the Founder and Principal Researcher at Montreal AI Ethics Institute and Chair of the Green Software Foundation’s Standards Working Group. [**Click here**](https://thegradient.pub/sustainable-ai/) for the full article.
 
 ## AI Systems: environmental impact and growing challenges
 
@@ -20,7 +20,7 @@ These challenges are compounded by the fact that the models are widely accessibl
 
 Gupta outlines three core challenges embodied in today’s AI paradigm:
 
-![](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
 
 **1. Exploitative Data Practice**
 
@@ -29,7 +29,7 @@ Large-scale AI models rely on enormous datasets, raising ethical concerns such a
 
 **2. Massive energy footprints**
 
-The environmental impact of AI, notably large models like GPT-3 (and now GPT-4), gained public attention due to concerns about their environmental costs. For instance, a single large NLP model can emit carbon equivalent to five cars in their lifetime. Although standardized methods for [<u>measuring these impacts are lacking</u>](https://devblogs.microsoft.com/sustainable-software/the-current-state-of-affairs-and-a-roadmap-for-effective-carbon-accounting-tooling-in-ai/), various metrics are considered. Assessing AI's environmental effects requires a [<u>holistic approach</u>](https://branch.climateaction.tech/issues/issue-3/beyond-single-dimensional-metrics-for-digital-sustainability/), including hardware and supply chains.
+The environmental impact of AI, notably large models like GPT-3 (and now GPT-4), gained public attention due to concerns about their environmental costs. For instance, a single large NLP model can emit carbon equivalent to five cars in their lifetime. Although standardized methods for [measuring these impacts are lacking](https://devblogs.microsoft.com/sustainable-software/the-current-state-of-affairs-and-a-roadmap-for-effective-carbon-accounting-tooling-in-ai/), various metrics are considered. Assessing AI's environmental effects requires a [holistic approach](https://branch.climateaction.tech/issues/issue-3/beyond-single-dimensional-metrics-for-digital-sustainability/), including hardware and supply chains.
 
 With the urgency of addressing climate change, immediate action is necessary. Data centers now rival the airline industry in emissions, making adopting eco-friendly practices throughout the AI system lifecycle crucial.
 
@@ -44,9 +44,9 @@ In research, well-funded labs enjoy computing resources for extensive searches, 
 
 Sustainable AI offers an approach that harmonizes these issues and presents a potential path to addressing them holistically, keeping in mind our planet, organizational profits, and, above all, people at the center of the design, development, and deployment phases of an AI system. 
 
-[<u>Sustainable AI</u>](https://greensoftware.foundation/articles/what-do-we-need-to-build-more-sustainable-ai-systems) aims to guide AI system development, focusing on [<u>ecological integrity and social justice</u>](https://arxiv.org/abs/2006.06217) throughout the AI lifecycle to form a cohesive framework. Gupta suggests incorporating carbon accounting into AI development, gathering relevant data through instrumentation and telemetry, and making carbon impacts a fundamental consideration alongside functional and business requirements. This holistic approach can support the triple bottom line, emphasizing profits, people, and the planet, and contribute to more environmentally and socially responsible AI practices.
+[Sustainable AI](https://greensoftware.foundation/articles/what-do-we-need-to-build-more-sustainable-ai-systems) aims to guide AI system development, focusing on [ecological integrity and social justice](https://arxiv.org/abs/2006.06217) throughout the AI lifecycle to form a cohesive framework. Gupta suggests incorporating carbon accounting into AI development, gathering relevant data through instrumentation and telemetry, and making carbon impacts a fundamental consideration alongside functional and business requirements. This holistic approach can support the triple bottom line, emphasizing profits, people, and the planet, and contribute to more environmentally and socially responsible AI practices.
 
-![](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
 
 ## Approaches to solving the challenges of the existing paradigm
 
@@ -69,20 +69,20 @@ Federated learning, a decentralized training technique that keeps data on-device
 
 Carbon-efficiency means optimizing software and hardware to achieve the desired output with the least computation and energy expenditure. Carbon awareness, on the other hand, involves adjusting an AI system's operational parameters based on the energy grid's carbon intensity. The system's carbon footprint can be reduced by dynamically selecting the most environmentally friendly times and locations for operation. 
 
-Energy grid disparities, with up to a 30x difference in carbon intensity, highlight the importance of considering **where **AI systems are trained and deployed. Tools like the Azure Sustainability Calculator and cloud providers' internal load balancing contribute to [<u>achieving sustainability goals</u>](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems) in this context.
+Energy grid disparities, with up to a 30x difference in carbon intensity, highlight the importance of considering **where **AI systems are trained and deployed. Tools like the Azure Sustainability Calculator and cloud providers' internal load balancing contribute to [achieving sustainability goals](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems) in this context.
 
 ## An appeal to software developers
 
 Moving in the right direction largely depends on the efforts of the software developer community and its willingness to adopt sustainable AI practices.
 
-![](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](/assets/articles/the-carbon-conundrum-and-ethical-quandaries-in-the-expanding-realm-of-ai/image.png)
 
 Our first step should be to share the idea of sustainable AI within our research and practice communities. We can make it a standard practice to measure and report the carbon impact of AI systems, encouraging the adoption of "Green AI." Industry leaders can support these efforts, enabling experimentation and fostering a more sustainable AI approach.
 
 Instrumenting AI systems to collect and report energy consumption data is the next step on the sustainable AI journey. Tools like CodeCarbon, carbontracker, experiment-impact-tracker, and scaphandre offer ways to start measuring and managing carbon emissions. Researchers can promote these tools in their labs, integrate them into lab practices, and use them to onboard new members. 
 
-Organizations in the AI industry need to make an active choice to prioritize carbon impacts alongside functional and business imperatives. According to Gupta, this is a choice for ethics and strategy. Informed consumers increasingly favor environmentally friendly products and services, directly affecting businesses. Implementing greener AI systems will yield cost savings, bolstering the business case. Even when immediate financial benefits are unclear, committing to sustainability secures a competitive market position and aligns with ESG efforts. While standardized environmental reporting for software and AI is lacking, organizations like the [<u>Green Software Foundation</u>](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) are working towards creating interoperable and actionable approaches to inform consumers and guide regulatory efforts. Taking recommended actions at research, practitioner, and management levels will help organizations future-proof and move ahead of the pack.
+Organizations in the AI industry need to make an active choice to prioritize carbon impacts alongside functional and business imperatives. According to Gupta, this is a choice for ethics and strategy. Informed consumers increasingly favor environmentally friendly products and services, directly affecting businesses. Implementing greener AI systems will yield cost savings, bolstering the business case. Even when immediate financial benefits are unclear, committing to sustainability secures a competitive market position and aligns with ESG efforts. While standardized environmental reporting for software and AI is lacking, organizations like the [Green Software Foundation](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) are working towards creating interoperable and actionable approaches to inform consumers and guide regulatory efforts. Taking recommended actions at research, practitioner, and management levels will help organizations future-proof and move ahead of the pack.
 
-Join us on October 5 for the virtual GSF event: [<u>Responsible AI: Tackling AI's Environmental Challenge</u>](https://www.meetup.com/gsf-global/events/295596991/)
+Join us on October 5 for the virtual GSF event: [Responsible AI: Tackling AI's Environmental Challenge](https://www.meetup.com/gsf-global/events/295596991/)
 
 

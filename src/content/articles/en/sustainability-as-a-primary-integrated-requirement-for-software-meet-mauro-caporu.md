@@ -36,7 +36,7 @@ By having a sustainability perspective on software development and usage, we can
 
 # Which role do principles of green software engineering and development play for you?
 
-I have included green software engineering principles in two different courses, namely “Software Design” and “Project Course in Software Engineering”. The idea is to introduce students to sustainability issues related to software design, development, and usage, and provide them with some possible solutions, i.e., principles, patterns, and tools such as [<u>Carbon Aware SDK</u>](https://github.com/Green-Software-Foundation/carbon-aware-sdk), and [<u>Green Software Maturity Matrix</u>](https://github.com/Green-Software-Foundation/green-software-maturity-matrix/blob/dev/docs/history.md).
+I have included green software engineering principles in two different courses, namely “Software Design” and “Project Course in Software Engineering”. The idea is to introduce students to sustainability issues related to software design, development, and usage, and provide them with some possible solutions, i.e., principles, patterns, and tools such as [Carbon Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware-sdk), and [Green Software Maturity Matrix](https://github.com/Green-Software-Foundation/green-software-maturity-matrix/blob/dev/docs/history.md).
 
 ## Why join the GSF?
 
@@ -58,10 +58,10 @@ Our approach at Linnaeus is that software needs to be designed from the ground u
 
 Sustainability is deeply ingrained in the fabric of LNU. We are currently involved in many different initiatives. Here’s a short selection: 
 
-- [<u>https://lnu.se/en/meet-linnaeus-university/a-sustainable-university/</u>](https://lnu.se/en/meet-linnaeus-university/a-sustainable-university/) 
-- [<u>https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/</u>](https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/)
-- [<u>https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/</u>](https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/) 
+- [https://lnu.se/en/meet-linnaeus-university/a-sustainable-university/](https://lnu.se/en/meet-linnaeus-university/a-sustainable-university/) 
+- [https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/](https://lnu.se/en/meet-linnaeus-university/current/events/2024/conferences/young-researchers-conference-in-green-sustainable-development/)
+- [https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/](https://lnu.se/en/meet-linnaeus-university/collaborate-with-us/international-collaboration/the-european-university-for-well-being/) 
 
 
 
-![](/assets/articles/sustainability-as-a-primary-integrated-requirement-for-software-meet-mauro-caporu/image.jpg)
+![Green Software Foundation and Linnaeus University logos on illustrated green nature background](/assets/articles/sustainability-as-a-primary-integrated-requirement-for-software-meet-mauro-caporu/image.jpg)

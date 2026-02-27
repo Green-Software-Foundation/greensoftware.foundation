@@ -14,11 +14,11 @@ authors:
 
 ​​Software powers much of our modern world, from personal productivity to organizational transformations. Software can also play a critical role in addressing global challenges, such as accessibility and climate change. But as we’ve learned from accessibility, software must first be designed inclusively so it can enable inclusion. The same is true for climate change. When writing or selecting software, developers need to think about its carbon emissions, and quickly go from thought to action. In short, we need a way to measure the least carbon-intensive software solution down to the code level.
 
-As part of its mission to help the software industry contribute to a more sustainable future, the Green Software Foundation is proud to release the alpha version of the [<u>Software Carbon Intensity (SCI) Specification</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md), which is a method for **scoring** a software system based on its carbon emissions. The SCI is a tool that enables developers to easily account for software carbon intensity in their day-to-day work in the same way they consider cost, performance, security, accessibility and other concerns today.
+As part of its mission to help the software industry contribute to a more sustainable future, the Green Software Foundation is proud to release the alpha version of the [Software Carbon Intensity (SCI) Specification](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md), which is a method for **scoring** a software system based on its carbon emissions. The SCI is a tool that enables developers to easily account for software carbon intensity in their day-to-day work in the same way they consider cost, performance, security, accessibility and other concerns today.
 
-The SCI was created through the [<u>Standards Working Group</u>](https://greensoftware.foundation/working-groups/standards) of the Green Software Foundation, the international coalition of nonprofits, academia, and industry leaders.
+The SCI was created through the [Standards Working Group](https://greensoftware.foundation/working-groups/standards) of the Green Software Foundation, the international coalition of nonprofits, academia, and industry leaders.
 
-The alpha version of the SCI is being released today for broader public comment and input, which can be done on [<u>GitHub</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback) or by emailing sci_feedback@greensoftware.foundation. All submissions will be taken into consideration for publishing the official version 1.0 of this new specification.
+The alpha version of the SCI is being released today for broader public comment and input, which can be done on [GitHub](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback) or by emailing sci_feedback@greensoftware.foundation. All submissions will be taken into consideration for publishing the official version 1.0 of this new specification.
 
 ### What is the SCI and how is it different from a carbon footprint?
 
@@ -77,16 +77,14 @@ We are proud to roll out the SCI today for public comment. We work in the open, 
 
  The Foundation will continue to work on the SCI and other emissions reduction tools. However, we cannot do this alone. The Green Software Foundation welcomes comments on our work and invites those passionate about driving change to join us in our mission. 
 
-We also welcome early adopters looking to develop case studies of using the SCI to start a conversation on [<u>GitHub</u>](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback) or by emailing sci_feedback@greensoftware.foundation.
+We also welcome early adopters looking to develop case studies of using the SCI to start a conversation on [GitHub](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback) or by emailing sci_feedback@greensoftware.foundation.
 
 ---
 
 ## Green Software Foundation Members
 
-### **Steering Members **
-
+### Steering Members 
 [Accenture](https://www.accenture.com/) | [GitHub](https://github.com/) | [NTT DATA](https://www.nttdata.com/) | T[houghtworks](https://www.thoughtworks.com/) | [Globant](https://www.globant.com/) | [Microsoft](https://www.microsoft.com/about)
 
-### **General Members**
-
+### General Members
 [Avanade](https://www.avanade.com/)  | [University of Bristol](https://www.bristol.ac.uk/)  | [Container Solutions](https://www.container-solutions.com/) | [Goldman Sachs](https://www.goldmansachs.com/) | [Intesa Sanpaolo](https://www.intesasanpaolo.com/) | [Leaders For Climate Action](https://lfca.earth/) | [Texas State University](https://www.txstate.edu/) | [The Explorers](https://theexplorers.com/) | [Time for the Planet](https://www.time-planet.com/) | [The Green web Foundation](https://www.thegreenwebfoundation.org/) | [Shell](http://www.shell.com/) | [Virtasant](https://www.virtasant.com/) | [VMware](https://www.vmware.com/) | [WattTime](https://www.watttime.org/)

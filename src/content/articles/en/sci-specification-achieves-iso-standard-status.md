@@ -6,7 +6,7 @@ teaserText: "We've achieved a big win for green tech: The Software Carbon Intens
 mainImage: "/assets/articles/sci-specification-achieves-iso-standard-status/main.png"
 ---
 
-With the approval and publication of version 1.0, the ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint. The latest version 1.1 of the SCI Specification is now available and can be accessed [<u>here</u>](https://sci.greensoftware.foundation/). 
+With the approval and publication of version 1.0, the ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint. The latest version 1.1 of the SCI Specification is now available and can be accessed [here](https://sci.greensoftware.foundation/). 
 
 
 
@@ -34,12 +34,12 @@ Technology sustainability is a shared responsibility, and having the right set o
 
 
 
-GSF member organizations, including Accenture, AVEVA, CAST Software, Intesa, Microsoft, NTT DATA, UBS, and others, made the SCI Specification actionable through various use cases. [<u>**These examples are publicly available**</u>](https://github.com/Green-Software-Foundation/sci-guide/tree/dev/use-case-submissions). 
+GSF member organizations, including Accenture, AVEVA, CAST Software, Intesa, Microsoft, NTT DATA, UBS, and others, made the SCI Specification actionable through various use cases. [**These examples are publicly available**](https://github.com/Green-Software-Foundation/sci-guide/tree/dev/use-case-submissions). 
 
 
 
-The GSF invites teams applying the SCI Specification to [<u>**submit a use case**</u>](https://github.com/Green-Software-Foundation/sci-guide/issues/new?assignees=atg-abhishek%2C+Henry-WattTime%2C+navveenb%2C+srini1978&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions) for review.
+The GSF invites teams applying the SCI Specification to [**submit a use case**](https://github.com/Green-Software-Foundation/sci-guide/issues/new?assignees=atg-abhishek%2C+Henry-WattTime%2C+navveenb%2C+srini1978&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions) for review.
 
 
 
-If you need more information on the Green Software Foundation or wish to contact a spokesperson for an interview, contact Namrata Narayan at [<u>namrata@greensoftware.foundation</u>](mailto:namrata@greensoftware.foundation).
+If you need more information on the Green Software Foundation or wish to contact a spokesperson for an interview, contact Namrata Narayan at [namrata@greensoftware.foundation](mailto:namrata@greensoftware.foundation).

@@ -14,7 +14,7 @@ originBlogName: "Microsoft Dev Blogs"
 publishedOriginUrl: "https://devblogs.microsoft.com/sustainable-software/how-to-measure-the-power-consumption-of-your-frontend-application/"
 ---
 
-The second principle of [<u>Sustainable Software Engineering</u>](https://principles.green/) is to build energy efficient applications. The very first step in that direction is to measure the energy your application consumes, also known as its energy cost. Once you know your energy cost, you can start to work to decrease it. Understanding your energy cost when the software runs on a server you own is one thing, but how do you measure it when your software is quite literally in the hands of your customers?
+The second principle of [Sustainable Software Engineering](https://principles.green/) is to build energy efficient applications. The very first step in that direction is to measure the energy your application consumes, also known as its energy cost. Once you know your energy cost, you can start to work to decrease it. Understanding your energy cost when the software runs on a server you own is one thing, but how do you measure it when your software is quite literally in the hands of your customers?
 
 This blog post focuses on measuring energy cost for applications running client-side on a computer, such as web-applications and native applications. It does not cover native applications running on mobile devices such as phones and tablets. For more details on measuring the energy cost of server-side applications, see my post on [the energy consumption of backend services](https://greensoftware.foundation/articles/how-to-measure-the-energy-consumption-of-your-backend-service). This post is operating system agnostic and is primarily meant for front end applications.
 
@@ -24,7 +24,7 @@ Measuring energy consumption directly from the wall socket is the same approach 
 
 <figure>
 <img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-measuring-power-consumption-directly-from-wall-socket.png" alt="illustration-measuring-power-consumption-directly-from-wall-socket" />
-<figcaption><em>Measuring power consumption directly from the wall socket</em></figcaption>
+<figcaption>*Measuring power consumption directly from the wall socket*</figcaption>
 </figure>
 
 Using a watt-hour meter gives you the energy usage of the entire device, but with some planning, you can also use it to determine the approximate energy consumption of an application running on your device. However, this will work best for applications that consume a lot of system resources on the host and/or are long-running. 
@@ -51,24 +51,24 @@ Measuring the energy consumption for a device’s screen is more challenging, be
 
 <figure>
 <img src="/assets/articles/how-to-measure-the-energy-consumption-of-your-frontend-application/illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed.png" alt="Illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed" />
-<figcaption><em>Using tools to measure energy consumption of your backend service</em></figcaption>
+<figcaption>*Using tools to measure energy consumption of your backend service*</figcaption>
 </figure>
 
 ## Tools for measuring energy consumption
 
 Tools for measuring the energy consumption of software are usually specific to an operating system or application domain. I have identified a few examples, but this is not an exhaustive list. Some of the examples below are energy profilers, which analyze and estimate the energy consumption of the application running on your computer. This estimation is useful in identifying ways to reduce your applications energy consumption, but cannot be treated as exact values of energy consumption since they will vary between different computers running the same application. But for identifying areas where you can improve and track energy consumption over time, this is good enough!
 
-#### **For Windows devices there are different options**.
+#### For Windows devices there are different options.
 
-I refer once again to my [<u>colleague Scott’s post</u>](https://devblogs.microsoft.com/sustainable-software/measuring-your-application-power-and-carbon-impact-part-1/?WT.mc_id=green-8660-cxa). It is also possible to use the Windows task manager to find the utilization of different components, which can then be converted into energy (see my other blog post).
+I refer once again to my [colleague Scott’s post](https://devblogs.microsoft.com/sustainable-software/measuring-your-application-power-and-carbon-impact-part-1/?WT.mc_id=green-8660-cxa). It is also possible to use the Windows task manager to find the utilization of different components, which can then be converted into energy (see my other blog post).
 
 There is a browser task manager for Edge that can be used similarly for web applications, it can be accessed by clicking Shift + Escape or under “More tools” in the browser menu.
 
 **For energy efficiency of already deployed web pages** 
 
-- Use [<u>Green Spector</u>](http://mobile-efficiency-index.com/en/) to measure the energy efficiency of an already deployed web page. It will test your web page of an actual mobile device and give you a score between 0 and 100. This can be used in combination with above approaches used for other devices to get a more holistic overview.
-- [<u>Lighthouse</u>](https://developers.google.com/web/tools/lighthouse/) is an open-source application that can be used for assessing the quality of already deployed web pages. It is not optimized for looking at power consumption, but it tracks some things that have a strong correlation to power consumption. For example, the performance score looks at things like loading time, which will have a correlation to the network usages and GPU usage.
+- Use [Green Spector](http://mobile-efficiency-index.com/en/) to measure the energy efficiency of an already deployed web page. It will test your web page of an actual mobile device and give you a score between 0 and 100. This can be used in combination with above approaches used for other devices to get a more holistic overview.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source application that can be used for assessing the quality of already deployed web pages. It is not optimized for looking at power consumption, but it tracks some things that have a strong correlation to power consumption. For example, the performance score looks at things like loading time, which will have a correlation to the network usages and GPU usage.
 
 ## Take Action
 
-Watch the talk ‘[<u>Building Green Progressive Web Apps</u>](https://www.youtube.com/watch?v=D-spTjqAswA&t=3324s)’ at Green Conf 2020 by David Rousset. He shares a lot of his learning and useful tools. If you haven't read them already, check out the [Principles of Sustainable Software Engineering](https://principles.green/) at Principles of Green.
+Watch the talk ‘[Building Green Progressive Web Apps](https://www.youtube.com/watch?v=D-spTjqAswA&t=3324s)’ at Green Conf 2020 by David Rousset. He shares a lot of his learning and useful tools. If you haven't read them already, check out the [Principles of Sustainable Software Engineering](https://principles.green/) at Principles of Green.

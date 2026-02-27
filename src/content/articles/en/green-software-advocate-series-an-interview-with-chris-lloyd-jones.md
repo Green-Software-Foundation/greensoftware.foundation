@@ -34,7 +34,7 @@ When it comes to building green software, I’d say:
 
 1. Think about what you're building your software with and why before considering efficiency. For example, if you always deploy to the same operating system, a native application might be more efficient than an electron or cross-platform app.
 2. Consider how much you import when using an open source package - does it come with a tree of dependencies, features, and unused code paths?
-3. [<u>Talk to your peers</u>](https://github.com/orgs/Green-Software-Foundation/discussions), [<u>join a meetup</u>](https://www.meetup.com/pro/gsf/), stay updated on the best practices and technologies that promote sustainability, and never underestimate the difference a single person can make.
+3. [Talk to your peers](https://github.com/orgs/Green-Software-Foundation/discussions), [join a meetup](https://www.meetup.com/pro/gsf/), stay updated on the best practices and technologies that promote sustainability, and never underestimate the difference a single person can make.
 
 
 
