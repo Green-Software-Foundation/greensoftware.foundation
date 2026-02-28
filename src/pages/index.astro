@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "@/layouts/showcase.astro";
 import { navItems } from "@/lib/nav-items";
 
@@ -19,6 +20,30 @@ import ResourceCards from "@/components/resource-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import CTACard from "@/components/cta-card.astro";
 import Footer from "@/components/footer.astro";
+
+// Load member logos for org name → logo lookup
+import logos from "@/data/logos.json";
+
+// ----- Featured articles -----
+const logoMap = new Map(logos.map((l: any) => [l.name.toLowerCase(), l.logo]));
+
+const allArticles = await getCollection("articles");
+const featuredArticles = allArticles
+  .filter(a => a.data.featured && a.data.lang === "en")
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 10)
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText,
+    imageSrc: a.data.mainImage || "/assets/hero-illustration.svg",
+    href: `/articles/${a.id}/`,
+    cta: "Read the story →",
+    organizations: (a.data.organizations || []).map((name: string) => ({
+      name,
+      logoSrc: logoMap.get(name.toLowerCase()),
+    })),
+    additionalOrgCount: a.data.additionalOrgCount,
+  }));
 ---
 
 <Layout>
@@ -195,16 +220,13 @@ import Footer from "@/components/footer.astro";
   />
 
   <!-- Section 13: Featured Content -->
-  <ArticleCarousel
-    heading="Featured Content"
-    body="Stories, research, and insights from our members and community."
-    articles={[
-      { title: "How Accenture Implemented the SCI Specification", organizations: [{ name: "Accenture", logoSrc: "/assets/logos/accenture.png" }], imageSrc: "/assets/hero-illustration.svg", description: "Accenture applied SCI to calculate and track carbon emissions for an internal reference application, establishing a practical baseline methodology.", href: "#", cta: "Read the story →" },
-      { title: "Baselining Software Carbon Emissions", organizations: [{ name: "UBS", logoSrc: "/assets/logos/ubs.png" }], imageSrc: "/assets/hero-illustration.svg", description: "UBS demonstrates applying SCI to baseline carbon emissions for two enterprise applications in investment banking and asset management.", href: "#", cta: "Read the story →" },
-      { title: "Decarbonizing Software with SCI", organizations: [{ name: "CAST Software" }], imageSrc: "/assets/hero-illustration.svg", description: "CAST integrated SCI with CAST Highlight to decarbonize an enterprise application, achieving an estimated 400 kg annual CO2 reduction.", href: "#", cta: "Read the story →" },
-      { title: "Carbon-Aware Computing at Scale", organizations: [{ name: "UBS", logoSrc: "/assets/logos/ubs.png" }, { name: "Microsoft", logoSrc: "/assets/logos/microsoft.webp" }], imageSrc: "/assets/hero-illustration.svg", description: "UBS and Microsoft implemented the first enterprise-scale carbon-aware computing system, using SCI and the Carbon Aware SDK.", href: "#", cta: "Read the story →" },
-    ]}
-  />
+  {featuredArticles.length > 0 && (
+    <ArticleCarousel
+      heading="Featured Content"
+      body="Stories, research, and insights from our members and community."
+      articles={featuredArticles}
+    />
+  )}
 
   <!-- Section 14: Final CTA -->
   <CTABanner

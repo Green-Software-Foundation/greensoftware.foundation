@@ -4,6 +4,9 @@ date: "2023-03-01"
 summary: "An in depth look at how Accenture implemented the SCI Specification Score to track software emissions."
 teaserText: "The design, development, and deployment of all software applications should prioritize sustainability as an essential outcome."
 mainImage: "/assets/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/main.png"
+featured: true
+organizations:
+  - "Accenture"
 ---
 
 The design, development, and deployment of all software applications should prioritize sustainability as an essential outcome. This requires using energy-efficient hardware, developing climate-conscious code, optimizing energy consumption, and increasing the use of renewable and clean energy sources.

@@ -33,6 +33,9 @@ const articles = defineCollection({
     originBlogName: z.string().optional(),
     publishedOriginUrl: z.string().optional(),
     lang: z.string().default("en"),
+    featured: z.boolean().optional(),
+    organizations: z.array(z.string()).optional(),
+    additionalOrgCount: z.number().optional(),
   }),
 });
 

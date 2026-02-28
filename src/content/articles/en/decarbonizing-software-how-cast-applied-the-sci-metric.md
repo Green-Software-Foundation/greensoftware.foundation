@@ -4,6 +4,8 @@ date: "2024-03-27"
 summary: "“The automatically generated Green Software Insights from CAST Highlight enabled us to identify exactly where in our code we could improve our green impact and then estimate the actual CO2 emissions savings with concrete numbers.”  - Michael Muller, Director Product Management, CAST"
 teaserText: "CAST is a leader in software intelligence. Their compelling use case demonstrates how targeted technological interventions can deliver substantial reductions in carbon emissions."
 mainImage: "/assets/articles/decarbonizing-software-how-cast-applied-the-sci-metric/main.png"
+organizations:
+  - "CAST"
 ---
 
 In the battle against climate change, the tech industry's carbon footprint has emerged as a silent yet significant contributor to global emissions. This challenge is sparking innovative approaches to decarbonizing software. 

@@ -17,6 +17,8 @@ export interface Article {
   description: string;
   /** One or more organisations */
   organizations?: ArticleOrg[];
+  /** Number of additional member orgs not listed by name */
+  additionalOrgCount?: number;
   /** Article thumbnail/hero image */
   imageSrc?: string;
   /** Link to the full article */
@@ -80,23 +82,27 @@ export function ArticleCarousel({ heading, body, articles }: Props) {
                   <div className="flex flex-col justify-between flex-grow p-6">
                     <div>
                       {article.organizations && article.organizations.length > 0 && (
-                        <div className="mb-3 flex items-center gap-3 text-sm">
+                        <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
                           {article.organizations.map((org, i) => (
                             <React.Fragment key={i}>
-                              {i > 0 && <span className="text-gray-dark">×</span>}
                               {org.logoSrc ? (
                                 <img
                                   src={org.logoSrc}
                                   alt={org.name}
-                                  className="h-5 w-auto"
+                                  className="h-4 max-w-[60px] w-auto object-contain"
                                 />
                               ) : (
-                                <span className="font-semibold text-primary">
+                                <span className="text-xs font-semibold text-primary">
                                   {org.name}
                                 </span>
                               )}
                             </React.Fragment>
                           ))}
+                          {article.additionalOrgCount && article.additionalOrgCount > 0 && (
+                            <span className="text-xs text-gray-darker">
+                              +{article.additionalOrgCount} more members
+                            </span>
+                          )}
                         </div>
                       )}
                       <h3 className="mb-2 text-xl font-bold leading-tight">

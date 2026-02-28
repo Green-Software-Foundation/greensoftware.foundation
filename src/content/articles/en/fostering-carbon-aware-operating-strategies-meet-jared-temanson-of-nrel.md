@@ -4,6 +4,9 @@ date: "2024-05-07"
 summary: "With a green energy mission and supercomputing capacity of 44 petaflops, NREL is predetermined to be at the forefront of the green software movement. Jared Temanson reveals more."
 teaserText: "“Green Software is a necessary pathway to a sustainable and prosperous future.”"
 mainImage: "/assets/articles/fostering-carbon-aware-operating-strategies-meet-jared-temanson-of-nrel/main.jpg"
+featured: true
+organizations:
+  - "Renewable Energy Laboratory (NREL)"
 ---
 
 Jared started his career at NREL in 2009. He worked for several clean tech software startups from 2017-2023, before returning to NREL. He now runs the [Joint Institute for Strategic Energy Analysis’s (JISEA)](https://www.jisea.org/) Catalyzer Initiative. The program focuses on planning and assessment activities around novel, cross-cutting research areas of emerging critical importance and develops new capabilities to support those topics.

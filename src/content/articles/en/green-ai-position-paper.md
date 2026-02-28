@@ -4,6 +4,15 @@ date: "2025-05-13"
 summary: "In a series of workshops in 2024, members of the GSF Green AI Committee defined Green AI, assessed its environmental impacts across the AI lifecycle, and outlined key actions for AI sustainability. In this paper, we share those outcomes. "
 teaserText: "Building a greener AI future through lifecycle accountability, standards, and collaboration. "
 mainImage: "/assets/articles/green-ai-position-paper/main.png"
+featured: true
+organizations:
+  - "Accenture"
+  - "Microsoft"
+  - "NTT DATA"
+  - "Siemens"
+  - "Google"
+  - "UBS"
+additionalOrgCount: 6
 ---
 
 The Green AI Committee (GAIC) was established to unify efforts in innovation and sustainability. Its mission is to guide the Green Software Foundation’s (GSF) strategy in developing knowledge, standards, and tools that minimize the environmental impact of Artificial Intelligence (AI) systems, supporting net-zero goals. 

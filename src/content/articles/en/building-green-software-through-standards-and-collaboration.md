@@ -4,6 +4,11 @@ date: "2024-07-25"
 summary: "CAST, NTT DATA, and UBS share how they are reducing their software emissions and laying a solid foundation for a greener digital future."
 teaserText: "A spotlight on how our members are decarbonizing software with the GSF. "
 mainImage: "/assets/articles/building-green-software-through-standards-and-collaboration/main.png"
+featured: true
+organizations:
+  - "UBS"
+  - "NTT DATA"
+  - "CAST"
 ---
 
 This year, we hit a big milestone in green software. The Software Carbon Intensity (SCI) Specification became an [**ISO Standard**](https://www.iso.org/standard/86612.html), and many organizations, both big and small, around the world have started using the [**Carbon Aware SDK**](https://github.com/Green-Software-Foundation/carbon-aware-sdk). This toolkit helps software run more when electricity is clean and less when it's dirty. 

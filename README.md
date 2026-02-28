@@ -1,54 +1,59 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Green Software Foundation Website
 
-## 🚀 Quick start
+The official website for the [Green Software Foundation](https://greensoftware.foundation), built with Astro 5, React 19, and Tailwind CSS 4.
 
-1.  **Create a Gatsby site.**
+## Quick start
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```bash
+npm install
+npm run dev          # Dev server on localhost:4322
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+The homepage is at `/` and the component catalogue is at `/catalogue`.
 
-2.  **Start developing.**
+## Data from Notion
 
-    Navigate into your new site’s directory and start it up.
+Member logos, team data, and stats are fetched from Notion at build time. To fetch fresh data locally:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```bash
+# Requires NOTION_API_KEY in .env
+npm run fetch-notion
+```
 
-3.  **Open the code and start customizing!**
+On Netlify, the build command (`npm run build:full`) fetches Notion data automatically before building.
 
-    Your site is now running at http://localhost:8000!
+If `NOTION_API_KEY` is not set, the build still succeeds using cached or empty fallback data.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Build & deploy
 
-4.  **Learn more**
+```bash
+npm run build        # Build with cached data (no Notion fetch)
+npm run build:full   # Fetch Notion data, then build (used by Netlify)
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Deployed on Netlify. Node 22 (set in `.nvmrc` and `netlify.toml`).
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## How-to guides
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Articles & Featured Content](docs/how-to-featured-articles.md) — How to write articles, manage frontmatter, and feature content on the homepage carousel
+- [Governance & Leadership Page](docs/how-to-governance-leadership.md) — Where governance page data comes from, Notion data sources, and how to keep it updated
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Project documentation
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [CLAUDE.md](CLAUDE.md) — Full project context: architecture, component library, design tokens, data pipeline
+- [Component Catalogue](docs/component-catalogue/README.md) — Guide to the parameterised component library
+- [Site Rebuild Spec](docs/features/site-rebuild-componentisation.md) — Original feature spec for the Astro rebuild
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Key directories
 
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+| Directory | Contents |
+| --------- | -------- |
+| `src/pages/` | Astro page files |
+| `src/components/` | Parameterised Astro components |
+| `src/components/react/` | React islands (interactive components) |
+| `src/components/ui/` | UI primitives (shadcn/ui + Radix) |
+| `src/content/articles/` | Article Markdown files |
+| `src/data/` | JSON data files (fetched from Notion) |
+| `public/assets/` | Static assets (images, logos, team photos) |
+| `scripts/` | Build and data-fetch scripts |
+| `docs/` | Project documentation and how-to guides |

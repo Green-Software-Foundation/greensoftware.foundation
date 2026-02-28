@@ -4,6 +4,14 @@ date: "2025-07-03"
 summary: "In early 2025, AI experts from GSF member organizations participated in a workshop designed to define our approach to AI measurement and evaluate existing metrics. Today, we share the outcomes of these sessions. "
 teaserText: "Helping developers understanding and reducing the carbon footprint of AI systems."
 mainImage: "/assets/articles/sci-for-ai-workshop-report/main.png"
+featured: true
+organizations:
+  - "Accenture"
+  - "Google"
+  - "Siemens"
+  - "UBS"
+  - "Microsoft"
+additionalOrgCount: 10
 ---
 
 The Software Carbon Intensity (SCI) specification provides a standardized method for measuring the carbon emissions associated with software systems. As Artificial Intelligence (AI) becomes an increasingly resource-intensive component of modern software, it is crucial to extend SCI methodology to account for the unique characteristics of AI. 
