@@ -1,0 +1,280 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+// Parameterised components
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import GovernanceDiagram from "@/components/governance-diagram.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+// Load team data from Notion-sourced JSON
+import teamData from "@/data/team.json";
+
+// ----- Data preparation -----
+
+// Steering Committee members
+const steeringMembers = teamData.filter(p => p.groups.includes("steeringCommittee"));
+
+// Chair and Vice-Chair (highlighted)
+const steeringChair = steeringMembers.find(p => p.fullName === "Gadhu Sundaram");
+const steeringViceChair = steeringMembers.find(p => p.fullName === "Jonathan Turnbull");
+
+const highlightedSteering = [
+  steeringChair && { ...steeringChair, label: "Chair" },
+  steeringViceChair && { ...steeringViceChair, label: "Vice-Chair" },
+].filter(Boolean);
+
+const remainingSteering = steeringMembers.filter(
+  p => p.fullName !== "Gadhu Sundaram" && p.fullName !== "Jonathan Turnbull"
+);
+
+// Staff / Administrative Team
+const staff = teamData.filter(p => p.groups.includes("administrativeTeam"));
+
+// Sort staff: Executive Director first, then alphabetical
+const staffSorted = [...staff].sort((a, b) => {
+  if (a.role.includes("Executive Director")) return -1;
+  if (b.role.includes("Executive Director")) return 1;
+  return a.fullName.localeCompare(b.fullName);
+});
+
+// Chairs and project leads (from chairsAndLeads group only — requires fresh Notion fetch)
+const chairsAndLeadsRaw = teamData.filter(p => p.groups.includes("chairsAndLeads"));
+
+// Filter out people whose only roles are "Committee Member" — keep chairs, leads, vice chairs
+const memberKeywords = ["(Member)"];
+const chairsFiltered = chairsAndLeadsRaw.filter(person => {
+  const roles = (person as any).leadershipRoles || [];
+  // Keep if they have at least one role that isn't just "(Member)"
+  return roles.some((r: string) => !memberKeywords.some(kw => r.endsWith(kw)));
+});
+
+// Use leadershipRoles from fetch script as labels (e.g. "Software Standards WG (Chair)")
+// Also strip out any "(Member)" roles from the labels since we're filtering those out
+const chairsWithLabels = chairsFiltered.map(person => {
+  const roles = ((person as any).leadershipRoles || []).filter(
+    (r: string) => !memberKeywords.some(kw => r.endsWith(kw))
+  );
+  return {
+    ...person,
+    label: roles.length > 0 ? roles.join(", ") : undefined,
+  };
+});
+
+// Organisation Leads (from organisationalLeads group, populated by fetch script)
+const orgLeadsRaw = teamData.filter(p => p.groups.includes("organisationalLeads"));
+const orgLeadsList = orgLeadsRaw.map(p => ({
+  name: p.fullName,
+  company: p.company || "",
+  role: p.role,
+  socialMedia: p.socialMedia,
+}));
+---
+
+<Layout
+  title="Governance & Leadership — Green Software Foundation"
+  description="How the Green Software Foundation is structured, governed, and led. Meet our Steering Committee, staff, working group chairs, and project leads."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Section 1: Hero -->
+  <Hero
+    heading="Governance"
+    headingAccent="& Leadership"
+    body="The Green Software Foundation is an accredited nonprofit under the Joint Development Foundation, part of the Linux Foundation family. Our governance is transparent, member-driven, and consensus-based."
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Governance illustration"
+  />
+
+  <!-- Section 1b: Governance Structure Intro -->
+  <TextBlock
+    heading="How we're *structured*"
+    body="The Steering Committee provides strategic direction and fiduciary oversight, while our working groups and committees drive the standards and initiatives that move the industry towards a sustainable future."
+    compact
+  />
+
+  <!-- Section 1c: Governance Hierarchy Diagram -->
+  <GovernanceDiagram />
+
+  <!-- Section 2: Steering Committee / Board -->
+  <TeamGrid
+    heading="*Steering Committee* / Board"
+    body="The Steering Committee is the primary governing body of the Green Software Foundation. Members are selected by Steering Member organisations and are responsible for strategic direction, fiduciary oversight, budget approval, and ratification of working group deliverables."
+    highlighted={highlightedSteering}
+    members={remainingSteering}
+    columns={3}
+  />
+
+  <!-- Section 3: Staff -->
+  <TeamGrid
+    heading="Our *Team*"
+    body="The foundation's staff run day-to-day operations and report to the Steering Committee."
+    members={staffSorted}
+    columns={3}
+    bgClass="bg-white"
+  />
+
+  <!-- Section 4: Chairs & Project Leads -->
+  <TeamGrid
+    heading="Chairs & *Project Leads*"
+    body="These are the people driving the initiatives at the Green Software Foundation — chairing working groups, committees, and projects, and moving the industry forward towards a sustainable future."
+    members={chairsWithLabels}
+    columns={4}
+  />
+
+  <!-- Section 5: Organisation Leads -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          <span class="font-bold text-primary">Organisation</span> Leads
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          Every member organisation has a primary Organisation Lead — the point of contact for people from that organisation who want to get involved with the foundation.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-8 max-w-3xl overflow-hidden rounded-xl border border-border">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b border-border bg-accent-lightest-2">
+              <th class="px-6 py-3 text-sm font-bold text-primary-dark">Organisation</th>
+              <th class="px-6 py-3 text-sm font-bold text-primary-dark">Lead</th>
+              <th class="hidden px-6 py-3 text-sm font-bold text-primary-dark md:table-cell">Title</th>
+              <th class="px-6 py-3 text-sm font-bold text-primary-dark w-12"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {orgLeadsList
+              .filter(p => p.company)
+              .sort((a, b) => a.company.localeCompare(b.company))
+              .map((lead, i) => {
+                const linkedin = lead.socialMedia?.find((s: any) => s.platform === "Linkedin");
+                return (
+                  <tr class={i % 2 === 0 ? "bg-white" : "bg-accent-lightest-2/50"}>
+                    <td class="px-6 py-3 text-sm font-semibold text-primary-dark">{lead.company}</td>
+                    <td class="px-6 py-3 text-sm">{lead.name}</td>
+                    <td class="hidden px-6 py-3 text-sm text-gray-darker md:table-cell">{lead.role}</td>
+                    <td class="px-6 py-3 text-sm">
+                      {linkedin && (
+                        <a href={linkedin.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark" aria-label={`${lead.name} on LinkedIn`}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Legal & Registration -->
+  <section class="bg-accent-lightest-2 py-12 md:py-16">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-center text-2xl font-semibold md:text-3xl">
+          Legal & <span class="font-bold text-primary">Registration</span>
+        </h2>
+        <p class="mt-4 text-center text-base leading-relaxed text-primary-dark/80">
+          The Green Software Foundation is a nonprofit registered under the Joint Development Foundation, with the Linux Foundation serving as fiscal sponsor. We are not a direct-service nonprofit.
+        </p>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <div class="rounded-xl border border-border bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-darker">EIN</p>
+            <p class="mt-1 text-lg font-semibold text-primary-dark">47-1122212</p>
+          </div>
+          <div class="rounded-xl border border-border bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-darker">Fiscal Sponsor</p>
+            <p class="mt-1 text-base font-semibold text-primary-dark">The Linux Foundation</p>
+            <p class="mt-0.5 text-sm text-gray-darker">548 Market St, PMB 57274, San Francisco, California</p>
+          </div>
+          <div class="rounded-xl border border-border bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-darker">Registered Address</p>
+            <p class="mt-1 text-sm text-primary-dark">3500 South Dupont Highway, Suite AA101, Dover, DE 19901</p>
+          </div>
+          <div class="rounded-xl border border-border bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-darker">Tax Filings</p>
+            <a
+              href="https://projects.propublica.org/nonprofits/organizations/471122212"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-1 inline-block text-base font-semibold text-primary underline decoration-primary/30 hover:decoration-primary"
+            >
+              View on ProPublica Nonprofit Explorer →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: CTA -->
+  <CTABanner
+    heading="Want to shape the future of green software?"
+    body="Join 60+ organisations building the standards, strategies, and tools for sustainable software."
+    ctaText="Explore membership"
+    ctaHref="/membership/"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/sci/", text: "SCI Specification" },
+          { href: "/standards/soft/", text: "SOFT Framework" },
+          { href: "https://learn.greensoftware.foundation", text: "Green Software Practitioner" },
+          { href: "/standards/sci-ai/", text: "SCI for AI" },
+          { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", text: "Carbon Aware SDK" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "Our Mission" },
+          { href: "/governance/", text: "Governance" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+          { href: "/impact/#press", text: "Press & Media" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "/events/", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

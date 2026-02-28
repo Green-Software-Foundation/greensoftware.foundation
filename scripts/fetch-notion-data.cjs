@@ -396,26 +396,125 @@ async function fetchSteeringCommittee() {
 }
 
 // ---------------------------------------------------------------------------
-// Query 4: Organisation Leads
+// Query 4a: Chairs & Project Leads
+// ---------------------------------------------------------------------------
+
+async function fetchChairsAndLeads() {
+  console.log("\nFetching Chairs & Project Leads (from Subscriptions)...");
+
+  const leadershipRoles = [
+    "Working Group Chair",
+    "Project Lead",
+    "Project Co-Lead",
+    "Committee Chair",
+    "Committee Vice Chair",
+    "Committee Member",
+  ];
+
+  // Query active subscriptions with any of the leadership roles
+  const subs = await queryAll(DS.SUBSCRIPTIONS, {
+    and: [
+      { property: "Subscription Status", select: { equals: "Active" } },
+      {
+        or: leadershipRoles.map((role) => ({
+          property: "Role for Subscription",
+          select: { equals: role },
+        })),
+      },
+    ],
+  });
+  console.log(`  Found ${subs.length} leadership subscriptions`);
+
+  // Resolve each subscription to a person + their role label
+  const people = [];
+  const seenVolunteerIds = new Set();
+
+  for (const sub of subs) {
+    const role = selectName(sub.properties["Role for Subscription"]);
+
+    // Resolve the PWCI name (working group / project / committee name)
+    let pwciName = "";
+    const pwciIds = relationIds(sub.properties["PWCIs"]);
+    if (pwciIds.length > 0) {
+      try {
+        const pwciPage = await notion.pages.retrieve({ page_id: pwciIds[0] });
+        pwciName = titleText(pwciPage.properties["Name"]);
+      } catch (err) {
+        console.warn(`  WARN: Could not resolve PWCI name: ${err.message}`);
+      }
+    }
+
+    // Build a human-readable label, e.g. "Software Standards WG (Chair)"
+    const roleShort = role
+      .replace("Working Group ", "")
+      .replace("Project ", "")
+      .replace("Committee ", "");
+    const label = pwciName ? `${pwciName} (${roleShort})` : role;
+
+    // Resolve the volunteer
+    const volunteers = await queryAll(DS.VOLUNTEERS, {
+      property: "Subscriptions",
+      relation: { contains: sub.id },
+    });
+
+    for (const vol of volunteers) {
+      if (seenVolunteerIds.has(vol.id)) {
+        // Person already seen — just append the additional role label
+        const existing = people.find((p) => p._volunteerIds?.includes(vol.id));
+        if (existing && label && !existing.leadershipRoles.includes(label)) {
+          existing.leadershipRoles.push(label);
+        }
+        continue;
+      }
+      seenVolunteerIds.add(vol.id);
+
+      const person = await extractPerson(vol, role);
+      person.leadershipRoles = label ? [label] : [];
+      person._volunteerIds = [vol.id];
+      people.push(person);
+    }
+  }
+
+  console.log(`  Resolved ${people.length} unique chairs/leads`);
+  return people;
+}
+
+// ---------------------------------------------------------------------------
+// Query 4b: Organisation Leads
 // ---------------------------------------------------------------------------
 
 async function fetchOrgLeads() {
-  console.log("\nFetching Organisation Leads...");
+  console.log("\nFetching Organisation Leads (from Subscriptions)...");
 
-  const volunteers = await queryAll(DS.VOLUNTEERS, {
+  // Query Subscriptions where Role = "Organization Lead" and Status = "Active"
+  const subs = await queryAll(DS.SUBSCRIPTIONS, {
     and: [
-      { property: "Volunteer Status", select: { equals: "Active" } },
-      { property: "Position on behalf of Member", multi_select: { contains: "Primary Org Lead" } },
+      { property: "Role for Subscription", select: { equals: "Organization Lead" } },
+      { property: "Subscription Status", select: { equals: "Active" } },
     ],
   });
-  console.log(`  Found ${volunteers.length} Organisation Leads`);
+  console.log(`  Found ${subs.length} Organisation Lead subscriptions`);
 
+  // Resolve each subscription to a person via the linked Volunteer
   const people = [];
-  for (const vol of volunteers) {
-    const person = await extractPerson(vol, "Organisation Lead");
-    people.push(person);
+  const seenVolunteerIds = new Set();
+
+  for (const sub of subs) {
+    const volunteers = await queryAll(DS.VOLUNTEERS, {
+      property: "Subscriptions",
+      relation: { contains: sub.id },
+    });
+
+    for (const vol of volunteers) {
+      if (seenVolunteerIds.has(vol.id)) continue;
+      seenVolunteerIds.add(vol.id);
+
+      const person = await extractPerson(vol, "Organisation Lead");
+      people.push(person);
+    }
   }
 
+  console.log(`  Resolved ${people.length} unique Organisation Leads`);
   return people;
 }
 
@@ -616,6 +715,7 @@ async function main() {
 
   // --- Team page ---
   const steeringCommittee = await fetchSteeringCommittee();
+  const chairsAndLeads = await fetchChairsAndLeads();
   const orgLeads = await fetchOrgLeads();
   const adminTeam = await fetchAdminTeam();
 
@@ -630,6 +730,15 @@ async function main() {
     if (teamMap.has(key)) {
       const existing = teamMap.get(key);
       if (!existing._groups.includes(group)) existing._groups.push(group);
+      // Merge leadershipRoles if the incoming person has them
+      if (person.leadershipRoles?.length) {
+        if (!existing.leadershipRoles) existing.leadershipRoles = [];
+        for (const role of person.leadershipRoles) {
+          if (!existing.leadershipRoles.includes(role)) {
+            existing.leadershipRoles.push(role);
+          }
+        }
+      }
     } else {
       person._groups = [group];
       teamMap.set(key, person);
@@ -640,6 +749,10 @@ async function main() {
     addToTeam(person, "steeringCommittee");
   }
 
+  for (const person of chairsAndLeads) {
+    addToTeam(person, "chairsAndLeads");
+  }
+
   for (const person of adminTeam) {
     addToTeam(person, "administrativeTeam");
   }
@@ -648,8 +761,8 @@ async function main() {
     addToTeam(person, "organisationalLeads");
   }
 
-  // Convert to array and rename _groups to groups
-  const teamJson = Array.from(teamMap.values()).map(({ _groups, ...rest }) => ({
+  // Convert to array and clean up internal fields
+  const teamJson = Array.from(teamMap.values()).map(({ _groups, _volunteerIds, ...rest }) => ({
     ...rest,
     groups: _groups,
   }));
@@ -665,6 +778,7 @@ async function main() {
   console.log(`General members: ${generalMembers.length}`);
   console.log(`Academic/Government members: ${academicGovMembers.length}`);
   console.log(`Steering Committee people: ${steeringCommittee.length}`);
+  console.log(`Chairs & Project Leads: ${chairsAndLeads.length}`);
   console.log(`Organisation Leads: ${orgLeads.length}`);
   console.log(`Admin Team: ${adminTeam.length}`);
   console.log(`Total team.json entries: ${teamJson.length}`);
