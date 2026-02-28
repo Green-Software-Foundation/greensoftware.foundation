@@ -1,0 +1,875 @@
+{
+  "fetched_date": "2026-02-27",
+  "source": "https://directory.greensoftware.foundation/",
+  "members": {
+    "steering": [
+      {
+        "name": "Accenture",
+        "description": "A global professional services company specializing in IT consulting strategy and digital transformation.",
+        "joined": "2021-01-06",
+        "website": "accenture.com",
+        "representatives": [
+          {
+            "name": "Hannah Unkefer",
+            "title": "Global Media Relations Lead",
+            "roles": ["Committee Member"]
+          },
+          {
+            "name": "Navveen Balani",
+            "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+            "roles": ["Project Lead", "Committee Member"],
+            "linkedin": "https://www.linkedin.com/in/naveenbalani/"
+          },
+          {
+            "name": "Sanjay Podder",
+            "title": "Managing Director",
+            "roles": ["Committee Member"],
+            "linkedin": "https://www.linkedin.com/in/sanjaypodder/"
+          }
+        ]
+      },
+      {
+        "name": "Cisco",
+        "description": "Develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.",
+        "joined": "2025-02-18",
+        "website": "cisco.com",
+        "representatives": [
+          {
+            "name": "Christopher Liljenstolpe",
+            "title": "Data Center Architecture & Sustainability",
+            "roles": ["Organization Lead", "Committee Member"],
+            "linkedin": "https://www.linkedin.com/in/liljenstolpe/"
+          }
+        ]
+      },
+      {
+        "name": "Google",
+        "description": "A global technology company specializing in search engines, cloud computing, AI.",
+        "joined": "2023-06-27",
+        "website": "about.google",
+        "representatives": [
+          {
+            "name": "Jonathan Turnbull",
+            "title": "Program Manager",
+            "roles": ["Organization Lead", "Committee Member"],
+            "linkedin": "https://www.linkedin.com/in/jonathanturnbull"
+          }
+        ]
+      },
+      {
+        "name": "NTT DATA",
+        "description": "A multinational IT service provider offering consulting, digital solutions and managed services.",
+        "joined": "2021-09-01",
+        "website": "nttdata.com",
+        "representatives": [
+          {
+            "name": "Franziska Warncke",
+            "title": "NTT DATA",
+            "roles": ["Project Lead"]
+          },
+          {
+            "name": "Gadhu Sundaram",
+            "title": "Vice President",
+            "roles": ["Committee Member", "Committee Chair"]
+          },
+          {
+            "name": "Yusuke Kobayashi",
+            "title": "Senior Manager, R&D / Green Innovation",
+            "roles": ["Organization Lead", "Committee Member"]
+          }
+        ]
+      },
+      {
+        "name": "Siemens",
+        "description": "A worldwide technology enterprise focused on automation, electrification and digitalization.",
+        "joined": "2023-09-01",
+        "website": "siemens.com",
+        "representatives": [
+          {
+            "name": "Ajay Vignesh",
+            "title": "Lead Research Engineer",
+            "roles": ["Committee Member"]
+          },
+          {
+            "name": "Carolin Rubner",
+            "title": "Head of Research Group",
+            "roles": ["Organization Lead", "Committee Member"]
+          },
+          {
+            "name": "Nelson Silva",
+            "title": "Head of RG",
+            "roles": ["Committee Member"]
+          },
+          {
+            "name": "Noah Cole",
+            "title": "Communications",
+            "roles": ["Committee Member"]
+          }
+        ]
+      },
+      {
+        "name": "UBS",
+        "description": "A multinational financial services company providing wealth management, investment banking and asset management.",
+        "joined": "2022-04-01",
+        "website": "ubs.com",
+        "representatives": [
+          {
+            "name": "Aurelie Bourgeais",
+            "title": "IB & NCL Tech Chief of Staff",
+            "roles": ["Committee Member"]
+          },
+          {
+            "name": "Ben Logan",
+            "title": "Global Technology Lead",
+            "roles": ["Organization Lead", "Committee Member"]
+          },
+          {
+            "name": "Richa Richa",
+            "title": "Software Engineer",
+            "roles": ["Committee Member"]
+          },
+          {
+            "name": "Vinjosh Varghese",
+            "title": "Data Engineer",
+            "roles": ["Committee Member"]
+          }
+        ]
+      }
+    ],
+    "general": [
+      "ACIS",
+      "Almaviva",
+      "Amadeus",
+      "Aveva",
+      "Bloomberg",
+      "Boavizta",
+      "Chalmers University of Technology",
+      "ClimateAction.tech",
+      "Cloud Sustainability Watch",
+      "Code from Finland",
+      "Concordia University",
+      "Digital Emissions",
+      "DXC",
+      "EDSP ECO",
+      "Electricity Maps",
+      "Energy Web",
+      "Envite",
+      "German Informatics Society",
+      "GitHub",
+      "GitLab",
+      "Globant",
+      "Goldman Sachs",
+      "GovTech Singapore",
+      "Green Software Foundation",
+      "GrUSP",
+      "HARC",
+      "IBM",
+      "Indian Institute of Management Mumbai",
+      "Infocomm Media Development Authority",
+      "Interfima",
+      "International Institute of Information Technology",
+      "Leaders for Climate Action",
+      "Linnaeus University",
+      "Manchester Metropolitan University",
+      "Mastercard",
+      "Metropolitan Police",
+      "Microsoft",
+      "mondragon.edu",
+      "Nomura Research Institute, Ltd",
+      "OpenUK",
+      "Renewable Energy Laboratory (NREL)",
+      "Responsible AI",
+      "Schneider Electric",
+      "Sentry",
+      "Shell",
+      "Sustainable Digital Infrastructure Alliance",
+      "Texas State University",
+      "The Explorers",
+      "The Green Web Foundation",
+      "Thoughtworks",
+      "Time for the Planet",
+      "Trust.ai",
+      "UCL",
+      "Universidad Politecnica de Madrid",
+      "Universita degli Studi dell'Aquila",
+      "University of Amsterdam",
+      "University of Bristol",
+      "University of Edinburgh",
+      "University of Huddersfield",
+      "University of Limerick",
+      "University of Salento",
+      "Virtasant",
+      "WattTime",
+      "ZutaCore"
+    ],
+    "total_steering": 6,
+    "total_general": 64
+  },
+  "projects": [
+    {
+      "name": "Awesome Green Software",
+      "status": "Published",
+      "parent": "Developer Relations Committee",
+      "parent_type": "committee",
+      "description": "A database of research, tools, code, libraries and training for building applications that emit less carbon into our atmosphere.",
+      "url": "/projects/awesome-green-software"
+    },
+    {
+      "name": "Carbon Aware SDK",
+      "status": "Published",
+      "parent": "Developer Relations Committee",
+      "parent_type": "committee",
+      "description": "An SDK to enable the creation of carbon aware applications, that do more when the electricity comes from clean low-carbon sources and less when it does not.",
+      "launch_date": "2021-09-22",
+      "leads": [
+        {
+          "name": "Vaughan Knight",
+          "title": "Principal Engineering Manager",
+          "company": "Microsoft"
+        }
+      ],
+      "meeting_schedule": "Weekly on Tuesdays at 07:00 GMT",
+      "website": "https://carbon-aware-sdk.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/carbon-aware-sdk",
+      "url": "/projects/carbon-aware-sdk"
+    },
+    {
+      "name": "Carbon Measurement Engine (Carmen)",
+      "short_name": "Carmen",
+      "status": "Draft",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Implement the SCI at scale to measure the carbon footprint of cloud-based software at both infrastructure and application levels. Delivers the visibility organisations need to understand and act on their software emissions.",
+      "launch_date": "2026-01-31",
+      "leads": [
+        {
+          "name": "Florent Morel",
+          "title": "GreenIT Practitioner",
+          "company": "Amadeus"
+        },
+        {
+          "name": "Robin Castellon",
+          "title": "Principal QA Engineer",
+          "company": "Amadeus"
+        }
+      ],
+      "github": "https://github.com/Green-Software-Foundation/if-carmen",
+      "url": "/projects/carbon-measurement-engine-(carmen)"
+    },
+    {
+      "name": "Green AI Practitioner Course",
+      "status": "Pre-proposal",
+      "parent": "Green AI Committee",
+      "parent_type": "committee",
+      "description": "AI has an environmental cost. This course puts the levers in your hands.",
+      "url": "/projects/green-ai-practitioner-course"
+    },
+    {
+      "name": "Green Software Patterns",
+      "status": "Published",
+      "parent": "Community Working Group",
+      "parent_type": "working_group",
+      "description": "A database of software patterns that, if applied, will reduce software emissions.",
+      "url": "/projects/green-software-patterns"
+    },
+    {
+      "name": "Green Software Practitioner",
+      "status": "Published",
+      "parent": "Developer Relations Committee",
+      "parent_type": "committee",
+      "description": "Learn the basic concepts a software practitioner needs to know to build, maintain and run greener applications.",
+      "url": "/projects/green-software-practitioner"
+    },
+    {
+      "name": "Impact Framework",
+      "short_name": "IF",
+      "status": "Ratified",
+      "parent": "Developer Relations Committee",
+      "parent_type": "committee",
+      "description": "A framework to Model, Measure, siMulate and Monitor the environmental impacts of software. Allows impact calculations without coding - users create a manifest file and the framework processes it.",
+      "launch_date": "2023-08-02",
+      "leads": [
+        {
+          "name": "Joseph Cook",
+          "title": "Product Owner",
+          "company": "Green Software Foundation"
+        },
+        {
+          "name": "Navveen Balani",
+          "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+          "company": "Accenture"
+        },
+        {
+          "name": "Srinivasan Rakhunathan",
+          "title": "Product Manager",
+          "company": "Microsoft"
+        }
+      ],
+      "website": "https://if.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/if",
+      "url": "/projects/impact-framework"
+    },
+    {
+      "name": "Policy Radar",
+      "status": "Published",
+      "parent": "Policy Working Group",
+      "parent_type": "working_group",
+      "description": "Calendar of anticipated policy events, including consultations, proposed legislation, and enacted laws relevant to GSF member regions.",
+      "launch_date": "2024-05-13",
+      "meeting_schedule": "Bi-weekly on Tuesdays at 15:30 GMT",
+      "github": "https://github.com/Green-Software-Foundation/policy_radar",
+      "url": "/projects/policy-radar"
+    },
+    {
+      "name": "Real Time Energy and Carbon Standard for Cloud Providers (RTC)",
+      "short_name": "RTC",
+      "status": "Published",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Establish a benchmark for measuring carbon emissions.",
+      "url": "/projects/real-time-energy-and-carbon-standard-for-cloud-providers-(rtc)"
+    },
+    {
+      "name": "SCI Self Certification Program",
+      "status": "Pre-draft",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": null,
+      "url": "/projects/sci-self-certification-program"
+    },
+    {
+      "name": "Software Carbon Intensity (SCI)",
+      "short_name": "SCI",
+      "status": "Published",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "A specification that describes how to calculate a carbon intensity for software applications. Defines methodology for computing total carbon emissions and converting them into rates that drive real-world emissions reductions.",
+      "launch_date": "2021-06-30",
+      "leads": [
+        {
+          "name": "Henry Richardson",
+          "title": "Senior Analyst",
+          "company": "WattTime"
+        },
+        {
+          "name": "Navveen Balani",
+          "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+          "company": "Accenture"
+        }
+      ],
+      "meeting_schedule": "Every 2 weeks on Thursday at 16:00 GMT",
+      "website": "https://sci.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/sci",
+      "url": "/projects/software-carbon-intensity-(sci)"
+    },
+    {
+      "name": "Software Carbon Intensity for Artificial Intelligence (SCI for AI)",
+      "short_name": "SCI for AI",
+      "status": "Ratified",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Extending the SCI to AI and addressing challenges of measuring artificial intelligence carbon emissions. Assists AI practitioners in understanding and reducing the carbon footprint of AI systems across the lifecycle.",
+      "launch_date": "2024-11-20",
+      "leads": [
+        {
+          "name": "Henry Richardson",
+          "title": "Senior Analyst",
+          "company": "WattTime"
+        },
+        {
+          "name": "Navveen Balani",
+          "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+          "company": "Accenture"
+        }
+      ],
+      "meeting_schedule": "Weekly on Thursdays at 16:00 GMT",
+      "website": "https://sci-for-ai.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/sci-ai",
+      "url": "/projects/software-carbon-intensity-for-artificial-intelligence-(sci-for-ai)"
+    },
+    {
+      "name": "Software Carbon Intensity for Web (SCI for Web)",
+      "short_name": "SCI for Web",
+      "status": "Draft",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Extending the SCI to the Web and addressing challenges of measuring website carbon emissions.",
+      "url": "/projects/software-carbon-intensity-for-web-(sci-for-web)"
+    },
+    {
+      "name": "Software Carbon Intensity Guide",
+      "status": "Published",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Understanding methodologies for calculating SCI components including energy, carbon intensity, embodied emissions and functional unit values.",
+      "url": "/projects/software-carbon-intensity-guide"
+    },
+    {
+      "name": "Software Energy Efficiency (SEE)",
+      "short_name": "SEE",
+      "status": "Proposal",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Methodology for calculating the energy consumption rate of a software system.",
+      "url": "/projects/software-energy-efficiency-(see)"
+    },
+    {
+      "name": "Sustainable Organisational Framework for Technology (SOFT)",
+      "short_name": "SOFT",
+      "status": "Ratified",
+      "parent": "Software Standards Working Group",
+      "parent_type": "working_group",
+      "description": "A framework for decision-making during technology development, implementation, and operation by incorporating available methodologies. Assists technology leaders in adopting software applications while reducing carbon emissions through decision trees, templates, and metrics.",
+      "launch_date": "2023-10-16",
+      "leads": [
+        {
+          "name": "Pindy Bhullar",
+          "title": "PhD Researcher / Sustainable IT Consultant",
+          "company": "ClimateAction.tech"
+        }
+      ],
+      "meeting_schedule": "Weekly on Mondays at 17:00 GMT",
+      "website": "https://soft.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/soft",
+      "url": "/projects/sustainable-organisational-framework-for-technology-(soft)"
+    },
+    {
+      "name": "Workload Dynamic Power and Cooling (WDPC)",
+      "short_name": "WDPC",
+      "status": "Draft",
+      "parent": "Hardware Standards Working Group",
+      "parent_type": "working_group",
+      "description": "Standardized data coordination between computational workloads and energy infrastructure. Defines a framework enabling reliable, consistent signalling between workloads, data centres, and grid operators.",
+      "launch_date": "2025-05-07",
+      "leads": [
+        {
+          "name": "My Truong",
+          "title": "CTO",
+          "company": "ZutaCore"
+        }
+      ],
+      "meeting_schedule": "Biweekly on Wednesdays at 17:00 GMT",
+      "website": "https://wdpc.greensoftware.foundation/",
+      "github": "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling",
+      "url": "/projects/workload-dynamic-power-and-cooling-(wdpc)"
+    }
+  ],
+  "working_groups": [
+    {
+      "name": "Software Standards Working Group",
+      "description": "Develops baseline specifications for Green Software and ensures interoperable implementation across computing platforms in both developed and developing regions.",
+      "project_count": 9,
+      "chairs": [
+        {
+          "name": "Henry Richardson",
+          "title": "Senior Analyst",
+          "company": "WattTime"
+        },
+        {
+          "name": "Navveen Balani",
+          "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+          "company": "Accenture"
+        }
+      ],
+      "meeting_schedule": "Bi-weekly on Thursdays at 15:00 GMT",
+      "contact": "standards-wg@greensoftware.foundation",
+      "projects": [
+        "Carbon Measurement Engine (Carmen)",
+        "Real Time Energy and Carbon Standard for Cloud Providers (RTC)",
+        "SCI Self Certification Program",
+        "Software Carbon Intensity (SCI)",
+        "Software Carbon Intensity for Artificial Intelligence (SCI for AI)",
+        "Software Carbon Intensity for Web (SCI for Web)",
+        "Software Carbon Intensity Guide",
+        "Software Energy Efficiency (SEE)",
+        "Sustainable Organisational Framework for Technology (SOFT)"
+      ]
+    },
+    {
+      "name": "Hardware Standards Working Group",
+      "description": "Develops standardized terminology, design/build/re-use and recycle standards, measurement methodologies, and reporting frameworks for efficient and sustainable physical hardware and related supporting infrastructure.",
+      "project_count": 1,
+      "chairs": [
+        {
+          "name": "Christopher Liljenstolpe",
+          "title": "Data Center Architecture & Sustainability",
+          "company": "Cisco"
+        }
+      ],
+      "meeting_schedule": "Biweekly on Wednesdays at 17:00 GMT",
+      "github": "https://github.com/Green-Software-Foundation/hardware-standards-wg",
+      "projects": [
+        "Workload Dynamic Power and Cooling (WDPC)"
+      ]
+    },
+    {
+      "name": "Policy Working Group",
+      "description": "A nonpartisan convening body that translates technical expertise in sustainable software into actionable policy insights. Engages external bodies on green software policy matters, creates proposals, and manages product/service certification projects.",
+      "project_count": 1,
+      "chairs": [
+        {
+          "name": "Chris Adams",
+          "title": "Director",
+          "company": "The Green Web Foundation"
+        }
+      ],
+      "meeting_schedule": "Bi-weekly on Tuesdays at 14:30 GMT",
+      "contact": "policy-wg@greensoftware.foundation",
+      "projects": [
+        "Policy Radar"
+      ]
+    }
+  ],
+  "committees": [
+    {
+      "name": "Steering Committee",
+      "description": "The primary governing body of the Green Software Foundation, with participants selected by Steering Member Organizations. Provides strategic definition and oversight; regulatory compliance and monitoring; maintenance of relationships and organizational identity; decisions on the OKRs of the Foundation; approval of the Foundation's Budget; and approval of changes to the Foundation's Charter.",
+      "project_count": 0,
+      "approved": null,
+      "chair": {
+        "name": "Gadhu Sundaram",
+        "title": "Vice President",
+        "company": "NTT DATA"
+      },
+      "vice_chair": {
+        "name": "Jonathan Turnbull",
+        "title": "Program Manager",
+        "company": "Google"
+      },
+      "members": [
+        {"name": "Ben Logan", "title": "Global Technology Lead", "company": "UBS"},
+        {"name": "Carolin Rubner", "title": "Head of Research Group", "company": "Siemens"},
+        {"name": "Christopher Liljenstolpe", "title": "Data Center Architecture & Sustainability", "company": "Cisco"},
+        {"name": "Gadhu Sundaram", "title": "Vice President", "company": "NTT DATA"},
+        {"name": "Jonathan Turnbull", "title": "Program Manager", "company": "Google"},
+        {"name": "Navveen Balani", "title": "Managing Director and Chief Technologist", "company": "Accenture"},
+        {"name": "Sanjay Podder", "title": "Managing Director", "company": "Accenture"},
+        {"name": "Vinjosh Varghese", "title": "Data Engineer", "company": "UBS"},
+        {"name": "Yusuke Kobayashi", "title": "Senior Manager R&D/Green Innovation", "company": "NTT DATA"}
+      ],
+      "decision_model": "Consensus with supermajority (75%) vote fallback",
+      "wiki": "https://wiki.greensoftware.foundation/steering-committee",
+      "github": "https://github.com/Green-Software-Foundation/sc"
+    },
+    {
+      "name": "Developer Relations Committee",
+      "description": "Focuses on driving adoption of green software standards and best practices across the global developer ecosystem. Oversees education initiatives and supports community outreach programs including Champions and Meetup programs.",
+      "project_count": 4,
+      "approved": "2024-07-18",
+      "members": [
+        {"name": "Akshit Batra", "title": "Senior Consultant Developer", "company": "Thoughtworks"},
+        {"name": "Holly Cummins", "title": "Senior Principal Software Engineer", "company": "IBM"},
+        {"name": "Jose Alejandro Sanchez", "title": "Chief Technology Innovation Officer", "company": "ACIS"},
+        {"name": "Julien Nioche", "title": "Open Source Contributor and Green Software Advocate", "company": "Boavizta"},
+        {"name": "Michael Bane", "title": "Senior Fellow/Lecturer in Computer Science", "company": "Manchester Metropolitan University"},
+        {"name": "Nelson Silva", "title": "Head of RG", "company": "Siemens"},
+        {"name": "Richa Richa", "title": "Software Engineer", "company": "UBS"},
+        {"name": "Sarah Hsu", "title": "Site Reliability Engineer", "company": "Goldman Sachs"},
+        {"name": "Simon Thurman", "title": "Cloud Solution Architect", "company": "Microsoft"}
+      ],
+      "decision_model": "Consensus-based with supermajority voting fallback",
+      "projects": [
+        "Awesome Green Software",
+        "Carbon Aware SDK",
+        "Green Software Practitioner",
+        "Impact Framework"
+      ]
+    },
+    {
+      "name": "Green AI Committee",
+      "description": "Shapes the GSF's strategy in building knowledge, standards, and tooling to ensure AI development results in the least amount of environmental harm possible to support net zero ambitions. Scope focuses on reducing AI's environmental impact, excluding AI for sustainability or AI safety discussions.",
+      "project_count": 1,
+      "approved": "2024-03-31",
+      "members": [
+        {"name": "Ajay Vignesh", "title": "Lead Research Engineer", "company": "Siemens"},
+        {"name": "Chris Xie", "title": "Head of Open Source Program Office, Senior Director, Strategy & Business Development", "company": null},
+        {"name": "Federica Sarro", "title": "Professor", "company": "UCL"},
+        {"name": "Gadhu Sundaram", "title": "Vice President", "company": "NTT DATA"},
+        {"name": "Jonathan Turnbull", "title": "Program Manager", "company": "Google"},
+        {"name": "Navveen Balani", "title": "Managing Director and Chief Technologist", "company": "Accenture"},
+        {"name": "Sanjay Podder", "title": "Managing Director", "company": "Accenture"},
+        {"name": "Vincent Caldeira", "title": "CTO APJ", "company": "IBM"},
+        {"name": "Vinjosh Varghese", "title": "Data Engineer", "company": "UBS"}
+      ],
+      "decision_model": "Consensus with supermajority vote fallback",
+      "projects": [
+        "Green AI Practitioner Course"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "name": "Navveen Balani",
+      "title": "Managing Director and Chief Technologist - Technology Sustainability Innovation",
+      "company": "Accenture",
+      "roles": ["Steering Committee Member", "Green AI Committee Member", "Project Lead (SCI)", "Project Lead (SCI for AI)", "Project Lead (Impact Framework)", "Software Standards WG Co-Chair"],
+      "linkedin": "https://www.linkedin.com/in/naveenbalani/"
+    },
+    {
+      "name": "Henry Richardson",
+      "title": "Senior Analyst",
+      "company": "WattTime",
+      "roles": ["Project Lead (SCI)", "Project Lead (SCI for AI)", "Software Standards WG Co-Chair"]
+    },
+    {
+      "name": "Gadhu Sundaram",
+      "title": "Vice President",
+      "company": "NTT DATA",
+      "roles": ["Steering Committee Chair", "Green AI Committee Member"]
+    },
+    {
+      "name": "Jonathan Turnbull",
+      "title": "Program Manager",
+      "company": "Google",
+      "roles": ["Steering Committee Vice-Chair", "Green AI Committee Member", "Google Organization Lead"]
+    },
+    {
+      "name": "Sanjay Podder",
+      "title": "Managing Director",
+      "company": "Accenture",
+      "roles": ["Steering Committee Member", "Green AI Committee Member"],
+      "linkedin": "https://www.linkedin.com/in/sanjaypodder/"
+    },
+    {
+      "name": "Vinjosh Varghese",
+      "title": "Data Engineer",
+      "company": "UBS",
+      "roles": ["Steering Committee Member", "Green AI Committee Member", "Developer Relations Committee Member"]
+    },
+    {
+      "name": "Christopher Liljenstolpe",
+      "title": "Data Center Architecture & Sustainability",
+      "company": "Cisco",
+      "roles": ["Steering Committee Member", "Hardware Standards WG Chair", "Cisco Organization Lead"],
+      "linkedin": "https://www.linkedin.com/in/liljenstolpe/"
+    },
+    {
+      "name": "Ben Logan",
+      "title": "Global Technology Lead",
+      "company": "UBS",
+      "roles": ["Steering Committee Member", "UBS Organization Lead"]
+    },
+    {
+      "name": "Carolin Rubner",
+      "title": "Head of Research Group",
+      "company": "Siemens",
+      "roles": ["Steering Committee Member", "Siemens Organization Lead"]
+    },
+    {
+      "name": "Yusuke Kobayashi",
+      "title": "Senior Manager, R&D / Green Innovation",
+      "company": "NTT DATA",
+      "roles": ["Steering Committee Member", "NTT DATA Organization Lead"]
+    },
+    {
+      "name": "Chris Adams",
+      "title": "Director",
+      "company": "The Green Web Foundation",
+      "roles": ["Policy Working Group Chair"]
+    },
+    {
+      "name": "Vaughan Knight",
+      "title": "Principal Engineering Manager",
+      "company": "Microsoft",
+      "roles": ["Project Lead (Carbon Aware SDK)"]
+    },
+    {
+      "name": "Pindy Bhullar",
+      "title": "PhD Researcher / Sustainable IT Consultant",
+      "company": "ClimateAction.tech",
+      "roles": ["Project Lead (SOFT)"]
+    },
+    {
+      "name": "My Truong",
+      "title": "CTO",
+      "company": "ZutaCore",
+      "roles": ["Project Lead (WDPC)"]
+    },
+    {
+      "name": "Joseph Cook",
+      "title": "Product Owner",
+      "company": "Green Software Foundation",
+      "roles": ["Project Lead (Impact Framework)"]
+    },
+    {
+      "name": "Florent Morel",
+      "title": "GreenIT Practitioner",
+      "company": "Amadeus",
+      "roles": ["Project Lead (Carmen)"]
+    },
+    {
+      "name": "Robin Castellon",
+      "title": "Principal QA Engineer",
+      "company": "Amadeus",
+      "roles": ["Project Lead (Carmen)"]
+    },
+    {
+      "name": "Srinivasan Rakhunathan",
+      "title": "Product Manager",
+      "company": "Microsoft",
+      "roles": ["Project Lead (Impact Framework)"]
+    },
+    {
+      "name": "Holly Cummins",
+      "title": "Senior Principal Software Engineer",
+      "company": "IBM",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Sarah Hsu",
+      "title": "Site Reliability Engineer",
+      "company": "Goldman Sachs",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Simon Thurman",
+      "title": "Cloud Solution Architect",
+      "company": "Microsoft",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Federica Sarro",
+      "title": "Professor",
+      "company": "UCL",
+      "roles": ["Green AI Committee Member"]
+    },
+    {
+      "name": "Vincent Caldeira",
+      "title": "CTO APJ",
+      "company": "IBM",
+      "roles": ["Green AI Committee Member"]
+    },
+    {
+      "name": "Ajay Vignesh",
+      "title": "Lead Research Engineer",
+      "company": "Siemens",
+      "roles": ["Green AI Committee Member"]
+    },
+    {
+      "name": "Nelson Silva",
+      "title": "Head of RG",
+      "company": "Siemens",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Richa Richa",
+      "title": "Software Engineer",
+      "company": "UBS",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Hannah Unkefer",
+      "title": "Global Media Relations Lead",
+      "company": "Accenture",
+      "roles": ["Accenture Committee Member"]
+    },
+    {
+      "name": "Aurelie Bourgeais",
+      "title": "IB & NCL Tech Chief of Staff",
+      "company": "UBS",
+      "roles": ["UBS Committee Member"]
+    },
+    {
+      "name": "Noah Cole",
+      "title": "Communications",
+      "company": "Siemens",
+      "roles": ["Siemens Committee Member"]
+    },
+    {
+      "name": "Franziska Warncke",
+      "title": "NTT DATA",
+      "company": "NTT DATA",
+      "roles": ["Project Lead"]
+    },
+    {
+      "name": "Akshit Batra",
+      "title": "Senior Consultant Developer",
+      "company": "Thoughtworks",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Jose Alejandro Sanchez",
+      "title": "Chief Technology Innovation Officer",
+      "company": "ACIS",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Julien Nioche",
+      "title": "Open Source Contributor and Green Software Advocate",
+      "company": "Boavizta",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Michael Bane",
+      "title": "Senior Fellow/Lecturer in Computer Science",
+      "company": "Manchester Metropolitan University",
+      "roles": ["Developer Relations Committee Member"]
+    },
+    {
+      "name": "Chris Xie",
+      "title": "Head of Open Source Program Office, Senior Director",
+      "company": null,
+      "roles": ["Green AI Committee Member"]
+    }
+  ],
+  "notes": {
+    "cross_reference_insights": {
+      "most_active_person": "Navveen Balani (Accenture) appears across 6+ roles: Steering Committee, Green AI Committee, Software Standards WG Co-Chair, and leads 3 projects (SCI, SCI for AI, Impact Framework). He is by far the most connected individual in the foundation.",
+      "multi_role_leaders": [
+        "Navveen Balani - 6 roles across steering, committees, WGs, and projects",
+        "Gadhu Sundaram - Steering Committee Chair + Green AI Committee",
+        "Jonathan Turnbull - Steering Committee Vice-Chair + Green AI Committee",
+        "Vinjosh Varghese - Steering Committee + Green AI Committee + Developer Relations",
+        "Henry Richardson - Software Standards WG Co-Chair + leads SCI + SCI for AI",
+        "Christopher Liljenstolpe - Steering Committee + Hardware Standards WG Chair",
+        "Sanjay Podder - Steering Committee + Green AI Committee"
+      ],
+      "accenture_dominance": "Accenture has the broadest representation with 3 people (Navveen Balani, Sanjay Podder, Hannah Unkefer), and Navveen Balani alone leads or co-chairs 3 projects and 1 working group. This gives Accenture outsized influence across the foundation.",
+      "microsoft_project_influence": "Microsoft is a General member (not Steering) but leads the Carbon Aware SDK (Vaughan Knight) and co-leads Impact Framework (Srinivasan Rakhunathan). They also have Simon Thurman on the Developer Relations Committee."
+    },
+    "project_status_distribution": {
+      "Published": 8,
+      "Ratified": 3,
+      "Draft": 3,
+      "Proposal": 1,
+      "Pre-proposal": 1,
+      "Pre-draft": 1,
+      "total": 17
+    },
+    "parent_group_distribution": {
+      "Software Standards Working Group": 9,
+      "Developer Relations Committee": 4,
+      "Hardware Standards Working Group": 1,
+      "Policy Working Group": 1,
+      "Green AI Committee": 1,
+      "Community Working Group": 1
+    },
+    "potential_content_gaps": [
+      "Green Software Patterns is listed under 'Community Working Group' but that WG has no directory page (404) - it may have been retired or merged",
+      "SCI Self Certification Program has no description - appears to be very early stage",
+      "Green AI Practitioner Course is only at Pre-proposal stage with no leads listed",
+      "Policy Radar has no named project leads on its detail page",
+      "Awesome Green Software and Green Software Practitioner detail pages were not fetched but they are Published projects that likely have rich content",
+      "Carmen was donated by Amadeus and launched Jan 2026 - the newest project",
+      "WDPC launched May 2025 - second newest, only project in the Hardware Standards WG"
+    ],
+    "membership_patterns": [
+      "6 Steering members vs 64 General members (roughly 1:10 ratio)",
+      "Cisco is the newest Steering member (Feb 2025), bringing hardware/data centre expertise",
+      "Strong academic presence: 12+ universities/research institutions as General members",
+      "Notable tech companies as General (not Steering): Microsoft, IBM, GitHub, GitLab, Goldman Sachs, Shell, Mastercard, Schneider Electric",
+      "Microsoft is notably General despite having project leads - suggests influence through contribution rather than governance",
+      "Government representation: GovTech Singapore, Metropolitan Police, NREL",
+      "Geographic diversity: members from Japan (NTT DATA, NRI), Singapore, India, Spain, Italy, Sweden, Ireland, UK, Germany, USA, France"
+    ],
+    "governance_structure": "Three-tier: Steering Committee (governance) -> Working Groups (standards development) + Committees (operations/outreach) -> Projects (deliverables). Each Steering member gets seats on the Steering Committee. Working Groups and Committees operate by consensus with 75% supermajority fallback.",
+    "project_websites": {
+      "sci": "https://sci.greensoftware.foundation/",
+      "soft": "https://soft.greensoftware.foundation/",
+      "wdpc": "https://wdpc.greensoftware.foundation/",
+      "sci_for_ai": "https://sci-for-ai.greensoftware.foundation/",
+      "carbon_aware_sdk": "https://carbon-aware-sdk.greensoftware.foundation/",
+      "impact_framework": "https://if.greensoftware.foundation/"
+    }
+  }
+}

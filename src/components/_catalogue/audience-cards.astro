@@ -1,0 +1,64 @@
+---
+import { Card } from "@/components/ui/card";
+import CsuiteIcon from "@/assets/blog-developers-icon.svg";
+import PractitionersIcon from "@/assets/blog-business-icon.svg";
+import SustainabilityIcon from "@/assets/blog-sustainability-icon.svg";
+
+const blogPosts = [
+  {
+    image: {
+      src: "/assets/blog-illustration-1.svg",
+    },
+    icon: CsuiteIcon,
+    title: "Developers",
+    description: `WDPC gives you the data foundation to build truly carbon-aware applications. Through standardized APIs, your services can receive real-time signals about grid carbon intensity, infrastructure capacity, and renewable energy availability.<br/><br/> While you design the logic, WDPC ensures you have consistent, reliable data to make intelligent scheduling decisions. This is your chance to architect systems that balance performance with sustainability, and have the metrics to prove it.`,
+  },
+  {
+    image: {
+      src: "/assets/blog-illustration-2.svg",
+    },
+    icon: PractitionersIcon,
+    title: "Business Leaders",
+    description: `WDPC opens doors to energy market participation and demand response programs that were previously inaccessible. With standardized data exchange, your facilities gain the visibility needed to optimize energy costs and demonstrate sustainability progress with real metrics.<br/><br/> As AI workloads grow, WDPC provides the coordination framework to scale intelligently, aligning computational needs with grid capacity and renewable availability. It's the foundation for turning energy management from reactive to strategic.`,
+  },
+  {
+    image: {
+      src: "/assets/blog-illustration-3.svg",
+    },
+    icon: SustainabilityIcon,
+    title: "Sustainability Teams",
+    description: `WDPC brings clarity to sustainability measurement by standardizing how energy and carbon data flows through your infrastructure. You'll have consistent temporal data to track actual carbon intensity, measure waste heat recovery, and correlate workload decisions with emissions.<br/><br/>For your reporting system, WDPC ensures the underlying data is reliable, comparable, and auditable. Finally, a path to sustainability claims backed by real operational data.`,
+  },
+];
+---
+
+<section class="relative pb-12 md:pb-18 lg:pb-20">
+  <div class="container">
+    <h2 class="mb-6 text-center text-2xl font-semibold md:mb-8 md:text-3xl lg:text-4xl">
+      <span class="font-bold text-primary">WDPC</span>
+      <span class="text-primary-darker">Audience</span>
+    </h2>
+
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+      {
+        blogPosts.map((post) => (
+          <Card className="flex size-full flex-col items-center justify-start px-2 pt-2 pb-4">
+            <div>
+              <div class="mb-3 overflow-hidden md:mb-4">
+                <img src={post.image.src} class="aspect-[3/2] size-full rounded-md object-cover" />
+              </div>
+              <div class="px-4">
+                <div class="mb-2 flex flex-row items-center justify-start gap-2">
+                  <post.icon class="h-6 w-6 flex-shrink-0" />
+                  <h2 class="text-xl font-bold text-primary">{post.title}</h2>
+                </div>
+                <p set:html={post.description} />
+              </div>
+            </div>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+  <!-- <img class="absolute top-0 right-0 -z-50" src="/assets/join-decor.svg" /> -->
+</section>

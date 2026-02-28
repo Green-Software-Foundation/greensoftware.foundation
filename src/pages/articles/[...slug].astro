@@ -1,0 +1,218 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import NewsletterSignup from "@/components/newsletter-signup.astro";
+import { navItems } from "@/lib/nav-items";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles");
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+
+const seoDescription = article.data.description || article.data.summary || article.data.teaserText || "";
+const authorNames = article.data.authors?.map((a) => a.fullName) || [];
+---
+
+<Layout
+  title={`${article.data.title} | Green Software Foundation`}
+  description={seoDescription}
+  ogImage={article.data.mainImage}
+  ogType="article"
+  article={{
+    publishedTime: article.data.date.toISOString(),
+    authors: authorNames,
+  }}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.data.title,
+    "description": seoDescription,
+    "datePublished": article.data.date.toISOString(),
+    "image": article.data.mainImage ? new URL(article.data.mainImage, "https://greensoftware.foundation").href : undefined,
+    "author": authorNames.length > 0 ? authorNames.map((name) => ({ "@type": "Person", "name": name })) : { "@type": "Organization", "name": "Green Software Foundation" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Green Software Foundation",
+      "url": "https://greensoftware.foundation",
+    },
+  })} />
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+  <article class="bg-accent-lightest-2">
+    <!-- Wide header section -->
+    <div class="container pt-10 pb-12 md:pt-14 md:pb-16">
+      <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-gray-darker">
+            <li>
+              <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-gray-dark">/</li>
+            <li><a href="/articles/" class="hover:text-primary transition-colors">Articles</a></li>
+            <li class="text-gray-dark">/</li>
+            <li class="text-primary-dark truncate max-w-[300px]">{article.data.title}</li>
+          </ol>
+        </nav>
+
+        <!-- Title -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 leading-tight">
+          {article.data.title}
+        </h1>
+
+        <!-- Teaser / subtitle -->
+        {article.data.teaserText && (
+          <p class="text-xl text-primary-dark leading-relaxed max-w-3xl">
+            {article.data.teaserText}
+          </p>
+        )}
+
+        <!-- Date + origin -->
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-darker mt-6">
+          <time datetime={article.data.date.toISOString()} class="font-semibold text-primary">
+            {formattedDate}
+          </time>
+          {article.data.originBlogName && (
+            <span>
+              &middot; Originally on{" "}
+              {article.data.publishedOriginUrl ? (
+                <a
+                  href={article.data.publishedOriginUrl}
+                  class="text-primary underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {article.data.originBlogName}
+                </a>
+              ) : (
+                article.data.originBlogName
+              )}
+            </span>
+          )}
+        </div>
+
+        <!-- Authors -->
+        {article.data.authors && article.data.authors.length > 0 && (
+          <div class="flex flex-wrap items-center gap-5 mt-6 pt-6 border-t border-primary-lighter">
+            {article.data.authors.map((author) => (
+              <div class="flex items-center gap-3">
+                {author.photo && (
+                  <img
+                    src={author.photo}
+                    alt={author.fullName}
+                    class="w-10 h-10 rounded-full object-cover"
+                  />
+                )}
+                <div>
+                  <p class="font-bold text-primary-dark text-sm">{author.fullName}</p>
+                  {author.role && author.company && (
+                    <p class="text-xs text-gray-darker">
+                      {author.role} at{" "}
+                      {author.companyWebsite ? (
+                        <a
+                          href={author.companyWebsite}
+                          class="text-primary underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {author.company}
+                        </a>
+                      ) : (
+                        author.company
+                      )}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Hero image (full-width within container) -->
+    {article.data.mainImage && (
+      <div class="container pb-12">
+        <div class="max-w-4xl mx-auto">
+          <img
+            src={article.data.mainImage}
+            alt={article.data.mainImageAlt || article.data.title}
+            class="w-full rounded-lg"
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- Article body — narrower column -->
+    <div class="container pb-16 md:pb-20">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+
+        <!-- Translators -->
+        {article.data.translators && article.data.translators.length > 0 && (
+          <div class="mt-12 pt-6 border-t border-border">
+            <h2 class="text-sm font-bold text-gray-darker uppercase tracking-wider mb-4">
+              {article.data.translators.length === 1 ? "Translator" : "Translators"}
+            </h2>
+            <div class="space-y-4">
+              {article.data.translators.map((translator) => (
+                <div class="flex items-center gap-3">
+                  {translator.photo && (
+                    <img
+                      src={translator.photo}
+                      alt={translator.fullName}
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                  )}
+                  <div>
+                    <p class="font-semibold text-primary-dark text-sm">{translator.fullName}</p>
+                    {translator.role && (
+                      <p class="text-xs text-gray-darker">{translator.role}{translator.company && ` at ${translator.company}`}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </article>
+  <NewsletterSignup />
+  <CTABanner
+    heading="Every member's journey starts with a conversation"
+    body="Tell us what you're trying to solve. We'll tell you how membership can help."
+    ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
+  />
+  <Footer />
+</Layout>

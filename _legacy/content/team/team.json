@@ -1,0 +1,569 @@
+[
+  {
+    "fullName": "Gadhu Sundaram",
+    "role": "Vice President",
+    "company": "NTT DATA",
+    "companyWebsite": "nttdata.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/gadhu-sundaram-9208029/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Christopher Liljenstolpe",
+    "role": "Data Center Architecture & Sustainability",
+    "company": "Cisco",
+    "companyWebsite": "https://www.cisco.com/",
+    "photo": "photos/christopher-liljenstolpe.jpeg",
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/liljenstolpe/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Vinjosh Varghese",
+    "role": "Data engineer",
+    "company": "UBS",
+    "companyWebsite": "ubs.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/vinjosh-varghese-7801448"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Jonathan Turnbull",
+    "role": "Program Manager",
+    "company": "Google",
+    "companyWebsite": "about.google",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/jonathanturnbull"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Yusuke Kobayashi",
+    "role": "Senior Manager, R&D / Green Innovation",
+    "company": "NTT DATA",
+    "companyWebsite": "nttdata.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/yusuke-kobayashi-069139121/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Carolin Rubner",
+    "role": "Head of Research Group",
+    "company": "Siemens",
+    "companyWebsite": "siemens.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/carolin-rubner-255a2b2/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee"
+    ]
+  },
+  {
+    "fullName": "Navveen Balani",
+    "role": "Managing Director and Chief Technologist- Technology Sustainability Innovation",
+    "company": "Accenture",
+    "companyWebsite": "www.accenture.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/naveenbalani/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee",
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Sanjay Podder",
+    "role": "Managing Director at Accenture",
+    "company": "Accenture",
+    "companyWebsite": "www.accenture.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/sanjaypodder/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee",
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Ben Logan",
+    "role": "Global Technology Lead",
+    "company": "UBS",
+    "companyWebsite": "ubs.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/benlogan/"
+      }
+    ],
+    "groups": [
+      "steeringCommittee",
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Russ Trow",
+    "role": "Operations Director",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Jenya Saprykina",
+    "role": "Brand Designer",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Liene Kalniņa",
+    "role": "Operations Assistant",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Joseph Cook",
+    "role": "Head of Research",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Gosia Fricze",
+    "role": "Communications Manager",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Osama Jandaly",
+    "role": "Web Developer",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Jabari George",
+    "role": "Hardware Standards Technical Editor",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Jamie Cowan",
+    "role": "Head of Partnerships",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Kirsty Bryant",
+    "role": "Senior Project Manager",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Sean Mcilroy",
+    "role": "Program Director",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Asim Hussain",
+    "role": "Executive Director",
+    "company": "Green Software Foundation",
+    "companyWebsite": "https://greensoftware.foundation/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/jawache/"
+      }
+    ],
+    "groups": [
+      "administrativeTeam"
+    ]
+  },
+  {
+    "fullName": "Daniel Schien",
+    "role": "Senior Lecturer in Computer Science, Department of Computer Science",
+    "company": "University of Bristol",
+    "companyWebsite": "https://www.bristol.ac.uk/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/daniel-schien-31a0249/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Chris Xie",
+    "role": "Head of Open Source Program Office, Senior Director of Strategy and Business Development",
+    "company": "Futurewei",
+    "companyWebsite": "https://www.futurewei.com/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/chrisxie-us/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Daniel Vaughan",
+    "role": "Director, Software Engineering",
+    "company": "Mastercard",
+    "companyWebsite": "https://www.mastercard.co.uk/en-gb.html",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Juan Ignacio Rubio",
+    "role": "Green Digital Lead - Energy Management",
+    "company": "Schneider Electric",
+    "companyWebsite": "www.se.com",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/juan-ignacio-rubio/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Henry Richardson",
+    "role": "Senior Analyst",
+    "company": "WattTime",
+    "companyWebsite": "https://watttime.org/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/henry-richardson/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Inky Vos",
+    "role": "Sustainability & Solution Manager",
+    "company": "Sustainable Digital Infrastructure Alliance",
+    "companyWebsite": "https://sdialliance.org/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/inky-vos/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Chris Adams",
+    "role": "Director",
+    "company": "The Green Web Foundation",
+    "companyWebsite": "https://www.thegreenwebfoundation.org/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/mrchrisadams/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Ziliang Zong",
+    "role": "Associate Professor",
+    "company": "Texas State University",
+    "companyWebsite": "https://www.txst.edu/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/ziliang-zong-099a6033/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Mauro Caporuscio",
+    "role": "Professor of Computer Science",
+    "company": "Linnaeus University",
+    "companyWebsite": "https://lnu.se/en",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/maurocaporuscio/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Timo Müller",
+    "role": "Managing Director",
+    "company": "Leaders for Climate Action",
+    "companyWebsite": "https://lfca.earth/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/timomueller91/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Toru Shimogaki",
+    "role": "Head of Green Innovation",
+    "company": "NTT DATA",
+    "companyWebsite": "nttdata.com",
+    "photo": null,
+    "socialMedia": [],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Konrad Pfeilsticker",
+    "role": "Founder",
+    "company": "Envite",
+    "companyWebsite": "https://envite.de/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/konrad-pfeilsticker/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Savannah Goodman",
+    "role": "Data and Software Climate Solutions Lead",
+    "company": "Google",
+    "companyWebsite": "about.google",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/savannah-goodman/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Virginie Corraze",
+    "role": "Associate director, Engineering Quality & Sustainability",
+    "company": "Amadeus",
+    "companyWebsite": "amadeus.com/en",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/virginie-corraze-0a034441/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Lisa Mcnally",
+    "role": "Global Head of Sustainability",
+    "company": "Thoughtworks",
+    "companyWebsite": "https://www.thoughtworks.com/en-gb",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/lisamcnally/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Dean Bosche",
+    "role": "Head of Corporate Development",
+    "company": "Virtasant",
+    "companyWebsite": "https://www.virtasant.com/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/bosche/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Sarah Hsu",
+    "role": "Site Reliability Engineer",
+    "company": "Goldman Sachs",
+    "companyWebsite": "https://www.goldmansachs.com/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/greenhsu123/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Erik Lueders",
+    "role": "Director of IT Sustainability",
+    "company": "Mastercard",
+    "companyWebsite": "https://www.mastercard.co.uk/en-gb.html",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/erik-lueders/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  },
+  {
+    "fullName": "Adam Jordan",
+    "role": "Distinguished Engineer & Head of Secure, Sustainable Software",
+    "company": "Shell",
+    "companyWebsite": "https://www.shell.com/",
+    "photo": null,
+    "socialMedia": [
+      {
+        "platform": "Linkedin",
+        "link": "https://www.linkedin.com/in/xylamic/"
+      }
+    ],
+    "groups": [
+      "organisationalLeads"
+    ]
+  }
+]

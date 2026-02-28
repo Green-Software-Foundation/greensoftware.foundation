@@ -1,0 +1,101 @@
+---
+import clsx from "clsx";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import DirectoryIcon from "@/assets/icons/directory.svg";
+import SubscribeIcon from "@/assets/icons/subscribe-icon.svg";
+import FeedbackIcon from "@/assets/icons/feedback-icon.svg";
+import JoinGsfIcon from "@/assets/icons/join-gsf-icon.svg";
+
+const waysToGetInvolved = [
+  {
+    url: "https://github.com/Green-Software-Foundation/SOFT/issues",
+    icon: FeedbackIcon,
+    title: "Explore the Framework",
+    description: "Read the full documentation and share your feedback",
+    buttonText: "Visit the GitHub Issue",
+  },
+  {
+    url: "https://greensoftware.foundation/projects/software-standards-wg",
+    icon: SubscribeIcon,
+    title: "Join the Software Standards Working Group",
+    subtitle: "Members Only",
+    description: "Collaborate with industry experts shaping this framework",
+    buttonText: "Subscribe",
+  },
+  {
+    url: "https://directory.greensoftware.foundation/projects/sustainable-organisational-framework-for-technology-(soft)/",
+    icon: DirectoryIcon,
+    title: "Visit the Directory",
+    description: "Get in touch with project leads",
+    buttonText: "Learn more",
+  },
+  {
+    url: "https://greensoftware.foundation/membership",
+    icon: JoinGsfIcon,
+    title: "Inquiry about becoming a GSF member",
+    description: "Reach out directly to the GSF team",
+    buttonText: "Get in touch",
+  },
+];
+---
+
+<section id="get-involved" class="py-12 md:py-18 lg:py-20">
+  <div class="relative container">
+    <div class="mb-6 md:mb-8">
+      <h2 class="mb-2 text-2xl font-semibold md:text-3xl lg:text-4xl">Get Involved</h2>
+      <p>Multiple Ways to Join the Movement</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
+      {
+        waysToGetInvolved.map((way, index) => (
+          <Card
+            className={clsx("flex size-full flex-col items-center justify-between p-4", {
+              "bg-primary-darker text-white": index === 0,
+            })}
+          >
+            <div class="w-full">
+              <way.icon class="size-8" />
+              <div
+                class={clsx("my-3 border md:my-4", {
+                  "border-greige/20": index === 0,
+                  "border-primary-lighter/20": index !== 0,
+                })}
+              />
+
+              <h2
+                class={clsx("mb-2 text-xl font-bold text-primary", {
+                  "text-white": index === 0,
+                })}
+              >
+                {way.title} <br />
+                {way.subtitle && <span class="text-sm">({way.subtitle})</span>}
+              </h2>
+              <p>{way.description}</p>
+            </div>
+            <div class="mt-6 flex w-full items-start justify-start">
+              {index === 0 ? (
+                <Button className="w-full" variant="secondary">
+                  <a href={way.url} target="_blank" rel="noopener noreferrer">
+                    {way.buttonText}
+                  </a>
+                </Button>
+              ) : (
+                <Button className="w-full">
+                  <a href={way.url} target="_blank" rel="noopener noreferrer">
+                    {way.buttonText}
+                  </a>
+                </Button>
+              )}
+            </div>
+          </Card>
+        ))
+      }
+    </div>
+    <img
+      class="absolute right-0 bottom-[76%] hidden px-[5%] lg:block"
+      src="/assets/get-involved-decor.svg"
+    />
+  </div>
+</section>

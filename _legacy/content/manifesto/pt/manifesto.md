@@ -1,0 +1,28 @@
+---
+title: "Manifesto"
+mainParagraph: "O Manifesto da Green Software Foundation é uma declaração voltada para o público das políticas e objetivos da Fundação. Descreve os valores principais da Fundação e como nós os operalizamos. É usado tanto para informar e guiar as decisões e comportamentos das pessoas dentro da Fundação, como para sinalizar às partes interessadas externas o que é importante para a Fundação.\n"
+mission: "Missão: Construir um ecossistema confiável de pessoas, padrões, ferramentas e boas práticas ao criar e construir software sustentável."
+vision: "Visão: Mudar a cultura do desenvolvimento de software na indústria para que a sustentabilidade se torne prioridade chave para times de software, tão importante quanto performance, segurança, custo e acessibilidade."
+topics:
+  - title: "Diminuir o Carbono"
+    description: "A missão da Fundação é reduzir a carga total das emissões globais de carbono associadas ao software. Ao avaliar as opções, escolhemos pela que advoga por redução (diminuindo emissões), não neutralização (compensando emissões). "
+    operationalise: "Operacionalizar: Nós iremos pensar em como minimizar emissões de carbono em todas as decisões que fizermos a respeito de como nos comportamos operacionalmente, e nos padrões e tecnologias que criamos e usamos."
+    illustration: "/images/manifesto/diminuir-o-carbono.svg"
+  - title: "MAXIMIZAR CONFIANÇA"
+    description: "Se não houver confiança nos resultados da Fundação, ela não terá a influência necessária e falhará na sua missão principal. Ao avaliar as escolhas, optamos pela alternativa que aumenta a confiança na Funda��ão."
+    operationalise: "* Nós teremos uma mistura diversa de organizações, com fins lucrativos, sem fins lucrativos, governamentais e acadêmicas.\n* A não ser que haja uma boa razão para manter privacidade, todos os documentos, tópicos e processos serão abertos e transparentes."
+    illustration: "/images/manifesto/maximizar-confian-a.svg"
+  - title: "SE ENVOLVA COM EMPATIA"
+    description: "Garantindo que todas nossas pessoas participantes e contribuidoras sintam que podem contribuir ativamente vai permitir criarmos um ambiente que promova pertencimento e irá levar a melhores resultados. "
+    operationalise: "* Vamos nos esforçar para escutar ativamente antes de responder, para reconhecer quando outras pessoas participantes do grupo não estão participando e criar espaço para que elas se envolvam.\n* Vamos reconhecer que todas estão em um estágio diferente em suas jornadas climáticas e vamos trabalhar para ajudar nossas colegas a avançar no entendimento e impacto alinhados com a missão da Fundação.\n* Vamos nos comprometer a oferecer feedback direto e construtivo para nossas colegas em nosso trabalho para atingir a missão da Green Software Foundation.\n"
+    illustration: "/images/manifesto/se-envolva-com-empatia.svg"
+  - title: "SEJA INCLUSIVA E ABERTA"
+    description: "Alcançar a missão da Green Software Foundation exige que ajamos com justiça com todas as participantes e a sermos inclusivas com diferentes perspectivas."
+    operationalise: "* Nós iremos garantir acessibilidade digital em todos os nossos processos organizacionais, canais de comunicação, padrões de desenvolvimento e código.\n* Nossos grupos de trabalhos e comitês de direção funcionarão por consenso. Se não conseguirmos chegar a um consenso sobre as questões, então há uma votação. O tamanho da organização não importa. Cada participante geral e dirigente tem um voto cada.\n* Nosso comitê de direção analisará todas as solicitações de recursos que, no geral, beneficiam algumas organizações membros em detrimento de outras.\n* Seguiremos a [política de confiança](https://www.linuxfoundation.org/antitrust-policy/) da Linux Foundation."
+    illustration: "/images/manifesto/seja-inclusiva-e-aberta.svg"
+  - title: "SOMOS RESPONSÁVEIS"
+    description: "Responsabilidade constrói confiança e garante que todas as participantes, pessoas interessadas externas, e contribuidoras sintam que a Green Software Foundation é uma comunidade onde defendemos nossos valores e garantimos segurança, profissionalismo e inclusão."
+    operationalise: "* Nós sempre iremos assumir que nossas colegas estão agindo com as melhores intenções e trabalhando para a missão da Green Software Foundation.\n* Em casos onde uma participante ou contribuidora da Green Software Foundation esteja com um comportamento conflituoso com os nossos valores essenciais, relatórios podem ser feitos para Asim Hussain, Presidente, asim@greensoftware.foundation."
+    illustration: "/images/manifesto/somos-respons-veis.svg"
+---
+

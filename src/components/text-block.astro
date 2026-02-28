@@ -1,0 +1,67 @@
+---
+interface Props {
+  /** Heading text. Wrap words in *asterisks* to highlight them in accent colour, e.g. "What is *Software Carbon Intensity?*" */
+  heading?: string;
+  /** Body text (can be multiple paragraphs separated by newlines) */
+  body?: string;
+  /** Image source (shown beside text in a two-column layout) */
+  imageSrc?: string;
+  /** Image alt text */
+  imageAlt?: string;
+  /** Whether to show in a card-style container */
+  card?: boolean;
+  /** Reduce vertical padding (useful when used as a section heading) */
+  compact?: boolean;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body = "",
+  imageSrc,
+  imageAlt = "",
+  card = false,
+  compact = false,
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+
+// Split heading into plain and accent segments: "What is *Software Carbon Intensity?*"
+// becomes [{text: "What is "}, {text: "Software Carbon Intensity?", accent: true}]
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+---
+
+<section class={`${compact ? "py-8 md:py-10" : "py-16 md:py-20"} ${bgClass}`}>
+  <div class="container">
+    <div class:list={[
+      imageSrc ? "grid items-center gap-10 md:grid-cols-2 md:gap-16" : "mx-auto max-w-5xl text-center",
+      card && "rounded-2xl bg-accent-lighter/50 p-8 md:p-12",
+    ]}>
+      <div>
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          {headingParts.map(part =>
+            part.accent
+              ? <span class="font-bold text-primary">{part.text}</span>
+              : part.text
+          )}
+        </h2>
+        {body && (
+          <p class="mt-6 text-lg leading-relaxed md:text-xl">
+            {body}
+          </p>
+        )}
+        <slot />
+      </div>
+      {imageSrc && (
+        <div class="flex justify-center">
+          <img src={imageSrc} alt={imageAlt} class="w-full max-w-sm" />
+        </div>
+      )}
+    </div>
+  </div>
+</section>

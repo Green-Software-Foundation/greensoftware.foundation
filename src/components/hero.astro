@@ -1,0 +1,105 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface CTA {
+  text: string;
+  href?: string;
+  variant?: "default" | "outline" | "primary" | "primary-invert";
+}
+
+interface Props {
+  /** Main heading text (plain text before the accent span) */
+  heading?: string;
+  /** Accent portion of the heading (displayed in text-primary) */
+  headingAccent?: string;
+  /** Subtitle text */
+  subtitle?: string;
+  /** Body paragraph text */
+  body?: string;
+  /** Call-to-action buttons */
+  ctas?: CTA[];
+  /** Hero illustration image source */
+  imageSrc?: string;
+  /** Hero illustration alt text */
+  imageAlt?: string;
+  /** Background class */
+  bgClass?: string;
+  /** Show animated scroll indicator at the bottom (teardrop Lottie) */
+  scrollIndicator?: boolean;
+  /** Section ID for anchor linking */
+  id?: string;
+}
+
+const {
+  heading = "Measure What Matters:",
+  headingAccent = "Software's Carbon Impact",
+  subtitle,
+  body = "Every software application has a carbon footprint through the energy it consumes and the hardware it requires. The Software Carbon Intensity (SCI) specification provides the first ISO-accredited methodology to measure this impact as a score.",
+  ctas = [],
+  imageSrc = "/assets/hero-illustration.svg",
+  imageAlt = "Hero illustration",
+  bgClass = "bg-accent-lightest-2",
+  scrollIndicator = false,
+  id = "overview",
+} = Astro.props;
+---
+
+<section id={id} class={`py-10 md:py-16 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <div
+      class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center"
+    >
+      <div>
+        <h1 class="text-3xl font-extrabold md:text-4xl lg:text-5xl">
+          {heading}
+          {headingAccent && (
+            <>
+              {" "}<span class="text-primary">{headingAccent}</span>
+            </>
+          )}
+        </h1>
+        {subtitle && (
+          <h6 class="mt-3 text-2xl font-bold text-black md:mt-4">
+            {subtitle}
+          </h6>
+        )}
+        <p class="mt-5 text-lg font-normal md:mt-6 md:text-xl lg:text-2xl">
+          {body}
+        </p>
+        {ctas.length > 0 && (
+          <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
+            {ctas.map((cta) => (
+              <a href={cta.href || "#"}>
+                <Button variant={cta.variant || "default"}>{cta.text}</Button>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="flex items-center justify-center">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          class="shrink-0 object-cover w-full max-w-md"
+        />
+      </div>
+    </div>
+    {scrollIndicator && (
+      <div class="mt-10 hidden lg:flex lg:items-center lg:justify-center">
+        <canvas id="hero-decor" style="width: 36px; height: 70px;"></canvas>
+      </div>
+    )}
+  </div>
+</section>
+{scrollIndicator && (
+  <script>
+    import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+    new DotLottie({
+      autoplay: true,
+      loop: true,
+      canvas: document.querySelector("#hero-decor") as HTMLCanvasElement,
+      src: "/assets/hero-decor.lottie",
+    });
+  </script>
+)}

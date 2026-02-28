@@ -1,0 +1,166 @@
+---
+interface Props {
+  /** Background class */
+  bgClass?: string;
+}
+
+const { bgClass = "bg-accent-lightest-2" } = Astro.props;
+---
+
+<section class={`py-8 md:py-12 ${bgClass}`}>
+  <div class="container">
+    <div class="mx-auto max-w-4xl">
+      {/* Desktop: tree diagram */}
+      <div class="hidden md:block">
+        <div class="rounded-2xl border border-border bg-white p-8 lg:p-10">
+          <div class="flex flex-col items-center">
+            {/* Level 1: Linux Foundation */}
+            <div class="rounded-lg bg-gray-light px-6 py-3 text-sm font-semibold text-primary-dark">
+              Linux Foundation
+            </div>
+            <div class="h-5 w-0.5 bg-primary-light"></div>
+
+            {/* Level 2: JDF */}
+            <div class="rounded-lg bg-gray-light px-6 py-3 text-sm font-semibold text-primary-dark">
+              Joint Development Foundation
+            </div>
+            <div class="h-5 w-0.5 bg-primary-light"></div>
+
+            {/* Level 3: GSF */}
+            <div class="rounded-xl bg-primary px-8 py-4 text-base font-bold text-white">
+              Green Software Foundation
+            </div>
+            <div class="h-5 w-0.5 bg-primary-light"></div>
+
+            {/* Level 4: Steering Committee — the apex everything reports to */}
+            <div class="rounded-lg bg-primary-darker px-8 py-4 text-center text-base font-bold text-white">
+              Steering Committee / Board
+            </div>
+            <div class="h-5 w-0.5 bg-primary-light"></div>
+
+            {/* Level 5: Three branches under the Steering Committee */}
+            <div class="relative w-full max-w-3xl">
+              {/* Horizontal connector line spanning all three columns */}
+              <div class="absolute left-[16.67%] right-[16.67%] top-0 h-0.5 bg-primary-light"></div>
+
+              <div class="grid grid-cols-3 gap-6">
+                {/* Branch 1: Working Groups */}
+                <div class="flex flex-col items-center">
+                  <div class="h-5 w-0.5 bg-primary-light"></div>
+                  <div class="w-full rounded-md bg-accent-lighter px-4 py-2.5 text-center text-sm font-semibold text-primary-dark">
+                    Working Groups
+                  </div>
+                  <div class="mt-2 flex w-full flex-col gap-1.5">
+                    <div class="rounded bg-accent-lightest-2 px-2 py-1.5 text-center text-xs text-primary-dark">Software Standards WG</div>
+                    <div class="rounded bg-accent-lightest-2 px-2 py-1.5 text-center text-xs text-primary-dark">Hardware Standards WG</div>
+                    <div class="rounded bg-accent-lightest-2 px-2 py-1.5 text-center text-xs text-primary-dark">Policy WG</div>
+                  </div>
+                </div>
+
+                {/* Branch 2: Committees */}
+                <div class="flex flex-col items-center">
+                  <div class="h-5 w-0.5 bg-primary-light"></div>
+                  <div class="w-full rounded-md bg-accent-lighter px-4 py-2.5 text-center text-sm font-semibold text-primary-dark">
+                    Committees
+                  </div>
+                  <div class="mt-2 flex w-full flex-col gap-1.5">
+                    <div class="rounded bg-accent-lightest-2 px-2 py-1.5 text-center text-xs text-primary-dark">Green AI</div>
+                    <div class="rounded bg-accent-lightest-2 px-2 py-1.5 text-center text-xs text-primary-dark">Developer Relations</div>
+                  </div>
+                </div>
+
+                {/* Branch 3: Staff with Executive Projects */}
+                <div class="flex flex-col items-center">
+                  <div class="h-5 w-0.5 bg-primary-light"></div>
+                  <div class="w-full rounded-md bg-accent-lighter px-4 py-2.5 text-center text-sm font-semibold text-primary-dark">
+                    Staff
+                  </div>
+                  <p class="mt-1.5 text-center text-xs text-gray-darker">Day-to-day operations</p>
+                  <div class="mt-2 flex w-full flex-col gap-1.5">
+                    <div class="rounded bg-primary-lightest-1 px-2 py-1.5 text-center text-xs text-primary-dark">Environment Variables Podcast</div>
+                    <div class="rounded bg-primary-lightest-1 px-2 py-1.5 text-center text-xs text-primary-dark">CXO Bytes Podcast</div>
+                    <div class="rounded bg-primary-lightest-1 px-2 py-1.5 text-center text-xs text-primary-dark">Carbon Hack</div>
+                    <div class="rounded bg-primary-lightest-1 px-2 py-1.5 text-center text-xs text-primary-dark">Summit</div>
+                    <div class="rounded bg-primary-lightest-1 px-2 py-1.5 text-center text-xs text-primary-dark">Champions Programme</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Subtle directory link */}
+          <p class="mt-8 text-center text-xs text-gray-darker">
+            Visit the <a href="https://directory.greensoftware.foundation" target="_blank" rel="noopener noreferrer" class="text-primary underline decoration-primary/30 hover:decoration-primary">Member Directory</a> for a full list of projects, working groups, and committees.
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile: vertical stacked diagram */}
+      <div class="md:hidden">
+        <div class="rounded-2xl border border-border bg-white p-6">
+          <div class="flex flex-col items-center gap-1">
+            <div class="w-full rounded-lg bg-gray-light px-4 py-2.5 text-center text-sm font-semibold text-primary-dark">
+              Linux Foundation
+            </div>
+            <div class="h-3 w-0.5 bg-primary-light"></div>
+            <div class="w-full rounded-lg bg-gray-light px-4 py-2.5 text-center text-sm font-semibold text-primary-dark">
+              Joint Development Foundation
+            </div>
+            <div class="h-3 w-0.5 bg-primary-light"></div>
+            <div class="w-full rounded-xl bg-primary px-4 py-3 text-center text-base font-bold text-white">
+              Green Software Foundation
+            </div>
+            <div class="h-3 w-0.5 bg-primary-light"></div>
+            <div class="w-full rounded-lg bg-primary-darker px-4 py-3 text-center text-sm font-bold text-white">
+              Steering Committee / Board
+            </div>
+
+            <div class="mt-4 flex w-full flex-col gap-3">
+              {/* Working Groups */}
+              <div class="rounded-lg border border-border p-4">
+                <div class="mb-2 rounded-md bg-accent-lighter px-3 py-2 text-center text-sm font-semibold text-primary-dark">
+                  Working Groups
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="rounded bg-accent-lightest-2 px-2 py-1 text-xs text-primary-dark">Software Standards WG</span>
+                  <span class="rounded bg-accent-lightest-2 px-2 py-1 text-xs text-primary-dark">Hardware Standards WG</span>
+                  <span class="rounded bg-accent-lightest-2 px-2 py-1 text-xs text-primary-dark">Policy WG</span>
+                </div>
+              </div>
+
+              {/* Committees */}
+              <div class="rounded-lg border border-border p-4">
+                <div class="mb-2 rounded-md bg-accent-lighter px-3 py-2 text-center text-sm font-semibold text-primary-dark">
+                  Committees
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="rounded bg-accent-lightest-2 px-2 py-1 text-xs text-primary-dark">Green AI</span>
+                  <span class="rounded bg-accent-lightest-2 px-2 py-1 text-xs text-primary-dark">Developer Relations</span>
+                </div>
+              </div>
+
+              {/* Staff + Executive Projects */}
+              <div class="rounded-lg border border-border p-4">
+                <div class="mb-1 rounded-md bg-accent-lighter px-3 py-2 text-center text-sm font-semibold text-primary-dark">
+                  Staff
+                </div>
+                <p class="mb-2 text-center text-xs text-gray-darker">Day-to-day operations</p>
+                <div class="flex flex-wrap gap-1">
+                  <span class="rounded bg-primary-lightest-1 px-2 py-1 text-xs text-primary-dark">Environment Variables</span>
+                  <span class="rounded bg-primary-lightest-1 px-2 py-1 text-xs text-primary-dark">CXO Bytes</span>
+                  <span class="rounded bg-primary-lightest-1 px-2 py-1 text-xs text-primary-dark">Carbon Hack</span>
+                  <span class="rounded bg-primary-lightest-1 px-2 py-1 text-xs text-primary-dark">Summit</span>
+                  <span class="rounded bg-primary-lightest-1 px-2 py-1 text-xs text-primary-dark">Champions</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-center text-xs text-gray-darker">
+              Visit the <a href="https://directory.greensoftware.foundation" target="_blank" rel="noopener noreferrer" class="text-primary underline decoration-primary/30 hover:decoration-primary">Member Directory</a> for a full list of projects, working groups, and committees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+---
+import { Button } from "@/components/ui/button";
+
+interface Props {
+  /** Main heading text */
+  heading?: string;
+  /** Body text */
+  body?: string;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA button href */
+  ctaHref?: string;
+  /** Footer note text */
+  note?: string;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "Ready to Get Started?",
+  body = "",
+  ctaText = "Get Started",
+  ctaHref = "#",
+  note,
+  bgClass = "bg-primary-dark",
+} = Astro.props;
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container text-center">
+    <h2 class="text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">
+      {heading}
+    </h2>
+    {body && (
+      <p class="mx-auto mt-4 max-w-2xl text-base text-white/80">
+        {body}
+      </p>
+    )}
+    <div class="mt-8">
+      <a href={ctaHref}>
+        <Button variant="primary-invert">{ctaText}</Button>
+      </a>
+    </div>
+    {note && (
+      <p class="mt-4 text-xs text-white/50">{note}</p>
+    )}
+  </div>
+</section>

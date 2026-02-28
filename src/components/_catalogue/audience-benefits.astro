@@ -1,0 +1,43 @@
+---
+import { ArchitectureTabs } from "@/components/_catalogue/react/architecture-tabs";
+
+const tabs = [
+  {
+    value: "practitioners",
+    heading: "Practitioners",
+    description:
+      "Transform your daily work into climate action. The SCI score gives you a clear target for optimization - whether you're writing code, designing systems, or managing databases. See the immediate impact of your choices on your software's carbon footprint. Make efficiency improvements that matter both technically and environmentally. Join a global community of practitioners building the future of sustainable software.",
+    image: {
+      src: "/assets/why-wdpc-feat-1.svg",
+    },
+  },
+  {
+    value: "business-leaders",
+    heading: "Business Leaders",
+    description:
+      "Turn sustainability commitments into measurable business value. The SCI specification provides ISO-certified metrics that satisfy stakeholder demands, regulatory requirements, and corporate responsibility goals. Reduce operational costs through improved efficiency. Differentiate your products with verified sustainability credentials. Build trust with customers who increasingly choose partners based on environmental leadership.",
+    image: {
+      src: "/assets/why-wdpc-feat-2.svg",
+    },
+  },
+  {
+    value: "sustainability-teams",
+    heading: "Sustainability Teams",
+    description:
+      "Finally, a standardized way to measure and report software's environmental impact. The SCI specification integrates seamlessly with existing sustainability frameworks while providing the technical depth needed for accurate carbon accounting. Track progress with confidence using ISO-accredited methodology. Compare solutions objectively. Drive organization-wide improvements with clear, actionable metrics that everyone can understand and act upon.",
+    image: {
+      src: "/assets/why-wdpc-feat-3.svg",
+    },
+  },
+];
+---
+
+<section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/10">
+  <div class="container">
+    <ArchitectureTabs
+      client:load
+      heading="Built for Every Role in Software"
+      tabs={tabs}
+    />
+  </div>
+</section>

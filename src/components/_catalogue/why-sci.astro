@@ -1,0 +1,104 @@
+---
+import GridIcon from "@/assets/grid-stability-icon.svg";
+import CO2Icon from "@/assets/co2-icon.svg";
+import CostIcon from "@/assets/cost-icon.svg";
+import InfraIcon from "@/assets/infra-icon.svg";
+
+import WhyWdpcBackgroundIcon from "@/assets/why-wdpc-background.svg";
+
+const whySCIFeatures = [
+  {
+    icon: CostIcon,
+    description: `<span class="font-extrabold">Drive Cost Efficiency</span> - Software optimized for lower SCI scores uses less energy and hardware, directly reducing operational costs`,
+  },
+  {
+    icon: CO2Icon,
+    description: `<span class="font-extrabold">Meet Sustainability Goals</span> - Demonstrate measurable progress toward net-zero commitments with ISO-certified methodology`,
+  },
+  {
+    icon: GridIcon,
+    description: `<span class="font-extrabold">Gain Competitive Advantage</span> - Differentiate your products with verified sustainability credentials that customers increasingly demand`,
+  },
+  {
+    icon: InfraIcon,
+    description: `<span class="font-extrabold">Future-Proof Operations</span> - Stay ahead of emerging regulations and reporting requirements with established measurement practices`,
+  },
+];
+---
+
+<!-- Why SCI Matters -->
+<section id="why-sci">
+  <div class="container mx-auto max-w-3xl text-center">
+    <h1 class="mb-3 text-2xl font-semibold md:mb-4 md:text-3xl lg:text-4xl">
+      Why
+      <span class="font-bold text-primary">SCI</span>
+      Matters
+    </h1>
+    <p class="text-xl">
+      Software's environmental impact is invisible but significant—and growing exponentially with AI and digital transformation.
+    </p>
+  </div>
+</section>
+
+<!-- Industry Impact -->
+<section class="py-8 md:py-10 lg:py-12">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h1 class="mb-2 text-2xl font-semibold text-primary md:text-3xl">Industry Impact</h1>
+        <p>
+          Every line of code, every server, every user interaction contributes to the software's growing carbon footprint. The SCI specification makes this invisible impact visible and actionable. By providing a standardized measurement protocol, it enables the entire industry to work from the same playbook—creating transparency, driving innovation, and accelerating the transition to truly sustainable technology. Major organizations, including AVEVA, Microsoft, NTT DATA, and UBS, are already using SCI to transform how they build and deploy software.
+        </p>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="/assets/why-wdpc-feat-1.svg" class="shrink-0 object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Business Benefits -->
+<section class="py-8 md:py-10 lg:py-12">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-x-20">
+      <div class="order-2 md:order-1 flex items-center justify-center">
+        <img src="/assets/why-wdpc-feat-2.svg" class="object-cover" />
+      </div>
+      <div class="order-1 md:order-2">
+        <h1 class="mb-3 text-2xl font-semibold text-primary md:mb-4 md:text-3xl">
+          Business Benefits
+        </h1>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-8 py-2">
+          {
+            whySCIFeatures.map((feature) => (
+              <div class="flex items-start justify-start gap-3">
+                <div class="relative flex w-16 items-center justify-center p-3">
+                  <feature.icon class="relative h-8 w-8" />
+                  <WhyWdpcBackgroundIcon class="absolute inset-0 size-full" />
+                </div>
+                <p set:html={feature.description} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Environmental Impact -->
+<section class="py-8 md:py-10 lg:py-12">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h1 class="mb-2 text-2xl font-semibold text-primary md:text-3xl">Environmental Impact</h1>
+        <p>
+          Every point reduction in your SCI score represents real carbon that never enters the atmosphere. This isn't about purchasing offsets or making claims - it's about fundamental changes in how software is designed, developed, and deployed. When organizations optimize for SCI, they naturally adopt practices that reduce energy consumption, extend hardware lifecycles, and shift computing to cleaner energy sources. The cumulative effect of thousands of development teams making these optimizations could prevent millions of tons of carbon emissions annually.
+        </p>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="/assets/why-wdpc-feat-3.svg" class="shrink-0 object-cover" />
+      </div>
+    </div>
+  </div>
+</section>

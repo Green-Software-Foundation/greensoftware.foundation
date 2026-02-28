@@ -1,5 +1,26 @@
 node_modules/
 .cache/
-public
+dist/
+.astro/
 **/.DS_Store
 .env
+.env.production
+.mcp.json
+.playwright-mcp/
+# Local Netlify folder
+.netlify
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# JetBrains
+.idea/
+# Reference microsites (separate repos)
+.microsites/
+# Dev session screenshots
+/*.png
+# Generated data (fetched from Notion)
+public/assets/logos/
+public/assets/team/
+src/data/

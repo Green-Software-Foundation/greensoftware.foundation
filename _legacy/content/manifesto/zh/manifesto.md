@@ -1,0 +1,42 @@
+---
+title: "宣言"
+mainParagraph: "绿色软件基金会（GSF）宣言公开宣示基金会的政策和目标。 它描述了基金会的核心价值观以及如何实施这些价值观。 它用于通知和指导基金会成员的决策和行为，并向外部利益相关者宣示基金会的主旨。"
+mission: "使命: 建立一个由人员、标准、工具和最佳实践组成的值得信赖的生态系统，用于创建和构建绿色软件。"
+vision: "愿景: 改变整个科技行业的软件文化，以使得可持续性发展成为软件团队的核心优先事项，并使得可持续性发展与性能、安全性、成本和可访问性同等重要。"
+topics:
+  - title: "最小化碳排"
+    description: "基金会的使命是减少与软件相关的全球碳排放总量。 在评估选项时，我们选择提倡减排（减少排放）而不是中和（抵消排放）。"
+    operationalise: "实施：在围绕我们的运营方式以及创建和使用的标准和技术做出的每一个决定中，我们都会考虑如何最大限度地减少碳排放。"
+    illustration: "/images/manifesto/.svg"
+  - title: "最大化信任"
+    description: "如果对基金会的作用不信任，它就不会拥有所需的影响力，也将无法实现其核心使命。 在评估时，我们选择增加对基金会信任的选项。"
+    operationalise: "* 我们将拥有多元化的组织，包括营利、非营利、政府和学术组织。\n* 除非有充分的理由来维护隐私，否则所有文档、讨论和流程都将是公开透明的。\n"
+    illustration: "/images/manifesto/.svg"
+  - title: "带着同理之心参与："
+    description: "确保我们所有的成员和贡献者都认为他们可以积极做出贡献，这将确保我们创造一个促进归属感的环境，并带来更好的结果。"
+    operationalise: "实施：\n* 我们将努力在做出回应之前积极倾听，确认其他小组成员何时没有参与，并为他们提供参与的空间。\n* 我们将承认每个人都处于气候事务的不同阶段，我们将努力帮助并促进同行们与基金会使命一致的理解和影响。\n* 我们将致力于在我们的工作中向我们的同事提供直接、建设性的反馈，以实现绿色软件基金会的使命。\n"
+    illustration: "/images/manifesto/.svg"
+  - title: "对所有人包容开放："
+    description: "为了实现绿色软件基金会的使命，我们需要对所有成员公平��正，包容不同的观点。"
+    operationalise: "实施：\n* 我们将确保整个组织流程、沟通渠道、标准开发和代码的数字可访问性。\n* 我们的工作组和指导委员会将遵照协商一致原则开展工作。如果我们不能就某问题达成共识，我们将进行投票。无论组织大小，每个一般和指导成员组织各有一票。\n* 我们的指导委员会将审查任何对资源的请求，如果这些请求，总的来说，会使某些成员组织比其他成员组织更受益。\n* 我们将遵循 Linux 基金会的反垄断政策。\n\n"
+    illustration: "/images/manifesto/.svg"
+  - title: "对自己负责："
+    description: "问责制建立信任并确保所有成员、利益相关方和贡献者认为绿色软件基金会是一个社区，我们在其中维护我们的价值观并确保安全性、专业性和包容性。"
+    operationalise: "实施：\n* 我们将始终假设我们的同事以最好的意图运作，并为了绿色软件基金会的使命而努力。\n* 如果绿色软件基金会的成员或贡献者从事与我们的核心价值观相冲突的任何行为，可以向主席Asim Hussain报告，asim@greensoftware.foundation。\n"
+    illustration: "/images/manifesto/.svg"
+editors:
+  - fullName: "Sunny Yang"
+    company: "ThoughtWorks"
+    photo: "../images/editors/sunny-yang.jpg"
+    socialMedia:
+      - platform: "Linkedin"
+        link: "https://www.linkedin.com/in/sunnyadn/"
+  - fullName: "Zhelong Pan"
+    role: "Senior Staff Architect"
+    company: "VMware Inc."
+    photo: "../images/editors/zhelong-pan.jpg"
+    socialMedia:
+      - platform: "Linkedin"
+        link: "https://www.linkedin.com/in/zhelong-pan-6a683219"
+---
+

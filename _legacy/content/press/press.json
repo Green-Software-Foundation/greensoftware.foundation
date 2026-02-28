@@ -1,0 +1,37 @@
+[
+  {
+    "headline": "How a new open standard could help green your tech stack",
+    "articleLink": "https://www.raconteur.net/technology/how-a-new-open-standard-could-help-green-your-tech-stack",
+    "logo": "logos/how-a-new-open-standard-could-help-green-your-tech.jpg"
+  },
+  {
+    "headline": "‘If We Don’t Find Ways To Deal Effectively With Data, The Cost To The Planet Could Be Huge’",
+    "articleLink": "https://www.forbes.com/sites/martingiles/2022/03/22/cios-making-sustainable-it-a-top-priority/?sh=1ad4d060584f",
+    "logo": "logos/if-we-don-t-find-ways-to-deal-effectively-with-dat.png"
+  },
+  {
+    "headline": "Microsoft, the Linux Foundation, and others team up to make software sustainable",
+    "articleLink": "https://www.engadget.com/green-software-foundation-microsoft-build-linux-github-accenture-150050755.html",
+    "logo": "logos/microsoft-the-linux-foundation-and-others-team-up-.svg"
+  },
+  {
+    "headline": "Microsoft announces the Green Software Foundation to promote sustainable app development",
+    "articleLink": "https://venturebeat.com/2021/05/25/microsoft-announces-the-green-software-foundation-to-promote-sustainable-app-development/",
+    "logo": "logos/microsoft-announces-the-green-software-foundation-.svg"
+  },
+  {
+    "headline": "The future is climate-friendly software",
+    "articleLink": "https://www.greenbiz.com/article/future-climate-friendly-software",
+    "logo": "logos/the-future-is-climate-friendly-software.svg"
+  },
+  {
+    "headline": "Microsoft Teams Up With Accenture, Goldman on Greener Software",
+    "articleLink": "https://www.bloomberg.com/news/articles/2021-05-25/microsoft-teams-up-with-accenture-goldman-on-greener-software",
+    "logo": "logos/microsoft-teams-up-with-accenture-goldman-on-green.svg"
+  },
+  {
+    "headline": "Microsoft sets up nonprofit to cut software-related carbon emissions",
+    "articleLink": "https://www.axios.com/microsoft-nonprofit-cut-software-carbon-emissions-climate-3885b69c-2fed-4e36-9b00-93764255609b.html",
+    "logo": "logos/microsoft-sets-up-nonprofit-to-cut-software-relate.svg"
+  }
+]

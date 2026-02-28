@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: string;
+  article?: {
+    publishedTime?: string;
+    authors?: string[];
+  };
+}
+
+const {
+  title = "Green Software Foundation",
+  description = "Building a trusted ecosystem of people, standards, tooling, and best practices for green software.",
+  ogImage,
+  ogType = "website",
+  article,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, "https://greensoftware.foundation");
+const ogImageURL = ogImage ? new URL(ogImage, "https://greensoftware.foundation").href : undefined;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Green Software Foundation" />
+    {ogImageURL && <meta property="og:image" content={ogImageURL} />}
+    {article?.publishedTime && <meta property="article:published_time" content={article.publishedTime} />}
+    {article?.authors?.map((author) => <meta property="article:author" content={author} />)}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content={ogImageURL ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:site" content="@gsfcommunity" />
+    {ogImageURL && <meta name="twitter:image" content={ogImageURL} />}
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

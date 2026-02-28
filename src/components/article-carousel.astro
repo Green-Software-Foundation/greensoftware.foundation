@@ -1,0 +1,33 @@
+---
+import { ArticleCarousel as ArticleCarouselReact } from "@/components/react/article-carousel";
+import type { Article } from "@/components/react/article-carousel";
+
+interface Props {
+  /** Section heading */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Array of article items */
+  articles?: Article[];
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading,
+  body,
+  articles = [],
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+---
+
+<section class={`py-12 md:py-16 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <ArticleCarouselReact
+      client:load
+      heading={heading}
+      body={body}
+      articles={articles}
+    />
+  </div>
+</section>

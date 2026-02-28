@@ -1,0 +1,112 @@
+---
+import { Button } from "@/components/ui/button";
+import { FileText, GraduationCap, MessageCircle } from "lucide-react";
+---
+
+<section class="py-12 md:py-16 lg:py-20">
+  <div class="container">
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+        Everything You Need to Get Started
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Card 1 -->
+      <div
+        class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow"
+      >
+        <div class="mb-4 p-3 rounded-full bg-primary/10 text-primary">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_149_2684)">
+            <path d="M42.6 45.65C42.42 45.47 42.19 45.36 41.95 45.34C40.05 45.15 38.57 43.5 38.57 41.6L38.6 13.71C38.6 9.67001 35.32 6.39001 31.28 6.39001H1.55C1.13 6.39001 0.749997 6.65001 0.579997 7.06001C0.409997 7.45001 0.509997 7.93001 0.819997 8.24001C0.989997 8.41001 1.22 8.52002 1.46 8.55001C3.17 8.73002 4.61 10.14 4.79 11.77L4.83 40.18C4.83 44.21 8.12 47.5 12.15 47.5H41.86C42.28 47.5 42.66 47.24 42.84 46.83C43 46.44 42.91 45.96 42.6 45.65Z" fill="#006D68"/>
+            <path d="M47.17 39.77C46.99 39.59 46.75 39.47 46.5 39.45C44.62 39.26 43.15 37.63 43.15 35.75L43.18 7.86C43.18 3.8 39.88 0.5 35.82 0.5H6.10003C5.66003 0.5 5.27003 0.77 5.09003 1.2C4.92003 1.61 5.02003 2.1 5.34003 2.42C5.52003 2.6 5.76003 2.71 6.01003 2.74C7.71003 2.92 9.13003 4.31 9.31003 5.93L9.35003 34.34C9.35003 38.39 12.65 41.69 16.71 41.69H46.42C46.86 41.69 47.25 41.42 47.43 41C47.6 40.59 47.5 40.1 47.18 39.78L47.17 39.77Z" fill="#A5C352"/>
+            <path d="M25.28 31.64C24.76 31.64 24.26 31.43 23.89 31.05L16.55 23.38C15.82 22.61 15.85 21.4 16.61 20.67C17.38 19.94 18.59 19.97 19.32 20.73L24.83 26.49L32.87 11.55C33.37 10.62 34.54 10.27 35.47 10.77C36.4 11.27 36.75 12.44 36.25 13.37L26.96 30.64C26.67 31.18 26.14 31.55 25.53 31.63C25.44 31.64 25.36 31.65 25.27 31.65L25.28 31.64Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_149_2684">
+            <rect width="48" height="48" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+        </div>
+        <h3 class="text-xl font-bold mb-2">The SCI Specification</h3>
+        <p class="text-muted-foreground mb-6 flex-grow">
+          Access the complete ISO/IEC 21031:2024 standard with technical
+          methodology and implementation guidance
+        </p>
+        <a
+          href="https://sci.greensoftware.foundation"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full"
+        >
+          <Button className="w-full"> Read the Spec </Button>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow"
+      >
+        <div class="mb-4 p-3 rounded-full bg-primary/10 text-primary">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.85 4.57C46.59 2.03 41.58 0 35.43 0C29.28 0 24.27 2.03 24.01 4.57H24V35.96C25.25 33.26 29.12 31.18 35.43 31.18C41.74 31.18 45.62 33.26 46.86 35.96V4.57H46.85Z" fill="#006D68"/>
+            <path d="M23.99 4.57C23.73 2.03 18.72 0 12.57 0C6.42002 0 1.41002 2.03 1.15002 4.57V35.96C2.40002 33.26 6.27002 31.18 12.58 31.18C18.89 31.18 22.77 33.26 24.01 35.96V4.57H24H23.99Z" fill="#006D68"/>
+            <path d="M43.79 15.4C41.81 14.16 38.92 13.5 35.43 13.5C32.14 13.5 29.36 14.09 27.39 15.21L26.4 13.47C28.67 12.18 31.79 11.5 35.42 11.5C39.29 11.5 42.55 12.26 44.84 13.7L43.78 15.39L43.79 15.4Z" fill="white"/>
+            <path d="M43.79 23.23C41.81 21.99 38.92 21.33 35.43 21.33C32.14 21.33 29.36 21.92 27.39 23.04L26.4 21.3C28.67 20.01 31.79 19.33 35.42 19.33C39.29 19.33 42.55 20.09 44.84 21.53L43.78 23.22L43.79 23.23Z" fill="white"/>
+            <path d="M21.31 15.4C19.33 14.16 16.44 13.5 12.95 13.5C9.66004 13.5 6.88004 14.09 4.91004 15.21L3.92004 13.47C6.19004 12.18 9.31004 11.5 12.94 11.5C16.81 11.5 20.07 12.26 22.36 13.7L21.3 15.39L21.31 15.4Z" fill="white"/>
+            <path d="M21.31 23.23C19.33 21.99 16.44 21.33 12.95 21.33C9.66004 21.33 6.88004 21.92 4.91004 23.04L3.92004 21.3C6.19004 20.01 9.31004 19.33 12.94 19.33C16.81 19.33 20.07 20.09 22.36 21.53L21.3 23.22L21.31 23.23Z" fill="white"/>
+            <path d="M28.96 8.70996H19.13V39.9H28.96V8.70996Z" fill="#A5C352"/>
+            <path d="M24.44 8.98999H23.65V39.9H24.44V8.98999Z" fill="white"/>
+            <path d="M28.96 39.9H19.13L24.05 47.76L28.96 39.9Z" fill="#EBF2D4"/>
+            <path d="M26.16 44.39H21.94L24.05 47.76L26.16 44.39Z" fill="#006D68"/>
+            </svg>
+            
+        </div>
+        <h3 class="text-xl font-bold mb-2">Take the SCI Course</h3>
+        <p class="text-muted-foreground mb-6 flex-grow">
+          Master the SCI methodology step-by-step with our dedicated training
+          launching Q4 2025
+        </p>
+        <a
+          href="https://movement.greensoftware.foundation/collections/2996409"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full"
+        >
+          <Button className="w-full"> Take the SCI Course </Button>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow"
+      >
+        <div class="mb-4 p-3 rounded-full bg-primary/10 text-primary">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M47.5 25.6C47.5 15.87 39.61 7.97998 29.88 7.97998C20.15 7.97998 12.25 15.86 12.25 25.6C12.25 35.34 20.14 43.22 29.87 43.22C30.56 43.22 31.23 43.18 31.9 43.1C33.8 45.81 37.37 46.98 40.59 45.73C40.92 45.6 41.24 45.45 41.54 45.28C40.52 44.49 39.69 43.42 39.19 42.13C39.02 41.69 38.89 41.24 38.81 40.79C44.01 37.73 47.5 32.07 47.5 25.6Z" fill="#006D68"/>
+            <path d="M0.5 19.36C0.5 9.64002 8.38 1.77002 18.09 1.77002C27.81 1.77002 35.68 9.65002 35.68 19.36C35.68 29.08 27.8 36.95 18.09 36.95C17.41 36.95 16.73 36.91 16.07 36.83C14.17 39.54 10.61 40.7 7.4 39.45C7.07 39.32 6.75 39.17 6.45 39C7.47 38.21 8.3 37.15 8.8 35.86C8.97 35.42 9.1 34.97 9.18 34.52C3.99 31.47 0.5 25.83 0.5 19.36Z" fill="#A5C352"/>
+            </svg>
+            
+        </div>
+        <h3 class="text-xl font-bold mb-2">Ask Questions</h3>
+        <p class="text-muted-foreground mb-6 flex-grow">
+          Connect with the SCI community, get implementation help, and share
+          your experiences
+        </p>
+        <a
+          href="https://github.com/Green-Software-Foundation/sci/discussions"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full"
+        >
+          <Button variant="primary" className="w-full">
+            Join the Discussion
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
