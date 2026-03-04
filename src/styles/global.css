@@ -148,6 +148,11 @@
   --tw-prose-td-borders: var(--border);
 }
 
+/* Blockquote — give the left border more breathing room from the text */
+.prose blockquote {
+  padding-left: 2rem;
+}
+
 /* External links — small arrow icon after links that go offsite */
 .prose a[href^="http"]::after {
   content: "\2197";

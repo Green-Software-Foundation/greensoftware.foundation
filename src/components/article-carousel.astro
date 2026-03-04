@@ -11,6 +11,8 @@ interface Props {
   articles?: Article[];
   /** Background class */
   bgClass?: string;
+  /** Whether to show organisation logos/names on cards (default true) */
+  showOrganizations?: boolean;
 }
 
 const {
@@ -18,6 +20,7 @@ const {
   body,
   articles = [],
   bgClass = "bg-accent-lightest-2",
+  showOrganizations = true,
 } = Astro.props;
 ---
 
@@ -28,6 +31,7 @@ const {
       heading={heading}
       body={body}
       articles={articles}
+      showOrganizations={showOrganizations}
     />
   </div>
 </section>

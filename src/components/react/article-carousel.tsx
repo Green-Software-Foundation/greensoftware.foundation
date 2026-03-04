@@ -31,9 +31,10 @@ interface Props {
   heading?: string;
   body?: string;
   articles: Article[];
+  showOrganizations?: boolean;
 }
 
-export function ArticleCarousel({ heading, body, articles }: Props) {
+export function ArticleCarousel({ heading, body, articles, showOrganizations = true }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
   const scrollPrev = React.useCallback(() => {
@@ -81,7 +82,7 @@ export function ArticleCarousel({ heading, body, articles }: Props) {
                   )}
                   <div className="flex flex-col justify-between flex-grow p-6">
                     <div>
-                      {article.organizations && article.organizations.length > 0 && (
+                      {showOrganizations && article.organizations && article.organizations.length > 0 && (
                         <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
                           {article.organizations.map((org, i) => (
                             <React.Fragment key={i}>
