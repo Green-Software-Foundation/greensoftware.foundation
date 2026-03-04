@@ -1,0 +1,136 @@
+# Development Log — GSF Website
+
+## 2026-03-04 - Sveltia CMS: Co-located Images, i18n, and Editorial Workflow
+
+**Objective**: Get Sveltia CMS fully working for content editors — image previews, article management, translations, and a clear publishing workflow.
+
+### What We Built
+
+- **Article co-location migration** — all 195 articles moved from flat `slug.md` to `slug/index.md` with images living alongside the markdown file in `src/content/articles/en/slug/`
+- **Astro image() schema** — `mainImage` field upgraded from a plain string to Astro's `image()` helper, enabling build-time image optimisation (964 images → WebP)
+- **Dynamic CMS config** — replaced static `public/admin/` files with a proper Astro page (`src/pages/admin/index.astro`) and a dynamic API endpoint (`src/pages/admin/config.yml.ts`)
+- **i18n support** — articles, research, and stories now support four locales (EN/JA/PT/ZH) via Sveltia's `multiple_folders` structure, with opt-in translations per entry
+- **CMS list view improvements** — date-ordered lists, image thumbnails, and a `date — title` summary template across all collections
+- **README documentation** — full editorial guide covering CMS login, publishing workflow, local dev setup, how translations work, why some fields are locked, and how to add new languages
+
+### The Journey
+
+The session started with a deceptively simple problem: images in Sveltia CMS were showing as file icons instead of previews. The image paths (`/assets/articles/slug/main.png`) didn't match what the CMS config expected, and attempts to patch the `public_folder` setting kept falling short.
+
+The real breakthrough came from comparing against the zaneteknits project — a working Sveltia setup that used a completely different approach: **co-located images**. Instead of a separate `public/assets/articles/` tree, each article gets its own folder with images sitting right alongside the markdown. This is cleaner, more portable, and maps perfectly to how Sveltia's image widget works.
+
+Rather than maintain the old flat structure alongside a new one, the decision was made to migrate everything in one go. A migration script (`scripts/migrate-article-images.mjs`) handled the restructure: 195 articles across four language folders, finding all image references per article, copying from `public/` to `src/content/`, and rewriting paths from `/assets/articles/slug/main.png` to `./main.png`. It ran cleanly — 195 articles, 281 images, zero missing.
+
+With images co-located, the Astro schema needed updating. The `mainImage` field changed from `z.string().optional()` to Astro's `image()` helper, which processes images at build time into optimised WebP. This cascaded into the article pages — `<img>` tags became `<Image>` components with `widths` and `sizes` for responsive delivery. Build confirmed: 964 images processed.
+
+Then came the CMS admin restructure. The original static `public/admin/index.html` and `config.yml` were replaced with proper Astro routes, matching the zaneteknits pattern. The config became a TypeScript API endpoint, dynamically generated per environment.
+
+**The biggest surprise of the session:** discovering that `local_backend: true` doesn't actually work in Sveltia CMS. Unlike Decap/Netlify CMS, Sveltia doesn't use a proxy server at all — it uses the browser's **File System Access API**. The setting had been silently ignored, causing the CMS to fall back to reading from GitHub. Since the article migration hadn't been committed yet, GitHub still had the old flat format — hence articles showing as empty. The fix: remove `local_backend: true`, and instruct editors to click "Work with Local Repository" in Chrome or Edge instead.
+
+Once articles were visible, the next step was i18n. The site already had articles in `en/`, `ja/`, `pt/`, and `zh/` subfolders, which is exactly Sveltia's `multiple_folders` structure. The config update was mostly mechanical: point each collection `folder` at the parent directory (not `en/`), add `i18n: true`, and set field-level i18n to either `true` (translatable) or `duplicate` (copied from English, locked in other locales). Fields like `date`, `mainImage`, and `organizations` are `duplicate` — a Japanese article should have the same publication date as its English counterpart. Fields like `title`, `summary`, and `body` are fully translatable. The `initial_locales: [en]` setting means translations are opt-in: editors only see the EN tab by default, and explicitly enable other locales when they want to create a translation.
+
+### Technical Achievements
+
+- **Zero-downtime migration**: the migration script restructured 195 articles in-place with no data loss and no broken references
+- **Build-time image optimisation**: upgrading to `image()` schema unlocked Astro's image pipeline — 964 images now served as optimised WebP with responsive srcsets
+- **Correct Sveltia local dev pattern**: identified and documented the File System Access API approach, removing a misconception about proxy servers that had been blocking local editorial work
+- **Clean i18n architecture**: `multiple_folders` structure aligns perfectly with the existing content layout, meaning no content restructuring was needed for any of the four languages
+
+### Key Learnings
+
+- **Sveltia ≠ Decap CMS for local dev**: `local_backend: true` is not supported. Sveltia uses the browser's File System Access API. Always use Chrome or Edge, click "Work with Local Repository". This is documented in README now.
+- **Co-location is the right default**: storing images alongside their article makes the content self-contained, portable, and directly editable. The alternative (a separate `public/assets/` tree) creates a maintenance burden and confuses the CMS.
+- **Check what the CMS is actually reading**: when Sveltia showed articles as empty, the instinct was to fix the config. The real issue was that it was reading from GitHub (not local files), and GitHub had old data. Understanding the data source is the first debugging step.
+- **`i18n: duplicate` vs `i18n: true`**: getting field-level i18n right matters. Structural metadata (date, image, organisations) should be `duplicate` so it stays consistent across locales. Text content should be `true` so it can be independently translated.
+
+### Statistics
+
+- Articles migrated: 195 (across en/ja/pt/zh folders)
+- Images moved into content: 281
+- Build-time images processed: 964
+- Files changed in this commit: ~402 (195 new co-located articles, 195 old flat articles removed, plus config/schema/page updates)
+- Net lines: +149 insertions, −12,864 deletions (mostly image paths simplified from absolute to relative)
+
+### Next Steps
+
+- Commit the full migration to `dev` and merge to `main` when ready for production
+- Test the CMS in Chrome with "Work with Local Repository" end-to-end
+- Consider adding a `zh-tw` or other locale if needed (one-line config change)
+- Review whether the `lang` hidden field in frontmatter can be retired now that locale is determined by folder structure
+
+### Reflections
+
+This session had a satisfying arc: what looked like a CMS configuration problem turned out to be an architectural one (image co-location), and what looked like a Sveltia config problem turned out to be a fundamental misunderstanding of how it handles local development. Both required stepping back and asking "what is the system actually doing?" rather than tweaking config values. The zaneteknits reference project was invaluable — having a working example to compare against short-circuited a lot of guesswork.
+
+## 2026-02-27 - Content Migration: Articles, Cleanup, and Article Listing
+
+**Objective**: Complete Phase 1 of the Content Pages Migration feature — migrate all legacy articles into Astro content collections, build article detail and listing pages, and clean up the legacy markdown.
+
+### What We Built
+
+- **Astro content collections** for articles (195 files) and pages (4 files) with full Zod schemas
+- **Article detail page** (`/articles/en/[slug]`) with breadcrumbs, author bios, translators, hero images, date/origin metadata, SEO meta tags, JSON-LD structured data, newsletter signup, and CTA banner
+- **Paginated article listing** (`/articles/`) — 2-column card grid, 12 per page, Previous/Next pagination with page indicator
+- **Newsletter signup component** — Mailchimp-integrated form with subtle green card styling
+- **Policy pages** (`/code-of-conduct`, `/policy/terms`, etc.) via dynamic catch-all route
+- **Shared nav items** extracted to `src/lib/nav-items.ts` for consistency
+- **SEO enhancements** on the showcase layout — OG tags, Twitter cards, article metadata, head slot for JSON-LD
+- **Massive markdown cleanup** across all 188 English articles
+
+### The Journey
+
+Started by committing Phase 0 (markdown pipeline and typography) from a previous session, then dove straight into Phase 1. The content collections setup was smooth — Astro 5's `glob` loader with `src/content.config.ts` made it straightforward to define schemas for articles and pages.
+
+The article template went through several iterations based on user feedback:
+- Navbar needed the same variant as the homepage (extracted `navItems` to a shared file)
+- Background colour corrected to the site's cream (`bg-accent-lightest-2`)
+- Author/date layout went through 4 revisions before settling on: breadcrumbs → title (wide) → teaser → date/origin → rule → authors
+- Newsletter signup tried 3 visual approaches: full-width dark teal (too heavy), bordered card (colour off), settled on borderless `bg-accent-lighter` card
+
+The markdown cleanup was the biggest piece. DatoCMS exports had left behind extensive artefacts:
+- 290 bold-wrapped headings (`## **Title**`)
+- 686 `<u>` tags
+- Non-breaking spaces (U+00A0) inside bold/italic markers — the sneakiest issue
+- Character-level corruption in the Abhishek Gupta memorial article (every character wrapped in `*`)
+- Ordered lists with excess indentation rendering as code blocks
+- People's quotes as italic text instead of blockquotes
+
+Used parallel subagents extensively for image analysis (scanning all 188 articles for code screenshots — found 2) and alt text generation (added descriptive alt text to 71 images across 40 articles).
+
+### Technical Achievements
+
+- 219 pages built from a single Astro codebase (up from ~5)
+- Parallel subagent processing for image analysis across 188 articles
+- Content collection schema handles complex nested structures (authors with social media, translators)
+- Pagination using Astro's built-in `paginate()` without conflicting with the article `[...slug]` route (article slugs always have a language prefix like `en/`)
+- Three rounds of progressively deeper markdown cleanup: automated batch fixes → formatting/quote fixes → per-article quality review
+
+### Key Learnings
+
+- Astro 5 uses `src/content.config.ts` (not `src/content/config.ts`) — important distinction
+- `src/data/` was gitignored (for Notion-fetched data) — had to use `src/lib/` for shared code
+- Non-breaking spaces (U+00A0) are invisible in editors but break markdown bold/italic rendering — they were the most pervasive issue
+- DatoCMS exports can produce severely corrupted markdown (character-level `*` wrapping)
+- User preference: never commit without explicit permission (added to CLAUDE.md)
+
+### Statistics
+
+- **10 commits** in this session
+- **517 files changed**, 14,198 insertions, 128 deletions
+- **195 articles** migrated (188 EN, 4 JA, 2 ZH, 1 PT)
+- **4 policy pages** migrated
+- **71 images** given alt text
+- **2 code screenshots** replaced with markdown code blocks
+- **~170 article files** touched by markdown cleanup
+- **219 pages** in the built site
+
+### Next Steps
+
+- Multilingual support (deferred — only 7 non-English articles, will be part of a larger i18n effort)
+- Fix editorial issues: wrong link targets in Thoughtworks SC article, placeholder tag in Texas State article
+- Manifesto pages migration (Phase 3 in feature spec)
+- Article carousel on homepage could pull from content collection instead of hardcoded data
+
+### Reflections
+
+The markdown cleanup was far more involved than expected. What started as "fix some bold headings and remove `<u>` tags" became a multi-pass deep dive into DatoCMS export artefacts, non-breaking space corruption, and per-article quality review. The parallel subagent approach was essential — scanning 188 articles for image issues would have been impractical in a single context window. The user's iterative feedback on the article template design was valuable — each round improved the layout significantly.

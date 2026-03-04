@@ -35,7 +35,7 @@ const featuredArticles = allArticles
   .map(a => ({
     title: a.data.title,
     description: a.data.summary || a.data.teaserText,
-    imageSrc: a.data.mainImage || "/assets/hero-illustration.svg",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: `/articles/${a.id}/`,
     cta: "Read the story →",
     organizations: (a.data.organizations || []).map((name: string) => ({

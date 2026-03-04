@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
@@ -31,7 +32,7 @@ const authorNames = article.data.authors?.map((a) => a.fullName) || [];
 <Layout
   title={`${article.data.title} | Green Software Foundation`}
   description={seoDescription}
-  ogImage={article.data.mainImage}
+  ogImage={article.data.mainImage?.src}
   ogType="article"
   article={{
     publishedTime: article.data.date.toISOString(),
@@ -44,7 +45,7 @@ const authorNames = article.data.authors?.map((a) => a.fullName) || [];
     "headline": article.data.title,
     "description": seoDescription,
     "datePublished": article.data.date.toISOString(),
-    "image": article.data.mainImage ? new URL(article.data.mainImage, "https://greensoftware.foundation").href : undefined,
+    "image": article.data.mainImage?.src ? new URL(article.data.mainImage.src, "https://greensoftware.foundation").href : undefined,
     "author": authorNames.length > 0 ? authorNames.map((name) => ({ "@type": "Person", "name": name })) : { "@type": "Organization", "name": "Green Software Foundation" },
     "publisher": {
       "@type": "Organization",
@@ -161,10 +162,12 @@ const authorNames = article.data.authors?.map((a) => a.fullName) || [];
     {article.data.mainImage && (
       <div class="container pb-12">
         <div class="max-w-4xl mx-auto">
-          <img
+          <Image
             src={article.data.mainImage}
             alt={article.data.mainImageAlt || article.data.title}
             class="w-full rounded-lg"
+            widths={[800, 1200, 1600]}
+            sizes="(max-width: 768px) 100vw, 896px"
           />
         </div>
       </div>

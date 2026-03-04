@@ -1,8 +1,10 @@
 # CLAUDE.md
 
-**IMPORTANT: Never commit directly to `main`. All work must go into the `claude` branch. Create feature branches off `claude` and merge back into `claude`. Only the project owner merges `claude` into `main` for production deploys.**
+**IMPORTANT: Never commit directly to `main`. All work must go into the `dev` branch. Create feature branches off `dev` and merge back into `dev`. Only the project owner merges `dev` into `main` for production deploys.**
 
 **IMPORTANT: Never commit without explicit permission from the user. Always ask before committing, even if the work appears complete.**
+
+**IMPORTANT: Always restart the dev server yourself after making changes — never ask the user to do it. Kill the existing process on port 4322, then run `npm run dev -- --port 4322` in the background.**
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
