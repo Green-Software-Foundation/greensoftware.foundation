@@ -24,3 +24,6 @@ pnpm-debug.log*
 public/assets/logos/
 public/assets/team/
 src/data/
+# @netlify/plugin-gatsby ignores start
+netlify/functions/gatsby
+# @netlify/plugin-gatsby ignores end
