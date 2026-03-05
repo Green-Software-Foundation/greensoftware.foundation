@@ -1,0 +1,124 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import { navItems } from "@/lib/nav-items";
+
+const allStories = await getCollection("stories", (s) => !!s.data.timeline);
+
+// Most recent first — fall back to title sort if no date
+const stories = allStories.sort((a, b) => {
+  if (a.data.date && b.data.date) return b.data.date.getTime() - a.data.date.getTime();
+  return a.data.title.localeCompare(b.data.title);
+});
+---
+
+<Layout
+  title="Member Stories | Green Software Foundation"
+  description="Real stories of how GSF member organisations built the standards, tools, and practices that make software greener."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- ── Header ─────────────────────────────────────────────────────────────── -->
+  <div class="bg-primary-darker text-white">
+    <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
+      <div class="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80">Stories</li>
+          </ol>
+        </nav>
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Member Stories</p>
+        <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          How our members are making software greener
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
+          Real stories of the standards, tools, and practices GSF member organisations built together — and the problems that drove them to act.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Story grid ─────────────────────────────────────────────────────────── -->
+  <div class="bg-accent-lightest-2">
+    <div class="container py-16 md:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {stories.map((story) => (
+          <a
+            href={`/stories/${story.id}/`}
+            class="group rounded-xl border border-border bg-white shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow"
+          >
+            <!-- Image / fallback -->
+            <div class="aspect-[16/9] overflow-hidden bg-primary-darker">
+              {story.data.mainImage ? (
+                <img
+                  src={story.data.mainImage}
+                  alt={story.data.title}
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
+                />
+              ) : (
+                <div class="h-full w-full flex items-center justify-center p-8">
+                  <p class="text-accent font-bold text-sm uppercase tracking-widest text-center">Member Story</p>
+                </div>
+              )}
+            </div>
+
+            <!-- Content -->
+            <div class="flex flex-col flex-grow p-6">
+              <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">Member Story</p>
+              <h2 class="text-lg font-bold text-primary-dark leading-tight mb-3 group-hover:text-primary transition-colors">
+                "{story.data.title}"
+              </h2>
+              <p class="text-sm text-gray-darker leading-relaxed line-clamp-3 flex-grow">
+                {story.data.summary}
+              </p>
+
+              <!-- Stats strip -->
+              {story.data.stats && story.data.stats.length > 0 && (
+                <div class="mt-5 pt-5 border-t border-border flex gap-6">
+                  {story.data.stats.slice(0, 2).map(stat => (
+                    <div>
+                      <p class="font-extrabold text-lg text-primary leading-none">{stat.value}</p>
+                      <p class="text-xs text-gray-darker mt-0.5 leading-snug">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <span class="inline-flex items-center text-sm font-bold text-primary mt-4">
+                Read the story →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <CTABanner
+    heading="Every member's journey starts with a conversation"
+    body="Tell us what you're trying to solve. We'll tell you how membership can help."
+    ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>

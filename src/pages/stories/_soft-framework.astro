@@ -9,16 +9,15 @@ import { Card } from "@/components/ui/card";
 import { navItems } from "@/lib/nav-items";
 import logos from "@/data/logos.json";
 
-const title = "We can't measure AI carbon";
-const summary = "How Accenture, Microsoft, Google, WattTime, and 20+ partner organisations built the SCI for AI — the first consensus-based standard for measuring the carbon footprint of AI systems across their entire lifecycle.";
+const title = "Our pilots work but nothing scales across the org";
+const summary = "How Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the Sustainable Organisational Framework for Technology — the first ratified standard for embedding green software practices across an entire organisation.";
 
 // ── Related articles ─────────────────────────────────────────────────────────
 const relatedSlugs = [
-  "en/sci-for-ai-workshop-report",
-  "en/green-ai-position-paper",
-  "en/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the",
-  "en/the-eu-ai-act-insights-from-the-green-ai-committee",
-  "en/can-ai-truly-be-green",
+  "en/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo",
+  "en/building-green-software-through-standards-and-collaboration",
+  "en/green-software-advocate-series-an-interview-with-pindy-bhullar",
+  "en/cultivating-sustainability-by-design-meet-natalie-pullin-tim-smolcic-of-hsbc",
 ];
 const logoMap = new Map((logos as any[]).map(l => [l.name.toLowerCase(), l.logo]));
 const allArticles = await getCollection("articles");
@@ -39,196 +38,105 @@ const relatedArticles = relatedSlugs
 
 // ── Organisations with logos ────────────────────────────────────────────────
 const orgs = [
-  { name: "Accenture",          logo: "/assets/logos/accenture.svg" },
-  { name: "Microsoft",          logo: "/assets/logos/microsoft.svg" },
-  { name: "Google",             logo: "/assets/logos/google.png" },
-  { name: "WattTime",           logo: "/assets/logos/watttime.png" },
-  { name: "IBM",                logo: "/assets/logos/ibm.gif" },
-  { name: "UCL",                logo: "/assets/logos/ucl.png" },
-  { name: "UBS",                logo: "/assets/logos/ubs.png" },
-  { name: "Siemens",            logo: "/assets/logos/siemens.png" },
-  { name: "NTT DATA",           logo: "/assets/logos/ntt-data.png" },
-  { name: "Avanade",            logo: null },
-  { name: "Schneider Electric", logo: "/assets/logos/schneider-electric.png" },
-  { name: "Amadeus",            logo: "/assets/logos/amadeus.jpg" },
-  { name: "Globant",            logo: "/assets/logos/globant.svg" },
-  { name: "Electricity Maps",   logo: "/assets/logos/electricity-maps.svg" },
-  { name: "Boavizta",           logo: "/assets/logos/boavizta.svg" },
-  { name: "IMDA Singapore",     logo: "/assets/logos/imda.png" },
-  { name: "Stanford University",logo: null },
-  { name: "BCG",                logo: null },
-  { name: "Scope3",             logo: null },
+  { name: "HSBC",      logo: null },
+  { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+  { name: "NTT DATA",  logo: "/assets/logos/ntt-data.png" },
+  { name: "Siemens",   logo: "/assets/logos/siemens.png" },
+  { name: "UBS",       logo: "/assets/logos/ubs.png" },
+  { name: "Cisco",     logo: "/assets/logos/cisco.svg" },
+  { name: "Avanade",   logo: null },
+  { name: "BCG X",     logo: null },
 ];
 
 // ── Impact stats ────────────────────────────────────────────────────────────
 const stats = [
-  { value: "20+",   label: "Organisations participated in the workshops shaping the specification" },
-  { value: "12",    label: "Member Green AI Committee establishing Green AI as a discipline" },
-  { value: "6",     label: "AI lifecycle stages covered — from data preparation to end-of-life" },
-  { value: "2",     label: "Measurement boundaries — Provider score and Consumer score" },
+  { value: "8",    label: "Companies contributed to building the framework" },
+  { value: "4",    label: "Global organisations piloting SOFT as of October 2025" },
+  { value: "4",    label: "Operational domains — Strategy, Implementation, Operational, Compliance" },
+  { value: "2025", label: "Year SOFT was ratified as the first org-wide green software framework" },
 ];
 
-// ── Timeline ────────────────────────────────────────────────────────────────
+// ── Timeline (source field is optional article citation) ─────────────────────
 const timeline = [
   {
-    date: "October 2023",
-    heading: "Framing the problem publicly",
-    body: `The GSF organised a panel, "Can AI Truly Be Green?", featuring experts from Accenture, Avanade, Intel Labs, and Stanford University. Navveen Balani outlined three angles for addressing AI's environmental impact. Dr Elif Kiesow Cortez warned that EU regulations were coming. Dawn Nafus noted the practical limitation: "it is possible to decarbonise a very short workload by up to 80%. But this only gets us so far." The panel crystallised that the industry needed measurement before it could optimise.`,
+    date: "Personal origins",
+    heading: "An idea sketched on a sailing boat",
+    body: "The story begins not in a boardroom but on a sailing boat. Pindy Bhullar joined an Exxpedition voyage collecting ocean samples for plastic analysis. On the final night, the group debated how to translate their experiences into action. Pindy drew a simple triangle connecting projects, technology, and sustainability — and began a PhD research journey into how organisations could embed green software at every level.",
+    source: { text: "Read Pindy's story", href: "/articles/en/green-software-advocate-series-an-interview-with-pindy-bhullar/" },
   },
   {
-    date: "2024",
-    heading: "Green AI Committee formed",
-    body: `The GSF established the Green AI Committee (GAIC), co-chaired by Sanjay Podder (Accenture) and Thomas Lewis (Microsoft), with twelve members from Accenture, Microsoft, BCG, Futurewei, UCL, NTT DATA, Globant, HSBC, Siemens, Google, IBM/Red Hat, and UBS. The committee set out to define Green AI itself: "Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement."`,
+    date: "At UBS",
+    heading: "The Sustainable Technology Guild",
+    body: "As ESG Technology and Sustainable Technology Lead at UBS, Pindy established the Sustainable Technology Guild — an internal group formed once UBS became a GSF member — that helped the firm cut emissions by sharing best practices. She applied the SCI Specification at UBS, walking teams through the three key stages: defining software boundaries, setting the functional unit, and breaking down operational and embodied emissions. But she saw that measurement alone wasn't enough: organisations needed a framework for transformation, not just tools.",
+    source: { text: "Read the full account", href: "/articles/en/building-green-software-through-standards-and-collaboration/" },
   },
   {
-    date: "Late 2024",
-    heading: "Green AI Position Paper ratified",
-    body: "Through a series of workshops, the GAIC defined the AI lifecycle stages (Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, End-of-Life) and established that measurement must cover all of them. The paper was ratified by the GSF Steering Committee in September 2024. It identified two priority projects: an SCI for AI standard and a Green AI for Practitioners course.",
+    date: "2023",
+    heading: "TOSS raised within the Standards Working Group",
+    body: `Pindy raised what was initially called TOSS (Transforming Organisations for Sustainable Software) within the GSF Standards Working Group. Co-chaired with Sean O'Keefe from Microsoft, the project was designed to address carbon emissions holistically — recognising that "carbon emissions from software don't fall solely under technology departments." Eight member organisations joined the effort: HSBC, Microsoft, Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS.`,
+    source: null,
   },
   {
-    date: "October 2024",
-    heading: "EU AI Act response",
-    body: `Eight people from seven companies provided coordinated insights on the EU AI Act's environmental provisions. Sanjay Podder noted that the Act "missed an opportunity to fully tackle AI's environmental impacts." Andre Racz of Avanade pointed out that "environmental impacts are often known trade-offs, not risks." The committee's response demonstrated the GSF's emerging role as a bridge between industry practice and policy.`,
+    date: "November 2025",
+    heading: "SOFT ratified",
+    body: "The Sustainable Organisational Framework for Technology (SOFT) was ratified, covering four essential areas: Strategy (governance and net-zero alignment), Implementation (data collection and tool deployment), Operational (embedding practices into daily work — code review checklists, carbon-aware deployment, procurement guidelines), and Compliance & Regulations (alignment with CSRD, CSDDD, and the EU AI Act). Built to complement the GSF's Maturity Matrix Model, SOFT provides decision trees, capability assessments, templates, checklists, and maturity matrices for CTOs, developers, and sustainability leads alike.",
+    source: { text: "Read the ratification announcement", href: "/articles/en/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo/" },
   },
   {
-    date: "Early 2025",
-    heading: "SCI for AI workshops",
-    body: "AI experts from over 20 GSF member organisations participated in a series of workshops hosted by the Software Standards Working Group. Twenty named participants from Siemens, Scope3, IMDA Singapore, WattTime, Amadeus, Schneider Electric, Accenture, BCG, Boavizta, Google, IBM, Microsoft, and UBS evaluated existing AI measurement metrics against a rubric the group developed together. A critical finding: none of the existing metrics — Green AI Index, EcoLogits, EnergyScore — were consensus-built or had a pathway to certification.",
-  },
-  {
-    date: "May 2025",
-    heading: "Green AI Position Paper published",
-    body: "The formal publication made the committee's work available to the broader community, including the Green AI definition, lifecycle stages, and priority actions.",
-  },
-  {
-    date: "July 2025",
-    heading: "SCI for AI Workshop Report published",
-    body: "The detailed outcomes from the workshops were shared publicly, including the evaluation rubric, the analysis of existing metrics, the agreed scope covering foundational AI paradigms and emerging technologies, and the design principle that measurement must incentivise behaviours — not just track numbers. The report established that SCI for AI would be consensus-built, ISO-compatible, and royalty-free.",
-  },
-  {
-    date: "December 2025",
-    heading: "SCI for AI specification ratified",
-    body: "The specification was ratified, becoming the first consensus-based standard for measuring the carbon footprint of AI systems across their entire lifecycle. Under the leadership of Navveen Balani and Henry Richardson, it defined two measurement boundaries: a Provider score and a Consumer score. Built on ISO/IEC 21031:2024, it covered classical machine learning, computer vision, NLP, generative AI, and agentic systems.",
+    date: "Early 2026",
+    heading: "SOFT v2.0 in development",
+    body: "By October 2025, four global GSF member organisations were already piloting the framework. The team is developing a two-level SOFT course and gathering pilot feedback to inform SOFT v2.0, planned for early 2026. The framework is designed to evolve with industry innovations, new sustainability standards, and ongoing research.",
+    source: null,
   },
 ];
 
 // ── Featured quote ───────────────────────────────────────────────────────────
 const featuredQuote = {
-  text: "To understand AI's carbon footprint, we first need a consistent way to measure it.",
-  author: "Jonathan Turnbull, Environment & AI Lead, Google",
+  text: "SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives.",
+  author: "Green Software Foundation",
 };
 
 // ── Who came together ────────────────────────────────────────────────────────
 const contributors = [
   {
-    name: "Navveen Balani",
-    role: "Managing Director and Chief Technologist, Technology Sustainability Innovation",
-    org: "Accenture",
+    name: "Pindy Bhullar",
+    role: "Technology Sustainability Consultant",
+    org: "HSBC",
     photo: null,
-    contribution: "Led the SCI for AI specification as Software Standards Working Group Chair and project co-lead.",
+    contribution: "Project lead who identified the scaling gap through PhD research. Started at UBS where she applied the SCI Specification and founded the Sustainable Technology Guild, then co-chaired SOFT development from inception to ratification.",
   },
   {
-    name: "Henry Richardson",
-    role: "Senior Analyst",
-    org: "WattTime",
-    photo: null,
-    contribution: "Co-led the SCI for AI specification development alongside Navveen Balani.",
-  },
-  {
-    name: "Sanjay Podder",
-    role: "Managing Director",
-    org: "Accenture",
-    photo: null,
-    contribution: "Co-chaired the Green AI Committee that defined Green AI and set the strategic direction.",
-  },
-  {
-    name: "Thomas Lewis",
-    role: "Principal Developer Advocate",
-    org: "Microsoft",
-    photo: null,
-    contribution: "Co-chaired the Green AI Committee and led the Green AI for Practitioners course.",
-  },
-  {
-    name: "Jonathan Turnbull",
-    role: "Environment & AI Lead",
-    org: "Google",
-    photo: null,
-    contribution: "Green AI Committee member who advocated for lifecycle-wide measurement.",
-  },
-  {
-    name: "Federica Sarro",
-    role: "Professor of Software Engineering",
-    org: "UCL",
-    photo: null,
-    contribution: "Contributed academic research perspective on engineering responsible AI-powered software systems.",
-  },
-  {
-    name: "Tamar Eilam",
-    role: "Researcher",
-    org: "IBM",
-    photo: null,
-    contribution: "Participated in the SCI for AI workshop bringing cloud infrastructure expertise.",
-  },
-  {
-    name: "Vinjosh Varghese",
-    role: "Data Engineer",
-    org: "UBS",
-    photo: null,
-    contribution: "Participated in both the Green AI Committee and SCI for AI workshop.",
-  },
-  {
-    name: "Dawn Nafus",
-    role: "Anthropologist and Senior Research Scientist",
-    org: "Intel Labs",
-    photo: null,
-    contribution: `Moderated the "Can AI Truly Be Green?" panel that helped frame the problem.`,
-  },
-  {
-    name: "Chris McClean",
-    role: "Global Lead for Digital Ethics",
-    org: "Avanade",
-    photo: null,
-    contribution: "Panellist who challenged assumptions about AI sustainability at the framing panel.",
-  },
-  {
-    name: "Dr. Elif Kiesow Cortez",
-    role: "Director of Quantum & AI",
-    org: "Stanford University",
-    photo: null,
-    contribution: "Panellist who flagged incoming EU regulatory requirements for AI environmental impact.",
-  },
-  {
-    name: "Tammy McClellan",
+    name: "Sean O'Keefe",
     role: "Engineer",
     org: "Microsoft",
     photo: null,
-    contribution: "Participated in the SCI for AI workshop.",
+    contribution: "Co-chair of the SOFT project, bringing Microsoft's organisational transformation experience to the framework design.",
   },
   {
-    name: "Stuart Sweeney Smith",
-    role: "Engineer",
-    org: "Google",
+    name: "Gadhu Sundaram",
+    role: "VP of Application Service",
+    org: "NTT DATA UK",
     photo: null,
-    contribution: "Participated in the SCI for AI workshop.",
+    contribution: "Demonstrated how collaborative, standards-based efforts can scale green software practices across global clients.",
   },
 ];
 
 // ── Additional quotes ─────────────────────────────────────────────────────────
 const quotes = [
   {
-    text: "The purpose of this proposed specification is to assist AI practitioners in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimise emissions while maintaining performance.",
-    author: "Navveen Balani",
-    role: "Software Standards Working Group Chair, Accenture",
+    text: "Collaboration is essential at every level: within teams, across organizations, and even between institutions. It's not solely the responsibility of software engineers. When the various layers of organizations — micro, meso, and macro — collaborate effectively, we pave the way for a greener future.",
+    author: "Pindy Bhullar",
+    role: "Technology Sustainability Consultant, HSBC",
   },
   {
-    text: "Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.",
-    author: "Green AI Committee",
-    role: "Consensus definition ratified by GSF Steering Committee, September 2024",
+    text: "Explore options, question your current status quo, and if you see gaps, don't shy away from brainstorming and sharing solutions in the open source. Also, remember to put energy usage and carbon emissions in your DevOps cycles.",
+    author: "Pindy Bhullar",
+    role: "Technology Sustainability Consultant, HSBC",
   },
   {
-    text: "Software engineers will have a pivotal role in shaping future AI-powered software systems by embedding compliance, ethical and sustainability considerations into every stage of their development process.",
-    author: "Federica Sarro",
-    role: "Professor of Software Engineering, UCL",
+    text: "In recent years, there has been a lack of industry-wide best practices and education on how technology can help engineers contribute to net zero.",
+    author: "Natalie Pullin & Tim Smolcic",
+    role: "HSBC Technology, on why HSBC joined the Green Software Foundation",
   },
 ];
 
@@ -266,7 +174,7 @@ function initials(name: string) {
             <li class="text-white/30">/</li>
             <li><a href="/stories/" class="hover:text-white transition-colors">Stories</a></li>
             <li class="text-white/30">/</li>
-            <li class="text-white/80 truncate max-w-[300px]">SCI for AI</li>
+            <li class="text-white/80 truncate max-w-[300px]">SOFT Framework</li>
           </ol>
         </nav>
 
@@ -326,26 +234,26 @@ function initials(name: string) {
       <div class="max-w-3xl mx-auto">
         <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Problem</p>
         <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-8 leading-tight">
-          AI workloads were exploding — but nobody could measure their carbon footprint
+          The tools existed — but nothing could cross departmental boundaries
         </h2>
         <div class="prose prose-lg max-w-none">
           <p>
-            AI workloads were exploding across the software industry, but nobody had a standardised way to measure their carbon footprint. Training GPT-3 alone produced approximately 500 tonnes of CO₂ emissions — equivalent to a petrol car driving roughly 2 million kilometres — and close to 1,300 megawatt hours of electricity. And that was just one model from 2020.
+            By 2023, the Green Software Foundation had built an impressive toolkit: the SCI specification for measuring software carbon intensity, the Carbon Aware SDK for shifting workloads to cleaner energy, Impact Framework for standardised measurement, and Green Software Patterns for code-level guidance. Organisations had the instruments. What they lacked was a way to use them systematically across an entire operation.
           </p>
           <p>
-            The problem was not that organisations were unaware. Many GSF member organisations had sustainability commitments. But multi-million pound infrastructure decisions were being made without understanding relative carbon efficiency. Existing measurement approaches each captured only a slice of the picture: some covered only inference, others only training, and none addressed the full AI lifecycle.
+            The pattern surfaced repeatedly across member organisations. Individual teams ran successful sustainability pilots in IT, but those pilots couldn't cross departmental boundaries. Procurement continued buying without carbon considerations. Operations deployed without energy awareness. Executive decision-making lacked the data pipelines to factor in software emissions.
           </p>
           <p>
-            The fragmentation was paralysing. Multiple metrics existed — the Green AI Index, EcoLogits, EnergyScore — but none were consensus-built, none had a pathway to policy or certification, and none incentivised the full range of engineering optimisations that could actually reduce emissions. The question was whether the industry could agree on a consistent, trustworthy way to measure that footprint so they could systematically reduce it.
+            For Pindy Bhullar, working as ESG Technology Lead at UBS, this wasn't abstract. UBS had sustainability commitments, and teams wanted to act on them. But as she walked colleagues through the SCI Specification — defining software boundaries, setting functional units, breaking down embodied emissions — she kept hitting the same wall: the tools worked inside a team, but they couldn't cross departmental lines. Procurement, operations, and executive decision-making each remained islands. The gap wasn't knowledge — it was organisational architecture.
           </p>
         </div>
 
         <blockquote class="mt-10 border-l-4 border-accent pl-6 not-prose">
           <p class="text-xl font-semibold text-primary-dark italic leading-relaxed">
-            "While efforts can make AI more environmentally responsible, they will still leave a footprint behind."
+            "Organizations had the tools, yet they struggled to use them systematically across their operations."
           </p>
           <footer class="mt-3 text-sm text-gray-darker">
-            Chris McClean — Global Lead for Digital Ethics, Avanade
+            SOFT Ratification Article, Green Software Foundation
           </footer>
         </blockquote>
       </div>
@@ -358,7 +266,7 @@ function initials(name: string) {
       <div class="max-w-3xl mx-auto">
         <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Journey</p>
         <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-16 leading-tight">
-          From panel discussion to the world's first AI carbon standard
+          From a triangle sketched at sea to a ratified standard
         </h2>
 
         <div class="relative">
@@ -377,6 +285,11 @@ function initials(name: string) {
                   <h3 class="font-bold text-xl text-primary mb-1 leading-snug">{entry.heading}</h3>
                   <p class="text-accent font-extrabold text-xs uppercase tracking-widest mb-1">{entry.date}</p>
                   <p class="text-gray-darker leading-relaxed mb-3">{entry.body}</p>
+                  {entry.source && (
+                    <a href={entry.source.href} class="text-sm font-semibold text-primary hover:underline">
+                      {entry.source.text} →
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -454,7 +367,7 @@ function initials(name: string) {
   <!-- ── Related articles ──────────────────────────────────────────────────── -->
   <ArticleCarousel
     heading="Related articles"
-    body="Explore the journey from panel discussion to ratified specification — and the policy debates along the way."
+    body="From the ratification announcement to the interview with Pindy Bhullar — explore the SOFT story in depth."
     articles={relatedArticles}
     bgClass="bg-white"
     showOrganizations={false}
@@ -462,10 +375,10 @@ function initials(name: string) {
 
   <CTABanner
     heading="Be part of the next standard"
-    body="The SCI for AI was built by organisations who came together through the Green Software Foundation. Join us to shape the practical guidance, case studies, and training resources that follow."
+    body="SOFT was built by organisations who came together through the Green Software Foundation. If your teams have the tools but lack the architecture to scale green software, join us to pilot SOFT and contribute to v2.0."
     ctaText="Discuss your challenges with us"
     ctaHref="/membership/"
-    note="Already exploring SCI for AI? Review the methodology at sci-for-ai.greensoftware.foundation"
+    note="Ready to assess your organisation? Explore the SOFT Framework on GitHub."
   />
 
   <Footer />

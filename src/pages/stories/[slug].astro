@@ -1,0 +1,278 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import { Card } from "@/components/ui/card";
+import { navItems } from "@/lib/nav-items";
+import logos from "@/data/logos.json";
+
+export async function getStaticPaths() {
+  const stories = await getCollection("stories", (s) => !!s.data.timeline);
+  return stories.map((story) => ({
+    params: { slug: story.id },
+    props: { story },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const {
+  title, summary, problemHeading, journeyHeading,
+  orgs = [], stats = [], timeline = [], featuredQuote,
+  contributors = [], quotes = [], relatedSlugs = [], cta,
+} = story.data;
+
+// ── Related articles ──────────────────────────────────────────────────────────
+const logoMap = new Map((logos as any[]).map(l => [l.name.toLowerCase(), l.logo]));
+const allArticles = await getCollection("articles");
+const relatedArticles = relatedSlugs
+  .map(slug => allArticles.find(a => a.id === slug))
+  .filter(Boolean)
+  .map(a => ({
+    title: a!.data.title,
+    description: a!.data.teaserText || a!.data.summary || "",
+    imageSrc: a!.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: `/articles/${a!.id}/`,
+    cta: "Read the article →",
+    organizations: (a!.data.organizations || []).map((name: string) => ({
+      name,
+      logoSrc: logoMap.get(name.toLowerCase()),
+    })),
+  }));
+
+function initials(name: string) {
+  return name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
+}
+---
+
+<Layout title={`${title} — GSF Member Story`} description={summary}>
+  <Navbar
+    navItems={navItems}
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+  <div class="bg-primary-darker text-white">
+    <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
+      <div class="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/stories/" class="hover:text-white transition-colors">Stories</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80 truncate max-w-[300px]">{title}</li>
+          </ol>
+        </nav>
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Member Story</p>
+        <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          "{title}"
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">{summary}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Org logos ─────────────────────────────────────────────────────────── -->
+  {orgs.length > 0 && (
+    <div class="bg-white border-b border-border">
+      <div class="container py-10 md:py-12">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-gray-darker text-xs uppercase tracking-wider font-semibold mb-6 text-center">Organisations involved</p>
+          <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {orgs.map(org => (
+              org.logo ? (
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  style="height: 32px; width: auto; max-width: 130px; object-fit: contain;"
+                />
+              ) : (
+                <span class="text-primary-dark font-bold text-sm">{org.name}</span>
+              )
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── Impact stats ─────────────────────────────────────────────────────── -->
+  {stats.length > 0 && (
+    <div class="bg-accent-lightest-2 border-b border-border">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <div class={`grid gap-8 md:gap-12 ${stats.length === 3 ? 'grid-cols-3 max-w-2xl mx-auto' : 'grid-cols-2 md:grid-cols-4'}`}>
+            {stats.map(stat => (
+              <div class="text-center">
+                <p class="font-extrabold text-4xl md:text-5xl text-primary mb-2">{stat.value}</p>
+                <p class="text-sm text-gray-darker leading-snug">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── The Problem ──────────────────────────────────────────────────────── -->
+  <div class="bg-white">
+    <div class="container py-16 md:py-20">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Problem</p>
+        {problemHeading && (
+          <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-8 leading-tight">
+            {problemHeading}
+          </h2>
+        )}
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── The Journey ──────────────────────────────────────────────────────── -->
+  {timeline.length > 0 && (
+    <div class="bg-accent-lightest-2">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-3xl mx-auto">
+          <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Journey</p>
+          {journeyHeading && (
+            <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-16 leading-tight">
+              {journeyHeading}
+            </h2>
+          )}
+          <div class="relative">
+            <div class="absolute left-3 top-3 bottom-3 w-px bg-primary-lighter"></div>
+            <div class="space-y-16">
+              {timeline.map(entry => (
+                <div class="relative flex gap-8">
+                  <div class="relative z-10 flex-none pt-1">
+                    <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center ring-4 ring-accent-lightest-2">
+                      <div class="w-2 h-2 rounded-full bg-accent"></div>
+                    </div>
+                  </div>
+                  <div class="flex-1 pb-2">
+                    <h3 class="font-bold text-xl text-primary mb-1 leading-snug">{entry.heading}</h3>
+                    <p class="text-accent font-extrabold text-xs uppercase tracking-widest mb-1">{entry.date}</p>
+                    <p class="text-gray-darker leading-relaxed mb-3">{entry.body}</p>
+                    {entry.source && (
+                      <a href={entry.source.href} class="text-sm font-semibold text-primary hover:underline">
+                        {entry.source.text} →
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── Featured quote ───────────────────────────────────────────────────── -->
+  {featuredQuote && (
+    <div class="bg-primary text-white">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-3xl mx-auto text-center">
+          <svg class="w-10 h-10 text-accent mx-auto mb-6 opacity-60" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7.333C7.333 11.791 8.791 10 10 10V8zm16 0c-3.314 0-6 2.686-6 6v10h10V14h-6.667C23.333 11.791 24.791 10 26 10V8z"/>
+          </svg>
+          <p class="font-extrabold text-3xl md:text-4xl leading-tight mb-6">{featuredQuote.text}</p>
+          <p class="text-white/70 font-semibold">{featuredQuote.author}</p>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── Who came together ─────────────────────────────────────────────────── -->
+  {contributors.length > 0 && (
+    <div class="bg-white">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Who came together</p>
+          <h2 class="font-extrabold text-3xl md:text-4xl text-primary leading-tight">
+            The people who made it happen
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            {contributors.map(person => (
+              <Card className="flex flex-col items-center p-6 text-center h-full">
+                <div class="mb-4 flex w-20 h-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2 shrink-0">
+                  {person.photo ? (
+                    <img src={person.photo} alt={person.name} class="w-full h-full object-cover" />
+                  ) : (
+                    <span class="text-xl font-bold text-primary/40">{initials(person.name)}</span>
+                  )}
+                </div>
+                <p class="font-bold text-base text-primary-dark">{person.name}</p>
+                <p class="text-sm text-gray-darker mt-1">{person.role}</p>
+                <p class="text-xs text-primary font-semibold mt-0.5">{person.org}</p>
+                <p class="text-sm text-gray-darker mt-4 leading-relaxed border-t border-border pt-4 w-full">{person.contribution}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── In their words ────────────────────────────────────────────────────── -->
+  {quotes.length > 0 && (
+    <div class="bg-accent-lightest-2">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-accent font-bold text-sm uppercase tracking-widest mb-10 text-center">In their words</p>
+          <div class="grid md:grid-cols-3 gap-6">
+            {quotes.map(q => (
+              <div class="bg-white rounded-xl p-6 border border-border flex flex-col">
+                <p class="text-gray-darker leading-relaxed flex-1 italic">"{q.text}"</p>
+                <div class="mt-5 pt-5 border-t border-border">
+                  <p class="font-bold text-primary-dark text-sm">{q.author}</p>
+                  <p class="text-gray-darker text-xs mt-0.5">{q.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── Related articles ──────────────────────────────────────────────────── -->
+  {relatedArticles.length > 0 && (
+    <ArticleCarousel
+      heading="Related articles"
+      articles={relatedArticles}
+      bgClass="bg-white"
+      showOrganizations={false}
+    />
+  )}
+
+  {cta && (
+    <CTABanner
+      heading={cta.heading}
+      body={cta.body}
+      ctaText="Discuss your challenges with us"
+      ctaHref="/membership/"
+      note={cta.note}
+    />
+  )}
+
+  <Footer />
+</Layout>
