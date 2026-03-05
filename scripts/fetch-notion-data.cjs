@@ -28,9 +28,9 @@ if (!NOTION_API_KEY) {
   const fallbackDir = path.join(ROOT_DIR, "src", "data");
   fs.mkdirSync(fallbackDir, { recursive: true });
   const fallbacks = {
-    "logos.json": [],
-    "steering-members.json": [],
-    "general-members.json": [],
+    "logos.json": [],           // active members only — for logo marquee
+    "steering-members.json": [], // all steering (active + historical), with active flag
+    "general-members.json": [],  // all general (active + historical), with active flag
     "academic-government-members.json": [],
     "team.json": [],
     "stats.json": {},
@@ -69,9 +69,11 @@ const DB = {
 // Output paths — JSON data goes to src/data/, images to public/assets/
 const ROOT_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT_DIR, "src", "data");
-const STEERING_LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos", "steering");
-const GENERAL_LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos", "general");
+const LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos");
 const PHOTOS_DIR = path.join(ROOT_DIR, "public", "assets", "team");
+
+// Pass --force to re-download all images even if they already exist on disk
+const FORCE_DOWNLOAD = process.argv.includes("--force");
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -127,10 +129,21 @@ function relationIds(prop) {
   return prop.relation.map((r) => r.id);
 }
 
-/** Download a file to disk. Returns the filename used, or null on failure. */
+/** Download a file to disk. Returns the filename used, or null on failure.
+ *  Skips the download if the file already exists on disk (unless --force is passed). */
 function downloadFile(url, destDir, filename) {
   return new Promise((resolve) => {
     if (!url) return resolve(null);
+
+    if (!FORCE_DOWNLOAD) {
+      if (path.extname(filename)) {
+        if (fs.existsSync(path.join(destDir, filename))) return resolve(filename);
+      } else {
+        const exts = [".svg", ".png", ".jpg", ".jpeg", ".gif"];
+        const existing = exts.find((ext) => fs.existsSync(path.join(destDir, filename + ext)));
+        if (existing) return resolve(filename + existing);
+      }
+    }
 
     const protocol = url.startsWith("https") ? https : http;
     protocol
@@ -196,34 +209,30 @@ async function queryAll(dataSourceId, filter) {
   const pages = [];
   let cursor;
   do {
-    const response = await notion.dataSources.query({
-      data_source_id: dataSourceId,
-      filter,
-      start_cursor: cursor,
-      page_size: 100,
-    });
+    const query = { data_source_id: dataSourceId, start_cursor: cursor, page_size: 100 };
+    if (filter) query.filter = filter;
+    const response = await notion.dataSources.query(query);
     pages.push(...response.results);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
   return pages;
 }
 
+// Module-level caches — avoid redundant Notion API round-trips across all queries
+const memberPageCache = new Map(); // memberId → page
+const pwciNameCache = new Map();   // pwciId  → name string
+
 // ---------------------------------------------------------------------------
 // Query 1 & 2: Member Organisations
 // ---------------------------------------------------------------------------
 
 async function fetchMembers(level) {
-  console.log(`\nFetching ${level} members...`);
+  console.log(`\nFetching ${level} members (all statuses)...`);
   const pages = await queryAll(DS.MEMBERS, {
-    and: [
-      { property: "Status", select: { equals: "Active" } },
-      { property: "Membership Level ", select: { equals: level } },
-    ],
+    property: "Membership Level ",
+    select: { equals: level },
   });
-  console.log(`  Found ${pages.length} active ${level} members`);
-
-  const logoDir = level === "Steering" ? STEERING_LOGOS_DIR : GENERAL_LOGOS_DIR;
-  fs.mkdirSync(logoDir, { recursive: true });
+  console.log(`  Found ${pages.length} ${level} members total`);
 
   const members = [];
   for (const page of pages) {
@@ -232,6 +241,8 @@ async function fetchMembers(level) {
     const website = urlValue(p["Website"]);
     const logoUrl = fileUrl(p["Logo"]);
     const organisationType = selectName(p["Organisation Type"]);
+    const status = selectName(p["Status"]);
+    const active = status === "Active";
     const slug = slugify(name);
 
     let logoPath = null;
@@ -240,21 +251,18 @@ async function fetchMembers(level) {
     let logoFormat = null;
 
     if (logoUrl) {
-      // Get original filename for extension
       const origName = p["Logo"]?.files?.[0]?.name || "";
       const ext = path.extname(origName).toLowerCase();
       const filename = slug + (ext || "");
 
-      const savedName = await downloadFile(logoUrl, logoDir, filename);
+      const savedName = await downloadFile(logoUrl, LOGOS_DIR, filename);
       if (savedName) {
-        const subDir = level === "Steering" ? "steering" : "general";
-        logoPath = `logos/${subDir}/${savedName}`;
+        logoPath = `logos/${savedName}`;
         logoFormat = path.extname(savedName).replace(".", "").toLowerCase();
         if (logoFormat === "jpeg") logoFormat = "jpg";
 
-        // Try to read image dimensions (basic approach for common formats)
         try {
-          const buf = fs.readFileSync(path.join(logoDir, savedName));
+          const buf = fs.readFileSync(path.join(LOGOS_DIR, savedName));
           const dims = getImageDimensions(buf, logoFormat);
           if (dims) {
             logoWidth = dims.width;
@@ -269,6 +277,8 @@ async function fetchMembers(level) {
     members.push({
       companyName: name,
       companyWebsite: website,
+      membershipLevel: level,
+      active,
       logo: logoPath,
       logoWidth,
       logoHeight,
@@ -333,7 +343,7 @@ function getImageDimensions(buffer, format) {
 // Query 3: Steering Committee People
 // ---------------------------------------------------------------------------
 
-async function fetchSteeringCommittee() {
+async function fetchSteeringCommittee(volunteerBySubId) {
   console.log("\nFetching Steering Committee...");
 
   // Step 1: Find the Steering Committee PWCI
@@ -359,35 +369,22 @@ async function fetchSteeringCommittee() {
     ],
   });
 
-  // Filter to committee roles only (not "Subscriber")
   const committeeRoles = ["Committee Chair", "Committee Vice-Chair", "Committee Member"];
-  const committeeSubs = allSubs.filter((sub) => {
-    const role = selectName(sub.properties["Role for Subscription"]);
-    return committeeRoles.includes(role);
-  });
+  const committeeSubs = allSubs.filter((sub) =>
+    committeeRoles.includes(selectName(sub.properties["Role for Subscription"]))
+  );
   console.log(`  Found ${committeeSubs.length} committee subscriptions (of ${allSubs.length} total)`);
 
-  // Step 3: Resolve names from Volunteers
+  // Step 3: Resolve from pre-fetched volunteer map (no per-subscription API calls)
   const people = [];
   const seenVolunteerIds = new Set();
 
   for (const sub of committeeSubs) {
-    const subId = sub.id;
     const role = selectName(sub.properties["Role for Subscription"]);
-
-    // Find the volunteer linked to this subscription
-    const volunteers = await queryAll(DS.VOLUNTEERS, {
-      property: "Subscriptions",
-      relation: { contains: subId },
-    });
-
-    for (const vol of volunteers) {
+    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
       if (seenVolunteerIds.has(vol.id)) continue;
       seenVolunteerIds.add(vol.id);
-
-      const vp = vol.properties;
-      const person = await extractPerson(vol, role);
-      people.push(person);
+      people.push(await extractPerson(vol, role));
     }
   }
 
@@ -399,7 +396,7 @@ async function fetchSteeringCommittee() {
 // Query 4a: Chairs & Project Leads
 // ---------------------------------------------------------------------------
 
-async function fetchChairsAndLeads() {
+async function fetchChairsAndLeads(volunteerBySubId) {
   console.log("\nFetching Chairs & Project Leads (from Subscriptions)...");
 
   const leadershipRoles = [
@@ -411,7 +408,6 @@ async function fetchChairsAndLeads() {
     "Committee Member",
   ];
 
-  // Query active subscriptions with any of the leadership roles
   const subs = await queryAll(DS.SUBSCRIPTIONS, {
     and: [
       { property: "Subscription Status", select: { equals: "Active" } },
@@ -425,41 +421,36 @@ async function fetchChairsAndLeads() {
   });
   console.log(`  Found ${subs.length} leadership subscriptions`);
 
-  // Resolve each subscription to a person + their role label
+  // Pre-fetch all unique PWCI names in parallel (cached — avoids sequential round-trips)
+  const uniquePwciIds = [...new Set(
+    subs.flatMap((sub) => relationIds(sub.properties["PWCIs"]))
+  )];
+  await Promise.all(uniquePwciIds.map(async (id) => {
+    if (!pwciNameCache.has(id)) {
+      try {
+        const page = await notion.pages.retrieve({ page_id: id });
+        pwciNameCache.set(id, titleText(page.properties["Name"]));
+      } catch (err) {
+        console.warn(`  WARN: Could not resolve PWCI name for ${id}: ${err.message}`);
+        pwciNameCache.set(id, "");
+      }
+    }
+  }));
+
   const people = [];
   const seenVolunteerIds = new Set();
 
   for (const sub of subs) {
     const role = selectName(sub.properties["Role for Subscription"]);
 
-    // Resolve the PWCI name (working group / project / committee name)
-    let pwciName = "";
     const pwciIds = relationIds(sub.properties["PWCIs"]);
-    if (pwciIds.length > 0) {
-      try {
-        const pwciPage = await notion.pages.retrieve({ page_id: pwciIds[0] });
-        pwciName = titleText(pwciPage.properties["Name"]);
-      } catch (err) {
-        console.warn(`  WARN: Could not resolve PWCI name: ${err.message}`);
-      }
-    }
-
-    // Build a human-readable label, e.g. "Software Standards WG (Chair)"
-    const roleShort = role
-      .replace("Working Group ", "")
-      .replace("Project ", "")
-      .replace("Committee ", "");
+    const pwciName = pwciIds.length > 0 ? (pwciNameCache.get(pwciIds[0]) || "") : "";
+    const roleShort = role.replace("Working Group ", "").replace("Project ", "").replace("Committee ", "");
     const label = pwciName ? `${pwciName} (${roleShort})` : role;
 
-    // Resolve the volunteer
-    const volunteers = await queryAll(DS.VOLUNTEERS, {
-      property: "Subscriptions",
-      relation: { contains: sub.id },
-    });
-
-    for (const vol of volunteers) {
+    // Resolve from pre-fetched map (no API call)
+    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
       if (seenVolunteerIds.has(vol.id)) {
-        // Person already seen — just append the additional role label
         const existing = people.find((p) => p._volunteerIds?.includes(vol.id));
         if (existing && label && !existing.leadershipRoles.includes(label)) {
           existing.leadershipRoles.push(label);
@@ -467,7 +458,6 @@ async function fetchChairsAndLeads() {
         continue;
       }
       seenVolunteerIds.add(vol.id);
-
       const person = await extractPerson(vol, role);
       person.leadershipRoles = label ? [label] : [];
       person._volunteerIds = [vol.id];
@@ -483,10 +473,9 @@ async function fetchChairsAndLeads() {
 // Query 4b: Organisation Leads
 // ---------------------------------------------------------------------------
 
-async function fetchOrgLeads() {
+async function fetchOrgLeads(volunteerBySubId) {
   console.log("\nFetching Organisation Leads (from Subscriptions)...");
 
-  // Query Subscriptions where Role = "Organization Lead" and Status = "Active"
   const subs = await queryAll(DS.SUBSCRIPTIONS, {
     and: [
       { property: "Role for Subscription", select: { equals: "Organization Lead" } },
@@ -495,22 +484,14 @@ async function fetchOrgLeads() {
   });
   console.log(`  Found ${subs.length} Organisation Lead subscriptions`);
 
-  // Resolve each subscription to a person via the linked Volunteer
   const people = [];
   const seenVolunteerIds = new Set();
 
   for (const sub of subs) {
-    const volunteers = await queryAll(DS.VOLUNTEERS, {
-      property: "Subscriptions",
-      relation: { contains: sub.id },
-    });
-
-    for (const vol of volunteers) {
+    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
       if (seenVolunteerIds.has(vol.id)) continue;
       seenVolunteerIds.add(vol.id);
-
-      const person = await extractPerson(vol, "Organisation Lead");
-      people.push(person);
+      people.push(await extractPerson(vol, "Organisation Lead"));
     }
   }
 
@@ -522,7 +503,7 @@ async function fetchOrgLeads() {
 // Query 5: Administrative Team (GSF Staff via [DB] GSF Team)
 // ---------------------------------------------------------------------------
 
-async function fetchAdminTeam() {
+async function fetchAdminTeam(volunteerByName) {
   console.log("\nFetching Administrative Team (GSF Team DB)...");
 
   const teamPages = await queryAll(DS.GSF_TEAM, {
@@ -535,24 +516,19 @@ async function fetchAdminTeam() {
   for (const page of teamPages) {
     const p = page.properties;
     const fullName = richText(p["Person"]?.rich_text);
-    const role = titleText(p["Role"]);  // "Role" is the title property
+    const role = titleText(p["Role"]);
 
     if (!fullName.trim()) continue;
 
-    // Try to find this person in Volunteers to get LinkedIn and photo
+    // Look up from pre-fetched volunteer map (no per-person API call)
     let linkedin = "";
     let photoPath = null;
     try {
       const [firstName, ...lastParts] = fullName.split(" ");
       const lastName = lastParts.join(" ");
-      const vols = await queryAll(DS.VOLUNTEERS, {
-        and: [
-          { property: "First Name", rich_text: { equals: firstName } },
-          { property: "Last Name", rich_text: { contains: lastName } },
-        ],
-      });
-      if (vols.length > 0) {
-        const vp = vols[0].properties;
+      const vol = volunteerByName.get(`${firstName.toLowerCase()}|${lastName.toLowerCase()}`);
+      if (vol) {
+        const vp = vol.properties;
         linkedin = urlValue(vp["LinkedIn"]);
         const photoUrl = fileUrl(vp["Photo"]);
         if (photoUrl) {
@@ -597,13 +573,17 @@ async function extractPerson(vol, role) {
   const linkedin = urlValue(vp["LinkedIn"]);
   const photoUrl = fileUrl(vp["Photo"]);
 
-  // Resolve company name from Member relation
+  // Resolve company name from Member relation (cached to avoid duplicate API calls)
   let company = "";
   let companyWebsite = "";
   const memberIds = relationIds(vp["Member"]);
   if (memberIds.length > 0) {
     try {
-      const memberPage = await notion.pages.retrieve({ page_id: memberIds[0] });
+      const memberId = memberIds[0];
+      if (!memberPageCache.has(memberId)) {
+        memberPageCache.set(memberId, await notion.pages.retrieve({ page_id: memberId }));
+      }
+      const memberPage = memberPageCache.get(memberId);
       company = titleText(memberPage.properties["Member Name "]);
       companyWebsite = urlValue(memberPage.properties["Website"]);
     } catch (err) {
@@ -650,41 +630,40 @@ async function main() {
 
   // Ensure output directories exist
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.mkdirSync(STEERING_LOGOS_DIR, { recursive: true });
-  fs.mkdirSync(GENERAL_LOGOS_DIR, { recursive: true });
+  fs.mkdirSync(LOGOS_DIR, { recursive: true });
   fs.mkdirSync(PHOTOS_DIR, { recursive: true });
 
-  // --- Homepage: Members ---
-  const steeringMembers = await fetchMembers("Steering");
-  const allGeneralMembers = await fetchMembers("General");
+  // --- Members ---
+  // Fetch all members regardless of status — active flag set per record
+  const allSteering = await fetchMembers("Steering");
+  const allGeneral = await fetchMembers("General");
 
-  // Split general members: only separate out Academia and Government
   const academicGovTypes = ["Academia", "Government"];
-  const generalMembers = allGeneralMembers.filter(
-    (m) => !academicGovTypes.includes(m.organisationType)
-  );
-  const academicGovMembers = allGeneralMembers.filter(
-    (m) => academicGovTypes.includes(m.organisationType)
-  );
-  console.log(`  Split: ${generalMembers.length} general, ${academicGovMembers.length} academic/government`);
 
+  // Per-level JSON files include ALL members (active + inactive) with active flag.
+  // Consumers filter by active: true for display; inactive entries preserve history.
   fs.writeFileSync(
     path.join(DATA_DIR, "steering-members.json"),
-    JSON.stringify(steeringMembers, null, 2)
+    JSON.stringify(allSteering, null, 2)
   );
   fs.writeFileSync(
     path.join(DATA_DIR, "general-members.json"),
-    JSON.stringify(generalMembers, null, 2)
+    JSON.stringify(allGeneral.filter((m) => !academicGovTypes.includes(m.organisationType)), null, 2)
   );
   fs.writeFileSync(
     path.join(DATA_DIR, "academic-government-members.json"),
-    JSON.stringify(academicGovMembers, null, 2)
+    JSON.stringify(allGeneral.filter((m) => academicGovTypes.includes(m.organisationType)), null, 2)
   );
 
-  // logos.json — combined flat list for the logo marquee component
-  const allMembers = [...steeringMembers, ...generalMembers, ...academicGovMembers];
+  const activeSteeringCount = allSteering.filter((m) => m.active).length;
+  const activeGeneralCount = allGeneral.filter((m) => m.active).length;
+  console.log(`  Active: ${activeSteeringCount} steering, ${activeGeneralCount} general`);
+  console.log(`  Historical: ${allSteering.length - activeSteeringCount} steering, ${allGeneral.length - activeGeneralCount} general`);
+
+  // logos.json — active members only, for the logo marquee component
+  const allMembers = [...allSteering, ...allGeneral];
   const logos = allMembers
-    .filter((m) => m.logo)
+    .filter((m) => m.active && m.logo)
     .map((m) => ({
       name: m.companyName,
       logo: `/assets/${m.logo}`,
@@ -695,7 +674,7 @@ async function main() {
     JSON.stringify(logos, null, 2)
   );
 
-  // --- Homepage: Stats ---
+  // --- Homepage: Stats (active members only) ---
   console.log("\nCounting active volunteers...");
   const numberOfIndividuals = await countAll(DS.VOLUNTEERS, {
     property: "Volunteer Status",
@@ -705,7 +684,7 @@ async function main() {
 
   // Wrapped in an array so gatsby-transformer-json creates allStatsJson
   const stats = [{
-    numberOfOrganisations: steeringMembers.length + allGeneralMembers.length,
+    numberOfOrganisations: activeSteeringCount + activeGeneralCount,
     numberOfIndividuals,
   }];
   fs.writeFileSync(
@@ -714,10 +693,31 @@ async function main() {
   );
 
   // --- Team page ---
-  const steeringCommittee = await fetchSteeringCommittee();
-  const chairsAndLeads = await fetchChairsAndLeads();
-  const orgLeads = await fetchOrgLeads();
-  const adminTeam = await fetchAdminTeam();
+  // Pre-fetch all volunteers once, then build indexes for O(1) lookups.
+  // This replaces ~135 sequential per-subscription API calls with a single paginated fetch.
+  console.log("\nPre-fetching all volunteers...");
+  const allVolunteers = await queryAll(DS.VOLUNTEERS);
+  console.log(`  Fetched ${allVolunteers.length} volunteers`);
+
+  // Index: subscriptionId → volunteer[]  (for resolving subscription → person)
+  const volunteerBySubId = new Map();
+  // Index: "firstname|lastname" → volunteer  (for admin team name lookup)
+  const volunteerByName = new Map();
+  for (const vol of allVolunteers) {
+    const vp = vol.properties;
+    for (const subId of relationIds(vp["Subscriptions"])) {
+      if (!volunteerBySubId.has(subId)) volunteerBySubId.set(subId, []);
+      volunteerBySubId.get(subId).push(vol);
+    }
+    const first = richText(vp["First Name"]?.rich_text).toLowerCase();
+    const last = richText(vp["Last Name"]?.rich_text).toLowerCase();
+    if (first || last) volunteerByName.set(`${first}|${last}`, vol);
+  }
+
+  const steeringCommittee = await fetchSteeringCommittee(volunteerBySubId);
+  const chairsAndLeads = await fetchChairsAndLeads(volunteerBySubId);
+  const orgLeads = await fetchOrgLeads(volunteerBySubId);
+  const adminTeam = await fetchAdminTeam(volunteerByName);
 
   // Build team.json with groups
   // Use a Map to deduplicate people who appear in multiple groups
@@ -774,9 +774,8 @@ async function main() {
 
   // --- Summary ---
   console.log("\n=== Summary ===");
-  console.log(`Steering members: ${steeringMembers.length}`);
-  console.log(`General members: ${generalMembers.length}`);
-  console.log(`Academic/Government members: ${academicGovMembers.length}`);
+  console.log(`Steering members: ${activeSteeringCount} active, ${allSteering.length - activeSteeringCount} historical`);
+  console.log(`General members: ${activeGeneralCount} active, ${allGeneral.length - activeGeneralCount} historical`);
   console.log(`Steering Committee people: ${steeringCommittee.length}`);
   console.log(`Chairs & Project Leads: ${chairsAndLeads.length}`);
   console.log(`Organisation Leads: ${orgLeads.length}`);
