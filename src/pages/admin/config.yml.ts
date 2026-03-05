@@ -396,9 +396,8 @@ collections:
 
       - label: Main Image
         name: mainImage
-        widget: string
+        widget: image
         required: false
-        hint: "Path to hero image, e.g. /assets/stories/slug.png"
 
       - label: Problem Heading
         name: problemHeading
