@@ -362,7 +362,9 @@ collections:
         i18n: true
 
   # ── Stories ───────────────────────────────────────────────────────────────
-  # Collaborative member stories.
+  # Collaborative member stories with rich structured data (timeline, stats,
+  # contributors, quotes). Not internationalised — files live directly in
+  # src/content/stories/ without locale subfolders.
   - name: stories
     label: Stories
     label_singular: Story
@@ -371,14 +373,13 @@ collections:
     slug: "{{slug}}"
     extension: md
     format: frontmatter
-    i18n: true
-    initial_locales: [en]
-    summary: "{{date}} — {{title}}"
+    i18n: false
+    summary: "{{title}}"
     sortable_fields:
-      fields: [date, title]
+      fields: [title]
       default:
-        field: date
-        direction: Descending
+        field: title
+        direction: Ascending
     thumbnail: mainImage
     description: >
       Collaborative member stories. Narrative accounts of how organisations
@@ -387,74 +388,168 @@ collections:
       - label: Title
         name: title
         widget: string
-        i18n: true
-
-      - label: Date
-        name: date
-        widget: datetime
-        format: "YYYY-MM-DD"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        i18n: duplicate
 
       - label: Summary
         name: summary
         widget: text
-        i18n: true
-        hint: "A brief summary of the story shown in listings."
-
-      - label: The Challenge
-        name: challenge
-        widget: text
-        required: false
-        i18n: true
-        hint: "The problem or challenge the organisations set out to solve."
-
-      - label: The Outcome
-        name: outcome
-        widget: text
-        required: false
-        i18n: true
-        hint: "What was achieved - the result of the collaboration."
+        hint: "2-4 sentence summary shown on the stories listing page and cards."
 
       - label: Main Image
         name: mainImage
-        widget: image
+        widget: string
         required: false
-        i18n: duplicate
+        hint: "Path to hero image, e.g. /assets/stories/slug.png"
+
+      - label: Problem Heading
+        name: problemHeading
+        widget: string
+        required: false
+        hint: "Short heading for the problem section on the story page."
+
+      - label: Journey Heading
+        name: journeyHeading
+        widget: string
+        required: false
+        hint: "Short heading for the journey/timeline section."
 
       - label: Organisations
-        name: organizations
+        name: orgs
         widget: list
         required: false
-        i18n: duplicate
-        hint: "The member organisations who collaborated on this story."
+        hint: "The member organisations involved in this story."
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Logo
+            name: logo
+            widget: string
+            required: false
+            hint: "Path to logo, e.g. /assets/logos/accenture.svg"
 
-      - label: Additional Org Count
-        name: additionalOrgCount
-        widget: number
+      - label: Key Stats
+        name: stats
+        widget: list
         required: false
-        value_type: int
-        i18n: duplicate
-        hint: "Number of additional participating orgs not listed above."
+        hint: "3-4 headline stats displayed prominently on the story page."
+        fields:
+          - label: Value
+            name: value
+            widget: string
+            hint: "The stat value, e.g. '130,000+' or 'ISO 21031:2024'"
+          - label: Label
+            name: label
+            widget: string
+            hint: "What the stat measures, e.g. 'Engineers trained'"
 
-      - label: Feature on Homepage Carousel
-        name: featured
-        widget: boolean
-        default: false
+      - label: Timeline
+        name: timeline
+        widget: list
         required: false
-        i18n: duplicate
+        hint: "Chronological milestones in the story's journey."
+        fields:
+          - label: Date
+            name: date
+            widget: string
+            hint: "Date label, e.g. '2021', 'April 2024', 'Ongoing'"
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Body
+            name: body
+            widget: text
+          - label: Source
+            name: source
+            widget: object
+            required: false
+            hint: "Optional link to a related article."
+            fields:
+              - label: Link Text
+                name: text
+                widget: string
+              - label: URL
+                name: href
+                widget: string
 
-      - label: Language
-        name: lang
-        widget: hidden
-        default: en
-        i18n: false
+      - label: Featured Quote
+        name: featuredQuote
+        widget: object
+        required: false
+        hint: "A standout quote displayed prominently on the page."
+        fields:
+          - label: Quote Text
+            name: text
+            widget: text
+          - label: Attribution
+            name: author
+            widget: string
+
+      - label: Contributors
+        name: contributors
+        widget: list
+        required: false
+        hint: "Key individuals who drove this work."
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Role
+            name: role
+            widget: string
+          - label: Organisation
+            name: org
+            widget: string
+          - label: Photo
+            name: photo
+            widget: string
+            required: false
+          - label: Contribution
+            name: contribution
+            widget: text
+
+      - label: Additional Quotes
+        name: quotes
+        widget: list
+        required: false
+        hint: "Supporting quotes displayed in the story."
+        fields:
+          - label: Quote Text
+            name: text
+            widget: text
+          - label: Author
+            name: author
+            widget: string
+          - label: Role
+            name: role
+            widget: string
+
+      - label: Related Article Slugs
+        name: relatedSlugs
+        widget: list
+        required: false
+        hint: "Article slugs for 'Related Reading', e.g. 'en/some-article-slug'"
+
+      - label: Call to Action
+        name: cta
+        widget: object
+        required: false
+        hint: "CTA section at the bottom of the story."
+        fields:
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Body
+            name: body
+            widget: text
+          - label: Note
+            name: note
+            widget: string
+            required: false
 
       - label: Body
         name: body
         widget: markdown
-        i18n: true
+        hint: "The Problem section — displayed as prose above the timeline."
 
   # ── Pages ─────────────────────────────────────────────────────────────────
   # CMS-managed text pages: policies, terms, code of conduct, etc.
