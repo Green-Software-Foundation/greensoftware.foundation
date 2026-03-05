@@ -27,7 +27,7 @@ export const navItems = [
         title: "Process",
         links: [
           { href: "/standards/certification/", label: "Certification", description: "Get certified in green software specifications", icon: "award" },
-          { href: "/assemblies/", label: "Assemblies", description: "AI-facilitated consensus at scale", icon: "messages-square" },
+          { href: "https://assemblies.greensoftware.foundation", label: "Assemblies", description: "AI-facilitated consensus at scale", icon: "messages-square", external: true },
         ],
       },
     ],
@@ -48,9 +48,9 @@ export const navItems = [
         title: "Policy & Research",
         links: [
           { href: "/policy/", label: "Manifesto" },
-          { href: "/policy/radar/", label: "Policy Radar", description: "Track emerging legislation and regulatory trends" },
+          { href: "https://policy-radar.greensoftware.foundation", label: "Policy Radar", description: "Track emerging legislation and regulatory trends", external: true },
           { href: "/policy/#engagement", label: "Policy Engagement" },
-          { href: "/research/state-of-green-software/", label: "State of Green Software" },
+          { href: "https://state-of.greensoftware.foundation", label: "State of Green Software", external: true },
         ],
       },
       {
@@ -104,7 +104,6 @@ export const navItems = [
           { href: "/history/", label: "History" },
           { href: "/brand/", label: "Brand & Assets" },
           { href: "https://directory.greensoftware.foundation/members", label: "Member Directory", external: true },
-          { href: "https://directory.greensoftware.foundation/partners", label: "Partner Directory", external: true },
           { href: "https://directory.greensoftware.foundation/working-groups", label: "Working Groups", external: true },
           { href: "https://directory.greensoftware.foundation/committees", label: "Committees", external: true },
           { href: "https://directory.greensoftware.foundation/projects", label: "Projects", external: true },

@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
 
 // Parameterised components
 import Navbar from "@/components/navbar.astro";
@@ -20,133 +21,7 @@ import Footer from "@/components/footer.astro";
     logoHref="/"
     topBar="none"
     showSearch
-    navItems={[
-      {
-        label: "Standards",
-        footerLink: { href: "/standards/", label: "All standards →" },
-        sections: [
-          {
-            title: "Software",
-            links: [
-              { href: "/standards/sci/", label: "SCI", description: "ISO-certified metric for software carbon intensity", iconSrc: "/assets/icons/sci-mark.svg" },
-              { href: "/standards/soft/", label: "SOFT", description: "Framework for organisational transformation", iconSrc: "/assets/icons/soft-mark.svg" },
-              { href: "/standards/sci-ai/", label: "SCI for AI", description: "Carbon measurement for AI systems", icon: "bot" },
-              { href: "/standards/swe/", label: "SWE", description: "Software Water Efficiency", icon: "droplets" },
-              { href: "/standards/see/", label: "SEE", description: "Software Energy Efficiency", icon: "zap" },
-            ],
-          },
-          {
-            title: "Hardware",
-            links: [
-              { href: "/standards/wdpc/", label: "WDPC", description: "Data centre power and cooling efficiency", iconSrc: "/assets/icons/wdpc-mark.svg" },
-            ],
-          },
-          {
-            title: "Process",
-            links: [
-              { href: "/standards/certification/", label: "Certification", description: "Get certified in green software specifications", icon: "award" },
-              { href: "/assemblies/", label: "Assemblies", description: "AI-facilitated consensus at scale", icon: "messages-square" },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Adoption",
-        footerLink: { href: "/research/", label: "All research →" },
-        sections: [
-          {
-            title: "Education",
-            links: [
-              { href: "https://learn.greensoftware.foundation", label: "Courses", external: true },
-              { href: "https://patterns.greensoftware.foundation", label: "Patterns", external: true },
-              { href: "https://github.com/Green-Software-Foundation/awesome-green-software", label: "Awesome Green Software", external: true },
-            ],
-          },
-          {
-            title: "Policy & Research",
-            links: [
-              { href: "/policy/", label: "Manifesto" },
-              { href: "/policy/radar/", label: "Policy Radar", description: "Track emerging legislation and regulatory trends" },
-              { href: "/policy/#engagement", label: "Policy Engagement" },
-              { href: "/research/state-of-green-software/", label: "State of Green Software" },
-            ],
-          },
-          {
-            title: "Tools",
-            links: [
-              { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", label: "Carbon Aware SDK", description: "SDK for building carbon-aware applications", external: true },
-              { href: "https://github.com/Green-Software-Foundation/carmen", label: "Carmen", description: "Automated carbon reporting for cloud workloads", external: true },
-              { href: "https://if.greensoftware.foundation", label: "Impact Framework", description: "Measure the carbon footprint of your software", external: true },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Community",
-        footerLink: { href: "/community/", label: "About our community →" },
-        sections: [
-          {
-            title: "Listen & Learn",
-            links: [
-              { href: "https://podcast.greensoftware.foundation", label: "Environment Variables", description: "Practitioner-focused podcast", external: true },
-              { href: "https://podcast.greensoftware.foundation/cxo-bytes", label: "CXO Bytes", description: "C-suite focused podcast", external: true },
-              { href: "/articles/", label: "Articles" },
-            ],
-          },
-          {
-            title: "Connect",
-            links: [
-              { href: "https://community.greensoftware.foundation", label: "Community Platform", external: true },
-              { href: "https://newsletter.greensoftware.foundation", label: "Newsletter", external: true },
-              { href: "https://badges.greensoftware.foundation", label: "Badges", external: true },
-              { href: "https://champions.greensoftware.foundation", label: "Champions Programme", external: true },
-            ],
-          },
-          {
-            title: "Events",
-            links: [
-              { href: "https://summit.greensoftware.foundation", label: "Summit", external: true },
-              { href: "https://carbonhack.greensoftware.foundation", label: "Carbon Hack", external: true },
-            ],
-          },
-        ],
-      },
-      {
-        label: "About",
-        sections: [
-          {
-            title: "Organisation",
-            links: [
-              { href: "/about/", label: "About" },
-              { href: "/governance/", label: "Governance & Leadership" },
-              { href: "/history/", label: "History" },
-              { href: "/brand/", label: "Brand & Assets" },
-              { href: "https://directory.greensoftware.foundation/members", label: "Member Directory", external: true },
-              { href: "https://directory.greensoftware.foundation/partners", label: "Partner Directory", external: true },
-              { href: "https://directory.greensoftware.foundation/working-groups", label: "Working Groups", external: true },
-              { href: "https://directory.greensoftware.foundation/committees", label: "Committees", external: true },
-              { href: "https://directory.greensoftware.foundation/projects", label: "Projects", external: true },
-            ],
-          },
-          {
-            title: "Impact",
-            links: [
-              { href: "/impact/", label: "Success Stories" },
-              { href: "/articles/", label: "Articles" },
-              { href: "/impact/#press", label: "Press & Media" },
-            ],
-          },
-          {
-            title: "For Members",
-            links: [
-              { href: "https://playbook.greensoftware.foundation", label: "Member Playbook", external: true },
-              { href: "https://onboarding.greensoftware.foundation", label: "Member Onboarding", external: true },
-              { href: "https://register.greensoftware.foundation", label: "Employee Registration", description: "If you're an employee of an existing member organisation, register here to join working groups and initiatives", external: true },
-            ],
-          },
-        ],
-      },
-    ]}
+    navItems={navItems}
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
@@ -157,7 +32,7 @@ import Footer from "@/components/footer.astro";
     headingAccent="with no playbook"
     body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results."
     ctas={[
-      { text: "Discuss your challenges with us", variant: "primary" },
+      { text: "Discuss your challenges with us", variant: "primary", href: "/membership/" },
     ]}
     imageSrc="/assets/hero-illustration.svg"
     imageAlt="Membership illustration"
@@ -221,51 +96,56 @@ import Footer from "@/components/footer.astro";
     body="Every story starts the same way: an organisation brings us a problem they can't solve alone."
     stories={[
       {
-        title: "We need to measure carbon at travel industry scale",
-        description: "Amadeus built Carmen — an open-source carbon measurement engine delivering application-level emissions visibility across hundreds of services processing 3 billion daily flight searches.",
+        title: "Our engineers don't know how to build green software",
+        description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
         organizations: [
-          { name: "Amadeus", logoSrc: "/assets/logos/amadeus.png" },
+          { name: "Goldman Sachs", logoSrc: "/assets/logos/goldman-sachs.png" },
+          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
         ],
-        imageSrc: "/assets/blog-illustration-1.svg",
-        href: "/impact/",
+        imageSrc: "/assets/stories/green-software-practitioner.jpg",
+        href: "/stories/green-software-practitioner/",
         cta: "Read the story →",
       },
       {
         title: "Our pilots work but nothing scales across the org",
-        description: "HSBC co-chaired the SOFT framework with Microsoft to build the playbook for embedding green software practices systematically across every function — not just IT.",
+        description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
         organizations: [
-          { name: "HSBC", logoSrc: "/assets/logos/hsbc.png" },
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.webp" },
+          { name: "HSBC", logoSrc: "/assets/logos/hsbc.svg" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
+          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
         ],
-        imageSrc: "/assets/blog-illustration-2.svg",
-        href: "/impact/",
+        imageSrc: "/assets/stories/soft-framework.png",
+        href: "/stories/soft-framework/",
         cta: "Read the story →",
       },
       {
         title: "We can't shift workloads to clean energy",
-        description: "UBS deployed the first enterprise-scale carbon-aware computing system on a production banking platform, using the Carbon Aware SDK developed collaboratively through the GSF.",
+        description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
         organizations: [
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
           { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.webp" },
+          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
         ],
-        imageSrc: "/assets/blog-illustration-3.svg",
-        href: "/impact/",
+        imageSrc: "/assets/stories/carbon-aware-sdk.png",
+        href: "/stories/carbon-aware-sdk/",
         cta: "Read the story →",
       },
       {
         title: "We can't measure software carbon",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
         organizations: [
-          { name: "Accenture", logoSrc: "/assets/logos/accenture.png" },
+          { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
           { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
         ],
-        imageSrc: "/assets/blog-1.svg",
-        href: "/impact/",
+        imageSrc: "/assets/stories/sci-measurement.png",
+        href: "/stories/sci-measurement/",
         cta: "Read the story →",
       },
     ]}
-    footerCtaText="Browse the rest of our case studies"
-    footerCtaHref="/impact/"
+    footerCtaText="Browse all member stories"
+    footerCtaHref="/stories/"
   />
 
   <!-- Section 5: General Membership -->
@@ -366,6 +246,7 @@ import Footer from "@/components/footer.astro";
     heading="Every member's journey starts with a conversation"
     body="Tell us what you're trying to solve. We'll tell you how membership can help."
     ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
   />
 
   <Footer
@@ -373,21 +254,20 @@ import Footer from "@/components/footer.astro";
       {
         title: "Our Work",
         links: [
-          { href: "/standards/sci/", text: "SCI Specification" },
-          { href: "/standards/soft/", text: "SOFT Framework" },
-          { href: "https://learn.greensoftware.foundation", text: "Green Software Practitioner" },
-          { href: "/standards/sci-ai/", text: "SCI for AI" },
-          { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", text: "Carbon Aware SDK" },
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
         ],
       },
       {
         title: "About",
         links: [
-          { href: "/about/", text: "Our Mission" },
-          { href: "/governance/", text: "Governance" },
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
           { href: "/history/", text: "History" },
           { href: "/articles/", text: "Articles" },
-          { href: "/impact/#press", text: "Press & Media" },
         ],
       },
       {
@@ -396,7 +276,7 @@ import Footer from "@/components/footer.astro";
           { href: "/membership/", text: "Become a Member" },
           { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
           { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
-          { href: "/events/", text: "Events" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
         ],
       },
       {

@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import { navItems } from "@/lib/nav-items";
+---
+
+<Layout title="Page Not Found — Green Software Foundation">
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <section class="bg-accent-lightest-2 flex items-center justify-center px-6 py-32 md:py-48">
+    <div class="text-center max-w-xl">
+      <p class="text-6xl font-extrabold text-primary mb-4">404</p>
+      <h1 class="text-2xl font-bold text-primary-dark md:text-3xl mb-4">Page not found</h1>
+      <p class="text-lg text-primary-dark mb-8">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-primary-dark transition-colors"
+      >
+        Back to homepage
+      </a>
+    </div>
+  </section>
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "#", text: "SCI Specification" },
+          { href: "#", text: "SOFT Framework" },
+          { href: "#", text: "Green Software Practitioner" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/governance/", text: "Governance" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

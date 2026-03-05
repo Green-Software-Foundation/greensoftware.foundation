@@ -13,6 +13,10 @@ interface Props {
   bgClass?: string;
   /** Whether to show organisation logos/names on cards (default true) */
   showOrganizations?: boolean;
+  /** CTA link text */
+  ctaText?: string;
+  /** CTA link href */
+  ctaHref?: string;
 }
 
 const {
@@ -21,6 +25,8 @@ const {
   articles = [],
   bgClass = "bg-accent-lightest-2",
   showOrganizations = true,
+  ctaText,
+  ctaHref,
 } = Astro.props;
 ---
 
@@ -32,6 +38,8 @@ const {
       body={body}
       articles={articles}
       showOrganizations={showOrganizations}
+      ctaText={ctaText}
+      ctaHref={ctaHref}
     />
   </div>
 </section>

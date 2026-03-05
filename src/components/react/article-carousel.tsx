@@ -32,9 +32,11 @@ interface Props {
   body?: string;
   articles: Article[];
   showOrganizations?: boolean;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
-export function ArticleCarousel({ heading, body, articles, showOrganizations = true }: Props) {
+export function ArticleCarousel({ heading, body, articles, showOrganizations = true, ctaText, ctaHref }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
   const scrollPrev = React.useCallback(() => {
@@ -126,7 +128,15 @@ export function ArticleCarousel({ heading, body, articles, showOrganizations = t
           </div>
         </div>
 
-        <div className="mt-8 flex justify-center gap-4">
+        {ctaText && ctaHref && (
+          <div className="mt-8 text-center">
+            <a href={ctaHref} className="inline-flex items-center text-sm font-bold text-primary hover:underline">
+              {ctaText}
+            </a>
+          </div>
+        )}
+
+        <div className="mt-4 flex justify-center gap-4">
           <Button variant="outline" size="icon" onClick={scrollPrev}>
             <ArrowLeft className="h-4 w-4" />
           </Button>
