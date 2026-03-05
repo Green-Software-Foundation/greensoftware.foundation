@@ -515,28 +515,41 @@ async function fetchAdminTeam(volunteerByName) {
   const people = [];
   for (const page of teamPages) {
     const p = page.properties;
-    const fullName = richText(p["Person"]?.rich_text);
-    const role = titleText(p["Role"]);
+    const fullName = titleText(p["Person"]);
+    const role = richText(p["Role"]?.rich_text);
 
     if (!fullName.trim()) continue;
 
-    // Look up from pre-fetched volunteer map (no per-person API call)
+    // Try photo directly from the GSF Team page first, then fall back to Volunteers DB
     let linkedin = "";
     let photoPath = null;
     try {
+      // 1. Photo from GSF Team DB page itself
+      const directPhotoUrl = fileUrl(p["Photo"]);
+      if (directPhotoUrl) {
+        const origName = p["Photo"]?.files?.[0]?.name || "";
+        const ext = path.extname(origName).toLowerCase() || ".jpg";
+        const filename = slugify(fullName) + ext;
+        const savedName = await downloadFile(directPhotoUrl, PHOTOS_DIR, filename);
+        if (savedName) photoPath = `/assets/team/${savedName}`;
+      }
+
+      // 2. Look up from pre-fetched volunteer map for LinkedIn (and photo if still missing)
       const [firstName, ...lastParts] = fullName.split(" ");
       const lastName = lastParts.join(" ");
       const vol = volunteerByName.get(`${firstName.toLowerCase()}|${lastName.toLowerCase()}`);
       if (vol) {
         const vp = vol.properties;
         linkedin = urlValue(vp["LinkedIn"]);
-        const photoUrl = fileUrl(vp["Photo"]);
-        if (photoUrl) {
-          const origName = vp["Photo"]?.files?.[0]?.name || "";
-          const ext = path.extname(origName).toLowerCase() || ".jpg";
-          const filename = slugify(fullName) + ext;
-          const savedName = await downloadFile(photoUrl, PHOTOS_DIR, filename);
-          if (savedName) photoPath = `/assets/team/${savedName}`;
+        if (!photoPath) {
+          const photoUrl = fileUrl(vp["Photo"]);
+          if (photoUrl) {
+            const origName = vp["Photo"]?.files?.[0]?.name || "";
+            const ext = path.extname(origName).toLowerCase() || ".jpg";
+            const filename = slugify(fullName) + ext;
+            const savedName = await downloadFile(photoUrl, PHOTOS_DIR, filename);
+            if (savedName) photoPath = `/assets/team/${savedName}`;
+          }
         }
       }
     } catch (_) {
