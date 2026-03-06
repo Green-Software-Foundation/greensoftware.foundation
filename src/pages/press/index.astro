@@ -1,0 +1,362 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import StatsGrid from "@/components/stats-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+// ── Dynamic data ──────────────────────────────────────────────────────────────
+import steeringMembers from "@/data/steering-members.json";
+import generalMembers from "@/data/general-members.json";
+import academicMembers from "@/data/academic-government-members.json";
+import team from "@/data/team.json";
+import pressMentions from "@/data/press-mentions.json";
+
+// Active members only
+const activeSteeringMembers = (steeringMembers as any[]).filter((m) => m.active);
+const activeGeneralMembers = (generalMembers as any[]).filter((m) => m.active);
+const activeAcademicMembers = (academicMembers as any[]).filter((m) => m.active !== false);
+const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
+const governedBy = activeSteeringMembers.map((m) => m.companyName).join(", ");
+
+// Stories with stats for the impact section
+const stories = await getCollection("stories", (s) => !!s.data.stats?.length);
+
+// Leadership — configure names here, data pulled from team.json
+const leadershipConfig = [
+  { name: "Gadhu Sundaram", title: "Chairperson" },
+  { name: "Jonathan Turnbull", title: "Vice-Chairperson" },
+  { name: "Asim Hussain", title: "Executive Director" },
+];
+
+const teamData = team as any[];
+const getLinkedin = (person: any) => person?.socialMedia?.find((s: any) => s.platform === "Linkedin")?.link;
+
+const leaders = leadershipConfig.map((cfg) => {
+  const person = teamData.find((t) => t.fullName === cfg.name);
+  return {
+    name: cfg.name,
+    title: cfg.title,
+    company: person?.company ?? "",
+    photo: person?.photo ?? null,
+    linkedin: getLinkedin(person),
+  };
+});
+
+// Timeline milestones
+const milestones = [
+  { date: "December 2025", event: "Ratification of the SCI for AI Specification", href: "/articles/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the" },
+  { date: "November 2025", event: "Ratification of the SOFT Framework", href: "/articles/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo" },
+  { date: "October 2025", event: "GSF joins UK Government Digital Sustainability Alliance", href: "/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli" },
+  { date: "September 2025", event: "GSF & W3C collaborate on web sustainability measurement", href: "/articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad" },
+  { date: "May 2025", event: "Ratification of the Policy Radar", href: "/articles/celebrating-the-ratification-of-the-policy-radar" },
+  { date: "March 2025", event: "GSF Meetup Network reaches 10,000 members", href: "/articles/gsf-meetup-network-reaches-10-000-members" },
+  { date: "January 2025", event: "Gadhu Sundaram elected as Chairperson", href: "/articles/new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson" },
+  { date: "January 2025", event: "Graduation of the Impact Framework", href: "https://if.greensoftware.foundation/" },
+  { date: "December 2024", event: "SSIA merged into the GSF", href: "/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat" },
+  { date: "September 2024", event: "Ratification of the Real Time Energy and Carbon Standard for Cloud Providers", href: "/articles/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput" },
+  { date: "August 2024", event: "Launched CXO Bytes podcast", href: "https://wiki.greensoftware.foundation/cxo-bytes-podcast" },
+  { date: "April 2024", event: "SCI became an ISO Standard (ISO 21031:2024)", href: "/articles/sci-specification-achieves-iso-standard-status" },
+  { date: "April 2024", event: "Graduation of the Carbon Aware SDK", href: "/articles/celebrating-the-graduation-of-the-carbon-aware-sdk" },
+  { date: "January 2024", event: "Launch of Impact Framework", href: "https://if.greensoftware.foundation/" },
+  { date: "November 2023", event: "Launched GSF Champions", href: "https://champions.greensoftware.foundation/" },
+  { date: "May 2023", event: "Published State of Green Software", href: "https://stateof.greensoftware.foundation/" },
+  { date: "November 2022", event: "Launched Patterns Catalogue", href: "https://patterns.greensoftware.foundation/" },
+  { date: "September 2022", event: "Launched Carbon Hack", href: "https://hack.greensoftware.foundation/" },
+  { date: "April 2022", event: "Launched Environment Variables podcast", href: "https://podcast.greensoftware.foundation" },
+  { date: "January 2022", event: "Launch of GSF Newsletter", href: "https://newsletter.greensoftware.foundation" },
+  { date: "October 2021", event: "Launch of Awesome Green Software", href: "https://github.com/Green-Software-Foundation/awesome-green-software" },
+  { date: "May 2021", event: "Launch of the Green Software Foundation", href: "https://www.linuxfoundation.org/press-release/the-linux-foundation-joins-accenture-github-microsoft-and-thoughtworks-to-launch-the-green-software-foundation-to-put-sustainability-at-the-core-of-software-engineering/" },
+];
+---
+
+<Layout>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Hero -->
+  <Hero
+    heading="Press &"
+    headingAccent="Media"
+    body="Essential information about the Green Software Foundation, recent media coverage, and resources for journalists."
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- About / Boilerplate -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-6">About the Green Software Foundation</h2>
+      <div class="prose prose-lg max-w-none text-primary-dark/80 space-y-4">
+        <p>
+          The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling, and best practices for building green software.
+        </p>
+        <p>
+          The Green Software Foundation <a href="https://www.linuxfoundation.org/press-release/the-linux-foundation-joins-accenture-github-microsoft-and-thoughtworks-to-launch-the-green-software-foundation-to-put-sustainability-at-the-core-of-software-engineering/" class="text-primary underline hover:text-primary-dark" target="_blank" rel="noopener">launched in May 2021</a> under the Linux Foundation, founded by <strong>Accenture, GitHub, Microsoft, and ThoughtWorks</strong>. Today, the Foundation has grown to <strong>{totalMembers} member organisations</strong> spanning a global workforce.
+        </p>
+        <p>
+          The Foundation is governed by <strong>{governedBy}</strong>.
+        </p>
+      </div>
+
+      <!-- Copy-paste boilerplate -->
+      <div class="mt-8 rounded-lg bg-accent-lightest-2 border border-border p-6">
+        <h3 class="text-sm font-bold text-primary-dark uppercase tracking-wider mb-3">Approved Boilerplate</h3>
+        <p class="text-sm text-primary-dark/80 leading-relaxed">
+          The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. The Green Software Foundation was born out of a mutual desire and need to collaborate across the software industry. Organisations with a shared commitment to sustainability and an interest in green software development principles are encouraged to join the Foundation to help grow the field of green software engineering, contribute to standards for the industry, and work together to reduce the carbon emissions of software. To learn more visit <a href="https://greensoftware.foundation/" class="text-primary underline">greensoftware.foundation</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact from Stories (dynamic) -->
+  <section class="bg-accent-lightest-2 py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Impact & <span class="text-primary">Member Stories</span></h2>
+      <p class="text-lg text-primary-dark/70 mb-12 max-w-3xl">
+        Our members are building green software at scale. Here are their stories and the impact they've achieved.
+      </p>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {stories.map((story) => (
+          <a href={`/stories/${story.id}/`} class="group block rounded-xl bg-white border border-border p-6 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-bold text-primary-dark group-hover:text-primary transition-colors mb-2">
+              {story.data.title}
+            </h3>
+            <p class="text-sm text-primary-dark/60 mb-4 line-clamp-3">{story.data.summary}</p>
+            {story.data.stats && story.data.stats.length > 0 && (
+              <div class="border-t border-border pt-4 mt-auto">
+                <div class="text-2xl font-extrabold text-primary">{story.data.stats[0].value}</div>
+                <div class="text-xs text-primary-dark/50 mt-1">{story.data.stats[0].label}</div>
+              </div>
+            )}
+            {story.data.orgs && story.data.orgs.length > 0 && (
+              <div class="flex flex-wrap gap-1 mt-4">
+                {story.data.orgs.slice(0, 4).map((org) => (
+                  <span class="text-xs text-primary-dark/40">{org.name}</span>
+                ))}
+                {story.data.orgs.length > 4 && (
+                  <span class="text-xs text-primary-dark/40">+{story.data.orgs.length - 4} more</span>
+                )}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Leadership</h2>
+      <p class="text-lg text-primary-dark/70 mb-10">
+        The Foundation is a consensus-driven organisation. Each member organisation has one vote regardless of size.
+      </p>
+      <div class="grid gap-8 sm:grid-cols-3">
+        {leaders.map((leader) => (
+          <div class="text-center">
+            {leader.photo ? (
+              <img
+                src={leader.photo}
+                alt={leader.name}
+                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+              />
+            ) : (
+              <div class="w-24 h-24 rounded-full mx-auto mb-4 bg-primary-lighter flex items-center justify-center">
+                <span class="text-2xl font-bold text-primary">{leader.name.split(" ").map((n) => n[0]).join("")}</span>
+              </div>
+            )}
+            <h3 class="font-bold text-primary-dark">{leader.name}</h3>
+            <p class="text-sm text-primary">{leader.title}</p>
+            <p class="text-sm text-primary-dark/60">{leader.company}</p>
+            {leader.linkedin && (
+              <a href={leader.linkedin} class="text-sm text-primary hover:underline mt-1 inline-block" target="_blank" rel="noopener">LinkedIn</a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Messages -->
+  <section class="bg-accent-lightest-2 py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-8">Key <span class="text-primary">Messages</span></h2>
+      <ul class="space-y-4">
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">Green Software should be understood, easy to apply, auditable, and prioritised.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">At the nexus of software and sustainability, how we measure software and build measuring software as a habit is the most important step to reduce the environmental impacts of software.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">Standards are important to establish norms, compare data and progress, and normalise the adoption of green software principles and patterns.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">Technology sustainability is a shared responsibility, and having the right set of tools is crucial for achieving industry-wide adoption of green software practices.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">Data transparency builds knowledge of software's environmental impact and strengthens our ability to make software more energy-efficient and climate-conscious.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-accent font-bold mt-0.5">-</span>
+          <span class="text-primary-dark/80">Building and measuring in the open source is what is necessary to achieve a future where software has zero harmful effects on the environment.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-10">GSF <span class="text-primary">Timeline</span></h2>
+      <div class="relative">
+        <div class="absolute left-4 top-0 bottom-0 w-px bg-primary-lighter"></div>
+        <div class="space-y-6">
+          {milestones.map((m) => (
+            <div class="relative pl-12">
+              <div class="absolute left-2.5 top-1.5 w-3 h-3 rounded-full bg-primary border-2 border-white"></div>
+              <div class="text-sm font-bold text-primary">{m.date}</div>
+              {m.href ? (
+                <a href={m.href} class="text-primary-dark/80 hover:text-primary underline decoration-primary-lighter hover:decoration-primary transition-colors" target={m.href.startsWith("http") ? "_blank" : undefined} rel={m.href.startsWith("http") ? "noopener" : undefined}>{m.event}</a>
+              ) : (
+                <div class="text-primary-dark/80">{m.event}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Coverage -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Media <span class="text-primary">Coverage</span></h2>
+      <p class="text-lg text-primary-dark/70 mb-10">
+        The Green Software Foundation in the news — {(pressMentions as any[]).length} mentions across major publications.
+      </p>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {(pressMentions as any[]).map((mention: any) => (
+          <a
+            href={mention.url}
+            target="_blank"
+            rel="noopener"
+            class="group block rounded-lg border border-border bg-accent-lightest-2 p-5 hover:shadow-lg hover:border-primary-lighter transition-all"
+          >
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="text-xs font-bold text-primary uppercase tracking-wider">{mention.source}</span>
+              {mention.date && (
+                <span class="text-xs text-primary-dark/40 whitespace-nowrap">
+                  {new Date(mention.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}
+                </span>
+              )}
+            </div>
+            <h3 class="text-sm font-bold text-primary-dark group-hover:text-primary transition-colors line-clamp-3">
+              {mention.title}
+            </h3>
+            <div class="mt-3 text-xs text-primary-dark/40 truncate">{new URL(mention.url).hostname}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Contact -->
+  <section class="bg-primary-darker py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Media Contact</h2>
+      <p class="text-lg text-white/70 mb-6">
+        For press enquiries, interviews, and media requests:
+      </p>
+      <a href="mailto:news@greensoftware.foundation" class="inline-block text-2xl font-bold text-accent hover:text-accent-light transition-colors">
+        news@greensoftware.foundation
+      </a>
+      <p class="text-sm text-white/50 mt-6 max-w-xl mx-auto">
+        The primary GSF spokespersons are the current GSF Chairperson, Vice-Chairperson, and Executive Director. All communication releases are ratified by the Steering Committee.
+      </p>
+    </div>
+  </section>
+
+  <!-- Design Resources -->
+  <section class="bg-accent-lightest-2 py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Design <span class="text-primary">Resources</span></h2>
+      <p class="text-lg text-primary-dark/70 mb-8">
+        For GSF logos, brand guidelines, and visual assets.
+      </p>
+      <a
+        href="/brand/"
+        class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-white font-bold hover:bg-primary-dark transition-colors"
+      >
+        View Brand & Assets
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Discuss your challenges with us"
+    ctaText="Request a discussion"
+    ctaHref="/membership/"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

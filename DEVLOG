@@ -1,5 +1,60 @@
 # Development Log — GSF Website
 
+## 2026-03-05 - Press Page, Nav Link Updates, and World Map
+
+**Objective**: Build a comprehensive Press & Media page pulling dynamic data from multiple sources, update navigation links across the site, and replace the homepage world map placeholder with the final SVG from the designer.
+
+### What We Built
+
+- **Press & Media page** (`/press/`) — a 362-line page pulling data dynamically from JSON files, content collections, and Notion. Sections: hero, about/boilerplate, impact stories, leadership, key messages, 22-item timeline, media coverage (54 press mentions), media contact, design resources, and CTA
+- **Nav link updates** — corrected URLs for CXO Bytes podcast (→ wiki), Movement Platform (renamed from Community Platform), Carbon Hack (→ hack.greensoftware.foundation), Member Stories (renamed from Success Stories), Press & Media (→ /press/), State of Green Software (→ stateof.greensoftware.foundation)
+- **Nav dropdown footer labels** — renamed to "About our standards process →", "About our policy & research programme →", "About our community programme →"
+- **Homepage world map** — replaced placeholder SVG with final design from Genya (two-colour SVG: #adcb53 green dots, #00544f teal continents, transparent background)
+- **Press mentions Notion integration** — added `fetchPressMentions()` to the Notion fetch script, pulling 54 entries from the "GSF Mentions in the News" database into `press-mentions.json`
+
+### The Journey
+
+The session covered three distinct workstreams. Navigation link updates came first — straightforward URL corrections and label renames. One misstep: initially changed top-level nav labels (Standards → "Our Standards") when the user actually wanted the footer link *buttons inside the dropdowns* changed. Quickly reverted.
+
+The world map swap was simple — the designer's SVG uses transparent background so the section's dark teal shows through naturally.
+
+The press page was the main piece. Started by reading the GSF Media Kit from Notion to understand what content was available. Key design decisions:
+- **Pull data dynamically** to avoid staleness — member counts computed from JSON files, governed-by list from active steering members, stories from content collection
+- **Leadership** — initially pulled from team.json by role, but discovered the data was out of date (had Chris Lloyd-Jones as Vice-Chair when it's actually Jonathan Turnbull from Google). Switched to a hardcoded `leadershipConfig` array at the top of the file for easy updating
+- **Timeline** — 22 milestone entries from GSF founding (May 2021) through SCI for AI ratification (Dec 2025), with links to articles and external sites
+- **Media coverage** — tried `@astro-community/astro-embed-link-preview` for OG unfurling but many sites (Forbes, SDxCentral, etc.) returned 403 Forbidden at build time. Reverted to simple card layout with source name, date, title, and domain
+
+### Technical Achievements
+
+- Press page pulls from 5 data sources: 3 member JSONs, team.json, press-mentions.json, stories content collection
+- Active member filtering (72 active across 3 tiers: 6 steering, 47 general, 19 academic/government)
+- Notion fetch script now exports press mentions alongside members, team, and projects
+
+### Key Learnings
+
+- **OG unfurling at build time is unreliable** — many news sites block server-side requests with 403s. Simple card layouts with structured data are more robust
+- **Leadership data goes stale** — hardcoded config with names/titles at the top of the file is better than relying on role fields in team.json that may not be updated
+- **Active vs inactive members** — the `active` boolean in member JSONs is essential for accurate counts; BCG, Avanade, and Intel are inactive steering members
+
+### Statistics
+
+- 1 new page (press/index.astro — 362 lines)
+- 1 new data file (press-mentions.json — 54 entries)
+- 1 new asset (world-map.svg)
+- ~8 files modified for nav link updates
+- CLAUDE.md updated with press page documentation
+
+### Next Steps
+
+- Google Analytics integration
+- Brand & Assets page (linked from press page design resources)
+- Newsletter page/form
+- New content pages: Standards, Policy, Research, About, Education, Community
+
+### Reflections
+
+The press page highlighted the tension between dynamic data (stays fresh) and hardcoded content (stays correct). Member counts and press mentions update automatically via the Notion fetch script, but leadership names and timeline milestones are necessarily manual. The right approach is to make the manual parts easy to find and edit — hence the `leadershipConfig` array at the top of the file rather than buried in JSX.
+
 ## 2026-03-05 - Nav Mega Menu: Project Icons, Dropdown Fix, and Footer Attribution
 
 **Objective**: Wire Notion PWCI project icons into the navigation mega menu, fix dropdown overflow on narrow screens, and add Linux Foundation attribution to the footer.

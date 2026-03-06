@@ -143,13 +143,23 @@ The homepage (`homepage.astro`) composes ~260 lines of component composition (no
 
 ### Data Fetching
 
-All site data (members, logos, team, stats) is fetched from Notion via `scripts/fetch-notion-data.cjs`. Requires `NOTION_API_KEY` env var (in `.env` locally, configured in Netlify dashboard for deploys).
+All site data (members, logos, team, stats, press mentions) is fetched from Notion via `scripts/fetch-notion-data.cjs`. Requires `NOTION_API_KEY` env var (in `.env` locally, configured in Netlify dashboard for deploys).
 
 - `npm run fetch-notion` — fetch fresh data from Notion into `src/data/` and `public/assets/`
 - `npm run build` — build with cached data (no Notion fetch)
 - `npm run build:full` — fetch Notion data then build (used by Netlify)
 
 The fetch script exits gracefully if `NOTION_API_KEY` is missing, creating empty fallback JSON files so the build still succeeds.
+
+### Press Page (`/press/`)
+
+The press page at `src/pages/press/index.astro` pulls data dynamically from multiple sources:
+- **Member counts** — computed from `steering-members.json`, `general-members.json`, `academic-government-members.json` (filtered by `active: true`)
+- **Governed-by list** — active steering member company names
+- **Leadership** — hardcoded config at top of file (chair, vice-chair, executive director names) matched against `team.json` for photos
+- **Stories** — from the stories content collection
+- **Press mentions** — from `src/data/press-mentions.json` (fetched from Notion "GSF Mentions in the News" database)
+- **Timeline** — hardcoded 22-item timeline with links to articles and external sites
 
 ### Dev Server
 
