@@ -34,7 +34,7 @@
 - [x] **Member stories as content collection** — stories wired as Astro content collection with dynamic `[slug].astro` template
 - [ ] **Manifesto page** — migrate existing content from legacy site into a new Astro page
 - [ ] **Newsletter page** — simple "join our newsletter" page with signup form (once Notion form URL is found)
-- [x] **Search page** — integrate PageFind for static site search
+- [x] **Search (PageFind)** — integrated PageFind for static site search with custom React dialog, phrase search, English-only indexing, keyboard shortcut (Cmd+K)
 - [x] **Governance & Leadership team fix** — fixed Person/Role property type swap (title vs rich_text) and added direct photo download from GSF Team DB
 - [x] **Footer update** — updated homepage and membership footers with real URLs
 - [ ] **Roll out to greensoftware.org** — DNS + Netlify config for production domain

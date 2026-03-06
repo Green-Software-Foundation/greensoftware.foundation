@@ -161,6 +161,30 @@ The press page at `src/pages/press/index.astro` pulls data dynamically from mult
 - **Press mentions** — from `src/data/press-mentions.json` (fetched from Notion "GSF Mentions in the News" database)
 - **Timeline** — hardcoded 22-item timeline with links to articles and external sites
 
+### Site Search (PageFind)
+
+The site uses [PageFind](https://pagefind.app/) for static site search. PageFind indexes the built HTML at build time and serves a chunked index client-side.
+
+- **Build integration:** `pagefind --site dist` runs automatically after `astro build` (configured in `package.json` build scripts)
+- **Search UI:** Custom React component at `src/components/react/search-dialog.tsx` — uses PageFind's JS API (not its default UI) for full styling control
+- **Trigger:** Click the search icon in the navbar, or press `Cmd+K` / `Ctrl+K`
+- **Lazy-loaded:** The search dialog is imported via `React.lazy()` in `navbar.tsx` so PageFind JS is only loaded when search is opened
+
+**Indexing rules (opt-in model):**
+- Pages with `data-pagefind-body` are indexed; all others are excluded
+- Currently indexed: individual article pages (English only), individual story pages
+- Chrome elements (navbar, footer, CTA banner, newsletter signup) have `data-pagefind-ignore`
+- Listing/index pages are deliberately excluded (no `data-pagefind-body`)
+
+**Search behaviour:**
+- Multi-word queries default to phrase search (wrapped in quotes); falls back to OR if no phrase results
+- Single-word queries use standard search
+- Results show title, content type badge, and highlighted excerpt
+
+**Dev workflow:** PageFind needs a built index to work. Run `npm run build` once, then copy `dist/pagefind/` to `public/pagefind/` for dev testing. The `public/pagefind/` directory is gitignored.
+
+**Vite compatibility:** The PageFind import uses `new Function("return import('/pagefind/pagefind.js')")` to bypass Vite's import analysis, which would otherwise try to bundle it at build time.
+
 ### Dev Server
 
 ```bash

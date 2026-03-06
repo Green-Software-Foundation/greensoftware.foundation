@@ -27,6 +27,7 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
 
 const seoDescription = article.data.description || article.data.summary || article.data.teaserText || "";
 const authorNames = article.data.authors?.map((a) => a.fullName) || [];
+const isEnglish = article.id.startsWith("en/");
 ---
 
 <Layout
@@ -63,7 +64,7 @@ const authorNames = article.data.authors?.map((a) => a.fullName) || [];
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
-  <article class="bg-accent-lightest-2">
+  <article class="bg-accent-lightest-2" {...isEnglish && { "data-pagefind-body": "" }}>
     <!-- Wide header section -->
     <div class="container pt-10 pb-12 md:pt-14 md:pb-16">
       <div class="max-w-4xl mx-auto">

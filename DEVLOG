@@ -1,5 +1,68 @@
 # Development Log — GSF Website
 
+## 2026-03-05/06 - PageFind Search Integration & Notion Team Fix
+
+**Objective**: Fix the broken governance team data in the Notion fetch script, then implement site-wide search using PageFind so the existing navbar search button actually works.
+
+### What We Built
+
+- **Notion fetch fix** — fixed two bugs causing 0 team members: `Person` field is `title` type (not `rich_text`) and `Role` is `rich_text` (not `title`); added direct photo download from GSF Team DB before falling back to volunteer lookup
+- **PageFind search** — full static site search with a custom React search dialog:
+  - Custom `search-dialog.tsx` using Radix Dialog + PageFind JS API
+  - Lazy-loaded via `React.lazy()` so PageFind JS only loads when search opens
+  - Keyboard shortcut: `Cmd+K` / `Ctrl+K` to open, `Esc` to close
+  - Phrase search by default for multi-word queries (falls back to OR if no results)
+  - Content type badges (article/story) on each result
+  - Highlighted excerpts showing matched terms in context
+- **Opt-in indexing model** — only pages with `data-pagefind-body` are indexed:
+  - Individual English article pages
+  - Individual story pages
+  - Listing pages, homepage, non-English articles all excluded
+- **Chrome exclusion** — `data-pagefind-ignore` on navbar, footer, CTA banner, newsletter signup
+
+### The Journey
+
+The session started with a quick Notion fix. The governance page was showing 0 team members because the fetch script had swapped the Notion property types — `Person` is actually a `title` field and `Role` is `rich_text`, opposite of what the code assumed. A quick API inspection confirmed the types, and the fix was straightforward. Also added direct photo extraction from the GSF Team DB's own Photo property, since the previous code only looked up photos via the Volunteers DB.
+
+The main work was PageFind integration. The navbar already had a search icon button as a placeholder — the task was to make it functional. Rather than using PageFind's default UI (which isn't customisable enough for the site's brand), we built a custom React dialog using PageFind's JS API.
+
+The trickiest part was **Vite compatibility**. PageFind generates its index at build time in `dist/pagefind/`, and the JS needs to be loaded at runtime from `/pagefind/pagefind.js`. But Vite's import analysis tries to bundle this at build time, causing Rollup errors. Three approaches were tried:
+1. `/* @vite-ignore */` comment — didn't work
+2. `rollupOptions.external` — fixed build but broke dev server
+3. `new Function("return import('/pagefind/pagefind.js')")` — works perfectly in both dev and build by completely bypassing Vite's static analysis
+
+The user then requested three refinements:
+- **Phrase search**: multi-word queries now wrap in quotes for exact phrase matching, with automatic fallback to OR if the phrase returns no results
+- **No listing pages**: switched from default "index everything" to opt-in `data-pagefind-body`, naturally excluding listing pages, homepage, and navigation
+- **English only**: non-English articles excluded by checking `article.id.startsWith("en/")` rather than the `lang` field (which defaults to "en" for all articles)
+
+### Technical Achievements
+
+- PageFind indexes 198 pages (down from 234 after filtering)
+- Zero-JS search button until clicked (lazy loading)
+- Vite-compatible PageFind loading pattern that works in both dev and production
+- Phrase search with graceful degradation to OR matching
+
+### Key Learnings
+
+- **Vite import analysis is aggressive** — even dynamic `import()` with `/* @vite-ignore */` can be caught. The `new Function()` wrapper is the reliable escape hatch
+- **PageFind's opt-in model is cleaner** — adding `data-pagefind-body` to any page switches PageFind to opt-in mode globally, which naturally excludes listing pages, the homepage, and other non-content pages
+- **Notion property types matter** — `title` and `rich_text` are different field types with different extraction methods. Always inspect the actual API response when debugging data issues
+- **Content collection `lang` field pitfalls** — the schema defaults `lang` to `"en"`, so non-English articles also report `lang === "en"`. Checking the file path (`article.id.startsWith("en/")`) is more reliable
+
+### Statistics
+
+- 2 bugs fixed in Notion fetch script
+- 1 new React component (search-dialog.tsx, ~180 lines)
+- 8 existing files modified for PageFind integration
+- 198 pages indexed by PageFind
+
+### Next Steps
+
+- Consider adding `data-pagefind-body` to static pages as they're built
+- Mobile search in the hamburger menu
+- Research pages indexing once that collection exists
+
 ## 2026-03-05 - Press Page, Nav Link Updates, and World Map
 
 **Objective**: Build a comprehensive Press & Media page pulling dynamic data from multiple sources, update navigation links across the site, and replace the homepage world map placeholder with the final SVG from the designer.
