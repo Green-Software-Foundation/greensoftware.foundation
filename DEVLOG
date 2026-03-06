@@ -1,5 +1,44 @@
 # Development Log — GSF Website
 
+## 2026-03-05 - Nav Mega Menu: Project Icons, Dropdown Fix, and Footer Attribution
+
+**Objective**: Wire Notion PWCI project icons into the navigation mega menu, fix dropdown overflow on narrow screens, and add Linux Foundation attribution to the footer.
+
+### What We Built
+
+- **PWCI project data export** — new `fetchProjects()` function in the Notion fetch script that extracts all projects, working groups, committees, and initiatives from the PWCI table, including page-level icons (both `file` and `custom_emoji` types)
+- **Dynamic nav icon resolution** — rewrote `nav-items.ts` to import `projects.json` and build a slug-to-icon lookup map, so nav menu icons auto-update when Notion data changes
+- **39 project icons downloaded** to `public/assets/project-icons/` (SVG and PNG mix)
+- **Nav dropdown overflow fix** — added `static` positioning to `NavigationMenuItem` so dropdowns position relative to the NavigationMenu root, preventing off-screen overflow on narrow desktop viewports
+- **Icon sizing system** — project icons render in 32×32 containers, Lucide fallback icons in 32×16 containers, keeping text alignment consistent across both types
+- **Linux Foundation footer attribution** — added "The Joint Development Foundation Projects, LLC is an affiliate of the Linux Foundation." at the bottom of the footer
+
+### The Journey
+
+The session started with a nav dropdown overflow bug — on narrower desktop screens, the mega menu panels were going off-screen to the right. The fix was elegant: adding `className="static"` to the dropdown `NavigationMenuItem` changes the positioning context so dropdowns align relative to the `NavigationMenu` root rather than the individual trigger, plus `max-w-[calc(100vw-2rem)]` as a safety net.
+
+Next came the PWCI icon export. The Notion PWCI table stores page-level icons in two formats: standard `file` uploads and `custom_emoji` (custom uploaded SVGs). The initial fetch only handled `file` types, yielding 28 icons. After the user noticed several projects (WDPC, SWE, SEE, Policy Radar) were missing, we discovered the `custom_emoji` type and added support, bringing the total to 39 icons.
+
+The icon sizing went through several iterations based on user feedback — from size-4 ("too small") to size-8 ("absolutely awful") to the final solution: fixed-width containers (w-8) for both icon types, with Lucide icons at size-4 inside a 32×16 container and project icons in a 32×32 container.
+
+### Key Learnings
+
+- **Notion page icons have three types**: `file`, `custom_emoji`, and `emoji` — must handle all three for complete coverage
+- **CSS `static` positioning on NavigationMenuItem** is the clean fix for Radix NavigationMenu dropdown overflow — it changes the positioning context without breaking the menu behaviour
+- **Fixed-width icon containers** solve alignment issues better than trying to make different icon types the same size
+
+### Statistics
+
+- 39 project icons downloaded from Notion
+- 47 projects exported to projects.json
+- 6 files modified, 1 new directory added
+
+### Next Steps
+
+- Press & Media content page
+- Brand & Assets URL fix
+- Newsletter page/form
+
 ## 2026-03-04 - Sveltia CMS: Co-located Images, i18n, and Editorial Workflow
 
 **Objective**: Get Sveltia CMS fully working for content editors — image previews, article management, translations, and a clear publishing workflow.

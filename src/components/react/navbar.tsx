@@ -44,7 +44,9 @@ import {
   MessagesSquare,
   type LucideIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
+
+const SearchDialog = lazy(() => import("./search-dialog"));
 
 // --- Icon registry ---
 
@@ -126,11 +128,19 @@ function isDropdown(item: NavItem): item is NavItemDropdown {
 
 function NavIcon({ link }: { link: NavLink }) {
   if (link.iconSrc) {
-    return <img src={link.iconSrc} alt="" className="mt-0.5 size-4 shrink-0" />;
+    return (
+      <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center">
+        <img src={link.iconSrc} alt="" className="max-h-8 max-w-8 object-contain" />
+      </span>
+    );
   }
   const Icon = link.icon ? iconMap[link.icon] : null;
   if (Icon) {
-    return <Icon className="mt-0.5 size-4 shrink-0 text-primary" />;
+    return (
+      <span className="mt-0.5 flex h-4 w-8 shrink-0 items-center justify-center">
+        <Icon className="size-4 text-primary" />
+      </span>
+    );
   }
   return null;
 }
@@ -347,9 +357,9 @@ const NavigationComponent = ({
               }
 
               return (
-                <NavigationMenuItem key={item.label}>
+                <NavigationMenuItem key={item.label} className="static">
                   <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
-                  <NavigationMenuContent className="right-0 left-auto min-w-[700px] bg-white">
+                  <NavigationMenuContent className="right-0 left-auto min-w-[700px] max-w-[calc(100vw-2rem)] bg-white">
                     <MegaMenuPanel item={item} />
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -359,15 +369,15 @@ const NavigationComponent = ({
         </NavigationMenu>
       </div>
 
-      {/* Search placeholder */}
+      {/* Search */}
       {showSearch && (
-        <button
-          type="button"
-          className="hidden rounded-md p-2 text-gray-darker transition-colors hover:bg-accent-lightest-2 hover:text-primary lg:block"
-          aria-label="Search"
-        >
-          <Search className="size-5" />
-        </button>
+        <Suspense fallback={
+          <button type="button" className="hidden rounded-md p-2 text-gray-darker lg:block" aria-label="Search">
+            <Search className="size-5" />
+          </button>
+        }>
+          <SearchDialog />
+        </Suspense>
       )}
 
       {/* Mobile hamburger menu */}

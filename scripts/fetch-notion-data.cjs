@@ -34,6 +34,8 @@ if (!NOTION_API_KEY) {
     "academic-government-members.json": [],
     "team.json": [],
     "stats.json": {},
+    "projects.json": [],
+    "press-mentions.json": [],
   };
   for (const [file, data] of Object.entries(fallbacks)) {
     const filePath = path.join(fallbackDir, file);
@@ -71,6 +73,7 @@ const ROOT_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT_DIR, "src", "data");
 const LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos");
 const PHOTOS_DIR = path.join(ROOT_DIR, "public", "assets", "team");
+const PROJECT_ICONS_DIR = path.join(ROOT_DIR, "public", "assets", "project-icons");
 
 // Pass --force to re-download all images even if they already exist on disk
 const FORCE_DOWNLOAD = process.argv.includes("--force");
@@ -634,6 +637,116 @@ async function extractPerson(vol, role) {
 }
 
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Query 6: Press Mentions (from "GSF Mentions in the News" database)
+// ---------------------------------------------------------------------------
+
+const PRESS_MENTIONS_DS = "e9e7a23c-9c9e-4811-8eae-e473fbeaa0e5";
+
+async function fetchPressMentions() {
+  const allPages = [];
+  let cursor;
+  do {
+    const resp = await notion.databases.query({
+      database_id: PRESS_MENTIONS_DS,
+      sorts: [{ property: "Date", direction: "descending" }],
+      page_size: 100,
+      ...(cursor ? { start_cursor: cursor } : {}),
+    });
+    allPages.push(...resp.results);
+    cursor = resp.has_more ? resp.next_cursor : undefined;
+  } while (cursor);
+
+  return allPages
+    .map((page) => {
+      const props = page.properties;
+      const title = props.Title?.title?.[0]?.plain_text?.trim() || "";
+      const url = props["Source URL"]?.url?.trim() || "";
+      const source = props["Source Name"]?.rich_text?.[0]?.plain_text?.trim() || "";
+      const date = props.Date?.date?.start || "";
+      if (!title || !url) return null;
+      return { title, url, source, date };
+    })
+    .filter(Boolean);
+}
+
+// ---------------------------------------------------------------------------
+// Query 7: Projects, Working Groups, Committees & Initiatives (from PWCI table)
+// ---------------------------------------------------------------------------
+
+async function fetchProjects() {
+  console.log("\nFetching projects from PWCI table...");
+  const pages = await queryAll(DS.PWCIS);
+  console.log(`  Found ${pages.length} PWCI records`);
+
+  const wantedTypes = [
+    "Working Group",
+    "Committee",
+    "WG Project",
+    "Committee Project",
+    "Executive Initiative",
+  ];
+
+  const projects = [];
+  for (const page of pages) {
+    const p = page.properties;
+    const name = titleText(p["Name"]);
+    const type = selectName(p["Type"]);
+    const status = selectName(p["Internal Status"]);
+    const lifecycle = selectName(p["Lifecycle Stage"]);
+    const area = selectName(p["Area"]);
+    const parent = selectName(p["Parent"]);
+    const website = urlValue(p["Website URL"]);
+    const description = richText(p["Description"]?.rich_text);
+    const slug = richText(p["slug"]?.rich_text) || slugify(name);
+
+    if (!wantedTypes.includes(type)) continue;
+
+    // Download page icon (file or custom_emoji — skip plain emoji)
+    let iconPath = null;
+    let iconUrl = null;
+    if (page.icon) {
+      if (page.icon.type === "file" && page.icon.file) {
+        iconUrl = page.icon.file.url;
+      } else if (page.icon.type === "custom_emoji" && page.icon.custom_emoji) {
+        iconUrl = page.icon.custom_emoji.url;
+      }
+    }
+    if (iconUrl) {
+      const filename = slug;
+      const savedName = await downloadFile(iconUrl, PROJECT_ICONS_DIR, filename);
+      if (savedName) {
+        iconPath = `/assets/project-icons/${savedName}`;
+      }
+    }
+
+    projects.push({
+      name,
+      slug,
+      type,
+      status,
+      lifecycle: lifecycle || null,
+      area: area || null,
+      parent: parent || null,
+      website: website || null,
+      description: description || null,
+      icon: iconPath,
+    });
+  }
+
+  // Sort: active first, then by type, then by name
+  projects.sort((a, b) => {
+    if (a.status === "Active" && b.status !== "Active") return -1;
+    if (a.status !== "Active" && b.status === "Active") return 1;
+    if (a.type !== b.type) return a.type.localeCompare(b.type);
+    return a.name.localeCompare(b.name);
+  });
+
+  console.log(`  Exported ${projects.length} projects (${projects.filter(p => p.icon).length} with icons)`);
+  return projects;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -645,6 +758,7 @@ async function main() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.mkdirSync(LOGOS_DIR, { recursive: true });
   fs.mkdirSync(PHOTOS_DIR, { recursive: true });
+  fs.mkdirSync(PROJECT_ICONS_DIR, { recursive: true });
 
   // --- Members ---
   // Fetch all members regardless of status — active flag set per record
@@ -785,6 +899,22 @@ async function main() {
     JSON.stringify(teamJson, null, 2)
   );
 
+  // --- Press Mentions ---
+  console.log("\nFetching press mentions...");
+  const pressMentions = await fetchPressMentions();
+  fs.writeFileSync(
+    path.join(DATA_DIR, "press-mentions.json"),
+    JSON.stringify(pressMentions, null, 2)
+  );
+  console.log(`Press mentions: ${pressMentions.length}`);
+
+  // --- Projects (PWCI) ---
+  const projects = await fetchProjects();
+  fs.writeFileSync(
+    path.join(DATA_DIR, "projects.json"),
+    JSON.stringify(projects, null, 2)
+  );
+
   // --- Summary ---
   console.log("\n=== Summary ===");
   console.log(`Steering members: ${activeSteeringCount} active, ${allSteering.length - activeSteeringCount} historical`);
@@ -794,6 +924,7 @@ async function main() {
   console.log(`Organisation Leads: ${orgLeads.length}`);
   console.log(`Admin Team: ${adminTeam.length}`);
   console.log(`Total team.json entries: ${teamJson.length}`);
+  console.log(`Projects: ${projects.length} (${projects.filter(p => p.icon).length} with icons)`);
   console.log(`\nFinished at ${new Date().toISOString()}`);
 }
 
