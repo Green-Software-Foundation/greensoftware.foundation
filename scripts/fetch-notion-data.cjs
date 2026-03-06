@@ -58,6 +58,7 @@ const DS = {
   PWCIS: "68118401-8eba-471d-bfec-fc09b5f99257",
   VOLUNTEERS: "5274eabc-3b79-4eef-a254-4ed92879d86d",
   GSF_TEAM: "123456c0-7cab-806c-86a0-000b10bfc753",
+  PRESS_MENTIONS: "e9e7a23c-9c9e-4811-8eae-e473fbeaa0e5",
 };
 
 // Database IDs (the actual Notion database UUIDs for the SDK)
@@ -641,33 +642,21 @@ async function extractPerson(vol, role) {
 // Query 6: Press Mentions (from "GSF Mentions in the News" database)
 // ---------------------------------------------------------------------------
 
-const PRESS_MENTIONS_DS = "e9e7a23c-9c9e-4811-8eae-e473fbeaa0e5";
-
 async function fetchPressMentions() {
-  const allPages = [];
-  let cursor;
-  do {
-    const resp = await notion.databases.query({
-      database_id: PRESS_MENTIONS_DS,
-      sorts: [{ property: "Date", direction: "descending" }],
-      page_size: 100,
-      ...(cursor ? { start_cursor: cursor } : {}),
-    });
-    allPages.push(...resp.results);
-    cursor = resp.has_more ? resp.next_cursor : undefined;
-  } while (cursor);
+  const allPages = await queryAll(DS.PRESS_MENTIONS);
 
   return allPages
     .map((page) => {
       const props = page.properties;
-      const title = props.Title?.title?.[0]?.plain_text?.trim() || "";
-      const url = props["Source URL"]?.url?.trim() || "";
-      const source = props["Source Name"]?.rich_text?.[0]?.plain_text?.trim() || "";
+      const title = titleText(props["Title"]) || richText(props["Title"]?.rich_text);
+      const url = urlValue(props["Source URL"]);
+      const source = richText(props["Source Name"]?.rich_text);
       const date = props.Date?.date?.start || "";
       if (!title || !url) return null;
       return { title, url, source, date };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 }
 
 // ---------------------------------------------------------------------------
