@@ -29,7 +29,7 @@ export const Default = {
         title: "Join",
         links: [
           { href: "/membership/", text: "Become a Member" },
-          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "/newsletter/", text: "Newsletter" },
           { href: "https://summit.greensoftware.foundation", text: "Events" },
         ],
       },

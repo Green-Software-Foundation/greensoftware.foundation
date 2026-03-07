@@ -26,20 +26,21 @@
 - [x] **Members Playbook** → `wiki.greensoftware.foundation/getting-started` (labelled "Getting Started")
 - [x] **Members Onboarding** → `wiki.greensoftware.foundation/orientation`
 - [x] **Employee Registration** → `wiki.greensoftware.foundation/register`
-- [ ] **Contact form** — find the existing form (there should be one already)
+- [x] **Contact form** — find the existing form (there should be one already)
 - [x] **Press & Media content** — find in Notion, will need importing
 - [x] **Brand & Assets** — built `/brand/` page with colour palette, logos, asset downloads, Canva templates, official description
-- [ ] **Newsletter page/form** — verify if a signup page exists, or find the form URL to create one
+- [x] **Newsletter page/form** — verify if a signup page exists, or find the form URL to create one
 
 ## Medium Effort (a few hours each)
 
 - [x] **Member stories as content collection** — stories wired as Astro content collection with dynamic `[slug].astro` template
-- [/] **Manifesto page** — migrate existing content from legacy site into a new Astro page
-- [ ] **Newsletter page** — simple "join our newsletter" page with signup form (once Notion form URL is found)
+- [x] **Manifesto page** — migrate existing content from legacy site into a new Astro page
+- [x] **Newsletter page** — simple "join our newsletter" page with signup form (once Notion form URL is found)
 - [x] **Search (PageFind)** — integrated PageFind for static site search with custom React dialog, phrase search, English-only indexing, keyboard shortcut (Cmd+K)
 - [x] **Governance & Leadership team fix** — fixed Person/Role property type swap (title vs rich_text) and added direct photo download from GSF Team DB
 - [x] **Footer update** — updated homepage and membership footers with real URLs
 - [ ] **Roll out to greensoftware.org** — DNS + Netlify config for production domain
+- [ ] [Centralised data layer](docs/features/data-layer.md) — Notion UUIDs in all exported JSON, typed query functions in `src/lib/data.ts`, ID-based lookups replacing name-based references, build-time warnings for unresolved IDs, static `/api/` endpoints for cross-microsite consumption
 
 ## Bigger Pieces (new pages, need content decisions + creative session)
 
@@ -49,9 +50,9 @@
 - [x] **Education page** — built `/education/` landing page
 - [x] **Community landing page** — built `/community/` with podcasts, meetups, events, Champions, Movement Platform
 - [-] **History page** — GSF timeline/history (needs figuring out and building)
-- [/] **Assemblies page** — own page eventually; link out to existing assemblies page for now
+- [ ] **Assemblies page** — own page eventually; link out to existing assemblies page for now
 - [x] **Press & Media section** — import content from Notion sources into a new page/section
-- [/] **Certification page** — potentially needed under Standards, TBD
+- [x] **Certification page** — potentially needed under Standards, TBD
 
 ## Done
 
