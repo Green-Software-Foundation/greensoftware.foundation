@@ -58,7 +58,7 @@
 - [ ] **Carbon Aware SDK site** — create a dedicated project page (or microsite) for the Carbon Aware SDK
 - [ ] **Impact Framework site** — create a dedicated project page (or microsite) for the Impact Framework
 - [ ] **Claude Desktop content updates** — implement workflow so content can be updated directly from Claude Desktop (MCP / structured content editing)
-- [ ] **Roll out to greensoftware.org** — already in Medium Effort; ensure DNS + Netlify config covers greensoftware.org in addition to greensoftware.foundation
+- [~] **Roll out to greensoftware.org** — code pushed to `Green-Software-Foundation/greensoftware.org` repo; Netlify site `greensoftware-org` created, env vars set, live at `greensoftware-org.netlify.app`. Remaining: (1) connect GitHub App in Netlify UI for auto-deploy on push, (2) add custom domain once DNS is ready, (3) add foundation → org redirect rule to existing `netlify.toml`
 
 ## Done
 
