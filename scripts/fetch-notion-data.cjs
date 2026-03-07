@@ -244,6 +244,7 @@ async function fetchMembers(level) {
     const organisationType = selectName(p["Organisation Type"]);
     const status = selectName(p["Status"]);
     const active = status === "Active";
+    const hideLogo = p["Hide Logo"]?.checkbox === true;
     const slug = slugify(name);
 
     let logoPath = null;
@@ -281,6 +282,7 @@ async function fetchMembers(level) {
       companyWebsite: website,
       membershipLevel: level,
       active,
+      hideLogo,
       logo: logoPath,
       logoWidth,
       logoHeight,

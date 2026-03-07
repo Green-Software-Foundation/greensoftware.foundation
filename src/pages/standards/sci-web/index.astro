@@ -1,0 +1,440 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import CardGrid from "@/components/card-grid.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const sciWebProject = projects.find(p => p.slug === "sci-web");
+const parentWg = projects.find(p => p.name === sciWebProject?.parent);
+
+// Pull SCI for Web tagged articles for the carousel
+import { getCollection } from "astro:content";
+const allArticles = await getCollection("articles");
+const sciWebArticles = allArticles
+  .filter(a => {
+    const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
+    return tags.includes("sci-web") || tags.includes("sci for web");
+  })
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout
+  title="SCI for Web — Software Carbon Intensity for the Web | Green Software Foundation"
+  description="A standardised methodology for measuring the carbon intensity of web applications, covering servers, networks, third-party services, and end-user devices."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SCI for Web" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(sciWebProject?.lifecycle ? [{ text: sciWebProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Measure the Carbon Impact of"
+    headingAccent="the Web"
+    body="Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. SCI for Web extends the ISO-accredited Software Carbon Intensity standard to web applications — covering servers, networks, third-party services, and end-user devices."
+    ctas={[
+      { text: "Read the Design Document", variant: "primary", href: "https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing" },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/sci-web/hero-illustration.svg"
+    imageAlt="SCI for Web illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with expertise from leading technology organisations"
+  />
+
+  <!-- What is SCI for Web? -->
+  <CTACard
+    heading="What is SCI for Web?"
+    body="SCI for Web is a domain-specific extension of the SCI specification (ISO/IEC 21031:2024) that provides a standardised methodology for measuring the carbon intensity of web applications. It covers the full delivery chain — servers, networks, third-party services, and end-user devices — giving teams a comprehensive, comparable, and actionable way to measure and reduce web emissions."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="What is SCI for Web illustration"
+  />
+
+  <!-- Why the Web Needs This -->
+  <TextBlock
+    heading="Why the Web Needs *SCI for Web*"
+    body="Web sustainability measurement has evolved rapidly with tools like CO2.js and the W3C Web Sustainability Guidelines. But as organisations move from awareness to accountability, the industry needs a standardised approach that supports optimisation decisions across the full delivery chain."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- The Problem -->
+  <FeatureGrid
+    heading="The *Measurement Gap*"
+    body="Existing tools have made web emissions visible, but critical gaps remain."
+    columns={4}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "No Standard Boundaries",
+        description: "Different tools measure different things, making results incomparable across organisations.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Third Parties Are Invisible",
+        description: "Analytics, advertising, CDNs, and authentication consume energy on both servers and client devices but are excluded from most measurements.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Totals, Not Rates",
+        description: "Existing approaches measure total emissions rather than carbon per functional unit, making it impossible to reward efficiency.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-4.svg",
+        title: "No Validation",
+        description: "Without mandatory disclosure of boundaries, assumptions, and methods, reduction claims cannot be verified or compared.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- How SCI for Web Solves This -->
+  <TextBlock
+    heading="How *SCI for Web* Solves This"
+    body="SCI for Web builds on the proven SCI formula — extending it with web-specific boundaries, functional units, and disclosure requirements."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- The SCI Equation Applied to Web -->
+  <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
+          The SCI Formula, Applied to the Web
+        </h2>
+        <p class="text-lg md:text-xl">
+          SCI for Web uses the same core formula as the parent SCI standard, but defines web-appropriate boundaries across servers, networks, third parties, and end-user devices — with functional units that reflect delivered web functionality.
+        </p>
+
+        <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
+          <p class="text-3xl font-bold text-primary md:text-4xl lg:text-5xl font-mono">
+            SCI = (E &times; I + M) per R
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">E — Energy</h3>
+            <p class="mt-2 text-sm text-gray-darker">Energy consumed across the full delivery chain: servers, CDNs, networks, and end-user devices including browsers.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">I — Carbon Intensity</h3>
+            <p class="mt-2 text-sm text-gray-darker">The carbon intensity of the energy used, based on location and time — accounting for the global, distributed nature of web delivery.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">M — Embodied</h3>
+            <p class="mt-2 text-sm text-gray-darker">Embodied emissions from manufacturing the hardware that serves, delivers, and renders web content.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">R — Functional Unit</h3>
+            <p class="mt-2 text-sm text-gray-darker">A web-appropriate functional unit — per page view, per transaction, per session — that reveals true efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Principles -->
+  <FeatureGrid
+    heading="Design *Principles*"
+    body="The assembly agreed on three key principles to balance accuracy with adoption."
+    columns={3}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/sci/co2-icon.svg",
+        title: "Accuracy Proportionate to Control",
+        description: "Directly measured components require higher accuracy than modelled estimates. You don't need perfect data everywhere — just where you have the most control.",
+      },
+      {
+        icon: "/assets/standards/sci/cost-icon.svg",
+        title: "Mandatory Disclosure",
+        description: "Boundaries, assumptions, data sources, and methods must be clearly stated. This prevents gaming through selective boundary choices and makes results comparable.",
+      },
+      {
+        icon: "/assets/standards/sci/grid-icon.svg",
+        title: "Integration Over Complexity",
+        description: "Implementation should fit existing developer workflows, not require new toolchains. A widely used metric has more impact than a perfect one nobody adopts.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Mission Card -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-medium text-primary-dark italic md:text-xl">
+            A specification that is technically accurate but unused won't serve its purpose, and a widely used metric that lacks credibility also won't serve the purpose.
+          </p>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24 rotate-180" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W3C Partnership -->
+  <TextWithImage
+    heading="Built in Collaboration with"
+    headingAccent="the W3C"
+    body="SCI for Web is developed in formal collaboration with the World Wide Web Consortium (W3C). This partnership combines GSF's expertise in software carbon measurement with W3C's global reach in web standards — brokered by the Green Web Foundation, who are active members of both communities. GSF manages the specification through its consensus-driven process, while W3C's Sustainable Web Interest Group provides feedback and insights."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-3.svg"
+    imageAlt="W3C collaboration illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Scope -->
+  <TextWithImage
+    heading="Web Applications"
+    headingAccent="In Scope"
+    body="SCI for Web applies to software applications that deliver value to users primarily through browser interfaces accessed via HTTP/HTTPS, where most rendering happens in the browser, and the interface is built for human interaction rather than machine-to-machine use. This scope is platform-independent and technology-agnostic."
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/sci/transforming-icon-1.svg",
+        description: "Static sites, SPAs, and server-rendered applications",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-2.svg",
+        description: "E-commerce platforms and streaming services",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-3.svg",
+        description: "Real-time collaboration tools and web apps",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-4.svg",
+        description: "Third-party services: analytics, ads, CDNs, authentication",
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Who It's For -->
+  <TabbedSection
+    badge="WHO IT'S FOR"
+    heading="Built for Every Role in Web Development"
+    tabs={[
+      {
+        value: "frontend",
+        heading: "Frontend Developers & Designers",
+        description: "Make sustainability part of your development workflow without sacrificing user experience or performance. SCI for Web gives you a clear target for optimisation — from image loading to JavaScript execution to third-party script impact. See the direct carbon impact of your design choices and client-side code, and make informed decisions about what to include on every page.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-1.svg" },
+      },
+      {
+        value: "backend",
+        heading: "Backend & Infrastructure Engineers",
+        description: "Understand the full server-side contribution to web emissions. SCI for Web covers API responses, server rendering, CDN distribution, and database queries — giving you measurable targets for infrastructure optimisation. Make informed decisions about caching, compression, and deployment strategies based on their actual carbon impact.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-2.svg" },
+      },
+      {
+        value: "product",
+        heading: "Product Owners & Technical Managers",
+        description: "Turn sustainability commitments into measurable web performance metrics. SCI for Web provides comparable scores that help you prioritise which optimisations deliver the most carbon reduction — and justify investment in sustainability improvements with clear, defensible data that aligns with your organisation's environmental goals.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-3.svg" },
+      },
+    ]}
+    bgClass="bg-accent-lighter/10"
+  />
+
+  <!-- AI-Assisted Assembly Process -->
+  <CTACard
+    heading="Built by Consensus in 10 Weeks"
+    body="Fourteen GSF members from fifteen organisations — including Accenture, Google, Microsoft, NTT DATA, and the Green Web Foundation — piloted an AI-assisted assembly process that moved from a blank page to a consensus design document in just ten weeks. Participants answered questions, synthesised positions through an LLM, and refined until all objections were resolved."
+    ctaText="Read how the assembly worked"
+    ctaHref="/articles/designing-sci-web-what-we-agreed-and-what-comes-next/"
+    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
+    imageAlt="Assembly process illustration"
+  />
+
+  <!-- Success Criteria -->
+  <FeatureGrid
+    heading="How We'll Know *It's Working*"
+    body="SCI for Web will be successful when it drives real change across the web ecosystem."
+    columns={2}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/sci/transforming-icon-1.svg",
+        title: "Workflow Integration",
+        description: "Developers can integrate SCI for Web into existing workflows without specialised training.",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-2.svg",
+        title: "Informed Optimisation",
+        description: "Organisations use measurements to prioritise which optimisations deliver the most carbon reduction.",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-3.svg",
+        title: "Third-Party Transparency",
+        description: "Third-party service providers start publishing energy data because customers need it for calculations.",
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-4.svg",
+        title: "Open-Source Tooling",
+        description: "Multiple open-source tools emerge to make measurement progressively easier.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="The Journey to *Web Sustainability Measurement*"
+    items={[
+      { date: "Aug 2025", description: "Assembly Applications", completed: true, start: "2025-08-01", end: "2025-08-31" },
+      { date: "Sep 2025", description: "W3C Collaboration<br/>Assembly Starts", completed: true, start: "2025-09-01", end: "2025-09-30" },
+      { date: "Nov 2025", description: "Assembly Consensus<br/>Design Document", completed: true, start: "2025-11-01", end: "2025-11-30" },
+      { date: "Q1 2026", description: "Specification Development", current: true, start: "2026-01-01", end: "2026-03-31" },
+      { date: "2026", description: "Draft for Review", start: "2026-04-01", end: "2026-12-31" },
+    ]}
+  />
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={sciWebProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(sciWebProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Help Shape Web Sustainability Measurement"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "Read the Design Document",
+        description: "Explore the consensus positions on scope, personas, and evaluation criteria",
+        ctaText: "Read Document",
+        ctaHref: "https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Join the Software Standards Working Group",
+        description: "Collaborate with industry experts shaping this specification (members only)",
+        ctaText: "Join the WG",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
+      },
+      {
+        icon: "/assets/standards/sci/resource-guide-icon.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with the project lead and team",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-web-(sci-for-web)/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Become a GSF Member",
+        description: "Join the foundation to participate in standards development",
+        ctaText: "Get in touch",
+        ctaHref: "https://greensoftware.foundation/membership",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="The web serves billions — let's make it sustainable"
+    body="SCI for Web provides the first standardised, SCI-aligned methodology for measuring web application emissions. Whether you're a developer, product owner, or sustainability professional, your expertise can help shape how the industry measures and reduces the web's carbon footprint."
+    ctaText="Read the Design Document"
+    ctaHref="https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "/newsletter/", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>
