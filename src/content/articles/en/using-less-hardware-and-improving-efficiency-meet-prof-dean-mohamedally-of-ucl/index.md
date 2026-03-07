@@ -4,6 +4,7 @@ date: "2023-10-23"
 summary: "With over 140 lecturers, 100 research staff and 1,300 students, the world-leading Department of Computer Science at UCL is building momentum toward green software"
 teaserText: "Professor Dean Mohamedally heads one of the UK’s largest project-based programs at the Department of Computer Science at University College London. UCL is home to some of the world's most influential and creative researchers in the field. Professor Dean specializes in real-world software engineering education and industry projects on the UCL Industry Exchange Network (IXN) program."
 mainImage: "./main.jpg"
+tags: ["education"]
 ---
 
 # When did you start thinking about software sustainability, and what motivates you most? 

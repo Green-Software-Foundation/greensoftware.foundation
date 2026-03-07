@@ -4,6 +4,7 @@ date: "2024-03-12"
 summary: "How the AI Environmental Impacts Act could foster a culture of greening software and support green software projects."
 teaserText: "GSF endorses bill that shows promise to shape a future for Green AI."
 mainImage: "./main.jpg"
+tags: ["policy"]
 ---
 
 The GSF endorses the [Environmental Impacts of AI Act](https://www.markey.senate.gov/download/artificial-intelligence-environmental-impacts-act-of-2024_-020124pdf) to ensure the development and application of AI is pro-planet and responds to the urgent call for action outlined in the United Nations Intergovernmental Panel on Climate Change's [2023 report](https://www.ipcc.ch/2023/03/20/press-release-ar6-synthesis-report/). 

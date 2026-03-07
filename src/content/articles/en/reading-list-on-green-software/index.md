@@ -4,6 +4,7 @@ date: "2024-06-05"
 summary: "Six essential publications to build your knowledge of green software to help you develop climate-conscious code."
 teaserText: "All we need is 3%. These books can help get us there! "
 mainImage: "./main.jpg"
+tags: ["education"]
 ---
 
 Software practitioners have an outsized impact on global carbon emissions compared to most. Our day-to-day work influences an industry estimated to emit 14% of total emissions by 2040. All we need is 3% of software practitioners to embrace green software practices to make a significant impact on reducing tech's carbon footprint.  

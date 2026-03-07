@@ -4,6 +4,7 @@ date: "2025-05-20"
 summary: "We’re proud to announce the ratification of the Policy Radar, marking a key step forward in our ongoing work to align policy, practice, and sustainability in the digital space. In this article, we share more about the project."
 teaserText: "A shared lens to help understand the regulatory landscape for greening software."
 mainImage: "./main.png"
+tags: ["policy"]
 ---
 
 # What the Policy Radar Ratification Means for Green Software

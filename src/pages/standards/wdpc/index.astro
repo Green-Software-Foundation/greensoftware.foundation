@@ -1,0 +1,451 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import CardGrid from "@/components/card-grid.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import Timeline from "@/components/timeline.astro";
+import CTACard from "@/components/cta-card.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+---
+
+<Layout
+  title="WDPC — Workload Dynamic Power and Cooling | Green Software Foundation"
+  description="Intelligent coordination for sustainable computing. Optimise energy use, support grid stability, and maximise renewables while scaling sustainably."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "WDPC" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    heading="Intelligent Coordination for"
+    headingAccent="Sustainable Computing"
+    subtitle="Optimise energy use, support grid stability, and maximise renewables while scaling sustainably."
+    body="An AI training run can cause power swings over 200MW in 40ms, like a quarter-million people joining the grid. WDPC standardises communication between workloads and infrastructure, preventing these swings from destabilising power systems and wasting renewable energy."
+    ctas={[
+      { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/workload-dynamic-power-and-cooling-(wdpc)/" },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/wdpc/hero-illustration.svg"
+    imageAlt="WDPC illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with industry leaders in data centre infrastructure"
+  />
+
+  <!-- What is WDPC? (bordered feature grid) -->
+  <FeatureGrid
+    heading="What is *WDPC*?"
+    body="The Workload Dynamic Power and Cooling (WDPC) framework represents a fundamental shift in how computational workloads and energy infrastructure communicate."
+    columns={2}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/standardized-icon.svg",
+        title: "Standardised Data Formats",
+        description: "By establishing standardised temporal data formats and interfaces, WDPC creates a common language that enables compute workloads, data centres, and power grids to communicate effectively.",
+      },
+      {
+        icon: "/assets/standards/wdpc/realtime-icon.svg",
+        title: "Real-time Coordination",
+        description: "This common language allows them to coordinate in real-time without relying on prescriptive control systems. Think of WDPC as the universal translator for the energy ecosystem.",
+      },
+      {
+        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
+        title: "Grid Stability Support",
+        description: "It enables every component — from individual processors to municipal power grids — to share their needs, capabilities, and constraints in a format everyone understands, supporting a stable and responsive grid.",
+      },
+      {
+        icon: "/assets/standards/wdpc/renewable-icon.svg",
+        title: "Renewable Energy Optimisation",
+        description: 'This approach transforms isolated "energy islands" into an intelligent, connected network capable of handling demanding computational tasks while optimising renewable energy use and overall grid stability.',
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Why WDPC Matters (heading) -->
+  <TextBlock
+    heading="Why *WDPC* Matters"
+    body="The rapid growth of artificial intelligence (AI) and machine learning (ML) is creating unprecedented challenges for our energy infrastructure and unique opportunities for innovation."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    body="The computational demands of modern architecture are becoming increasingly volatile. A single large language model training session can cause power fluctuations that would have been unimaginable just years ago. WDPC addresses this critical challenge by providing the data foundation that enables facilities to participate in energy markets, demand response programmes, and renewable energy optimisation. Going beyond managing today's workloads, it helps build the infrastructure for a future where computation and sustainability are inseparable."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
+        description: '<span class="font-extrabold">Grid Stability</span> enables load forecasting and demand response that prevents costly disruptions',
+      },
+      {
+        icon: "/assets/standards/wdpc/co2-icon.svg",
+        description: '<span class="font-extrabold">Carbon Optimisation</span> schedules workloads to run when renewable energy is abundant',
+      },
+      {
+        icon: "/assets/standards/wdpc/cost-icon.svg",
+        description: '<span class="font-extrabold">Cost Reduction</span> participates in energy markets and dynamic pricing programmes',
+      },
+      {
+        icon: "/assets/standards/wdpc/heat-icon.svg",
+        description: '<span class="font-extrabold">Heat Recovery</span> coordinates waste heat delivery to municipal heating systems',
+      },
+      {
+        icon: "/assets/standards/wdpc/infra-icon.svg",
+        description: '<span class="font-extrabold">Infrastructure Efficiency</span> improves utilisation through predictive workload signalling',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/wdpc/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    body="WDPC converts environmental responsibility from aspiration into an achievable reality. By making carbon intensity visible and actionable at millisecond scales, organisations can automatically shift computational workloads to times when clean energy is abundant. The framework enables data centres to become active participants in the renewable energy transition, coordinating with grid operators to maximise the use of solar and wind power while maintaining the performance that modern applications demand."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- The 200MW Challenge (Mission Card) -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/wdpc/mission-card-up-decor.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">The 200MW Challenge</h3>
+          <p class="mt-3 text-lg font-medium text-primary-dark italic md:mt-4 md:text-xl">
+            Modern AI workloads can create massive, rapid power surges comparable to hundreds of thousands of households switching on ACs simultaneously, risking grid destabilisation and increased carbon emissions. WDPC prevents this by enabling predictive coordination: workloads share their plans, grids adjust in advance, and the system adapts in real time, ensuring stability, efficient renewable use, and sustainable performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Vision (tabbed section with per-tab images) -->
+  <TabbedSection
+    heading="A New Architecture for Energy Intelligence"
+    tabs={[
+      {
+        value: "workloads",
+        heading: "Workloads",
+        description: "WDPC introduces a central data bus where components publish and consume information in real-time, enabling workload schedulers to react directly to grid carbon intensity without centralised control.",
+        image: { src: "/assets/standards/wdpc/tabs-workloads.svg" },
+      },
+      {
+        value: "power-grid",
+        heading: "Power Grid",
+        description: "Power grid operators can provide real-time signals about energy availability, carbon intensity, and pricing, enabling intelligent resource allocation across the entire infrastructure.",
+        image: { src: "/assets/standards/wdpc/tabs-powergrid.svg" },
+      },
+      {
+        value: "data-centers",
+        heading: "Data Centres",
+        description: "Data centres can provide real-time signals about energy availability, carbon intensity, and pricing, enabling intelligent resource allocation across the entire infrastructure.",
+        image: { src: "/assets/standards/wdpc/tabs-datacenters.svg" },
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- A Platform for Energy Innovation -->
+  <FeatureGrid
+    heading="A Platform for *Energy Innovation*"
+    body="Connecting traditionally disparate components in the datacentre via a data bus to develop novel approaches to power management."
+    columns={4}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-1.svg",
+        title: "Coordinate AI Model Training",
+        description: "Schedule compute-heavy tasks when renewable energy is abundant, with workloads signalling power needs in advance.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-2.svg",
+        title: "Grid Stability Support",
+        description: "Help grid operators forecast demand and participate in energy management programmes through standardised interfaces.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-3.svg",
+        title: "Municipal Heat Recovery",
+        description: "Redirect data centre heat to district heating networks, turning excess thermal energy into a community resource.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-4.svg",
+        title: "Carbon-Aware Computing",
+        description: "Schedule workloads based on grid carbon intensity, optimising tasks to use cleaner energy.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- WDPC Audience (blog cards) -->
+  <CardGrid
+    heading="*WDPC* Audience"
+    columns={3}
+    cards={[
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-1.svg",
+        icon: "/assets/standards/wdpc/blog-developers-icon.svg",
+        title: "Developers",
+        description: "",
+        bodyHtml: "WDPC gives you the data foundation to build truly carbon-aware applications. Through standardised APIs, your services can receive real-time signals about grid carbon intensity, infrastructure capacity, and renewable energy availability.<br/><br/>While you design the logic, WDPC ensures you have consistent, reliable data to make intelligent scheduling decisions.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-2.svg",
+        icon: "/assets/standards/wdpc/blog-business-icon.svg",
+        title: "Business Leaders",
+        description: "",
+        bodyHtml: "WDPC opens doors to energy market participation and demand response programmes that were previously inaccessible. With standardised data exchange, your facilities gain the visibility needed to optimise energy costs and demonstrate sustainability progress with real metrics.<br/><br/>As AI workloads grow, WDPC provides the coordination framework to scale intelligently.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-3.svg",
+        icon: "/assets/standards/wdpc/blog-sustainability-icon.svg",
+        title: "Sustainability Teams",
+        description: "",
+        bodyHtml: "WDPC brings clarity to sustainability measurement by standardising how energy and carbon data flows through your infrastructure. You'll have consistent temporal data to track actual carbon intensity, measure waste heat recovery, and correlate workload decisions with emissions.<br/><br/>For your reporting system, WDPC ensures the underlying data is reliable, comparable, and auditable.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Leading the Charge -->
+  <section class="pb-12 md:pb-16 lg:pb-20">
+    <div class="container">
+      <div class="grid auto-cols-fr grid-cols-1 justify-between gap-5 lg:grid-cols-2 lg:gap-6">
+        <div class="relative flex flex-col justify-between rounded-2xl border p-6 md:p-8">
+          <img src="/assets/standards/wdpc/leading-decor.svg" class="absolute top-0 right-0 select-none pointer-events-none" />
+          <div>
+            <img src="/assets/standards/wdpc/leading-icon.svg" alt="" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Leading The Charge</h2>
+            <p class="mt-2 text-xl">Project Leadership</p>
+            <p class="mt-2 text-xl">My Truong | CTO, Zutacore | Project Lead | Hardware Standards Working Group</p>
+            <Badge className="mt-2">Actively recruiting contributors</Badge>
+            <p class="mt-4">
+              We're building this standard with input from data centre operators, infrastructure providers, and sustainability experts worldwide. Your expertise can help shape how the industry coordinates energy for decades to come.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+              <a href="https://directory.greensoftware.foundation/projects/workload-dynamic-power-and-cooling-(wdpc)/" target="_blank" rel="noopener noreferrer">
+                <Button>Visit the Directory</Button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="/assets/standards/wdpc/leading-illustration.svg" class="rounded-2xl object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <Timeline
+    heading="Journey to *Transformation*"
+    body="Current focus: The specification is actively developing, and experts, operators, and sustainability practitioners are invited to refine and validate it."
+    items={[
+      { date: "May 2025", description: "Proposal", completed: true, start: "2025-05-01", end: "2025-05-31" },
+      { date: "Current", description: "Pre-Draft", current: true, start: "2025-09-01", end: "2025-10-30" },
+      { date: "Nov/Dec 2025", description: "Draft", start: "2025-11-01", end: "2025-12-31" },
+      { date: "Upcoming", description: "Consistency Review", start: "2026-01-01", end: "2026-03-31" },
+      { date: "Upcoming", description: "WG Final Approval", start: "2026-04-01", end: "2026-06-30" },
+      { date: "Upcoming", description: "SC Ratification", start: "2026-07-01", end: "2026-09-30" },
+      { date: "Upcoming", description: "Publication", start: "2026-10-01", end: "2026-12-30" },
+    ]}
+  />
+
+  <!-- Dive Deeper (resources) -->
+  <section id="resources" class="py-12 md:py-18 lg:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Dive Deeper</h2>
+      <div class="mt-8 grid grid-cols-1 items-center justify-center gap-12 md:mt-10 lg:grid-cols-2 lg:gap-x-20">
+        <div class="order-2 flex w-full items-center justify-center md:order-1 lg:justify-start">
+          <img src="/assets/standards/wdpc/dive-illustration.svg" class="object-cover" />
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="grid grid-cols-1">
+            {[
+              {
+                icon: "/assets/standards/wdpc/dive-icon-1.svg",
+                title: "Contribute to the Project",
+                description: "Work on the WDPC codebase — open issues, submit PRs, and collaborate on implementation.",
+                buttonLink: "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling/",
+                buttonText: "View Repository",
+                badge: "GSF Members Only",
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-2.svg",
+                title: "Shape the Specification",
+                description: "Review the WDPC spec draft and data models; propose changes and provide technical feedback.",
+                buttonLink: "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling/blob/dev/WDPC-Spec.md",
+                buttonText: "Read Specification",
+                badge: "GSF Members Only",
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-3.svg",
+                title: "Architecture Visualisation",
+                description: "See how WDPC's central data bus architecture enables real-time coordination.",
+                buttonLink: "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling/blob/dev/sup_files/06-Mycelium%20(1).png",
+                buttonText: "View Architecture",
+                badge: "GSF Members Only",
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-4.svg",
+                title: "Hardware Standards WG",
+                description: "Join the working group overseeing WDPC and other hardware sustainability standards.",
+                buttonLink: "https://github.com/Green-Software-Foundation/hardware-standards-wg",
+                buttonText: "Join Working Group",
+                badge: "GSF Members Only",
+              },
+            ].map((feature) => (
+              <div class="flex flex-col items-start justify-start border-b border-primary-light/50 py-4 last:border-b-0">
+                <div class="flex w-full items-center justify-start">
+                  <div class="flex w-full items-center justify-center gap-3">
+                    <img src={feature.icon} alt="" class="h-8 w-auto" />
+                    <div class="flex w-full flex-wrap items-center justify-between gap-1">
+                      <h3 class="text-xl font-bold text-primary">{feature.title}</h3>
+                      {feature.badge && <Badge>{feature.badge}</Badge>}
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2">{feature.description}</p>
+                <a href={feature.buttonLink} target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4">
+                  {feature.buttonText} →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shape the Future -->
+  <CardGrid
+    heading="Shape the Future of *Sustainable Computing*"
+    body="WDPC is a path toward intelligent energy coordination. We need diverse perspectives to ensure this standard serves the entire ecosystem."
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/wdpc/shape-icon-1.svg",
+        title: "Join the Hardware Standards Working Group (GSF Members Only)",
+        description: "Collaborate with industry leaders shaping this standard",
+        ctaText: "Subscribe",
+        ctaHref: "https://directory.greensoftware.foundation/projects/workload-dynamic-power-and-cooling-(wdpc)/",
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-2.svg",
+        title: "Review the Specification (GSF Members only)",
+        description: "Review the current specification and share your insights on GitHub",
+        ctaText: "View the Specification",
+        ctaHref: "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling/blob/dev/WDPC-Spec.md",
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-3.svg",
+        title: "Inquiry about becoming a GSF member",
+        description: "Reach out directly to the GSF team",
+        ctaText: "Get in Touch",
+        ctaHref: "https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Future of Sustainable Computational Energy"
+    body="Whether you're managing data centres, developing AI applications, or driving sustainability initiatives, your experience and insights can help create a standard that transforms how the world thinks about computational energy. Together, we can build an infrastructure where performance and sustainability become equal partners."
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

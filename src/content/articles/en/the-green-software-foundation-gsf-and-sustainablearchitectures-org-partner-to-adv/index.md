@@ -4,6 +4,7 @@ date: "2025-12-04"
 summary: " The Green Software Foundation and SustainableArchitectures.org are proud to announce a strategic partnership to advance knowledge-sharing and collaboration between their global communities."
 teaserText: "Making sustainability measurable in enterprise architecture decisions."
 mainImage: "./main.png"
+tags: ["policy"]
 ---
 
 The Green Software Foundation (GSF) and SustainableArchitectures.org are proud to announce a strategic partnership to advance knowledge-sharing and collaboration between their global communities, empowering architects and developers to make sustainability a fundamental consideration in software design and infrastructure decisions, alongside performance, security, and cost.

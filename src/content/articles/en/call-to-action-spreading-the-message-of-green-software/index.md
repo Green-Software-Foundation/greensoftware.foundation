@@ -17,6 +17,7 @@ authors:
         link: "https://twitter.com/Sealjay_clj"
       - platform: "Personal Website"
         link: "https://sealjay.com/"
+tags: ["community"]
 ---
 
 > There's a growing understanding of the need for organisations to "be green" or consider sustainability, but where should you start? Check this article for ideas and guidance. 

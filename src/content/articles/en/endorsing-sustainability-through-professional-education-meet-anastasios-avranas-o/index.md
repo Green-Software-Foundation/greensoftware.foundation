@@ -4,6 +4,7 @@ date: "2024-08-23"
 summary: "Join us in welcoming Interfima to the GSF. Anastasios Avranas of Interfima shares more about Interfima's aspirations to green its IT infrastructure and services and how joining the GSF will strengthen Interfima's commitment to software sustainability."
 teaserText: "Interfima joins the GSF to strengthen its commitment to software sustainability."
 mainImage: "./main.jpg"
+tags: ["education"]
 ---
 
 Anastasios is a managing partner at Interfima. With a background in finance, his current focus is on innovation and startups.

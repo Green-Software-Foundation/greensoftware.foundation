@@ -4,6 +4,7 @@ date: "2024-09-20"
 summary: "Get ready for the 2024 GSF Global Summit—a series of in-person events hosted by GSF members between October 1 - 10."
 teaserText: "Join us to spark conversations, connect, and drive green software forward."
 mainImage: "./main.jpg"
+tags: ["community", "events"]
 ---
 
 *Soon, you’ll step into a buzzing event space, hear the hum of conversations about energy demand, carbon intensity and software measurement. The room will be filled with faces—both familiar and new. There’s an energy that hits you like a cold wind, a shared purpose that draws you to the people around you. *

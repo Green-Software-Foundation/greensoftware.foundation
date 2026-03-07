@@ -6,6 +6,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import react from "@astrojs/react";
+import astrobook from "astrobook";
 import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import remarkDirectivesHandler from "./src/plugins/remark-directives-handler.mjs";
@@ -19,7 +20,15 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react()],
+  integrations: [
+    react(),
+    astrobook({
+      directory: "src/components",
+      subpath: "/playground",
+      css: ["./src/styles/global.css"],
+      title: "GSF Component Playground",
+    }),
+  ],
   markdown: {
     remarkPlugins: [remarkGfm, remarkDirective, remarkDirectivesHandler],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],

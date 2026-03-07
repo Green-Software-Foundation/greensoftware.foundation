@@ -1,5 +1,193 @@
 # Development Log — GSF Website
 
+## 2026-03-07 - Community, Brand & Assets Landing Pages
+
+**Objective**: Build the Community and Brand & Assets landing pages — two of the remaining "bigger pieces" needed to complete the site's main navigation structure.
+
+### What We Built
+
+- **Community page** (`/community/`) — full landing page for GSF's community programmes:
+  - Hero with Movement Platform and Champions CTAs
+  - CommunityReach stats block (450K podcast downloads, 12K+ meetup members, 12K LinkedIn followers, 7.8K newsletter subscribers, 37 meetup groups)
+  - Listen & Learn section with large podcast cards for Environment Variables and CXO Bytes (custom HTML, not component — needed `aspect-video` image treatment)
+  - Connect section (FeatureGrid: Movement Platform, Champions, Newsletter, Earn Badges)
+  - Global Meetup Network (world map left, stats and CTAs right — custom two-column layout)
+  - Events section (FeatureGrid: Global Summit, Carbon Hack)
+  - Article carousel filtered by `community` tag (10 articles tagged)
+  - CTA banner driving to Movement Platform
+
+- **Brand & Assets page** (`/brand/`) — resource hub for brand guidelines:
+  - Hero with brand guidelines PDF download and trademark policy CTAs
+  - "Using our brand" intro (TextBlock)
+  - Colour palette section with swatches rendered from exact PDF hex codes:
+    - Primary (Teal): 7 shades from #003834 to #D9E7E7
+    - Accent (Green): 7 shades from #849E2A to #F2F6E9
+    - Grey: 7 shades from #000000 to #C3C3C3
+    - Accent highlights: Orange (#D87814) and Cyan (#00E7FF)
+  - Prominent callout box emphasising these are just highlights — full guidelines cover ratios, logo rules, etc.
+  - Typography showcase (Nunito Sans, weights 200–900)
+  - Logo preview (full, vertical, icon variants)
+  - Download Assets grid (6 cards: Logos, Icons, Illustrations, Presentations, Our Work, All Brand Assets — all linking to Google Drive)
+  - Canva Templates section (4 meetup templates, 2 social templates, plus meetup and champions Google Drive folders)
+  - Official description block (approved boilerplate text)
+  - Contact CTA (help@greensoftware.foundation)
+
+### Supporting Work
+
+- **10 articles tagged** with `community` (and some also `events`) for the community page carousel
+- **2 articles untagged** that didn't fit the community narrative (ClimateAction.tech interview, Chris Lloyd-Jones interview)
+- **2 podcast images** copied to `public/assets/` (environment-variables-podcast.png, cxo-bytes-podcast.png)
+- **Colour palette corrected** — initially used CSS token values from `global.css`, but user pointed out they didn't match the brand guidelines PDF. Re-read the PDF and updated all hex codes to match exactly.
+
+### The Journey
+
+The community page went through several layout iterations based on user feedback:
+1. Started with a TabbedSection approach — user preferred distinct sections instead
+2. Meetup Network section tried three positions: after hero (too similar to hero layout), after Listen & Learn, finally settled under Connect
+3. CommunityReach stats moved from lower on the page to right after the hero for maximum impact
+4. Podcast cards needed large images — used custom HTML with `aspect-video` rather than a component
+
+The brand page required research from two Notion sources: Brand & Trademark Policy and Design Resources. The Design Resources page had a structured library with Google Drive links and Canva template URLs.
+
+The biggest correction was the colour palette. The initial version used the CSS custom properties from `global.css` (which are the site's implementation tokens), but the user noticed they didn't match the brand guidelines PDF. Reading the actual PDF (GSF-guidelines-v03-basics.pdf) revealed quite different values — particularly the greys, which go from true black (#000000) through proper mid-greys (#3C3C3C, #595959, #808080) rather than the site's more limited grey tokens.
+
+### Key Learnings
+
+- **Brand PDF colours differ from CSS tokens** — the website's `global.css` tokens are an implementation of the brand guidelines, not a 1:1 copy. The brand page should show the official PDF values, not the CSS approximations.
+- **Inline `style` for exact colours** — switched from Tailwind `bg-*` classes to `style={`background-color: ${hex}`}` so the swatches show the exact branded hex values rather than the nearest CSS token.
+- **Community page article filtering** — tag-based filtering (`tags.includes("community")`) works well for curating content across pages. Tags can be combined (e.g. "community" + "events") for articles that appear in multiple carousels.
+
+### Statistics
+
+- 2 new pages created (community/index.astro, brand/index.astro)
+- 10 articles tagged for community carousel
+- 2 podcast images added
+- Colour palette updated to match brand PDF (4 palettes, 23 swatches total)
+
+### Next Steps
+
+- Better podcast thumbnail images for Environment Variables and CXO Bytes (user providing)
+- Google Analytics integration
+- Newsletter page/form
+- Roll out to greensoftware.org
+
+## 2026-03-07 (cont.) - Standards Page, Nav Restructure, and Email Consolidation
+
+**Objective**: Build the `/standards/` process page, restructure navigation menus across all four top-level items, update the homepage "What we do" section, and consolidate contact emails.
+
+### What We Built
+
+- **Standards page** (`/standards/`) — full process showcase:
+  - Hero with AI-facilitated consensus messaging
+  - VerticalPipeline showing the 7-stage specification lifecycle (Proposal → Published)
+  - Dynamic project cards from `projects.json` with lifecycle stage badges and `urlSlug` overrides (e.g. `real-time-cloud` → `rtc`)
+  - "Learn more" links hidden for Proposal/Pre-proposal stage projects
+  - AI-facilitated consensus and Assemblies TextWithImage sections
+  - FeatureGrid: 8 characteristics of good specifications (bordered, 2-column)
+  - SCI Certification CTACard and final CTABanner
+
+- **Navigation restructure** across all four menus:
+  - Standards: RTC moved from Hardware to Software; SWE removed
+  - Adoption: "Awesome Green Software" → "Resource Catalogue"; Manifesto and Policy Engagement removed; per-section `headerLink` buttons added to Education and Policy & Research
+  - Community: Articles removed from "Listen & Learn"; section renamed to "Listen"
+  - About: History link removed from Organisation
+  - All menus: all icons (`iconSrc` and `icon`) commented out to evaluate appearance without them
+
+- **headerLink feature** — new `NavSection` property rendering section-level CTA buttons in both desktop mega-menu and mobile accordion nav
+
+- **Homepage "What we do"** — four pillars updated to: Standards, Policy & Research, Education, Community
+
+- **Email consolidation** — `news@greensoftware.foundation` changed to `help@greensoftware.foundation` on press page and brand page. `meetup@` left unchanged.
+
+### The Journey
+
+The standards page went through significant iteration. The AI consensus section initially followed the hero but felt too abrupt — it was moved below the lifecycle pipeline and project cards. The cards evolved from FeatureGrid to CardGrid and finally to custom markup to support lifecycle badges and conditional links.
+
+Navigation restructure was driven by content strategy: removing items without standalone pages (History), adding headerLink buttons to point users to programme landing pages from within mega-menus.
+
+The email audit revealed 3 structural emails (`help@`, `news@`, `meetup@`) plus ~10 historical personal emails in article content. `news@` was consolidated to `help@` since it wasn't actively maintained.
+
+### Key Learnings
+
+- **Per-section CTA buttons** (`headerLink`) work better than a single footer link when a mega-menu has distinct programmes each deserving their own landing page
+- **Comment out rather than delete** icon properties — allows easy A/B comparison and re-enabling
+- **Email consolidation** — auditing `mailto:` links across the whole site reveals scattered addresses that may not be monitored
+
+### Statistics
+
+- 1 new page (standards/index.astro)
+- 1 new NavSection property (headerLink)
+- ~8 files modified for nav restructure
+- 2 email references consolidated (news@ → help@)
+- All icons commented out across 4 nav menus (~30 items)
+
+## 2026-03-06 - About Page
+
+**Objective**: Research, spec, and build the About page (`/about/`) — the foundation's primary "who we are" page.
+
+### What We Built
+
+- **About page** (`src/pages/about/index.astro`) — a 10-section page composed from the parameterised component library, pulling content from the legacy manifesto, data files, and existing site messaging
+- **Feature spec** (`docs/features/about-page.md`) — comprehensive spec documenting all content sources, proposed structure, and open questions
+- **Manifesto SVG migration** — 5 value illustrations copied from the legacy Gatsby site to `public/assets/values-*.svg`
+
+### Page Structure (final)
+
+1. Hero — "About the Green Software Foundation" with elevator pitch
+2. Mission & Vision — side-by-side, from the official manifesto (kept verbatim)
+3. What is Green Software? — updated definition broadening beyond carbon to all environmental impacts (energy, water, hardware lifecycle, the full digital ecosystem)
+4. Founded in 2021 — founding story (Accenture, GitHub, Microsoft, ThoughtWorks) with CTA to governance
+5. Our Values — 4 values in 2x2 grid with migrated manifesto SVGs (removed "Minimise Carbon" as no longer reflective of the broader mission)
+6. How We're Structured — nonprofit under Linux Foundation, consensus-based governance, CTA to `/governance/`
+7. What We Do — 4 pillars (Standards, Policy, Education, Research) in bordered grid
+8. By the Numbers — 6 stats in centred 3-column grid, member count from data files
+9. Logo Marquee — 60+ member logos
+10. CTA — "Want to shape the future of green software?" → membership
+
+### The Journey
+
+Started with a broad research phase — launched four parallel agents to scan the existing production site, search Notion, explore the codebase, and check additional URL paths. No About page existed on either the old or new site despite nav/footer linking to `/about/`. Notion had no dedicated About content — the legacy manifesto markdown was the primary source.
+
+The user directed several refinements: removed "Read the manifesto" CTA, updated the green software definition to cover all environmental impacts and the full digital ecosystem (not just software carbon), removed "Minimise Carbon" from values, centred the stats section, and moved "How we're structured" above "What we do" for better narrative flow.
+
+### Key Learnings
+
+- **TextWithImage and StatsGrid use `heading`/`headingAccent` props**, not the `*accent*` syntax
+- **The green software definition is evolving** — now covers carbon, energy, water, hardware across the entire digital ecosystem
+- **"Minimise Carbon" is being retired as a core value** — reflects broadening beyond carbon
+
+### Statistics
+
+- 1 new page (~278 lines), 1 feature spec, 5 SVGs migrated, 4 parallel research agents
+
+## 2026-03-06 - Policy & Research Page
+
+**Objective**: Build the Policy & Research landing page — covering the Policy Working Group, Policy Radar, consultation responses, partnerships, research publications, and engagement principles.
+
+### What We Built
+
+- **Policy & Research page** (`/policy/`) — composed from parameterised components:
+  - Hero, TextBlock intro with mission statement link to PWG GitHub
+  - Leadership section (Chris Adams, Aya Saed co-chairs; Joseph Cook Head of Research) with team.json photos
+  - Policy Radar (TextWithImage) linking to policy-radar.greensoftware.foundation
+  - Policy Engagement (`#engagement`) — 6 cards: GHG Protocol Scope 2, AI Environmental Impacts Act, NY CCAA, EGDC, UK GDSA, EU AI Act — all with article links
+  - Engagement Principles (FeatureGrid) — 5 principles: Legitimacy, Opportunity, Consistency, Transparency, Accountability
+  - Partnerships (FeatureGrid) — W3C, IASA, SustainableIT.org, UK GDSA, BCS
+  - Research — 4 publication cards: AI Environmental Assessments, Green AI Position Paper, SCI for Foundation Models (Texas State), Carbon-Aware Computing (UBS & Microsoft)
+  - Featured Aya Saed quote, article carousel, CTA, Footer
+
+- **Article tags infrastructure** — added `tags` field to articles schema and Sveltia CMS config. Tagged 12 articles `"policy"`, 3 `"research"`. Carousel dynamically filters by tags.
+
+### Key Learnings
+
+- FeatureGrid `icon` expects SVG file paths, not Lucide icon names
+- Tags are non-breaking — optional array, existing articles unaffected
+- NY CCAA and EGDC lack dedicated articles — linked to PWG mission statement article instead
+
+### Statistics
+
+- 1 new page (~310 lines), 15 articles tagged, 2 config files updated
+
 ## 2026-03-05/06 - PageFind Search Integration & Notion Team Fix
 
 **Objective**: Fix the broken governance team data in the Notion fetch script, then implement site-wide search using PageFind so the existing navbar search button actually works.

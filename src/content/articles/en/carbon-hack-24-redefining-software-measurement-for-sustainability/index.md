@@ -4,6 +4,7 @@ date: "2024-03-14"
 summary: "From March 18 to April 8, 2024, Carbon Hack invites practitioners to show their best application and understanding of Impact Framework to decentralize impact measurement and democratize data."
 teaserText: "The green software hackathon of the year."
 mainImage: "./main.jpg"
+tags: ["community", "events"]
 ---
 
 ***Sponsored by Accenture, Amadeus, Aveva,  Sentry Software, Infocomm Media Development Authority (IMDA), Nedbank South Africa, and NTT Data.***

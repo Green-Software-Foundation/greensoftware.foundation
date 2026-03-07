@@ -103,6 +103,8 @@ export interface NavFeatured {
 export interface NavSection {
   title: string;
   links: NavLink[];
+  /** Optional highlighted link rendered as a button at the top of the section */
+  headerLink?: { href: string; label: string };
 }
 
 export interface NavItemDropdown {
@@ -207,6 +209,14 @@ function MegaMenuPanel({ item }: { item: NavItemDropdown }) {
               <h3 className="mb-2 px-2 text-xs font-bold uppercase tracking-wider text-gray-darker">
                 {section.title}
               </h3>
+              {section.headerLink && (
+                <a
+                  href={section.headerLink.href}
+                  className="mb-2 inline-flex items-center gap-1.5 rounded-md bg-accent-lightest-2 px-3 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-accent-lighter mx-2"
+                >
+                  {section.headerLink.label}
+                </a>
+              )}
               <ul className="flex flex-col gap-0.5">
                 {section.links.map((link) => (
                   <li key={link.href}>
@@ -245,6 +255,14 @@ function MobileNavSection({ section }: { section: NavSection }) {
       <h4 className="px-2 py-1 text-xs font-bold uppercase tracking-wider text-gray-darker">
         {section.title}
       </h4>
+      {section.headerLink && (
+        <a
+          href={section.headerLink.href}
+          className="mb-1 ml-2 inline-flex items-center rounded-md bg-accent-lightest-2 px-3 py-1.5 text-sm font-semibold text-primary"
+        >
+          {section.headerLink.label}
+        </a>
+      )}
       <ul>
         {section.links.map((link) => (
           <li key={link.href}>

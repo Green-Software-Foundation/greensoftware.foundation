@@ -4,6 +4,7 @@ date: "2025-11-27"
 summary: "At Green IO Paris, we're asking 800+ technology experts who has the power to reduce software's environmental impact, using our consensus-building process to find answers."
 teaserText: "Mapping where 800+ technologists stand on accountability at Green IO Paris"
 mainImage: "./main.png"
+tags: ["policy"]
 ---
 
 For years, we've heard the same feedback: everyone agrees software needs to be more sustainable, but questions who has the power to make it happen. 

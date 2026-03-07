@@ -4,6 +4,7 @@ date: "2025-08-07"
 summary: "The GSF's Policy Working Group aims to translate technical sustainability expertise into accessible information for regulators. Learn more about our mission."
 teaserText: "Translating technical expertise into insights for policymakers. "
 mainImage: "./main.png"
+tags: ["policy"]
 ---
 
 Our members consistently tell us the same thing: they struggle to anticipate which upcoming regulations will impact their competitiveness and how to prepare. With environmental legislation accelerating globally, the gap between those who write the policies and those who implement the technology continues to grow. 

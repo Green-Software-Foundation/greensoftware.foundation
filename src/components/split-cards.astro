@@ -1,0 +1,87 @@
+---
+interface QuoteAttribution {
+  avatar?: string;
+  name: string;
+  role: string;
+  company?: string;
+}
+
+interface Props {
+  /** Heading for the info card */
+  heading?: string;
+  /** Body text for the info card */
+  body?: string;
+  /** Icon shown at top of info card */
+  iconSrc?: string;
+  /** Decorative SVG overlaid on info card (top-right corner) */
+  decorSrc?: string;
+  /** Quote text for the quote card */
+  quote?: string;
+  /** Quote icon SVG */
+  quoteIconSrc?: string;
+  /** Attribution for the quote */
+  attribution?: QuoteAttribution;
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body = "",
+  iconSrc,
+  decorSrc,
+  quote = "",
+  quoteIconSrc,
+  attribution,
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+---
+
+<section class={`py-12 md:py-16 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <div class="grid auto-cols-fr grid-cols-1 justify-between gap-5 lg:grid-cols-2 lg:gap-6">
+      <!-- Info Card -->
+      <div class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-2xl border p-6 md:p-8">
+        {decorSrc && (
+          <img src={decorSrc} class="user-select-none pointer-events-none absolute top-0 right-0" />
+        )}
+        {iconSrc && (
+          <img src={iconSrc} class="h-12 w-auto" />
+        )}
+        <div>
+          {heading && (
+            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+              {heading}
+            </h2>
+          )}
+          {body && (
+            <p class="mt-4">{body}</p>
+          )}
+        </div>
+      </div>
+      <!-- Quote Card -->
+      <div class="flex flex-col justify-center rounded-2xl bg-accent-lighter p-6 md:p-8">
+        {quoteIconSrc && (
+          <img src={quoteIconSrc} class="h-8 w-auto self-start" />
+        )}
+        {quote && (
+          <p class="mt-3 md:mt-4">{quote}</p>
+        )}
+        {attribution && (
+          <div class="mt-3 flex items-center gap-2 md:mt-4">
+            {attribution.avatar && (
+              <img src={attribution.avatar} class="rounded-full" />
+            )}
+            <div>
+              <h3 class="text-xl font-semibold text-black">{attribution.name}</h3>
+              <p class="text-gray-darker">{attribution.role}</p>
+              {attribution.company && (
+                <p class="text-gray-darker">{attribution.company}</p>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ summary: "The first enterprise-scale implementation of carbon-aware computing us
 teaserText: "The first enterprise-scale implementation of carbon-aware computing using the software carbon intensity (SCI) specification and carbon-aware-sdk is capable of avoiding multiple metric tons of CO2eq from entering the atmosphere -- every year."
 mainImage: "./main.png"
 featured: true
+tags: ["research"]
 organizations:
   - "UBS"
   - "Microsoft"

@@ -1,15 +1,25 @@
 ---
+import { Button } from "@/components/ui/button";
+
 interface CardItem {
   icon?: string;
+  /** Card image shown at the top */
+  imageSrc?: string;
   title: string;
   description: string;
+  /** HTML description (rendered with set:html, used instead of description when provided) */
+  bodyHtml?: string;
   featured?: boolean;
+  /** CTA link text */
+  ctaText?: string;
+  /** CTA link href */
+  ctaHref?: string;
 }
 
 interface Props {
-  /** Section heading */
+  /** Section heading. Wrap words in *asterisks* for accent colour */
   heading?: string;
-  /** Accent portion of heading */
+  /** Accent portion of heading (legacy — prefer *asterisks* in heading) */
   headingAccent?: string;
   /** Body text under heading */
   body?: string;
@@ -17,11 +27,15 @@ interface Props {
   cards?: CardItem[];
   /** Number of columns */
   columns?: 2 | 3 | 4;
+  /** Text alignment for heading/body: "center" (default) or "left" */
+  align?: "center" | "left";
+  /** Decorative SVG shown absolutely positioned (top-right of section) */
+  decorSrc?: string;
   /** Background class */
   bgClass?: string;
 }
 
-const columnClasses = {
+const columnClasses: Record<number, string> = {
   2: "sm:grid-cols-2",
   3: "sm:grid-cols-2 lg:grid-cols-3",
   4: "sm:grid-cols-2 lg:grid-cols-4",
@@ -33,36 +47,95 @@ const {
   body = "",
   cards = [],
   columns = 4,
+  align = "center",
+  decorSrc,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
+
+// Split heading into plain and accent segments
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+const hasAccentSyntax = headingParts.some(p => p.accent);
 ---
 
-<section class={`py-16 md:py-20 ${bgClass}`}>
-  <div class="container">
+<section class={`py-12 md:py-16 lg:py-20 ${bgClass}`}>
+  <div class="relative container">
     {(heading || body) && (
-      <div class="text-center">
-        <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl">
-          {heading} {headingAccent && <span class="text-primary">{headingAccent}</span>}
+      <div class:list={["mb-8 md:mb-10", align === "center" && "text-center"]}>
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          {hasAccentSyntax
+            ? headingParts.map(part =>
+                part.accent
+                  ? <span class="font-bold text-primary">{part.text}</span>
+                  : part.text
+              )
+            : <>{heading} {headingAccent && <span class="text-primary">{headingAccent}</span>}</>
+          }
         </h2>
         {body && (
-          <p class="mx-auto mt-4 max-w-2xl text-base text-primary-dark">{body}</p>
+          <p class:list={["mt-4 text-base text-primary-dark", align === "center" && "mx-auto max-w-2xl"]}>{body}</p>
         )}
       </div>
     )}
-    <div class={`mt-12 grid gap-6 ${columnClasses[columns]}`}>
+    <div class={`relative z-10 grid gap-4 lg:gap-6 ${columnClasses[columns]}`}>
       {cards.map((card) => (
         <div class:list={[
-          "rounded-lg p-6 shadow-sm",
+          "flex flex-col rounded-xl shadow-sm overflow-hidden",
           card.featured ? "bg-primary-darker text-white" : "border bg-white",
         ]}>
-          {card.icon && <img src={card.icon} alt="" class="mb-4 h-10 w-10" />}
-          <hr class:list={["my-4", card.featured ? "border-white/20" : "border-border"]} />
-          <h3 class="text-lg font-bold">{card.title}</h3>
-          <p class:list={["mt-2 text-sm", card.featured ? "text-white/80" : "text-gray-darker"]}>
-            {card.description}
-          </p>
+          {card.imageSrc && (
+            <div class="overflow-hidden">
+              <img src={card.imageSrc} alt={card.title} class="aspect-[3/2] w-full object-cover" />
+            </div>
+          )}
+          <div class="flex flex-col flex-grow p-6">
+            {card.icon && !card.imageSrc && (
+              <>
+                <img src={card.icon} alt="" class="mb-3 h-8 w-8 shrink-0" />
+                <hr class:list={["mb-4", card.featured ? "border-white/20" : "border-border"]} />
+                <h3 class:list={["text-lg font-bold", card.featured ? "text-white" : "text-primary"]}>
+                  {card.title}
+                </h3>
+              </>
+            )}
+            {card.icon && card.imageSrc && (
+              <div class="mb-2 flex items-center gap-2">
+                <img src={card.icon} alt="" class="h-6 w-6 shrink-0" />
+                <h3 class:list={["text-xl font-bold", card.featured ? "text-white" : "text-primary"]}>
+                  {card.title}
+                </h3>
+              </div>
+            )}
+            {!card.icon && (
+              <>
+                <hr class:list={["my-4", card.featured ? "border-white/20" : "border-border"]} />
+                <h3 class="text-lg font-bold">{card.title}</h3>
+              </>
+            )}
+            {card.bodyHtml ? (
+              <p set:html={card.bodyHtml} class:list={["mt-2 text-sm", card.featured ? "text-white/80" : ""]} />
+            ) : (
+              <p class:list={["mt-2 text-sm", card.featured ? "text-white/80" : "text-gray-darker"]}>
+                {card.description}
+              </p>
+            )}
+            {card.ctaText && card.ctaHref && (
+              <div class="mt-auto pt-4">
+                <a href={card.ctaHref} target="_blank" rel="noopener noreferrer" class="w-full">
+                  <Button variant={card.featured ? "secondary" : "primary"} className="w-full">{card.ctaText}</Button>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>
+    {decorSrc && (
+      <img class="absolute top-[13px] right-[1.5%] -z-0 hidden px-[5%] lg:block" src={decorSrc} />
+    )}
   </div>
 </section>

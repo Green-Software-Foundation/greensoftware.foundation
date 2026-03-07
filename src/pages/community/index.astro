@@ -1,0 +1,291 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CommunityReach from "@/components/community-reach.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+// ----- Articles tagged "community" for the carousel -----
+const allArticles = await getCollection("articles");
+const communityArticles = allArticles
+  .filter((a: any) => {
+    const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
+    return tags.includes("community");
+  })
+  .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
+  .map((a: any) => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || undefined,
+    href: `/articles/${a.id}/`,
+    cta: "Read the article →",
+  }));
+---
+
+<Layout
+  title="Community — Green Software Foundation"
+  description="Join the global community driving sustainable software forward. Podcasts, meetups, events, badges, and the Champions programme — connect with practitioners worldwide."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Hero -->
+  <Hero
+    heading="The global community driving"
+    headingAccent="sustainable software forward"
+    body="Champions, meetups, podcasts, and events — a worldwide network of practitioners turning individual effort into industry change. Whether you want to listen, learn, connect, or contribute, there's a place for you."
+    ctas={[
+      { text: "Join the Movement Platform", variant: "primary", href: "https://movement.greensoftware.foundation" },
+      { text: "Become a Champion", variant: "outline", href: "https://champions.greensoftware.foundation" },
+    ]}
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Community illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Community Reach Stats -->
+  <CommunityReach
+    heading="Our *Reach*"
+    body="A global community of practitioners, leaders, and organisations driving sustainable software forward."
+    stats={[
+      { value: "450,000", label: "Podcast downloads" },
+      { value: "12,000+", label: "Global meetup community members" },
+      { value: "12,000", label: "LinkedIn followers" },
+      { value: "7,800+", label: "Newsletter subscribers" },
+      { value: "37", label: "Meetup groups across 17 countries" },
+    ]}
+    ctaText="Join the Movement Platform"
+    ctaHref="https://movement.greensoftware.foundation"
+  />
+
+  <!-- Listen & Learn -->
+  <TextBlock
+    heading="Listen & *Learn*"
+    body="Two podcasts. Two perspectives. Practitioner insights and C-suite strategy — covering every angle of the green software movement."
+    compact
+  />
+
+  <section class="bg-accent-lightest-2 -mt-6 pb-16">
+    <div class="container">
+      <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+        <!-- Environment Variables -->
+        <a href="https://podcast.greensoftware.foundation" target="_blank" rel="noopener noreferrer" class="group flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm transition-shadow hover:shadow-md">
+          <div class="aspect-video overflow-hidden bg-primary-darker">
+            <img
+              src="/assets/environment-variables-podcast.png"
+              alt="Environment Variables podcast"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-primary">Practitioner-focused</p>
+              <h3 class="mt-2 text-xl font-bold leading-tight">Environment Variables</h3>
+              <p class="mt-2 text-sm text-gray-darker">Each episode explores the latest news and practical techniques for reducing the emissions of software — with the people building the green software movement.</p>
+            </div>
+            <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">
+              Listen now →
+            </span>
+          </div>
+        </a>
+
+        <!-- CXO Bytes -->
+        <a href="https://wiki.greensoftware.foundation/cxo-bytes-podcast" target="_blank" rel="noopener noreferrer" class="group flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm transition-shadow hover:shadow-md">
+          <div class="aspect-video overflow-hidden bg-primary-darker">
+            <img
+              src="/assets/cxo-bytes-podcast.png"
+              alt="CXO Bytes podcast"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-primary">C-Suite focused</p>
+              <h3 class="mt-2 text-xl font-bold leading-tight">CXO Bytes</h3>
+              <p class="mt-2 text-sm text-gray-darker">Strategic conversations with technology leaders on sustainability, digital transformation, and the business case for green software at the executive level.</p>
+            </div>
+            <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">
+              Listen now →
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <FeatureGrid
+    heading="*Connect*"
+    body="Join the platforms and programmes that connect practitioners, recognise contribution, and grow the movement."
+    variant="bordered"
+    columns={2}
+    features={[
+      {
+        icon: "/assets/project-icons/meetup-program.png",
+        title: "Movement Platform",
+        description: "The community hub for green software. Access courses, join discussions, attend community sessions, and connect with fellow practitioners — all in one place.",
+        linkText: "Join the platform →",
+        linkHref: "https://movement.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/project-icons/green-software-champions.png",
+        title: "Champions Programme",
+        description: "Recognising and empowering the most passionate green software advocates. Champions are speakers, writers, organisers, mentors, and contributors who drive adoption from within their organisations.",
+        linkText: "Become a Champion →",
+        linkHref: "https://champions.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/standardized-icon.svg",
+        title: "Newsletter",
+        description: "A regular digest of green software news, standards updates, community highlights, and upcoming events — delivered straight to your inbox.",
+        linkText: "Subscribe →",
+        linkHref: "https://newsletter.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/renewable-icon.svg",
+        title: "Earn Badges",
+        description: "Track your green software journey with digital badges. Complete courses, contribute to projects, and earn recognition for your expertise and participation.",
+        linkText: "View badges →",
+        linkHref: "https://badges.greensoftware.foundation",
+      },
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- Global Meetup Network -->
+  <section class="bg-white -mt-8 pb-16 md:pb-20">
+    <div class="container">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+        <div>
+          <img
+            src="/assets/world-map.svg"
+            alt="Global meetup locations"
+            class="w-full"
+          />
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-primary">Global Community</p>
+          <h2 class="mt-3 text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl">
+            Meetup <span class="font-bold text-primary">Network</span>
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+            37 groups across 17 countries. 12,000+ members meeting locally to discuss, learn, and practice green software together.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-primary-dark/80">
+            With global carbon emissions caused by software approaching 5%, now is the time to get involved in your local community. Find a meetup near you — or start your own.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="https://www.meetup.com/pro/gsf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark">
+              Find a local meetup →
+            </a>
+            <a href="mailto:meetup@greensoftware.foundation" class="inline-flex items-center rounded-lg border border-primary px-6 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-white">
+              Start a meetup group
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <FeatureGrid
+    heading="*Events*"
+    body="From global summits to hackathons — events that bring the community together to learn, build, and collaborate."
+    variant="bordered"
+    columns={2}
+    features={[
+      {
+        icon: "/assets/co2-icon.svg",
+        title: "Global Summit",
+        description: "An annual series of in-person events hosted by GSF members across the globe. Leaders and practitioners come together to share progress, set direction, and strengthen the movement.",
+        linkText: "Learn about the Summit →",
+        linkHref: "https://summit.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/realtime-icon.svg",
+        title: "Carbon Hack",
+        description: "Our flagship hackathon challenging practitioners to build, measure, and optimise software for sustainability. Open to everyone — from students to seasoned engineers.",
+        linkText: "Join the next Carbon Hack →",
+        linkHref: "https://hack.greensoftware.foundation/",
+      },
+    ]}
+  />
+
+  <!-- Community Articles -->
+  {communityArticles.length > 0 && (
+    <ArticleCarousel
+      heading="Community & Events"
+      body="Stories and highlights from the green software community worldwide."
+      articles={communityArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- Final CTA -->
+  <CTABanner
+    heading="Join the movement"
+    body="Whether you want to listen to a podcast, attend a meetup, earn a badge, or champion green software in your organisation — there's a place for you in this community."
+    ctaText="Join the Movement Platform"
+    ctaHref="https://movement.greensoftware.foundation"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

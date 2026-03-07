@@ -37,6 +37,7 @@ const articles = defineCollection({
       publishedOriginUrl: z.string().optional(),
       lang: z.string().default("en"),
       featured: z.boolean().optional(),
+      tags: z.array(z.string()).optional(),
       organizations: z.array(z.string()).optional(),
       additionalOrgCount: z.number().optional(),
     }),

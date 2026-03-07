@@ -4,6 +4,7 @@ date: "2022-11-10"
 summary: "The Foundation wants a future where software produces no harmful environmental effects. To make this happen, we need software to emit the least amount of carbon possible- read our Book of News to understand how the GSF intend to do this."
 teaserText: "The Foundation wants a future where software produces no harmful environmental effects. To make this happen, we need software to emit the least amount of carbon possible. "
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 The Foundation wants a future where software produces no harmful environmental effects. To make this happen, we need software to emit the least amount of carbon possible. While there are clear trends to harness clean energy (i.e., energy generated from wind, solar and water) and adopt low-carbon emitting solutions, some challenges have made it harder for the software industry to respond to climate change at scale.

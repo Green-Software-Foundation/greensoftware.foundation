@@ -1,0 +1,345 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CardGrid from "@/components/card-grid.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="SOFT — Sustainable Organisational Framework for Technology | Green Software Foundation"
+  description="The comprehensive framework that guides organisations through adopting, implementing, and transforming sustainable software practices."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SOFT" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    heading="Transform Your Organisation for"
+    headingAccent="Sustainable Software"
+    body="SOFT is the comprehensive framework that guides organisations through adopting, implementing, and transforming sustainable software practices across their entire operations."
+    ctas={[
+      { text: "Take the course", variant: "primary", href: "http://grnsft.org/mov-plat-soft-essentials" },
+      { text: "Explore the Framework", variant: "outline", href: "https://github.com/Green-Software-Foundation/SOFT" },
+    ]}
+    imageSrc="/assets/standards/soft/hero.svg"
+    imageAlt="SOFT illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Ratified by leading technology organisations"
+  />
+
+  <!-- What is SOFT? -->
+  <CTACard
+    heading="What is SOFT?"
+    body="The Sustainable Organisational Framework for Technology (SOFT) is your organisation's complete transformation guide for sustainable software practices. Developed by the Green Software Foundation and ratified by leading technology organisations, SOFT provides the bridge between knowing sustainability matters and actually achieving it through your technology operations."
+    imageSrc="/assets/standards/soft/cta.svg"
+    imageAlt="What is SOFT illustration"
+  />
+
+  <!-- The SOFT Framework (4 pillars) -->
+  <FeatureGrid
+    heading="The *SOFT* Framework"
+    body="Four pillars. One transformation. Unlimited potential."
+    columns={4}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/soft/strategy.svg",
+        title: "Strategy",
+        description: "Strategic planning and vision alignment for transformative business outcomes.",
+      },
+      {
+        icon: "/assets/standards/soft/implementation.svg",
+        title: "Implementation",
+        description: "Seamless execution and deployment of solutions with precision and expertise.",
+      },
+      {
+        icon: "/assets/standards/soft/operational.svg",
+        title: "Operational",
+        description: "Streamlined processes and optimised workflows for maximum efficiency.",
+      },
+      {
+        icon: "/assets/standards/soft/compliance.svg",
+        title: "Compliance and Regulations",
+        description: "Robust compliance frameworks and security measures to protect your business.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Mission Card -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/soft/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-medium text-primary-dark italic md:text-xl">
+            <span class="font-bold">SOFT</span> gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving business objectives.
+          </p>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/soft/down.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why SOFT Matters (heading) -->
+  <TextBlock
+    heading="Why *SOFT* Matters"
+    body="SOFT isn't just another framework — it's the catalyst for industry-wide transformation in how we build, deploy, and operate software sustainably."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    body="SOFT transforms how organisations approach software sustainability by providing the first comprehensive, actionable framework that bridges the gap between green software tools and organisational implementation. By standardising approaches across strategy, implementation, operations, and compliance, SOFT accelerates the technology sector's contribution to global net-zero targets. This isn't about point solutions anymore — it's about systematic transformation that creates industry-wide consistency in measuring and reducing software carbon emissions."
+    imageSrc="/assets/standards/soft/why-soft-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    imageSrc="/assets/standards/soft/why-soft-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/soft/achieve.svg",
+        description: "Achieve significant cost savings through reduced energy consumption and resilience to energy price volatility",
+      },
+      {
+        icon: "/assets/standards/soft/drive.svg",
+        description: "Drive operational excellence with standardised practices that reduce technical debt and boost developer productivity",
+      },
+      {
+        icon: "/assets/standards/soft/gain.svg",
+        description: "Gain competitive advantage as a recognised sustainability leader, attracting top talent and environmentally conscious clients",
+      },
+      {
+        icon: "/assets/standards/soft/mitigate.svg",
+        description: "Mitigate risk through proactive compliance management and structured approaches to regulatory changes",
+      },
+      {
+        icon: "/assets/standards/soft/catalyze.svg",
+        description: "Catalyse innovation with framework structures that enable rapid adoption of sustainable technologies",
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/soft/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    body="SOFT directly reduces software-related carbon emissions by embedding sustainability into every phase of the software lifecycle. Organisations implementing SOFT can expect measurable reductions in energy consumption through optimised operations and carbon-aware practices. The framework's comprehensive approach ensures environmental considerations influence decisions from strategic planning through operational execution, creating compound benefits that accelerate your journey to net-zero."
+    imageSrc="/assets/standards/soft/why-soft-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Ready to Explore? -->
+  <CTACard
+    heading="Ready to Explore?"
+    body="Take our 10-minute SOFT Essentials course to understand how the four-pillar framework drives organisational transformation — and whether it's right for your team."
+    ctaText="Take the course"
+    ctaHref="http://grnsft.org/mov-plat-soft-essentials"
+    imageSrc="/assets/standards/soft/ready.svg"
+    imageAlt="Ready to explore illustration"
+  />
+
+  <!-- SOFT Works for Everyone (audience cards) -->
+  <CardGrid
+    heading="*SOFT* Works for Everyone"
+    columns={3}
+    cards={[
+      {
+        imageSrc: "/assets/standards/soft/blog-1.svg",
+        icon: "/assets/standards/soft/csuite-icon.svg",
+        title: "C-Suite & Business Leaders",
+        description: "",
+        bodyHtml: "Transform your sustainability commitments into measurable results. SOFT provides board-ready governance structures, clear KPIs, and demonstrable ROI through cost savings and risk mitigation.<br/><br/>Enhance your corporate reputation while achieving real environmental impact with a framework designed for executive decision-making and strategic alignment.",
+      },
+      {
+        imageSrc: "/assets/standards/soft/blog-2.svg",
+        icon: "/assets/standards/soft/practitioners-icon.svg",
+        title: "Software Practitioners",
+        description: "",
+        bodyHtml: "Make sustainability part of your development DNA without sacrificing performance or productivity. SOFT seamlessly integrates into existing workflows with practical tools, templates, and decision trees that make building greener software straightforward.<br/><br/>Elevate your skills, reduce technical debt, and contribute to meaningful environmental change through your daily work.",
+      },
+      {
+        imageSrc: "/assets/standards/soft/blog-3.svg",
+        icon: "/assets/standards/soft/sustainability-icon.svg",
+        title: "Sustainability Professionals",
+        description: "",
+        bodyHtml: "Finally, bridge the gap between environmental goals and technical reality. SOFT translates your sustainability objectives into actionable IT practices with measurable outcomes and compliance alignment.<br/><br/>Transform technology from a carbon challenge into your greatest opportunity for impact with comprehensive frameworks that speak both business and sustainability languages.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="The Journey to *Global Impact*"
+    items={[
+      { date: "Q1 2024", description: "Proposal<br/>Pre-Draft", completed: true, start: "2024-01-01", end: "2024-03-31" },
+      { date: "Q2 2024", description: "Draft", completed: true, start: "2024-04-01", end: "2024-06-30" },
+      { date: "Jul 2025", description: "Consistency Review<br/>WG Final Approval<br/>SC Ratification", completed: true, start: "2025-07-01", end: "2025-07-31" },
+      { date: "Sep 2025 - Jan 2026", description: "Pilot Program", current: true, start: "2025-09-01", end: "2026-01-31" },
+      { date: "Upcoming 2026", description: "Publication", start: "2026-06-01", end: "2026-12-31" },
+    ]}
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Multiple Ways to Join the Movement"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/soft/feedback-icon.svg",
+        title: "Explore the Framework",
+        description: "Read the full documentation and share your feedback",
+        ctaText: "Visit the GitHub Issue",
+        ctaHref: "https://github.com/Green-Software-Foundation/SOFT/issues",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/soft/subscribe-icon.svg",
+        title: "Join the Software Standards Working Group (Members Only)",
+        description: "Collaborate with industry experts shaping this framework",
+        ctaText: "Subscribe",
+        ctaHref: "https://greensoftware.foundation/projects/software-standards-wg",
+      },
+      {
+        icon: "/assets/standards/soft/directory.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with project leads",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/sustainable-organisational-framework-for-technology-(soft)/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Inquiry about becoming a GSF member",
+        description: "Reach out directly to the GSF team",
+        ctaText: "Get in touch",
+        ctaHref: "https://greensoftware.foundation/membership",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Team -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body="Part of the Software Standards Working Group"
+    columns={2}
+    highlighted={[]}
+    members={[
+      {
+        fullName: "Pindy Bhullar",
+        role: "PhD Researcher / Sustainable IT Consultant",
+        company: "HSBC",
+        photo: "/assets/standards/soft/pindy.jpeg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/pindybhullar/" }],
+      },
+      {
+        fullName: "Sean O'Keefe",
+        role: "Business Program Manager, Product Operations",
+        company: "Microsoft",
+        photo: "/assets/standards/soft/sean.jpeg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/sean-o-keefe/" }],
+      },
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="The Future of Software is Sustainable"
+    body="SOFT isn't just a framework, it's your organisation's pathway to meaningful environmental impact, operational excellence, and competitive advantage. Whether you're ready to join the pilot, explore the resources, or simply learn more, the time to act is now."
+    ctaText="Take the course"
+    ctaHref="http://grnsft.org/mov-plat-soft-essentials"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

@@ -5,6 +5,7 @@ summary: "In a series of workshops in 2024, members of the GSF Green AI Committe
 teaserText: "Building a greener AI future through lifecycle accountability, standards, and collaboration. "
 mainImage: "./main.png"
 featured: true
+tags: ["research"]
 organizations:
   - "Accenture"
   - "Microsoft"

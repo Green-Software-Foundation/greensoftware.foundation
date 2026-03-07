@@ -19,6 +19,7 @@ authors:
         link: "https://www.facebook.com/BusinessTrainerSriLanka/"
       - platform: "Personal Website"
         link: "https://diyunuwablog.com/"
+tags: ["education"]
 ---
 
 ## Tell us about your interest in green software and your journey to GSF.

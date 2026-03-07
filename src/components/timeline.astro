@@ -1,0 +1,124 @@
+---
+import clsx from "clsx";
+import TimelineTrack from "@/components/react/timeline-track";
+
+interface TimelineItem {
+  /** Display date label (e.g. "June 2021", "Q2 2024") */
+  date: string;
+  /** Description text (supports HTML) */
+  description: string;
+  /** Whether this milestone is completed */
+  completed?: boolean;
+  /** Whether this is the current/active milestone */
+  current?: boolean;
+  /** ISO date string for timeline progress calculation */
+  start?: string;
+  /** ISO date string for timeline progress calculation */
+  end?: string;
+}
+
+interface Props {
+  /** Section heading. Wrap words in *asterisks* for accent colour */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Array of timeline milestones */
+  items: TimelineItem[];
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body,
+  items = [],
+  bgClass = "bg-white",
+} = Astro.props;
+
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+
+// Calculate the active index (last completed or current item)
+const activeIndex = items.reduce((acc, item, i) => {
+  if (item.completed || item.current) return i;
+  return acc;
+}, 0);
+
+// Build segments for time-based progress
+const segments = items
+  .filter(item => item.start && item.end)
+  .map(item => ({ start: item.start!, end: item.end! }));
+
+// Tailwind requires static class names — use a lookup map
+const gridColsMap: Record<number, string> = {
+  2: "md:grid-cols-2",
+  3: "md:grid-cols-3",
+  4: "md:grid-cols-4",
+  5: "md:grid-cols-5",
+  6: "md:grid-cols-6",
+  7: "md:grid-cols-7",
+};
+const colSpan = items.length <= 7 ? items.length : 7;
+const gridClass = gridColsMap[colSpan] || "md:grid-cols-5";
+---
+
+<section class={`py-12 md:py-18 lg:py-20 ${bgClass}`}>
+  <div class="container">
+    <div class="mx-auto max-w-3xl">
+      {heading && (
+        <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
+          {headingParts.map(part =>
+            part.accent
+              ? <span class="font-bold text-primary">{part.text}</span>
+              : part.text
+          )}
+        </h2>
+      )}
+      {body && (
+        <p class="mt-3 text-center text-lg md:mt-4 md:text-xl">
+          {body}
+        </p>
+      )}
+    </div>
+    <div class="relative mt-12 md:mt-18 lg:mt-20">
+      <TimelineTrack
+        client:load
+        count={items.length}
+        activeIndex={activeIndex}
+        segments={segments.length > 0 ? segments : undefined}
+      />
+      <ol class:list={["grid grid-cols-1 gap-6 md:gap-4 lg:gap-6", gridClass]}>
+        {items.map((item) => (
+          <li class="relative flex flex-col items-center gap-3 text-center md:gap-4">
+            <div class="relative">
+              {item.current && (
+                <span class="absolute -inset-2 inline-block animate-ping rounded-full bg-primary/40" />
+              )}
+              <div
+                data-timeline-dot
+                class={clsx(
+                  "relative z-10 flex size-8 items-center justify-center rounded-full text-white",
+                  (item.completed || item.current) ? "bg-primary" : "bg-accent-lighter"
+                )}
+              >
+                {item.completed && (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                )}
+              </div>
+            </div>
+            <div>
+              <h3 class="mb-2 text-xl font-bold text-primary">{item.date}</h3>
+              <p set:html={item.description} class="text-sm" />
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

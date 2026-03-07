@@ -4,6 +4,7 @@ date: "2024-01-22"
 summary: "Starting with a small but determined team, Avanade consistently produced engaging content and provided resources to raise awareness and spark interest within the organization. A grassroots approach has turned into a strong green software movement with decentralized groups engaging and sharing information. Other companies are following suit, using Avanade’s success story as a template for shaping their own green software culture."
 teaserText: "“The people are driving our green software success today,” so Chris Lloyd-Jones. Avanade is a steering member of the GSF and actively contributes to a number of GSF working groups. How did they succeed in spreading the green software ideology within their corporate walls?"
 mainImage: "./main.jpg"
+tags: ["education"]
 ---
 
 Avanade is home to a fascinating story of how the fresh breeze of sustainability fosters continued change in an organization.  It all started with joining the GSF roughly two years ago, and while the beginnings were slow, the results are nothing short but astounding. But we’re getting ahead of ourselves; let’s see where they began and find out how far they got. 

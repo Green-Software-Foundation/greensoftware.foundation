@@ -4,6 +4,7 @@ date: "2024-10-03"
 summary: "Join us in welcoming the Manchester Metropolitan University (McrMet) to the GSF. Dr. Michael Bane and Dr. Ernest Edifor share more on advancing the teaching of green software engineering across universities and colleges."
 teaserText: "The aim is to form a new generation of green software and green software practitioners to develop timely and impactful solutions."
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 We see developing green software as vital for achieving net-zero targets; hence, it is pertinent that the software developers of tomorrow, who are being trained today, acquire the knowledge, skill, and expertise to develop energy and carbon-efficient software applications. 

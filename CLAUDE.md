@@ -161,6 +161,39 @@ The press page at `src/pages/press/index.astro` pulls data dynamically from mult
 - **Press mentions** — from `src/data/press-mentions.json` (fetched from Notion "GSF Mentions in the News" database)
 - **Timeline** — hardcoded 22-item timeline with links to articles and external sites
 
+### Policy & Research Page (`/policy/`)
+
+The policy page at `src/pages/policy/index.astro` covers the Policy Working Group and research programme:
+- **Leadership** — Chris Adams, Aya Saed (co-chairs), Joseph Cook (Head of Research) — photos from `team.json`
+- **Policy Radar** — TextWithImage linking to `policy-radar.greensoftware.foundation`
+- **Policy Engagement** (`#engagement` anchor) — 6 hardcoded cards with article links (GHG Protocol, AI Environmental Impacts Act, NY CCAA, EGDC, UK GDSA, EU AI Act)
+- **Engagement Principles** — 5 principles from PWG mission statement (FeatureGrid, no icons)
+- **Partnerships** — W3C, IASA, SustainableIT.org, UK GDSA, BCS (FeatureGrid with article links)
+- **Research** — 4 hardcoded publication cards (AI Environmental Assessments, Green AI Position Paper, Texas State study, UBS/Microsoft whitepaper)
+- **Article carousel** — dynamically filtered by `tags` field containing "policy" or "research"
+
+### Article Tags
+
+Articles support an optional `tags` field (string array) in frontmatter. Tags are used to surface articles on topic pages:
+- `"policy"` — appears in the Policy & Research carousel
+- `"research"` — appears in the Policy & Research carousel
+- `"community"` — appears in the Community page carousel
+- Tags are managed via the Sveltia CMS Tags widget or directly in frontmatter
+
+### Standards Page (`/standards/`)
+
+The standards page at `src/pages/standards/index.astro` showcases GSF's standards process:
+- **Dynamic project cards** — imports `projects.json` and uses a `standardDefs` array with optional `urlSlug` overrides (e.g. `real-time-cloud` → `rtc` for the URL)
+- **Lifecycle badges** — each card shows its lifecycle stage; "Learn more" links are hidden for Proposal/Pre-proposal stages
+- **Sections**: Hero → VerticalPipeline (7-stage lifecycle) → Project cards grid → AI-facilitated consensus → Assemblies → Spec quality FeatureGrid → SCI Certification CTACard → CTABanner
+
+### Navigation (`src/lib/nav-items.ts`)
+
+The nav config supports these features:
+- **`headerLink`** — per-section CTA button rendered at the top of a mega-menu section (e.g. "About our education programme →"). Defined on `NavSection`, rendered in both desktop `MegaMenuPanel` and mobile `MobileNavSection`.
+- **`footerLink`** — panel-level CTA at the bottom of the entire dropdown (e.g. "About our standards process →"). Defined on `NavItemDropdown`.
+- **Icons** — currently all commented out across all menus. Both `iconSrc` (project image URL) and `icon` (Lucide icon name) are supported but disabled pending design review.
+
 ### Site Search (PageFind)
 
 The site uses [PageFind](https://pagefind.app/) for static site search. PageFind indexes the built HTML at build time and serves a chunked index client-side.

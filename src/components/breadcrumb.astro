@@ -1,0 +1,32 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  bgClass?: string;
+}
+
+const { items, bgClass = "bg-accent-lightest-2" } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class={`pt-4 ${bgClass}`}>
+  <div class="container">
+    <ol class="flex items-center gap-1.5 text-sm text-primary-dark/70">
+      {items.map((item, i) => (
+        <>
+          {i > 0 && <li aria-hidden="true" class="text-primary-dark/40">/</li>}
+          <li>
+            {item.href ? (
+              <a href={item.href} class="hover:text-primary hover:underline">{item.label}</a>
+            ) : (
+              <span class="font-medium text-primary-dark">{item.label}</span>
+            )}
+          </li>
+        </>
+      ))}
+    </ol>
+  </div>
+</nav>

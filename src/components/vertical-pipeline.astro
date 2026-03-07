@@ -1,0 +1,78 @@
+---
+interface Step {
+  name: string;
+  description: string;
+}
+
+interface Props {
+  /** Heading text. Wrap words in *asterisks* for accent colour */
+  heading?: string;
+  /** Body text under heading */
+  body?: string;
+  /** Small label above the heading */
+  badge?: string;
+  /** Array of pipeline steps */
+  steps?: Step[];
+  /** Background class */
+  bgClass?: string;
+}
+
+const {
+  heading = "",
+  body,
+  badge,
+  steps = [],
+  bgClass = "bg-accent-lightest-2",
+} = Astro.props;
+
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+---
+
+<section class={`py-16 md:py-20 ${bgClass}`}>
+  <div class="container">
+    <div class="mx-auto max-w-3xl">
+      {badge && (
+        <p class="mb-3 text-center text-xs font-bold uppercase tracking-widest text-primary">{badge}</p>
+      )}
+      {heading && (
+        <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">
+          {headingParts.map(part =>
+            part.accent
+              ? <span class="text-primary">{part.text}</span>
+              : part.text
+          )}
+        </h2>
+      )}
+      {body && (
+        <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark">{body}</p>
+      )}
+
+      <div class="mt-12">
+        {steps.map((step, index) => (
+          <div class="relative flex gap-4 md:gap-6">
+            {/* Vertical line + circle */}
+            <div class="flex flex-col items-center">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                {index + 1}
+              </div>
+              {index < steps.length - 1 && (
+                <div class="w-0.5 grow bg-primary-lighter" />
+              )}
+            </div>
+
+            {/* Content card */}
+            <div class={`${index < steps.length - 1 ? "pb-8" : "pb-0"} pt-1`}>
+              <h3 class="text-lg font-bold text-primary-dark">{step.name}</h3>
+              <p class="mt-1 text-sm text-gray-darker leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

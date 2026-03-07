@@ -4,6 +4,7 @@ date: "2023-11-17"
 summary: "HCLTech is a software developer with a solid internal focus on green software training. SVP and Global Client Partner at HCLTech, Sunil Aggarwal, reveals more about their green software journey."
 teaserText: "HCLTech has developed multiple solutions based on GSF guidelines, helping its customers capture the carbon footprint of software, applications, services, and components. HCLTech has used the SCI formula to develop these solutions. "
 mainImage: "./main.jpg"
+tags: ["education"]
 ---
 
 Sunil manages sales and delivery across all HCL service lines, including engineering, R&D, BPO, applications, and infrastructure. He is building an ecosystem around Microsoft technologies, including Azure, Azure ML, Dynamics, and Teams. He also played a pivotal role in creating different centers of excellence like Accessibility and User experiences for products, Digital and Analytics Lab using advanced ML techniques, hardware compatibility labs, and crowdsourcing platforms. His key focus is on using green engineering guidelines and reducing the carbon footprint of software and services.

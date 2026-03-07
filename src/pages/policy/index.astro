@@ -1,0 +1,391 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import teamData from "@/data/team.json";
+import { getCollection } from "astro:content";
+
+// ----- Leadership photos from team.json -----
+const chrisAdams = teamData.find((p: any) => p.fullName === "Chris Adams");
+const ayaSaed = teamData.find((p: any) => p.fullName === "Aya Saed");
+const josephCook = teamData.find((p: any) => p.fullName === "Joseph Cook");
+
+// ----- Articles tagged "policy" or "research" for the carousel -----
+const allArticles = await getCollection("articles");
+const policyArticles = allArticles
+  .filter((a: any) => {
+    const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
+    return tags.includes("policy") || tags.includes("research");
+  })
+  .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
+  .map((a: any) => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || undefined,
+    href: `/articles/${a.id}/`,
+    cta: "Read the article",
+  }));
+---
+
+<Layout
+  title="Policy & Research — Green Software Foundation"
+  description="How the Green Software Foundation engages with policymakers, tracks emerging legislation, and produces research to advance sustainable software practices."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Hero -->
+  <Hero
+    heading="Policy"
+    headingAccent="& Research"
+    body="Bridging the gap between technical expertise and policy action. We track emerging legislation, engage in public consultations, and produce research that helps policymakers and practitioners navigate the evolving landscape of sustainable software."
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Policy & Research illustration"
+  />
+
+  <!-- Intro -->
+  <TextBlock
+    heading="Not lobbying — *convening, clarifying, and educating*"
+    body="The Policy Working Group takes a deliberately nonpartisan approach. Rather than traditional lobbying, we focus on translating deep technical expertise into accessible insights that inform better policy decisions around software sustainability. Our work is guided by the UN Global Compact Guide for Responsible Corporate Engagement in Climate Policy."
+    compact
+  />
+  <div class="container -mt-4 mb-8 text-center">
+    <a href="https://github.com/Green-Software-Foundation/policy-wg/blob/main/pwg-mission-statement.md" target="_blank" rel="noopener noreferrer" class="inline-block text-sm font-semibold text-primary hover:underline">
+      Read the full Policy Working Group mission statement &rarr;
+    </a>
+  </div>
+
+  <!-- Leadership -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          <span class="font-bold text-primary">Leadership</span>
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          The Policy Working Group is co-chaired by Chris Adams and Aya Saed. Research is led by Joseph Cook.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-4xl gap-8 md:grid-cols-3">
+        {[
+          { person: chrisAdams, name: "Chris Adams", role: "Co-Chair, Policy Working Group", org: "Green Web Foundation", title: "Director of Technology and Policy" },
+          { person: ayaSaed, name: "Aya Saed", role: "Co-Chair, Policy Working Group", org: "Scope3", title: "Director of AI Policy and Strategy" },
+          { person: josephCook, name: "Joseph Cook", role: "Head of Research", org: "Green Software Foundation", title: "Head of Research" },
+        ].map(({ person, name, role, org, title }) => (
+          <div class="flex flex-col items-center text-center">
+            <div class="h-28 w-28 overflow-hidden rounded-full border-2 border-primary-lighter bg-accent-lightest-2">
+              {person?.photo ? (
+                <img src={person.photo} alt={name} class="h-full w-full object-cover" />
+              ) : (
+                <div class="flex h-full w-full items-center justify-center text-2xl font-bold text-primary">
+                  {name.split(" ").map((n: string) => n[0]).join("")}
+                </div>
+              )}
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-primary-dark">{name}</h3>
+            <p class="text-sm font-semibold text-primary">{role}</p>
+            <p class="mt-1 text-sm text-gray-darker">{title}, {org}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Policy Radar -->
+  <TextWithImage
+    badge="RATIFIED MAY 2025"
+    heading="Policy"
+    headingAccent="Radar"
+    stats={[
+      "A shared, transparent database of upcoming green software legislation",
+      "Track open consultations, new laws, deadlines, and ways to get involved",
+    ]}
+    body="Knowing which laws are coming and when to engage in the policymaking process is half of the battle. The Policy Radar provides an overview of upcoming policy events — open consultations, new active and passed laws — covering affected territories, relevant areas in green software, deadlines, ways to get involved, and how regulations may affect specific groups."
+    ctaText="Browse the Policy Radar"
+    ctaHref="https://policy-radar.greensoftware.foundation"
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Policy Radar"
+  />
+
+  <!-- Consultation Responses & Policy Engagement -->
+  <section id="engagement" class="bg-white py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl">
+          Policy <span class="font-bold text-primary">Engagement</span>
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          We actively participate in public consultations and policy processes, bringing the voice of the green software community to policymakers worldwide.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+        {[
+          {
+            title: "GHG Protocol Scope 2 Consultation",
+            description: "Submitted a formal response advocating for time- and location-sensitive emissions data, arguing that annual averages and broad geographic boundaries don't give software engineers the granularity they need to act.",
+            link: "/articles/en/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/",
+            linkText: "Read our response",
+          },
+          {
+            title: "AI Environmental Impacts Act",
+            description: "GSF's first formal policy endorsement. We called for mandated studies on AI's environmental impacts, an AI Environmental Impacts Consortium, and a voluntary reporting framework for AI developers.",
+            link: "/articles/en/the-gsf-endorses-the-ai-environmental-impacts-act/",
+            linkText: "Read our endorsement",
+          },
+          {
+            title: "NY Corporate Climate Accountability Act",
+            description: "Coordinated responses to the New York Senate's proposed legislation on corporate climate accountability, bringing technical expertise to inform the legislative process.",
+            link: "/articles/en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
+            linkText: "Read about our engagement",
+          },
+          {
+            title: "European Green Digital Coalition",
+            description: "Engaging with the EGDC to align green software standards with European digital sustainability policy and the EU's broader environmental objectives.",
+            link: "/articles/en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
+            linkText: "Read about our engagement",
+          },
+          {
+            title: "UK Government Digital Sustainability Alliance",
+            description: "The GSF joined the UK GDSA to support the UK government's digital sustainability goals and contribute technical expertise to UK policy development.",
+            link: "/articles/en/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+            linkText: "Read about GDSA",
+          },
+          {
+            title: "EU AI Act",
+            description: "Analysing the implications of the first binding regulation on AI globally, with insights from the Green AI Committee on what it means for sustainable software development.",
+            link: "/articles/en/the-eu-ai-act-insights-from-the-green-ai-committee/",
+            linkText: "Read our analysis",
+          },
+        ].map(({ title, description, link, linkText }) => (
+          <div class="rounded-xl border border-border bg-accent-lightest-2 p-6">
+            <h3 class="text-lg font-bold text-primary-dark">{title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">{description}</p>
+            <a href={link} class="mt-3 inline-block text-sm font-semibold text-primary hover:underline">
+              {linkText} &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Principles -->
+  <FeatureGrid
+    heading="Our *Engagement Principles*"
+    body="Aligned with the UN Global Compact Guide for Responsible Corporate Engagement in Climate Policy, the Policy Working Group operates under five core principles."
+    features={[
+      {
+        title: "Legitimacy",
+        description: "Engaging through transparent, evidence-based processes that reflect the consensus of our membership.",
+      },
+      {
+        title: "Opportunity",
+        description: "Identifying and acting on windows for meaningful input before regulations are finalised.",
+      },
+      {
+        title: "Consistency",
+        description: "Ensuring our positions align with our mission and the broader goals of environmental sustainability.",
+      },
+      {
+        title: "Transparency",
+        description: "Making our policy positions, consultation responses, and engagement activities publicly available.",
+      },
+      {
+        title: "Accountability",
+        description: "Tracking and reporting on our engagement activities and their outcomes to our membership.",
+      },
+    ]}
+    columns={3}
+  />
+
+  <!-- Partnerships & MOUs -->
+  <FeatureGrid
+    heading="Partnerships & *Collaborations*"
+    body="We work with leading organisations to amplify the impact of green software policy and research."
+    features={[
+      {
+        title: "W3C",
+        description: "Collaborating with the World Wide Web Consortium to advance sustainability standards for the web.",
+        linkText: "Read about the partnership",
+        linkHref: "/articles/en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/",
+      },
+      {
+        title: "SustainableArchitectures.org (IASA)",
+        description: "Partnering to advance sustainability in enterprise architecture and software design practices.",
+        linkText: "Read about the partnership",
+        linkHref: "/articles/en/the-green-software-foundation-gsf-and-sustainablearchitectures-org-partner-to-adv/",
+      },
+      {
+        title: "SustainableIT.org",
+        description: "Joint initiatives to drive sustainable IT adoption across organisations worldwide.",
+        linkText: "Read about the partnership",
+        linkHref: "/articles/en/green-software-foundation-and-sustainableit-org-partnership/",
+      },
+      {
+        title: "UK GDSA",
+        description: "Supporting the UK Government Digital Sustainability Alliance's digital sustainability goals.",
+        linkText: "Read about joining GDSA",
+        linkHref: "/articles/en/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+      },
+      {
+        title: "British Computer Society",
+        description: "Working together to promote green software practices within the UK's chartered institute for IT.",
+      },
+    ]}
+    columns={3}
+    bgClass="bg-white"
+  />
+
+  <!-- Research -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl">
+          <span class="font-bold text-primary">Research</span>
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          Our research programme produces evidence-based publications that inform both policy decisions and industry practice.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+        <div class="rounded-xl border border-border bg-white p-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-primary">Ratified November 2025</p>
+          <h3 class="mt-3 text-xl font-bold text-primary-dark">AI Environmental Assessments</h3>
+          <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
+            The foundation's key research publication examining the environmental impact of AI systems, providing frameworks for assessing and reducing the carbon footprint of AI workloads.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-border bg-white p-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-primary">Position Paper</p>
+          <h3 class="mt-3 text-xl font-bold text-primary-dark">Green AI Position Paper</h3>
+          <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
+            Defining Green AI, assessing its environmental impacts across the AI lifecycle, and outlining key actions for AI sustainability.
+          </p>
+          <a href="/articles/en/green-ai-position-paper/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+            Read the position paper &rarr;
+          </a>
+        </div>
+
+        <div class="rounded-xl border border-border bg-white p-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-primary">Academic Research</p>
+          <h3 class="mt-3 text-xl font-bold text-primary-dark">SCI for Foundation Models (Texas State University)</h3>
+          <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
+            GSF-funded study by Texas State University evaluating the software carbon intensity of AI foundation models, confirming the SCI as an effective metric for measuring the carbon impact of software.
+          </p>
+          <a href="/articles/en/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+            Read about the study &rarr;
+          </a>
+        </div>
+
+        <div class="rounded-xl border border-border bg-white p-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-primary">Whitepaper</p>
+          <h3 class="mt-3 text-xl font-bold text-primary-dark">Carbon-Aware Computing (UBS & Microsoft)</h3>
+          <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
+            The first enterprise-scale implementation of carbon-aware computing using the SCI specification and Carbon Aware SDK, demonstrating the ability to avoid multiple metric tons of CO2eq annually.
+          </p>
+          <a href="/articles/en/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+            Read the whitepaper &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Quote -->
+  <section class="bg-primary-darker py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <blockquote class="text-xl font-medium leading-relaxed text-white/90 md:text-2xl">
+          &ldquo;One of the biggest challenges is the fragmentation of the policy landscape. There's no centralised authority setting energy standards for software, and existing regulatory frameworks often lag far behind the pace of digital innovation. But that's also where the opportunity lies: to influence upstream decisions — procurement, design, infrastructure — that shape emissions before they ever occur.&rdquo;
+        </blockquote>
+        <p class="mt-6 text-base font-semibold text-accent">Aya Saed</p>
+        <p class="text-sm text-white/60">Director of AI Policy and Strategy, Scope3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Carousel -->
+  {policyArticles.length > 0 && (
+    <ArticleCarousel
+      heading="Policy & Research Articles"
+      body="The latest thinking from the green software community on policy, regulation, and research."
+      articles={policyArticles}
+      showOrganizations={false}
+      ctaText="View all articles"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Want to shape the future of green software policy?"
+    body="GSF members can participate in the Policy Working Group, contribute to consultation responses, and help track emerging legislation through the Policy Radar."
+    ctaText="Explore membership"
+    ctaHref="/membership/"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/sci/", text: "SCI Specification" },
+          { href: "/standards/soft/", text: "SOFT Framework" },
+          { href: "https://learn.greensoftware.foundation", text: "Green Software Practitioner" },
+          { href: "/standards/sci-ai/", text: "SCI for AI" },
+          { href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk", text: "Carbon Aware SDK" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "Our Mission" },
+          { href: "/governance/", text: "Governance" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+          { href: "/press/", text: "Press & Media" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "/events/", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

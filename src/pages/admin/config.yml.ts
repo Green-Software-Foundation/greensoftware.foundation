@@ -124,6 +124,15 @@ collections:
         i18n: duplicate
         hint: "When enabled, this article appears in the Featured Content carousel on the homepage."
 
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+        i18n: duplicate
+        hint: >
+          Categorise articles with tags such as "policy", "research", "standards",
+          "community". Used to surface articles on topic pages like Policy & Research.
+
       - label: Authors
         name: authors
         widget: list

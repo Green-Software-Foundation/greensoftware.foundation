@@ -17,6 +17,7 @@
 - [x] **Nav project icons** — fetch official icons from directory project, update navbar data
 - [x] **Standards nav label** — rename to something like "Our standards process" and restructure dropdown
 - [ ] **Google Analytics** — add tracking script to the site layout
+- [ ] [Asset deduplication](docs/features/asset-deduplication.md) — scan for duplicate images, consolidate, add asset registry to CLAUDE.md
 - [x] **404 page** — created `src/pages/404.astro`
 
 ## Find from Notion (batch session — just need to locate the right Notion pages/URLs)
@@ -26,13 +27,13 @@
 - [x] **Employee Registration** → `wiki.greensoftware.foundation/register`
 - [ ] **Contact form** — find the existing form (there should be one already)
 - [x] **Press & Media content** — find in Notion, will need importing
-- [ ] **Brand & Assets** — find the Notion page URL
+- [x] **Brand & Assets** — built `/brand/` page with colour palette, logos, asset downloads, Canva templates, official description
 - [ ] **Newsletter page/form** — verify if a signup page exists, or find the form URL to create one
 
 ## Medium Effort (a few hours each)
 
 - [x] **Member stories as content collection** — stories wired as Astro content collection with dynamic `[slug].astro` template
-- [ ] **Manifesto page** — migrate existing content from legacy site into a new Astro page
+- [/] **Manifesto page** — migrate existing content from legacy site into a new Astro page
 - [ ] **Newsletter page** — simple "join our newsletter" page with signup form (once Notion form URL is found)
 - [x] **Search (PageFind)** — integrated PageFind for static site search with custom React dialog, phrase search, English-only indexing, keyboard shortcut (Cmd+K)
 - [x] **Governance & Leadership team fix** — fixed Person/Role property type swap (title vs rich_text) and added direct photo download from GSF Team DB
@@ -41,17 +42,15 @@
 
 ## Bigger Pieces (new pages, need content decisions + creative session)
 
-- [ ] **Standards page** — new page explaining GSF's standards process and portfolio (SCI, SCI for AI, SCI for Web, RTC, etc.)
-- [ ] **Policy page** — new page covering Policy Working Group, Policy Radar, policy engagement
-- [ ] **Research page** — new page (needs thinking through — what goes here?)
-- [ ] **About page** — new page with GSF overview, mission, history summary
-- [ ] **Education page** — landing page for courses, patterns, certification, learning journey
-- [ ] **Community landing page** — generic community page tying together Movement platform, events, newsletters, badges, champions
-- [ ] **History page** — GSF timeline/history (needs figuring out and building)
-- [ ] **Assemblies page** — own page eventually; link out to existing assemblies page for now
+- [x] **Standards page** — built `/standards/` with lifecycle pipeline, dynamic project cards from projects.json, AI consensus section, assemblies, spec quality grid
+- [x] **Policy & Research page** — built `/policy/` with PWG leadership, Policy Radar, engagement cards, principles, partnerships, research publications, tagged article carousel
+- [x] **About page** — built `/about/` with mission, vision, values, founding story, structure, what we do, stats
+- [x] **Education page** — built `/education/` landing page
+- [x] **Community landing page** — built `/community/` with podcasts, meetups, events, Champions, Movement Platform
+- [-] **History page** — GSF timeline/history (needs figuring out and building)
+- [/] **Assemblies page** — own page eventually; link out to existing assemblies page for now
 - [x] **Press & Media section** — import content from Notion sources into a new page/section
-- [ ] **Adoption page** — maybe not needed, TBD
-- [ ] **Certification page** — potentially needed under Standards, TBD
+- [/] **Certification page** — potentially needed under Standards, TBD
 
 ## Done
 

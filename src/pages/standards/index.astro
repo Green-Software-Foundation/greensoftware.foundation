@@ -1,0 +1,220 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import VerticalPipeline from "@/components/vertical-pipeline.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import CTACard from "@/components/cta-card.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+// Standards to feature on this page, in display order
+// urlSlug overrides the project slug for the /standards/<slug>/ URL where they differ
+const standardDefs = [
+  { slug: "sci" },
+  { slug: "sci-ai" },
+  { slug: "sci-web" },
+  { slug: "soft" },
+  { slug: "real-time-cloud", urlSlug: "rtc" },
+  { slug: "wdpc" },
+  { slug: "see" },
+  { slug: "swe" },
+];
+const standardProjects = standardDefs
+  .map(def => {
+    const p = projects.find((p: any) => p.slug === def.slug);
+    return p ? { ...p, urlSlug: def.urlSlug || p.slug } : null;
+  })
+  .filter(Boolean) as Array<{ name: string; slug: string; urlSlug: string; lifecycle: string | null; description: string | null; website: string | null; icon: string | null }>;
+---
+
+<Layout>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Hero -->
+  <Hero
+    heading="Building Standards Through"
+    headingAccent="AI-Facilitated Consensus"
+    body="GSF develops open standards for green software — using a novel AI-assisted process that compresses years of consensus-building into weeks."
+    ctas={[
+      { text: "See our standards", variant: "primary", href: "#standards" },
+      { text: "Join an Assembly", variant: "outline", href: "https://assemblies.greensoftware.foundation" },
+    ]}
+    imageSrc="/assets/why-wdpc-feat-3.svg"
+    imageAlt="Standards illustration"
+    bgClass="bg-accent-lightest-2"
+    id="hero"
+  />
+
+  <!-- Specification Lifecycle -->
+  <VerticalPipeline
+    badge="SPECIFICATION LIFECYCLE"
+    heading="From idea to *published standard*"
+    body="Every GSF specification follows a rigorous seven-stage lifecycle, ensuring quality, consensus, and real-world applicability."
+    bgClass="bg-white"
+    steps={[
+      { name: "Proposal", description: "Requirements gathering from diverse stakeholders, defining scope and objectives, validating requirements." },
+      { name: "Pre-Draft", description: "Research and analysis, composing a preliminary technical specification draft." },
+      { name: "Draft", description: "Full specification with structured sections: introduction, scope, objectives, requirements, design, metrics, and compliance." },
+      { name: "Consistency Review", description: "Peer reviews, stakeholder feedback, and iterative refinement of the document." },
+      { name: "Working Group Approval", description: "Working group review, broader feedback incorporation, and formal sign-off." },
+      { name: "Steering Committee Ratification", description: "The Steering Committee officially approves the specification for public release." },
+      { name: "Published", description: "Public release, ongoing feedback, and maintenance. The standard is available for adoption." },
+    ]}
+  />
+
+  <!-- Current Standards & Projects -->
+  <section class="py-16 md:py-20 bg-accent-lightest-2" id="standards">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl">
+          Current Standards <span class="text-primary">& Projects</span>
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base text-primary-dark">
+          Specifications at every stage of the lifecycle — from early proposals to internationally recognised standards.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {standardProjects.map((project) => (
+          <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+            <div class="mb-3 flex items-center gap-3">
+              {project.icon && <img src={project.icon} alt="" class="h-8 w-8" />}
+              {project.lifecycle && (
+                <span class="rounded-full bg-accent-lighter px-2.5 py-0.5 text-xs font-semibold text-accent-darker">
+                  {project.lifecycle}
+                </span>
+              )}
+            </div>
+            <h3 class="text-lg font-bold">{project.name}</h3>
+            {project.description && (
+              <p class="mt-2 text-sm text-gray-darker grow">{project.description}</p>
+            )}
+            {project.lifecycle && !["Proposal", "Pre-proposal"].includes(project.lifecycle) && (
+              <a href={`/standards/${project.urlSlug}/`} class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline">
+                Learn more →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- AI-Facilitated Consensus -->
+  <TextWithImage
+    badge="OUR APPROACH"
+    heading="AI-Facilitated Consensus:"
+    headingAccent="from blank page to agreement in ten weeks"
+    body="Traditional standards take 3+ years. GSF's AI-facilitated assembly process brought 14 experts from 15 organisations to full consensus on SCI for Web in just 10 weeks. Structured questions feed into LLM synthesis, with human-in-the-loop review, iterative refinement, and explicit decision gates at every stage."
+    ctaText="Read the full story →"
+    ctaHref="/stories/ai-accelerated-consensus/"
+    imageSrc="/assets/why-wdpc-feat-1.svg"
+    imageAlt="AI-facilitated consensus illustration"
+    reversed
+    bgClass="bg-white"
+  />
+
+  <!-- Assemblies -->
+  <TextWithImage
+    badge="ASSEMBLIES"
+    heading="Most GSF standards begin with"
+    headingAccent="an Assembly"
+    body="Assemblies are dedicated workshops — public or member-only — where experts collaborate on a specific challenge. Whether the goal is exploration, knowledge sharing, developing a new standard, or gathering feedback, assemblies bring the right people together to move from problem to solution."
+    ctaText="Explore upcoming assemblies →"
+    ctaHref="https://assemblies.greensoftware.foundation"
+    imageSrc="/assets/why-feat-1.svg"
+    imageAlt="Assemblies illustration"
+  />
+
+  <!-- Characteristics of Good Specifications -->
+  <FeatureGrid
+    heading="What makes a *good specification*"
+    body="Every GSF standard is evaluated against eight quality characteristics drawn from our standards playbook."
+    variant="bordered"
+    columns={2}
+    features={[
+      { title: "Clarity", description: "Unambiguous language that leaves no room for misinterpretation." },
+      { title: "Completeness", description: "Covers all necessary aspects without leaving critical gaps." },
+      { title: "Consistency", description: "No internal contradictions; aligned with other GSF specifications." },
+      { title: "Testability", description: "Requirements can be verified through objective testing or measurement." },
+      { title: "Traceability", description: "Every requirement links back to a stakeholder need or objective." },
+      { title: "Maintainability", description: "Structured for easy updates as technology and understanding evolve." },
+      { title: "Feasibility", description: "Technically achievable with current or near-term capabilities." },
+      { title: "Prioritisation", description: "Critical requirements are clearly distinguished from nice-to-haves." },
+    ]}
+  />
+
+  <!-- SCI Certification Programme -->
+  <CTACard
+    heading="SCI Certification Programme"
+    body="GSF is developing a self-certification programme for SCI conformance — enabling organisations to demonstrate their commitment to measuring and reducing software carbon intensity."
+    ctaText="Get involved"
+    ctaHref="/membership/"
+    imageSrc="/assets/ready.svg"
+    imageAlt="Certification illustration"
+  />
+
+  <!-- Final CTA -->
+  <CTABanner
+    heading="Want to propose a new standard or join an existing project?"
+    body="Every standard starts with a conversation. Whether you want to contribute to an existing specification or propose something new, we'd love to hear from you."
+    ctaText="Get involved"
+    ctaHref="/membership/"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

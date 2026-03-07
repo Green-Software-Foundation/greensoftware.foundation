@@ -4,6 +4,7 @@ date: "2023-10-04"
 summary: "Find out about exciting events in the green software space. Our article sheds a light on what's in the pipeline, providing you the dates, topics and links."
 teaserText: "In a world where environmental concerns have taken center stage, the tech industry is expected to play its part in reducing its carbon footprint. "
 mainImage: "./main.jpg"
+tags: ["community", "events"]
 ---
 
 The software development and design community, particularly, is at a pivotal moment in history. It's a moment where the power of coding can be harnessed with a focus on actively contributing to the planet's sustainability, shaping a digital landscape that champions environmental responsibility above all else.

@@ -4,6 +4,7 @@ date: "2025-12-11"
 summary: "Learn why the GSF is participating in the GHG Protocol Scope 2 consultation and how better carbon accounting standards enable emissions reductions."
 teaserText: "We're advocating for carbon accounting standards that give practitioners the actionable data they need to reduce software emissions."
 mainImage: "./main.jpg"
+tags: ["policy"]
 ---
 
 At the Green Software Foundation, we support software practitioners in reducing carbon emissions through informed choices and deliberate action. That's why we're participating in the GHG Protocol's Scope 2 consultation—to influence carbon accounting standards that help lower emissions in practice. 

@@ -4,6 +4,7 @@ date: "2025-06-17"
 summary: "Join us as we welcome Mondragon University to the GSF and learn how they’re preparing the next generation of engineers to lead the sustainability transition."
 teaserText: "Connecting research and industry to shape the next generation of sustainability leaders."
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 Miren coordinates the software and systems engineering research group at Mondragon University, which focuses on building more sustainable, maintainable systems. 

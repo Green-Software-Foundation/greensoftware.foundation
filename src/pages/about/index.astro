@@ -1,0 +1,278 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+// Parameterised components
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+// ── Dynamic data ──────────────────────────────────────────────────────────────
+import steeringMembers from "@/data/steering-members.json";
+import generalMembers from "@/data/general-members.json";
+import academicMembers from "@/data/academic-government-members.json";
+
+const activeSteeringMembers = (steeringMembers as any[]).filter((m) => m.active);
+const activeGeneralMembers = (generalMembers as any[]).filter((m) => m.active);
+const activeAcademicMembers = (academicMembers as any[]).filter((m) => m.active !== false);
+const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
+---
+
+<Layout
+  title="About — Green Software Foundation"
+  description="The Green Software Foundation is a nonprofit building the standards, tools, and community the tech industry needs to reduce the carbon emissions of software."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Section 1: Hero -->
+  <Hero
+    heading="About the"
+    headingAccent="Green Software Foundation"
+    body="We're a nonprofit building the standards, tools, and community the tech industry needs to make software part of the climate solution — not the problem."
+    ctas={[
+      { text: "Explore membership", variant: "primary", href: "/membership/" },
+    ]}
+    imageSrc="/assets/about-gsf-illustration.svg"
+    imageAlt="About GSF illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Section 2: Mission & Vision -->
+  <section class="bg-white py-16 md:py-20" data-pagefind-body>
+    <div class="container">
+      <div class="mx-auto max-w-4xl">
+        <div class="grid gap-12 md:grid-cols-2">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-wider text-accent-dark">Our Mission</p>
+            <h2 class="text-xl font-bold text-primary-dark md:text-2xl lg:text-3xl">
+              Build a trusted ecosystem of people, standards, tooling and best practices for creating and building <span class="text-primary">green software</span>.
+            </h2>
+          </div>
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-wider text-accent-dark">Our Vision</p>
+            <h2 class="text-xl font-bold text-primary-dark md:text-2xl lg:text-3xl">
+              Change the culture of building software so sustainability becomes a <span class="text-primary">core priority</span> — just as important as performance, security, cost and accessibility.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: What is Green Software? -->
+  <TextBlock
+    heading="What is *green software*?"
+    body="Green software is software built to minimise its environmental impact — not just carbon emissions, but energy consumption, water usage, and hardware lifecycle too. As the digital landscape evolves to encompass cloud infrastructure, data centres, AI systems, and edge computing, our definition has broadened from software alone to the entire digital ecosystem. Our focus remains reduction at source, not offsetting: the most preferable outcome is to never have caused the harm in the first place."
+    compact
+  />
+
+  <!-- Section 4: Founding Story -->
+  <TextWithImage
+    badge="OUR STORY"
+    heading="Founded in"
+    headingAccent="2021"
+    body="The Green Software Foundation was born out of a mutual desire and need to collaborate across the software industry. In May 2021, Accenture, GitHub, Microsoft, and ThoughtWorks came together under the Linux Foundation to launch a nonprofit dedicated to reducing the carbon emissions of software. What started as four founding organisations has grown into a global coalition of over 60 member organisations — from tech giants to financial institutions, consultancies to academic institutions — all united by the same goal."
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Foundation story illustration"
+    ctaText="See our governance & leadership →"
+    ctaHref="/governance/"
+  />
+
+  <!-- Section 5: Our Values -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="text-2xl font-semibold text-primary-dark md:text-3xl lg:text-4xl">
+          Our <span class="font-bold text-primary">Values</span>
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          The manifesto is the public declaration of our policy and aims. It describes the core values that inform and guide every decision we make.
+        </p>
+      </div>
+
+      <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+        <!-- Maximise Trust -->
+        <div class="flex gap-5 rounded-xl border border-border bg-accent-lightest-2 p-6">
+          <div class="hidden shrink-0 sm:block">
+            <img src="/assets/values-maximise-trust.svg" alt="" class="h-16 w-16" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-primary-dark">Maximise Trust</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
+              If there is no trust in the Foundation's output, it won't have the influence needed to achieve its mission. We maintain a diverse mix of organisations and keep all processes open and transparent.
+            </p>
+          </div>
+        </div>
+
+        <!-- Engage with Empathy -->
+        <div class="flex gap-5 rounded-xl border border-border bg-accent-lightest-2 p-6">
+          <div class="hidden shrink-0 sm:block">
+            <img src="/assets/values-engage-with-empathy.svg" alt="" class="h-16 w-16" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-primary-dark">Engage with Empathy</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
+              We listen actively, make space for participation, and acknowledge that everyone is at a different stage on their climate journey. We provide direct, constructive feedback to achieve our shared mission.
+            </p>
+          </div>
+        </div>
+
+        <!-- Be Inclusive and Open to All -->
+        <div class="flex gap-5 rounded-xl border border-border bg-accent-lightest-2 p-6">
+          <div class="hidden shrink-0 sm:block">
+            <img src="/assets/values-be-inclusive.svg" alt="" class="h-16 w-16" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-primary-dark">Be Inclusive and Open to All</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
+              We act with fairness and include diverse perspectives. Our working groups operate via consensus — each member organisation has one vote, regardless of size.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hold Ourselves Accountable -->
+        <div class="flex gap-5 rounded-xl border border-border bg-accent-lightest-2 p-6">
+          <div class="hidden shrink-0 sm:block">
+            <img src="/assets/values-hold-accountable.svg" alt="" class="h-16 w-16" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-primary-dark">Hold Ourselves Accountable</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
+              Accountability builds trust. We assume our colleagues are operating with the best intentions and working towards our shared mission, while ensuring safety, professionalism, and inclusion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Our Structure -->
+  <TextBlock
+    heading="How we're *structured*"
+    body="The Green Software Foundation is an accredited nonprofit under the Joint Development Foundation, part of the Linux Foundation family. Our governance is transparent, member-driven, and consensus-based. The Steering Committee provides strategic direction, while our working groups and committees drive the standards and initiatives that move the industry forward."
+    compact
+  />
+  <div class="bg-accent-lightest-2 pb-8 text-center">
+    <a
+      href="/governance/"
+      class="inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-white px-6 py-3 text-sm font-semibold text-primary shadow-sm transition hover:bg-primary hover:text-white"
+    >
+      Meet our Steering Committee & leadership →
+    </a>
+  </div>
+
+  <!-- Section 7: What We Do -->
+  <FeatureGrid
+    heading="What we *do*"
+    body="Four functions. Each one driven by member needs. Each one producing results the industry adopts."
+    variant="bordered"
+    columns={2}
+    features={[
+      { icon: "/assets/standardized-icon.svg", title: "Standards", description: "Setting the benchmarks the industry measures against. Our members develop vendor-neutral specifications — from SCI to SOFT — through a collaborative process that achieved ISO certification in record time.", linkText: "Explore our standards →", linkHref: "/standards/" },
+      { icon: "/assets/co2-icon.svg", title: "Policy", description: "Translating technical reality into regulatory language. Our policy working group tracks emerging legislation, publishes position papers, and gives members a voice before regulations are finalised.", linkText: "See our policy work →", linkHref: "/policy/" },
+      { icon: "/assets/renewable-icon.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programmes.", linkText: "Start learning →", linkHref: "https://learn.greensoftware.foundation" },
+      { icon: "/assets/realtime-icon.svg", title: "Research", description: "The evidence behind every decision. White papers, technical reports, and the State of Green Software — giving members and the industry the data to make the case.", linkText: "Read our research →", linkHref: "/research/" },
+    ]}
+  />
+
+  <!-- Section 7: By the Numbers -->
+  <section class="py-16 md:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl">
+          By the <span class="text-primary">numbers</span>
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-dark">
+          A global community of practitioners, leaders, and organisations driving sustainable software forward.
+        </p>
+      </div>
+      <div class="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-8 text-center md:grid-cols-3">
+        {[
+          { value: `${totalMembers}+`, label: "Member organisations" },
+          { value: "130,000+", label: "Green Software Practitioner course completions" },
+          { value: "450,000", label: "Podcast downloads" },
+          { value: "12,000", label: "Global meetup community members" },
+          { value: "12,000", label: "LinkedIn followers" },
+          { value: "7,800+", label: "Newsletter subscribers" },
+        ].map((stat) => (
+          <div>
+            <p class="text-3xl font-extrabold text-primary">{stat.value}</p>
+            <p class="mt-1 text-sm text-gray-darker">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Logo Marquee -->
+  <LogoMarquee
+    heading="Trusted by 60+ organisations including"
+    greyscale={false}
+    bgClass="bg-white"
+    fadeBgClass="from-white"
+  />
+
+  <!-- Section 10: CTA -->
+  <CTABanner
+    heading="Want to shape the future of green software?"
+    body="Join 60+ organisations building the standards, strategies, and tools for sustainable software."
+    ctaText="Explore membership"
+    ctaHref="/membership/"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "https://learn.greensoftware.foundation", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

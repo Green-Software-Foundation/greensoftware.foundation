@@ -23,6 +23,8 @@ interface Props {
   highlighted?: TeamMember[];
   /** Number of columns (2, 3, or 4) */
   columns?: 2 | 3 | 4;
+  /** Decorative SVG shown on the left side of the section */
+  decorSrc?: string;
   /** Background class */
   bgClass?: string;
 }
@@ -33,6 +35,7 @@ const {
   members = [],
   highlighted = [],
   columns = 3,
+  decorSrc,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
 
@@ -53,7 +56,7 @@ const colClasses: Record<number, string> = {
 };
 ---
 
-<section class={`py-12 md:py-16 ${bgClass}`}>
+<section class={`relative py-12 md:py-16 ${bgClass}`}>
   <div class="container">
     {heading && (
       <div class="mx-auto mb-8 max-w-3xl text-center">
@@ -111,7 +114,11 @@ const colClasses: Record<number, string> = {
 
     {/* Regular members grid */}
     {members.length > 0 && (
-      <div class={`grid grid-cols-1 gap-4 ${colClasses[columns]}`}>
+      <div class:list={[
+        `grid grid-cols-1 gap-4 ${colClasses[columns]}`,
+        members.length <= 2 && "mx-auto max-w-2xl",
+        members.length === 3 && "mx-auto max-w-4xl",
+      ]}>
         {members.map((member) => {
           const linkedin = member.socialMedia?.find(s => s.platform === "Linkedin");
           return (
@@ -150,4 +157,7 @@ const colClasses: Record<number, string> = {
       </div>
     )}
   </div>
+  {decorSrc && (
+    <img class="absolute -top-1/2 left-0 -z-10 hidden lg:block" src={decorSrc} />
+  )}
 </section>

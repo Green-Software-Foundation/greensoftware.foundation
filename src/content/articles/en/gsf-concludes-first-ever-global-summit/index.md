@@ -5,6 +5,7 @@ summary: "We reflect on our first global summit and how members in 14 different 
 teaserText: "As we conclude our first global summit, we reflect on our learnings."
 mainImage: "./main.png"
 originBlogName: "GSF Concludes First-Ever Global  Summit"
+tags: ["community", "events"]
 ---
 
 It’s hard to express the excitement that some of us felt, heading into our first global summit. Sharing the vision of changing the culture of how software is built to make sustainability a core priority, members in 14 different countries embarked on the 12-day journey. In a mix of in-person and live meetings, technology enthusiasts around the globe engaged in a series of free events organized by the GSF.

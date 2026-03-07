@@ -2,10 +2,12 @@
 import { Button } from "@/components/ui/button";
 
 interface Props {
-  /** Main heading text */
+  /** Main heading text. Wrap words in *asterisks* for accent colour */
   heading?: string;
   /** Body text */
   body?: string;
+  /** HTML body (rendered with set:html, used instead of body when provided) */
+  bodyHtml?: string;
   /** CTA button text */
   ctaText?: string;
   /** CTA button link */
@@ -21,12 +23,21 @@ interface Props {
 const {
   heading = "",
   body = "",
+  bodyHtml,
   ctaText = "",
   ctaHref = "#",
   imageSrc = "/assets/ready.svg",
   imageAlt = "",
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
+
+const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
+  if (part.startsWith("*") && part.endsWith("*")) {
+    return { text: part.slice(1, -1), accent: true };
+  }
+  return { text: part, accent: false };
+});
+const hasAccentSyntax = headingParts.some(p => p.accent);
 ---
 
 <section class={`py-12 md:py-18 lg:py-20 ${bgClass}`}>
@@ -40,10 +51,21 @@ const {
         </div>
       )}
       <div>
-        <h2 class="mb-3 text-2xl font-bold md:mb-4 md:text-3xl lg:text-4xl">{heading}</h2>
-        {body && (
-          <p class="text-sm lg:text-xl">{body}</p>
-        )}
+        <h2 class="mb-3 text-2xl font-bold md:mb-4 md:text-3xl lg:text-4xl">
+          {hasAccentSyntax
+            ? headingParts.map(part =>
+                part.accent
+                  ? <span class="text-primary">{part.text}</span>
+                  : <span class="text-primary-darker">{part.text}</span>
+              )
+            : heading
+          }
+        </h2>
+        {bodyHtml ? (
+          <div set:html={bodyHtml} class="text-sm lg:text-base" />
+        ) : body ? (
+          <p class="text-sm lg:text-base">{body}</p>
+        ) : null}
         {ctaText && (
           <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
             <a href={ctaHref}>

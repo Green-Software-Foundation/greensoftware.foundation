@@ -10,6 +10,7 @@ authors:
     company: "Green Software Foundation"
     companyWebsite: "https://greensoftware.foundation/"
     photo: "/assets/articles/authors/green-software-foundation.png"
+tags: ["community", "events"]
 ---
 
 [CarbonHack22](http://grnsft.org/hack22) ran from October 13 to November 10th, as the first event of it’s kind. The most talented developers from around the globe were engaged in building the best carbon aware application using the GSF Carbon Aware SDK. We had 51 eligible projects and a total of 395 participants. The winners were announced at the GSF [Decarbonize Software](https://decarb.greensoftware.foundation/) event during COP27.

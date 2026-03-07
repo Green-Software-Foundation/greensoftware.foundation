@@ -4,6 +4,7 @@ date: "2025-08-19"
 summary: "Join us in welcoming Universidad Politécnica de Madrid to the GSF. Learn how they bridge academia and industry while championing green software standards across Europe. "
 teaserText: "Leading green software adoption through academic excellence and industry collaboration. "
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 Javier is a full professor at the School of Computer Engineering. He is a founding member of the UPM Artificial Intelligence Research Center.

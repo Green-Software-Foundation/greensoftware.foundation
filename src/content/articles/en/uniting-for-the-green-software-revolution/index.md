@@ -4,6 +4,7 @@ date: "2023-06-09"
 summary: "On June 5 for World Environment Day, GSF hosted a live virtual event for tech enthusiasts interested to know how software can help save the planet. Four experts debated the challenges and opportunities in the field of green software and revealed some of the findings of the State of Green Software Report."
 teaserText: "“Intertwining responsible AI with green AI is of utmost importance, something several people in our survey pointed out in their comments. As generative AI grows, we will have to pay even more attention to this aspect.”"
 mainImage: "./main.png"
+tags: ["community"]
 ---
 
 [On June 5 for World Environment Day, GSF hosted a live virtual event for tech enthusiasts interested to know how software can help save the planet. Attendees joined GSF experts to hear about the current ](https://grnsft.org/events/UNwed)[state of green software](https://stateof.greensoftware.foundation/), the challenges and opportunities ahead, and the best practices and tools to make code more eco-friendly. Over 200 practitioners (a number that would have once shocked us, [but not any more](https://stateof.greensoftware.foundation/insights/92-percent-of-software-practitioners-are-concerned-about-climate-change/)) across the globe participated and raised questions about a broad set of issues, from cloud computing to tools for sustainable AI. 

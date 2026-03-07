@@ -1,0 +1,409 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import Testimonial from "@/components/testimonial.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="SCI — Software Carbon Intensity | Green Software Foundation"
+  description="The global standard for calculating and reducing the carbon emissions of your software. ISO/IEC 21031:2024."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SCI" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    heading="Measure What Matters:"
+    headingAccent="Software's Carbon Impact"
+    body="Every software application has a carbon footprint through the energy it consumes and the hardware it requires. The Software Carbon Intensity (SCI) specification provides the first ISO-accredited methodology to measure this impact as a score."
+    ctas={[
+      { text: "Read the Specification", variant: "primary", href: "https://grnsft.org/sci" },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/sci/hero-illustration.svg"
+    imageAlt="SCI illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="ISO-accredited and endorsed by leading technology organisations"
+  />
+
+  <!-- What is SCI? -->
+  <TextBlock
+    heading="What is *Software Carbon Intensity?*"
+    body="The Software Carbon Intensity (SCI) specification is an ISO-accredited standard (ISO/IEC 21031:2024) for measuring the carbon emissions of software applications. It provides a clear, consistent methodology that transforms complex environmental data into a single actionable score — making it possible to compare different software solutions, track improvements over time, and make evidence-based decisions about technology choices."
+    bodyExtra={[
+      "Unlike traditional carbon accounting that focuses on totals and offsets, SCI calculates a rate — carbon emissions per functional unit of your software, whether that's per user, per transaction, or per API call. This approach reveals the true efficiency of your software and guides you toward meaningful reductions through better code, smarter infrastructure choices, and carbon-aware computing strategies.",
+    ]}
+    ticker={[
+      "Referenced in 15+ peer-reviewed papers",
+      "Globally adopted",
+      "ISO/IEC 21031:2024 certified",
+    ]}
+    card
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Why SCI Matters (heading) -->
+  <TextBlock
+    heading="Why *SCI* Matters"
+    body="Software's environmental impact is invisible but significant — and growing exponentially with AI and digital transformation."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    body="Every line of code, every server, every user interaction contributes to the software's growing carbon footprint. The SCI specification makes this invisible impact visible and actionable. By providing a standardised measurement protocol, it enables the entire industry to work from the same playbook — creating transparency, driving innovation, and accelerating the transition to truly sustainable technology. Major organisations, including AVEVA, Microsoft, NTT DATA, and UBS, are already using SCI to transform how they build and deploy software."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/sci/cost-icon.svg",
+        description: '<span class="font-extrabold">Drive Cost Efficiency</span> - Software optimised for lower SCI scores uses less energy and hardware, directly reducing operational costs',
+      },
+      {
+        icon: "/assets/standards/sci/co2-icon.svg",
+        description: '<span class="font-extrabold">Meet Sustainability Goals</span> - Demonstrate measurable progress toward net-zero commitments with ISO-certified methodology',
+      },
+      {
+        icon: "/assets/standards/sci/grid-icon.svg",
+        description: '<span class="font-extrabold">Gain Competitive Advantage</span> - Differentiate your products with verified sustainability credentials that customers increasingly demand',
+      },
+      {
+        icon: "/assets/standards/sci/infra-icon.svg",
+        description: '<span class="font-extrabold">Future-Proof Operations</span> - Stay ahead of emerging regulations and reporting requirements with established measurement practices',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    body="Every point reduction in your SCI score represents real carbon that never enters the atmosphere. This isn't about purchasing offsets or making claims — it's about fundamental changes in how software is designed, developed, and deployed. When organisations optimise for SCI, they naturally adopt practices that reduce energy consumption, extend hardware lifecycles, and shift computing to cleaner energy sources. The cumulative effect of thousands of development teams making these optimisations could prevent millions of tons of carbon emissions annually."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- How It Works: The SCI Equation -->
+  <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
+          A New Way to Think About Software
+        </h2>
+        <p class="text-lg md:text-xl">
+          The SCI score combines three essential factors that determine software's carbon footprint: the energy your software consumes (E), the carbon intensity of that energy based on location and time (I), and the embodied emissions from manufacturing the hardware (M). These are calculated per functional unit (R) — creating a rate that reveals true efficiency.
+        </p>
+
+        <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
+          <p class="text-3xl font-bold text-primary md:text-4xl lg:text-5xl font-mono">
+            SCI = (E &times; I + M) per R
+          </p>
+        </div>
+
+        <p class="text-lg md:text-xl">
+          This simple equation transforms how teams approach software development. Instead of guessing at environmental impact, you can measure it. Instead of generic best practices, you have specific targets. Instead of greenwashing, you have genuine reductions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizations Leading with SCI (Success Stories Carousel) -->
+  <ArticleCarousel
+    heading="Organisations Leading with SCI"
+    body="Financial institutions, consultancies, and technology companies worldwide are implementing SCI to measure and reduce software carbon emissions."
+    showOrganizations={false}
+    articles={[
+      {
+        title: "Implementing SCI to Track Software Emissions",
+        organizations: [{ name: "Accenture" }],
+        description: "Accenture applied SCI to calculate and track carbon emissions for an internal reference application, establishing a practical baseline methodology that includes embodied emissions.",
+        href: "https://greensoftware.foundation/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions",
+        cta: "Read Case Study →",
+      },
+      {
+        title: "Baselining Software Carbon Emissions",
+        organizations: [{ name: "UBS" }],
+        description: "UBS demonstrates applying SCI to baseline carbon emissions for two enterprise applications in investment banking and asset management, identifying available data sources and calculation methodologies.",
+        href: "https://greensoftware.foundation/articles/baselining-software-carbon-emissions-ubs-use-case",
+        cta: "Read Case Study →",
+      },
+      {
+        title: "Decarbonizing Software with SCI",
+        organizations: [{ name: "CAST Software" }],
+        description: "CAST integrated SCI with CAST Highlight to decarbonize an enterprise application, achieving an estimated 400 kg annual CO2 reduction and 5% improvement in execution duration.",
+        href: "https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric",
+        cta: "Read Case Study →",
+      },
+      {
+        title: "Calculating Carbon Footprint for Serverless Apps",
+        organizations: [{ name: "NTT Data" }],
+        description: "A practical guide to measuring carbon emissions of serverless applications using the SCI specification, with step-by-step methodology for event-driven architectures.",
+        href: "https://greensoftware.foundation/articles/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o",
+        cta: "Read Guide →",
+      },
+      {
+        title: "Carbon-Aware Computing at UBS",
+        organizations: [{ name: "UBS & Microsoft" }],
+        description: "UBS and Microsoft implemented the first enterprise-scale carbon-aware computing system, using SCI and the Carbon Aware SDK to reduce emissions in their core risk platform workloads.",
+        href: "https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/",
+        cta: "Read Whitepaper →",
+      },
+    ]}
+    bgClass="bg-accent-lighter/10"
+  />
+
+  <!-- Testimonial -->
+  <Testimonial
+    quote="SCI specification provided a practical methodology to baseline carbon emissions of the application, including embodied emissions and reducing the same."
+    author="Navveen Balani"
+    title="Managing Director, Chief Technologist"
+    company="Accenture"
+  />
+
+  <!-- Research & Recognition -->
+  <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 items-center">
+        <div>
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl mb-6">
+            Validated by Academia and Industry
+          </h2>
+          <p class="text-lg mb-8">
+            The SCI specification is the only ISO-accredited carbon measurement standard for software, referenced in 15+ peer-reviewed research and implemented by leading technology organisations worldwide.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="flex flex-col gap-2">
+              <span class="text-3xl font-bold text-primary">ISO/IEC</span>
+              <span class="text-sm text-gray-darker">International Standard 21031:2024</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="text-3xl font-bold text-primary">15+</span>
+              <span class="text-sm text-gray-darker">Peer-Reviewed Research since 2022</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="text-3xl font-bold text-primary">ACM FAccT & SoCC</span>
+              <span class="text-sm text-gray-darker">Published in Top Venues</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-xl border bg-white p-6 shadow-sm">
+            <h3 class="font-semibold mb-2">Microsoft Azure Sustainability Framework</h3>
+            <p class="text-sm text-gray-darker mb-3">Microsoft integrated SCI into Azure's official sustainability framework.</p>
+            <a href="https://learn.microsoft.com/en-us/azure/well-architected/sustainability/sustainability-design-methodology" target="_blank" rel="noopener noreferrer" class="text-primary text-sm font-medium hover:underline">Read Documentation &rarr;</a>
+          </div>
+          <div class="rounded-xl border bg-white p-6 shadow-sm">
+            <h3 class="font-semibold mb-2">ACM FAccT 2022 Research</h3>
+            <p class="text-sm text-gray-darker mb-3">"Measuring the Carbon Intensity of AI in Cloud Instances"</p>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3531146.3533234" target="_blank" rel="noopener noreferrer" class="text-primary text-sm font-medium hover:underline">Read Paper &rarr;</a>
+          </div>
+          <div class="rounded-xl border bg-white p-6 shadow-sm">
+            <h3 class="font-semibold mb-2">ThoughtWorks Implementation Guide</h3>
+            <p class="text-sm text-gray-darker mb-3">Global implementation guide for calculating software carbon intensity.</p>
+            <a href="https://www.thoughtworks.com/insights/blog/ethical-tech/calculating-software-carbon-intensity" target="_blank" rel="noopener noreferrer" class="text-primary text-sm font-medium hover:underline">Read Guide &rarr;</a>
+          </div>
+          <div class="rounded-xl border bg-white p-6 shadow-sm">
+            <h3 class="font-semibold mb-2">ACM Symposium on Cloud Computing (SoCC '24)</h3>
+            <p class="text-sm text-gray-darker mb-3">The Sunk Carbon Fallacy: Rethinking Carbon Footprint Metrics for Effective Carbon-Aware Scheduling.</p>
+            <a href="https://arxiv.org/abs/2410.15087" target="_blank" rel="noopener noreferrer" class="text-primary text-sm font-medium hover:underline">Read Paper &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for Every Role (Tabbed Section with per-tab images) -->
+  <TabbedSection
+    badge="WHO IT'S FOR"
+    heading="Built for Every Role in Software"
+    tabs={[
+      {
+        value: "practitioners",
+        heading: "Practitioners",
+        description: "Transform your daily work into climate action. The SCI score gives you a clear target for optimisation — whether you're writing code, designing systems, or managing databases. See the immediate impact of your choices on your software's carbon footprint. Make efficiency improvements that matter both technically and environmentally. Join a global community of practitioners building the future of sustainable software.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-1.svg" },
+      },
+      {
+        value: "business-leaders",
+        heading: "Business Leaders",
+        description: "Turn sustainability commitments into measurable business value. The SCI specification provides ISO-certified metrics that satisfy stakeholder demands, regulatory requirements, and corporate responsibility goals. Reduce operational costs through improved efficiency. Differentiate your products with verified sustainability credentials. Build trust with customers who increasingly choose partners based on environmental leadership.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-2.svg" },
+      },
+      {
+        value: "sustainability-teams",
+        heading: "Sustainability Teams",
+        description: "Finally, a standardised way to measure and report software's environmental impact. The SCI specification integrates seamlessly with existing sustainability frameworks while providing the technical depth needed for accurate carbon accounting. Track progress with confidence using ISO-accredited methodology. Compare solutions objectively. Drive organisation-wide improvements with clear, actionable metrics that everyone can understand and act upon.",
+        image: { src: "/assets/standards/sci/why-wdpc-feat-3.svg" },
+      },
+    ]}
+    bgClass="bg-accent-lighter/10"
+  />
+
+  <!-- Resources -->
+  <ResourceCards
+    heading="Everything You Need to *Get Started*"
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "The SCI Specification",
+        description: "Access the complete ISO/IEC 21031:2024 standard with technical methodology and implementation guidance.",
+        ctaText: "Read the Spec",
+        ctaHref: "https://grnsft.org/sci",
+      },
+      {
+        icon: "/assets/standards/sci/resource-guide-icon.svg",
+        title: "SCI Guidance",
+        description: "Explore various approaches on how to understand the different methodologies available for calculating the core components of the SCI.",
+        ctaText: "Browse SCI Guide",
+        ctaHref: "https://sci-guide.greensoftware.foundation/",
+      },
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Ask Questions",
+        description: "Connect with the SCI community, get implementation help, and share your experiences.",
+        ctaText: "Join the Discussion",
+        ctaHref: "https://github.com/Green-Software-Foundation/sci/discussions",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="Journey to *Transformation*"
+    body="Current focus: The specification is actively developing, and experts, operators, and sustainability practitioners are invited to refine and validate it."
+    items={[
+      { date: "June 2021", description: "Vision Launched", completed: true, start: "2021-06-01", end: "2021-06-30" },
+      { date: "March 2022", description: "v1.0 Published", completed: true, start: "2022-03-01", end: "2022-03-31" },
+      { date: "April 2024", description: "ISO Accreditation Achieved", completed: true, start: "2024-04-01", end: "2024-04-30" },
+      { date: "October 2024", description: "v1.1 Released", completed: true, start: "2024-10-01", end: "2024-10-31" },
+      { date: "2026", description: "Current", current: true, start: "2026-01-01", end: "2026-12-31" },
+    ]}
+  />
+
+  <!-- Team (light card style) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body="Part of the Software Standards Working Group"
+    columns={2}
+    highlighted={[]}
+    members={[
+      {
+        fullName: "Navveen Balani",
+        role: "Software Standards Working Group Chair",
+        company: "Accenture",
+        photo: "/assets/standards/sci/navveen.jpeg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/naveenbalani/" }],
+      },
+      {
+        fullName: "Henry Richardson",
+        role: "Software Standards Working Group Chair",
+        company: "WattTime",
+        photo: "/assets/standards/sci/henry.jpeg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/henry-richardson/" }],
+      },
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Ready to measure your software's carbon impact?"
+    body="The SCI specification provides the tools and methodology you need to start measuring, reducing, and reporting your software's carbon intensity today."
+    ctaText="Read the Specification"
+    ctaHref="https://grnsft.org/sci"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

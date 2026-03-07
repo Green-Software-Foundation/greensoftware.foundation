@@ -4,6 +4,7 @@ date: "2025-10-16"
 summary: "We're excited to announce a new partnership that brings green software expertise to UK government digital strategy. Learn how the GSF and GDSA are working togther. "
 teaserText: "New partnership to advance digital sustainability standards across the UK government and its supply chain. "
 mainImage: "./main.jpg"
+tags: ["policy"]
 ---
 
 The Green Software Foundation (GSF) is proud to announce that it has joined the UK Government Digital Sustainability Alliance (GDSA). This collaborative working group, established in 2022, brings together the UK government, its digital supply chain, academics, and third-sector organizations to drive progress on digital sustainability.

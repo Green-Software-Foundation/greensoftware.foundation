@@ -4,6 +4,7 @@ date: "2025-03-25"
 summary: "In 2024, GSF members participated in a design thinking workshop to evolve GS Patterns Catalog. Today, we share their insights, observations, and guideposts that will shape the project's evolution. "
 teaserText: "With fresh perspectives and a clear roadmap, the Green Software Patterns Catalog is set to evolve and improve its impact on reducing software’s carbon emissions."
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 ## Project Overview

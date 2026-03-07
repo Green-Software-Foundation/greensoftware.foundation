@@ -4,6 +4,7 @@ date: "2025-09-02"
 summary: "The new GSF member shares how the University of Edinburgh is reducing its digital carbon footprint through practical steps like website measurement, image optimization, and behavioral change initiatives."
 teaserText: "Turning sustainability goals into measurable action by rethinking digital practices. "
 mainImage: "./main.png"
+tags: ["education"]
 ---
 
 Emma is the User Experience Manager at the university. In her work, she aims to reduce the carbon footprint of the university's digital estate through measurement approaches, content optimization, and behavioral change initiatives.

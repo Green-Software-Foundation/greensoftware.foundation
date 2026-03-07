@@ -1,0 +1,215 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+// Parameterised components
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import MemberStories from "@/components/member-stories.astro";
+import Footer from "@/components/footer.astro";
+
+// ----- Articles tagged "education" for the carousel -----
+const allArticles = await getCollection("articles");
+const educationArticles = allArticles
+  .filter((a: any) => {
+    const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
+    return tags.includes("education");
+  })
+  .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
+  .map((a: any) => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || undefined,
+    href: `/articles/${a.id}/`,
+    cta: "Read the article →",
+  }));
+---
+
+<Layout>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Section 1: Hero -->
+  <Hero
+    heading="Learn to build"
+    headingAccent="greener software"
+    body="Free courses, practical patterns, and a global community of practitioners. Whether you're just starting out or scaling green software across your organisation — everything you need to build the skills is here."
+    ctas={[
+      { text: "Take the free course", variant: "primary", href: "https://learn.greensoftware.foundation" },
+      { text: "Browse patterns", variant: "outline", href: "https://patterns.greensoftware.foundation" },
+    ]}
+    imageSrc="/assets/why-feat-1.svg"
+    imageAlt="Education illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Section 2: Courses heading -->
+  <TextBlock
+    heading="*Courses* on the Movement Platform"
+    body="Our courses are hosted on the Movement Platform — a community hub where you can learn, discuss, and connect with fellow practitioners. All courses are free and self-paced."
+    compact
+  />
+
+  <!-- Section 4: Green Software Practitioner -->
+  <TabbedSection
+    badge="FLAGSHIP COURSE"
+    heading="Green Software Practitioner"
+    imageSrc="/assets/why-feat-1.svg"
+    imageAlt="Green Software Practitioner course"
+    ctaText="Take the course →"
+    ctaHref="https://learn.greensoftware.foundation"
+    compact
+    tabs={[
+      { value: "overview", heading: "Overview", description: "The comprehensive course that teaches you how to build, maintain, and run greener applications — regardless of domain, industry, or technology stack. Covers carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and climate commitments." },
+      { value: "audience", heading: "Who it's for", description: "Software practitioners of all kinds — developers, DevOps, testers, architects, SREs, product managers, and UX designers. Requires a minimum of one year of industry experience. No prior sustainability knowledge needed." },
+      { value: "outcome", heading: "What you'll learn", description: "Understand the key drivers of carbon emissions in software. Learn three concrete actions to reduce emissions. Measure software carbon using GHG protocols and the SCI specification. Align engineering work with organisational climate commitments." },
+    ]}
+  />
+
+  <!-- Section 5: SOFT Essentials -->
+  <TabbedSection
+    badge="FRAMEWORK COURSE"
+    heading="SOFT Essentials"
+    imageSrc="/assets/why-feat-3.svg"
+    imageAlt="SOFT Essentials course"
+    ctaText="Take the course →"
+    ctaHref="https://movement.greensoftware.foundation"
+    compact
+    tabs={[
+      { value: "overview", heading: "Overview", description: "Learn the essentials of the Sustainable Organisational Framework for Technology (SOFT) — the comprehensive framework for embedding green software practices across your entire organisation, from strategy to operations." },
+      { value: "audience", heading: "Who it's for", description: "Technology leaders, sustainability managers, and anyone responsible for scaling green software practices beyond individual teams. Ideal for organisations that have completed the Green Software Practitioner course and want to go further." },
+      { value: "outcome", heading: "What you'll learn", description: "Understand the four SOFT domains: Strategy, Implementation, Operational, and Compliance. Learn how to assess your organisation's current maturity and build a roadmap for systematic adoption of green software practices." },
+    ]}
+  />
+
+  <!-- Section 6: More courses coming -->
+  <TextBlock
+    heading="More *courses* coming soon"
+    body="We're actively developing new courses to cover emerging areas of green software — including AI-specific training and advanced practitioner pathways. Join the Movement Platform to be the first to know when new courses launch."
+    compact
+  />
+
+  <!-- Section 7: Education stories -->
+  <MemberStories
+    heading="Education in *action*"
+    body="See how our courses and patterns are being used by organisations and educators worldwide."
+    stories={[
+      {
+        title: "Our engineers don't know how to build green software",
+        description: "How Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers.",
+        imageSrc: "/assets/stories/green-software-practitioner.jpg",
+        href: "/stories/green-software-practitioner/",
+      },
+      {
+        title: "Engineers know the theory but not what to change in code",
+        description: "How NTT DATA, Goldman Sachs, and contributors from 11 organisations built the Green Software Patterns catalogue — peer-reviewed techniques with measurable impact.",
+        imageSrc: "/assets/stories/green-software-patterns.png",
+        href: "/stories/green-software-patterns/",
+      },
+    ]}
+    footerCtaText="View all member stories"
+    footerCtaHref="/stories/"
+  />
+
+  <!-- Section 8: Learning resources -->
+  <ResourceCards
+    heading="Learning *resources*"
+    body="Beyond our courses, a growing ecosystem of resources to support your green software journey."
+    cards={[
+      { icon: "/assets/shape-icon-1.svg", title: "Green Software Patterns", description: "An open-source catalogue of peer-reviewed, actionable techniques for reducing software emissions across AI, Cloud, and Web.", ctaText: "Browse the catalogue", ctaHref: "https://patterns.greensoftware.foundation" },
+      { icon: "/assets/shape-icon-2.svg", title: "Awesome Green Software", description: "A curated list of tools, articles, research papers, and open-source projects in the green software space.", ctaText: "Explore the list", ctaHref: "https://github.com/Green-Software-Foundation/awesome-green-software" },
+      { icon: "/assets/shape-icon-3.svg", title: "Environment Variables Podcast", description: "Practitioner-focused conversations with the people building the green software movement.", ctaText: "Listen now", ctaHref: "https://podcast.greensoftware.foundation" },
+    ]}
+  />
+
+  <!-- Section 9: For organisations -->
+  <FeatureGrid
+    heading="Education for *organisations*"
+    body="Scaling green software skills across your teams? We offer tailored programmes for GSF member organisations."
+    variant="bordered"
+    columns={2}
+    features={[
+      { icon: "/assets/standardized-icon.svg", title: "Cohort-Based Training", description: "Structured learning programmes with facilitated sessions, group exercises, and peer discussion. Designed for teams adopting green software practices together." },
+      { icon: "/assets/renewable-icon.svg", title: "In-House Licensing", description: "Integrate GSF courses directly into your internal learning platforms. Deliver green software training at scale, on your own schedule." },
+      { icon: "/assets/co2-icon.svg", title: "Champions Programme", description: "Recognise and empower your most passionate green software advocates. Champions drive adoption from within, supported by the global GSF community.", linkText: "Learn about Champions →", linkHref: "https://champions.greensoftware.foundation" },
+      { icon: "/assets/realtime-icon.svg", title: "Become a Member", description: "Education programmes are available to GSF member organisations. Membership gives you access to cohort training, in-house licensing, and the full GSF ecosystem.", linkText: "Explore membership →", linkHref: "/membership/" },
+    ]}
+  />
+
+  <!-- Section 10: Education articles -->
+  {educationArticles.length > 0 && (
+    <ArticleCarousel
+      heading="Education & Learning"
+      body="Stories and insights from practitioners, educators, and organisations building the green software movement."
+      articles={educationArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- Section 11: Final CTA -->
+  <CTABanner
+    heading="Start your green software journey today"
+    body="The Green Software Practitioner course is free, self-paced, and takes just a few hours. Join 130,000+ practitioners who've already taken the first step."
+    ctaText="Take the free course"
+    ctaHref="https://learn.greensoftware.foundation"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

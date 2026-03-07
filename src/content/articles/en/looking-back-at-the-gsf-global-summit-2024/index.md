@@ -4,6 +4,7 @@ date: "2024-12-10"
 summary: "Our second global summit brought together leaders and practitioners across eight countries, driven by a shared commitment to minimizing software's environmental impact. "
 teaserText: "In October, we concluded the second GSF Global Summit. Today, we reflect on the learnings and connections driving this global movement towards greener software. "
 mainImage: "./main.png"
+tags: ["community", "events"]
 ---
 
 The eyes sparked with anticipation and excitement—this is how some of us looked, getting ready to attend summit events across the globe. It’s the power of gathering, real connections, and hands-on insights offered by in-person events that make us ever more eager to unite over a common goal. The GSF Global Summit 2024—a series of in-person, free events hosted by GSF members between October 1 - 10 presented a unique opportunity to join insightful talks and panels, but most of all, to share a collective vision of cultural change needed to drive green software forward. 

@@ -4,6 +4,7 @@ date: "2025-03-04"
 summary: "Members of the GSF Meetup community share what motivates them, key insights from the community building, and how anyone can get involved."
 teaserText: "Celebrating a major milestone and highlighting the community behind it."
 mainImage: "./main.png"
+tags: ["community"]
 ---
 
 At a turning point for the tech industry, where software takes a central role in shaping a sustainable future, community-driven initiatives are essential to growing the green software movement. 

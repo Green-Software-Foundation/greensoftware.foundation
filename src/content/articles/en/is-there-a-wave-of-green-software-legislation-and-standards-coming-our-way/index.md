@@ -4,6 +4,7 @@ date: "2023-01-27"
 summary: "Find out about some of the latest government policies, institutional actions, reporting and standards affecting green software. "
 teaserText: "Find out about some of the latest government policies, institutional actions, reporting and standards affecting green software. "
 mainImage: "./main.png"
+tags: ["policy"]
 ---
 
 Find out about some of the latest government policies, institutional actions, reporting and standards affecting green software. They are the proverbial tip of the iceberg. It is only a matter of time before a greater change in the regulatory landscape takes hold, shaping the technology industry. We expect a dramatic expansion of green software practices.

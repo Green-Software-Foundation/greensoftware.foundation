@@ -1,0 +1,417 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import CardGrid from "@/components/card-grid.astro";
+import SplitCards from "@/components/split-cards.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="SCI for AI — Software Carbon Intensity for Artificial Intelligence | Green Software Foundation"
+  description="A standardized specification extending the Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SCI for AI" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    heading="Measure"
+    headingAccent="AI's Carbon Footprint"
+    headingSuffix="with Purpose"
+    subtitle="A standardized specification extending the Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle."
+    body="AI systems have become increasingly resource-intensive, yet there's no consistent way to measure their environmental impact. SCI for AI changes that by providing the first consensus-based standard that makes AI's carbon footprint transparent, comparable, and actionable. Help refine this transformative specification with your feedback and experience as we revolutionize how we build and deploy sustainable AI."
+    ctas={[
+      { text: "Read the Specification", variant: "primary", href: "https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md" },
+      { text: "Provide Feedback", variant: "outline", href: "https://github.com/Green-Software-Foundation/sci-ai/issues/new?template=Consistency_and_IPR_Review.yaml" },
+    ]}
+    imageSrc="/assets/standards/sci-ai/hero-illustration.svg"
+    imageAlt="SCI for AI illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Leading organizations collaborating to standardize AI carbon measurement"
+  />
+
+  <!-- What is SCI for AI? -->
+  <CTACard
+    heading="What is *SCI for AI*?"
+    bodyHtml="SCI for AI extends the globally adopted <a href='https://www.iso.org/standard/86612.html' class='text-primary underline' target='_blank' rel='noopener noreferrer'>Software Carbon Intensity (SCI) ISO specification</a> to address the unique characteristics of artificial intelligence systems. It provides a standardized methodology for calculating carbon emissions rates across the entire AI lifecycle, from data preparation and model training to deployment and inference.<br/><br/>Unlike simple energy metrics or carbon offsets, SCI for AI creates a comprehensive score that incentivizes real emission reductions. By making the true carbon cost of AI transparent and comparable, it transforms sustainability from an abstract goal into a measurable, optimizable metric that drives innovation in efficient AI architectures and influences strategic decisions across industries."
+    imageSrc="/assets/standards/sci-ai/what-sci-illustration.svg"
+    imageAlt="What is SCI for AI illustration"
+  />
+
+  <!-- Why SCI for AI Matters (heading) -->
+  <TextBlock
+    heading="Why *SCI for AI* Matters"
+    body="As AI becomes ubiquitous across industries, its environmental footprint grows exponentially, but measurement remains fragmented and inconsistent."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    headingStyle="light"
+    body="SCI for AI provides the first consensus-based, standardized approach to measuring AI's environmental impact. This standardization drives innovation in efficient AI architectures, influences procurement decisions, and helps organizations meet sustainability commitments. By revealing the true carbon cost of AI development and deployment, it enables meaningful comparisons between different systems and approaches, transforming how organizations think about AI investments."
+    imageSrc="/assets/standards/sci-ai/why-sci-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    headingStyle="light"
+    imageSrc="/assets/standards/sci-ai/why-sci-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/sci-ai/grid-stability-icon.svg",
+        description: "<span class='font-extrabold'>Reduce operational costs</span> through improved computational efficiency and optimized cloud resource consumption",
+      },
+      {
+        icon: "/assets/standards/sci-ai/co2-icon.svg",
+        description: "<span class='font-extrabold'>Prepare for future carbon pricing</span> and regulatory requirements with ISO-compatible measurement standards",
+      },
+      {
+        icon: "/assets/standards/sci-ai/cost-icon.svg",
+        description: "<span class='font-extrabold'>Gain a competitive advantage</span> through transparent sustainability metrics for AI products and services",
+      },
+      {
+        icon: "/assets/standards/sci-ai/heat-icon.svg",
+        description: "<span class='font-extrabold'>Make informed trade-offs</span> between model performance and environmental impact with clear, actionable data",
+      },
+      {
+        icon: "/assets/standards/sci-ai/infra-icon.svg",
+        description: "<span class='font-extrabold'>Build stakeholder trust</span> through demonstrable commitment to responsible AI development",
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/sci-ai/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    headingStyle="light"
+    body="SCI for AI directly addresses the growing carbon footprint of AI systems by providing metrics that incentivize real reductions rather than offsets. The specification reveals the full picture of AI emissions, from data preparation through training to inference, exposing impacts in early stages that often dwarf inference costs. This visibility encourages practices like model optimization, efficient architectures, and carbon-aware computing that significantly reduce AI-related emissions by enabling informed choices about when, where, and how AI systems operate."
+    imageSrc="/assets/standards/sci-ai/why-sci-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Understanding AI's Carbon Lifecycle -->
+  <FeatureGrid
+    heading="Understanding AI's Carbon Lifecycle"
+    bodyHtml="<span class='font-bold'>SCI for AI</span> measures emissions across every stage of AI development and deployment, revealing optimization opportunities throughout the entire lifecycle."
+    columns={5}
+    variant="plain"
+    features={[
+      {
+        icon: "/assets/standards/sci-ai/transforming-icon-1.svg",
+        title: "Inception",
+        description: "Scoping the problem and setting constraints",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transforming-icon-2.svg",
+        title: "Design and Development",
+        description: "Where major emissions accumulate through training",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transforming-icon-3.svg",
+        title: "Deployment",
+        description: "Integrating AI into production systems",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transforming-icon-4.svg",
+        title: "Operation and Monitoring",
+        description: "Inference, orchestration, and ongoing maintenance",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transforming-icon-5.svg",
+        title: "End of Life",
+        description: "Decommissioning systems and handling data",
+      },
+    ]}
+  />
+
+  <!-- Mission Card: AI's Hidden Emissions -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci-ai/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold">AI's Hidden Emissions</h2>
+          <p class="mt-3 text-lg font-medium text-primary-dark italic md:mt-4 md:text-xl">
+            Traditional approaches often focus solely on inference costs, missing the significant carbon footprint of training and data preparation. SCI for AI provides comprehensive lifecycle coverage, including often-overlooked stages like data engineering and system integration. This holistic view enables organizations to identify and address the true sources of AI emissions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformative Capabilities -->
+  <FeatureGrid
+    heading="*Transformative* Capabilities"
+    body="SCI for AI brings unprecedented clarity to AI sustainability through innovative features designed for real-world application."
+    columns={5}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/sci-ai/transformative-feat-icon-1.svg",
+        title: "Comprehensive Coverage",
+        description: "Measures emissions from data preparation through end-of-life, capturing impacts others miss",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transformative-feat-icon-2.svg",
+        title: "AI-Native Design",
+        description: "Supports all AI paradigms: ML, deep learning, generative AI, and emerging technologies",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transformative-feat-icon-3.svg",
+        title: "Clear Boundaries",
+        description: "Precise definitions for measuring different AI systems with appropriate functional units",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transformative-feat-icon-4.svg",
+        title: "Engineering Focus",
+        description: "Incentivizes direct optimizations rather than relying on carbon offsets",
+      },
+      {
+        icon: "/assets/standards/sci-ai/transformative-feat-icon-5.svg",
+        title: "Industry Consensus",
+        description: "Developed with input from major players with royalty-free IPR for broad adoption",
+      },
+    ]}
+  />
+
+  <!-- A New Architecture for Energy Intelligence (Tabbed) -->
+  <TabbedSection
+    heading="A New Architecture for Energy Intelligence"
+    tabs={[
+      {
+        value: "ai-practitioners",
+        heading: "AI Practitioners",
+        description: "Transform your AI development with clear metrics that reveal optimization opportunities without sacrificing performance. SCI for AI empowers you to make informed architecture choices and demonstrate the environmental efficiency of your work, turning sustainability into a competitive advantage for your models and applications.",
+        image: { src: "/assets/standards/sci-ai/tabs-ai-practitioners.svg", alt: "AI Practitioners" },
+      },
+      {
+        value: "business-leaders",
+        heading: "Business Leaders",
+        description: "Turn AI sustainability from a cost center into strategic value. SCI for AI enables data-driven decisions about AI investments while reducing operational costs through efficiency improvements. Position your organization as a leader in responsible AI deployment with transparent, standardized metrics that stakeholders trust.",
+        image: { src: "/assets/standards/sci-ai/tabs-business-leaders.svg", alt: "Business Leaders" },
+      },
+      {
+        value: "data-centers",
+        heading: "Data Centers",
+        description: "Finally, a standardized methodology designed specifically for AI's unique characteristics. SCI for AI aligns with established frameworks while providing consistent measurement across your entire AI portfolio. Identify specific reduction opportunities and support broader sustainability reporting with confidence and precision.",
+        image: { src: "/assets/standards/sci-ai/tabs-data-centers.svg", alt: "Data Centers" },
+      },
+    ]}
+  />
+
+  <!-- Building on Industry Collaboration -->
+  <SplitCards
+    heading="Building on Industry Collaboration"
+    body="In early 2025, AI experts from GSF member organizations participated in a series of workshops hosted by the Software Standards Working Group. These sessions were designed to define the GSF approach to AI measurement as well as evaluate existing metrics. The outcomes laid the groundwork for creating the SCI for AI specification."
+    iconSrc="/assets/standards/sci-ai/building-icon.svg"
+    decorSrc="/assets/standards/sci-ai/building-decor.svg"
+    quote="The purpose of this specification is to assist AI practitioners in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance."
+    quoteIconSrc="/assets/standards/sci-ai/quote-icon.svg"
+    attribution={{
+      avatar: "/assets/standards/sci-ai/building-avatar.svg",
+      name: "Navveen Balani",
+      role: "Software Standards Working Group Chair",
+      company: "Accenture / Green Software Foundation",
+    }}
+  />
+
+  <!-- Explore Further -->
+  <CardGrid
+    heading="Explore Further"
+    body="Deep dive into SCI for AI methodology and related resources"
+    columns={2}
+    align="left"
+    decorSrc="/assets/standards/sci-ai/explore-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/sci-ai/explore-feat-icon-2.svg",
+        title: "Software Carbon Intensity (SCI) Specification",
+        description: "Explore the parent specification that SCI for AI extends with AI-specific applications",
+        ctaText: "Read the Specification",
+        ctaHref: "https://sci.greensoftware.foundation/",
+      },
+      {
+        icon: "/assets/standards/sci-ai/explore-feat-icon-3.svg",
+        title: "Green Software Patterns for AI",
+        description: "Discover proven patterns for reducing AI carbon emissions in your applications",
+        ctaText: "Read the Guide",
+        ctaHref: "https://patterns.greensoftware.foundation/catalog/ai",
+      },
+    ]}
+  />
+
+  <!-- Shape the Future of Sustainable AI -->
+  <CardGrid
+    heading="Shape the Future of Sustainable AI"
+    body="Your expertise and experience can help refine this transformative standard"
+    columns={4}
+    align="left"
+    decorSrc="/assets/standards/sci-ai/shape-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/sci-ai/shape-icon-1.svg",
+        title: "Read the Specification",
+        description: "Read the full specification and share your feedback",
+        ctaText: "Visit the GitHub Issue",
+        ctaHref: "https://github.com/Green-Software-Foundation/sci-ai/issues/new?template=Consistency_and_IPR_Review.yaml",
+      },
+      {
+        icon: "/assets/standards/sci-ai/shape-icon-2.svg",
+        title: "Join the Software Standards Working Group (Members Only)",
+        description: "Collaborate with industry experts shaping this specification",
+        ctaText: "Subscribe",
+        ctaHref: "https://greensoftware.foundation/working-groups/standards",
+      },
+      {
+        icon: "/assets/standards/sci-ai/shape-icon-3.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with project leads",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-artificial-intelligence/",
+      },
+      {
+        icon: "/assets/standards/sci-ai/shape-icon-4.svg",
+        title: "Inquiry about becoming a GSF member",
+        description: "Reach out directly to the GSF team",
+        ctaText: "Get in touch",
+        ctaHref: "https://greensoftware.foundation/join-us",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="Development Timeline"
+    items={[
+      { date: "Q4 2024", description: "Proposal", completed: true, start: "2024-10-01", end: "2024-12-31" },
+      { date: "Q2 2025", description: "Pre-Draft", completed: true, start: "2025-04-01", end: "2025-06-30" },
+      { date: "Q3 2025", description: "Draft", completed: true, start: "2025-07-01", end: "2025-09-30" },
+      { date: "Q4 2025", description: "Consistency Review<br/>SC Ratification", completed: true, start: "2025-10-01", end: "2025-12-31" },
+      { date: "Q1 2026", description: "Publication<br/>ISO-readiness approval", current: true, start: "2026-01-01", end: "2026-03-31" },
+      { date: "Q2 2026", description: "ISO Submission", start: "2026-04-01", end: "2026-06-30" },
+    ]}
+  />
+
+  <!-- Team -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body="Part of the Software Standards Working Group"
+    columns={2}
+    highlighted={[]}
+    members={[
+      {
+        fullName: "Navveen Balani",
+        role: "Software Standards Working Group Chair",
+        company: "Accenture",
+        photo: "/assets/standards/sci-ai/team-member-1.svg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/naveenbalani/" }],
+      },
+      {
+        fullName: "Henry Richardson",
+        role: "Software Standards Working Group Chair",
+        company: "Watt Time",
+        photo: "/assets/standards/sci-ai/team-member-2.svg",
+        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/henry-richardson/" }],
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="The Future of AI is Sustainable"
+    body="SCI for AI provides the first standardized methodology to measure and reduce the carbon emissions of artificial intelligence systems. Whether you're developing AI, making procurement decisions, or driving sustainability strategy, join us in making AI's environmental impact transparent and actionable."
+    ctaText="Read the Specification"
+    ctaHref="https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>
