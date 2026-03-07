@@ -1,5 +1,61 @@
 # Development Log — GSF Website
 
+## 2026-03-07 (cont.) - Data Layer: Schema Consolidation, Notion Roll-ups, and Smart Lookups
+
+**Objective**: Lay the foundation for a centralised data layer — consolidate fragmented JSON files, eliminate slow N+1 Notion API calls, embed project leads into `projects.json`, and make components smarter about resolving people by name.
+
+### What We Built
+
+- **Schema consolidation** — collapsed 4 member files into 1: `steering-members.json`, `general-members.json`, `academic-government-members.json` (+ `team.json`) replaced by `members.json` (all members with `membershipLevel` and `active` flags) and `people.json` (all volunteers/staff/chairs). Consumers filter inline.
+- **Notion UUIDs on all records** — added `id: page.id` to every exported record in `members.json`, `people.json`, `projects.json`, and `press-mentions.json`. Stable identifiers that survive name changes.
+- **Roll-up-based company lookup** — eliminated `memberPageCache` (which made N sequential `notion.pages.retrieve` API calls per volunteer). Volunteers DB now has `Company Name` and `Company Website` roll-up properties read directly from the volunteer row. Fetch time: ~2.5 min → ~70 seconds.
+- **Project leads in `projects.json`** — each project now has a `leads` array with `{ fullName, roleLabel, jobTitle, company, linkedin, photo }`. Built as a side-effect of subscription processing in `fetchChairsAndLeads` — zero extra API calls. Photos annotated via `personPhotoMap` built after `people.json` is assembled.
+- **`role` → `jobTitle` rename** — disambiguated the field name for a person's job title at their employer. Updated fetch script and all consumers; `TeamGrid` kept backward-compatible fallback.
+- **Logo marquee from `members.json`** — `LogoMarquee` now derives its logo list directly from `members.json` (filtering `active && logo && !hideLogo`), removing the `logos.json` derived file from the critical path and pre-wiring the `hideLogo` flag.
+- **TeamGrid name-based lookup** — `TeamGrid` auto-resolves full person data from `people.json` when only `fullName` is passed. Explicit props take precedence; missing fields (photo, jobTitle, company, socialMedia) are filled from `people.json`. Three usage patterns now work: name-only, partial override, or full manual data.
+- **Feature spec** — created `docs/features/data-layer.md` capturing the full vision: typed query functions in `src/lib/data.ts`, UUID-based props, build-time warnings, and static `/api/` endpoints for cross-microsite consumption.
+
+### The Journey
+
+The session started as an audit: four member JSON files existed because the Gatsby site expected them. With Astro, that constraint was gone. Consolidating into `members.json` + `people.json` meant a single source of truth and consumers filtering inline. Four pages (`about/`, `press/`, `governance/`, `policy/`) were updated to import the new files.
+
+The `memberPageCache` performance bug surfaced while tracing fetch slowness. The original code called `notion.pages.retrieve` for every volunteer's employer — once per volunteer, sequentially. With 400+ volunteers, that's 400+ sequential API calls. The fix was a database design insight: Notion roll-up properties can pull related data directly onto the Volunteers row. Adding `Company Name` and `Company Website` roll-ups to the Volunteers DB meant the script could read company data without any extra API calls. Nearly two minutes dropped off the fetch time.
+
+Project leads were an elegant derivation. The script already iterates every subscription row to build the people list — subscriptions are how volunteers are assigned to projects. Capturing lead-role subscriptions into a `pwciLeadsMap` as a side-effect cost nothing. By the time `fetchProjects` ran, the map was ready. The `jobTitle` field was added shortly after when the user noticed it was missing from the lead records — a one-line addition to the lead-building loop.
+
+The logo marquee bug was a small discovery: `logos.json` had somehow ended up empty despite the fetch completing. Rather than debug the derived file, removing the indirection was cleaner — have the component read `members.json` directly. Same data, one less file to keep in sync.
+
+TeamGrid name-lookup was the most satisfying piece: standards pages had hardcoded person objects with duplicated photo paths, company names, and LinkedIn URLs. With the lookup, `{ fullName: "Chris Adams" }` fills itself from `people.json`. Partial overrides work too — pass a `role` badge label and the component merges it with resolved data.
+
+### Technical Achievements
+
+- N+1 API call pattern eliminated — `notion.pages.retrieve` removed from hot path entirely
+- Fetch time: ~2.5 min → ~70 seconds
+- 4 JSON files → 2 JSON files; all consumers updated
+- `projects.json` contains embedded `leads` arrays with full person data
+- Stable Notion UUIDs on every record in every data file
+- `TeamGrid` resolves full person data from just a name
+
+### Key Learnings
+
+- **Design databases for read patterns**: Notion roll-ups let you pull related data onto the row you're already reading — no separate API call needed. When data is slow to fetch, look at what related records you're resolving and whether a roll-up could bring that data home.
+- **Derived files create drift risk**: `logos.json` as a derived view of members created a subtle maintenance surface. Having the component derive its own view at build time removes a file from the critical path.
+- **Build-time maps are cheap**: `personPhotoMap`, `personByName`, `pwciLeadsMap` are all built by iterating already-fetched data. Build lookup maps liberally — they cost nothing at build time.
+
+### Statistics
+
+- Fetch script: 247 insertions, 142 deletions
+- 4 JSON files consolidated into 2
+- ~400 sequential Notion API calls eliminated
+- Fetch time: ~2.5 min → ~70 seconds
+- 4 consumer pages updated (about, press, governance, policy)
+
+### Next Steps
+
+- **Hide Logo checkbox** — `hideLogo: boolean` in `members.json`, filter from logo marquee (hook already in place)
+- **`src/lib/data.ts`** — typed query functions wrapping JSON files; UUID-based lookups; build-time warnings for unresolved IDs
+- **Static `/api/` endpoints** — serve data files from Netlify CDN for cross-microsite consumption
+
 ## 2026-03-07 (cont.) - Standards Pages: Dynamic Data, Hero Badges & TeamGrid Refinements
 
 **Objective**: Wire up all standards project pages (RTC, SCI, SCI-AI, SOFT, WDPC) to pull team and metadata from `projects.json`, add working group and lifecycle stage badges to heroes, and simplify TeamGrid usage with the `people.json` auto-resolve pattern.
