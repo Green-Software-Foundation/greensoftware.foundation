@@ -1,0 +1,148 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="Contact — Green Software Foundation"
+  description="Get in touch with the Green Software Foundation. For any enquiry, email help@greensoftware.foundation and we'll get back to you."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about/" },
+    { label: "Contact" },
+  ]} />
+
+  <!-- Header -->
+  <section class="bg-accent-lightest-2 py-16 md:py-24" data-pagefind-body>
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-4 text-xs font-bold uppercase tracking-wider text-accent-dark">Get in touch</p>
+        <h1 class="text-3xl font-extrabold leading-tight md:text-4xl lg:text-5xl">
+          We're <span class="text-primary">always listening</span>
+        </h1>
+        <p class="mt-6 text-lg text-primary-dark">
+          For anything regarding the Green Software Foundation, reach out and someone will get back to you.
+        </p>
+        <a
+          href="mailto:help@greensoftware.foundation"
+          class="mt-8 inline-block rounded-lg bg-primary px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-primary-dark"
+        >
+          help@greensoftware.foundation
+        </a>
+        <p class="mt-4 text-sm text-primary-dark/70">We aim to respond within two business days.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Looking for something specific? -->
+  <ResourceCards
+    heading="Looking for *something specific?*"
+    body="These pages may already have what you need."
+    cards={[
+      {
+        title: "Membership",
+        description: "Questions about joining, membership tiers, or the benefits of becoming a GSF member.",
+        ctaText: "Visit the membership page",
+        ctaHref: "/membership/",
+      },
+      {
+        title: "Standards & Certification",
+        description: "Questions about our standards process, specifications like SCI, or SCI certification.",
+        ctaText: "Visit the standards page",
+        ctaHref: "/standards/",
+      },
+      {
+        title: "Policy & Research",
+        description: "Questions about our policy engagement, working groups, or research programme.",
+        ctaText: "Visit the policy & research page",
+        ctaHref: "/policy/",
+      },
+      {
+        title: "Community",
+        description: "Questions about community events, meetups, the Champions Programme, or the Movement Platform.",
+        ctaText: "Visit the community page",
+        ctaHref: "/community/",
+      },
+      {
+        title: "For Member Organisation Employees",
+        description: "If you work for a GSF member organisation and want to join working groups or register as an employee, the member area has everything you need.",
+        ctaText: "Visit the member area",
+        ctaHref: "https://wiki.greensoftware.foundation/getting-started",
+      },
+      {
+        title: "Press & Media",
+        description: "Press enquiries, media kit, logos, and boilerplate information about the foundation.",
+        ctaText: "Visit the press page",
+        ctaHref: "/press/",
+      },
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- Final nudge -->
+  <CTABanner
+    heading="Still not sure where to go?"
+    body="Just email us. Whatever your question, we'd rather you reach out than go unanswered."
+    ctaText="Email help@greensoftware.foundation"
+    ctaHref="mailto:help@greensoftware.foundation"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/contact/", text: "Contact" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "/newsletter/", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

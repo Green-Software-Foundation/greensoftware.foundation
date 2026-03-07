@@ -92,7 +92,7 @@ export const navItems = [
         title: "Connect",
         links: [
           { href: "https://movement.greensoftware.foundation", label: "Movement Platform", /* iconSrc: pi("movement-platform"), icon: "users", */ external: true },
-          { href: "https://newsletter.greensoftware.foundation", label: "Newsletter", /* icon: "newspaper", */ external: true },
+          { href: "/newsletter/", label: "Newsletter", /* icon: "newspaper", */ },
           { href: "https://badges.greensoftware.foundation", label: "Badges", /* icon: "badge", */ external: true },
           { href: "https://champions.greensoftware.foundation", label: "Champions Programme", /* iconSrc: pi("green-software-champions"), icon: "trophy", */ external: true },
         ],
@@ -115,6 +115,7 @@ export const navItems = [
           { href: "/about/", label: "About" /* icon: "building-2" */ },
           { href: "/governance/", label: "Governance & Leadership" /* icon: "shield" */ },
           { href: "/brand/", label: "Brand & Assets" /* icon: "palette" */ },
+          { href: "/contact/", label: "Contact" /* icon: "mail" */ },
           { href: "https://directory.greensoftware.foundation/members", label: "Member Directory", /* icon: "users", */ external: true },
           { href: "https://directory.greensoftware.foundation/working-groups", label: "Working Groups", external: true },
           { href: "https://directory.greensoftware.foundation/committees", label: "Committees", external: true },

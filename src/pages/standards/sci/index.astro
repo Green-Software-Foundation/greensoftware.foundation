@@ -13,6 +13,7 @@ import ResourceCards from "@/components/resource-cards.astro";
 import Timeline from "@/components/timeline.astro";
 import TeamGrid from "@/components/team-grid.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
+import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
@@ -357,6 +358,16 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-white"
   />
 
+  <!-- Certification -->
+  <CTACard
+    heading="SCI Certification Programme"
+    body="GSF members can certify their software product's SCI calculation — demonstrating that it was completed and disclosed following GSF guidelines. Certification is a membership benefit, available to all GSF members."
+    ctaText="Learn about certification"
+    ctaHref="/standards/certification/"
+    imageSrc="/assets/ready.svg"
+    imageAlt="Certification illustration"
+  />
+
   <!-- CTA -->
   <CTABanner
     heading="Ready to measure your software's carbon impact?"
@@ -391,7 +402,7 @@ import Footer from "@/components/footer.astro";
         links: [
           { href: "/membership/", text: "Become a Member" },
           { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
-          { href: "https://newsletter.greensoftware.foundation", text: "Newsletter" },
+          { href: "/newsletter/", text: "Newsletter" },
           { href: "https://summit.greensoftware.foundation", text: "Events" },
         ],
       },

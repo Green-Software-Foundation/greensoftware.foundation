@@ -1,0 +1,158 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="SCI Certification — Green Software Foundation"
+  description="A membership benefit allowing GSF members to obtain SCI certification for their software products — demonstrating commitment to measuring and disclosing software carbon intensity."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "Certification" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    heading="SCI Certification"
+    headingAccent="Programme"
+    body="A membership benefit for product-level SCI disclosure. GSF members can certify that their software product's carbon intensity has been measured and disclosed following GSF guidelines."
+    ctas={[
+      { text: "Apply now", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=SCI%20Certification%20Application" },
+      { text: "Learn about SCI", variant: "outline", href: "/standards/sci/" },
+    ]}
+    imageSrc="/assets/ready.svg"
+    imageAlt="SCI Certification illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- What we certify -->
+  <TextWithImage
+    badge="WHAT WE CERTIFY"
+    heading="The process, not"
+    headingAccent="the score"
+    body="GSF certifies that an organisation has completed and disclosed an SCI calculation following GSF guidelines. We verify that the process was followed and the results disclosed — responsibility for the accuracy of the score sits with the applicant through self-attestation. This keeps the programme lightweight and accessible while still providing a meaningful, credible signal to stakeholders."
+    ctaText="Read the SCI specification →"
+    ctaHref="/standards/sci/"
+    imageSrc="/assets/why-feat-1.svg"
+    imageAlt="Certification process illustration"
+    bgClass="bg-white"
+    reversed
+  />
+
+  <!-- Members only -->
+  <TextWithImage
+    badge="ELIGIBILITY"
+    heading="A benefit of"
+    headingAccent="GSF membership"
+    body="SCI Certification is available to GSF members only. Membership positions certification as a tangible benefit of joining the foundation — and ensures applicants are already committed to the green software mission. If your organisation isn't a member yet, explore membership to get started."
+    ctaText="Explore membership →"
+    ctaHref="/membership/"
+    imageSrc="/assets/about-gsf-illustration.svg"
+    imageAlt="Membership illustration"
+  />
+
+  <!-- How it works -->
+  <FeatureGrid
+    heading="How *certification works*"
+    body="The programme is designed to be straightforward. Certificates are valid for one year, after which resubmission is required."
+    variant="bordered"
+    columns={3}
+    features={[
+      {
+        title: "1. Self-attestation questionnaire",
+        description: "The applicant completes a questionnaire confirming their SCI methodology, scope, and data sources. Liability for accuracy sits with the applicant.",
+      },
+      {
+        title: "2. Completeness review",
+        description: "GSF staff check that the submission is complete. An AI-assisted filter may be used to speed up this step.",
+      },
+      {
+        title: "3. Working group review",
+        description: "The Software Standards Working Group has the opportunity to review the submission and raise any objections.",
+      },
+      {
+        title: "4. Sign-off",
+        description: "The GSF Executive Director or Chair reviews the outcome of the working group review and signs the certificate.",
+      },
+      {
+        title: "5. Publication",
+        description: "The certificate is issued and published at the agreed disclosure level — covering at minimum the product name, organisation, date, and signatory.",
+      },
+      {
+        title: "6. Annual renewal",
+        description: "Certificates are valid for one year. Organisations must resubmit annually to maintain their certification status.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Interested in SCI Certification?"
+    body="Get in touch to learn more about applying, eligibility, and what's required. We'll walk you through the process."
+    ctaText="Email us to apply"
+    ctaHref="mailto:help@greensoftware.foundation?subject=SCI%20Certification%20Application"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/standards/certification/", text: "Certification" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "/newsletter/", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

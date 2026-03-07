@@ -77,7 +77,7 @@ const {
       ]}>
         {headingStyle === "light"
           ? <Fragment>{heading}{" "}{headingAccent}</Fragment>
-          : <>{heading} {headingAccent && <span class="text-primary">{headingAccent}</span>}</>
+          : <>{heading}{headingAccent && <>{" "}<span class="text-primary">{headingAccent}</span></>}</>
         }
       </h2>
       {stats.length > 0 && (
