@@ -1,10 +1,14 @@
 ---
 import { Card } from "@/components/ui/card";
 import LinkedInIcon from "@/assets/linkedin-icon.svg";
+import peopleData from "@/data/people.json";
 
 interface TeamMember {
   fullName: string;
-  role: string;
+  /** Job title at their employer (from people.json). Takes precedence over role if both present. */
+  jobTitle?: string | null;
+  /** Fallback role label (used by hardcoded data on standards pages). */
+  role?: string;
   company?: string;
   photo?: string | null;
   socialMedia?: { platform: string; link: string }[];
@@ -32,12 +36,29 @@ interface Props {
 const {
   heading = "",
   body = "",
-  members = [],
-  highlighted = [],
+  members: rawMembers = [],
+  highlighted: rawHighlighted = [],
   columns = 3,
   decorSrc,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
+
+// Auto-resolve people by name from people.json when only fullName is provided
+const personByName = new Map((peopleData as any[]).map((p) => [p.fullName, p]));
+function resolveMember(m: TeamMember): TeamMember {
+  const found = personByName.get(m.fullName);
+  if (!found) return m;
+  // Merge: props passed explicitly take precedence; fall back to people.json values
+  return {
+    ...m,
+    jobTitle: m.jobTitle ?? found.jobTitle ?? null,
+    company: m.company ?? found.company ?? null,
+    photo: m.photo ?? found.photo ?? null,
+    socialMedia: m.socialMedia ?? found.socialMedia ?? [],
+  };
+}
+const members = (rawMembers as TeamMember[]).map(resolveMember);
+const highlighted = (rawHighlighted as TeamMember[]).map(resolveMember);
 
 // Parse heading accent segments
 const headingParts = heading
@@ -97,9 +118,14 @@ const colClasses: Record<number, string> = {
                 </span>
               )}
               <p class="text-lg font-bold text-white">{member.fullName}</p>
-              <p class="mt-1 text-sm text-white/70">{member.role}</p>
+              {member.role && (
+                <p class="mt-1 text-sm font-semibold text-white/90">{member.role}</p>
+              )}
+              {member.jobTitle && (
+                <p class="mt-0.5 text-sm text-white/70">{member.jobTitle}</p>
+              )}
               {member.company && (
-                <p class="text-xs text-white/50">{member.company}</p>
+                <p class="mt-0.5 text-xs font-semibold text-accent">{member.company}</p>
               )}
               {linkedin && (
                 <a href={linkedin.link} target="_blank" rel="noopener noreferrer" class="mt-3">
@@ -115,14 +141,17 @@ const colClasses: Record<number, string> = {
     {/* Regular members grid */}
     {members.length > 0 && (
       <div class:list={[
-        `grid grid-cols-1 gap-4 ${colClasses[columns]}`,
-        members.length <= 2 && "mx-auto max-w-2xl",
+        members.length === 1
+          ? "flex justify-center"
+          : `grid grid-cols-1 gap-4 ${colClasses[columns]}`,
+        members.length === 1 && "mx-auto",
+        members.length === 2 && "mx-auto max-w-2xl",
         members.length === 3 && "mx-auto max-w-4xl",
       ]}>
         {members.map((member) => {
           const linkedin = member.socialMedia?.find(s => s.platform === "Linkedin");
           return (
-            <Card className="flex flex-col items-center p-6 text-center h-full justify-between">
+            <Card className="flex flex-col items-center p-6 text-center h-full justify-between w-full max-w-xs mx-auto">
               <div class="mb-4 flex size-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2">
                 {member.photo ? (
                   <img src={member.photo} alt={member.fullName} class="size-full object-cover" />
@@ -142,9 +171,14 @@ const colClasses: Record<number, string> = {
                 </div>
               )}
               <p class="text-base font-bold">{member.fullName}</p>
-              <p class="mt-1 text-sm text-gray-darker">{member.role}</p>
+              {member.role && (
+                <p class="mt-1 text-sm font-semibold text-primary-dark">{member.role}</p>
+              )}
+              {member.jobTitle && (
+                <p class="mt-0.5 text-sm text-gray-darker">{member.jobTitle}</p>
+              )}
               {member.company && (
-                <p class="text-xs text-gray-darker">{member.company}</p>
+                <p class="mt-0.5 text-xs font-semibold text-primary">{member.company}</p>
               )}
               {linkedin && (
                 <a href={linkedin.link} target="_blank" rel="noopener noreferrer" class="mt-3">

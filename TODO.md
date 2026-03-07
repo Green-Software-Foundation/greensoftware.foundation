@@ -52,7 +52,13 @@
 - [-] **History page** — GSF timeline/history (needs figuring out and building)
 - [ ] **Assemblies page** — own page eventually; link out to existing assemblies page for now
 - [x] **Press & Media section** — import content from Notion sources into a new page/section
-- [x] **Certification page** — potentially needed under Standards, TBD
+- [x] **Certification page** — built `/standards/certification/` (SCI self-attestation programme, membership benefit)
+- [ ] **SEE page** — build `/standards/see/` detail page for the Software Energy Efficiency standard
+- [ ] **SCI for Web page** — build `/standards/sci-web/` detail page (similar pattern to sci, sci-ai)
+- [ ] **Carbon Aware SDK site** — create a dedicated project page (or microsite) for the Carbon Aware SDK
+- [ ] **Impact Framework site** — create a dedicated project page (or microsite) for the Impact Framework
+- [ ] **Claude Desktop content updates** — implement workflow so content can be updated directly from Claude Desktop (MCP / structured content editing)
+- [ ] **Roll out to greensoftware.org** — already in Medium Effort; ensure DNS + Netlify config covers greensoftware.org in addition to greensoftware.foundation
 
 ## Done
 

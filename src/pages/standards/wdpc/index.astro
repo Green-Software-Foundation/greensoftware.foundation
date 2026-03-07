@@ -15,9 +15,15 @@ import Timeline from "@/components/timeline.astro";
 import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
+import TeamGrid from "@/components/team-grid.astro";
 import Footer from "@/components/footer.astro";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+import projects from "@/data/projects.json";
+
+const wdpcProject = projects.find(p => p.slug === "wdpc");
+const parentWg = projects.find(p => p.name === wdpcProject?.parent);
 ---
 
 <Layout
@@ -43,6 +49,10 @@ import { Badge } from "@/components/ui/badge";
 
   <!-- Hero -->
   <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(wdpcProject?.lifecycle ? [{ text: wdpcProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
     heading="Intelligent Coordination for"
     headingAccent="Sustainable Computing"
     subtitle="Optimise energy use, support grid stability, and maximise renewables while scaling sustainably."
@@ -270,7 +280,7 @@ import { Badge } from "@/components/ui/badge";
           <div>
             <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Leading The Charge</h2>
             <p class="mt-2 text-xl">Project Leadership</p>
-            <p class="mt-2 text-xl">My Truong | CTO, Zutacore | Project Lead | Hardware Standards Working Group</p>
+            <p class="mt-2 text-xl">My Truong | CTO, ZutaCore | WDPC Project Lead</p>
             <Badge className="mt-2">Actively recruiting contributors</Badge>
             <p class="mt-4">
               We're building this standard with input from data centre operators, infrastructure providers, and sustainability experts worldwide. Your expertise can help shape how the industry coordinates energy for decades to come.

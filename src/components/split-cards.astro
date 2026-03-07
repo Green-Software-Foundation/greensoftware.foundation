@@ -15,6 +15,10 @@ interface Props {
   iconSrc?: string;
   /** Decorative SVG overlaid on info card (top-right corner) */
   decorSrc?: string;
+  /** CTA link text shown below body in the info card */
+  ctaText?: string;
+  /** CTA link href */
+  ctaHref?: string;
   /** Quote text for the quote card */
   quote?: string;
   /** Quote icon SVG */
@@ -30,6 +34,8 @@ const {
   body = "",
   iconSrc,
   decorSrc,
+  ctaText,
+  ctaHref,
   quote = "",
   quoteIconSrc,
   attribution,
@@ -57,6 +63,11 @@ const {
           {body && (
             <p class="mt-4">{body}</p>
           )}
+          {ctaText && ctaHref && (
+            <a href={ctaHref} class="mt-4 inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+              {ctaText} →
+            </a>
+          )}
         </div>
       </div>
       <!-- Quote Card -->
@@ -70,7 +81,7 @@ const {
         {attribution && (
           <div class="mt-3 flex items-center gap-2 md:mt-4">
             {attribution.avatar && (
-              <img src={attribution.avatar} class="rounded-full" />
+              <img src={attribution.avatar} class="h-12 w-12 rounded-full object-cover" />
             )}
             <div>
               <h3 class="text-xl font-semibold text-black">{attribution.name}</h3>

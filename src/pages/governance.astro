@@ -12,7 +12,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
 // Load team data from Notion-sourced JSON
-import teamData from "@/data/team.json";
+import teamData from "@/data/people.json";
 
 // ----- Data preparation -----
 
@@ -37,8 +37,8 @@ const staff = teamData.filter(p => p.groups.includes("administrativeTeam"));
 
 // Sort staff: Executive Director first, then alphabetical
 const staffSorted = [...staff].sort((a, b) => {
-  if (a.role.includes("Executive Director")) return -1;
-  if (b.role.includes("Executive Director")) return 1;
+  if ((a as any).jobTitle?.includes("Executive Director")) return -1;
+  if ((b as any).jobTitle?.includes("Executive Director")) return 1;
   return a.fullName.localeCompare(b.fullName);
 });
 
@@ -70,7 +70,7 @@ const orgLeadsRaw = teamData.filter(p => p.groups.includes("organisationalLeads"
 const orgLeadsList = orgLeadsRaw.map(p => ({
   name: p.fullName,
   company: p.company || "",
-  role: p.role,
+  role: (p as any).jobTitle || null,
   socialMedia: p.socialMedia,
 }));
 ---

@@ -21,6 +21,8 @@ interface Props {
   body?: string;
   /** Array of resource cards */
   cards?: ResourceCard[];
+  /** Number of columns (2, 3, or 4) */
+  columns?: 2 | 3 | 4;
   /** Background class */
   bgClass?: string;
 }
@@ -29,8 +31,15 @@ const {
   heading = "",
   body,
   cards = [],
+  columns,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
+
+const colClass = columns === 2
+  ? "md:grid-cols-2"
+  : columns === 4
+    ? "md:grid-cols-2 lg:grid-cols-4"
+    : "md:grid-cols-3";
 
 // Split heading into plain and accent segments
 const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
@@ -56,7 +65,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
       )}
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+    <div class={`grid grid-cols-1 ${colClass} gap-6 lg:gap-8`}>
       {cards.map((card) => (
         <div class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow">
           {card.icon && (

@@ -13,13 +13,12 @@ import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
 // ── Dynamic data ──────────────────────────────────────────────────────────────
-import steeringMembers from "@/data/steering-members.json";
-import generalMembers from "@/data/general-members.json";
-import academicMembers from "@/data/academic-government-members.json";
+import members from "@/data/members.json";
 
-const activeSteeringMembers = (steeringMembers as any[]).filter((m) => m.active);
-const activeGeneralMembers = (generalMembers as any[]).filter((m) => m.active);
-const activeAcademicMembers = (academicMembers as any[]).filter((m) => m.active !== false);
+const academicGovTypes = ["Academia", "Government"];
+const activeSteeringMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "Steering");
+const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organisationType));
+const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organisationType));
 const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
 ---
 

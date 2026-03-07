@@ -17,6 +17,11 @@ import Timeline from "@/components/timeline.astro";
 import TeamGrid from "@/components/team-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const sciAiProject = projects.find(p => p.slug === "sci-ai");
+const parentWg = projects.find(p => p.name === sciAiProject?.parent);
 ---
 
 <Layout
@@ -42,6 +47,10 @@ import Footer from "@/components/footer.astro";
 
   <!-- Hero -->
   <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(sciAiProject?.lifecycle ? [{ text: sciAiProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
     heading="Measure"
     headingAccent="AI's Carbon Footprint"
     headingSuffix="with Purpose"
@@ -340,28 +349,16 @@ import Footer from "@/components/footer.astro";
     ]}
   />
 
-  <!-- Team -->
+  <!-- Team (driven from projects.json) -->
   <TeamGrid
     heading="Project *Leadership*"
-    body="Part of the Software Standards Working Group"
-    columns={2}
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={sciAiProject?.leads?.length === 2 ? 2 : 3}
     highlighted={[]}
-    members={[
-      {
-        fullName: "Navveen Balani",
-        role: "Software Standards Working Group Chair",
-        company: "Accenture",
-        photo: "/assets/standards/sci-ai/team-member-1.svg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/naveenbalani/" }],
-      },
-      {
-        fullName: "Henry Richardson",
-        role: "Software Standards Working Group Chair",
-        company: "Watt Time",
-        photo: "/assets/standards/sci-ai/team-member-2.svg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/henry-richardson/" }],
-      },
-    ]}
+    members={(sciAiProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
     bgClass="bg-accent-lightest-2"
   />
 

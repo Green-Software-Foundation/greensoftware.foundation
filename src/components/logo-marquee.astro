@@ -26,7 +26,9 @@ const {
   greyscale = false,
 } = Astro.props;
 
-const logos: Logo[] = propLogos || (await import("../data/logos.json")).default;
+const logos: Logo[] = propLogos || (await import("../data/members.json")).default
+  .filter((m: any) => m.active && m.logo && !m.hideLogo)
+  .map((m: any) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite }));
 const marqueeDuration = Math.max(logos.length * 3, 30);
 
 // Determine the gradient "from" color based on background

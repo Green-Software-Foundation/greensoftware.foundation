@@ -15,6 +15,11 @@ import TeamGrid from "@/components/team-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const softProject = projects.find(p => p.slug === "soft");
+const parentWg = projects.find(p => p.name === softProject?.parent);
 ---
 
 <Layout
@@ -40,6 +45,10 @@ import Footer from "@/components/footer.astro";
 
   <!-- Hero -->
   <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(softProject?.lifecycle ? [{ text: softProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
     heading="Transform Your Organisation for"
     headingAccent="Sustainable Software"
     body="SOFT is the comprehensive framework that guides organisations through adopting, implementing, and transforming sustainable software practices across their entire operations."
@@ -268,28 +277,16 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Team -->
+  <!-- Team (driven from projects.json) -->
   <TeamGrid
     heading="Project *Leadership*"
-    body="Part of the Software Standards Working Group"
-    columns={2}
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={softProject?.leads?.length === 2 ? 2 : 3}
     highlighted={[]}
-    members={[
-      {
-        fullName: "Pindy Bhullar",
-        role: "PhD Researcher / Sustainable IT Consultant",
-        company: "HSBC",
-        photo: "/assets/standards/soft/pindy.jpeg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/pindybhullar/" }],
-      },
-      {
-        fullName: "Sean O'Keefe",
-        role: "Business Program Manager, Product Operations",
-        company: "Microsoft",
-        photo: "/assets/standards/soft/sean.jpeg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/sean-o-keefe/" }],
-      },
-    ]}
+    members={(softProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
     bgClass="bg-white"
   />
 

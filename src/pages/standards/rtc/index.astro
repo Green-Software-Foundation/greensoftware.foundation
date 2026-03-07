@@ -1,0 +1,427 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import CardGrid from "@/components/card-grid.astro";
+import SplitCards from "@/components/split-cards.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const rtcProject = projects.find(p => p.slug === "real-time-cloud");
+const parentWg = projects.find(p => p.name === rtcProject?.parent);
+---
+
+<Layout
+  title="RTC — Real Time Cloud | Green Software Foundation"
+  description="The first standard requiring cloud providers to share real-time energy and carbon data in a common format. Normalised metadata from AWS, Azure, and GCP."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "RTC" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(rtcProject?.lifecycle ? [{ text: rtcProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Real-Time Energy and"
+    headingAccent="Carbon Data for Cloud"
+    subtitle="The first standard requiring cloud providers to share real-time energy and carbon data in a common format."
+    body="Cloud providers are the world's largest purchasers of renewable energy, yet they only release carbon data to customers monthly, with delays of several months. The Real Time Cloud (RTC) standard changes this by normalising energy and carbon metadata from AWS, Azure, and GCP into a single, comparable dataset — enabling accurate emissions reporting, carbon-aware workload scheduling, and regulatory compliance."
+    ctas={[
+      { text: "View the Dataset", variant: "primary", href: "https://github.com/Green-Software-Foundation/real-time-cloud" },
+    ]}
+    imageSrc="/assets/standards/rtc/hero-illustration.svg"
+    imageAlt="RTC illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with cloud providers, enterprise consumers, and data partners"
+  />
+
+  <!-- What is RTC? -->
+  <CTACard
+    heading="What is *Real Time Cloud?*"
+    bodyHtml="The Real Time Energy and Carbon Standard for Cloud Providers (RTC) defines a standardised <strong>Cloud Region Metadata Table</strong> that normalises annual energy and carbon data from the three largest cloud providers — AWS, Azure, and GCP — into a single comparable format.<br/><br/>For each cloud region, RTC captures Power Usage Effectiveness (PUE), Water Usage Effectiveness (WUE), Carbon Free Energy percentages, renewable energy breakdowns, carbon intensity metrics (location-based, market-based, marginal, and average), grid zone IDs for real-time API lookups via <a href='https://www.electricitymaps.com/' class='text-primary underline' target='_blank' rel='noopener noreferrer'>Electricity Maps</a> and <a href='https://watttime.org/' class='text-primary underline' target='_blank' rel='noopener noreferrer'>WattTime</a>, and geolocation data. The result: organisations running workloads across multiple providers can finally compare carbon data using a single, consistent methodology."
+    imageSrc="/assets/standards/rtc/what-rtc-illustration.svg"
+    imageAlt="What is RTC illustration"
+  />
+
+  <!-- Why RTC Matters (heading) -->
+  <TextBlock
+    heading="Why *RTC* Matters"
+    body="Cloud computing's environmental impact is growing rapidly, yet the data needed to measure and reduce it has been fragmented, delayed, and incomparable across providers."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    headingStyle="light"
+    body="Every organisation trying to measure the carbon footprint of its cloud workloads faced the same foundational problem: the data from cloud providers was late, incomplete, and incomparable. If you ran workloads across AWS, Azure, and GCP, you received three different reports using three different methodologies on three different timescales. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure, creating a single source of truth that the entire industry can build upon."
+    imageSrc="/assets/standards/rtc/tabs-cloud-engineers.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    headingStyle="light"
+    imageSrc="/assets/standards/rtc/tabs-business.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/rtc/realtime-icon.svg",
+        description: '<span class="font-extrabold">Real-time carbon visibility</span> — Move from monthly reports with months of delay to minute-by-minute carbon intensity data for informed workload scheduling',
+      },
+      {
+        icon: "/assets/standards/rtc/co2-icon.svg",
+        description: '<span class="font-extrabold">Accurate Scope 3 reporting</span> — Include cloud provider renewable energy purchases in your emissions calculations, eliminating systematically inflated estimates',
+      },
+      {
+        icon: "/assets/standards/rtc/cost-icon.svg",
+        description: '<span class="font-extrabold">Cross-provider comparison</span> — Compare carbon performance across AWS, Azure, and GCP using a single, standardised methodology',
+      },
+      {
+        icon: "/assets/standards/rtc/grid-stability-icon.svg",
+        description: '<span class="font-extrabold">Regulatory compliance</span> — Meet CSRD, California disclosure requirements, and EU Energy Efficiency Directive reporting obligations',
+      },
+      {
+        icon: "/assets/standards/rtc/infra-icon.svg",
+        description: '<span class="font-extrabold">Carbon-aware scheduling</span> — Use real-time grid zone IDs to run workloads when and where energy is cleanest',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/rtc/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    headingStyle="light"
+    body="Customers reporting Scope 3 emissions were forced to produce estimates using incomplete public information that excluded the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organisations that had invested heavily in clean cloud infrastructure were being penalised by the data gap. RTC solves this by capturing carbon-free energy percentages, renewable energy breakdowns including Guarantees of Origin, Power Purchase Agreements, and on-site generation, giving a true picture of each cloud region's environmental footprint."
+    imageSrc="/assets/standards/rtc/tabs-sustainability.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Cloud Region Metadata -->
+  <FeatureGrid
+    heading="The Cloud Region Metadata Table"
+    bodyHtml="The 23 standardised columns are grouped into five categories, normalising energy, carbon, and infrastructure data across all major cloud providers into a single comparable format."
+    columns={5}
+    variant="plain"
+    features={[
+      {
+        icon: "/assets/standards/rtc/transforming-icon-1.svg",
+        title: "Energy Efficiency",
+        description: "Power and water usage effectiveness metrics for every cloud region, plus total ICT energy consumption and water input",
+      },
+      {
+        icon: "/assets/standards/rtc/transforming-icon-2.svg",
+        title: "Carbon Free Energy",
+        description: "Hourly and annual carbon-free energy percentages, with renewable energy broken down by certificates, PPAs, and on-site generation",
+      },
+      {
+        icon: "/assets/standards/rtc/transforming-icon-3.svg",
+        title: "Carbon Intensity",
+        description: "Five carbon intensity metrics covering market-based, location-based, marginal, and average consumption at both provider and grid level",
+      },
+      {
+        icon: "/assets/standards/rtc/transforming-icon-4.svg",
+        title: "Grid & Location",
+        description: "Electricity Maps and WattTime zone identifiers, CFE region designations, geographic location names, and coordinates",
+      },
+      {
+        icon: "/assets/standards/rtc/realtime-icon.svg",
+        title: "Provider & Time",
+        description: "Calendar year, cloud provider name, and region identifier for cross-provider comparison",
+      },
+    ]}
+  />
+
+  <!-- Mission Card: The Data Gap -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/rtc/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold">The Cloud Carbon Data Gap</h2>
+          <p class="mt-3 text-lg font-medium text-primary-dark italic md:mt-4 md:text-xl">
+            Despite being the world's largest purchasers of renewable energy, cloud providers have only released carbon data to customers on a monthly basis, with delays of a few months. This gap leaves users relying on public data that overlooks these clean energy investments, resulting in inflated emissions estimates. RTC closes this gap with standardised, comparable, real-time data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformative Capabilities -->
+  <FeatureGrid
+    heading="*Transformative* Capabilities"
+    body="RTC brings unprecedented transparency to cloud carbon data through features designed for real-world enterprise use."
+    columns={5}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/rtc/feat-icon-1.svg",
+        title: "Cross-Provider Normalisation",
+        description: "A single table covering AWS, Azure, and GCP with consistent definitions and methodology",
+      },
+      {
+        icon: "/assets/standards/rtc/feat-icon-2.svg",
+        title: "Real-Time API Integration",
+        description: "Grid zone IDs for Electricity Maps and WattTime enable live carbon intensity lookups",
+      },
+      {
+        icon: "/assets/standards/rtc/feat-icon-3.svg",
+        title: "Renewable Energy Transparency",
+        description: "Breakdowns by Guarantees of Origin, Power Purchase Agreements, and on-site generation",
+      },
+      {
+        icon: "/assets/standards/rtc/feat-icon-4.svg",
+        title: "GSF Ecosystem Integration",
+        description: "Feeds directly into Impact Framework and SCI for software carbon calculations",
+      },
+      {
+        icon: "/assets/standards/rtc/feat-icon-5.svg",
+        title: "Open Data",
+        description: "All datasets are publicly available on GitHub, with community contributions welcomed",
+      },
+    ]}
+  />
+
+  <!-- Built for Every Role -->
+  <TabbedSection
+    heading="Built for Every Role in Cloud"
+    tabs={[
+      {
+        value: "cloud-engineers",
+        heading: "Cloud Engineers",
+        description: "Access standardised energy and carbon data for every cloud region across AWS, Azure, and GCP. Use grid zone IDs for real-time carbon intensity lookups to schedule workloads when and where energy is cleanest. Build carbon-aware applications with confidence using comparable, standardised metrics.",
+        image: { src: "/assets/standards/rtc/tabs-cloud-engineers.svg", alt: "Cloud Engineers" },
+      },
+      {
+        value: "sustainability-teams",
+        heading: "Sustainability Teams",
+        description: "Finally, a standardised way to report Scope 3 cloud emissions that accounts for provider renewable energy investments. Meet CSRD, California disclosure, and EU Energy Efficiency Directive requirements with data that aligns across providers. Compare the carbon performance of different cloud regions and providers using consistent methodology. Track improvements over time with annually updated, comparable datasets.",
+        image: { src: "/assets/standards/rtc/tabs-sustainability.svg", alt: "Sustainability Teams" },
+      },
+      {
+        value: "business-leaders",
+        heading: "Business Leaders",
+        description: "Make informed procurement decisions based on comparable carbon data across cloud providers. Validate sustainability claims from providers with standardised, independently verifiable metrics. Reduce the risk of greenwashing in your supply chain reporting. Position your organisation at the forefront of cloud sustainability with data-driven strategy that satisfies regulators, investors, and customers.",
+        image: { src: "/assets/standards/rtc/tabs-business.svg", alt: "Business Leaders" },
+      },
+    ]}
+  />
+
+  <!-- Origin Story -->
+  <SplitCards
+    heading="From Conference Talk to Global Standard"
+    body="In March 2023, Adrian Cockcroft — former VP of Cloud Architecture Strategy at AWS — proposed the standard at QCon London. Having spent years on both sides of the problem, he understood that cloud providers had the data but lacked a standard format for sharing it. His framing: the goal was not perfect data but standardised, comparable data that would make the carbon emissions model for cloud workloads 'less wrong and more useful.' The project launched in July 2023 with Microsoft Azure and Google Cloud agreeing to sit at the same table alongside enterprise consumers like UBS."
+    iconSrc="/assets/standards/rtc/leading-icon.svg"
+    decorSrc="/assets/standards/rtc/leading-decor.svg"
+    ctaText="Read how organisations came together to build RTC"
+    ctaHref="/stories/real-time-cloud/"
+    quote="Collaboration is essential at every level: within teams, across organisations, and even between institutions. Time is of the essence; we can't afford to wait for years to change the tech culture. The change needs to begin now."
+    quoteIconSrc="/assets/standards/rtc/quote-icon.svg"
+    attribution={{
+      avatar: "/assets/team/pindy-bhullar.png",
+      name: "Pindy Bhullar",
+      role: "RTC Co-Lead, Sustainable IT Consultant",
+      company: "ClimateAction.tech / UBS",
+    }}
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved with RTC"
+    body="Join the working group advancing cloud carbon transparency"
+    columns={4}
+    align="left"
+    decorSrc="/assets/standards/rtc/shape-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/rtc/shape-icon-1.svg",
+        title: "Contribute Data",
+        description: "Help produce best-estimate region metadata for the current year",
+        ctaText: "Submit a Contribution",
+        ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud/issues/new?template=question.yaml",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-2.svg",
+        title: "Join the Working Group",
+        description: "Collaborate with cloud providers and enterprises shaping the standard (Members Only)",
+        ctaText: "Subscribe (Members Only)",
+        ctaHref: "https://wiki.greensoftware.foundation/subscribe",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-3.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with project leads and explore the community",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/real-time-cloud",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-4.svg",
+        title: "Become a GSF Member",
+        description: "Reach out to the GSF team about membership benefits",
+        ctaText: "Get in touch",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Resources -->
+  <ResourceCards
+    heading="Everything You Need to *Get Started*"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/rtc/standardized-icon.svg",
+        title: "Cloud Region Metadata Table",
+        description: "The complete cross-provider dataset — PUE, WUE, CFE, carbon intensity, and grid zone IDs for AWS, Azure, and GCP.",
+        ctaText: "View the CSV",
+        ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud/blob/main/Cloud_Region_Metadata.csv",
+      },
+      {
+        icon: "/assets/standards/rtc/dive-icon-2.svg",
+        title: "Cloud Region Metadata Specification",
+        description: "The formal specification defining all standardised columns, naming conventions, and metric types.",
+        ctaText: "Read the Spec",
+        ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud/blob/main/Cloud_Region_Metadata_specification.md",
+      },
+      {
+        icon: "/assets/standards/rtc/realtime-icon.svg",
+        title: "GSF Impact Framework",
+        description: "The open-source tool that consumes RTC reference data for software carbon calculations.",
+        ctaText: "Explore the Framework",
+        ctaHref: "https://if.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/standards/rtc/renewable-icon.svg",
+        title: "RTC Ratification Article",
+        description: "Learn about what ratification means, how the standard was built, and what comes next.",
+        ctaText: "Read the Article",
+        ctaHref: "/articles/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="From Proposal to *Global Standard*"
+    items={[
+      { date: "March 2023", description: "Standard proposed", completed: true, start: "2023-03-01", end: "2023-03-31" },
+      { date: "July 2023", description: "Working group formed", completed: true, start: "2023-07-01", end: "2023-07-31" },
+      { date: "August 2024", description: "First dataset released", completed: true, start: "2024-08-01", end: "2024-08-31" },
+      { date: "April 2025", description: "Standard ratified", completed: true, start: "2025-04-01", end: "2025-04-30" },
+      { date: "February 2026", description: "V1.1 approved", completed: true, start: "2026-02-01", end: "2026-02-28" },
+      { date: "2026", description: "ISO trajectory", current: true, start: "2026-03-01", end: "2026-12-31" },
+    ]}
+  />
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={rtcProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(rtcProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Cloud Carbon Transparency Starts Here"
+    body="All RTC data is openly available on GitHub. If your organisation runs workloads across multiple cloud providers and struggles with inconsistent carbon reporting, the Cloud Region Metadata Table gives you comparable, standardised data now."
+    ctaText="View the Dataset"
+    ctaHref="https://github.com/Green-Software-Foundation/real-time-cloud"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "/newsletter/", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>

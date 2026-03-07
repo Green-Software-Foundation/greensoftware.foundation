@@ -28,11 +28,9 @@ if (!NOTION_API_KEY) {
   const fallbackDir = path.join(ROOT_DIR, "src", "data");
   fs.mkdirSync(fallbackDir, { recursive: true });
   const fallbacks = {
-    "logos.json": [],           // active members only — for logo marquee
-    "steering-members.json": [], // all steering (active + historical), with active flag
-    "general-members.json": [],  // all general (active + historical), with active flag
-    "academic-government-members.json": [],
-    "team.json": [],
+    "logos.json": [],     // active members only — for logo marquee
+    "members.json": [],   // all members (steering + general), with active flag and membershipLevel
+    "people.json": [],    // all team/volunteer people with groups and leadershipRoles
     "stats.json": {},
     "projects.json": [],
     "press-mentions.json": [],
@@ -223,8 +221,7 @@ async function queryAll(dataSourceId, filter) {
 }
 
 // Module-level caches — avoid redundant Notion API round-trips across all queries
-const memberPageCache = new Map(); // memberId → page
-const pwciNameCache = new Map();   // pwciId  → name string
+const pwciNameCache = new Map();   // pwciId → name string
 
 // ---------------------------------------------------------------------------
 // Query 1 & 2: Member Organisations
@@ -279,6 +276,7 @@ async function fetchMembers(level) {
     }
 
     members.push({
+      id: page.id,
       companyName: name,
       companyWebsite: website,
       membershipLevel: level,
@@ -441,8 +439,18 @@ async function fetchChairsAndLeads(volunteerBySubId) {
     }
   }));
 
+  // Roles that qualify as named leads on a project (not "Committee Member" — too broad)
+  const leadRoleLabels = {
+    "Working Group Chair": "Chair",
+    "Project Lead": "Lead",
+    "Project Co-Lead": "Co-Lead",
+    "Committee Chair": "Chair",
+    "Committee Vice Chair": "Vice-Chair",
+  };
+
   const people = [];
   const seenVolunteerIds = new Set();
+  const pwciLeadsMap = new Map(); // pwciId → [{ fullName, roleLabel, company, linkedin }]
 
   for (const sub of subs) {
     const role = selectName(sub.properties["Role for Subscription"]);
@@ -451,9 +459,29 @@ async function fetchChairsAndLeads(volunteerBySubId) {
     const pwciName = pwciIds.length > 0 ? (pwciNameCache.get(pwciIds[0]) || "") : "";
     const roleShort = role.replace("Working Group ", "").replace("Project ", "").replace("Committee ", "");
     const label = pwciName ? `${pwciName} (${roleShort})` : role;
+    const roleLabel = leadRoleLabels[role]; // undefined for Committee Member
 
     // Resolve from pre-fetched map (no API call)
     for (const vol of (volunteerBySubId.get(sub.id) || [])) {
+      // Build pwciLeadsMap for named lead roles only
+      if (roleLabel && pwciIds.length > 0) {
+        const vp = vol.properties;
+        const firstName = richText(vp["First Name"]?.rich_text);
+        const lastName = richText(vp["Last Name"]?.rich_text);
+        const fullName = `${firstName} ${lastName}`.trim();
+        const linkedin = urlValue(vp["LinkedIn"]);
+        const companyNameArr = vp["Company Name"]?.rollup?.array || [];
+        const company = titleText(companyNameArr[0]) || "";
+        const jobTitle = richText(vp["Job Title"]?.rich_text) || null;
+        for (const pwciId of pwciIds) {
+          if (!pwciLeadsMap.has(pwciId)) pwciLeadsMap.set(pwciId, []);
+          const leads = pwciLeadsMap.get(pwciId);
+          if (fullName && !leads.some((l) => l.fullName === fullName)) {
+            leads.push({ fullName, roleLabel, jobTitle, company, linkedin: linkedin || null });
+          }
+        }
+      }
+
       if (seenVolunteerIds.has(vol.id)) {
         const existing = people.find((p) => p._volunteerIds?.includes(vol.id));
         if (existing && label && !existing.leadershipRoles.includes(label)) {
@@ -470,7 +498,7 @@ async function fetchChairsAndLeads(volunteerBySubId) {
   }
 
   console.log(`  Resolved ${people.length} unique chairs/leads`);
-  return people;
+  return { people, pwciLeadsMap };
 }
 
 // ---------------------------------------------------------------------------
@@ -565,7 +593,7 @@ async function fetchAdminTeam(volunteerByName) {
 
     people.push({
       fullName,
-      role,
+      jobTitle: role,
       company: "Green Software Foundation",
       companyWebsite: "https://greensoftware.foundation/",
       photo: photoPath,
@@ -590,23 +618,11 @@ async function extractPerson(vol, role) {
   const linkedin = urlValue(vp["LinkedIn"]);
   const photoUrl = fileUrl(vp["Photo"]);
 
-  // Resolve company name from Member relation (cached to avoid duplicate API calls)
-  let company = "";
-  let companyWebsite = "";
-  const memberIds = relationIds(vp["Member"]);
-  if (memberIds.length > 0) {
-    try {
-      const memberId = memberIds[0];
-      if (!memberPageCache.has(memberId)) {
-        memberPageCache.set(memberId, await notion.pages.retrieve({ page_id: memberId }));
-      }
-      const memberPage = memberPageCache.get(memberId);
-      company = titleText(memberPage.properties["Member Name "]);
-      companyWebsite = urlValue(memberPage.properties["Website"]);
-    } catch (err) {
-      console.warn(`  WARN: Could not resolve member org for ${fullName}: ${err.message}`);
-    }
-  }
+  // Resolve company name + website from roll-up properties (no extra API calls)
+  const companyNameArr = vp["Company Name"]?.rollup?.array || [];
+  const companyWebsiteArr = vp["Company Website"]?.rollup?.array || [];
+  const company = titleText(companyNameArr[0]) || "";
+  const companyWebsite = companyWebsiteArr[0]?.url || "";
 
   // Download photo
   let photoPath = null;
@@ -627,8 +643,9 @@ async function extractPerson(vol, role) {
   }
 
   return {
+    id: vol.id,
     fullName,
-    role: jobTitle || role,
+    jobTitle: jobTitle || null,
     company,
     companyWebsite,
     photo: photoPath,
@@ -653,7 +670,7 @@ async function fetchPressMentions() {
       const source = richText(props["Source Name"]?.rich_text);
       const date = props.Date?.date?.start || "";
       if (!title || !url) return null;
-      return { title, url, source, date };
+      return { id: page.id, title, url, source, date };
     })
     .filter(Boolean)
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
@@ -710,6 +727,7 @@ async function fetchProjects() {
     }
 
     projects.push({
+      id: page.id,
       name,
       slug,
       type,
@@ -754,30 +772,19 @@ async function main() {
   const allSteering = await fetchMembers("Steering");
   const allGeneral = await fetchMembers("General");
 
-  const academicGovTypes = ["Academia", "Government"];
-
-  // Per-level JSON files include ALL members (active + inactive) with active flag.
-  // Consumers filter by active: true for display; inactive entries preserve history.
-  fs.writeFileSync(
-    path.join(DATA_DIR, "steering-members.json"),
-    JSON.stringify(allSteering, null, 2)
-  );
-  fs.writeFileSync(
-    path.join(DATA_DIR, "general-members.json"),
-    JSON.stringify(allGeneral.filter((m) => !academicGovTypes.includes(m.organisationType)), null, 2)
-  );
-  fs.writeFileSync(
-    path.join(DATA_DIR, "academic-government-members.json"),
-    JSON.stringify(allGeneral.filter((m) => academicGovTypes.includes(m.organisationType)), null, 2)
-  );
-
   const activeSteeringCount = allSteering.filter((m) => m.active).length;
   const activeGeneralCount = allGeneral.filter((m) => m.active).length;
   console.log(`  Active: ${activeSteeringCount} steering, ${activeGeneralCount} general`);
   console.log(`  Historical: ${allSteering.length - activeSteeringCount} steering, ${allGeneral.length - activeGeneralCount} general`);
 
-  // logos.json — active members only, for the logo marquee component
+  // members.json — all members combined (steering + general), consumers filter by membershipLevel / organisationType / active
   const allMembers = [...allSteering, ...allGeneral];
+  fs.writeFileSync(
+    path.join(DATA_DIR, "members.json"),
+    JSON.stringify(allMembers, null, 2)
+  );
+
+  // logos.json — derived view: active members with logos only, for the logo marquee component
   const logos = allMembers
     .filter((m) => m.active && m.logo)
     .map((m) => ({
@@ -831,11 +838,11 @@ async function main() {
   }
 
   const steeringCommittee = await fetchSteeringCommittee(volunteerBySubId);
-  const chairsAndLeads = await fetchChairsAndLeads(volunteerBySubId);
+  const { people: chairsAndLeads, pwciLeadsMap } = await fetchChairsAndLeads(volunteerBySubId);
   const orgLeads = await fetchOrgLeads(volunteerBySubId);
   const adminTeam = await fetchAdminTeam(volunteerByName);
 
-  // Build team.json with groups
+  // Build people.json with groups
   // Use a Map to deduplicate people who appear in multiple groups
   // Skip entries with empty names (incomplete Notion records)
   const teamMap = new Map();
@@ -878,14 +885,14 @@ async function main() {
   }
 
   // Convert to array and clean up internal fields
-  const teamJson = Array.from(teamMap.values()).map(({ _groups, _volunteerIds, ...rest }) => ({
+  const peopleJson = Array.from(teamMap.values()).map(({ _groups, _volunteerIds, ...rest }) => ({
     ...rest,
     groups: _groups,
   }));
 
   fs.writeFileSync(
-    path.join(DATA_DIR, "team.json"),
-    JSON.stringify(teamJson, null, 2)
+    path.join(DATA_DIR, "people.json"),
+    JSON.stringify(peopleJson, null, 2)
   );
 
   // --- Press Mentions ---
@@ -899,6 +906,17 @@ async function main() {
 
   // --- Projects (PWCI) ---
   const projects = await fetchProjects();
+
+  // Annotate each project with its named leads, resolving photos from people.json
+  const personPhotoMap = new Map(peopleJson.map((p) => [p.fullName, p.photo]));
+  for (const project of projects) {
+    const rawLeads = pwciLeadsMap.get(project.id) || [];
+    project.leads = rawLeads.map((lead) => ({
+      ...lead,
+      photo: personPhotoMap.get(lead.fullName) || null,
+    }));
+  }
+
   fs.writeFileSync(
     path.join(DATA_DIR, "projects.json"),
     JSON.stringify(projects, null, 2)
@@ -908,11 +926,12 @@ async function main() {
   console.log("\n=== Summary ===");
   console.log(`Steering members: ${activeSteeringCount} active, ${allSteering.length - activeSteeringCount} historical`);
   console.log(`General members: ${activeGeneralCount} active, ${allGeneral.length - activeGeneralCount} historical`);
+  console.log(`Total members.json entries: ${allMembers.length}`);
   console.log(`Steering Committee people: ${steeringCommittee.length}`);
   console.log(`Chairs & Project Leads: ${chairsAndLeads.length}`);
   console.log(`Organisation Leads: ${orgLeads.length}`);
   console.log(`Admin Team: ${adminTeam.length}`);
-  console.log(`Total team.json entries: ${teamJson.length}`);
+  console.log(`Total people.json entries: ${peopleJson.length}`);
   console.log(`Projects: ${projects.length} (${projects.filter(p => p.icon).length} with icons)`);
   console.log(`\nFinished at ${new Date().toISOString()}`);
 }

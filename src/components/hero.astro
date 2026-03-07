@@ -30,6 +30,10 @@ interface Props {
   scrollIndicator?: boolean;
   /** Section ID for anchor linking */
   id?: string;
+  /** Small label shown above the heading (e.g. working group name) */
+  badge?: string;
+  /** Multiple badges shown above the heading */
+  badges?: { text: string; variant?: "default" | "dark" }[];
 }
 
 const {
@@ -44,6 +48,8 @@ const {
   bgClass = "bg-accent-lightest-2",
   scrollIndicator = false,
   id = "overview",
+  badge,
+  badges = [],
 } = Astro.props;
 ---
 
@@ -53,6 +59,25 @@ const {
       class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center"
     >
       <div>
+        {(badge || badges.length > 0) && (
+          <div class="mb-3 flex flex-wrap gap-2">
+            {badge && (
+              <span class="inline-block rounded-full bg-accent-lighter px-4 py-1.5 text-sm font-semibold text-primary-dark">
+                {badge}
+              </span>
+            )}
+            {badges.map(b => (
+              <span class:list={[
+                "inline-block rounded-full px-4 py-1.5 text-sm font-semibold",
+                b.variant === "dark"
+                  ? "bg-primary-light text-white"
+                  : "bg-accent-lighter text-primary-dark",
+              ]}>
+                {b.text}
+              </span>
+            ))}
+          </div>
+        )}
         <h1 class="text-3xl font-extrabold md:text-4xl lg:text-5xl">
           {heading}
           {headingAccent && (

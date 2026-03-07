@@ -17,6 +17,11 @@ import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const sciProject = projects.find(p => p.slug === "sci");
+const parentWg = projects.find(p => p.name === sciProject?.parent);
 ---
 
 <Layout
@@ -42,6 +47,10 @@ import Footer from "@/components/footer.astro";
 
   <!-- Hero -->
   <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(sciProject?.lifecycle ? [{ text: sciProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
     heading="Measure What Matters:"
     headingAccent="Software's Carbon Impact"
     body="Every software application has a carbon footprint through the energy it consumes and the hardware it requires. The Software Carbon Intensity (SCI) specification provides the first ISO-accredited methodology to measure this impact as a score."
@@ -333,28 +342,16 @@ import Footer from "@/components/footer.astro";
     ]}
   />
 
-  <!-- Team (light card style) -->
+  <!-- Team (driven from projects.json) -->
   <TeamGrid
     heading="Project *Leadership*"
-    body="Part of the Software Standards Working Group"
-    columns={2}
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={sciProject?.leads?.length === 2 ? 2 : 3}
     highlighted={[]}
-    members={[
-      {
-        fullName: "Navveen Balani",
-        role: "Software Standards Working Group Chair",
-        company: "Accenture",
-        photo: "/assets/standards/sci/navveen.jpeg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/naveenbalani/" }],
-      },
-      {
-        fullName: "Henry Richardson",
-        role: "Software Standards Working Group Chair",
-        company: "WattTime",
-        photo: "/assets/standards/sci/henry.jpeg",
-        socialMedia: [{ platform: "Linkedin", link: "https://www.linkedin.com/in/henry-richardson/" }],
-      },
-    ]}
+    members={(sciProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
     bgClass="bg-white"
   />
 

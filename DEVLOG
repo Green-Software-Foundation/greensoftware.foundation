@@ -1,5 +1,65 @@
 # Development Log — GSF Website
 
+## 2026-03-07 (cont.) - Standards Pages: Dynamic Data, Hero Badges & TeamGrid Refinements
+
+**Objective**: Wire up all standards project pages (RTC, SCI, SCI-AI, SOFT, WDPC) to pull team and metadata from `projects.json`, add working group and lifecycle stage badges to heroes, and simplify TeamGrid usage with the `people.json` auto-resolve pattern.
+
+### What We Built
+
+- **Dynamic `projects.json` integration** across all 5 standards pages — each page now imports `projects.json`, finds its project by slug, and resolves the parent working group dynamically
+- **Hero `badges` prop** — new array-based badge system on the Hero component supporting multiple badges with variants:
+  - Working group badge (green `bg-accent-lighter`): e.g. "A Software Standards Working Group Project"
+  - Lifecycle stage badge (teal `bg-primary-light`): e.g. "Published", "Ratified", "Draft"
+- **TeamGrid driven from projects.json** — all pages now pass just `fullName` and `role` (roleLabel), with the component's `resolveMember` function auto-filling photos, jobTitles, companies, and LinkedIn from `people.json`
+- **TeamGrid card sizing fix** — cards now have consistent `max-w-xs` (320px) width with `mx-auto`, and single-member layouts use `flex justify-center` to centre the card
+- **ResourceCards `columns` prop** — new prop (2|3|4) for flexible grid layouts, used on RTC page for 4-column resources
+- **Hero `badge` prop** — single badge support added (later superseded by `badges` array)
+- **WDPC leadership text fix** — corrected "Hardware Standards Working Group" to "WDPC Project Lead" for My Truong
+
+### Pages Updated
+
+| Page | Slug | Lifecycle | Parent WG | Leads |
+|------|------|-----------|-----------|-------|
+| SCI | `sci` | Published | Software Standards WG | Navveen Balani, Henry Richardson |
+| SCI-AI | `sci-ai` | Ratified | Software Standards WG | Navveen Balani, Henry Richardson |
+| SOFT | `soft` | Ratified | Software Standards WG | Pindy Bhullar |
+| WDPC | `wdpc` | Draft | Hardware Standards WG | My Truong (custom section) |
+| RTC | `real-time-cloud` | Published | Software Standards WG | Pindy Bhullar, Adrian Cockcroft |
+
+### The Journey
+
+The session started with the RTC page — the first to be wired up to `projects.json`. The user had already added `jobTitle` fields to all leads in the data and updated TeamGrid with a `resolveMember` function that auto-fills member details from `people.json` by name lookup.
+
+The initial TeamGrid mapping was verbose — 7 fields manually extracted from each lead. After confirming that both RTC leads (Pindy Bhullar, Adrian Cockcroft) existed in `people.json` with complete data, we simplified to just 2 fields: `fullName` and `role`. The component handles the rest.
+
+Rolling this pattern out to the other 4 pages was mostly mechanical, but each had nuances:
+- **SCI and SCI-AI** shared the same two leads (Navveen, Henry) — straightforward
+- **SOFT** only had Pindy in `projects.json` despite the page previously showing Sean O'Keefe too — the data source became the source of truth
+- **WDPC** had a custom "Leading the Charge" section with decorative SVGs, a recruitment badge, and an illustration — the user asked to keep this rather than replace it with TeamGrid
+
+The hero badge colour went through several iterations: started with `bg-primary-darker` (too dark), then `bg-primary-dark` (still dark), then `bg-primary-light text-primary-darker` (text clashed), finally settled on `bg-primary-light text-white` — a medium teal that's visually distinct from the green working group badge while staying on-brand.
+
+The TeamGrid card sizing issue surfaced when comparing cards across pages — different grid containers produced different card widths. Adding `max-w-xs mx-auto` to each card and special-casing single-member layouts with `flex justify-center` resolved the inconsistency.
+
+### Key Learnings
+
+- **`people.json` auto-resolve is powerful** — pages only need to pass `fullName` and any project-specific fields (like `role`/`roleLabel`). Photos, companies, job titles, and social links are all resolved automatically
+- **Data source becomes truth** — when SOFT's `projects.json` only lists one lead, the page shows one lead. This is correct behaviour — if someone's missing, update the data, not the page
+- **Badge colour iteration** — on a cream background, teal badges need white text for contrast. Dark text on medium teal clashes visually
+
+### Statistics
+
+- 7 components modified (hero, team-grid, resource-cards, plus 4 other pages)
+- 5 standards pages updated with dynamic data
+- TeamGrid member mapping reduced from 7 fields to 2 per lead
+- 3 badge colour iterations before settling on final design
+
+### Next Steps
+
+- Build SEE and SCI-Web standards pages
+- Consider whether WDPC should also use TeamGrid (once more leads are added to projects.json)
+- Roll out badges pattern to non-standards project pages
+
 ## 2026-03-07 (cont.) - Astrobook Component Playground
 
 **Objective**: Set up a visual component playground for browsing and testing all parameterised Astro components, and fix rendering errors in story files.
