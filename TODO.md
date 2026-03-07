@@ -17,6 +17,7 @@
 - [x] **Nav project icons** — fetch official icons from directory project, update navbar data
 - [x] **Standards nav label** — rename to something like "Our standards process" and restructure dropdown
 - [ ] **Google Analytics** — add tracking script to the site layout
+- [x] **Component playground** — Astrobook at `/playground/` with 24 components, 51 story variants
 - [ ] [Asset deduplication](docs/features/asset-deduplication.md) — scan for duplicate images, consolidate, add asset registry to CLAUDE.md
 - [x] **404 page** — created `src/pages/404.astro`
 

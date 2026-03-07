@@ -218,6 +218,15 @@ The site uses [PageFind](https://pagefind.app/) for static site search. PageFind
 
 **Vite compatibility:** The PageFind import uses `new Function("return import('/pagefind/pagefind.js')")` to bypass Vite's import analysis, which would otherwise try to bundle it at build time.
 
+### Component Playground (Astrobook)
+
+The site includes an [Astrobook](https://github.com/ocavue/astrobook) component playground at `/playground/` for visually browsing and testing all parameterised components.
+
+- **24 components** with **51 story variants** in `src/components/*.stories.ts`
+- **CSF v3 format** — default export with `component`, named exports with `args`
+- **Configured** in `astro.config.mjs` with `global.css` for correct Tailwind tokens and fonts
+- **Story args must match component interfaces exactly** — props are passed directly, so mismatches cause runtime crashes
+
 ### Dev Server
 
 ```bash

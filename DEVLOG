@@ -1,5 +1,47 @@
 # Development Log — GSF Website
 
+## 2026-03-07 (cont.) - Astrobook Component Playground
+
+**Objective**: Set up a visual component playground for browsing and testing all parameterised Astro components, and fix rendering errors in story files.
+
+### What We Built
+
+- **Astrobook integration** — installed and configured `astrobook` as an Astro integration, available at `/playground/`
+  - Configured with project's `global.css` for correct Tailwind tokens and fonts
+  - Title: "GSF Component Playground"
+  - Scans `src/components/` for `.stories.ts` files
+
+- **24 story files** covering all parameterised components with **51 total story variants**:
+  - hero (3), text-block (4), feature-grid (4), cta-banner (2), testimonial (2), card-grid (2), community-reach (2), stats-grid (2), resource-cards (1), cta-card (2), text-with-image (4), tabbed-section (2), logo-marquee (3), timeline (1), vertical-pipeline (1), team-grid (2), split-cards (1), footer (1), navbar (3), breadcrumb (2), newsletter-signup (2), governance-diagram (2), member-stories (1), article-carousel (2)
+
+- **4 story file fixes** — prop name mismatches causing TypeErrors:
+  - `team-grid.stories.ts` — `name` → `fullName`, removed non-existent `photoSrc`
+  - `timeline.stories.ts` — removed non-existent `title` field, embedded titles in `description` via `<strong>` tags
+  - `vertical-pipeline.stories.ts` — `label` → `name`
+  - `split-cards.stories.ts` — added missing `role` to attribution object
+
+### The Journey
+
+Researched component catalogue solutions for the Astro/React/Tailwind/Radix/shadcn stack. Storybook doesn't support Astro components (only React/Vue). Histoire supports Vue/Svelte but not Astro. Astrobook is a minimal Storybook alternative built specifically for Astro — it renders `.astro` components natively using CSF v3 story format.
+
+After installing and creating all 24 story files, the user tested the playground and hit a TypeError at `team-grid.astro:131` — `Cannot read properties of undefined (reading 'split')`. This was because the story used `name` instead of `fullName` (the correct prop per the `TeamMember` interface). The component calls `fullName.split(' ')` to generate initials, so `undefined.split()` crashed.
+
+Proactively audited all other story files against their component TypeScript interfaces and found 3 more mismatches. After fixing all 4, verified every story renders correctly in the browser.
+
+### Key Learnings
+
+- **Astrobook** is currently the only viable option for previewing Astro components — Storybook can't render `.astro` files
+- **Story prop names must exactly match component interfaces** — CSF v3 `args` are passed directly as props, so a mismatch like `name` vs `fullName` causes runtime crashes
+- **Proactive auditing pays off** — checking all stories against interfaces after finding one bug caught 3 more before the user hit them
+
+### Statistics
+
+- 1 new dependency (astrobook)
+- 24 story files created
+- 51 story variants
+- 4 prop mismatch bugs fixed
+- All components rendering successfully at `/playground/`
+
 ## 2026-03-07 - Community, Brand & Assets Landing Pages
 
 **Objective**: Build the Community and Brand & Assets landing pages — two of the remaining "bigger pieces" needed to complete the site's main navigation structure.
