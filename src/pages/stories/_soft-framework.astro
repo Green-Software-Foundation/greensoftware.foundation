@@ -7,7 +7,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import { Card } from "@/components/ui/card";
 import { navItems } from "@/lib/nav-items";
-import logos from "@/data/logos.json";
+import membersData from "@/data/members.json";
 
 const title = "Our pilots work but nothing scales across the org";
 const summary = "How Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the Sustainable Organisational Framework for Technology — the first ratified standard for embedding green software practices across an entire organisation.";
@@ -19,7 +19,7 @@ const relatedSlugs = [
   "en/green-software-advocate-series-an-interview-with-pindy-bhullar",
   "en/cultivating-sustainability-by-design-meet-natalie-pullin-tim-smolcic-of-hsbc",
 ];
-const logoMap = new Map((logos as any[]).map(l => [l.name.toLowerCase(), l.logo]));
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const allArticles = await getCollection("articles");
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))

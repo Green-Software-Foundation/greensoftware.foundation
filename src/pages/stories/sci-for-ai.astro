@@ -7,7 +7,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import { Card } from "@/components/ui/card";
 import { navItems } from "@/lib/nav-items";
-import logos from "@/data/logos.json";
+import membersData from "@/data/members.json";
 
 const title = "We can't measure AI carbon";
 const summary = "How Accenture, Microsoft, Google, WattTime, and 20+ partner organisations built the SCI for AI — the first consensus-based standard for measuring the carbon footprint of AI systems across their entire lifecycle.";
@@ -20,7 +20,7 @@ const relatedSlugs = [
   "en/the-eu-ai-act-insights-from-the-green-ai-committee",
   "en/can-ai-truly-be-green",
 ];
-const logoMap = new Map((logos as any[]).map(l => [l.name.toLowerCase(), l.logo]));
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const allArticles = await getCollection("articles");
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))

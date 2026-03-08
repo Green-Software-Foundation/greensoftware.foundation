@@ -5,7 +5,9 @@ interface Logo {
   website: string;
 }
 
-const logos: Logo[] = (await import("@/data/logos.json")).default;
+const logos: Logo[] = (await import("@/data/members.json")).default
+  .filter((m: any) => m.active && m.logo && !m.hideLogo)
+  .map((m: any) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite }));
 
 // --animate-marquee: marquee {logos.length * 4}s linear infinite;
 const marqueeDuration = logos.length * 3;

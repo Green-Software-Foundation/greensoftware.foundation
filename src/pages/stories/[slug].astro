@@ -7,7 +7,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import { Card } from "@/components/ui/card";
 import { navItems } from "@/lib/nav-items";
-import logos from "@/data/logos.json";
+import membersData from "@/data/members.json";
 
 export async function getStaticPaths() {
   const stories = await getCollection("stories", (s) => !!s.data.timeline);
@@ -26,7 +26,7 @@ const {
 } = story.data;
 
 // ── Related articles ──────────────────────────────────────────────────────────
-const logoMap = new Map((logos as any[]).map(l => [l.name.toLowerCase(), l.logo]));
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const allArticles = await getCollection("articles");
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))

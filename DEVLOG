@@ -707,3 +707,58 @@ The SEE page was the second major deliverable. The user provided the full draft 
 ### Reflections
 
 The two-page session showed the value of established patterns. The SEE page was built quickly because the SCI page template was already proven. The user's feedback on both pages was converging on the same principles: lighter heading weights, paraphrased content, signal over noise. Each standards page is getting tighter.
+
+## 2026-03-08 - Notion Fetch Pipeline Overhaul
+
+**Objective**: Optimise the Notion data fetch pipeline — reduce query count, eliminate the `volunteerBySubId` cross-reference, fix `logos.json` dependencies, restore team photos.
+
+### What We Built
+
+- **`extractPersonFromSub(sub, memberById)`** — new function reading person data directly from Subscription DB roll-up fields (First Name, Surname, Title, LinkedIn, Member, Volunteer Status). Eliminates the need to look up each subscription against the Volunteers DB.
+- **Refactored three people-fetching functions** — `fetchSteeringCommittee`, `fetchChairsAndLeads`, `fetchOrgLeads` now all call `extractPersonFromSub` instead of `extractPerson`. No `volunteerBySubId` map needed.
+- **Volunteer status warnings** — people with active subscriptions but non-Active volunteer status (Nicole McCaffrey "Invalid", Richard Hill "New") are included with a `WARN` log rather than silently dropped.
+- **Eliminated `logos.json`** — the derived file is gone. `LogoMarquee` and all other consumers now read directly from `members.json`, filtering by `active && logo && !hideLogo` at runtime.
+- **Photo fallback via `volunteerPhotoByName`** — Notion roll-up file properties don't return signed URLs (a platform limitation). Fixed by building a `volunteerPhotoByName: Map<fullName.toLowerCase(), { url, origName }>` from `allActiveVolunteers` in `main()` and using it as a fallback in `extractPersonFromSub`.
+- **Removed `countAll` call** — replaced `countAll(DS.VOLUNTEERS)` with `allActiveVolunteers.length` since we already fetch all active volunteers.
+
+### The Journey
+
+The session picked up mid-refactor from the previous conversation. The goal was clear: the subscription roll-up fields (First Name, Surname, Title, LinkedIn, Photo, Member, Volunteer Status) had been added to Notion by the user specifically to avoid the expensive volunteer pre-fetch-and-cross-reference pattern.
+
+The first implementation went smoothly — `extractPersonFromSub` written, three functions updated, `volunteerBySubId` building removed from `main()`. A full fetch confirmed 66 org leads (up from 65 — the two previously-missing people now included with warnings). Build passed cleanly.
+
+Then came the `logos.json` removal. The user rightly pointed out the file was still being generated after the marquee had already been migrated. Removing the generation from the fetch script immediately surfaced that six pages (`index.astro`, four story pages, `sci-web/index.astro`, and `_catalogue/logo.astro`) were still importing `logos.json` directly. All were updated to import `members.json` and rebuild the logo mapping inline.
+
+The photo bug was more subtle. After re-fetching with fresh data, team photos were showing for 12 admin team members but nobody else — steering committee, chairs, org leads all blank. The culprit: Notion's API does not return signed file download URLs through roll-up properties. The `Photo` roll-up always comes back with an empty `files` array. The fix was to build `volunteerPhotoByName` from the `allActiveVolunteers` records (which do have direct file properties with real URLs) and use it as a fallback in `extractPersonFromSub`. This brought photos up from 12 to 51 people. The remaining 53 simply don't have photos set in Notion.
+
+### Technical Achievements
+
+- **29→37s fetch time** (with photos restored — still well under the ~70s baseline from the start of the optimisation arc)
+- **`logos.json` fully eliminated** — 6 consumer files updated, one derived file removed from generation
+- **Org leads: 65→66** — two people with non-Active volunteer status now included
+- **Team photos: 12→51** — photo fallback via volunteer records, working around Notion's roll-up file URL limitation
+- **`volunteerBySubId` map eliminated** — no more 726-volunteer cross-reference for subscription-based lookups
+
+### Key Learnings
+
+- **Notion roll-ups don't return signed file URLs** — this is a hard platform limitation. Files properties in roll-ups always return an empty `files` array (or file names without URLs). Always read photos from the source record, not a roll-up.
+- **`downloadFile` skip logic hides stale data** — because it skips downloads when files exist on disk, a re-run after a code change doesn't re-download unless `--force` is passed. Useful for speed; can mask bugs.
+- **`logos.json` as a derived file was fragile** — having a separate generated file that consumers import means two things to keep in sync. Reading `members.json` directly is simpler and always fresh.
+
+### Statistics
+
+- 9 files changed: `fetch-notion-data.cjs`, `logo-marquee.astro`, `_catalogue/logo.astro`, `index.astro`, `sci-web/index.astro`, 4 story pages
+- 186 insertions, 135 deletions in the fetch script
+- Photos restored: 12 → 51 people with photos
+- Fetch time: ~29–37s (from ~70s before the optimisation arc)
+
+### Next Steps
+
+- Fix Nicole McCaffrey and Richard Hill Volunteer Status in Notion to remove the warnings
+- Carbon Aware SDK and Impact Framework project pages
+- Google Analytics integration
+- Roll out to greensoftware.org
+
+### Reflections
+
+This session was a satisfying data-plumbing session. The Notion roll-up photo limitation was an excellent example of why you need to test with real data, not just check that the code looks right — the API response structure was correct but deliberately incomplete. The `logos.json` cleanup was a good reminder that derived files add maintenance surface: when the source changes, the derived file silently becomes stale.
