@@ -14,6 +14,7 @@ import CardGrid from "@/components/card-grid.astro";
 import Timeline from "@/components/timeline.astro";
 import TeamGrid from "@/components/team-grid.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
+import Testimonial from "@/components/testimonial.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
@@ -25,13 +26,23 @@ const parentWg = projects.find(p => p.name === sciWebProject?.parent);
 
 // Pull SCI for Web tagged articles for the carousel
 import { getCollection } from "astro:content";
+import logos from "@/data/logos.json";
+const logoMap = new Map(logos.map((l: any) => [l.name.toLowerCase(), l.logo]));
 const allArticles = await getCollection("articles");
-const sciWebArticles = allArticles
-  .filter(a => {
-    const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
-    return tags.includes("sci-web") || tags.includes("sci for web");
-  })
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const carouselArticles = allArticles
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci-web"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: `/articles/${a.id}/`,
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({
+      name,
+      logoSrc: logoMap.get(name.toLowerCase()),
+    })),
+  }));
 ---
 
 <Layout
@@ -65,7 +76,7 @@ const sciWebArticles = allArticles
     headingAccent="the Web"
     body="Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. SCI for Web extends the ISO-accredited Software Carbon Intensity standard to web applications — covering servers, networks, third-party services, and end-user devices."
     ctas={[
-      { text: "Read the Design Document", variant: "primary", href: "https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing" },
+      { text: "Read the Design Document", variant: "primary", href: "/articles/en/sci-web-assembly-report/" },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
     ]}
     imageSrc="/assets/standards/sci-web/hero-illustration.svg"
@@ -82,57 +93,24 @@ const sciWebArticles = allArticles
   <!-- What is SCI for Web? -->
   <CTACard
     heading="What is SCI for Web?"
-    body="SCI for Web is a domain-specific extension of the SCI specification (ISO/IEC 21031:2024) that provides a standardised methodology for measuring the carbon intensity of web applications. It covers the full delivery chain — servers, networks, third-party services, and end-user devices — giving teams a comprehensive, comparable, and actionable way to measure and reduce web emissions."
+    body="SCI for Web is a domain-specific extension of the SCI specification (ISO/IEC 21031:2024) for measuring the carbon intensity of web applications. A web application is characterised by three essential criteria: content and functionality delivered over HTTP/HTTPS protocols, rendering and execution occurring primarily within web browser environments, and interfaces designed for direct human interaction rather than exclusively machine-to-machine communication."
     imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
     imageAlt="What is SCI for Web illustration"
   />
 
   <!-- Why the Web Needs This -->
-  <TextBlock
-    heading="Why the Web Needs *SCI for Web*"
-    body="Web sustainability measurement has evolved rapidly with tools like CO2.js and the W3C Web Sustainability Guidelines. But as organisations move from awareness to accountability, the industry needs a standardised approach that supports optimisation decisions across the full delivery chain."
-    compact
-    bgClass="bg-accent-lightest-2"
-  />
-
-  <!-- The Problem -->
-  <FeatureGrid
-    heading="The *Measurement Gap*"
-    body="Existing tools have made web emissions visible, but critical gaps remain."
-    columns={4}
-    variant="cards"
-    features={[
-      {
-        icon: "/assets/standards/sci/shape-icon-1.svg",
-        title: "No Standard Boundaries",
-        description: "Different tools measure different things, making results incomparable across organisations.",
-      },
-      {
-        icon: "/assets/standards/sci/shape-icon-2.svg",
-        title: "Third Parties Are Invisible",
-        description: "Analytics, advertising, CDNs, and authentication consume energy on both servers and client devices but are excluded from most measurements.",
-      },
-      {
-        icon: "/assets/standards/sci/shape-icon-3.svg",
-        title: "Totals, Not Rates",
-        description: "Existing approaches measure total emissions rather than carbon per functional unit, making it impossible to reward efficiency.",
-      },
-      {
-        icon: "/assets/standards/sci/shape-icon-4.svg",
-        title: "No Validation",
-        description: "Without mandatory disclosure of boundaries, assumptions, and methods, reduction claims cannot be verified or compared.",
-      },
-    ]}
-    bgClass="bg-accent-lightest-2"
-  />
-
-  <!-- How SCI for Web Solves This -->
-  <TextBlock
-    heading="How *SCI for Web* Solves This"
-    body="SCI for Web builds on the proven SCI formula — extending it with web-specific boundaries, functional units, and disclosure requirements."
-    compact
-    bgClass="bg-accent-lightest-2"
-  />
+  <section class="py-8 md:py-10 bg-accent-lightest-2">
+    <div class="container">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Why the Web Needs <span class="font-bold text-primary">SCI for Web</span>
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed md:text-xl">
+          As the <a href="/standards/sci/" class="text-primary underline hover:no-underline">SCI specification</a> matured into an ISO standard, GSF members recognised that a domain-specific, SCI-aligned approach was needed for web applications. Tools and frameworks like the <a href="https://sustainablewebdesign.org/" class="text-primary underline hover:no-underline" target="_blank" rel="noopener">Sustainable Web Design Model</a>, <a href="https://www.thegreenwebfoundation.org/co2-js/" class="text-primary underline hover:no-underline" target="_blank" rel="noopener">CO2.js</a>, and the <a href="https://w3c.github.io/sustyweb/" class="text-primary underline hover:no-underline" target="_blank" rel="noopener">W3C Web Sustainability Guidelines</a> have made web emissions visible and established foundational methodologies that thousands of practitioners use. But as organisations move from awareness to accountability, the industry needs approaches that support optimisation decisions across the full delivery chain — including servers, browsers, and third-party services.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- The SCI Equation Applied to Web -->
   <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
@@ -142,7 +120,7 @@ const sciWebArticles = allArticles
           The SCI Formula, Applied to the Web
         </h2>
         <p class="text-lg md:text-xl">
-          SCI for Web uses the same core formula as the parent SCI standard, but defines web-appropriate boundaries across servers, networks, third parties, and end-user devices — with functional units that reflect delivered web functionality.
+          SCI for Web uses the same core formula as the parent <a href="/standards/sci/" class="text-primary underline hover:no-underline">SCI standard</a>, but defines web-appropriate boundaries across servers, networks, third parties, and end-user devices — with functional units that reflect delivered web functionality.
         </p>
 
         <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
@@ -173,27 +151,66 @@ const sciWebArticles = allArticles
     </div>
   </section>
 
-  <!-- Key Principles -->
+  <!-- The Problem -->
   <FeatureGrid
-    heading="Design *Principles*"
-    body="The assembly agreed on three key principles to balance accuracy with adoption."
+    heading="The *Measurement Gap*"
+    body="Existing tools have made web emissions visible, but critical gaps remain."
+    columns={4}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "No Standard Boundaries",
+        description: "Different tools measure different things, making results incomparable across organisations.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Third Parties Are Invisible",
+        description: "Analytics, advertising, CDNs, and authentication consume energy on both servers and client devices but are excluded from most measurements.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Totals, Not Rates",
+        description: "Existing approaches measure total emissions rather than carbon per functional unit, making it impossible to reward efficiency.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-4.svg",
+        title: "No Validation",
+        description: "Without mandatory disclosure of boundaries, assumptions, and methods, reduction claims cannot be verified or compared.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- How SCI for Web Solves This -->
+  <TextBlock
+    heading="How *SCI for Web* Solves This"
+    body="SCI provides a strong foundation to measure and reduce web emissions because it is clear about boundaries (what is in scope and what is not), rates (carbon per functional unit, not just totals), and reporting (disclosed methodology so results are comparable and defensible). SCI for Web extends the parent specification to web-specific contexts."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Evaluation Criteria -->
+  <FeatureGrid
+    heading="Evaluation *Criteria*"
+    body="The assembly agreed on key principles to ensure that optimising SCI for Web scores aligns with genuine carbon reduction."
     columns={3}
     variant="bordered"
     features={[
       {
         icon: "/assets/standards/sci/co2-icon.svg",
         title: "Accuracy Proportionate to Control",
-        description: "Directly measured components require higher accuracy than modelled estimates. You don't need perfect data everywhere — just where you have the most control.",
+        description: "Directly measured components require higher accuracy than modelled estimates. This ensures confident decision-making where practitioners have the most influence.",
       },
       {
         icon: "/assets/standards/sci/cost-icon.svg",
         title: "Mandatory Disclosure",
-        description: "Boundaries, assumptions, data sources, and methods must be clearly stated. This prevents gaming through selective boundary choices and makes results comparable.",
+        description: "Boundaries, assumptions, data sources, and methods must be clearly stated. This prevents gaming — for example, measurement approaches that automatically credit 'green hosting' based on provider claims allow scores to improve without reducing actual energy use.",
       },
       {
         icon: "/assets/standards/sci/grid-icon.svg",
         title: "Integration Over Complexity",
-        description: "Implementation should fit existing developer workflows, not require new toolchains. A widely used metric has more impact than a perfect one nobody adopts.",
+        description: "Implementation should fit existing workflows, not require new toolchains. Workflow integration removes adoption barriers, and accurate measurement enables confident decision-making.",
       },
     ]}
     bgClass="bg-accent-lightest-2"
@@ -222,6 +239,7 @@ const sciWebArticles = allArticles
   <TextWithImage
     heading="Built in Collaboration with"
     headingAccent="the W3C"
+    headingStyle="light"
     body="SCI for Web is developed in formal collaboration with the World Wide Web Consortium (W3C). This partnership combines GSF's expertise in software carbon measurement with W3C's global reach in web standards — brokered by the Green Web Foundation, who are active members of both communities. GSF manages the specification through its consensus-driven process, while W3C's Sustainable Web Interest Group provides feedback and insights."
     imageSrc="/assets/standards/sci/why-wdpc-feat-3.svg"
     imageAlt="W3C collaboration illustration"
@@ -232,24 +250,27 @@ const sciWebArticles = allArticles
   <TextWithImage
     heading="Web Applications"
     headingAccent="In Scope"
-    body="SCI for Web applies to software applications that deliver value to users primarily through browser interfaces accessed via HTTP/HTTPS, where most rendering happens in the browser, and the interface is built for human interaction rather than machine-to-machine use. This scope is platform-independent and technology-agnostic."
+    headingStyle="light"
+    body="The scope encompasses the full spectrum of browser-based applications regardless of architectural sophistication. The distinguishing principle is browser-mediated human interaction: if users primarily access functionality through web browsers to accomplish tasks or consume content, the application falls within scope. This definition is intentionally platform-independent and technology-agnostic, focusing on delivery mechanism and user interaction patterns rather than specific implementation technologies."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
+    imageAlt="Web applications in scope"
     reversed
     iconFeatures={[
       {
         icon: "/assets/standards/sci/transforming-icon-1.svg",
-        description: "Static sites, SPAs, and server-rendered applications",
+        description: "Static content websites, dynamic platforms, and single-page applications (SPAs)",
       },
       {
         icon: "/assets/standards/sci/transforming-icon-2.svg",
-        description: "E-commerce platforms and streaming services",
+        description: "Server-side rendered applications, e-commerce systems, and media streaming services",
       },
       {
         icon: "/assets/standards/sci/transforming-icon-3.svg",
-        description: "Real-time collaboration tools and web apps",
+        description: "Real-time collaborative tools and browser-based management dashboards",
       },
       {
         icon: "/assets/standards/sci/transforming-icon-4.svg",
-        description: "Third-party services: analytics, ads, CDNs, authentication",
+        description: "APIs accessed primarily through browser interfaces (pure machine-to-machine APIs are out of scope and should use the base SCI methodology)",
       },
     ]}
     iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
@@ -264,33 +285,73 @@ const sciWebArticles = allArticles
       {
         value: "frontend",
         heading: "Frontend Developers & Designers",
-        description: "Make sustainability part of your development workflow without sacrificing user experience or performance. SCI for Web gives you a clear target for optimisation — from image loading to JavaScript execution to third-party script impact. See the direct carbon impact of your design choices and client-side code, and make informed decisions about what to include on every page.",
+        description: "Make sustainability part of your development workflow without sacrificing user experience or performance. SCI for Web helps you understand the carbon impact of client-side code, asset delivery, third-party scripts, and rendering approaches — so you can make informed choices about progressive enhancement, image optimisation, and framework selection.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-1.svg" },
       },
       {
         value: "backend",
         heading: "Backend & Infrastructure Engineers",
-        description: "Understand the full server-side contribution to web emissions. SCI for Web covers API responses, server rendering, CDN distribution, and database queries — giving you measurable targets for infrastructure optimisation. Make informed decisions about caching, compression, and deployment strategies based on their actual carbon impact.",
+        description: "Understand the full server-side contribution to web emissions — from compute and storage to geographic hosting decisions and carbon intensity exposure. SCI for Web gives you a framework to measure and optimise database efficiency, caching strategies, right-sized infrastructure, and deployment processes.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-2.svg" },
       },
       {
         value: "product",
         heading: "Product Owners & Technical Managers",
-        description: "Turn sustainability commitments into measurable web performance metrics. SCI for Web provides comparable scores that help you prioritise which optimisations deliver the most carbon reduction — and justify investment in sustainability improvements with clear, defensible data that aligns with your organisation's environmental goals.",
+        description: "Turn sustainability commitments into measurable web performance metrics. SCI for Web helps you set environmental budgets, make informed vendor decisions based on emissions data, and practice feature gardening — regularly auditing what you build to ensure every feature justifies its carbon cost.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-3.svg" },
       },
     ]}
     bgClass="bg-accent-lighter/10"
   />
 
+  <!-- Third-Party Transparency -->
+  <TextWithImage
+    heading="Third-Party"
+    headingAccent="Transparency"
+    headingStyle="light"
+    body="Modern web applications rely heavily on third-party services — analytics, advertising, CDNs, authentication, and payments — that consume energy on both servers and end-user devices. SCI for Web requires these dependencies to be included in the measurement boundary because excluding them hides a significant portion of a website's true carbon footprint. Where precise energy data isn't available from suppliers, practitioners can use industry default values as long as they disclose that estimates were used. The goal is to create market pressure: when organisations start measuring third-party emissions, suppliers have an incentive to publish their own energy data and improve efficiency."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="Third-party transparency illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Incremental Adoption -->
+  <TextWithImage
+    heading="Principles, Not"
+    headingAccent="Prescriptions"
+    headingStyle="light"
+    body="SCI for Web describes principles and patterns, not prescriptive engineering requirements. Teams should evaluate these within their own context and implement them in ways that suit their architecture and constraints. Crucially, adoption can be incremental: start by measuring the components you directly control — client-side code and server infrastructure — then progressively expand to include network transfer and third-party services. The only requirement is transparency: your disclosed methodology must clearly state which components are measured, which are estimated, and which are excluded."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-3.svg"
+    imageAlt="Incremental adoption illustration"
+    reversed
+    bgClass="bg-accent-lightest-2"
+  />
+
   <!-- AI-Assisted Assembly Process -->
   <CTACard
     heading="Built by Consensus in 10 Weeks"
-    body="Fourteen GSF members from fifteen organisations — including Accenture, Google, Microsoft, NTT DATA, and the Green Web Foundation — piloted an AI-assisted assembly process that moved from a blank page to a consensus design document in just ten weeks. Participants answered questions, synthesised positions through an LLM, and refined until all objections were resolved."
-    ctaText="Read how the assembly worked"
-    ctaHref="/articles/designing-sci-web-what-we-agreed-and-what-comes-next/"
+    body="Fourteen GSF members from fifteen organisations — including Accenture, Google, Microsoft, NTT DATA, and the Green Web Foundation — piloted an AI-assisted assembly process that moved from a blank page to a consensus design document in just ten weeks. Participants answered structured questions, an LLM synthesised responses into draft content, and the group reviewed and refined through multiple rounds until all objections were resolved."
+    ctaText="Read the full assembly report"
+    ctaHref="/articles/en/sci-web-assembly-report/"
     imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
     imageAlt="Assembly process illustration"
+  />
+
+  <!-- Articles & Reports -->
+  <ArticleCarousel
+    heading="Featured Articles"
+    body="Reports, announcements, and insights from the SCI for Web journey."
+    showOrganizations={false}
+    articles={carouselArticles}
+    bgClass="bg-accent-lighter/10"
+  />
+
+  <!-- Testimonial -->
+  <Testimonial
+    quote="Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need."
+    author="GSF–W3C Collaboration"
+    title="Announcement"
+    company="September 2025"
   />
 
   <!-- Success Criteria -->
@@ -360,7 +421,7 @@ const sciWebArticles = allArticles
         title: "Read the Design Document",
         description: "Explore the consensus positions on scope, personas, and evaluation criteria",
         ctaText: "Read Document",
-        ctaHref: "https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing",
+        ctaHref: "/articles/en/sci-web-assembly-report/",
         featured: true,
       },
       {
@@ -393,7 +454,7 @@ const sciWebArticles = allArticles
     heading="The web serves billions — let's make it sustainable"
     body="SCI for Web provides the first standardised, SCI-aligned methodology for measuring web application emissions. Whether you're a developer, product owner, or sustainability professional, your expertise can help shape how the industry measures and reduces the web's carbon footprint."
     ctaText="Read the Design Document"
-    ctaHref="https://drive.google.com/file/d/1A8awPycDBAvF0GWaZlKwBPA_NE1OckRx/view?usp=sharing"
+    ctaHref="/articles/en/sci-web-assembly-report/"
   />
 
   <Footer
