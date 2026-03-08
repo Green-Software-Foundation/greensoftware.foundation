@@ -99,9 +99,9 @@ const {
       )}
     </a>
     <div class="flex items-center gap-1">
-      <NavigationComponent client:load items={navItems} showSearch={showSearch} />
+      <NavigationComponent client:load items={navItems} showSearch={showSearch} ctaText={ctaText} ctaHref={ctaHref} />
       {ctaText ? (
-        <a href={ctaHref}>
+        <a href={ctaHref} class="hidden lg:block">
           <Button variant="primary">{ctaText}</Button>
         </a>
       ) : (
