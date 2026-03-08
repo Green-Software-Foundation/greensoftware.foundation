@@ -22,10 +22,10 @@ import CTACard from "@/components/cta-card.astro";
 import Footer from "@/components/footer.astro";
 
 // Load member logos for org name → logo lookup
-import logos from "@/data/logos.json";
+import membersData from "@/data/members.json";
 
 // ----- Featured articles -----
-const logoMap = new Map(logos.map((l: any) => [l.name.toLowerCase(), l.logo]));
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 
 const allArticles = await getCollection("articles");
 const featuredArticles = allArticles

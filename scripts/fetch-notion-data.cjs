@@ -28,7 +28,6 @@ if (!NOTION_API_KEY) {
   const fallbackDir = path.join(ROOT_DIR, "src", "data");
   fs.mkdirSync(fallbackDir, { recursive: true });
   const fallbacks = {
-    "logos.json": [],     // active members only — for logo marquee
     "members.json": [],   // all members (steering + general), with active flag and membershipLevel
     "people.json": [],    // all team/volunteer people with groups and leadershipRoles
     "stats.json": {},
@@ -222,18 +221,18 @@ async function queryAll(dataSourceId, filter) {
 
 // Module-level caches — avoid redundant Notion API round-trips across all queries
 const pwciNameCache = new Map();   // pwciId → name string
+// Volunteer photo fallback — Notion roll-ups don't return signed file URLs,
+// so we fall back to the volunteer's direct Photo property fetched in main().
+const volunteerPhotoByName = new Map(); // fullName.toLowerCase() → { url, origName }
 
 // ---------------------------------------------------------------------------
 // Query 1 & 2: Member Organisations
 // ---------------------------------------------------------------------------
 
-async function fetchMembers(level) {
-  console.log(`\nFetching ${level} members (all statuses)...`);
-  const pages = await queryAll(DS.MEMBERS, {
-    property: "Membership Level ",
-    select: { equals: level },
-  });
-  console.log(`  Found ${pages.length} ${level} members total`);
+async function fetchMembers() {
+  console.log("\nFetching all members (all tiers, all statuses)...");
+  const pages = await queryAll(DS.MEMBERS);
+  console.log(`  Found ${pages.length} members total`);
 
   const members = [];
   for (const page of pages) {
@@ -241,6 +240,7 @@ async function fetchMembers(level) {
     const name = titleText(p["Member Name "]);
     const website = urlValue(p["Website"]);
     const logoUrl = fileUrl(p["Logo"]);
+    const membershipLevel = selectName(p["Membership Level "]);
     const organisationType = selectName(p["Organisation Type"]);
     const status = selectName(p["Status"]);
     const active = status === "Active";
@@ -280,7 +280,7 @@ async function fetchMembers(level) {
       id: page.id,
       companyName: name,
       companyWebsite: website,
-      membershipLevel: level,
+      membershipLevel,
       active,
       hideLogo,
       logo: logoPath,
@@ -347,7 +347,7 @@ function getImageDimensions(buffer, format) {
 // Query 3: Steering Committee People
 // ---------------------------------------------------------------------------
 
-async function fetchSteeringCommittee(volunteerBySubId) {
+async function fetchSteeringCommittee(memberById) {
   console.log("\nFetching Steering Committee...");
 
   // Step 1: Find the Steering Committee PWCI
@@ -379,17 +379,15 @@ async function fetchSteeringCommittee(volunteerBySubId) {
   );
   console.log(`  Found ${committeeSubs.length} committee subscriptions (of ${allSubs.length} total)`);
 
-  // Step 3: Resolve from pre-fetched volunteer map (no per-subscription API calls)
+  // Step 3: Extract person data directly from subscription roll-ups
   const people = [];
-  const seenVolunteerIds = new Set();
+  const seenNames = new Set();
 
   for (const sub of committeeSubs) {
-    const role = selectName(sub.properties["Role for Subscription"]);
-    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
-      if (seenVolunteerIds.has(vol.id)) continue;
-      seenVolunteerIds.add(vol.id);
-      people.push(await extractPerson(vol, role));
-    }
+    const person = await extractPersonFromSub(sub, memberById);
+    if (!person.fullName || seenNames.has(person.fullName)) continue;
+    seenNames.add(person.fullName);
+    people.push(person);
   }
 
   console.log(`  Resolved ${people.length} unique Steering Committee members`);
@@ -400,7 +398,7 @@ async function fetchSteeringCommittee(volunteerBySubId) {
 // Query 4a: Chairs & Project Leads
 // ---------------------------------------------------------------------------
 
-async function fetchChairsAndLeads(volunteerBySubId) {
+async function fetchChairsAndLeads(memberById) {
   console.log("\nFetching Chairs & Project Leads (from Subscriptions)...");
 
   const leadershipRoles = [
@@ -451,52 +449,52 @@ async function fetchChairsAndLeads(volunteerBySubId) {
   };
 
   const people = [];
-  const seenVolunteerIds = new Set();
-  const pwciLeadsMap = new Map(); // pwciId → [{ fullName, roleLabel, company, linkedin }]
+  const seenNames = new Set();
+  const pwciLeadsMap = new Map(); // pwciId → [{ fullName, roleLabel, jobTitle, company, linkedin }]
 
   for (const sub of subs) {
-    const role = selectName(sub.properties["Role for Subscription"]);
+    const sp = sub.properties;
+    const role = selectName(sp["Role for Subscription"]);
 
-    const pwciIds = relationIds(sub.properties["PWCIs"]);
+    const pwciIds = relationIds(sp["PWCIs"]);
     const pwciName = pwciIds.length > 0 ? (pwciNameCache.get(pwciIds[0]) || "") : "";
     const roleShort = role.replace("Working Group ", "").replace("Project ", "").replace("Committee ", "");
     const label = pwciName ? `${pwciName} (${roleShort})` : role;
     const roleLabel = leadRoleLabels[role]; // undefined for Committee Member
 
-    // Resolve from pre-fetched map (no API call)
-    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
-      // Build pwciLeadsMap for named lead roles only
-      if (roleLabel && pwciIds.length > 0) {
-        const vp = vol.properties;
-        const firstName = richText(vp["First Name"]?.rich_text);
-        const lastName = richText(vp["Last Name"]?.rich_text);
-        const fullName = `${firstName} ${lastName}`.trim();
-        const linkedin = urlValue(vp["LinkedIn"]);
-        const companyNameArr = vp["Company Name"]?.rollup?.array || [];
-        const company = titleText(companyNameArr[0]) || "";
-        const jobTitle = richText(vp["Job Title"]?.rich_text) || null;
-        for (const pwciId of pwciIds) {
-          if (!pwciLeadsMap.has(pwciId)) pwciLeadsMap.set(pwciId, []);
-          const leads = pwciLeadsMap.get(pwciId);
-          if (fullName && !leads.some((l) => l.fullName === fullName)) {
-            leads.push({ fullName, roleLabel, jobTitle, company, linkedin: linkedin || null });
-          }
-        }
-      }
+    // Read name from roll-ups (lightweight — no photo download yet)
+    const firstName = richText(sp["First Name"]?.rollup?.array?.[0]?.rich_text);
+    const lastName = richText(sp["Surname"]?.rollup?.array?.[0]?.rich_text);
+    const fullName = `${firstName} ${lastName}`.trim();
+    if (!fullName) continue;
 
-      if (seenVolunteerIds.has(vol.id)) {
-        const existing = people.find((p) => p._volunteerIds?.includes(vol.id));
-        if (existing && label && !existing.leadershipRoles.includes(label)) {
-          existing.leadershipRoles.push(label);
+    // Build pwciLeadsMap for named lead roles only (no photo needed here)
+    if (roleLabel && pwciIds.length > 0) {
+      const linkedin = sp["LinkedIn"]?.rollup?.array?.[0]?.url || null;
+      const jobTitle = richText(sp["Title"]?.rollup?.array?.[0]?.rich_text) || null;
+      const memberRelId = sp["Member"]?.rollup?.array?.[0]?.relation?.[0]?.id;
+      const memberRecord = memberRelId ? memberById.get(memberRelId) : null;
+      const company = memberRecord?.companyName || "";
+      for (const pwciId of pwciIds) {
+        if (!pwciLeadsMap.has(pwciId)) pwciLeadsMap.set(pwciId, []);
+        const leads = pwciLeadsMap.get(pwciId);
+        if (!leads.some((l) => l.fullName === fullName)) {
+          leads.push({ fullName, roleLabel, jobTitle, company, linkedin });
         }
-        continue;
       }
-      seenVolunteerIds.add(vol.id);
-      const person = await extractPerson(vol, role);
-      person.leadershipRoles = label ? [label] : [];
-      person._volunteerIds = [vol.id];
-      people.push(person);
     }
+
+    if (seenNames.has(fullName)) {
+      const existing = people.find((p) => p.fullName === fullName);
+      if (existing && label && !existing.leadershipRoles.includes(label)) {
+        existing.leadershipRoles.push(label);
+      }
+      continue;
+    }
+    seenNames.add(fullName);
+    const person = await extractPersonFromSub(sub, memberById);
+    person.leadershipRoles = label ? [label] : [];
+    people.push(person);
   }
 
   console.log(`  Resolved ${people.length} unique chairs/leads`);
@@ -507,7 +505,7 @@ async function fetchChairsAndLeads(volunteerBySubId) {
 // Query 4b: Organisation Leads
 // ---------------------------------------------------------------------------
 
-async function fetchOrgLeads(volunteerBySubId) {
+async function fetchOrgLeads(memberById) {
   console.log("\nFetching Organisation Leads (from Subscriptions)...");
 
   const subs = await queryAll(DS.SUBSCRIPTIONS, {
@@ -519,14 +517,13 @@ async function fetchOrgLeads(volunteerBySubId) {
   console.log(`  Found ${subs.length} Organisation Lead subscriptions`);
 
   const people = [];
-  const seenVolunteerIds = new Set();
+  const seenNames = new Set();
 
   for (const sub of subs) {
-    for (const vol of (volunteerBySubId.get(sub.id) || [])) {
-      if (seenVolunteerIds.has(vol.id)) continue;
-      seenVolunteerIds.add(vol.id);
-      people.push(await extractPerson(vol, "Organisation Lead"));
-    }
+    const person = await extractPersonFromSub(sub, memberById);
+    if (!person.fullName || seenNames.has(person.fullName)) continue;
+    seenNames.add(person.fullName);
+    people.push(person);
   }
 
   console.log(`  Resolved ${people.length} unique Organisation Leads`);
@@ -605,6 +602,75 @@ async function fetchAdminTeam(volunteerByName) {
   }
 
   return people;
+}
+
+// ---------------------------------------------------------------------------
+// Shared: Extract person data from a Subscription page (via roll-up fields)
+// ---------------------------------------------------------------------------
+
+/** Extract person data directly from a Subscription page using roll-up fields.
+ *  Eliminates the need to cross-reference the Volunteers DB for the three
+ *  main subscription-driven people fetches. */
+async function extractPersonFromSub(sub, memberById) {
+  const sp = sub.properties;
+
+  // Name from roll-ups
+  const firstName = richText(sp["First Name"]?.rollup?.array?.[0]?.rich_text);
+  const lastName = richText(sp["Surname"]?.rollup?.array?.[0]?.rich_text);
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  // Job title from "Title" roll-up
+  const jobTitle = richText(sp["Title"]?.rollup?.array?.[0]?.rich_text) || null;
+
+  // LinkedIn from roll-up
+  const linkedin = sp["LinkedIn"]?.rollup?.array?.[0]?.url || null;
+
+  // Volunteer status — warn if not Active but still include
+  const volunteerStatus = sp["Volunteer Status"]?.rollup?.array?.[0]?.select?.name;
+  if (fullName && volunteerStatus && volunteerStatus !== "Active") {
+    console.warn(`  WARN: ${fullName} has active subscription but Volunteer Status is "${volunteerStatus}" — including anyway`);
+  }
+
+  // Member org from relation roll-up → memberById lookup
+  const memberRelId = sp["Member"]?.rollup?.array?.[0]?.relation?.[0]?.id;
+  const memberRecord = memberRelId ? memberById.get(memberRelId) : null;
+  const company = memberRecord?.companyName || "";
+  const companyWebsite = memberRecord?.companyWebsite || "";
+
+  // Photo — Notion roll-ups don't return signed file URLs, so the roll-up is always empty.
+  // Fall back to the volunteer's direct Photo property (populated in main() from allActiveVolunteers).
+  const rollupPhotoFiles = sp["Photo"]?.rollup?.array?.[0]?.files || [];
+  let resolvedPhotoUrl = fileUrl({ files: rollupPhotoFiles });
+  let resolvedPhotoOrigName = "";
+  if (!resolvedPhotoUrl && fullName) {
+    const fallback = volunteerPhotoByName.get(fullName.toLowerCase());
+    if (fallback) {
+      resolvedPhotoUrl = fallback.url;
+      resolvedPhotoOrigName = fallback.origName;
+    }
+  }
+
+  let photoPath = null;
+  if (resolvedPhotoUrl && fullName) {
+    const ext = path.extname(resolvedPhotoOrigName).toLowerCase() || "";
+    const filename = slugify(fullName) + (ext || "");
+    const savedName = await downloadFile(resolvedPhotoUrl, PHOTOS_DIR, filename);
+    if (savedName) photoPath = `/assets/team/${savedName}`;
+  }
+
+  const socialMedia = [];
+  if (linkedin) socialMedia.push({ platform: "Linkedin", link: linkedin });
+
+  return {
+    id: sub.id,
+    fullName,
+    jobTitle,
+    company,
+    companyWebsite,
+    photo: photoPath,
+    socialMedia,
+    _groups: [],
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -769,80 +835,63 @@ async function main() {
   fs.mkdirSync(PHOTOS_DIR, { recursive: true });
   fs.mkdirSync(PROJECT_ICONS_DIR, { recursive: true });
 
-  // --- Members ---
-  // Fetch all members regardless of status — active flag set per record
-  const allSteering = await fetchMembers("Steering");
-  const allGeneral = await fetchMembers("General");
+  // --- Members + Volunteers (parallel) ---
+  // Two independent DB fetches run concurrently:
+  //   1. All members (one query, all tiers) — used for memberById lookup and JSON output
+  //   2. Active volunteers — used for admin team LinkedIn lookup and individual count stat
+  console.log("\nFetching members and volunteers in parallel...");
+  const [allMembers, allActiveVolunteers] = await Promise.all([
+    fetchMembers(),
+    queryAll(DS.VOLUNTEERS, { property: "Volunteer Status", select: { equals: "Active" } }),
+  ]);
+  const numberOfIndividuals = allActiveVolunteers.length;
 
+  const allSteering = allMembers.filter((m) => m.membershipLevel === "Steering");
+  const allGeneral  = allMembers.filter((m) => m.membershipLevel === "General");
   const activeSteeringCount = allSteering.filter((m) => m.active).length;
-  const activeGeneralCount = allGeneral.filter((m) => m.active).length;
-  console.log(`  Active: ${activeSteeringCount} steering, ${activeGeneralCount} general`);
-  console.log(`  Historical: ${allSteering.length - activeSteeringCount} steering, ${allGeneral.length - activeGeneralCount} general`);
+  const activeGeneralCount  = allGeneral.filter((m) => m.active).length;
+  console.log(`  Members: ${activeSteeringCount} steering active, ${activeGeneralCount} general active`);
+  console.log(`  Active volunteers (stat): ${numberOfIndividuals}`);
 
-  // members.json — all members combined (steering + general), consumers filter by membershipLevel / organisationType / active
-  const allMembers = [...allSteering, ...allGeneral];
-  fs.writeFileSync(
-    path.join(DATA_DIR, "members.json"),
-    JSON.stringify(allMembers, null, 2)
-  );
+  // members.json — all members combined; consumers filter by membershipLevel / organisationType / active
+  fs.writeFileSync(path.join(DATA_DIR, "members.json"), JSON.stringify(allMembers, null, 2));
 
-  // logos.json — derived view: active members with logos only, for the logo marquee component
-  const logos = allMembers
-    .filter((m) => m.active && m.logo)
-    .map((m) => ({
-      name: m.companyName,
-      logo: `/assets/${m.logo}`,
-      website: m.companyWebsite,
-    }));
-  fs.writeFileSync(
-    path.join(DATA_DIR, "logos.json"),
-    JSON.stringify(logos, null, 2)
-  );
+  // --- Homepage: Stats ---
 
-  // --- Homepage: Stats (active members only) ---
-  console.log("\nCounting active volunteers...");
-  const numberOfIndividuals = await countAll(DS.VOLUNTEERS, {
-    property: "Volunteer Status",
-    select: { equals: "Active" },
-  });
-  console.log(`  Found ${numberOfIndividuals} active volunteers`);
+  const stats = [{ numberOfOrganisations: activeSteeringCount + activeGeneralCount, numberOfIndividuals }];
+  fs.writeFileSync(path.join(DATA_DIR, "stats.json"), JSON.stringify(stats, null, 2));
 
-  // Wrapped in an array so gatsby-transformer-json creates allStatsJson
-  const stats = [{
-    numberOfOrganisations: activeSteeringCount + activeGeneralCount,
-    numberOfIndividuals,
-  }];
-  fs.writeFileSync(
-    path.join(DATA_DIR, "stats.json"),
-    JSON.stringify(stats, null, 2)
-  );
+  // --- Build lookup indexes ---
 
-  // --- Team page ---
-  // Pre-fetch all volunteers once, then build indexes for O(1) lookups.
-  // This replaces ~135 sequential per-subscription API calls with a single paginated fetch.
-  console.log("\nPre-fetching all volunteers...");
-  const allVolunteers = await queryAll(DS.VOLUNTEERS);
-  console.log(`  Fetched ${allVolunteers.length} volunteers`);
+  // memberById — for resolving member relation roll-ups in subscription-based fetches
+  const memberById = new Map(allMembers.map((m) => [m.id, m]));
 
-  // Index: subscriptionId → volunteer[]  (for resolving subscription → person)
-  const volunteerBySubId = new Map();
-  // Index: "firstname|lastname" → volunteer  (for admin team name lookup)
+  // volunteerByName — for admin team LinkedIn/photo fallback lookup
+  // volunteerPhotoByName — for extractPersonFromSub photo fallback (roll-ups don't return file URLs)
   const volunteerByName = new Map();
-  for (const vol of allVolunteers) {
+  for (const vol of allActiveVolunteers) {
     const vp = vol.properties;
-    for (const subId of relationIds(vp["Subscriptions"])) {
-      if (!volunteerBySubId.has(subId)) volunteerBySubId.set(subId, []);
-      volunteerBySubId.get(subId).push(vol);
+    const first = richText(vp["First Name"]?.rich_text);
+    const last = richText(vp["Last Name"]?.rich_text);
+    const fullName = `${first} ${last}`.trim();
+    if (first || last) volunteerByName.set(`${first.toLowerCase()}|${last.toLowerCase()}`, vol);
+    const photoUrl = fileUrl(vp["Photo"]);
+    if (fullName && photoUrl) {
+      const origName = vp["Photo"]?.files?.[0]?.name || "";
+      volunteerPhotoByName.set(fullName.toLowerCase(), { url: photoUrl, origName });
     }
-    const first = richText(vp["First Name"]?.rich_text).toLowerCase();
-    const last = richText(vp["Last Name"]?.rich_text).toLowerCase();
-    if (first || last) volunteerByName.set(`${first}|${last}`, vol);
   }
 
-  const steeringCommittee = await fetchSteeringCommittee(volunteerBySubId);
-  const { people: chairsAndLeads, pwciLeadsMap } = await fetchChairsAndLeads(volunteerBySubId);
-  const orgLeads = await fetchOrgLeads(volunteerBySubId);
-  const adminTeam = await fetchAdminTeam(volunteerByName);
+  // All four people fetches are independent (each queries its own subscription filter)
+  // Steering, chairs/leads, and org leads read person data directly from subscription roll-ups.
+  // Admin team still uses the pre-fetched volunteer map for LinkedIn/photo fallback.
+  const [steeringCommittee, chairsAndLeadsResult, orgLeads, adminTeam] = await Promise.all([
+    fetchSteeringCommittee(memberById),
+    fetchChairsAndLeads(memberById),
+    fetchOrgLeads(memberById),
+    fetchAdminTeam(volunteerByName),
+  ]);
+  const { people: chairsAndLeads, pwciLeadsMap } = chairsAndLeadsResult;
 
   // Build people.json with groups
   // Use a Map to deduplicate people who appear in multiple groups

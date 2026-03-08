@@ -26,8 +26,8 @@ const parentWg = projects.find(p => p.name === sciWebProject?.parent);
 
 // Pull SCI for Web tagged articles for the carousel
 import { getCollection } from "astro:content";
-import logos from "@/data/logos.json";
-const logoMap = new Map(logos.map((l: any) => [l.name.toLowerCase(), l.logo]));
+import membersData from "@/data/members.json";
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const allArticles = await getCollection("articles");
 const carouselArticles = allArticles
   .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci-web"))

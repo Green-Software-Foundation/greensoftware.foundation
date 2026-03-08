@@ -151,6 +151,12 @@ All site data (members, logos, team, stats, press mentions) is fetched from Noti
 
 The fetch script exits gracefully if `NOTION_API_KEY` is missing, creating empty fallback JSON files so the build still succeeds.
 
+**Data files produced:** `members.json` (all tiers), `people.json` (all volunteers/staff), `stats.json`, `projects.json`, `press-mentions.json`. Note: `logos.json` no longer exists — `LogoMarquee` and all logo consumers read directly from `members.json`, filtering by `active && logo && !hideLogo` at runtime.
+
+**Notion roll-up limitation:** Roll-up properties of type `files` do **not** return signed download URLs in the Notion API — the `files` array is always empty. Photos for subscription-based people (steering committee, chairs/leads, org leads) are resolved via a `volunteerPhotoByName` map built from the Volunteers DB records fetched in `main()`, not from roll-ups.
+
+**Subscription roll-ups:** Person data for subscription-based people is read directly from Subscription DB roll-up fields (`First Name`, `Surname`, `Title`, `LinkedIn`, `Member`, `Volunteer Status`) via `extractPersonFromSub()`. No per-subscription volunteer lookup needed. Volunteer Status is checked as a warning only — people with active subscriptions are included regardless of volunteer status.
+
 ### Press Page (`/press/`)
 
 The press page at `src/pages/press/index.astro` pulls data dynamically from multiple sources:
