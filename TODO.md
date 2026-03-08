@@ -40,7 +40,7 @@
 - [x] **Governance & Leadership team fix** — fixed Person/Role property type swap (title vs rich_text) and added direct photo download from GSF Team DB
 - [x] **Footer update** — updated homepage and membership footers with real URLs
 - [ ] **Roll out to greensoftware.org** — DNS + Netlify config for production domain
-- [ ] [Centralised data layer](docs/features/data-layer.md) — Notion UUIDs in all exported JSON, typed query functions in `src/lib/data.ts`, ID-based lookups replacing name-based references, build-time warnings for unresolved IDs, static `/api/` endpoints for cross-microsite consumption
+- [x] [Centralised data layer](docs/features/data-layer.md) — Notion UUIDs in all exported JSON, typed query functions in `src/lib/data.ts`, ID-based lookups replacing name-based references, build-time warnings for unresolved IDs, static `/api/` endpoints for cross-microsite consumption
 
 ## Bigger Pieces (new pages, need content decisions + creative session)
 
@@ -53,8 +53,8 @@
 - [ ] **Assemblies page** — own page eventually; link out to existing assemblies page for now
 - [x] **Press & Media section** — import content from Notion sources into a new page/section
 - [x] **Certification page** — built `/standards/certification/` (SCI self-attestation programme, membership benefit)
-- [ ] **SEE page** — build `/standards/see/` detail page for the Software Energy Efficiency standard
-- [ ] **SCI for Web page** — build `/standards/sci-web/` detail page (similar pattern to sci, sci-ai)
+- [x] **SEE page** — build `/standards/see/` detail page for the Software Energy Efficiency standard
+- [x] **SCI for Web page** — build `/standards/sci-web/` detail page (similar pattern to sci, sci-ai)
 - [ ] **Carbon Aware SDK site** — create a dedicated project page (or microsite) for the Carbon Aware SDK
 - [ ] **Impact Framework site** — create a dedicated project page (or microsite) for the Impact Framework
 - [ ] **Claude Desktop content updates** — implement workflow so content can be updated directly from Claude Desktop (MCP / structured content editing)

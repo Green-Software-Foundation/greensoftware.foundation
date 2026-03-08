@@ -637,3 +637,73 @@ Used parallel subagents extensively for image analysis (scanning all 188 article
 ### Reflections
 
 The markdown cleanup was far more involved than expected. What started as "fix some bold headings and remove `<u>` tags" became a multi-pass deep dive into DatoCMS export artefacts, non-breaking space corruption, and per-article quality review. The parallel subagent approach was essential — scanning 188 articles for image issues would have been impractical in a single context window. The user's iterative feedback on the article template design was valuable — each round improved the layout significantly.
+
+## 2026-03-08 - SCI for Web Refinements & SEE Standards Page
+
+**Objective**: Refine the SCI for Web page based on user feedback (content tone, section ordering, article integration, link targets), then build a new SEE (Software Energy Efficiency) standards page from the draft specification.
+
+### What We Built
+
+- **SCI for Web page (`/standards/sci-web/`)** — extensive content revisions across ~15 sections
+  - Rewrote "Why the Web Needs SCI for Web" section with inline HTML to support hyperlinks to external standards (SCI, Sustainable Web Design Model, CO2.js, W3C Web Sustainability Guidelines)
+  - Reverted over-corrected raw report language back to paraphrased marketing-appropriate versions across TabbedSection tabs, CTACard, Third-Party Transparency, and Principles Not Prescriptions
+  - Reordered sections: moved SCI Formula directly after "Why the Web Needs" section, followed by Measurement Gap, then "How SCI for Web Solves This"
+  - Fixed heading weights — changed all TextWithImage sections to `headingStyle="light"`, changed Measurement Gap from `variant="cards"` to `variant="bordered"` for consistent heading weight
+  - Switched ArticleCarousel to dynamic tag-based loading from the content collection (filtered by `tags: ["sci-web"]`)
+  - Removed asterisk accent syntax from carousel heading (React component renders raw asterisks)
+  - Replaced all PDF links with article links (`/articles/en/sci-web-assembly-report/`)
+  - Added W3C partnership section
+
+- **Assembly Report article** — created `/src/content/articles/en/sci-web-assembly-report/index.md`
+  - Full consensus design document as an article (scope definition, target personas, implementation practices)
+  - Tagged `["sci-web"]` for automatic carousel inclusion
+  - Eliminated PDF dependency — user said "I don't like PDFs at all"
+
+- **Article tagging** — added `tags: ["sci-web"]` to three existing articles:
+  - `designing-sci-web-what-we-agreed-and-what-comes-next`
+  - `the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad` (added to existing `["policy"]` tags)
+  - `pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un` (added to existing `["education"]` tags)
+
+- **SEE page (`/standards/see/`)** — new standards page for Software Energy Efficiency
+  - Researched Notion for project data (lifecycle "Proposal", leads Henry Richardson + Navveen Balani)
+  - Content paraphrased from draft specification (user emphasised: "don't take too much from it, the spec can change significantly")
+  - Sections: Hero → LogoMarquee → CTACard (What is SEE?) → Why Energy Efficiency Matters → SEE Formula → Software Boundary (FeatureGrid bordered) → Sustainability Actions → Quantification Methods (FeatureGrid cards) → How SEE Relates to SCI → Mission quote → TeamGrid → Get Involved → CTABanner → Footer
+  - Final revision based on user feedback: rewrote "Why Energy Efficiency Matters" to focus on isolating the energy signal without grid carbon intensity variability; removed "Five Steps" and "Core Characteristics" sections; reordered Sustainability Actions before Quantification Methods; changed Quantification Methods to `variant="cards"` for visual differentiation
+
+### The Journey
+
+The session began as a refinement pass on SCI for Web. The user's feedback was detailed and specific — section ordering, heading boldness, content tone. A key tension emerged: the user wanted content sourced from canonical documents (the assembly report and announcement article) but paraphrased for a marketing context, not raw report language. An initial pass over-corrected by pulling verbatim report text, which the user caught and asked to revert.
+
+A significant pivot was creating the assembly report as an article rather than linking to a PDF. This cascaded into implementing tag-based article filtering for the carousel — a pattern that makes the carousel self-maintaining as new articles are tagged.
+
+The SEE page was the second major deliverable. The user provided the full draft spec text but was clear about keeping distance from it ("the spec can change significantly"). The page was built by paraphrasing the spec's concepts — the SEE formula, software boundary, quantification methods — into marketing-appropriate language. The final feedback round refined the "Why Energy Efficiency Matters" framing to emphasise isolating the energy signal from grid carbon intensity variability, and streamlined the page by removing less important sections.
+
+### Technical Achievements
+
+- **Tag-based article carousel** — dynamic content filtering from the Astro content collection, with `mainImage?.src` for proper image loading
+- **Inline HTML sections** — workaround for TextBlock's plain-text `body` prop when hyperlinks are needed
+- **Visual differentiation** — using FeatureGrid `variant="bordered"` vs `variant="cards"` to distinguish adjacent grid sections
+
+### Key Learnings
+
+- TextBlock renders `body` as plain text — use custom HTML sections when inline links are needed
+- ArticleCarousel (React) doesn't support `*accent*` syntax — renders raw asterisks
+- Content collection `mainImage` uses Astro's `img()` helper — returns an object with `.src` property, not a string
+- When paraphrasing technical specs for marketing pages, keep distance from the source language — it's a landing page, not documentation
+
+### Statistics
+
+- 7 files changed across the session
+- 1 new page created (`/standards/see/`)
+- 1 new article created (SCI for Web Assembly Report)
+- 3 articles tagged for carousel integration
+
+### Next Steps
+
+- Carbon Aware SDK and Impact Framework project pages
+- Google Analytics integration
+- Roll out to greensoftware.org (DNS + Netlify)
+
+### Reflections
+
+The two-page session showed the value of established patterns. The SEE page was built quickly because the SCI page template was already proven. The user's feedback on both pages was converging on the same principles: lighter heading weights, paraphrased content, signal over noise. Each standards page is getting tighter.

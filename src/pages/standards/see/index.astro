@@ -1,0 +1,308 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CardGrid from "@/components/card-grid.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+
+const seeProject = projects.find(p => p.slug === "see");
+const parentWg = projects.find(p => p.name === seeProject?.parent);
+---
+
+<Layout
+  title="SEE — Software Energy Efficiency | Green Software Foundation"
+  description="A methodology for calculating the energy consumption rate of software systems. Lower numbers are better — and reaching zero is impossible."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SEE" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(seeProject?.lifecycle ? [{ text: seeProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Measure the Energy Cost of"
+    headingAccent="Your Software"
+    body="Every software system consumes energy through the hardware it runs on. The Software Energy Efficiency (SEE) specification provides a methodology for calculating the energy consumption rate of a software system — a score where lower is better and reaching zero is impossible."
+    ctas={[
+      { text: "View on GitHub", variant: "primary", href: "https://github.com/Green-Software-Foundation/Software-Energy-Efficiency" },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/sci/hero-illustration.svg"
+    imageAlt="SEE illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed within the Software Standards Working Group"
+  />
+
+  <!-- What is SEE? -->
+  <CTACard
+    heading="What is SEE?"
+    body="SEE is a rate — energy consumption per one functional unit of work, measured in kilowatt hours (kWh). It gives developers and organisations a clear, comparable number that captures how efficiently their software uses energy. Reducing an SEE score is only possible through actions that genuinely reduce energy consumption: modifying software to use less hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="What is SEE illustration"
+  />
+
+  <!-- Why SEE Matters -->
+  <section class="py-8 md:py-10 bg-accent-lightest-2">
+    <div class="container">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Why <span class="font-bold text-primary">Energy Efficiency</span> Matters
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed md:text-xl">
+          The <a href="/standards/sci/" class="text-primary underline hover:no-underline">SCI specification</a> measures carbon intensity — combining energy, grid carbon intensity, and embodied emissions. By focusing solely on energy, SEE isolates the signal to just energy consumption without the variability of grid carbon intensity in the mix. This is what's needed to truly focus on energy efficiency rather than carbon efficiency — giving teams a clear, undiluted measure of how much electricity their software consumes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The SEE Formula -->
+  <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
+          The SEE Formula
+        </h2>
+        <p class="text-lg md:text-xl">
+          SEE calculates energy consumption per functional unit. The formula accounts for facility overhead through PUE (Power Usage Effectiveness), ensuring that cooling, power conversion, and other infrastructure costs are captured.
+        </p>
+
+        <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
+          <p class="text-3xl font-bold text-primary md:text-4xl lg:text-5xl font-mono">
+            SEE = E per R
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2">
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">E — Energy</h3>
+            <p class="mt-2 text-sm text-gray-darker">The total energy the software causes to be consumed, calculated as the sum of each component's energy multiplied by the PUE of its facility. Measured in kilowatt hours (kWh).</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">R — Functional Unit</h3>
+            <p class="mt-2 text-sm text-gray-darker">A quantified performance characteristic that describes how the application scales — per API call, per user, per transaction, per device, or per data volume.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Boundary -->
+  <FeatureGrid
+    heading="The Software *Boundary*"
+    body="The first step in generating an SEE score is deciding what to include in the measurement. The boundary should include all components that significantly contribute to the software's energy consumption."
+    columns={3}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "Compute Resources",
+        description: "All computational hardware — processors, GPUs, TPUs, AI accelerators — performing work within the software boundary.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Host Systems & Idle Capacity",
+        description: "Energy consumed by host machines, memory, and reserved capacity that is idle but provisioned for availability and failover.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Facility Overhead & Networking",
+        description: "Cooling, power conversion, and other facility overhead (captured via PUE), plus networking equipment including routers, switches, and load balancers.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Sustainability Actions -->
+  <TextWithImage
+    heading="Software Sustainability"
+    headingAccent="Actions"
+    headingStyle="light"
+    body="All actions that reduce an SEE score fit into two categories: energy efficiency (making software use less electricity for the same function) and hardware efficiency (making software use fewer physical resources for the same function). The specification is designed to encourage more of these actions during the design, development, and maintenance of software."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
+    imageAlt="Sustainability actions illustration"
+    reversed
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Quantification Methods -->
+  <FeatureGrid
+    heading="Quantification *Methods*"
+    body="There are three approaches to quantifying energy consumption. Each component in the boundary can use whichever approach is most appropriate."
+    columns={3}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/sci/co2-icon.svg",
+        title: "Measurement",
+        description: "Real-world energy data from power monitoring equipment, smart PDUs, hardware sensors (RAPL, NVML), cloud provider energy APIs, or device-level power measurement.",
+      },
+      {
+        icon: "/assets/standards/sci/cost-icon.svg",
+        title: "Calculation",
+        description: "Modelled energy consumption using hardware specifications, TDP ratings, utilisation metrics combined with power curves, or vendor estimation tools.",
+      },
+      {
+        icon: "/assets/standards/sci/grid-icon.svg",
+        title: "Coefficients",
+        description: "Published energy values such as cloud provider data per instance type, industry-standard coefficients for hardware, or third-party SEE scores for subcomponents.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Relationship to SCI -->
+  <CTACard
+    heading="How SEE Relates to SCI"
+    body="The SCI specification measures carbon intensity using the formula SCI = (E × I + M) per R, which combines energy, carbon intensity, and embodied emissions. SEE focuses on the energy component alone: SEE = E per R. This makes SEE useful in contexts where carbon intensity data is unavailable or where the goal is specifically to reduce energy consumption regardless of grid mix. The two specifications are complementary — improving your SEE score will also improve the energy component of your SCI score."
+    ctaText="Learn about SCI"
+    ctaHref="/standards/sci/"
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="SCI and SEE relationship"
+  />
+
+  <!-- Mission Card -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-medium text-primary-dark italic md:text-xl">
+            Reducing an SEE score is only possible through actions that reduce energy consumption. This can be achieved by modifying a software system to use less physical hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure.
+          </p>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24 rotate-180" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={seeProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(seeProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Help Shape Software Energy Efficiency"
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "View the Draft Specification",
+        description: "Follow the development of the SEE specification on GitHub",
+        ctaText: "View on GitHub",
+        ctaHref: "https://github.com/Green-Software-Foundation/Software-Energy-Efficiency",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Join the Software Standards Working Group",
+        description: "Collaborate with industry experts shaping this specification (members only)",
+        ctaText: "Join the WG",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Become a GSF Member",
+        description: "Join the foundation to participate in standards development",
+        ctaText: "Get in touch",
+        ctaHref: "https://greensoftware.foundation/membership",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Energy efficiency is the foundation of sustainable software"
+    body="SEE provides a clear, comparable score for the energy consumption of any software system. Whether you're optimising cloud workloads, edge applications, or AI pipelines, your expertise can help shape how the industry measures and reduces software energy consumption."
+    ctaText="View the Draft Specification"
+    ctaHref="https://github.com/Green-Software-Foundation/Software-Energy-Efficiency"
+  />
+
+  <Footer
+    sections={[
+      {
+        title: "Our Work",
+        links: [
+          { href: "/standards/", text: "Standards" },
+          { href: "/policy/", text: "Policy" },
+          { href: "/education/", text: "Education" },
+          { href: "/research/", text: "Research" },
+          { href: "/stories/", text: "Member Stories" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { href: "/about/", text: "About GSF" },
+          { href: "/governance/", text: "Governance & Leadership" },
+          { href: "/history/", text: "History" },
+          { href: "/articles/", text: "Articles" },
+        ],
+      },
+      {
+        title: "Join",
+        links: [
+          { href: "/membership/", text: "Become a Member" },
+          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
+          { href: "/newsletter/", text: "Newsletter" },
+          { href: "https://summit.greensoftware.foundation", text: "Events" },
+        ],
+      },
+      {
+        title: "Contact",
+        type: "contact",
+        socialLinks: [
+          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
+          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
+          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
+        ],
+      },
+    ]}
+  />
+</Layout>
