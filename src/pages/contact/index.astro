@@ -105,44 +105,5 @@ import Footer from "@/components/footer.astro";
     ctaHref="mailto:help@greensoftware.foundation"
   />
 
-  <Footer
-    sections={[
-      {
-        title: "Our Work",
-        links: [
-          { href: "/standards/", text: "Standards" },
-          { href: "/policy/", text: "Policy" },
-          { href: "/education/", text: "Education" },
-          { href: "/stories/", text: "Member Stories" },
-        ],
-      },
-      {
-        title: "About",
-        links: [
-          { href: "/about/", text: "About GSF" },
-          { href: "/governance/", text: "Governance & Leadership" },
-          { href: "/contact/", text: "Contact" },
-          { href: "/articles/", text: "Articles" },
-        ],
-      },
-      {
-        title: "Join",
-        links: [
-          { href: "/membership/", text: "Become a Member" },
-          { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
-          { href: "/newsletter/", text: "Newsletter" },
-          { href: "https://summit.greensoftware.foundation", text: "Events" },
-        ],
-      },
-      {
-        title: "Contact",
-        type: "contact",
-        socialLinks: [
-          { href: "https://github.com/Green-Software-Foundation", icon: "github", label: "GitHub" },
-          { href: "https://www.linkedin.com/company/green-software-foundation/", icon: "linkedin", label: "LinkedIn" },
-          { href: "mailto:help@greensoftware.foundation", icon: "email", label: "Email" },
-        ],
-      },
-    ]}
-  />
+  <Footer />
 </Layout>

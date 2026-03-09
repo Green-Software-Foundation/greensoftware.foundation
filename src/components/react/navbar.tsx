@@ -287,9 +287,13 @@ function MobileNavSection({ section }: { section: NavSection }) {
 function MobileNav({
   items,
   onNavigate,
+  ctaText,
+  ctaHref,
 }: {
   items: NavItem[];
   onNavigate: () => void;
+  ctaText?: string;
+  ctaHref?: string;
 }) {
   const handleLinkClick = (e: React.MouseEvent) => {
     // Only close sheet when an actual navigation link is clicked
@@ -331,12 +335,32 @@ function MobileNav({
                   {item.sections.map((section) => (
                     <MobileNavSection key={section.title} section={section} />
                   ))}
+                  {item.footerLink && (
+                    <div className="mt-1 px-2 pb-1">
+                      <a
+                        href={item.footerLink.href}
+                        className="inline-flex items-center rounded-md bg-accent-lightest-2 px-3 py-1.5 text-sm font-semibold text-primary"
+                      >
+                        {item.footerLink.label}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </Accordion.Content>
             </Accordion.Item>
           );
         })}
       </Accordion.Root>
+      {ctaText && ctaHref && (
+        <div className="mt-4 px-2">
+          <a
+            href={ctaHref}
+            className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
+          >
+            {ctaText}
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
@@ -346,11 +370,15 @@ function MobileNav({
 interface NavigationComponentProps {
   items?: NavItem[];
   showSearch?: boolean;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 const NavigationComponent = ({
   items = [],
   showSearch = false,
+  ctaText,
+  ctaHref,
 }: NavigationComponentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -407,7 +435,7 @@ const NavigationComponent = ({
             </Button>
           </SheetTrigger>
           <SheetContent className="overflow-y-auto">
-            <MobileNav items={items} onNavigate={() => setIsOpen(false)} />
+            <MobileNav items={items} onNavigate={() => setIsOpen(false)} ctaText={ctaText} ctaHref={ctaHref} />
           </SheetContent>
         </Sheet>
       </div>
