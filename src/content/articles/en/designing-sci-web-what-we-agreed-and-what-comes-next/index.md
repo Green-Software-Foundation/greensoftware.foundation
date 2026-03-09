@@ -17,7 +17,7 @@ tags: ["sci-web"]
 ---
 
 > 
-> "Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need".
+> "Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need."
 
 As the Software Carbon Intensity (SCI) specification matured into an [ISO standard](https://www.iso.org/standard/86612.html), our members recognized that we needed a domain-specific, SCI-aligned approach to make it easier for developers, engineers, and product teams to measure and compare web emissions.
 
