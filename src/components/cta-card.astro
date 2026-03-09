@@ -1,5 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
+import Image from "@/components/image.astro";
 
 interface Props {
   /** Main heading text. Wrap words in *asterisks* for accent colour */
@@ -47,7 +48,7 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
     >
       {imageSrc && (
         <div class="hidden lg:flex lg:justify-center">
-          <img src={imageSrc} alt={imageAlt} class="object-cover" />
+          <Image src={imageSrc} alt={imageAlt} class="object-cover" sizes="(min-width: 1024px) 50vw, 0px" />
         </div>
       )}
       <div>

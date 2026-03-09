@@ -1,5 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
+import Image from "@/components/image.astro";
 
 interface ResourceCard {
   /** Card icon image path */
@@ -70,7 +71,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
         <div class="flex flex-col items-center text-center p-6 rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow">
           {card.icon && (
             <div class="mb-4">
-              <img src={card.icon} alt="" class="h-12 w-12" />
+              <Image src={card.icon} alt="" class="h-12 w-12" sizes="48px" />
             </div>
           )}
           <h3 class="text-xl font-bold mb-2">{card.title}</h3>

@@ -1,5 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
+import Image from "@/components/image.astro";
 
 interface Stat {
   /** Large number/value */
@@ -75,7 +76,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
     </div>
     {imageSrc && (
       <div class="mt-10">
-        <img src={imageSrc} alt={imageAlt} class="w-full" />
+        <Image src={imageSrc} alt={imageAlt} class="w-full" sizes="100vw" />
       </div>
     )}
     {stats.length > 0 && (
@@ -83,7 +84,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
         {stats.map((stat) => (
           <div class="rounded-lg bg-white/10 p-6 text-center">
             {stat.icon && (
-              <img src={stat.icon} alt="" class="mx-auto mb-3 h-8 w-8 opacity-70" />
+              <Image src={stat.icon} alt="" class="mx-auto mb-3 h-8 w-8 opacity-70" sizes="32px" />
             )}
             <p class="text-3xl font-extrabold text-accent">{stat.value}</p>
             <p class="mt-2 text-sm text-white/80">{stat.label}</p>
