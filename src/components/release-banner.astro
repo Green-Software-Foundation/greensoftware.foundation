@@ -26,14 +26,14 @@ const marqueeDuration = Math.max(releases.length * 8, 20);
 ---
 
 <div class={`${bgClass} overflow-hidden`} style={`--marquee-duration: ${marqueeDuration}s`}>
-  <div class="relative flex items-center overflow-hidden py-2">
+  <div class="group/banner relative flex items-center overflow-hidden py-2">
     {/* Fade edges */}
     <div class={`absolute top-0 bottom-0 left-0 z-10 w-12 bg-gradient-to-r from-primary to-transparent`}></div>
     <div class={`absolute top-0 right-0 bottom-0 z-10 w-12 bg-gradient-to-l from-primary to-transparent`}></div>
 
-    {/* Two copies for seamless loop */}
+    {/* Two copies for seamless loop — hover on parent pauses both */}
     {[0, 1].map(() => (
-      <div class="flex shrink-0 animate-marquee items-center hover:[animation-play-state:paused]">
+      <div class="flex shrink-0 animate-marquee items-center group-hover/banner:[animation-play-state:paused]">
         {releases.map((release) => (
           <a
             href={release.href}
