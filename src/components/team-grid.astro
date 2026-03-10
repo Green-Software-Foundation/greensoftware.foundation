@@ -2,6 +2,7 @@
 import { Card } from "@/components/ui/card";
 import LinkedInIcon from "@/assets/linkedin-icon.svg";
 import peopleData from "@/data/people.json";
+import Image from "@/components/image.astro";
 
 interface TeamMember {
   fullName: string;
@@ -105,7 +106,7 @@ const colClasses: Record<number, string> = {
             <Card className="flex flex-col items-center p-8 text-center bg-primary-darker border-0">
               <div class="mb-4 flex size-28 items-center justify-center overflow-hidden rounded-full bg-primary-light/30">
                 {member.photo ? (
-                  <img src={member.photo} alt={member.fullName} class="size-full object-cover" />
+                  <Image src={member.photo} alt={member.fullName} class="size-full object-cover" sizes="112px" />
                 ) : (
                   <span class="text-3xl font-bold text-white/60">
                     {member.fullName.split(" ").map(n => n[0]).join("")}
@@ -154,7 +155,7 @@ const colClasses: Record<number, string> = {
             <Card className="flex flex-col items-center p-6 text-center h-full justify-between w-full max-w-xs mx-auto">
               <div class="mb-4 flex size-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2">
                 {member.photo ? (
-                  <img src={member.photo} alt={member.fullName} class="size-full object-cover" />
+                  <Image src={member.photo} alt={member.fullName} class="size-full object-cover" sizes="80px" />
                 ) : (
                   <span class="text-xl font-bold text-primary/40">
                     {member.fullName.split(" ").map(n => n[0]).join("")}
@@ -192,6 +193,6 @@ const colClasses: Record<number, string> = {
     )}
   </div>
   {decorSrc && (
-    <img class="absolute -top-1/2 left-0 -z-10 hidden lg:block" src={decorSrc} />
+    <Image class="absolute -top-1/2 left-0 -z-10 hidden lg:block" src={decorSrc} alt="" />
   )}
 </section>

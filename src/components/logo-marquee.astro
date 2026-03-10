@@ -1,4 +1,6 @@
 ---
+import Image from "@/components/image.astro";
+
 interface Logo {
   name: string;
   logo: string;
@@ -55,11 +57,11 @@ const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-a
                 greyscale && "grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100",
               ]}
             >
-              <img
+              <Image
                 class="max-h-full max-w-full object-contain"
                 src={logo.logo}
                 alt={logo.name}
-                loading="lazy"
+                sizes="160px"
               />
             </a>
           ))}

@@ -1,5 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
+import Image from "@/components/image.astro";
 
 interface IconFeature {
   /** Path to icon SVG */
@@ -61,7 +62,7 @@ const {
   <div class="container grid items-center gap-10 md:grid-cols-2 md:gap-16">
     {reversed && (
       <div class="order-2 md:order-1 flex justify-center">
-        <img src={imageSrc} alt={imageAlt} class="w-full max-w-md" />
+        <Image src={imageSrc} alt={imageAlt} class="w-full max-w-md" sizes="(min-width: 768px) 50vw, 100vw" />
       </div>
     )}
     <div class={reversed ? "order-1 md:order-2" : ""}>
@@ -95,9 +96,9 @@ const {
           {iconFeatures.map((feature) => (
             <div class="flex items-start justify-start gap-3">
               <div class="relative flex w-16 shrink-0 items-center justify-center p-3">
-                <img src={feature.icon} alt="" class="relative h-8 w-8" />
+                <Image src={feature.icon} alt="" class="relative h-8 w-8" sizes="32px" />
                 {iconFeaturesBgIcon && (
-                  <img src={iconFeaturesBgIcon} alt="" class="absolute inset-0 size-full" />
+                  <Image src={iconFeaturesBgIcon} alt="" class="absolute inset-0 size-full" sizes="64px" />
                 )}
               </div>
               <p set:html={feature.description} />
@@ -115,7 +116,7 @@ const {
     </div>
     {!reversed && (
       <div class="flex justify-center">
-        <img src={imageSrc} alt={imageAlt} class="w-full max-w-md" />
+        <Image src={imageSrc} alt={imageAlt} class="w-full max-w-md" sizes="(min-width: 768px) 50vw, 100vw" />
       </div>
     )}
   </div>

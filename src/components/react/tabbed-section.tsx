@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Img } from "@/components/react/image";
 
 export type Tab = {
   value: string;
@@ -114,13 +115,13 @@ export const TabbedSection = (props: Props) => {
               className="flex items-center justify-end data-[state=active]:animate-tabs"
             >
               {tab.image && (
-                <img src={tab.image.src} alt={tab.image.alt ?? ""} className="size-full object-cover" />
+                <Img src={tab.image.src} alt={tab.image.alt ?? ""} className="size-full object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
               )}
             </TabsContent>
           ))
         ) : (
           imageSrc && (
-            <img src={imageSrc} alt={imageAlt} className="size-full object-cover" />
+            <Img src={imageSrc} alt={imageAlt} className="size-full object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
           )
         )}
       </div>
