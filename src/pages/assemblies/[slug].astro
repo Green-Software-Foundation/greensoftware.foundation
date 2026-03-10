@@ -1,0 +1,498 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import assembliesData from "@/data/assemblies.json";
+
+type Assembly = {
+  id: string;
+  name: string;
+  slug: string;
+  status: string;
+  stage: string | null;
+  purpose: string | null;
+  summary: string | null;
+  deliverable: string | null;
+  lead: string | null;
+  facilitator: string | null;
+  reportUrl: string | null;
+  startDate: string | null;
+  endDate: string | null;
+  applicationsOpen: string | null;
+  applicationDeadline: string | null;
+  startsHuman: string | null;
+  averageAttendees: number | null;
+  seats: number | null;
+  visibility: string | null;
+  project: string | null;
+  projectSlug: string | null;
+  projectLink: string | null;
+  workingGroup: string | null;
+  governingBodyLink: string | null;
+  detailsHtml: string | null;
+};
+
+export function getStaticPaths() {
+  const all = (assembliesData as Assembly[]).filter(a => a.status && a.status !== "Backlog" && a.status !== "Pending");
+  return all.map((assembly) => ({
+    params: { slug: assembly.slug },
+    props: { assembly },
+  }));
+}
+
+const { assembly } = Astro.props as { assembly: Assembly };
+const isCompleted = assembly.status === "Done";
+const showApplicationForm = ["Apply now", "Register interest", "Upcoming"].includes(assembly.status);
+
+function formatDate(d: string | null): string {
+  if (!d) return "—";
+  return new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+}
+
+// Build metadata items
+const meta: { label: string; value: string; href?: string }[] = [];
+if (assembly.deliverable) meta.push({ label: "Deliverable", value: assembly.deliverable });
+if (assembly.purpose) meta.push({ label: "Purpose", value: assembly.purpose });
+if (assembly.stage) meta.push({ label: "Stage", value: assembly.stage });
+if (assembly.facilitator) meta.push({ label: "Facilitator", value: assembly.facilitator });
+if (assembly.startDate) meta.push({ label: "Start Date", value: formatDate(assembly.startDate) });
+if (assembly.endDate) meta.push({ label: "End Date", value: formatDate(assembly.endDate) });
+if (assembly.applicationsOpen) meta.push({ label: "Applications Open", value: formatDate(assembly.applicationsOpen) });
+if (assembly.applicationDeadline) meta.push({ label: "Application Deadline", value: formatDate(assembly.applicationDeadline) });
+if (assembly.seats) meta.push({ label: "Seats", value: String(assembly.seats) });
+if (assembly.averageAttendees) meta.push({ label: "Participants", value: String(assembly.averageAttendees) });
+
+// CTAs
+const ctas: { text: string; href: string; variant: string }[] = [];
+if (assembly.status === "Apply now") {
+  ctas.push({ text: "Apply now", href: "#apply", variant: "primary" });
+}
+if (assembly.status === "Register interest") {
+  ctas.push({ text: "Register interest", href: "#apply", variant: "primary" });
+}
+if (isCompleted && assembly.reportUrl) {
+  ctas.push({ text: "Read the report", href: assembly.reportUrl, variant: "primary" });
+}
+
+// Visibility styling
+function visibilityStyle(v: string | null): { bg: string; text: string; icon: string } {
+  switch (v) {
+    case "Public": return { bg: "bg-accent", text: "text-primary-darkest", icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" };
+    case "GSF Members Only": return { bg: "bg-primary", text: "text-white", icon: "M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" };
+    case "Invite Only": return { bg: "bg-primary-darker", text: "text-white", icon: "M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" };
+    default: return { bg: "bg-gray", text: "text-gray-darker", icon: "" };
+  }
+}
+
+const vis = visibilityStyle(assembly.visibility);
+---
+
+<Layout title={`${assembly.name} — Assemblies — Green Software Foundation`} description={assembly.summary || `${assembly.name} assembly at the Green Software Foundation.`}>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Become a member"
+    ctaHref="/membership/"
+  />
+
+  <div data-pagefind-body>
+    <!-- Hero — dark style matching stories pages -->
+    <div class={isCompleted ? "bg-gray-light" : "bg-primary-darker text-white"}>
+      <div class="container pt-10 pb-12 md:pt-14 md:pb-16">
+        <div class="mx-auto max-w-3xl">
+          <!-- Breadcrumb -->
+          <nav aria-label="Breadcrumb" class="mb-8">
+            <ol class={`flex items-center gap-2 text-sm ${isCompleted ? "text-gray-darker" : "text-white/60"}`}>
+              <li>
+                <a href="/" class={`flex items-center gap-1 transition-colors ${isCompleted ? "hover:text-primary" : "hover:text-white"}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  Home
+                </a>
+              </li>
+              <li class={isCompleted ? "text-gray-dark" : "text-white/30"}>/</li>
+              <li><a href="/assemblies/" class={`transition-colors ${isCompleted ? "hover:text-primary" : "hover:text-white"}`}>Assemblies</a></li>
+              <li class={isCompleted ? "text-gray-dark" : "text-white/30"}>/</li>
+              <li class={`truncate max-w-[300px] ${isCompleted ? "text-primary-dark" : "text-white/80"}`}>{assembly.name}</li>
+            </ol>
+          </nav>
+
+          {/* Visibility + status badges */}
+          <div class="mb-4 flex flex-wrap items-center gap-2">
+            {assembly.visibility && (
+              <div class={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${vis.bg} ${vis.text}`}>
+                {vis.icon && (
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d={vis.icon} />
+                  </svg>
+                )}
+                {assembly.visibility}
+              </div>
+            )}
+
+            {isCompleted ? (
+              <div class="inline-flex items-center gap-2 rounded-full border border-gray bg-white px-3 py-1 text-xs font-bold text-gray-darker">
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Completed
+              </div>
+            ) : (
+              <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-bold ${
+                assembly.status === "Apply now" ? "bg-accent text-primary-darkest" :
+                assembly.status === "Register interest" ? "bg-accent text-primary-darkest" :
+                assembly.status === "In Progress" ? "bg-primary-light text-primary-darkest" :
+                "bg-accent-lighter text-primary-dark"
+              }`}>
+                {assembly.status}
+              </span>
+            )}
+
+            {assembly.purpose && (
+              <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-medium ${isCompleted ? "bg-accent-lighter text-primary-dark" : "bg-white/15 text-white/90"}`}>
+                {assembly.purpose}
+              </span>
+            )}
+          </div>
+
+          <h1 class={`text-3xl font-extrabold md:text-4xl lg:text-5xl leading-tight ${isCompleted ? "" : ""}`}>{assembly.name}</h1>
+
+          {assembly.summary && (
+            <p class={`mt-4 text-lg leading-relaxed md:text-xl ${isCompleted ? "text-primary-dark" : "text-white/80"}`}>{assembly.summary}</p>
+          )}
+
+          {ctas.length > 0 && (
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              {ctas.map((cta) => (
+                <a
+                  href={cta.href}
+                  target={cta.href.startsWith("http") ? "_blank" : undefined}
+                  rel={cta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  class={`inline-flex items-center rounded-lg px-6 py-3 text-sm font-bold transition-colors ${
+                    cta.variant === "primary"
+                      ? "bg-accent text-primary-darkest hover:bg-accent-light"
+                      : isCompleted
+                        ? "border border-primary text-primary hover:bg-primary hover:text-white"
+                        : "border border-white/30 text-white hover:bg-white/10"
+                  }`}
+                >
+                  {cta.text}
+                </a>
+              ))}
+            </div>
+          )}
+          {isCompleted && !assembly.reportUrl && (
+            <p class={`mt-6 text-sm font-medium ${isCompleted ? "text-gray-darker" : "text-white/60"}`}>
+              Report incoming — check back soon.
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Details -->
+    {meta.length > 0 && (
+      <section class="bg-white py-6 md:py-8">
+        <div class="container">
+          <div class="mx-auto max-w-3xl">
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+              {meta.map((item) => (
+                <div class="rounded-lg border px-3 py-2.5">
+                  <dt class="text-[10px] font-medium uppercase tracking-wider text-gray-darker">{item.label}</dt>
+                  <dd class="mt-0.5 text-sm font-semibold text-primary-dark">
+                    {item.href ? (
+                      <a href={item.href} class="text-primary hover:underline">{item.value}</a>
+                    ) : (
+                      item.value
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+
+    <!-- Details HTML (from Notion page body) -->
+    {assembly.detailsHtml && (
+      <section class="py-8 md:py-10">
+        <div class="container">
+          <div class="prose mx-auto max-w-3xl" set:html={assembly.detailsHtml} />
+        </div>
+      </section>
+    )}
+
+    <!-- Application Form -->
+    {showApplicationForm && (
+      <section id="apply" class="bg-accent-lightest-2 py-8 md:py-10">
+        <div class="container">
+          <div class="mx-auto max-w-2xl">
+            <div id="form-card" class="rounded-2xl border bg-white p-6 shadow-sm md:p-10">
+              {/* Success state — hidden by default, shown after submission */}
+              <div id="form-success" class="hidden py-12 text-center">
+                <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent">
+                  <svg class="h-8 w-8 text-primary-darkest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h2 class="text-2xl font-extrabold md:text-3xl">
+                  {assembly.status === "Apply now" ? "Application submitted" : "Interest registered"}
+                </h2>
+                <p class="mt-3 text-sm leading-relaxed text-gray-darker">
+                  {assembly.status === "Apply now"
+                    ? "Thank you for applying. We'll review your application and be in touch at the email address you provided."
+                    : "Thank you for registering your interest. We'll notify you when applications open."}
+                </p>
+                <a href="/assemblies/" class="mt-6 inline-flex items-center text-sm font-bold text-primary hover:underline">
+                  ← Back to all assemblies
+                </a>
+              </div>
+
+              {/* Error state — hidden by default */}
+              <div id="form-error" class="hidden rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                Something went wrong. Please try again or contact <a href="mailto:help@greensoftware.foundation" class="underline">help@greensoftware.foundation</a>.
+              </div>
+
+              {/* Form */}
+              <div id="form-wrapper">
+                <h2 class="text-2xl font-extrabold md:text-3xl">
+                  {assembly.status === "Apply now" ? "Apply to this assembly" : "Register your interest"}
+                </h2>
+                <p class="mt-2 text-sm leading-relaxed text-gray-darker">
+                  {assembly.status === "Apply now"
+                    ? "Complete the form below to apply. Applications are reviewed to ensure diverse, qualified representation."
+                    : "Register your interest and we'll notify you when applications open."}
+                </p>
+
+                <form
+                  id="assembly-form"
+                  name="assembly-application"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  class="mt-8 space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="assembly-application" />
+                  <input type="hidden" name="assembly-name" value={assembly.name} />
+                  <input type="hidden" name="assembly-id" value={assembly.id} />
+                  <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+                  {/* --- About You --- */}
+                  <fieldset>
+                    <legend class="mb-4 text-sm font-bold uppercase tracking-wider text-primary">About you</legend>
+                    <div class="space-y-4">
+                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                          <label for="your-name" class="mb-1 block text-sm font-semibold text-primary-dark">Full name <span class="text-red-500">*</span></label>
+                          <input type="text" id="your-name" name="your-name" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                        <div>
+                          <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Work email <span class="text-red-500">*</span></label>
+                          <input type="email" id="work-email" name="work-email" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                          <p class="mt-1 text-xs text-gray-darker">We'll use this to contact you about your application.</p>
+                        </div>
+                      </div>
+
+                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                          <label for="organisation" class="mb-1 block text-sm font-semibold text-primary-dark">Organisation <span class="text-red-500">*</span></label>
+                          <input type="text" id="organisation" name="organisation" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                        <div>
+                          <label for="job-title" class="mb-1 block text-sm font-semibold text-primary-dark">Job title</label>
+                          <input type="text" id="job-title" name="job-title" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                      </div>
+
+                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div>
+                          <label for="linkedin-url" class="mb-1 block text-sm font-semibold text-primary-dark">LinkedIn profile URL</label>
+                          <input type="url" id="linkedin-url" name="linkedin-url" placeholder="https://linkedin.com/in/..." class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                        <div>
+                          <label for="github-username" class="mb-1 block text-sm font-semibold text-primary-dark">GitHub username</label>
+                          <input type="text" id="github-username" name="github-username" placeholder="e.g. octocat" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                          <p class="mt-1 text-xs text-gray-darker">Assemblies often work through GitHub, so we need this to collaborate.</p>
+                        </div>
+                      </div>
+
+                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div>
+                          <label for="sector-industry" class="mb-1 block text-sm font-semibold text-primary-dark">Sector / Industry</label>
+                          <input type="text" id="sector-industry" name="sector-industry" placeholder="e.g. Cloud, Finance, AI" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                        <div>
+                          <label for="timezone" class="mb-1 block text-sm font-semibold text-primary-dark">Timezone</label>
+                          <input type="text" id="timezone" name="timezone" placeholder="e.g. GMT+1, EST" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                        <div>
+                          <label for="years-of-experience" class="mb-1 block text-sm font-semibold text-primary-dark">Years of experience</label>
+                          <input type="text" id="years-of-experience" name="years-of-experience" placeholder="e.g. 5-10" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  {/* --- Your Contribution --- */}
+                  <fieldset>
+                    <legend class="mb-4 text-sm font-bold uppercase tracking-wider text-primary">Your contribution</legend>
+                    <div class="space-y-4">
+                      <div>
+                        <label for="expertise" class="mb-1 block text-sm font-semibold text-primary-dark">Relevant expertise <span class="text-red-500">*</span></label>
+                        <textarea id="expertise" name="expertise" required rows={4} placeholder="What specific knowledge or experience do you bring to this assembly's topic?" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+                      </div>
+
+                      <div>
+                        <label for="motivation" class="mb-1 block text-sm font-semibold text-primary-dark">Motivation <span class="text-red-500">*</span></label>
+                        <textarea id="motivation" name="motivation" required rows={3} placeholder="Why do you want to participate in this assembly? What do you hope to achieve?" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+                      </div>
+
+                      <div>
+                        <label for="previous-gsf-involvement" class="mb-1 block text-sm font-semibold text-primary-dark">Previous GSF involvement</label>
+                        <textarea id="previous-gsf-involvement" name="previous-gsf-involvement" rows={2} placeholder="Have you participated in any GSF working groups, projects, or events before?" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+                      </div>
+
+                      <div>
+                        <label for="how-did-you-hear" class="mb-1 block text-sm font-semibold text-primary-dark">How did you hear about this assembly?</label>
+                        <input type="text" id="how-did-you-hear" name="how-did-you-hear" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  {/* --- Confirmations --- */}
+                  <fieldset>
+                    <legend class="mb-4 text-sm font-bold uppercase tracking-wider text-primary">Confirmations</legend>
+                    <div class="space-y-3">
+                      <label class="flex items-start gap-3">
+                        <input type="checkbox" name="confirmation" value="true" required class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
+                        <span class="text-sm text-primary-dark">
+                          I am able to represent my organisation in the assembly and I am able to commit to attending the majority of assembly sessions. I confirm the above is true. <span class="text-red-500">*</span>
+                        </span>
+                      </label>
+
+                      <label class="flex items-start gap-3">
+                        <input type="checkbox" name="stay-informed" value="true" class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
+                        <span class="text-sm text-primary-dark">
+                          Keep me informed about future assemblies and Green Software Foundation news.
+                        </span>
+                      </label>
+
+                      <label class="flex items-start gap-3">
+                        <input type="checkbox" name="privacy-consent" value="true" required class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
+                        <span class="text-sm text-primary-dark">
+                          I agree to the <a href="/privacy/" class="text-primary underline hover:text-primary-dark">Privacy Policy</a> and <a href="/terms/" class="text-primary underline hover:text-primary-dark">Terms of Use</a>. <span class="text-red-500">*</span>
+                        </span>
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <button
+                    type="submit"
+                    id="submit-btn"
+                    class="w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 sm:w-auto"
+                  >
+                    {assembly.status === "Apply now" ? "Submit application" : "Register interest"}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <script>
+      const form = document.getElementById("assembly-form");
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const btn = document.getElementById("submit-btn") as HTMLButtonElement;
+          const errorEl = document.getElementById("form-error");
+          const successEl = document.getElementById("form-success");
+          const wrapperEl = document.getElementById("form-wrapper");
+
+          // Hide previous error
+          errorEl?.classList.add("hidden");
+
+          // Disable button and show loading state
+          const originalText = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = "Submitting…";
+
+          try {
+            const formData = new FormData(form as HTMLFormElement);
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData as any).toString(),
+            });
+
+            if (response.ok) {
+              // Show success, hide form
+              wrapperEl?.classList.add("hidden");
+              successEl?.classList.remove("hidden");
+              // Scroll to success message
+              document.getElementById("form-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else {
+              throw new Error("Submission failed");
+            }
+          } catch {
+            errorEl?.classList.remove("hidden");
+            btn.disabled = false;
+            btn.textContent = originalText;
+          }
+        });
+      }
+    </script>
+
+    <!-- Governing Body -->
+    {assembly.workingGroup && (
+      <section class="bg-white py-8 md:py-10">
+        <div class="container">
+          <div class="mx-auto max-w-3xl">
+            <h2 class="mb-4 text-xl font-bold">Governing Body</h2>
+            {assembly.governingBodyLink ? (
+              <a
+                href={assembly.governingBodyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center justify-between rounded-xl border bg-accent-lightest-2 p-6 transition-shadow hover:shadow-md"
+              >
+                <div>
+                  <p class="text-lg font-bold text-primary-dark">{assembly.workingGroup}</p>
+                  <p class="mt-1 text-sm text-gray-darker">This assembly is governed by the {assembly.workingGroup}.</p>
+                </div>
+                <span class="text-sm font-bold text-primary group-hover:underline">View directory →</span>
+              </a>
+            ) : (
+              <div class="rounded-xl border bg-accent-lightest-2 p-6">
+                <p class="text-lg font-bold text-primary-dark">{assembly.workingGroup}</p>
+                <p class="mt-1 text-sm text-gray-darker">This assembly is governed by the {assembly.workingGroup}.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    )}
+  </div>
+
+  <CTABanner
+    heading="Every member's journey starts with a conversation"
+    body="Tell us what you're trying to solve. We'll tell you how membership can help."
+    ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+
+</Layout>

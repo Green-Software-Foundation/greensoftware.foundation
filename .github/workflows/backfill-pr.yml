@@ -1,0 +1,54 @@
+name: Backfill PR (main → dev)
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  backfill-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for changes and create/update Backfill PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if main is ahead of dev
+          AHEAD=$(git rev-list --count origin/dev..origin/main)
+          if [ "$AHEAD" -eq 0 ]; then
+            echo "main is not ahead of dev — nothing to backfill."
+            exit 0
+          fi
+
+          echo "main is $AHEAD commit(s) ahead of dev."
+
+          # Check if a backfill PR already exists
+          EXISTING_PR=$(gh pr list --base dev --head main --state open --json number --jq '.[0].number')
+
+          if [ -n "$EXISTING_PR" ]; then
+            echo "Backfill PR #$EXISTING_PR already exists — no action needed."
+            exit 0
+          fi
+
+          echo "Creating Backfill PR..."
+
+          BODY="## Backfill: main → dev
+
+          Changes were pushed to \`main\` that are not yet in \`dev\`. This PR syncs them back to keep the branches aligned.
+
+          > Auto-created by the Backfill PR workflow. Review and merge to keep \`dev\` up to date."
+
+          gh pr create \
+            --base dev \
+            --head main \
+            --title "Backfill: sync main → dev" \
+            --body "$BODY" \
+            --reviewer seanmcilroy29,JamieACowan

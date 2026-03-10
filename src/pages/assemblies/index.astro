@@ -1,0 +1,283 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import assembliesData from "@/data/assemblies.json";
+
+type Assembly = {
+  id: string;
+  name: string;
+  slug: string;
+  status: string;
+  stage: string | null;
+  purpose: string | null;
+  summary: string | null;
+  deliverable: string | null;
+  lead: string | null;
+  facilitator: string | null;
+  reportUrl: string | null;
+  startDate: string | null;
+  endDate: string | null;
+  applicationsOpen: string | null;
+  applicationDeadline: string | null;
+  startsHuman: string | null;
+  averageAttendees: number | null;
+  seats: number | null;
+  visibility: string | null;
+  project: string | null;
+  projectSlug: string | null;
+  projectLink: string | null;
+  workingGroup: string | null;
+  governingBodyLink: string | null;
+  detailsHtml: string | null;
+};
+
+const assemblies = assembliesData as Assembly[];
+
+// Visible statuses — exclude Backlog and Pending
+const visible = assemblies.filter(a => a.status && a.status !== "Backlog" && a.status !== "Pending");
+
+// Split into active (open/upcoming/in-progress) and completed
+const activeStatuses = ["Apply now", "Register interest", "Upcoming", "In Progress"];
+const active = visible.filter(a => activeStatuses.includes(a.status));
+
+// Completed — most recent first (by endDate, then startDate)
+const completed = visible
+  .filter(a => a.status === "Done")
+  .sort((a, b) => {
+    const dateA = a.endDate || a.startDate || "";
+    const dateB = b.endDate || b.startDate || "";
+    return dateB.localeCompare(dateA);
+  });
+
+function formatDateRange(start: string | null, end: string | null): string {
+  if (!start) return "";
+  const fmt = (d: string) => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+  if (!end) return fmt(start);
+  return `${fmt(start)} – ${fmt(end)}`;
+}
+
+function ctaForStatus(status: string): string {
+  switch (status) {
+    case "Apply now": return "Apply now →";
+    case "Register interest": return "Register interest →";
+    case "In Progress": return "Learn more →";
+    case "Upcoming": return "Learn more →";
+    case "Done": return "View outcomes →";
+    default: return "Learn more →";
+  }
+}
+
+function badgeColor(status: string): string {
+  switch (status) {
+    case "Apply now": return "bg-primary text-white";
+    case "Register interest": return "bg-accent text-primary-darkest";
+    case "In Progress": return "bg-primary-light text-primary-darkest";
+    case "Upcoming": return "bg-accent-lighter text-primary-dark";
+    case "Done": return "bg-gray text-gray-darker";
+    default: return "bg-gray-light text-gray-darker";
+  }
+}
+
+// Resolve the governing body label — prefer workingGroup, fall back to project
+function governingBody(a: Assembly): { name: string; slug: string | null } | null {
+  if (a.workingGroup) return { name: a.workingGroup, slug: null };
+  if (a.project) return { name: a.project, slug: a.projectSlug };
+  return null;
+}
+---
+
+<Layout title="Assemblies — Green Software Foundation" description="Assemblies are dedicated workshops where experts collaborate on specific challenges, using AI-facilitated consensus to move from problem to solution.">
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Become a member"
+    ctaHref="/membership/"
+  />
+
+  <Hero
+    heading="Assemblies"
+    headingAccent="AI-facilitated consensus at scale"
+    body="Assemblies are dedicated workshops — public or member-only — where experts collaborate on a specific challenge. Using AI-facilitated consensus, we move from blank page to agreement in weeks, not years."
+    ctas={[
+      { text: "Our standards process", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/dive-illustration.svg"
+    imageAlt="Assemblies illustration"
+    bgClass="bg-accent-lightest-2"
+    scrollIndicator
+  />
+
+  {active.length > 0 && (
+    <section class="py-12 md:py-16 bg-white">
+      <div class="container">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+            Upcoming <span class="font-bold text-primary">assemblies</span>
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-gray-darker md:text-xl">
+            Join an assembly to help shape the next generation of green software standards.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {active.map((a) => {
+            const group = governingBody(a);
+            return (
+              <a href={`/assemblies/${a.slug}/`} class="group flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm transition-shadow hover:shadow-md">
+                <div class="flex flex-1 flex-col justify-between p-6">
+                  <div>
+                    {group && (
+                      <p class="mb-1 text-xs font-medium uppercase tracking-wider text-gray-darker">{group.name}</p>
+                    )}
+                    <div class="mb-3 flex flex-wrap items-center gap-2">
+                      {a.visibility && (
+                        <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-bold ${
+                          a.visibility === "Public" ? "bg-accent text-primary-darkest" :
+                          a.visibility === "GSF Members Only" ? "bg-primary text-white" :
+                          "bg-primary-darker text-white"
+                        }`}>
+                          {a.visibility}
+                        </span>
+                      )}
+                      <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-bold ${badgeColor(a.status)}`}>
+                        {a.status}
+                      </span>
+                      {a.purpose && (
+                        <span class="inline-block rounded-full bg-accent-lighter px-3 py-0.5 text-xs font-medium text-primary-dark">
+                          {a.purpose}
+                        </span>
+                      )}
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold leading-tight">{a.name}</h3>
+                    {a.summary && (
+                      <p class="text-sm text-gray-darker line-clamp-3">{a.summary}</p>
+                    )}
+                    <div class="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-darker">
+                      {(a.startDate || a.startsHuman) && (
+                        <span>{a.startsHuman || formatDateRange(a.startDate, a.endDate)}</span>
+                      )}
+                      {a.seats && <span>{a.seats} seats</span>}
+                    </div>
+                  </div>
+                  <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">
+                    {ctaForStatus(a.status)}
+                  </span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- How Assemblies Work -->
+  <TextWithImage
+    heading="From problem to"
+    headingAccent="ratified standard"
+    body="Every assembly starts with a challenge that one organisation can't solve alone. We bring together experts from across the industry, give them structured questions, and use AI synthesis to accelerate consensus. Human review, iterative refinement, and explicit decision gates at every stage ensure quality — but at a pace traditional standards bodies can't match."
+    ctaText="Learn about our standards process →"
+    ctaHref="/standards/"
+    imageSrc="/assets/why-wdpc-feat-1.svg"
+    imageAlt="Assembly process illustration"
+    bgClass="bg-white"
+  />
+
+  <FeatureGrid
+    heading="The assembly *lifecycle*"
+    columns={4}
+    compact
+    features={[
+      {
+        icon: "/assets/dive-icon-1.svg",
+        title: "Analysis",
+        description: "Define the problem space, identify stakeholders, and scope the work.",
+      },
+      {
+        icon: "/assets/dive-icon-2.svg",
+        title: "Selection",
+        description: "Recruit participants. Applications are reviewed to ensure diverse, qualified representation.",
+      },
+      {
+        icon: "/assets/dive-icon-3.svg",
+        title: "Development",
+        description: "Structured sessions with AI-facilitated synthesis. Participants answer questions, review outputs, and iterate toward consensus.",
+      },
+      {
+        icon: "/assets/dive-icon-4.svg",
+        title: "Delivery",
+        description: "The assembly's output — a specification, framework, or decision — is ratified and published.",
+      },
+    ]}
+  />
+
+  {completed.length > 0 && (
+    <section class="py-12 md:py-16">
+      <div class="container">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+            Completed <span class="font-bold text-primary">assemblies</span>
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-gray-darker md:text-xl">
+            Every assembly started with a problem. Here's what they produced.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {completed.map((a) => {
+            const group = governingBody(a);
+            const dateStr = formatDateRange(a.startDate, a.endDate);
+            return (
+              <a href={`/assemblies/${a.slug}/`} class="group flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm transition-shadow hover:shadow-md">
+                <div class="flex flex-1 flex-col justify-between p-6">
+                  <div>
+                    {group && (
+                      <p class="mb-1 text-xs font-medium uppercase tracking-wider text-gray-darker">{group.name}</p>
+                    )}
+                    {a.purpose && (
+                      <span class="mb-2 inline-block rounded-full bg-accent-lighter px-3 py-0.5 text-xs font-medium text-primary-dark">
+                        {a.purpose}
+                      </span>
+                    )}
+                    <h3 class="mb-2 text-lg font-bold leading-tight">{a.name}</h3>
+                    {a.summary && (
+                      <p class="text-sm text-gray-darker line-clamp-2">{a.summary}</p>
+                    )}
+                    <div class="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-darker">
+                      {dateStr && <span>{dateStr}</span>}
+                      {a.averageAttendees && <span>{a.averageAttendees} participants</span>}
+                    </div>
+                  </div>
+                  <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">
+                    View outcomes →
+                  </span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTABanner
+    heading="Want to propose a new assembly?"
+    body="Members can bring their toughest challenges to the foundation. We'll help you find collaborators and build a solution."
+    ctaText="Discuss membership"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
