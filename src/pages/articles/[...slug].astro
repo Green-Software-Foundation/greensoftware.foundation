@@ -11,7 +11,7 @@ import { navItems } from "@/lib/nav-items";
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
   return articles.map((article) => ({
-    params: { slug: article.id },
+    params: { slug: article.id.startsWith("en/") ? article.id.slice(3) : article.id },
     props: { article },
   }));
 }
@@ -27,7 +27,7 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
 
 const seoDescription = article.data.description || article.data.summary || article.data.teaserText || "";
 const authorNames = article.data.authors?.map((a) => a.fullName) || [];
-const isEnglish = article.id.startsWith("en/");
+const isEnglish = article.data.lang === "en";
 ---
 
 <Layout
