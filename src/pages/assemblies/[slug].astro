@@ -329,7 +329,21 @@ const vis = visibilityStyle(assembly.visibility);
                       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                           <label for="sector-industry" class="mb-1 block text-sm font-semibold text-primary-dark">Sector / Industry</label>
-                          <input type="text" id="sector-industry" name="sector-industry" placeholder="e.g. Cloud, Finance, AI" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                          <select id="sector-industry" name="sector-industry" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+                            <option value="">Select…</option>
+                            <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
+                            <option value="AI & Machine Learning">AI & Machine Learning</option>
+                            <option value="Financial Services">Financial Services</option>
+                            <option value="Energy & Utilities">Energy & Utilities</option>
+                            <option value="Government & Public Sector">Government & Public Sector</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Telecommunications">Telecommunications</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Academia & Research">Academia & Research</option>
+                            <option value="Non-profit / NGO">Non-profit / NGO</option>
+                            <option value="Other">Other</option>
+                          </select>
                         </div>
                         <div>
                           <label for="timezone" class="mb-1 block text-sm font-semibold text-primary-dark">Timezone</label>
@@ -337,7 +351,14 @@ const vis = visibilityStyle(assembly.visibility);
                         </div>
                         <div>
                           <label for="years-of-experience" class="mb-1 block text-sm font-semibold text-primary-dark">Years of experience</label>
-                          <input type="text" id="years-of-experience" name="years-of-experience" placeholder="e.g. 5-10" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                          <select id="years-of-experience" name="years-of-experience" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+                            <option value="">Select…</option>
+                            <option value="0-2">0–2 years</option>
+                            <option value="3-5">3–5 years</option>
+                            <option value="5-10">5–10 years</option>
+                            <option value="10-15">10–15 years</option>
+                            <option value="15+">15+ years</option>
+                          </select>
                         </div>
                       </div>
                     </div>

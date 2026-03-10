@@ -27,9 +27,9 @@ exports.handler = async (event) => {
     "Job Title": { rich_text: [{ text: { content: data["job-title"] || "" } }] },
     "LinkedIn URL": { url: data["linkedin-url"] || null },
     "GitHub Username": { rich_text: [{ text: { content: data["github-username"] || "" } }] },
-    "Sector / Industry": { rich_text: [{ text: { content: data["sector-industry"] || "" } }] },
+    "Sector / Industry": data["sector-industry"] ? { select: { name: data["sector-industry"] } } : undefined,
     "Timezone": { rich_text: [{ text: { content: data["timezone"] || "" } }] },
-    "Years of Experience": { rich_text: [{ text: { content: data["years-of-experience"] || "" } }] },
+    "Years of Experience": data["years-of-experience"] ? { select: { name: data["years-of-experience"] } } : undefined,
     "Expertise": { rich_text: [{ text: { content: data["expertise"] || "" } }] },
     "Motivation": { rich_text: [{ text: { content: data["motivation"] || "" } }] },
     "Previous GSF Involvement": { rich_text: [{ text: { content: data["previous-gsf-involvement"] || "" } }] },
@@ -38,7 +38,12 @@ exports.handler = async (event) => {
     "Confirmation": { checkbox: data["confirmation"] === "true" },
   };
 
-  // Link to the assembly via relation if we have the Notion page ID
+  // Remove undefined values (e.g. empty select fields)
+  for (const key of Object.keys(properties)) {
+    if (properties[key] === undefined) delete properties[key];
+  }
+
+  // Link to the assembly via relation if we have a valid Notion page ID
   if (data["assembly-id"]) {
     properties["Assembly"] = {
       relation: [{ id: data["assembly-id"] }],
@@ -54,6 +59,22 @@ exports.handler = async (event) => {
     console.log(`Application submitted for assembly: ${data["assembly-name"] || "unknown"}`);
     return { statusCode: 200, body: "OK" };
   } catch (err) {
+    // If the relation field caused the error, retry without it
+    if (err.message && err.message.includes("relation") && properties["Assembly"]) {
+      console.warn("Assembly relation failed, retrying without relation:", err.message);
+      delete properties["Assembly"];
+      try {
+        await notion.pages.create({
+          parent: { database_id: dbId },
+          properties,
+        });
+        console.log(`Application submitted (without relation) for assembly: ${data["assembly-name"] || "unknown"}`);
+        return { statusCode: 200, body: "OK" };
+      } catch (retryErr) {
+        console.error("Retry also failed:", retryErr.message);
+        return { statusCode: 500, body: "Failed to save application" };
+      }
+    }
     console.error("Failed to create Notion page:", err.message);
     return { statusCode: 500, body: "Failed to save application" };
   }

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import Layout from "@/layouts/showcase.astro";
 import { navItems } from "@/lib/nav-items";
 
@@ -36,7 +37,7 @@ const featuredArticles = allArticles
     title: a.data.title,
     description: a.data.summary || a.data.teaserText,
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
-    href: `/articles/${a.id}/`,
+    href: articleUrl(a.id),
     cta: "Read the story →",
     organizations: (a.data.organizations || []).map((name: string) => ({
       name,
@@ -46,7 +47,10 @@ const featuredArticles = allArticles
   }));
 ---
 
-<Layout>
+<Layout
+  title="Green Software Foundation — Building a Sustainable Digital Future"
+  description="The Green Software Foundation is a non-profit creating a trusted ecosystem of people, standards, tooling, and best practices for building green software."
+>
   <!-- Section 1: Hero -->
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"

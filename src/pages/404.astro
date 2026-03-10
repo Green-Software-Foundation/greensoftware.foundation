@@ -5,7 +5,7 @@ import Footer from "@/components/footer.astro";
 import { navItems } from "@/lib/nav-items";
 ---
 
-<Layout title="Page Not Found — Green Software Foundation">
+<Layout title="Page Not Found — Green Software Foundation" description="The page you're looking for doesn't exist. Return to the Green Software Foundation homepage to find what you need.">
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"
@@ -16,9 +16,13 @@ import { navItems } from "@/lib/nav-items";
     ctaHref="/membership/"
   />
 
-  <section class="bg-accent-lightest-2 flex items-center justify-center px-6 py-32 md:py-48">
-    <div class="text-center max-w-xl">
-      <p class="text-6xl font-extrabold text-primary mb-4">404</p>
+  <section class="bg-accent-lightest-2 flex items-center justify-center px-6 py-20 md:py-32">
+    <div class="text-center max-w-2xl">
+      <img
+        src="/assets/404-illustration.svg"
+        alt="404 page not found illustration"
+        class="mx-auto mb-8 w-full max-w-md"
+      />
       <h1 class="text-2xl font-bold text-primary-dark md:text-3xl mb-4">Page not found</h1>
       <p class="text-lg text-primary-dark mb-8">
         The page you're looking for doesn't exist or has been moved.

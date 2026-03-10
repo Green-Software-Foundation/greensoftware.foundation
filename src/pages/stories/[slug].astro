@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
@@ -35,7 +36,7 @@ const relatedArticles = relatedSlugs
     title: a!.data.title,
     description: a!.data.teaserText || a!.data.summary || "",
     imageSrc: a!.data.mainImage?.src || "/assets/hero-illustration.svg",
-    href: `/articles/${a!.id}/`,
+    href: articleUrl(a!.id),
     cta: "Read the article →",
     organizations: (a!.data.organizations || []).map((name: string) => ({
       name,
@@ -136,7 +137,8 @@ function initials(name: string) {
       <div class="max-w-3xl mx-auto">
         <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Problem</p>
         {problemHeading && (
-          <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-8 leading-tight">
+          <h2 id="the-problem" class="group relative font-extrabold text-3xl md:text-4xl text-primary mb-8 leading-tight">
+            <a href="#the-problem" class="heading-anchor absolute -left-6 top-0 no-underline opacity-0 group-hover:opacity-100 transition-opacity duration-150" aria-hidden="true" tabindex="-1"><span class="heading-anchor-icon text-primary-light text-[0.85em]">#</span></a>
             {problemHeading}
           </h2>
         )}
@@ -154,7 +156,8 @@ function initials(name: string) {
         <div class="max-w-3xl mx-auto">
           <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">The Journey</p>
           {journeyHeading && (
-            <h2 class="font-extrabold text-3xl md:text-4xl text-primary mb-16 leading-tight">
+            <h2 id="the-journey" class="group relative font-extrabold text-3xl md:text-4xl text-primary mb-16 leading-tight">
+              <a href="#the-journey" class="heading-anchor absolute -left-6 top-0 no-underline opacity-0 group-hover:opacity-100 transition-opacity duration-150" aria-hidden="true" tabindex="-1"><span class="heading-anchor-icon text-primary-light text-[0.85em]">#</span></a>
               {journeyHeading}
             </h2>
           )}
@@ -208,7 +211,8 @@ function initials(name: string) {
       <div class="container py-16 md:py-20">
         <div class="max-w-4xl mx-auto">
           <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Who came together</p>
-          <h2 class="font-extrabold text-3xl md:text-4xl text-primary leading-tight">
+          <h2 id="who-came-together" class="group relative font-extrabold text-3xl md:text-4xl text-primary leading-tight">
+            <a href="#who-came-together" class="heading-anchor absolute -left-6 top-0 no-underline opacity-0 group-hover:opacity-100 transition-opacity duration-150" aria-hidden="true" tabindex="-1"><span class="heading-anchor-icon text-primary-light text-[0.85em]">#</span></a>
             The people who made it happen
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
