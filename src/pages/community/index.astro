@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import Layout from "@/layouts/showcase.astro";
 import { navItems } from "@/lib/nav-items";
 
@@ -25,7 +26,7 @@ const communityArticles = allArticles
     title: a.data.title,
     description: a.data.summary || a.data.teaserText || "",
     imageSrc: a.data.mainImage?.src || undefined,
-    href: `/articles/${a.id}/`,
+    href: articleUrl(a.id),
     cta: "Read the article →",
   }));
 ---

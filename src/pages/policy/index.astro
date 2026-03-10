@@ -13,6 +13,7 @@ import Footer from "@/components/footer.astro";
 
 import teamData from "@/data/people.json";
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 
 // ----- Leadership photos from team.json -----
 const chrisAdams = teamData.find((p: any) => p.fullName === "Chris Adams");
@@ -31,7 +32,7 @@ const policyArticles = allArticles
     title: a.data.title,
     description: a.data.summary || a.data.teaserText || "",
     imageSrc: a.data.mainImage?.src || undefined,
-    href: `/articles/${a.id}/`,
+    href: articleUrl(a.id),
     cta: "Read the article",
   }));
 ---

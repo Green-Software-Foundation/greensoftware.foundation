@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import { Image } from "astro:assets";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
@@ -71,7 +72,7 @@ const { page } = Astro.props;
           });
           return (
             <a
-              href={`/articles/${article.id}`}
+              href={articleUrl(article.id)}
               class="group rounded-xl border border-border bg-white shadow-sm flex flex-col overflow-hidden hover:shadow-md transition-shadow"
             >
               {article.data.mainImage && (

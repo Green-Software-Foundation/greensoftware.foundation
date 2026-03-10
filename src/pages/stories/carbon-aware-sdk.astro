@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
@@ -29,7 +30,7 @@ const relatedArticles = relatedSlugs
     title: a!.data.title,
     description: a!.data.teaserText || a!.data.summary || "",
     imageSrc: a!.data.mainImage?.src || "/assets/hero-illustration.svg",
-    href: `/articles/${a!.id}/`,
+    href: articleUrl(a!.id),
     cta: "Read the article →",
     organizations: (a!.data.organizations || []).map((name: string) => ({
       name,
