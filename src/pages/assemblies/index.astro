@@ -165,8 +165,17 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
                       <p class="text-sm text-gray-darker line-clamp-3">{a.summary}</p>
                     )}
                     <div class="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-darker">
-                      {(a.startDate || a.startsHuman) && (
-                        <span>{a.startsHuman || formatDateRange(a.startDate, a.endDate)}</span>
+                      {a.startDate && (
+                        <span class="inline-flex items-center gap-1">
+                          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                          {formatDateRange(a.startDate, a.endDate)}
+                        </span>
+                      )}
+                      {a.applicationDeadline && (
+                        <span class="inline-flex items-center gap-1">
+                          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                          Apply by {new Date(a.applicationDeadline + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                        </span>
                       )}
                       {a.seats && <span>{a.seats} seats</span>}
                     </div>
@@ -246,11 +255,22 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
                     {group && (
                       <p class="mb-1 text-xs font-medium uppercase tracking-wider text-gray-darker">{group.name}</p>
                     )}
-                    {a.purpose && (
-                      <span class="mb-2 inline-block rounded-full bg-accent-lighter px-3 py-0.5 text-xs font-medium text-primary-dark">
-                        {a.purpose}
-                      </span>
-                    )}
+                    <div class="mb-2 flex flex-wrap items-center gap-2">
+                      {a.visibility && (
+                        <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-bold ${
+                          a.visibility === "Public" ? "bg-accent text-primary-darkest" :
+                          a.visibility === "GSF Members Only" || a.visibility === "Members Only" ? "bg-primary text-white" :
+                          "bg-primary-darker text-white"
+                        }`}>
+                          {a.visibility}
+                        </span>
+                      )}
+                      {a.purpose && (
+                        <span class="inline-block rounded-full bg-accent-lighter px-3 py-0.5 text-xs font-medium text-primary-dark">
+                          {a.purpose}
+                        </span>
+                      )}
+                    </div>
                     <h3 class="mb-2 text-lg font-bold leading-tight">{a.name}</h3>
                     {a.summary && (
                       <p class="text-sm text-gray-darker line-clamp-2">{a.summary}</p>
