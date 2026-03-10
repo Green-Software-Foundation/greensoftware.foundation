@@ -277,6 +277,7 @@ const vis = visibilityStyle(assembly.visibility);
                   id="assembly-form"
                   name="assembly-application"
                   method="POST"
+                  action={`/assemblies/${assembly.slug}/`}
                   data-netlify="true"
                   netlify-honeypot="bot-field"
                   class="mt-8 space-y-6"
@@ -431,7 +432,7 @@ const vis = visibilityStyle(assembly.visibility);
 
           try {
             const formData = new FormData(form as HTMLFormElement);
-            const response = await fetch("/", {
+            const response = await fetch(form.getAttribute("action") || window.location.pathname, {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(formData as any).toString(),
