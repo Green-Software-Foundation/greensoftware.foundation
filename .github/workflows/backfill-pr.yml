@@ -46,9 +46,13 @@ jobs:
 
           > Auto-created by the Backfill PR workflow. Review and merge to keep \`dev\` up to date."
 
-          gh pr create \
+          PR_URL=$(gh pr create \
             --base dev \
             --head main \
             --title "Backfill: sync main → dev" \
-            --body "$BODY" \
-            --reviewer seanmcilroy29,JamieACowan
+            --body "$BODY")
+
+          echo "Created PR: $PR_URL"
+
+          # Request reviewers (non-fatal if user lacks repo access)
+          gh pr edit "$PR_URL" --add-reviewer seanmcilroy29,JamieACowan || echo "Warning: could not add some reviewers"
