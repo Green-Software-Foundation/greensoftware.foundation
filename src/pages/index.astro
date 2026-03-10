@@ -19,6 +19,7 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import CTACard from "@/components/cta-card.astro";
+import ReleaseBanner from "@/components/release-banner.astro";
 import Footer from "@/components/footer.astro";
 
 // Load member logos for org name → logo lookup
@@ -47,6 +48,9 @@ const featuredArticles = allArticles
 ---
 
 <Layout>
+  <!-- Release Banner -->
+  <ReleaseBanner />
+
   <!-- Section 1: Hero -->
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
