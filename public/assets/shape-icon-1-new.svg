@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="text" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #a4c352;
+      }
+
+      .st1 {
+        fill: #006d68;
+      }
+
+      .st2 {
+        fill: none;
+        stroke: #006d68;
+        stroke-miterlimit: 10;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M25,12.34c6.98,0,12.66,5.68,12.66,12.66s-5.68,12.66-12.66,12.66-12.66-5.68-12.66-12.66,5.68-12.66,12.66-12.66M25,9.5c-8.56,0-15.5,6.94-15.5,15.5s6.94,15.5,15.5,15.5,15.5-6.94,15.5-15.5-6.94-15.5-15.5-15.5h0Z"/>
+  <path class="st0" d="M25,4c11.58,0,21,9.42,21,21s-9.42,21-21,21S4,36.58,4,25,13.42,4,25,4M25,1C11.75,1,1,11.75,1,25s10.75,24,24,24,24-10.75,24-24S38.25,1,25,1h0Z"/>
+  <circle class="st0" cx="25" cy="25" r="7"/>
+  <g>
+    <line class="st2" x1="10.87" y1="39.2" x2="20.53" y2="29.55"/>
+    <polygon class="st1" points="11.26 38.19 4.01 39.98 -1.48 45.47 4.6 45.48 4.6 51.56 10.09 46.06 11.89 38.81 11.26 38.19"/>
+    <polygon class="st1" points="23.02 34.1 25.6 24.47 15.97 27.05 23.02 34.1"/>
+  </g>
+</svg>
