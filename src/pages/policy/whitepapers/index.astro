@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import { fetchWhitepapers } from "@/lib/whitepapers";
+
+const papers = await fetchWhitepapers();
+---
+
+<Layout
+  title="Whitepapers — Green Software Foundation"
+  description="Policy and legislation alignment white papers from the Green Software Foundation."
+>
+  <Navbar
+    navItems={navItems}
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Hero
+    heading="White"
+    headingAccent="papers"
+    body="Policy and legislation alignment white papers produced by the Green Software Foundation's Policy Working Group."
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/hero-illustration.svg"
+  />
+
+  <div class="bg-white">
+    <div class="container py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        {papers.length === 0 ? (
+          <p class="text-gray-darker text-lg">No whitepapers available at this time.</p>
+        ) : (
+          <div class="grid gap-6">
+            {papers.map((paper) => (
+              <a
+                href={`/policy/whitepapers/${paper.slug}/`}
+                class="block rounded-xl border border-border bg-accent-lightest-2 p-6 md:p-8 hover:border-primary-lighter hover:shadow-md transition-all group"
+              >
+                <h2 class="font-extrabold text-xl md:text-2xl text-primary group-hover:text-primary-dark transition-colors leading-tight">
+                  {paper.title}
+                </h2>
+                <p class="mt-3 text-sm font-semibold text-primary group-hover:underline">
+                  Read the whitepaper →
+                </p>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <CTABanner
+    heading="Want to get involved?"
+    body="Join the Policy Working Group and contribute to shaping green software policy worldwide."
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
