@@ -117,6 +117,21 @@ Images are co-located with the English article and shared across translations.
 3. The new locale tab will appear in the CMS editor immediately
 4. No other config changes are needed — translations are opt-in
 
+## Announcement banner
+
+The scrolling announcement banner at the top of the site is driven by `src/data/releases.json`. Each entry has a `text` (displayed in the marquee) and an `href` (link target). To update the announcements, edit that file:
+
+```json
+[
+  {
+    "text": "Your announcement text here",
+    "href": "/link/to/page/"
+  }
+]
+```
+
+Remove all entries (leave an empty `[]` array) to hide the banner entirely. The component is `src/components/release-banner.astro`.
+
 ## How-to guides
 
 - [Articles & Featured Content](docs/how-to-featured-articles.md) — How to write articles, manage frontmatter, and feature content on the homepage carousel
