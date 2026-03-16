@@ -1,6 +1,39 @@
 # Green Software Foundation Website
 
-The official website for the [Green Software Foundation](https://greensoftware.foundation), built with Astro 5, React 19, and Tailwind CSS 4.
+The official website for the [Green Software Foundation](https://greensoftware.org), built with Astro 5, React 19, and Tailwind CSS 4.
+
+## Branching & Deployment
+
+```mermaid
+graph BT
+    F1[feature-branch-1] -->|PR| DEV[dev branch]
+    F2[feature-branch-2] -->|PR| DEV
+    DEV -->|"Deploy PR (auto-created)"| MAIN[main branch]
+    MAIN -->|"Backfill PR (auto-created)"| DEV
+    DEV -.-|Netlify auto-deploys| STAGING["dev-green-software-org.netlify.app<br/>(staging)"]
+    MAIN -.-|Netlify auto-deploys| PROD["greensoftware.org<br/>(production)"]
+```
+
+| Branch | Deploys to | Purpose |
+|--------|-----------|---------|
+| `main` | [greensoftware.org](https://greensoftware.org) | Production — protected, no direct pushes |
+| `dev` | [dev-green-software-org.netlify.app](https://dev-green-software-org.netlify.app) | Staging — all work merges here first |
+
+### Rules
+
+1. **Never push or PR directly to `main`.** The `main` branch is protected.
+2. **All pull requests target `dev`.** Whether you're using Claude Code, the CMS, or working manually — always branch from `dev` and PR back into `dev`.
+3. **Deploy to production** by merging `dev` → `main` via the auto-created **Deploy PR**.
+4. **Backfill** happens automatically — if anything lands on `main` directly (hotfix, accident), a **Backfill PR** is auto-created to sync it back into `dev`.
+
+### Automated PRs (GitHub Actions)
+
+Two workflows keep `dev` and `main` in sync:
+
+- **Deploy PR** ([`.github/workflows/deploy-pr.yml`](.github/workflows/deploy-pr.yml)) — On every push to `dev`, checks if `dev` is ahead of `main`. If so, creates a "Deploy v{N}" PR from `dev` → `main` (with incrementing version numbers). Requests review from @seanmcilroy29 and @JamieACowan.
+- **Backfill PR** ([`.github/workflows/backfill-pr.yml`](.github/workflows/backfill-pr.yml)) — On every push to `main`, checks if `main` is ahead of `dev`. If so, creates a "Backfill" PR from `main` → `dev`. Requests review from @seanmcilroy29 and @JamieACowan.
+
+Neither workflow auto-merges — a human must always review and merge.
 
 ## Quick start
 
@@ -41,7 +74,7 @@ The site uses [Sveltia CMS](https://sveltiacms.app) — a modern, Git-based head
 
 Access is controlled entirely by **GitHub repository permissions**. Anyone with write access to `Green-Software-Foundation/greensoftware.foundation` can log into the CMS — no separate account or invitation needed.
 
-1. Go to `https://greensoftware.foundation/admin/`
+1. Go to `https://greensoftware.org/admin/`
 2. Click **Login with GitHub**
 3. Authorise via GitHub OAuth (first time only)
 

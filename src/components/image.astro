@@ -1,0 +1,74 @@
+---
+/**
+ * Optimised image component.
+ *
+ * - SVGs and non-raster files: rendered as a plain <img> (no transformation needed).
+ * - Raster images (JPG, PNG, etc.): rendered as a <picture> with AVIF + WebP
+ *   <source> elements backed by the Netlify Image CDN, with a JPEG <img> fallback.
+ *
+ * In local dev the Netlify CDN isn't available, so raster images also fall back
+ * to a plain <img> with the original src.
+ */
+import { isRaster, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  width?: number;
+  height?: number;
+  /** Defaults to "lazy". Use "eager" for above-the-fold images. */
+  loading?: "lazy" | "eager";
+  /** Passed to <source> and <img> to help the browser pick the right srcset entry. */
+  sizes?: string;
+  /** Override the default responsive widths [400, 800, 1200, 1600]. */
+  widths?: number[];
+}
+
+const {
+  src,
+  alt,
+  class: className,
+  width,
+  height,
+  loading = "lazy",
+  sizes = "100vw",
+  widths,
+} = Astro.props;
+
+const useNetlify = isRaster(src) && !import.meta.env.DEV;
+---
+
+{useNetlify ? (
+  <picture>
+    <source
+      type="image/avif"
+      srcset={makeSrcset(src, "avif", widths)}
+      sizes={sizes}
+    />
+    <source
+      type="image/webp"
+      srcset={makeSrcset(src, "webp", widths)}
+      sizes={sizes}
+    />
+    <img
+      src={netlifyUrl(src, width ?? 1200, "jpeg")}
+      alt={alt}
+      class={className}
+      width={width}
+      height={height}
+      loading={loading}
+      decoding="async"
+    />
+  </picture>
+) : (
+  <img
+    src={src}
+    alt={alt}
+    class={className}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding="async"
+  />
+)}

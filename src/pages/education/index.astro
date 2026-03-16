@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
 import Layout from "@/layouts/showcase.astro";
 import { navItems } from "@/lib/nav-items";
 
@@ -27,12 +28,15 @@ const educationArticles = allArticles
     title: a.data.title,
     description: a.data.summary || a.data.teaserText || "",
     imageSrc: a.data.mainImage?.src || undefined,
-    href: `/articles/${a.id}/`,
+    href: articleUrl(a.id),
     cta: "Read the article →",
   }));
 ---
 
-<Layout>
+<Layout
+  title="Education — Green Software Foundation"
+  description="Learn green software principles through GSF's education programme, including the Linux Foundation training course, Carbon Hack events, and community resources."
+>
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"

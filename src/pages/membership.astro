@@ -14,7 +14,10 @@ import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 ---
 
-<Layout>
+<Layout
+  title="Membership — Green Software Foundation"
+  description="Join the Green Software Foundation. Membership tiers for enterprises, SMEs, academic institutions, and government organisations committed to sustainable software."
+>
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"
@@ -23,7 +26,7 @@ import Footer from "@/components/footer.astro";
     showSearch
     navItems={navItems}
     ctaText="Discuss your challenges"
-    ctaHref="/membership/"
+    ctaHref="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
   />
 
   <!-- Section 1: Hero -->
@@ -32,7 +35,7 @@ import Footer from "@/components/footer.astro";
     headingAccent="with no playbook"
     body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results."
     ctas={[
-      { text: "Discuss your challenges with us", variant: "primary", href: "/membership/" },
+      { text: "Book a discussion", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=Membership%20enquiry" },
     ]}
     imageSrc="/assets/hero-illustration.svg"
     imageAlt="Membership illustration"
@@ -58,10 +61,23 @@ import Footer from "@/components/footer.astro";
   <TextWithImage
     heading="Bring us your"
     headingAccent="hardest problem"
-    body="Steering membership isn't a subscription — it's a partnership. You bring the challenge your organisation is facing. We put the foundation's resources, expertise, and member network behind solving it. Bespoke."
+    body="Steering membership isn't a subscription — it's a partnership. You bring the challenge your organisation is facing. We put the foundation's resources, expertise, and member network behind solving it. Bespoke. Email help@greensoftware.foundation to arrange a meeting to discuss how we can help."
     imageSrc="/assets/dive-illustration.svg"
     imageAlt="Partnership illustration"
   />
+
+  <!-- Contact Section -->
+  <section class="bg-primary-darker py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Get in Touch</h2>
+      <p class="text-lg text-white/70 mb-6">
+        Email us to arrange a meeting to discuss how membership can help your organisation.
+      </p>
+      <a href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry" class="inline-block text-2xl font-bold text-accent hover:text-accent-light transition-colors">
+        help@greensoftware.foundation
+      </a>
+    </div>
+  </section>
 
   <FeatureGrid
     heading="What *steering members* get"
@@ -245,8 +261,8 @@ import Footer from "@/components/footer.astro";
   <CTABanner
     heading="Every member's journey starts with a conversation"
     body="Tell us what you're trying to solve. We'll tell you how membership can help."
-    ctaText="Discuss your challenges with us"
-    ctaHref="/membership/"
+    ctaText="Email help@greensoftware.foundation"
+    ctaHref="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
   />
 
   <Footer />

@@ -1,4 +1,6 @@
 ---
+import Image from "@/components/image.astro";
+
 interface Feature {
   icon?: string;
   title: string;
@@ -86,7 +88,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
             ]}>
               <div class="flex flex-col items-start">
                 {feature.icon && (
-                  <img src={feature.icon} alt="" class="mb-3 h-12 w-12 md:mb-4" />
+                  <Image src={feature.icon} alt="" class="mb-3 h-12 w-12 md:mb-4" sizes="48px" />
                 )}
                 <h3 class="text-xl font-semibold text-primary">{feature.title}</h3>
                 <p class="mt-2">{feature.description}</p>
@@ -117,7 +119,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
         <div class={`mt-12 grid gap-6 ${cardColumnClasses[columns]}`}>
           {features.map((feature) => (
             <div class="rounded-lg border bg-white p-5 shadow-sm">
-              {feature.icon && <img src={feature.icon} alt="" class="mb-4 h-10 w-10" />}
+              {feature.icon && <Image src={feature.icon} alt="" class="mb-4 h-10 w-10" sizes="40px" />}
               <h3 class="text-lg font-bold text-primary">{feature.title}</h3>
               <p class="mt-2 text-sm text-gray-darker">{feature.description}</p>
               {feature.linkText && (
@@ -155,7 +157,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
             ]}>
               {feature.icon && (
                 <div class="mb-2 md:mb-3">
-                  <img src={feature.icon} alt="" class="h-8 w-auto" />
+                  <Image src={feature.icon} alt="" class="h-8 w-auto" sizes="32px" />
                 </div>
               )}
               <h3 class="mb-2 text-lg font-semibold text-primary lg:text-xl">{feature.title}</h3>

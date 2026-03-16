@@ -2,6 +2,7 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Img } from "@/components/react/image";
 
 export interface ArticleOrg {
   /** Organisation name (shown as fallback if no logo) */
@@ -75,10 +76,11 @@ export function ArticleCarousel({ heading, body, articles, showOrganizations = t
                 <div className="h-full rounded-xl border bg-white shadow-sm flex flex-col overflow-hidden">
                   {article.imageSrc && (
                     <div className="aspect-[16/9] overflow-hidden bg-gray-light">
-                      <img
+                      <Img
                         src={article.imageSrc}
                         alt={article.title}
                         className="h-full w-full object-cover"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       />
                     </div>
                   )}
@@ -89,10 +91,11 @@ export function ArticleCarousel({ heading, body, articles, showOrganizations = t
                           {article.organizations.map((org, i) => (
                             <React.Fragment key={i}>
                               {org.logoSrc ? (
-                                <img
+                                <Img
                                   src={org.logoSrc}
                                   alt={org.name}
                                   className="h-4 max-w-[60px] w-auto object-contain"
+                                  sizes="60px"
                                 />
                               ) : (
                                 <span className="text-xs font-semibold text-primary">
