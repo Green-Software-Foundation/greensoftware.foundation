@@ -43,7 +43,7 @@ export const navItems = [
         title: "Process",
         links: [
           { href: "/standards/certification/", label: "Certification", description: "Get certified in green software specifications" /* iconSrc: pi("sci-certification"), icon: "award" */ },
-          { href: "https://assemblies.greensoftware.foundation", label: "Assemblies", description: "AI-facilitated consensus at scale", /* icon: "messages-square", */ external: true },
+          { href: "/assemblies/", label: "Assemblies", description: "AI-facilitated consensus at scale" /* icon: "messages-square" */ },
         ],
       },
     ],

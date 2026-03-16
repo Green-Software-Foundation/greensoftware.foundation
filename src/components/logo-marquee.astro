@@ -30,6 +30,13 @@ const {
 
 const logos: Logo[] = propLogos || (await import("../data/members.json")).default
   .filter((m: any) => m.active && m.logo && !m.hideLogo)
+  .sort((a: any, b: any) => {
+    // Steering members first, then General — alphabetical within each tier
+    if (a.membershipLevel !== b.membershipLevel) {
+      return a.membershipLevel === "Steering" ? -1 : 1;
+    }
+    return a.companyName.localeCompare(b.companyName);
+  })
   .map((m: any) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite }));
 const marqueeDuration = Math.max(logos.length * 3, 30);
 

@@ -33,6 +33,7 @@ if (!NOTION_API_KEY) {
     "stats.json": {},
     "projects.json": [],
     "press-mentions.json": [],
+    "assemblies.json": [],
   };
   for (const [file, data] of Object.entries(fallbacks)) {
     const filePath = path.join(fallbackDir, file);
@@ -56,6 +57,7 @@ const DS = {
   VOLUNTEERS: "5274eabc-3b79-4eef-a254-4ed92879d86d",
   GSF_TEAM: "123456c0-7cab-806c-86a0-000b10bfc753",
   PRESS_MENTIONS: "e9e7a23c-9c9e-4811-8eae-e473fbeaa0e5",
+  ASSEMBLIES: "a3d1f9ea-d3ba-435b-8824-53886b0fb64f",
 };
 
 // Database IDs (the actual Notion database UUIDs for the SDK)
@@ -822,6 +824,227 @@ async function fetchProjects() {
 }
 
 // ---------------------------------------------------------------------------
+// Query 8: Assemblies
+// ---------------------------------------------------------------------------
+
+/**
+ * Convert a Notion block to simple HTML.
+ * Supports paragraph, headings, bulleted/numbered lists, and to_do blocks.
+ */
+function blockToHtml(block) {
+  const richTextToHtml = (rt) => {
+    if (!rt || !Array.isArray(rt)) return "";
+    return rt.map((t) => {
+      let text = t.plain_text || "";
+      // Escape HTML entities
+      text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      if (t.annotations?.bold) text = `<strong>${text}</strong>`;
+      if (t.annotations?.italic) text = `<em>${text}</em>`;
+      if (t.annotations?.code) text = `<code>${text}</code>`;
+      if (t.href) text = `<a href="${t.href}">${text}</a>`;
+      return text;
+    }).join("");
+  };
+
+  switch (block.type) {
+    case "paragraph":
+      return `<p>${richTextToHtml(block.paragraph?.rich_text)}</p>`;
+    case "heading_1":
+      return `<h2>${richTextToHtml(block.heading_1?.rich_text)}</h2>`;
+    case "heading_2":
+      return `<h3>${richTextToHtml(block.heading_2?.rich_text)}</h3>`;
+    case "heading_3":
+      return `<h4>${richTextToHtml(block.heading_3?.rich_text)}</h4>`;
+    case "bulleted_list_item":
+      return `<li>${richTextToHtml(block.bulleted_list_item?.rich_text)}</li>`;
+    case "numbered_list_item":
+      return `<li>${richTextToHtml(block.numbered_list_item?.rich_text)}</li>`;
+    case "to_do":
+      return `<li>${richTextToHtml(block.to_do?.rich_text)}</li>`;
+    case "divider":
+      return "<hr />";
+    default:
+      return "";
+  }
+}
+
+/**
+ * Wrap consecutive <li> items in <ul> or <ol> tags.
+ */
+function wrapListItems(htmlParts, blocks) {
+  const result = [];
+  let inList = false;
+  let listType = null;
+
+  for (let i = 0; i < htmlParts.length; i++) {
+    const block = blocks[i];
+    const html = htmlParts[i];
+    if (!html) continue;
+
+    const isBullet = block.type === "bulleted_list_item" || block.type === "to_do";
+    const isNumbered = block.type === "numbered_list_item";
+    const isListItem = isBullet || isNumbered;
+
+    if (isListItem && !inList) {
+      listType = isNumbered ? "ol" : "ul";
+      result.push(`<${listType}>`);
+      inList = true;
+    } else if (!isListItem && inList) {
+      result.push(`</${listType}>`);
+      inList = false;
+      listType = null;
+    }
+
+    result.push(html);
+  }
+
+  if (inList) result.push(`</${listType}>`);
+  return result.join("\n");
+}
+
+async function fetchAssemblies() {
+  console.log("\nFetching assemblies...");
+  const pages = await queryAll(DS.ASSEMBLIES);
+  console.log(`  Found ${pages.length} assembly records`);
+
+  const assemblies = [];
+  for (const page of pages) {
+    const p = page.properties;
+    const name = titleText(p["Workshop"]) || titleText(p["Name"]);
+    if (!name) continue;
+
+    const slug = slugify(name);
+    // Status is a Notion "status" type, not "select"
+    const status = p["Status"]?.status?.name || "";
+    const stage = selectName(p["Stage"]);
+    const purpose = selectName(p["Purpose"]);
+    const summary = richText(p["Summary"]?.rich_text);
+    const deliverable = richText(p["Deliverable"]?.rich_text);
+    const lead = richText(p["Lead"]?.rich_text);
+    const facilitator = richText(p["Facilitator"]?.rich_text);
+    const reportUrl = urlValue(p["Report"]);
+    const startDate = p["Start Date"]?.date?.start || null;
+    const endDate = p["End Date"]?.date?.start || null;
+    const applicationsOpen = p["Applications Open"]?.date?.start || null;
+    const applicationDeadline = p["Application Deadline"]?.date?.start || null;
+    const startsHuman = richText(p["Starts"]?.rich_text);
+    const averageAttendees = p["Average Attendees"]?.number || null;
+    const seats = p["Seats"]?.number || null;
+    const visibility = selectName(p["Visibility"]);
+
+    // Rollup links (from related PWCI records)
+    const governingBodyLink = p["Governing Body Link"]?.rollup?.array?.[0]?.url || null;
+    const projectLink = p["Project Link"]?.rollup?.array?.[0]?.url || null;
+
+    // Resolve Project relation via pwciNameCache
+    const projectIds = relationIds(p["Project"]);
+    let project = null;
+    let projectSlug = null;
+    if (projectIds.length > 0) {
+      const projId = projectIds[0];
+      if (pwciNameCache.has(projId)) {
+        project = pwciNameCache.get(projId);
+        projectSlug = slugify(project);
+      }
+    }
+
+    // Resolve Working Group relation via pwciNameCache
+    const wgIds = relationIds(p["Working Group"]);
+    let workingGroup = null;
+    if (wgIds.length > 0) {
+      const wgId = wgIds[0];
+      if (pwciNameCache.has(wgId)) {
+        workingGroup = pwciNameCache.get(wgId);
+      }
+    }
+
+    // Fetch page body — look for a "Details" heading, extract content below it
+    let detailsHtml = null;
+    try {
+      const blocksResp = await notion.blocks.children.list({ block_id: page.id, page_size: 100 });
+      const blocks = blocksResp.results;
+
+      // Find the "Details" heading
+      let detailsStart = -1;
+      for (let i = 0; i < blocks.length; i++) {
+        const b = blocks[i];
+        if (b.type === "heading_1" || b.type === "heading_2" || b.type === "heading_3") {
+          const text = richText(b[b.type]?.rich_text).toLowerCase();
+          if (text.includes("detail")) {
+            detailsStart = i + 1;
+            break;
+          }
+        }
+      }
+
+      if (detailsStart >= 0) {
+        // Collect blocks until next heading or end
+        const detailBlocks = [];
+        const detailBlockRefs = [];
+        for (let i = detailsStart; i < blocks.length; i++) {
+          const b = blocks[i];
+          if (b.type === "heading_1" || b.type === "heading_2" || b.type === "heading_3") break;
+          detailBlocks.push(blockToHtml(b));
+          detailBlockRefs.push(b);
+        }
+        const html = wrapListItems(detailBlocks, detailBlockRefs);
+        if (html.trim()) detailsHtml = html;
+      }
+    } catch (err) {
+      console.warn(`  WARN: Could not fetch blocks for assembly "${name}": ${err.message}`);
+    }
+
+    assemblies.push({
+      id: page.id,
+      name,
+      slug,
+      status,
+      stage: stage || null,
+      purpose: purpose || null,
+      summary: summary || null,
+      deliverable: deliverable || null,
+      lead: lead || null,
+      facilitator: facilitator || null,
+      reportUrl: reportUrl || null,
+      startDate,
+      endDate,
+      applicationsOpen,
+      applicationDeadline,
+      startsHuman: startsHuman || null,
+      averageAttendees,
+      seats,
+      visibility: visibility || null,
+      project,
+      projectSlug,
+      projectLink,
+      workingGroup,
+      governingBodyLink,
+      detailsHtml,
+    });
+  }
+
+  // Sort: active/open first, then by name
+  const statusOrder = {
+    "Apply now": 0,
+    "Register interest": 1,
+    "In Progress": 2,
+    "Upcoming": 3,
+    "Done": 4,
+    "Pending": 5,
+    "Backlog": 6,
+  };
+  assemblies.sort((a, b) => {
+    const aOrder = statusOrder[a.status] ?? 99;
+    const bOrder = statusOrder[b.status] ?? 99;
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    return a.name.localeCompare(b.name);
+  });
+
+  console.log(`  Exported ${assemblies.length} assemblies`);
+  return assemblies;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -973,6 +1196,13 @@ async function main() {
     JSON.stringify(projects, null, 2)
   );
 
+  // --- Assemblies ---
+  const assemblies = await fetchAssemblies();
+  fs.writeFileSync(
+    path.join(DATA_DIR, "assemblies.json"),
+    JSON.stringify(assemblies, null, 2)
+  );
+
   // --- Summary ---
   console.log("\n=== Summary ===");
   console.log(`Steering members: ${activeSteeringCount} active, ${allSteering.length - activeSteeringCount} historical`);
@@ -984,6 +1214,7 @@ async function main() {
   console.log(`Admin Team: ${adminTeam.length}`);
   console.log(`Total people.json entries: ${peopleJson.length}`);
   console.log(`Projects: ${projects.length} (${projects.filter(p => p.icon).length} with icons)`);
+  console.log(`Assemblies: ${assemblies.length}`);
   console.log(`\nFinished at ${new Date().toISOString()}`);
 }
 
