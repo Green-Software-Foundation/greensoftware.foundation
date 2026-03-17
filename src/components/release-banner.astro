@@ -1,0 +1,57 @@
+---
+interface ReleaseItem {
+  text: string;
+  href: string;
+}
+
+interface Props {
+  /** Array of release items. If not provided, loads from releases.json */
+  releases?: ReleaseItem[];
+  /** Background class for the banner */
+  bgClass?: string;
+}
+
+const {
+  releases: propReleases,
+  bgClass = "bg-primary",
+} = Astro.props;
+
+const releases: ReleaseItem[] = propReleases || (await import("../data/releases.json")).default;
+
+// Don't render anything if there are no releases
+if (releases.length === 0) return;
+
+// Speed: ~8s per item feels comfortable for text
+const marqueeDuration = Math.max(releases.length * 8, 20);
+---
+
+<div class={`${bgClass} overflow-hidden`} style={`--marquee-duration: ${marqueeDuration}s`}>
+  <div class="group/banner relative flex items-center overflow-hidden py-2">
+    {/* Fade edges */}
+    <div class={`absolute top-0 bottom-0 left-0 z-10 w-12 bg-gradient-to-r from-primary to-transparent`}></div>
+    <div class={`absolute top-0 right-0 bottom-0 z-10 w-12 bg-gradient-to-l from-primary to-transparent`}></div>
+
+    {/* Two copies for seamless loop — hover on parent pauses both */}
+    {[0, 1].map(() => (
+      <div class="flex shrink-0 animate-marquee items-center group-hover/banner:[animation-play-state:paused]">
+        {releases.map((release) => (
+          <a
+            href={release.href}
+            class="mx-4 flex shrink-0 items-center gap-3 whitespace-nowrap text-sm font-semibold text-white decoration-white/50 underline-offset-2 hover:underline"
+          >
+            <span class="text-accent" aria-hidden="true">◆</span>
+            {release.text}
+          </a>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation-play-state: paused !important;
+    }
+  }
+</style>

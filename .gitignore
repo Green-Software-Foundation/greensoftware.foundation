@@ -25,7 +25,8 @@ public/pagefind/
 # Generated data (fetched from Notion)
 public/assets/logos/
 public/assets/team/
-src/data/
+src/data/*
+!src/data/releases.json
 # @netlify/plugin-gatsby ignores start
 netlify/functions/gatsby
 # @netlify/plugin-gatsby ignores end
