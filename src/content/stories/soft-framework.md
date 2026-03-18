@@ -49,7 +49,7 @@ timeline:
       level.
     source:
       text: Read Pindy's story
-      href: /articles/en/green-software-advocate-series-an-interview-with-pindy-bhullar/
+      href: /articles/green-software-advocate-series-an-interview-with-pindy-bhullar/
 
   - date: At UBS
     heading: The Sustainable Technology Guild
@@ -63,7 +63,7 @@ timeline:
       needed a framework for transformation, not just tools.
     source:
       text: Read the full account
-      href: /articles/en/building-green-software-through-standards-and-collaboration/
+      href: /articles/building-green-software-through-standards-and-collaboration/
 
   - date: "2023"
     heading: TOSS raised within the Standards Working Group
@@ -74,6 +74,9 @@ timeline:
       holistically — recognising that carbon emissions from software don't fall solely
       under technology departments. Eight member organisations joined the effort: HSBC,
       Microsoft, Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS.
+    source:
+      text: About the SOFT project
+      href: https://directory.greensoftware.foundation/projects/soft/
 
   - date: November 2025
     heading: SOFT ratified
@@ -88,7 +91,7 @@ timeline:
       maturity matrices for CTOs, developers, and sustainability leads alike.
     source:
       text: Read the ratification announcement
-      href: /articles/en/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo/
+      href: /articles/celebrating-the-ratification-of-sustainable-organizational-framework-for-technolo/
 
   - date: Early 2026
     heading: SOFT v2.0 in development
@@ -98,6 +101,9 @@ timeline:
       feedback to inform SOFT v2.0, planned for early 2026. The framework is designed
       to evolve with industry innovations, new sustainability standards, and ongoing
       research.
+    source:
+      text: SOFT on GitHub
+      href: https://github.com/Green-Software-Foundation/soft
 
 featuredQuote:
   text: SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives.

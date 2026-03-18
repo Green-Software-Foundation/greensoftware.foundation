@@ -48,6 +48,9 @@ timeline:
       regulations and make informed decisions about where to run workloads. His framing:
       the goal was not perfect data but standardised, comparable data that would make the
       carbon emissions model for cloud workloads "less wrong and more useful."
+    source:
+      text: Read Adrian's original proposal on Medium
+      href: https://adrianco.medium.com/proposal-for-a-realtime-carbon-footprint-standard-60b71c269948
 
   - date: July 2023
     heading: Project launched — working group begins biweekly meetings
@@ -58,6 +61,9 @@ timeline:
       consumers like UBS. This created a space where providers could hear directly from
       enterprises, and enterprises could understand the constraints providers faced.
       The group maintained this biweekly cadence for over two years.
+    source:
+      text: About the Real Time Cloud project
+      href: https://directory.greensoftware.foundation/projects/real-time-cloud/
 
   - date: November 2023
     heading: Featured at Decarbonize Software 2023
@@ -68,7 +74,7 @@ timeline:
       metrics for all cloud providers."
     source:
       text: Read about Decarbonize Software 2023
-      href: /articles/en/decarbonize-software-2023-redefining-the-future-of-software/
+      href: /articles/decarbonize-software-2023-redefining-the-future-of-software/
 
   - date: 2023–2024
     heading: Data gathering and first cross-provider dataset
@@ -79,6 +85,9 @@ timeline:
       as open data. In December 2024, AWS provided PUE data for 2022 and 2023 for the first
       time, responding to the working group's disclosure request and validating the standard's
       role as the industry mechanism for cloud carbon transparency.
+    source:
+      text: Real Time Cloud v1.0 release
+      href: https://github.com/Green-Software-Foundation/real-time-cloud/releases/tag/v1.0
 
   - date: April 2025
     heading: Real Time Cloud standard ratified
@@ -91,7 +100,7 @@ timeline:
       pod and container energy allocation.
     source:
       text: Read about the Real Time Cloud standard ratification
-      href: /articles/en/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/
+      href: /articles/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/
 
   - date: January–February 2026
     heading: V1.1 and ISO trajectory
@@ -102,14 +111,16 @@ timeline:
       — expanding the standard's reach beyond sustainability teams into financial operations.
       Adrian published the first-ever cross-provider PUE comparison in The New Stack using
       RTC's standardised dataset.
+    source:
+      text: Real Time Cloud on GitHub
+      href: https://github.com/Green-Software-Foundation/real-time-cloud
 
 featuredQuote:
   text: >
-    Despite being the world's largest purchaser of renewable energy, cloud providers have
-    only released carbon data to customers on a monthly basis, with delays of a few months.
-    This gap leaves users relying on public data that overlooks these clean energy
-    investments, resulting in inflated emissions estimates.
-  author: RTC Ratification Article, Green Software Foundation
+    This would open up opportunities to leverage existing performance monitoring tools
+    and dashboards, extend optimization tools like autoscalers and schedulers, and to
+    build new kinds of carbon analysis and optimization tools and services.
+  author: Adrian Cockcroft, co-chair, Real Time Cloud
 
 contributors:
   - name: Adrian Cockcroft
@@ -128,16 +139,12 @@ contributors:
 
 quotes:
   - text: >
-      Our goal is to ensure that real-time carbon metrics are available and can be aggregated,
-      allocated, and apportioned throughout the information technology supply chain.
-    author: RTC Ratification Article
-    role: Green Software Foundation
-  - text: >
-      The project aims to make the carbon emissions model for cloud-based workloads less
-      wrong and more useful by providing a standard mechanism for cloud providers to share
-      detailed information.
-    author: RTC Ratification Article
-    role: Green Software Foundation
+      This proposal seeks to define a standard for real-time carbon and energy data as
+      time-series data that would be accessed alongside and synchronized with the existing
+      throughput, utilization and latency metrics that are provided for the components and
+      applications in computing environments.
+    author: Adrian Cockcroft
+    role: Proposal for a Realtime Carbon Footprint Standard
   - text: >
       Collaboration is essential at every level: within teams, across organisations, and
       even between institutions. Time is of the essence; we can't afford to wait for years

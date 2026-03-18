@@ -1,5 +1,15 @@
 # TODO
 
+## Next Up
+
+- [ ] **Published flags for stories & articles** — add `published` boolean to success stories and articles frontmatter so unpublished content can be excluded from builds
+- [ ] **Domain: .org → .foundation** — update site URL, links, and references from greensoftware.org back to greensoftware.foundation
+- [ ] **Evaluate Keystatic** — check out [Keystatic](https://keystatic.com/) as an alternative CMS to Sveltia
+- [ ] **Legacy redirects** — create redirects from old page paths to new pages (in `netlify.toml` or `_redirects`)
+- [ ] **Update rollout plan** — revise the greensoftware.org rollout plan with current status and next steps
+- [ ] **Google Analytics (GA4)** — configure GA4 for the new site, define key events/conversions to track
+- [ ] **Analytics & search reporting** — set up automated email reports from GA4 and search console to the team
+
 ## Quick Fixes (href changes, swaps, deletions — no new pages)
 
 - [x] **Homepage testimonial** — replaced with Gadhu Sundaram (GSF Chair) quote

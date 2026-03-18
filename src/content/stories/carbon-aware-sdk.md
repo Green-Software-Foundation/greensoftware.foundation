@@ -38,6 +38,9 @@ timeline:
       Members of the GSF Open Source Working Group identified carbon-aware computing as
       a quick win. Vaughan Knight at Microsoft launched the Carbon Aware SDK — starting
       with command-line tooling and a .NET library.
+    source:
+      text: About the Carbon Aware SDK project
+      href: https://directory.greensoftware.foundation/projects/carbon-aware-sdk/
 
   - date: 2021–2022
     heading: From library to enterprise API
@@ -45,6 +48,9 @@ timeline:
       Early conversations revealed companies needed not just a library but a centralised
       web API. By mid-2022, the SDK had a hosted API and a client library available in
       40 different programming languages.
+    source:
+      text: Carbon Aware SDK on GitHub
+      href: https://github.com/Green-Software-Foundation/carbon-aware-sdk
 
   - date: Oct–Nov 2022
     heading: CarbonHack22 accelerates adoption
@@ -53,6 +59,9 @@ timeline:
       submitted 51 projects built on the SDK. First place, Lowcarb, achieved 13% carbon
       reductions in federated machine learning. Second place, Zeus, showed 24% reductions
       in deep neural network training. Prize money totalled USD 100,000.
+    source:
+      text: Read about CarbonHack22
+      href: /articles/carbonhack22-a-big-leap-in-carbon-aware-computing/
 
   - date: January 2023
     heading: UBS deploys on production banking systems
@@ -61,6 +70,9 @@ timeline:
       Quantum Analytics risk platform, using WattTime data to time-shift workloads.
       The first enterprise-scale deployment of carbon-aware computing on a production
       banking system.
+    source:
+      text: Read the UBS carbon-aware computing whitepaper
+      href: /articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/
 
   - date: 2023–2024
     heading: Broader adoption and maturation
@@ -68,6 +80,9 @@ timeline:
       Vesta used the SDK to shift wind turbine simulations to cleaner windows. NTT DATA
       and NTT contributed the .NET 8 upgrade (v1.4), adding Prometheus and Grafana
       integration and Kubernetes-level carbon monitoring dashboards.
+    source:
+      text: Read about the .NET 8 upgrade
+      href: /articles/upgrading-to-net-8-inside-the-carbon-aware-sdk-v1-4/
 
   - date: April 2024
     heading: First GSF project to graduate
@@ -75,6 +90,9 @@ timeline:
       The Carbon Aware SDK became the first software project in the Green Software
       Foundation's history to achieve Graduated status, meeting all acceptance criteria
       including public release, clear documentation, and evidence of usefulness.
+    source:
+      text: Read about the SDK graduation
+      href: /articles/celebrating-the-graduation-of-the-carbon-aware-sdk/
 
   - date: October 2024
     heading: Decentralised carbon-aware computing
@@ -82,6 +100,9 @@ timeline:
       Energy Web delivered the world's first decentralised computation nomination system
       based on sustainability factors using the Carbon Aware SDK — extending carbon-aware
       computing into blockchain and Web3.
+    source:
+      text: Meet Mani Hagh Sefat of Energy Web
+      href: /articles/making-decentralized-systems-more-sustainable-meet-mani-hagh-sefat-of-energy-web/
 
 featuredQuote:
   text: Carbon aware software does more when energy is clean and less when it's dirty.

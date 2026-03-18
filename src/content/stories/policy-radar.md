@@ -47,6 +47,9 @@ timeline:
       public calendar of upcoming policy events where members could track what was coming and
       coordinate responses. The Green Web Foundation, active in both GSF and the W3C community,
       was uniquely positioned to bridge the technical standards world and the policy world.
+    source:
+      text: About the Policy Radar project
+      href: https://directory.greensoftware.foundation/projects/policy-radar/
 
   - date: March 2024
     heading: GSF endorses the AI Environmental Impacts Act
@@ -59,7 +62,7 @@ timeline:
       and a voluntary reporting framework for AI developers.
     source:
       text: Read why the GSF endorsed the AI Environmental Impacts Act
-      href: /articles/en/the-gsf-endorses-the-ai-environmental-impacts-act/
+      href: /articles/the-gsf-endorses-the-ai-environmental-impacts-act/
 
   - date: May 2025
     heading: Policy Radar ratified
@@ -71,7 +74,7 @@ timeline:
       are coming and when to engage in the policy making process is half of the battle."
     source:
       text: Read about the Policy Radar ratification
-      href: /articles/en/celebrating-the-ratification-of-the-policy-radar/
+      href: /articles/celebrating-the-ratification-of-the-policy-radar/
 
   - date: June 2025
     heading: Aya Saed elected co-chair
@@ -84,7 +87,7 @@ timeline:
       policy action."
     source:
       text: Read about Aya Saed's election as PWG co-chair
-      href: /articles/en/leadership-update-aya-saed-elected-co-chair-of-the-policy-working-group/
+      href: /articles/leadership-update-aya-saed-elected-co-chair-of-the-policy-working-group/
 
   - date: August 2025
     heading: PWG defines its mission and principles
@@ -97,7 +100,7 @@ timeline:
       frameworks and facilitating evidence-based dialogue.
     source:
       text: Read the PWG mission statement
-      href: /articles/en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/
+      href: /articles/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/
 
   - date: 2025–2026
     heading: Proactive policy engagement
@@ -111,7 +114,7 @@ timeline:
       software engineers the granularity they need to act.
     source:
       text: Read why GSF participated in the GHG Protocol Scope 2 consultation
-      href: /articles/en/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/
+      href: /articles/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/
 
 featuredQuote:
   text: >
