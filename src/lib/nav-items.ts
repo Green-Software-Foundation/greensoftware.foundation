@@ -49,6 +49,20 @@ export const navItems = [
     ],
   },
   {
+    label: "Policy & Research",
+    footerLink: { href: "/policy/", label: "About our policy & research →" },
+    sections: [
+      {
+        title: "Resources",
+        links: [
+          { href: "/policy/whitepapers/", label: "Whitepapers", description: "Policy and legislation alignment white papers" },
+          { href: "https://policy-radar.greensoftware.foundation", label: "Policy Radar", description: "Track emerging legislation and regulatory trends", external: true },
+          { href: "https://stateof.greensoftware.foundation", label: "State of Green Software", description: "Annual report on the state of green software", external: true },
+        ],
+      },
+    ],
+  },
+  {
     label: "Adoption",
     sections: [
       {
@@ -58,14 +72,6 @@ export const navItems = [
           { href: "https://learn.greensoftware.foundation", label: "Courses", /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true },
           { href: "https://patterns.greensoftware.foundation", label: "Patterns", /* iconSrc: pi("gs-patterns"), icon: "book-open", */ external: true },
           { href: "https://github.com/Green-Software-Foundation/awesome-green-software", label: "Resource Catalogue", /* iconSrc: pi("awesome-gs"), icon: "trophy", */ external: true },
-        ],
-      },
-      {
-        title: "Policy & Research",
-        headerLink: { href: "/policy/", label: "About our policy & research →" },
-        links: [
-          { href: "https://policy-radar.greensoftware.foundation", label: "Policy Radar", description: "Track emerging legislation and regulatory trends", /* iconSrc: pi("policy-radar"), icon: "radar", */ external: true },
-          { href: "https://stateof.greensoftware.foundation", label: "State of Green Software", /* iconSrc: pi("state-of-green-software"), icon: "bar-chart", */ external: true },
         ],
       },
       {

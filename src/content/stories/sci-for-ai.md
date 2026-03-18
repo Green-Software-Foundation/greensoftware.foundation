@@ -11,48 +11,47 @@ journeyHeading: From panel discussion to the world's first AI carbon standard
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.svg
-  - name: Microsoft
-    logo: /assets/logos/microsoft.svg
+    logo: /assets/logos/accenture.jpg
+  - name: Amadeus
+    logo: /assets/logos/amadeus.jpg
+  - name: Avanade
+    logo: /assets/logos/avanade.webp
+  - name: BCG
+    logo: /assets/logos/bcg.png
+  - name: Boavizta
+    logo: /assets/logos/boavizta.svg
+  - name: Electricity Maps
+    logo: /assets/logos/electricity-maps.svg
+  - name: Globant
+    logo: /assets/logos/globant.svg
   - name: Google
     logo: /assets/logos/google.png
-  - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: IBM
     logo: /assets/logos/ibm.gif
+  - name: IMDA Singapore
+    logo: /assets/logos/infocomm-media-development-authority.png
+  - name: Microsoft
+    logo: /assets/logos/microsoft.webp
+  - name: NTT DATA
+    logo: /assets/logos/ntt-data.png
+  - name: Schneider Electric
+    logo: /assets/logos/schneider-electric.jpg
+  - name: Scope3
+    logo: /assets/logos/scope3.jpg
+  - name: Siemens
+    logo: /assets/logos/siemens.png
   - name: UCL
     logo: /assets/logos/ucl.png
   - name: UBS
     logo: /assets/logos/ubs.png
-  - name: Siemens
-    logo: /assets/logos/siemens.png
-  - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
-  - name: Avanade
-    logo: /assets/logos/avanade.webp
-  - name: Schneider Electric
-    logo: /assets/logos/schneider-electric.png
-  - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
-  - name: Globant
-    logo: /assets/logos/globant.svg
-  - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
-  - name: Boavizta
-    logo: /assets/logos/boavizta.svg
-  - name: IMDA Singapore
-    logo: /assets/logos/imda.png
-  - name: Stanford University
-  - name: BCG
-    logo: /assets/logos/bcg.png
-  - name: Scope3
-    logo: /assets/logos/scope3.jpg
+  - name: WattTime
+    logo: /assets/logos/watttime.png
 
 stats:
   - value: "20+"
     label: Organisations participated in the workshops shaping the specification
-  - value: "12"
-    label: Member Green AI Committee establishing Green AI as a discipline
+  - value: "11"
+    label: Months from Proposal to Ratification
   - value: "6"
     label: AI lifecycle stages covered — from data preparation to end-of-life
   - value: "2"
@@ -189,18 +188,6 @@ contributors:
     role: Data Engineer
     org: UBS
     contribution: Participated in both the Green AI Committee and SCI for AI workshop.
-  - name: Dawn Nafus
-    role: Anthropologist and Senior Research Scientist
-    org: Intel Labs
-    contribution: Moderated the "Can AI Truly Be Green?" panel that helped frame the problem.
-  - name: Chris McClean
-    role: Global Lead for Digital Ethics
-    org: Avanade
-    contribution: Panellist who challenged assumptions about AI sustainability at the framing panel.
-  - name: Dr. Elif Kiesow Cortez
-    role: Director of Quantum & AI
-    org: Stanford University
-    contribution: Panellist who flagged incoming EU regulatory requirements for AI environmental impact.
   - name: Tammy McClellan
     role: Engineer
     org: Microsoft
