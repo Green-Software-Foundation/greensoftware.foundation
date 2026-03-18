@@ -90,15 +90,17 @@ timeline:
       text: Read the Accenture SCI implementation case study
       href: /articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/
 
-  - date: April 2024
+  - date: March 2024
     heading: ISO standard status
     body: >
-      The SCI Specification v1.0 achieved ISO standard status — ISO 21031:2024. One of
-      the fastest paths to ISO certification for a software specification. CAST demonstrated
-      that fixing just ten green code deficiencies with four person-days of effort could
-      reduce annual CO₂ emissions by an estimated 400 kg and save over 1,000 kWh per year.
-      Autostrade per l'Italia, working with CAST, achieved an average of 15.1% CO₂ savings
-      across 60 applications.
+      From alpha release in December 2021 to ISO 21031:2024 in March 2024 — the SCI became
+      an internationally recognised standard in under three years. For context, ISO certification
+      for a software specification typically takes five to seven years. GSF's consensus-driven
+      process, combining open community review with direct enterprise participation, compressed
+      that timeline without compromising rigour. CAST demonstrated that fixing just ten green
+      code deficiencies with four person-days of effort could reduce annual CO₂ emissions by
+      an estimated 400 kg and save over 1,000 kWh per year. Autostrade per l'Italia, working
+      with CAST, achieved an average of 15.1% CO₂ savings across 60 applications.
     source:
       text: Read about the SCI achieving ISO standard status
       href: /articles/sci-specification-achieves-iso-standard-status/
@@ -127,18 +129,21 @@ contributors:
   - name: Abhishek Gupta
     role: Founder and Principal Researcher
     org: Montreal AI Ethics Institute
+    photo: /assets/articles/authors/abhishek-gupta.jpg
     contribution: >
       Co-chaired the Standards Working Group from GSF's formation and led the SCI
       from inception through ISO certification. In memoriam — passed 30 September 2024.
   - name: Henry Richardson
     role: Senior Analyst
     org: WattTime
+    photo: /assets/standards/sci/henry.jpeg
     contribution: >
       Co-chaired the Standards Working Group, bringing grid-oriented expertise that
       shaped the carbon awareness dimension of the SCI.
   - name: Navveen Balani
     role: Managing Director and Chief Technologist
     org: Accenture
+    photo: /assets/standards/sci/navveen.jpeg
     contribution: >
       Co-chaired the Standards Working Group and Impact Framework, and led the first
       enterprise SCI implementation case study — measuring 0.025 gCO₂ per API call
@@ -146,12 +151,14 @@ contributors:
   - name: Sanjay Podder
     role: Global Managing Director
     org: Accenture
+    photo: /assets/articles/authors/sanjay-podder.jpeg
     contribution: >
       Co-founder and steering member of GSF, and Chairperson at the time of ISO
       achievement. Championed the SCI as the foundation for industry-wide adoption.
   - name: Pindy Bhullar
     role: ESG Technology and Sustainable Technology Lead
     org: UBS
+    photo: /assets/standards/soft/pindy.jpeg
     contribution: >
       Led step-by-step SCI application to two UBS banking applications, producing one
       of the first published financial services SCI case studies.
@@ -160,7 +167,7 @@ quotes:
   - text: >
       What can be measured can be managed.
     author: Abhishek Gupta
-    role: Montreal AI Ethics Institute / Microsoft
+    role: Montreal AI Ethics Institute / BCG
   - text: >
       SCI specification provided a practical methodology to baseline carbon emissions
       of the application, including embodied emissions and reducing the same.
