@@ -23,7 +23,9 @@ pnpm-debug.log*
 # PageFind search index (generated at build time, copied to public/ for dev)
 public/pagefind/
 # Generated data (fetched from Notion)
-public/assets/logos/
+public/assets/logos/*
+!public/assets/logos/accenture.svg
+!public/assets/logos/microsoft.svg
 public/assets/team/
 src/data/*
 !src/data/releases.json
