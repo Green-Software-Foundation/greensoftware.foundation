@@ -11,7 +11,7 @@ journeyHeading: From panel discussion to the world's first AI carbon standard
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.svg
+    logo: /assets/logos/accenture.jpg
   - name: Amadeus
     logo: /assets/logos/amadeus.jpg
   - name: Avanade
@@ -29,13 +29,13 @@ orgs:
   - name: IBM
     logo: /assets/logos/ibm.gif
   - name: IMDA Singapore
-    logo: /assets/logos/imda.png
+    logo: /assets/logos/infocomm-media-development-authority.png
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
+    logo: /assets/logos/microsoft.webp
   - name: NTT DATA
     logo: /assets/logos/ntt-data.png
   - name: Schneider Electric
-    logo: /assets/logos/schneider-electric.png
+    logo: /assets/logos/schneider-electric.jpg
   - name: Scope3
     logo: /assets/logos/scope3.jpg
   - name: Siemens
