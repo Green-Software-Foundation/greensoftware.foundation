@@ -1,9 +1,9 @@
 ---
-title: "We can't measure AI carbon"
+title: "We can't measure AI's carbon footprint"
 summary: >
-  How Accenture, Microsoft, Google, WattTime, and 20+ partner organisations built
-  the SCI for AI — the first consensus-based standard for measuring the carbon
-  footprint of AI systems across their entire lifecycle.
+  How 20+ partner organisations came together to build the SCI for AI — the first
+  consensus-based standard for measuring the carbon footprint of AI systems across
+  their entire lifecycle.
 
 mainImage: /assets/stories/sci-for-ai.png
 problemHeading: AI workloads were exploding — but nobody could measure their carbon footprint
@@ -69,6 +69,9 @@ timeline:
       possible to decarbonise a very short workload by up to 80%. But this only gets us
       so far." The panel crystallised that the industry needed measurement before it could
       optimise.
+    source:
+      text: Read "Can AI Truly Be Green?"
+      href: /articles/can-ai-truly-be-green/
 
   - date: "2024"
     heading: Green AI Committee formed
@@ -80,6 +83,9 @@ timeline:
       reducing the environmental impact of AI systems throughout their lifecycle. It
       emphasises the standardisation of measurement and metrics to ensure transparency,
       strengthen confidence in AI technologies, and drive continual improvement."
+    source:
+      text: Meet the Green AI Committee
+      href: https://directory.greensoftware.foundation/committees/green-ai-committee/
 
   - date: Late 2024
     heading: Green AI Position Paper ratified
@@ -89,6 +95,9 @@ timeline:
       End-of-Life) and established that measurement must cover all of them. The paper
       was ratified by the GSF Steering Committee in September 2024. It identified two
       priority projects: an SCI for AI standard and a Green AI for Practitioners course.
+    source:
+      text: Read the Green AI Position Paper
+      href: /articles/green-ai-position-paper/
 
   - date: October 2024
     heading: EU AI Act response
@@ -99,9 +108,12 @@ timeline:
       "environmental impacts are often known trade-offs, not risks." The committee's
       response demonstrated the GSF's emerging role as a bridge between industry practice
       and policy.
+    source:
+      text: Read the EU AI Act insights
+      href: /articles/the-eu-ai-act-insights-from-the-green-ai-committee/
 
   - date: Early 2025
-    heading: SCI for AI workshops
+    heading: SCI for AI assembly
     body: >
       AI experts from over 20 GSF member organisations participated in a series of
       workshops hosted by the Software Standards Working Group. Twenty named participants
@@ -110,15 +122,12 @@ timeline:
       measurement metrics against a rubric the group developed together. A critical
       finding: none of the existing metrics — Green AI Index, EcoLogits, EnergyScore —
       were consensus-built or had a pathway to certification.
-
-  - date: May 2025
-    heading: Green AI Position Paper published
-    body: >
-      The formal publication made the committee's work available to the broader community,
-      including the Green AI definition, lifecycle stages, and priority actions.
+    source:
+      text: About the SCI for AI assembly
+      href: /assemblies/sci-for-ai/
 
   - date: July 2025
-    heading: SCI for AI Workshop Report published
+    heading: SCI for AI assembly report published
     body: >
       The detailed outcomes from the workshops were shared publicly, including the
       evaluation rubric, the analysis of existing metrics, the agreed scope covering
@@ -126,6 +135,9 @@ timeline:
       measurement must incentivise behaviours — not just track numbers. The report
       established that SCI for AI would be consensus-built, ISO-compatible, and
       royalty-free.
+    source:
+      text: Read the SCI for AI Workshop Report
+      href: /articles/sci-for-ai-workshop-report/
 
   - date: December 2025
     heading: SCI for AI specification ratified
@@ -136,6 +148,9 @@ timeline:
       boundaries: a Provider score and a Consumer score. Built on ISO/IEC 21031:2024,
       it covered classical machine learning, computer vision, NLP, generative AI, and
       agentic systems.
+    source:
+      text: Learn about the SCI for AI standard
+      href: /standards/sci-ai/
 
 featuredQuote:
   text: To understand AI's carbon footprint, we first need a consistent way to measure it.
@@ -239,5 +254,4 @@ The problem was not that organisations were unaware. Many GSF member organisatio
 
 The fragmentation was paralysing. Multiple metrics existed — the Green AI Index, EcoLogits, EnergyScore — but none were consensus-built, none had a pathway to policy or certification, and none incentivised the full range of engineering optimisations that could actually reduce emissions. The question was whether the industry could agree on a consistent, trustworthy way to measure that footprint so they could systematically reduce it.
 
-> "While efforts can make AI more environmentally responsible, they will still leave a footprint behind."
-> — Chris McClean, Global Lead for Digital Ethics, Avanade
+> "While efforts can make AI more environmentally responsible, they will still leave a footprint behind." — Chris McClean, Global Lead for Digital Ethics, Avanade
