@@ -51,7 +51,7 @@ timeline:
       of traditional consensus-building, the pipeline would be unmanageable.
     source:
       text: Read about the SCI achieving ISO standard status
-      href: /articles/en/sci-specification-achieves-iso-standard-status/
+      href: /articles/sci-specification-achieves-iso-standard-status/
 
   - date: September 2025
     heading: W3C and GSF announce formal collaboration
@@ -64,7 +64,7 @@ timeline:
       services, and end-user devices.
     source:
       text: Read about the GSF and W3C collaboration
-      href: /articles/en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
+      href: /articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
 
   - date: September–November 2025
     heading: The AI-assisted assembly
@@ -78,6 +78,9 @@ timeline:
       structured questions about measurement accuracy and adoption complexity. An LLM synthesised
       their responses into draft content. The group reviewed and refined through multiple rounds.
       In contentious areas, participants revised until all objections were resolved.
+    source:
+      text: About the SCI for Web assembly
+      href: /assemblies/sci-for-web/
 
   - date: Late 2025
     heading: Consensus reached in ten weeks
@@ -90,7 +93,7 @@ timeline:
       HTTP/HTTPS — with third-party services explicitly required within the measurement boundary.
     source:
       text: Read what the SCI for Web assembly agreed
-      href: /articles/en/designing-sci-web-what-we-agreed-and-what-comes-next/
+      href: /articles/designing-sci-web-what-we-agreed-and-what-comes-next/
 
   - date: Q1 2026
     heading: Specification development begins
@@ -99,6 +102,9 @@ timeline:
       entered active specification development. The process is now proven and replicable —
       the AI-assisted assembly model can be applied to future GSF standards work, compressing
       consensus timelines across all new specifications.
+    source:
+      text: Learn about the SCI for Web standard
+      href: /standards/sci-web/
 
 featuredQuote:
   text: >

@@ -51,6 +51,9 @@ timeline:
       that required specific guidance on boundaries and functional units. Tools like CO2.js
       and the Sustainable Web Design Model had made web emissions visible, but results weren't
       comparable and organisations couldn't validate reduction claims.
+    source:
+      text: Beyond single-dimensional metrics for digital sustainability
+      href: /articles/beyond-single-dimensional-metrics-for-digital-sustainability/
 
   - date: September 2025
     heading: W3C and GSF announce formal collaboration
@@ -63,7 +66,7 @@ timeline:
       web daily, and like everything else, we need to make using it more sustainable."
     source:
       text: Read about the GSF and W3C collaboration
-      href: /articles/en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
+      href: /articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
 
   - date: September 2025
     heading: University of Edinburgh joins GSF
@@ -77,7 +80,7 @@ timeline:
       contribute their ground-level implementation experience to SCI for Web.
     source:
       text: Meet Emma Horrell of the University of Edinburgh
-      href: /articles/en/pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un/
+      href: /articles/pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un/
 
   - date: September–November 2025
     heading: AI-assisted consensus assembly
@@ -90,19 +93,32 @@ timeline:
       document — resolving the core tension: "A specification that is technically accurate
       but unused won't serve its purpose, and a widely used metric that lacks credibility
       also won't serve the purpose."
+    source:
+      text: About the SCI for Web assembly
+      href: /assemblies/sci-for-web/
 
   - date: February 2026
-    heading: Design document published — specification development begins
+    heading: Design document published
     body: >
       The full consensus document was published. Scope: web applications delivering value
       through browser interfaces via HTTP/HTTPS, covering static sites, SPAs, server-rendered
       apps, e-commerce, and streaming services. Third-party services — analytics, advertising,
       CDNs, authentication — must be included within the measurement boundary because they
-      consume energy on both servers and client devices. Q1 2026 sees the specification
-      entering active development, led by Chris Adams.
+      consume energy on both servers and client devices.
     source:
-      text: Read what the SCI for Web assembly agreed
-      href: /articles/en/designing-sci-web-what-we-agreed-and-what-comes-next/
+      text: Read the SCI for Web assembly report
+      href: /articles/sci-web-assembly-report/
+
+  - date: Q1 2026
+    heading: SCI for Web specification accepted and launched
+    body: >
+      The SCI for Web specification entered active development under the Software Standards
+      Working Group, led by Chris Adams. Built on the consensus design document, the
+      specification will define how to measure the carbon intensity of web applications
+      across the full delivery chain.
+    source:
+      text: Learn about the SCI for Web standard
+      href: /standards/sci-web/
 
 featuredQuote:
   text: >
