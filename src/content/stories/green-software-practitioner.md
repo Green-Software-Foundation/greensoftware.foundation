@@ -60,7 +60,7 @@ timeline:
       Principles of Green Software Engineering to reflect what the field had learnt since 2019.
     source:
       text: Meet Sarah Hsu of Goldman Sachs
-      href: /articles/en/meet-gsf-org-leads-sarah-hsu-of-goldman-sachs/
+      href: /articles/meet-gsf-org-leads-sarah-hsu-of-goldman-sachs/
 
   - date: 2022–2023
     heading: Avanade's grassroots movement
@@ -74,7 +74,7 @@ timeline:
       actively contributing to GSF working groups.
     source:
       text: Read Avanade's grassroots story
-      href: /articles/en/scaling-green-software-culture-a-grassroots-approach-blossoms-for-avanade/
+      href: /articles/scaling-green-software-culture-a-grassroots-approach-blossoms-for-avanade/
 
   - date: November 2023
     heading: 50,000+ trained in under a year
@@ -88,7 +88,7 @@ timeline:
       have completed the GSP training" — pointing to a growing revenue stream for certified teams.
     source:
       text: Read about Decarbonize Software 2023
-      href: /articles/en/decarbonize-software-2023-redefining-the-future-of-software/
+      href: /articles/decarbonize-software-2023-redefining-the-future-of-software/
 
   - date: 2023–2024
     heading: Green software enters the university curriculum
@@ -100,7 +100,7 @@ timeline:
       energy and carbon-efficient software from day one.
     source:
       text: Meet Dr. Michael Bane and Dr. Ernest Edifor
-      href: /articles/en/embedding-green-software-in-the-current-curriculum-meet-dr-michael-bane-and-dr-er/
+      href: /articles/embedding-green-software-in-the-current-curriculum-meet-dr-michael-bane-and-dr-er/
 
 featuredQuote:
   text: We stumbled upon sustainability while seeking efficiency. Now, sustainability as a measurement is here to stay.

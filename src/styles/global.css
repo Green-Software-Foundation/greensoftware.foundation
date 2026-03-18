@@ -44,12 +44,12 @@
 
   --animate-ping: ping 1.5s cubic-bezier(0, 0, 0.8, 1) infinite;
   @keyframes ping {
-    75%, 100% {
+    75%,
+    100% {
       transform: scale(1);
       opacity: 0;
     }
   }
-
 
   @keyframes marquee {
     from {
@@ -62,15 +62,30 @@
 
   --animate-marquee: marquee var(--marquee-duration, 60s) linear infinite;
   --animate-tabs: tabs 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  @keyframes tabs { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes tabs {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   @keyframes accordion-down {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
   @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
   --animate-accordion-down: accordion-down 200ms ease-out;
   --animate-accordion-up: accordion-up 200ms ease-out;
@@ -177,6 +192,12 @@
   padding-left: 2rem;
 }
 
+/* Disable Tailwind prose auto-quotes — quotes are included in the text itself */
+.prose blockquote p::before,
+.prose blockquote p::after {
+  content: none;
+}
+
 /* External links — small arrow icon after links that go offsite */
 .prose a[href^="http"]::after {
   content: "\2197";
@@ -193,8 +214,12 @@
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
 }
-.prose .callout > :first-child { margin-top: 0; }
-.prose .callout > :last-child { margin-bottom: 0; }
+.prose .callout > :first-child {
+  margin-top: 0;
+}
+.prose .callout > :last-child {
+  margin-bottom: 0;
+}
 
 .prose .callout-note {
   background-color: var(--primary-lightest-1);

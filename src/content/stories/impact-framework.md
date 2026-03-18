@@ -50,7 +50,7 @@ timeline:
       wanted tools to act on sustainability, not just measure it.
     source:
       text: Read about CarbonHack22
-      href: /articles/en/carbonhack22/
+      href: /articles/carbonhack22/
 
   - date: "2023"
     heading: Impact Framework development
@@ -76,7 +76,7 @@ timeline:
       scalable.
     source:
       text: Read the Carbon Hack 24 announcement
-      href: /articles/en/carbon-hack-24-where-measurement-meets-innovation-and-impact-knows-no-bounds/
+      href: /articles/carbon-hack-24-where-measurement-meets-innovation-and-impact-knows-no-bounds/
 
   - date: March–April 2024
     heading: Carbon Hack 24 scales the ecosystem
@@ -89,7 +89,7 @@ timeline:
       (Opencast Software Europe) — proving the framework's versatility across domains.
     source:
       text: Read the Carbon Hack 24 wrap-up
-      href: /articles/en/carbon-hack-24-expanding-the-ecosystem-of-software-measurement/
+      href: /articles/carbon-hack-24-expanding-the-ecosystem-of-software-measurement/
 
   - date: September 2024
     heading: LLM-powered measurement
@@ -102,7 +102,7 @@ timeline:
       that lock in 67–93% of an application's emissions are made.
     source:
       text: Read the LLM emissions methodology
-      href: /articles/en/emission-calculations-through-large-language-model/
+      href: /articles/emission-calculations-through-large-language-model/
 
   - date: "2026"
     heading: Amadeus donates Carmen, built on IF
@@ -114,7 +114,7 @@ timeline:
       IF as the backbone of their measurement infrastructure.
     source:
       text: Read the Carmen announcement
-      href: /articles/en/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/
+      href: /articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/
 
 featuredQuote:
   text: Everyone is craving measurement. The one question we get all the time is, 'How do we measure?'

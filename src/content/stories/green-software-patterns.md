@@ -66,7 +66,7 @@ timeline:
       reduction — proving patterns weren't theoretical advice but quantifiable interventions.
     source:
       text: Read the serverless carbon measurement methodology
-      href: /articles/en/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o/
+      href: /articles/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o/
 
   - date: Early 2024
     heading: Design Thinking workshop with 11 companies
@@ -81,7 +81,7 @@ timeline:
       its own carbon accountability.
     source:
       text: Read about the patterns catalogue next chapter
-      href: /articles/en/green-software-patterns-catalog-the-next-chapter/
+      href: /articles/green-software-patterns-catalog-the-next-chapter/
 
   - date: Ongoing
     heading: Green Software Patterns v2 in development
@@ -91,6 +91,9 @@ timeline:
       by the workshop: Green Software Patterns integrated into all major tool environments,
       with automated default application and real-time impact measurement — and AI-driven
       analysis, forecasting, and optimisation throughout the software lifecycle.
+    source:
+      text: Green Software Patterns on GitHub
+      href: https://github.com/Green-Software-Foundation/patterns
 
 featuredQuote:
   text: The developer experience needs to be green by default.

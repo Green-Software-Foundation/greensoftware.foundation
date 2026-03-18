@@ -50,7 +50,7 @@ timeline:
       excluded offsets — the only way to improve your score was to genuinely reduce emissions.
     source:
       text: Read the original SCI crafting article
-      href: /articles/en/software-carbon-intensity-crafting-a-standard/
+      href: /articles/software-carbon-intensity-crafting-a-standard/
 
   - date: December 2021
     heading: Alpha release for public comment
@@ -62,7 +62,7 @@ timeline:
       the biggest barrier was "a dearth of case studies."
     source:
       text: Read the SCI specification project article
-      href: /articles/en/software-carbon-intensity-sci-specification-project/
+      href: /articles/software-carbon-intensity-sci-specification-project/
 
   - date: "2022"
     heading: First case studies validate the approach
@@ -72,6 +72,9 @@ timeline:
       carbon impact at the inference stage. Their research found that carbon-intensive
       models don't necessarily yield better quality: GPT-Neo 1.3B consumed only 27% of
       the energy of GPT-J 6B while producing comparable answers.
+    source:
+      text: Texas State University deems the SCI an effective metric
+      href: /articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/
 
   - date: "2023"
     heading: Enterprise implementations at scale
@@ -85,7 +88,7 @@ timeline:
       SCI scores across the bank's entire IT infrastructure.
     source:
       text: Read the Accenture SCI implementation case study
-      href: /articles/en/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/
+      href: /articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/
 
   - date: April 2024
     heading: ISO standard status
@@ -98,7 +101,7 @@ timeline:
       across 60 applications.
     source:
       text: Read about the SCI achieving ISO standard status
-      href: /articles/en/sci-specification-achieves-iso-standard-status/
+      href: /articles/sci-specification-achieves-iso-standard-status/
 
   - date: Ongoing
     heading: Abhishek Gupta's legacy
@@ -112,7 +115,7 @@ timeline:
       of the SCI with him continues to be one of the proudest moments in my career."
     source:
       text: Read the tribute to Abhishek Gupta
-      href: /articles/en/honoring-abhishek-gupta/
+      href: /articles/honoring-abhishek-gupta/
 
 featuredQuote:
   text: >

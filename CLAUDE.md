@@ -6,6 +6,8 @@
 
 **IMPORTANT: Always restart the dev server yourself after making changes — never ask the user to do it. Kill the existing process on port 4322, then run `npm run dev -- --port 4322` in the background.**
 
+**IMPORTANT: Article links must use `/articles/<slug>/`, NOT `/articles/en/<slug>/`. English is the default language — including `/en/` would break when the site is translated. The `en/` prefix exists in the content directory structure but should never appear in URLs.**
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
@@ -40,6 +42,7 @@ The UI stack has four layers, each with a distinct role:
 4. **CVA (Class Variance Authority)** — A small utility for defining component variants. Instead of writing conditionals for different button styles, you declare a variants map (e.g. `primary`, `outline`, `secondary`) and CVA generates the right Tailwind classes.
 
 **How they connect in practice:**
+
 ```
 Astro (framework — builds pages, handles routing)
   └── React islands (interactive components that need JS)
@@ -54,6 +57,7 @@ Astro (framework — builds pages, handles routing)
 Tokens are defined in `src/styles/global.css`.
 
 **Primary palette (teal):**
+
 | Token | Hex | Tailwind class | Usage |
 |-------|-----|----------------|-------|
 | `--primary-darkest-2` | `#002625` | `bg-primary-darkest-2` | — |
@@ -67,6 +71,7 @@ Tokens are defined in `src/styles/global.css`.
 | `--primary-lightest-1` | `#f2f8f7` | `bg-primary-lightest-1` | — |
 
 **Accent palette (green/lime):**
+
 | Token | Hex | Tailwind class | Usage |
 |-------|-----|----------------|-------|
 | `--accent-darker` | `#576629` | `bg-accent-darker` | — |
@@ -78,6 +83,7 @@ Tokens are defined in `src/styles/global.css`.
 | `--accent-lightest-1` | `#fbfcf6` | `bg-accent-lightest-1` | — |
 
 **Grey palette:**
+
 | Token | Hex | Usage |
 |-------|-----|-------|
 | `--gray-darker` | `#606060` | Secondary text |
@@ -87,6 +93,7 @@ Tokens are defined in `src/styles/global.css`.
 | `--border` | `#e5e5e5` | Card/section borders |
 
 **Key brand rules:**
+
 - Default section bg is `bg-accent-lightest-2` (cream `#f7faee`) — most components default to this
 - Logo marquee uses `bg-white` for contrast
 - Heading accent text uses `text-primary` (teal `#006d69`)
@@ -160,6 +167,7 @@ The fetch script exits gracefully if `NOTION_API_KEY` is missing, creating empty
 ### Press Page (`/press/`)
 
 The press page at `src/pages/press/index.astro` pulls data dynamically from multiple sources:
+
 - **Member counts** — computed from `steering-members.json`, `general-members.json`, `academic-government-members.json` (filtered by `active: true`)
 - **Governed-by list** — active steering member company names
 - **Leadership** — hardcoded config at top of file (chair, vice-chair, executive director names) matched against `team.json` for photos
@@ -170,6 +178,7 @@ The press page at `src/pages/press/index.astro` pulls data dynamically from mult
 ### Policy & Research Page (`/policy/`)
 
 The policy page at `src/pages/policy/index.astro` covers the Policy Working Group and research programme:
+
 - **Leadership** — Chris Adams, Aya Saed (co-chairs), Joseph Cook (Head of Research) — photos from `team.json`
 - **Policy Radar** — TextWithImage linking to `policy-radar.greensoftware.foundation`
 - **Policy Engagement** (`#engagement` anchor) — 6 hardcoded cards with article links (GHG Protocol, AI Environmental Impacts Act, NY CCAA, EGDC, UK GDSA, EU AI Act)
@@ -181,6 +190,7 @@ The policy page at `src/pages/policy/index.astro` covers the Policy Working Grou
 ### Article Tags
 
 Articles support an optional `tags` field (string array) in frontmatter. Tags are used to surface articles on topic pages:
+
 - `"policy"` — appears in the Policy & Research carousel
 - `"research"` — appears in the Policy & Research carousel
 - `"community"` — appears in the Community page carousel
@@ -189,6 +199,7 @@ Articles support an optional `tags` field (string array) in frontmatter. Tags ar
 ### Standards Page (`/standards/`)
 
 The standards page at `src/pages/standards/index.astro` showcases GSF's standards process:
+
 - **Dynamic project cards** — imports `projects.json` and uses a `standardDefs` array with optional `urlSlug` overrides (e.g. `real-time-cloud` → `rtc` for the URL)
 - **Lifecycle badges** — each card shows its lifecycle stage; "Learn more" links are hidden for Proposal/Pre-proposal stages
 - **Sections**: Hero → VerticalPipeline (7-stage lifecycle) → Project cards grid → AI-facilitated consensus → Assemblies → Spec quality FeatureGrid → SCI Certification CTACard → CTABanner
@@ -196,6 +207,7 @@ The standards page at `src/pages/standards/index.astro` showcases GSF's standard
 ### Navigation (`src/lib/nav-items.ts`)
 
 The nav config supports these features:
+
 - **`headerLink`** — per-section CTA button rendered at the top of a mega-menu section (e.g. "About our education programme →"). Defined on `NavSection`, rendered in both desktop `MegaMenuPanel` and mobile `MobileNavSection`.
 - **`footerLink`** — panel-level CTA at the bottom of the entire dropdown (e.g. "About our standards process →"). Defined on `NavItemDropdown`.
 - **Icons** — currently all commented out across all menus. Both `iconSrc` (project image URL) and `icon` (Lucide icon name) are supported but disabled pending design review.
@@ -210,12 +222,14 @@ The site uses [PageFind](https://pagefind.app/) for static site search. PageFind
 - **Lazy-loaded:** The search dialog is imported via `React.lazy()` in `navbar.tsx` so PageFind JS is only loaded when search is opened
 
 **Indexing rules (opt-in model):**
+
 - Pages with `data-pagefind-body` are indexed; all others are excluded
 - Currently indexed: individual article pages (English only), individual story pages
 - Chrome elements (navbar, footer, CTA banner, newsletter signup) have `data-pagefind-ignore`
 - Listing/index pages are deliberately excluded (no `data-pagefind-body`)
 
 **Search behaviour:**
+
 - Multi-word queries default to phrase search (wrapped in quotes); falls back to OR if no phrase results
 - Single-word queries use standard search
 - Results show title, content type badge, and highlighted excerpt

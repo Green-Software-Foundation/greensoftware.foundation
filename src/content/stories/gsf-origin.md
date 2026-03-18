@@ -55,37 +55,81 @@ timeline:
       then our partners at GitHub. We were all talking about the same space."
     source:
       text: Read how the Green Software Foundation began
-      href: /articles/en/the-green-software-foundation-how-it-all-began/
+      href: /articles/the-green-software-foundation-how-it-all-began/
 
-  - date: "2021"
+  - date: May 2021
     heading: The Green Software Foundation is founded
     body: >
       The five founding organisations — Microsoft, Accenture, Thoughtworks, GitHub, and
-      Goldman Sachs — established GSF as a non-profit. The structure was deliberately
-      egalitarian. As Jeff Sandquist explained: "Whether you're a nonprofit with ten people
-      or an organisation the size of Microsoft with 100,000 people, we all carry an equal
-      voice." Three working groups were established: Standards (what do we measure?),
-      Community (who builds and adopts?), and Innovation/Tooling (how do we make it easy?).
+      Goldman Sachs — established GSF as a non-profit under the Linux Foundation. The
+      structure was deliberately egalitarian. As Jeff Sandquist explained: "Whether you're
+      a nonprofit with ten people or an organisation the size of Microsoft with 100,000
+      people, we all carry an equal voice." Three working groups were established: Standards
+      (what do we measure?), Community (who builds and adopts?), and Innovation/Tooling
+      (how do we make it easy?).
+    source:
+      text: Bloomberg — Microsoft Teams Up With Accenture, Goldman on Greener Software
+      href: https://www.bloomberg.com/news/articles/2021-05-25/microsoft-teams-up-with-accenture-goldman-on-greener-software
+
+  - date: September 2021
+    heading: NTT DATA joins as steering member
+    body: >
+      NTT DATA became the first organisation to join the steering committee beyond the
+      five founders, bringing global technology services expertise and a commitment to
+      sustainable IT delivery.
+    source:
+      text: Meet our steering committee — NTT DATA
+      href: /articles/meet-our-steering-committee-ntt-data/
 
   - date: 2021–2022
     heading: Rapid growth and first outputs
     body: >
-      NTT DATA joined as a steering member. The SCI specification development began. The
-      Carbon Aware SDK was conceived. The Green Software Practitioner course was built.
-      CarbonHack22 attracted 395 participants and demonstrated measurable carbon reductions.
-      By the end of 2022, GSF had grown to 38 member organisations.
+      The SCI specification development began. The Carbon Aware SDK was conceived. The
+      Green Software Practitioner course was built. CarbonHack22 attracted 395 participants
+      and demonstrated measurable carbon reductions. By the end of 2022, GSF had grown to
+      38 member organisations.
+    source:
+      text: Green Software Foundation Q1 2022 Report
+      href: /articles/green-software-foundation-q1-2022-report/
 
-  - date: 2022–2024
-    heading: Steering membership expands
+  - date: April 2022
+    heading: UBS joins as steering member
     body: >
-      UBS joined as a steering member, bringing the enterprise financial services perspective
-      and eventually co-leading the Real Time Cloud standard. Google joined in June 2023,
-      adding platform-scale expertise. Siemens joined in September 2023, bringing industrial
-      technology. In April 2024, the SCI specification achieved ISO 21031:2024 status — the
-      first ISO standard for measuring software carbon intensity.
+      UBS joined as a steering member, bringing the enterprise financial services
+      perspective. UBS would go on to co-lead the Real Time Cloud standard through Pindy
+      Bhullar and deploy the Carbon Aware SDK on production banking systems.
+    source:
+      text: UBS joins the Green Software Foundation as a steering member
+      href: /articles/ubs-joins-green-software-foundation-as-a-steering-member/
+
+  - date: June 2023
+    heading: Google joins as steering member
+    body: >
+      Google joined the steering committee, adding platform-scale cloud expertise and a
+      deep commitment to carbon-free energy. Google's participation strengthened the
+      foundation's work on AI sustainability and cloud carbon measurement.
+    source:
+      text: Meet Savannah Goodman of Google
+      href: /articles/meet-savannah-goodman-of-google/
+
+  - date: October 2023
+    heading: Siemens joins as steering member
+    body: >
+      Siemens joined the steering committee, bringing industrial technology expertise and
+      connecting green software to the operational technology and manufacturing sectors.
+    source:
+      text: Siemens joins the GSF steering committee
+      href: /articles/siemens-joins-green-software-foundation-s-steering-committee-to-drive-sustainable/
+
+  - date: April 2024
+    heading: SCI achieves ISO standard status
+    body: >
+      The SCI specification achieved ISO 21031:2024 status — the first ISO standard for
+      measuring software carbon intensity. This milestone validated the foundation's
+      consensus-based standards process on the international stage.
     source:
       text: Read about the SCI achieving ISO standard status
-      href: /articles/en/sci-specification-achieves-iso-standard-status/
+      href: /articles/sci-specification-achieves-iso-standard-status/
 
   - date: January 2025
     heading: Leadership transition — Gadhu Sundaram elected Chair
@@ -97,10 +141,20 @@ timeline:
       Biosphere Reserve. My community has lived in harmony with nature for thousands of years,
       embodying a sustainable way of life. Some of my fondest childhood memories are of
       exploring the woods and encountering incredible wildlife — I saw my first leopard at the
-      age of six." Cisco joined as a steering member in February 2025.
+      age of six."
     source:
       text: Read about Gadhu Sundaram's election as GSF Chair
-      href: /articles/en/new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson/
+      href: /articles/new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson/
+
+  - date: March 2025
+    heading: SSIA merges with GSF, Cisco joins as steering member
+    body: >
+      The Sustainable and Scalable Infrastructure Alliance (SSIA) merged with the Green
+      Software Foundation, bringing Cisco as a new steering member along with additional
+      expertise in infrastructure sustainability.
+    source:
+      text: SSIA joins the Green Software Foundation
+      href: /articles/ssia-joins-the-green-software-foundation/
 
   - date: Ongoing
     heading: From about 100 people to a global movement
@@ -111,6 +165,9 @@ timeline:
       sustainability training. Avanade had certified ~1,000 practitioners in a 60,000-person
       organisation. GSF now had 17 active projects, 10,000+ community members across 36
       meetup groups in 19 countries, and formal collaborations with W3C and the GHG Protocol.
+    source:
+      text: Introducing the GSF 2025 Annual Report
+      href: /articles/introducing-the-gsf-2025-annual-report/
 
 featuredQuote:
   text: >
