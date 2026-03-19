@@ -23,6 +23,8 @@ interface Props {
   bgClass?: string;
   /** Contributing organisations shown as scrolling logos */
   orgs?: Org[];
+  /** Flip layout so image appears on the left */
+  reversed?: boolean;
 }
 
 const {
@@ -36,6 +38,7 @@ const {
   compact = false,
   bgClass = "bg-accent-lightest-2",
   orgs = [],
+  reversed = false,
 } = Astro.props;
 ---
 
@@ -51,6 +54,7 @@ const {
       ctaText={ctaText}
       ctaHref={ctaHref}
       orgs={orgs}
+      reversed={reversed}
     />
   </div>
 </section>

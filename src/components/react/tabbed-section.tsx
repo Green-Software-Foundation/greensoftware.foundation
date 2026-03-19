@@ -37,6 +37,8 @@ type Props = {
   ctaHref?: string;
   /** Contributing organisations shown as a scrolling logo strip */
   orgs?: Org[];
+  /** Flip layout so image appears on the left and tabs on the right */
+  reversed?: boolean;
 };
 
 export const TabbedSection = (props: Props) => {
@@ -49,6 +51,7 @@ export const TabbedSection = (props: Props) => {
     ctaText,
     ctaHref = "#",
     orgs = [],
+    reversed = false,
   } = props;
   const defaultTab = tabs[0]?.value ?? "";
   const [activeTab, setActiveTab] = useState(defaultTab);
@@ -62,14 +65,16 @@ export const TabbedSection = (props: Props) => {
       onValueChange={setActiveTab}
       className="grid grid-cols-1 items-center gap-y-12 rounded-2xl bg-primary-dark p-8 md:gap-x-12 md:px-16 md:py-12 lg:grid-cols-2 lg:gap-x-20 lg:px-20 lg:py-16"
     >
-      <TabsList className="grid grid-cols-1 items-start">
+      <TabsList
+        className={cn("grid grid-cols-1 items-start", reversed && "lg:order-2")}
+      >
         {badge && (
-          <span className="mb-3 inline-block text-base font-extrabold tracking-widest text-accent uppercase md:text-lg">
+          <span className="mb-3 inline-block text-xs font-bold tracking-widest text-accent uppercase">
             {badge}
           </span>
         )}
         {heading && (
-          <h2 className="mb-5 text-xl font-semibold text-primary-lightest-1 md:mb-6 md:text-2xl lg:text-3xl">
+          <h2 className="mb-5 text-2xl font-semibold text-primary-lightest-1 md:mb-6 md:text-3xl lg:text-4xl">
             {heading}
           </h2>
         )}
@@ -115,14 +120,19 @@ export const TabbedSection = (props: Props) => {
         {ctaText && (
           <a
             href={ctaHref}
-            className="mt-4 inline-flex items-center justify-self-end text-sm font-bold text-accent hover:text-accent/80 transition-colors"
+            className="mt-4 inline-flex items-center text-sm font-bold text-accent hover:text-accent/80 transition-colors"
           >
             {ctaText}
           </a>
         )}
       </TabsList>
 
-      <div className="flex flex-col items-center justify-center gap-8">
+      <div
+        className={cn(
+          "flex flex-col items-center justify-center gap-8",
+          reversed && "lg:order-1",
+        )}
+      >
         <div className="flex items-center justify-center overflow-hidden">
           {hasPerTabImages
             ? tabs.map((tab) => (
@@ -169,7 +179,7 @@ export const TabbedSection = (props: Props) => {
               {[0, 1].map((copy) => (
                 <div
                   key={copy}
-                  className="flex shrink-0 animate-marquee items-center gap-8"
+                  className="flex shrink-0 animate-marquee items-center gap-8 pr-20"
                 >
                   {orgs.map((org) => (
                     <img
