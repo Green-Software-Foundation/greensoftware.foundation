@@ -1,6 +1,6 @@
 ---
 import { TabbedSection as TabbedSectionReact } from "@/components/react/tabbed-section";
-import type { Tab } from "@/components/react/tabbed-section";
+import type { Tab, Org } from "@/components/react/tabbed-section";
 
 interface Props {
   /** Small label above the heading (e.g. "EDUCATION") */
@@ -21,6 +21,8 @@ interface Props {
   compact?: boolean;
   /** Background class */
   bgClass?: string;
+  /** Contributing organisations shown as scrolling logos */
+  orgs?: Org[];
 }
 
 const {
@@ -33,6 +35,7 @@ const {
   ctaHref = "#",
   compact = false,
   bgClass = "bg-accent-lightest-2",
+  orgs = [],
 } = Astro.props;
 ---
 
@@ -47,6 +50,7 @@ const {
       imageAlt={imageAlt}
       ctaText={ctaText}
       ctaHref={ctaHref}
+      orgs={orgs}
     />
   </div>
 </section>

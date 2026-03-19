@@ -38,7 +38,7 @@ const logos: Logo[] = propLogos || (await import("../data/members.json")).defaul
     return a.companyName.localeCompare(b.companyName);
   })
   .map((m: any) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite }));
-const marqueeDuration = Math.max(logos.length * 3, 30);
+const marqueeDuration = Math.max(logos.length * 3.75, 38);
 
 // Determine the gradient "from" color based on background
 const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-accent-lightest-2" : "from-white");
