@@ -7,6 +7,8 @@ interface Feature {
   description: string;
   linkText?: string;
   linkHref?: string;
+  /** Highlight this card with inverted (dark) styling */
+  featured?: boolean;
 }
 
 interface Props {
@@ -131,10 +133,10 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
 
     {variant === "cards" && (
       <>
-        <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">
+        <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
           {headingParts.map(part =>
             part.accent
-              ? <span class="text-primary">{part.text}</span>
+              ? <span class="font-bold text-primary">{part.text}</span>
               : part.text
           )}
         </h2>
@@ -143,12 +145,15 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
         )}
         <div class={`mt-12 grid gap-6 ${cardColumnClasses[columns]}`}>
           {features.map((feature) => (
-            <div class="rounded-lg border bg-white p-5 shadow-sm">
+            <div class:list={[
+              "rounded-lg border p-5 shadow-sm",
+              feature.featured ? "bg-primary-darker border-primary-darker" : "bg-white",
+            ]}>
               {feature.icon && <Image src={feature.icon} alt="" class="mb-4 h-10 w-10" sizes="40px" />}
-              <h3 class="text-lg font-bold text-primary">{feature.title}</h3>
-              <p class="mt-2 text-sm text-gray-darker">{feature.description}</p>
+              <h3 class:list={["text-lg font-bold", feature.featured ? "text-white" : "text-primary"]}>{feature.title}</h3>
+              <p class:list={["mt-2 text-sm", feature.featured ? "text-white/70" : "text-gray-darker"]}>{feature.description}</p>
               {feature.linkText && (
-                <a href={feature.linkHref || "#"} class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline">
+                <a href={feature.linkHref || "#"} class:list={["mt-3 inline-flex items-center text-sm font-bold hover:underline", feature.featured ? "text-accent" : "text-primary"]}>
                   {feature.linkText}
                 </a>
               )}
