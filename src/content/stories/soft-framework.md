@@ -158,7 +158,8 @@ cta:
     SOFT was built by organisations who came together through the Green Software
     Foundation. If your teams have the tools but lack the architecture to scale green
     software, join us to pilot SOFT and contribute to v2.0.
-  note: Ready to assess your organisation? Explore the SOFT Framework on GitHub.
+  ctaText: "Learn about the SOFT Framework"
+  ctaHref: "/standards/soft/"
 ---
 
 By 2023, the Green Software Foundation had built an impressive toolkit: the SCI specification for measuring software carbon intensity, the Carbon Aware SDK for shifting workloads to cleaner energy, Impact Framework for standardised measurement, and Green Software Patterns for code-level guidance. Organisations had the instruments. What they lacked was a way to use them systematically across an entire operation.

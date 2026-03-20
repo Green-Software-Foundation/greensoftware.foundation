@@ -158,7 +158,8 @@ cta:
     The Green Software Practitioner course is free, open, and takes approximately a day
     to complete. Join the thousands of engineers already speaking the same language of
     green software.
-  note: Take the course at movement.greensoftware.foundation — or talk to us about embedding it across your organisation.
+  ctaText: "Take the course"
+  ctaHref: "https://movement.greensoftware.foundation"
 ---
 
 Organisations had sustainability mandates from the board, net-zero commitments in their annual reports, and growing regulatory pressure from directives like CSRD. But when engineering teams sat down at their keyboards, they had no specialised training in how software choices affect carbon emissions. Engineers couldn't distinguish genuine emissions reduction from well-intentioned guesswork.

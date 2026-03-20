@@ -196,9 +196,8 @@ cta:
     Start with one application, baseline it using the step-by-step guide,
     then set a reduction target. The Impact Framework automates SCI calculation
     across your infrastructure.
-  note: >
-    Browse the specification at sci.greensoftware.foundation and the guide
-    at sci-guide.greensoftware.foundation
+  ctaText: "Learn about the SCI Specification"
+  ctaHref: "/standards/sci/"
 ---
 
 Organisations had been reporting carbon totals annually for years, but those numbers lived in sustainability reports that engineering teams never saw. A CTO could quote the company's total Scope 2 emissions, but couldn't tell an individual developer whether the software they'd just shipped was better or worse for the climate than the version before.

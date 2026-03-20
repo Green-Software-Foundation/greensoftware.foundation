@@ -175,9 +175,8 @@ cta:
     GSF uses AI-facilitated assemblies to build consensus on new standards and
     specifications. If you have domain expertise and want to help shape the next
     generation of green software standards, assemblies are open to participation.
-  ctaText: Explore assemblies
-  ctaHref: /assemblies/
-  note: Learn more about upcoming assemblies and how to get involved
+  ctaText: "Explore assemblies"
+  ctaHref: "/assemblies/"
 ---
 
 Traditional standards development takes years. The SCI specification — widely celebrated as moving at unprecedented speed — still took over three years from inception to ISO certification. By the time specifications reach final form, regulations have evolved, technology has shifted, and the window for influence has narrowed. The bottleneck is not technical complexity. It is the challenge of coordinating dozens of stakeholders with competing priorities, different terminologies, and divergent views on scope, accuracy, and implementation.

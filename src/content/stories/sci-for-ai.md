@@ -232,7 +232,8 @@ cta:
     The SCI for AI was built by organisations who came together through the Green
     Software Foundation. Join us to shape the practical guidance, case studies, and
     training resources that follow.
-  note: Already exploring SCI for AI? Review the methodology at sci-for-ai.greensoftware.foundation
+  ctaText: "Read the SCI for AI Specification"
+  ctaHref: "/standards/sci-ai/"
 ---
 
 AI workloads were exploding across the software industry, but nobody had a standardised way to measure their carbon footprint. Training GPT-3 alone produced approximately 500 tonnes of CO₂ emissions — equivalent to a petrol car driving roughly 2 million kilometres — and close to 1,300 megawatt hours of electricity. And that was just one model from 2020.

@@ -170,7 +170,8 @@ cta:
     organisation runs workloads across multiple cloud providers and struggles with
     inconsistent carbon reporting, the Cloud Region Metadata Table gives you comparable,
     standardised data now.
-  note: The working group is actively seeking contributions to produce best-estimate region metadata for the current year
+  ctaText: "View the RTC Dataset"
+  ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud"
 ---
 
 Organisations measuring the carbon footprint of their cloud workloads have faced the same foundational problem: data from cloud providers is late, incomplete, and incomparable across platforms. Cloud providers release carbon data on a monthly basis, with delays of several months. If you run workloads across AWS, Azure, and GCP, you receive three different reports using three different methodologies on three different timescales. There is no common format, no common definitions, no way to compare. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure.

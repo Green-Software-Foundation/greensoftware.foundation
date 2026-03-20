@@ -235,14 +235,6 @@ relatedSlugs:
   - en/new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson
   - en/sci-specification-achieves-iso-standard-status
 
-cta:
-  heading: Join the Green Software Foundation
-  body: >
-    Whether you are a technology company, consultancy, financial institution, academic
-    institution, or non-profit, GSF provides the neutral ground where competitors
-    collaborate on the standards, tools, and training that reduce software's
-    environmental impact.
-  note: Visit greensoftware.foundation/join-us to become a member
 ---
 
 In 2020, multiple organisations were independently trying to figure out how to reduce software's environmental impact. None of them knew the others were working on the same problem. At Microsoft, Jeff Sandquist's team had discovered "a deep lack of knowledge specifically regarding software and sustainability." At Accenture, Sanjay Podder had published in the Harvard Business Review. At GitHub, Erica Brescia wanted every developer to be "green by default." At Thoughtworks, the view was that "issues like climate change can only be resolved through global solidarity."

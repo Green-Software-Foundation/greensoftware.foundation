@@ -180,7 +180,8 @@ cta:
     The Carbon Aware SDK was built by organisations who came together through the Green
     Software Foundation. Join us to collaborate on the standards, tools, and training
     that reduce software's environmental impact.
-  note: Already using the Carbon Aware SDK? Start with the quickstart guide at carbon-aware-sdk.greensoftware.foundation
+  ctaText: "Explore the Carbon Aware SDK"
+  ctaHref: "https://carbon-aware-sdk.greensoftware.foundation"
 ---
 
 In 2021, organisations across the Green Software Foundation knew something frustrating: the electricity grid was cleaner at certain times and in certain places, but their software had no way to respond to that signal. Workloads ran on dirty power even when clean power was available hours later or in a neighbouring region.

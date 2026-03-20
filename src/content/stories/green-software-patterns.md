@@ -177,7 +177,8 @@ cta:
     The Green Software Patterns catalogue is peer-reviewed, open, and growing. Browse
     the existing patterns, test them against your own applications, and contribute
     patterns from your own experience through the GSF.
-  note: Browse the catalogue at patterns.greensoftware.foundation
+  ctaText: "Browse the Patterns catalogue"
+  ctaHref: "https://patterns.greensoftware.foundation"
 ---
 
 By 2022, the Green Software Foundation had trained tens of thousands of engineers through the Green Software Practitioner course. These engineers understood the principles: energy efficiency, carbon awareness, hardware efficiency, measurement. But a consistent question emerged from newly trained practitioners: "OK, I understand the principles — but what do I actually change in my code?"

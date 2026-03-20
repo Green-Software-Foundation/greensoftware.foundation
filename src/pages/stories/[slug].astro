@@ -51,9 +51,9 @@ function initials(name: string) {
 }
 
 // Auto-resolve contributor photos from people.json
-const personByName = new Map((peopleData as any[]).map((p: any) => [p.fullName, p]));
+const personByName = new Map((peopleData as any[]).map((p: any) => [p.fullName.toLowerCase(), p]));
 const resolvedContributors = contributors.map((c: any) => {
-  const found = personByName.get(c.name);
+  const found = personByName.get(c.name.toLowerCase());
   return { ...c, photo: c.photo ?? found?.photo ?? null };
 });
 ---
@@ -218,6 +218,17 @@ const resolvedContributors = contributors.map((c: any) => {
     </div>
   )}
 
+  {cta && cta.ctaHref && (
+    <CTABanner
+      heading={cta.heading}
+      body={cta.body}
+      ctaText={cta.ctaText || "Learn more"}
+      ctaHref={cta.ctaHref}
+      note={cta.note}
+      bgClass="bg-primary-darkest"
+    />
+  )}
+
   <!-- ── Who came together ─────────────────────────────────────────────────── -->
   {resolvedContributors.length > 0 && (
     <div class="bg-white">
@@ -284,15 +295,12 @@ const resolvedContributors = contributors.map((c: any) => {
     />
   )}
 
-  {cta && (
-    <CTABanner
-      heading={cta.heading}
-      body={cta.body}
-      ctaText={cta.ctaText || "Discuss your challenges with us"}
-      ctaHref={cta.ctaHref || "/membership/"}
-      note={cta.note}
-    />
-  )}
+  <CTABanner
+    heading="Join the Green Software Foundation"
+    body="This story was made possible by organisations collaborating through the Green Software Foundation. Join us to help build the standards, tools, and training that reduce software's environmental impact."
+    ctaText="Become a member"
+    ctaHref="/membership/"
+  />
 
   <Footer />
 </Layout>

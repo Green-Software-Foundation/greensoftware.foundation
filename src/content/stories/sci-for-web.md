@@ -176,7 +176,8 @@ cta:
     GSF members can become a project co-chair to support Chris Adams in leading the
     specification work, or join the Software Standards Working Group to help through
     draft review, implementation testing, and technical feedback.
-  note: Contact sci-for-web@greensoftware.foundation to get started
+  ctaText: "Learn about SCI for Web"
+  ctaHref: "/standards/sci-web/"
 ---
 
 Almost everyone uses the web daily. Yet no standard existed for measuring a website's carbon intensity. Tools like the Sustainable Web Design Model, CO2.js, and the W3C Web Sustainability Guidelines had made web emissions visible and established foundational methodologies that thousands of practitioners used. But as organisations moved from awareness to accountability, they needed something more rigorous: a measurement approach with clear boundaries, carbon per functional unit rather than totals, and disclosed methodology so results were comparable and defensible.

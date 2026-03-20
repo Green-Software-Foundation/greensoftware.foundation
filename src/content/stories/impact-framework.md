@@ -193,7 +193,8 @@ cta:
     The Impact Framework was built by organisations who came together through the Green
     Software Foundation. If your teams are struggling to measure software emissions,
     or you've built something that solves a measurement gap, join us.
-  note: Explore the Impact Framework and its plugin ecosystem at if.greensoftware.foundation
+  ctaText: "Explore the Impact Framework"
+  ctaHref: "https://if.greensoftware.foundation"
 ---
 
 By 2023, the SCI specification had given the world a standard way to express software carbon intensity. But having a formula and being able to use it were two different things. Calculating an SCI score required gathering CPU utilisation data, mapping it to energy curves, finding the right carbon intensity factors for the location, estimating embodied emissions from hardware specifications, and choosing an appropriate functional unit. Each step involved specialist knowledge — energy engineering, hardware lifecycle analysis, regional grid data — that most software teams simply didn't have.
