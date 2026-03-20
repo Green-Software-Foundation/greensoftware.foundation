@@ -71,9 +71,8 @@ timeline:
     body: >
       The Foundation announced a second hackathon, this time centred squarely on the
       Impact Framework. The framing was explicit: solving the biggest pain point facing
-      the industry — measuring software for sustainability. Software's ecological impact
-      was approaching 14% of global emissions, and the IF was the tool to make measurement
-      scalable.
+      the industry — measuring software for sustainability. The IF was the tool to make
+      measurement scalable.
     source:
       text: Read the Carbon Hack 24 announcement
       href: /articles/carbon-hack-24-where-measurement-meets-innovation-and-impact-knows-no-bounds/
@@ -203,5 +202,5 @@ Clients were coming to companies like Accenture, NTT DATA, and BCG X asking for 
 
 The result was a growing gap between ambition and execution. Organisations wanted to measure. Regulations like the CSRD and EU AI Act were beginning to require it. But the expertise barrier meant that only a handful of well-resourced companies could actually calculate their software's carbon footprint. The measurement revolution promised by the SCI standard was stuck behind a wall of complexity.
 
-> "While we all know the importance of lowering our carbon footprint, software usually feels cleaner than it is. Furthermore, one cannot improve without measuring."
+> While we all know the importance of lowering our carbon footprint, software usually feels cleaner than it is. Furthermore, one cannot improve without measuring.
 > — Toru Shimogaki, NTT DATA
