@@ -9,7 +9,7 @@ import LogoMarquee from "@/components/logo-marquee.astro";
 import TextBlock from "@/components/text-block.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
-import MemberStories from "@/components/member-stories.astro";
+import ProjectCards from "@/components/project-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 ---
@@ -108,69 +108,61 @@ import Footer from "@/components/footer.astro";
     ]}
   />
 
-  <!-- Section 4: Proof — Member Stories -->
-  <MemberStories
+  <!-- Section 4: Proof — Member Projects -->
+  <ProjectCards
     heading="How members are *solving real problems*"
     body="Every story starts the same way: an organisation brings us a problem they can't solve alone"
-    stories={[
+    projects={[
       {
         title: "Our engineers don't know how to build green software",
         description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
-        organizations: [
-          { name: "Goldman Sachs" },
-          { name: "Avanade" },
-          { name: "Microsoft" },
-          { name: "Accenture" },
-          { name: "ThoughtWorks" },
-          { name: "NTT DATA" },
+        orgs: [
+          { name: "Goldman Sachs", logoSrc: "/assets/logos/goldman-sachs.png" },
+          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
+          { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
+          { name: "ThoughtWorks", logoSrc: "/assets/logos/thoughtworks.svg" },
+          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
         ],
-        imageSrc: "/assets/stories/green-software-practitioner.jpg",
         href: "/stories/green-software-practitioner/",
-        cta: "Read the story →",
       },
       {
         title: "Our pilots work but nothing scales across the org",
         description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
-        organizations: [
-          { name: "HSBC" },
-          { name: "Microsoft" },
-          { name: "NTT DATA" },
-          { name: "Siemens" },
-          { name: "UBS" },
-          { name: "Cisco" },
+        orgs: [
+          { name: "HSBC", logoSrc: "/assets/logos/hsbc.svg" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
+          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
+          { name: "Siemens", logoSrc: "/assets/logos/siemens.png" },
+          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+          { name: "Cisco", logoSrc: "/assets/logos/cisco.svg" },
         ],
-        imageSrc: "/assets/stories/soft-framework.png",
         href: "/stories/soft-framework/",
-        cta: "Read the story →",
       },
       {
         title: "We can't shift workloads to clean energy",
         description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
-        organizations: [
-          { name: "Microsoft" },
-          { name: "UBS" },
-          { name: "Avanade" },
-          { name: "NTT DATA" },
-          { name: "Energy Web" },
+        orgs: [
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
+          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
+          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
+          { name: "Energy Web", logoSrc: "/assets/logos/energy-web.png" },
         ],
-        imageSrc: "/assets/stories/carbon-aware-sdk.png",
         href: "/stories/carbon-aware-sdk/",
-        cta: "Read the story →",
       },
       {
         title: "We can't measure software carbon",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
-        organizations: [
-          { name: "Accenture" },
-          { name: "UBS" },
-          { name: "Microsoft" },
-          { name: "NTT DATA" },
-          { name: "WattTime" },
-          { name: "AVEVA" },
+        orgs: [
+          { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
+          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
+          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
+          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
+          { name: "WattTime", logoSrc: "/assets/logos/watttime.png" },
+          { name: "AVEVA", logoSrc: "/assets/logos/aveva.svg" },
         ],
-        imageSrc: "/assets/stories/sci-measurement.png",
         href: "/stories/sci-measurement/",
-        cta: "Read the story →",
       },
     ]}
     footerCtaText="Browse all member stories"
@@ -178,15 +170,10 @@ import Footer from "@/components/footer.astro";
   />
 
   <!-- Section 5: General Membership -->
-  <TextBlock
+  <FeatureGrid
     heading="General membership — *access* the standards, training, and community that 130,000+ practitioners already use"
     body="General membership is the entry point for any organisation that wants to participate in the foundation's work, contribute to projects, and build internal capability."
-    compact
-  />
-
-  <FeatureGrid
     columns={3}
-    compact
     features={[
       {
         icon: "/assets/standardized-icon.svg",
