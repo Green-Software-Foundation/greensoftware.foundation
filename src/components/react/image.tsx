@@ -30,6 +30,15 @@ export function Img({
 }: ImgProps) {
   const useNetlify = isRaster(src) && !import.meta.env.DEV;
 
+  // Derive a sensible fallback width from props
+  const fallbackWidth = (() => {
+    if (width) return width;
+    const pxMatch = sizes.match(/^(\d+)px$/);
+    if (pxMatch) return Math.min(parseInt(pxMatch[1], 10) * 2, 800);
+    const ws = widths || [200, 400, 800, 1200];
+    return ws[Math.min(1, ws.length - 1)];
+  })();
+
   if (!useNetlify) {
     return (
       <img
@@ -57,7 +66,7 @@ export function Img({
         sizes={sizes}
       />
       <img
-        src={netlifyUrl(src, width ?? 1200, "jpeg")}
+        src={netlifyUrl(src, fallbackWidth, "jpeg")}
         alt={alt}
         className={className}
         width={width}

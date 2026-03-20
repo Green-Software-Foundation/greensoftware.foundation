@@ -222,7 +222,7 @@ function initials(name: string) {
               <Card className="flex flex-col items-center p-6 text-center h-full">
                 <div class="mb-4 flex w-20 h-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2 shrink-0">
                   {person.photo ? (
-                    <Image src={person.photo} alt={person.name} class="w-full h-full object-cover" sizes="80px" />
+                    <Image src={person.photo} alt={person.name} class="w-full h-full object-cover" sizes="80px" widths={[80, 160]} />
                   ) : (
                     <span class="text-xl font-bold text-primary/40">{initials(person.name)}</span>
                   )}

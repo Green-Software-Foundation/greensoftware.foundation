@@ -182,14 +182,15 @@ export const TabbedSection = (props: Props) => {
                   className="flex shrink-0 animate-marquee items-center gap-8 pr-20"
                 >
                   {orgs.map((org) => (
-                    <img
+                    <Img
                       key={org.name}
                       src={org.logo}
                       alt={org.name}
-                      title={org.name}
                       width={80}
                       height={24}
                       className="h-6 w-auto max-w-[80px] shrink-0 object-contain brightness-0 invert opacity-60"
+                      sizes="80px"
+                      widths={[80, 160]}
                     />
                   ))}
                 </div>

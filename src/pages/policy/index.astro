@@ -94,7 +94,7 @@ const policyArticles = allArticles
           <div class="flex flex-col items-center text-center">
             <div class="h-28 w-28 overflow-hidden rounded-full border-2 border-primary-lighter bg-accent-lightest-2">
               {person?.photo ? (
-                <Image src={person.photo} alt={name} class="h-full w-full object-cover" sizes="112px" />
+                <Image src={person.photo} alt={name} class="h-full w-full object-cover" sizes="112px" widths={[112, 224]} />
               ) : (
                 <div class="flex h-full w-full items-center justify-center text-2xl font-bold text-primary">
                   {name.split(" ").map((n: string) => n[0]).join("")}

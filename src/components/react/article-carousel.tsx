@@ -105,6 +105,7 @@ export function ArticleCarousel({
                                     alt={org.name}
                                     className="h-4 max-w-[60px] w-auto object-contain"
                                     sizes="60px"
+                                    widths={[60, 120]}
                                   />
                                 ) : (
                                   <span className="text-xs font-semibold text-primary">

@@ -6,7 +6,7 @@
  * isn't available, so we fall back to the original URL.
  */
 
-const DEFAULT_WIDTHS = [400, 800, 1200, 1600];
+const DEFAULT_WIDTHS = [200, 400, 800, 1200];
 
 /** Returns true for raster image paths that the Netlify CDN can transform. */
 export function isRaster(src: string): boolean {
