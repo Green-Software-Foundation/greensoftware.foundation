@@ -8,8 +8,7 @@ import { navItems } from "@/lib/nav-items";
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import LogoMarquee from "@/components/logo-marquee.astro";
-import Testimonial from "@/components/testimonial.astro";
-import TextBlock from "@/components/text-block.astro";
+import SplitCards from "@/components/split-cards.astro";
 
 import TabbedSection from "@/components/tabbed-section.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
@@ -65,12 +64,12 @@ const featuredArticles = allArticles
 
   <Hero
     heading="The sustainability challenges you're solving alone?"
-    headingAccent="Your peers are solving them together."
-    body="The Green Software Foundation is where member organisations — from tech giants to financial institutions — collaborate on the standards, strategies, and solutions that none of them could build alone."
+    headingAccent="Your peers are solving together"
+    body="The GSF is where member organisations, from tech giants to financial institutions, collaborate on the standards, strategies, and solutions that none of them could build alone"
     ctas={[
       { text: "Discuss your challenges with us", variant: "primary", href: "/membership/" },
     ]}
-    imageSrc="/assets/hero-illustration.svg"
+    imageSrc="/assets/hero-illustration-new.svg"
     imageAlt="Hero illustration"
     bgClass="bg-accent-lightest-2"
     scrollIndicator
@@ -79,144 +78,191 @@ const featuredArticles = allArticles
 
   <!-- Section 2: Logo Marquee -->
   <LogoMarquee
-    heading="Trusted by 60+ organisations including"
+    heading="A global network of organisations"
     greyscale={false}
     bgClass="bg-white"
     fadeBgClass="from-white"
   />
 
-  <Testimonial
-    quote="Our commitment to becoming sustainable by design across our entire portfolio creates a dynamic ecosystem where challenges can be brought back to GSF to shape standards, while simultaneously allowing us to adopt and apply those standards to address real-world challenges for our customers."
-    author="Gadhu Sundaram"
-    title="Chair, Green Software Foundation; VP of Application Services, NTT DATA"
-    company=""
-  />
-
-  <!-- Problem-Solution Section Heading -->
-  <TextBlock
+  <!-- Problem-Solution Section with Chair Quote -->
+  <SplitCards
     heading="You're not the *first* to face these challenges"
-    body="Every organisation's sustainability challenges feel unique. They rarely are. Our members identify the problems affecting the entire industry — then solve them together. The standards, frameworks, and strategies below exist because a member brought us a problem."
-    compact
+    body="Every organisation's sustainability challenges feel unique. They rarely are. Our members identify the problems affecting the entire industry, then solve them together. The standards, frameworks, and strategies below exist because a member brought us a problem"
+    iconSrc="/assets/standardized-icon.svg"
+    decorSrc="/assets/standards/sci-ai/building-decor.svg"
+    quote="Our commitment to becoming sustainable by design across our entire portfolio creates a dynamic ecosystem where challenges can be brought back to GSF to shape standards, while simultaneously allowing us to adopt and apply those standards to address real-world challenges for our customers"
+    quoteIconSrc="/assets/standards/sci-ai/quote-icon.svg"
+    attribution={{
+      avatar: "/assets/team/gadhu-sundaram.jpeg",
+      name: "Gadhu Sundaram",
+      role: "Chair, GSF; VP of Application Services, NTT DATA",
+    }}
   />
 
   <!-- Section 4: Organisational Upskilling -->
   <TabbedSection
     badge="ORGANISATIONAL UPSKILLING"
-    heading="Your engineers can't deliver on your climate commitments"
-    imageSrc="/assets/why-feat-1.svg"
+    heading="We needed our engineers to share a common language for sustainability"
+    imageSrc="/assets/why-feat-1-new.svg"
     imageAlt="Education illustration"
-    ctaText="Learn more →"
+    ctaText="Explore the Practitioner course →"
     ctaHref="/stories/green-software-practitioner/"
-    compact
+    orgs={[
+      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
+      { name: "Avanade", logo: "/assets/logos/avanade.webp" },
+      { name: "EPAM", logo: "/assets/logos/epam.svg" },
+      { name: "GitHub", logo: "/assets/logos/github.png" },
+      { name: "Goldman Sachs", logo: "/assets/logos/goldman-sachs.png" },
+      { name: "HCLTech", logo: "/assets/logos/hcltech.png" },
+      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+      { name: "Thoughtworks", logo: "/assets/logos/thoughtworks.svg" },
+    ]}
     tabs={[
-      { value: "challenge", heading: "Challenge", description: "IT and infrastructure represent a growing portion of your energy footprint. Your engineering teams lack the specialised training to build in the efficiencies leadership requires. Without a common framework, teams make inconsistent decisions — unable to distinguish genuine emissions reduction from well-intentioned guesswork." },
-      { value: "solution", heading: "Solution", description: "The Green Software Practitioner Course — your engineering teams equipped to turn board-level strategy into technical reality. Developed with Microsoft, Accenture, Thoughtworks, and GitHub." },
-      { value: "impact", heading: "Impact", description: "Completed by over 130,000 developers globally." },
+      { value: "challenge", heading: "Challenge", description: "IT and infrastructure represent a growing portion of energy footprints. Engineering teams lack the specialised training to build in the efficiencies leadership requires. Without a common framework, teams make inconsistent decisions, unable to distinguish genuine emissions reduction from well-intentioned guesswork" },
+      { value: "solution", heading: "Solution", description: "The Green Software Practitioner Course, equipping engineering teams to turn board-level strategy into technical reality. Developed with Microsoft, Accenture, Thoughtworks, and GitHub" },
+      { value: "impact", heading: "Impact", description: "Completed by over 130,000 developers globally" },
     ]}
   />
 
   <!-- Section 5: Measurement & Targets -->
   <TabbedSection
     badge="MEASUREMENT & TARGETS"
-    heading="You're reporting emissions but can't set engineering targets"
-    imageSrc="/assets/why-feat-2.svg"
+    heading="We reported emissions annually, but it didn't help set engineering targets"
+    imageSrc="/assets/why-feat-2-new.svg"
+    reversed
     imageAlt="SCI illustration"
-    ctaText="Learn more →"
+    ctaText="Discover the SCI standard →"
     ctaHref="/stories/sci-measurement/"
-    compact
+    orgs={[
+      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
+      { name: "AVEVA", logo: "/assets/logos/aveva.svg" },
+      { name: "CAST", logo: "/assets/logos/cast.png" },
+      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
+      { name: "UBS", logo: "/assets/logos/ubs.png" },
+      { name: "WattTime", logo: "/assets/logos/watttime.png" },
+    ]}
     tabs={[
-      { value: "challenge", heading: "Challenge", description: "GHG reporting gives you compliance but not insight. You report an annual total, but your CTO can't turn that into actionable targets for engineering teams. Cloud migrations, architectural changes, infrastructure investments — they all blur into one number." },
-      { value: "solution", heading: "Solution", description: "The Software Carbon Intensity standard (SCI) — an ISO-certified metric that lets you set targets engineers can actually act on. Not an aggregate total. A rate your teams can own and reduce." },
-      { value: "impact", heading: "Impact", description: "Became ISO 21031:2024 in under three years. Autostrade per l'Italia achieved 15.1% average CO₂ savings across 60 applications. Seven independent implementations published across banking, consulting, and infrastructure." },
+      { value: "challenge", heading: "Challenge", description: "GHG reporting gives compliance but not insight. An annual total doesn't translate into actionable targets for engineering teams. Cloud migrations, architectural changes, infrastructure investments, they all blur into one number" },
+      { value: "solution", heading: "Solution", description: "The Software Carbon Intensity standard (SCI), an ISO-certified metric that lets teams set targets engineers can actually act on. Not an aggregate total. A rate teams can own and reduce" },
+      { value: "impact", heading: "Impact", description: "Became ISO 21031:2024 in under three years. Seven independent implementations published across banking, consulting, and infrastructure" },
     ]}
   />
 
-  <!-- Section 6: Scaling Beyond Pilots -->
+  <!-- Section 6: Pilots to Implementation -->
   <TabbedSection
-    badge="SCALING BEYOND PILOTS"
-    heading="Your pilots work but nothing scales"
-    imageSrc="/assets/why-feat-3.svg"
+    badge="PILOTS TO IMPLEMENTATION"
+    heading="Our pilots were working, but we found it hard to scale"
+    imageSrc="/assets/why-feat-3-new.svg"
     imageAlt="SOFT illustration"
-    ctaText="Learn more →"
+    ctaText="Learn about the SOFT framework →"
     ctaHref="/stories/soft-framework/"
-    compact
+    orgs={[
+      { name: "Avanade", logo: "/assets/logos/avanade.webp" },
+      { name: "BCG X", logo: "/assets/logos/bcg.png" },
+      { name: "Cisco", logo: "/assets/logos/cisco.svg" },
+      { name: "HSBC", logo: "/assets/logos/hsbc.svg" },
+      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
+      { name: "Siemens", logo: "/assets/logos/siemens.png" },
+      { name: "UBS", logo: "/assets/logos/ubs.png" },
+    ]}
     tabs={[
-      { value: "challenge", heading: "Challenge", description: "You've launched sustainability pilots. You've measured emissions. But initiatives stay trapped in IT — never scaling across procurement, operations, and business units. Your board expects transformation; you're delivering point solutions." },
-      { value: "solution", heading: "Solution", description: "The SOFT framework — co-chaired by HSBC and Microsoft, built with Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS. Not another measurement tool. The comprehensive framework for embedding green software practices systematically across every function." },
-      { value: "impact", heading: "Impact", description: "Ratified November 2025. Four global organisations already piloting the framework. Covers Strategy, Implementation, Operational, and Compliance domains." },
+      { value: "challenge", heading: "Challenge", description: "Sustainability pilots launched. Emissions measured. But initiatives stay trapped in IT, never scaling across procurement, operations, and business units. Boards expect transformation; teams are delivering point solutions" },
+      { value: "solution", heading: "Solution", description: "The SOFT framework, co-chaired by HSBC and Microsoft, built with Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS. Not another measurement tool. The comprehensive framework for embedding software practices systematically across every function" },
+      { value: "impact", heading: "Impact", description: "Ratified November 2025. Four global organisations already implementing the framework across Strategy, Implementation, Operational, and Compliance" },
     ]}
   />
 
-  <!-- Section 7: AI Carbon Impact -->
+  <!-- Section 7: SCI for AI -->
   <TabbedSection
-    badge="AI CARBON IMPACT"
-    heading="AI is your fastest-growing carbon cost and you can't measure it"
-    imageSrc="/assets/why-wdpc-feat-1.svg"
+    badge="SCI FOR AI"
+    heading="AI is the fastest-growing carbon cost and organisations can't measure it"
+    imageSrc="/assets/why-wdpc-feat-1-new.svg"
+    reversed
     imageAlt="SCI for AI illustration"
-    ctaText="Learn more →"
+    ctaText="Explore SCI for AI →"
     ctaHref="/stories/sci-for-ai/"
-    compact
+    orgs={[
+      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
+      { name: "Globant", logo: "/assets/logos/globant.svg" },
+      { name: "Google", logo: "/assets/logos/google.png" },
+      { name: "IBM", logo: "/assets/logos/ibm.gif" },
+      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
+      { name: "Siemens", logo: "/assets/logos/siemens.png" },
+      { name: "UBS", logo: "/assets/logos/ubs.png" },
+    ]}
     tabs={[
-      { value: "challenge", heading: "Challenge", description: "Your organisation is deploying AI at scale. When stakeholders ask about the carbon footprint, you have no standardised answer. You're making multi-million dollar infrastructure decisions without understanding their relative carbon efficiency." },
-      { value: "solution", heading: "Solution", description: "SCI for AI — extending the proven SCI methodology specifically for artificial intelligence systems. Standardised measurement across training and inference, applicable from LLMs to computer vision. Developed by members including Microsoft, UBS, Google, and Accenture." },
-      { value: "impact", heading: "Impact", description: "Ratified December 2025 — the first consensus-based AI carbon standard. Over 20 organisations participated in the workshops. Covers six AI lifecycle stages from data preparation to end-of-life." },
+      { value: "challenge", heading: "Challenge", description: "Organisations are deploying AI at scale. When stakeholders ask about the carbon footprint, there is no standardised answer. Multi-million dollar infrastructure decisions are being made without understanding their relative carbon efficiency" },
+      { value: "solution", heading: "Solution", description: "SCI for AI, extending the proven SCI methodology specifically for artificial intelligence systems. Standardised measurement across training and inference, applicable from LLMs to computer vision. Developed by members including Microsoft, UBS, Google, and Accenture" },
+      { value: "impact", heading: "Impact", description: "Ratified December 2025, the first consensus-based AI carbon standard. Over 20 organisations participated in the workshops. Covers six AI lifecycle stages from data preparation to end-of-life" },
     ]}
   />
 
-  <!-- Section 8: Standards Speed -->
+  <!-- Section 8: Consensus at Speed -->
   <TabbedSection
-    badge="STANDARDS SPEED"
-    heading="Standards move too slowly for your regulatory timeline"
-    imageSrc="/assets/why-wdpc-feat-3.svg"
+    badge="CONSENSUS AT SPEED"
+    heading="Getting consensus across time zones, languages, and competing priorities"
+    imageSrc="/assets/why-wdpc-feat-3-new.svg"
     imageAlt="Standards illustration"
-    ctaText="Learn more →"
+    ctaText="Discover consensus at speed →"
     ctaHref="/stories/ai-accelerated-consensus/"
-    compact
+    orgs={[
+      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
+      { name: "Globant", logo: "/assets/logos/globant.svg" },
+      { name: "Google", logo: "/assets/logos/google.png" },
+      { name: "Green Web Foundation", logo: "/assets/logos/the-green-web-foundation.png" },
+      { name: "HSBC", logo: "/assets/logos/hsbc.svg" },
+      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
+      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
+      { name: "WattTime", logo: "/assets/logos/watttime.png" },
+    ]}
     tabs={[
-      { value: "challenge", heading: "Challenge", description: "Traditional standards development takes years. By the time specifications reach certification, regulations have evolved and technology has shifted. The bottleneck isn't technical complexity — it's coordination across dozens of stakeholders with competing priorities." },
-      { value: "solution", heading: "Solution", description: "AI-accelerated consensus. GSF achieved ISO certification for SCI in under 3 years — unprecedented. Now applying AI to synthesise perspectives from hundreds of participants in days, not months." },
-      { value: "impact", heading: "Impact", description: "From blank page to consensus design document in ten weeks. Fourteen experts from 15 organisations. The process is now proven and replicable across all new GSF specifications." },
+      { value: "challenge", heading: "Challenge", description: "Traditional standards development takes years. By the time specifications reach certification, regulations have evolved and technology has shifted. The bottleneck isn't technical complexity, it's coordination across dozens of stakeholders with competing priorities" },
+      { value: "solution", heading: "Solution", description: "AI-accelerated consensus. GSF achieved ISO certification for SCI in under 3 years, unprecedented. Now applying AI to synthesise perspectives from hundreds of participants in days, not months" },
+      { value: "impact", heading: "Impact", description: "From blank page to consensus design document in ten weeks. Fourteen experts from 15 organisations. The process is now proven and replicable across all new GSF specifications" },
     ]}
   />
 
   <!-- Section 9: First CTA -->
   <CTACard
     heading="Discuss your challenges with us"
-    body="Every member's journey starts with a conversation about what you're trying to solve."
+    body="Every member's journey starts with a conversation about what you're trying to solve"
     ctaText="Request a discussion"
     ctaHref="/membership/"
-    imageSrc="/assets/ready.svg"
+    imageSrc="/assets/ready-new.svg"
     imageAlt="Discussion illustration"
   />
 
   <!-- Section 10: Community & Reach -->
   <CommunityReach
     heading="Our *Reach*"
-    body="A global community of practitioners, leaders, and organisations driving sustainable software forward."
+    body="A global community of practitioners, leaders, and organisations driving sustainable software forward"
     imageSrc="/assets/world-map.svg"
     imageAlt="Global meetup locations"
     stats={[
-      { value: "130,000+", label: "Green Software Practitioner course completions" },
-      { value: "12,000", label: "LinkedIn followers" },
-      { value: "12,000", label: "Global meetup community members" },
-      { value: "450,000", label: "Podcast downloads" },
-      { value: "7,800+", label: "Newsletter subscribers" },
+      { value: "130,000+", label: "Green Software Practitioner course completions", ctaText: "Take the course", ctaHref: "https://learn.greensoftware.foundation" },
+      { value: "12,000", label: "LinkedIn followers", ctaText: "Follow us", ctaHref: "https://www.linkedin.com/company/green-software-foundation/" },
+      { value: "12,000", label: "Global meetup community members", ctaText: "Find a meetup", ctaHref: "https://www.meetup.com/pro/gsf/" },
+      { value: "450,000", label: "Podcast downloads", ctaText: "Listen now", ctaHref: "https://podcast.greensoftware.foundation" },
+      { value: "7,800+", label: "Newsletter subscribers", ctaText: "Subscribe", ctaHref: "/newsletter/" },
     ]}
-    ctaText="Learn more about our community engagement"
+    ctaText="Learn more about our community"
     ctaHref="/community/"
   />
 
   <!-- Section 11: What We Do -->
   <FeatureGrid
     heading="What we *do*"
-    body="Four functions. Each one driven by member needs. Each one producing results the industry adopts."
+    body="Four functions. Each one driven by member needs. Each one producing results the industry adopts"
     variant="bordered"
     columns={2}
     features={[
-      { icon: "/assets/standardized-icon.svg", title: "Standards", description: "Our members develop vendor-neutral specifications — from SCI to SOFT — through an AI-facilitated consensus process that's achieved ISO certification in record time.", linkText: "Explore our standards →", linkHref: "/standards/" },
-      { icon: "/assets/co2-icon.svg", title: "Policy & Research", description: "Translating technical reality into regulatory language. Position papers, the State of Green Software report, and a policy radar tracking emerging legislation — giving members the evidence and the voice.", linkText: "See our policy work →", linkHref: "/policy/" },
-      { icon: "/assets/renewable-icon.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programmes — turning commitments into competence.", linkText: "Start learning →", linkHref: "/education/" },
-      { icon: "/assets/realtime-icon.svg", title: "Community", description: "Champions, meetups, podcasts, and events — a global network of practitioners driving sustainable software forward. The movement that turns individual effort into industry change.", linkText: "Join the community →", linkHref: "/community/" },
+      { icon: "/assets/standardized-icon.svg", title: "Standards", description: "Our members develop vendor-neutral specifications, from SCI to SOFT, through an AI-facilitated consensus process that's achieved ISO certification in record time", linkText: "Explore our standards →", linkHref: "/standards/" },
+      { icon: "/assets/co2-icon.svg", title: "Policy & Research", description: "Translating technical reality into regulatory language. Position papers, the State of Green Software report, and a policy radar tracking emerging legislation, giving members the evidence and the voice", linkText: "See our policy work →", linkHref: "/policy/" },
+      { icon: "/assets/renewable-icon-new.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programmes, turning commitments into competence", linkText: "Start learning →", linkHref: "/education/" },
+      { icon: "/assets/realtime-icon-new.svg", title: "Community", description: "Champions, meetups, podcasts, and events, a global network of practitioners driving sustainable software forward. The movement that turns individual effort into industry change", linkText: "Join the community →", linkHref: "/community/" },
     ]}
   />
 
@@ -224,9 +270,9 @@ const featuredArticles = allArticles
   <ResourceCards
     heading="Where to *go next*"
     cards={[
-      { icon: "/assets/shape-icon-1.svg", title: "Leading sustainability strategy?", description: "See our impact, explore membership, governance & leadership.", ctaText: "Explore membership", ctaHref: "/membership/" },
-      { icon: "/assets/shape-icon-2.svg", title: "Implementing in your engineering team?", description: "Education journey, standards & tools, Green Software Patterns.", ctaText: "Start the journey", ctaHref: "/education/" },
-      { icon: "/assets/shape-icon-3.svg", title: "Want to contribute?", description: "Member playbook, working groups, community.", ctaText: "Get involved", ctaHref: "/community/" },
+      { icon: "/assets/shape-icon-1-new.svg", title: "Leading sustainability strategy?", description: "See our impact, explore membership, governance & leadership", ctaText: "Explore membership", ctaHref: "/membership/" },
+      { icon: "/assets/shape-icon-2.svg", title: "Implementing in your engineering team?", description: "Education journey, standards & tools, Green Software Patterns", ctaText: "Start the journey", ctaHref: "/education/" },
+      { icon: "/assets/shape-icon-3.svg", title: "Want to contribute?", description: "Member playbook, working groups, community", ctaText: "Get involved", ctaHref: "/community/" },
     ]}
   />
 
@@ -234,7 +280,7 @@ const featuredArticles = allArticles
   {featuredArticles.length > 0 && (
     <ArticleCarousel
       heading="Featured Content"
-      body="Stories, research, and insights from our members and community."
+      body="Stories, research, and insights from our members and community"
       articles={featuredArticles}
       showOrganizations={false}
       ctaText="View all articles →"

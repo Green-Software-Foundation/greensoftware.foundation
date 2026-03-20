@@ -19,6 +19,8 @@ interface Props {
   imageAlt?: string;
   /** Background class */
   bgClass?: string;
+  /** Visual variant: "light" (default, green card) or "dark" (dark teal card with white text) */
+  variant?: "light" | "dark";
 }
 
 const {
@@ -30,7 +32,10 @@ const {
   imageSrc = "/assets/ready.svg",
   imageAlt = "",
   bgClass = "bg-accent-lightest-2",
+  variant = "light",
 } = Astro.props;
+
+const isDark = variant === "dark";
 
 const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
   if (part.startsWith("*") && part.endsWith("*")) {
@@ -44,7 +49,10 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
 <section class={`py-12 md:py-18 lg:py-20 ${bgClass}`}>
   <div class="container">
     <div
-      class="grid grid-cols-1 items-center justify-center gap-x-20 gap-y-12 rounded-2xl bg-accent-lighter p-8 md:gap-y-16 md:p-12 lg:grid-cols-2 lg:justify-end lg:px-20"
+      class:list={[
+        "grid grid-cols-1 items-center justify-center gap-x-20 gap-y-12 rounded-2xl p-8 md:gap-y-16 md:p-12 lg:grid-cols-2 lg:justify-end lg:px-20",
+        isDark ? "bg-primary-darker" : "bg-accent-lighter",
+      ]}
     >
       {imageSrc && (
         <div class="hidden lg:flex lg:justify-center">
@@ -52,25 +60,25 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
         </div>
       )}
       <div>
-        <h2 class="mb-3 text-2xl font-bold md:mb-4 md:text-3xl lg:text-4xl">
+        <h2 class:list={["mb-3 text-2xl font-bold md:mb-4 md:text-3xl lg:text-4xl", isDark && "text-white"]}>
           {hasAccentSyntax
             ? headingParts.map(part =>
                 part.accent
-                  ? <span class="text-primary">{part.text}</span>
-                  : <span class="text-primary-darker">{part.text}</span>
+                  ? <span class={isDark ? "text-accent" : "text-primary"}>{part.text}</span>
+                  : <span class={isDark ? "text-white" : "text-primary-darker"}>{part.text}</span>
               )
             : heading
           }
         </h2>
         {bodyHtml ? (
-          <div set:html={bodyHtml} class="text-sm lg:text-base" />
+          <div set:html={bodyHtml} class:list={["text-sm lg:text-base", isDark ? "text-white/80" : ""]} />
         ) : body ? (
-          <p class="text-sm lg:text-base">{body}</p>
+          <p class:list={["text-sm lg:text-base", isDark ? "text-white/80" : ""]}>{body}</p>
         ) : null}
         {ctaText && (
           <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
             <a href={ctaHref}>
-              <Button>{ctaText}</Button>
+              <Button variant={isDark ? "primary-invert" : "primary"}>{ctaText}</Button>
             </a>
           </div>
         )}

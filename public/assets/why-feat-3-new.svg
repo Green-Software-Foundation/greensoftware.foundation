@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 500">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #bed675;
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        stroke: #fff;
+        stroke-width: 7px;
+      }
+
+      .st2, .st3, .st4 {
+        stroke-miterlimit: 10;
+      }
+
+      .st2, .st3, .st4, .st5 {
+        fill: none;
+      }
+
+      .st3 {
+        stroke: #6fafac;
+        stroke-width: 2px;
+      }
+
+      .st3, .st5 {
+        stroke-linecap: round;
+      }
+
+      .st4 {
+        stroke: #003834;
+        stroke-width: 10px;
+      }
+
+      .st6 {
+        fill: #001c19;
+      }
+
+      .st7 {
+        fill: url(#linear-gradient);
+      }
+
+      .st8 {
+        fill: #fff;
+      }
+
+      .st5 {
+        stroke: #cee098;
+        stroke-linejoin: bevel;
+        stroke-width: 2.11px;
+      }
+
+      .st9 {
+        fill: #003834;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-242.63" y1="312.14" x2="-242.63" y2="45.22" gradientTransform="translate(103) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".01" stop-color="#001815"/>
+      <stop offset=".1" stop-color="#00322e"/>
+      <stop offset=".2" stop-color="#004440"/>
+      <stop offset=".3" stop-color="#00504b"/>
+      <stop offset=".4" stop-color="#00544f"/>
+      <stop offset=".46" stop-color="#065851"/>
+      <stop offset=".54" stop-color="#196457"/>
+      <stop offset=".63" stop-color="#377962"/>
+      <stop offset=".74" stop-color="#619671"/>
+      <stop offset=".85" stop-color="#96ba84"/>
+      <stop offset=".95" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="160.29" y1="346.23" x2="160.29" y2="39.94" gradientUnits="userSpaceOnUse">
+      <stop offset=".13" stop-color="#003834"/>
+      <stop offset=".58" stop-color="#338a86"/>
+      <stop offset=".63" stop-color="#398d85"/>
+      <stop offset=".7" stop-color="#4b9782"/>
+      <stop offset=".78" stop-color="#6aa87f"/>
+      <stop offset=".87" stop-color="#93be7a"/>
+      <stop offset=".95" stop-color="#bed675"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g>
+      <line class="st3" x1="478" y1="417.75" x2="22" y2="417.75"/>
+      <line class="st3" x1="478" y1="364.5" x2="22" y2="364.5"/>
+      <line class="st3" x1="478" y1="311.25" x2="22" y2="311.25"/>
+      <line class="st3" x1="478" y1="258" x2="22" y2="258"/>
+      <line class="st3" x1="478" y1="204.75" x2="22" y2="204.75"/>
+      <line class="st3" x1="478" y1="151.5" x2="22" y2="151.5"/>
+      <line class="st3" x1="478" y1="98.25" x2="22" y2="98.25"/>
+    </g>
+    <g>
+      <g>
+        <line class="st3" x1="409.75" y1="30" x2="409.75" y2="486"/>
+        <line class="st3" x1="356.5" y1="30" x2="356.5" y2="486"/>
+        <line class="st3" x1="303.25" y1="30" x2="303.25" y2="486"/>
+        <line class="st3" x1="250" y1="30" x2="250" y2="486"/>
+        <line class="st3" x1="196.75" y1="30" x2="196.75" y2="486"/>
+        <line class="st3" x1="143.5" y1="30" x2="143.5" y2="486"/>
+        <line class="st3" x1="90.25" y1="30" x2="90.25" y2="486"/>
+      </g>
+      <rect class="st0" x="56" y="114.5" width="21" height="21" transform="translate(107.87 -10.41) rotate(45)"/>
+    </g>
+  </g>
+  <g>
+    <polyline class="st2" points="355.5 99 408.5 99 408.5 152"/>
+    <polyline class="st2" points="143.5 417 90.5 417 90.5 364"/>
+  </g>
+  <rect class="st0" x="321.5" y="380" width="21" height="21" transform="translate(373.37 -120.38) rotate(45)"/>
+  <circle class="st4" cx="439" cy="124.5" r="12"/>
+  <circle class="st4" cx="56" cy="447.5" r="12"/>
+  <g>
+    <polygon class="st8" points="390.49 449.69 372.01 378.24 442.71 399.4 390.49 449.69"/>
+    <rect class="st8" x="409.92" y="407.33" width="29.43" height="51.11" transform="translate(-181.51 415.63) rotate(-43.92)"/>
+  </g>
+  <g>
+    <polygon class="st7" points="282.71 312.14 438.3 312.14 252.96 45.22 282.71 312.14"/>
+    <polygon class="st1" points="223.22 312.14 67.63 312.14 252.96 45.22 223.22 312.14"/>
+    <polygon class="st9" points="223.22 312.14 252.96 354.78 252.96 45.22 223.22 312.14"/>
+    <polygon class="st6" points="282.71 312.14 252.96 354.78 252.96 45.22 282.71 312.14"/>
+    <polyline class="st5" points="68.2 312.56 223.79 312.56 252.96 47.33 283.28 311.71 438.88 312.56"/>
+  </g>
+</svg>

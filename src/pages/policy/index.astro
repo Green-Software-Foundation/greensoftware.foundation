@@ -17,7 +17,6 @@ import { articleUrl } from "@/lib/utils";
 
 // ----- Leadership photos from team.json -----
 const chrisAdams = teamData.find((p: any) => p.fullName === "Chris Adams");
-const ayaSaed = teamData.find((p: any) => p.fullName === "Aya Saed");
 const josephCook = teamData.find((p: any) => p.fullName === "Joseph Cook");
 
 // ----- Articles tagged "policy" or "research" for the carousel -----
@@ -82,14 +81,13 @@ const policyArticles = allArticles
           <span class="font-bold text-primary">Leadership</span>
         </h2>
         <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
-          The Policy Working Group is co-chaired by Chris Adams and Aya Saed. Research is led by Joseph Cook.
+          The Policy Working Group is chaired by Chris Adams. Research is led by Joseph Cook.
         </p>
       </div>
 
-      <div class="mx-auto mt-10 grid max-w-4xl gap-8 md:grid-cols-3">
+      <div class="mx-auto mt-10 grid max-w-3xl gap-8 md:grid-cols-2">
         {[
-          { person: chrisAdams, name: "Chris Adams", role: "Co-Chair, Policy Working Group", org: "Green Web Foundation", title: "Director of Technology and Policy" },
-          { person: ayaSaed, name: "Aya Saed", role: "Co-Chair, Policy Working Group", org: "Scope3", title: "Director of AI Policy and Strategy" },
+          { person: chrisAdams, name: "Chris Adams", role: "Chair, Policy Working Group", org: "Green Web Foundation", title: "Director of Technology and Policy" },
           { person: josephCook, name: "Joseph Cook", role: "Head of Research", org: "Green Software Foundation", title: "Head of Research" },
         ].map(({ person, name, role, org, title }) => (
           <div class="flex flex-col items-center text-center">
@@ -144,37 +142,37 @@ const policyArticles = allArticles
           {
             title: "GHG Protocol Scope 2 Consultation",
             description: "Submitted a formal response advocating for time- and location-sensitive emissions data, arguing that annual averages and broad geographic boundaries don't give software engineers the granularity they need to act.",
-            link: "/articles/en/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/",
+            link: "/articles/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/",
             linkText: "Read our response",
           },
           {
             title: "AI Environmental Impacts Act",
             description: "GSF's first formal policy endorsement. We called for mandated studies on AI's environmental impacts, an AI Environmental Impacts Consortium, and a voluntary reporting framework for AI developers.",
-            link: "/articles/en/the-gsf-endorses-the-ai-environmental-impacts-act/",
+            link: "/articles/the-gsf-endorses-the-ai-environmental-impacts-act/",
             linkText: "Read our endorsement",
           },
           {
             title: "NY Corporate Climate Accountability Act",
             description: "Coordinated responses to the New York Senate's proposed legislation on corporate climate accountability, bringing technical expertise to inform the legislative process.",
-            link: "/articles/en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
+            link: "/articles/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
             linkText: "Read about our engagement",
           },
           {
             title: "European Green Digital Coalition",
             description: "Engaging with the EGDC to align green software standards with European digital sustainability policy and the EU's broader environmental objectives.",
-            link: "/articles/en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
+            link: "/articles/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward/",
             linkText: "Read about our engagement",
           },
           {
             title: "UK Government Digital Sustainability Alliance",
             description: "The GSF joined the UK GDSA to support the UK government's digital sustainability goals and contribute technical expertise to UK policy development.",
-            link: "/articles/en/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+            link: "/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
             linkText: "Read about GDSA",
           },
           {
             title: "EU AI Act",
             description: "Analysing the implications of the first binding regulation on AI globally, with insights from the Green AI Committee on what it means for sustainable software development.",
-            link: "/articles/en/the-eu-ai-act-insights-from-the-green-ai-committee/",
+            link: "/articles/the-eu-ai-act-insights-from-the-green-ai-committee/",
             linkText: "Read our analysis",
           },
         ].map(({ title, description, link, linkText }) => (
@@ -228,25 +226,25 @@ const policyArticles = allArticles
         title: "W3C",
         description: "Collaborating with the World Wide Web Consortium to advance sustainability standards for the web.",
         linkText: "Read about the partnership",
-        linkHref: "/articles/en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/",
+        linkHref: "/articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/",
       },
       {
         title: "SustainableArchitectures.org (IASA)",
         description: "Partnering to advance sustainability in enterprise architecture and software design practices.",
         linkText: "Read about the partnership",
-        linkHref: "/articles/en/the-green-software-foundation-gsf-and-sustainablearchitectures-org-partner-to-adv/",
+        linkHref: "/articles/the-green-software-foundation-gsf-and-sustainablearchitectures-org-partner-to-adv/",
       },
       {
         title: "SustainableIT.org",
         description: "Joint initiatives to drive sustainable IT adoption across organisations worldwide.",
         linkText: "Read about the partnership",
-        linkHref: "/articles/en/green-software-foundation-and-sustainableit-org-partnership/",
+        linkHref: "/articles/green-software-foundation-and-sustainableit-org-partnership/",
       },
       {
         title: "UK GDSA",
         description: "Supporting the UK Government Digital Sustainability Alliance's digital sustainability goals.",
         linkText: "Read about joining GDSA",
-        linkHref: "/articles/en/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+        linkHref: "/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
       },
       {
         title: "British Computer Society",
@@ -276,6 +274,9 @@ const policyArticles = allArticles
           <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
             The foundation's key research publication examining the environmental impact of AI systems, providing frameworks for assessing and reducing the carbon footprint of AI workloads.
           </p>
+          <a href="https://research-information.bris.ac.uk/en/publications/beyond-counting-carbon-ai-environmental-assessments-struggle-to-i/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+            Read the research &rarr;
+          </a>
         </div>
 
         <div class="rounded-xl border border-border bg-white p-8">
@@ -284,7 +285,7 @@ const policyArticles = allArticles
           <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
             Defining Green AI, assessing its environmental impacts across the AI lifecycle, and outlining key actions for AI sustainability.
           </p>
-          <a href="/articles/en/green-ai-position-paper/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+          <a href="/articles/green-ai-position-paper/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
             Read the position paper &rarr;
           </a>
         </div>
@@ -295,7 +296,7 @@ const policyArticles = allArticles
           <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
             GSF-funded study by Texas State University evaluating the software carbon intensity of AI foundation models, confirming the SCI as an effective metric for measuring the carbon impact of software.
           </p>
-          <a href="/articles/en/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+          <a href="/articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
             Read about the study &rarr;
           </a>
         </div>
@@ -306,23 +307,10 @@ const policyArticles = allArticles
           <p class="mt-3 text-sm leading-relaxed text-primary-dark/80">
             The first enterprise-scale implementation of carbon-aware computing using the SCI specification and Carbon Aware SDK, demonstrating the ability to avoid multiple metric tons of CO2eq annually.
           </p>
-          <a href="/articles/en/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+          <a href="/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
             Read the whitepaper &rarr;
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Quote -->
-  <section class="bg-primary-darker py-16 md:py-20">
-    <div class="container">
-      <div class="mx-auto max-w-3xl text-center">
-        <blockquote class="text-xl font-medium leading-relaxed text-white/90 md:text-2xl">
-          &ldquo;One of the biggest challenges is the fragmentation of the policy landscape. There's no centralised authority setting energy standards for software, and existing regulatory frameworks often lag far behind the pace of digital innovation. But that's also where the opportunity lies: to influence upstream decisions — procurement, design, infrastructure — that shape emissions before they ever occur.&rdquo;
-        </blockquote>
-        <p class="mt-6 text-base font-semibold text-accent">Aya Saed</p>
-        <p class="text-sm text-white/60">Director of AI Policy and Strategy, Scope3</p>
       </div>
     </div>
   </section>
