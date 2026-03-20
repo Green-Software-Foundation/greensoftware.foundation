@@ -93,11 +93,15 @@ timeline:
     heading: Real Time Cloud standard ratified
     body: >
       RTC was ratified — 21 months from launch. The standard defines a Cloud Region Metadata
-      Table covering PUE, WUE, carbon-free energy percentages, renewable energy breakdown,
-      carbon intensity (location-based, market-based, marginal, average), grid zone IDs,
-      geolocation, and total ICT energy consumption. The standard feeds directly into the
-      GSF ecosystem: Impact Framework, SCI-o, and the CNCF Kepler project for Kubernetes
-      pod and container energy allocation.
+      Table covering how efficiently data centres use power (PUE — Power Usage Effectiveness)
+      and water (WUE — Water Usage Effectiveness), the percentage of energy from carbon-free
+      sources (CFE), renewable energy breakdowns including Power Purchase Agreements (PPAs)
+      and Guarantees of Origin, and carbon intensity measured three ways: location-based
+      (reflecting the local grid mix), market-based (reflecting contractual instruments like
+      PPAs), and marginal (reflecting the emissions impact of additional demand). The table
+      also includes grid zone IDs, geolocation, and total ICT energy consumption. The standard
+      feeds directly into the GSF ecosystem: Impact Framework, SCI-o, and the CNCF Kepler
+      project for Kubernetes pod and container energy allocation.
     source:
       text: Read about the Real Time Cloud standard ratification
       href: /articles/real-time-cloud-ratified-a-major-step-toward-transparent-sustainable-cloud-comput/
@@ -169,8 +173,8 @@ cta:
   note: The working group is actively seeking contributions to produce best-estimate region metadata for the current year
 ---
 
-Every organisation trying to measure the carbon footprint of its software faced the same foundational problem: the data from cloud providers was bad. Not bad in the sense of being fabricated — bad in the sense of being late, incomplete, and incomparable. Cloud providers released carbon data to their customers on a monthly basis, with delays of several months. If you ran workloads across AWS, Azure, and GCP, you received three different reports using three different methodologies on three different timescales. There was no common format, no common definitions, no way to compare.
+Organisations measuring the carbon footprint of their cloud workloads have faced the same foundational problem: data from cloud providers is late, incomplete, and incomparable across platforms. Cloud providers release carbon data on a monthly basis, with delays of several months. If you run workloads across AWS, Azure, and GCP, you receive three different reports using three different methodologies on three different timescales. There is no common format, no common definitions, no way to compare. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure.
 
-The consequences rippled through the entire green software ecosystem. Customers reporting Scope 3 emissions were forced to produce estimates using incomplete public information that excluded the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organisations that had invested heavily in clean cloud infrastructure were being penalised by the data gap.
+The consequences ripple through the entire green software ecosystem. Customers reporting Scope 3 emissions are forced to produce estimates using incomplete public information that excludes the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organisations that have invested heavily in clean cloud infrastructure are penalised by the data gap.
 
-This was not an academic concern. The Corporate Sustainability Reporting Directive in Europe and California's emerging requirements now mandate supply-chain-level carbon disclosure. The GSF's own SCI specification needed accurate grid carbon intensity as an input. Every measurement tool in the ecosystem was only as good as the data the cloud providers chose to share.
+This is not an academic concern. The Corporate Sustainability Reporting Directive in Europe and California's emerging requirements now mandate supply-chain-level carbon disclosure. The GSF's own SCI specification needs accurate grid carbon intensity as an input. Every measurement tool in the ecosystem is only as good as the data the cloud providers choose to share.
