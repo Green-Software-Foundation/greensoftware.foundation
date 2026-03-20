@@ -152,12 +152,9 @@ const {
     </div>
     <!-- Newsletter signup -->
     <div class="border-t border-white/10 py-6">
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-        <div class="shrink-0">
-          <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
-          <p class="text-xs text-white/60 mt-1">Weekly green software insights</p>
-        </div>
-        <div class="flex-1 max-w-sm">
+      <div class="flex flex-col items-center gap-3 max-w-md mx-auto text-center">
+        <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
+        <div class="w-full">
           <NewsletterForm
             client:visible
             variant="compact"
@@ -165,6 +162,7 @@ const {
             buttonText="Sign up"
           />
         </div>
+        <p class="text-xs text-white/60">Weekly insights on digital sustainability and industry news</p>
       </div>
     </div>
     <div class="border-t border-white/10 py-4">
