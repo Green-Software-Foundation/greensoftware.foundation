@@ -1,9 +1,9 @@
 ---
 title: "Our pilots work but nothing scales across the org"
 summary: >
-  How Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations
+  How Pindy Bhullar, Sean O'Keefe, and contributors from seven GSF member organisations
   built SOFT — the Sustainable Organisational Framework for Technology — the first
-  ratified standard for embedding green software practices across an entire organisation.
+  ratified framework for embedding green software practices across an entire organisation.
 
 mainImage: /assets/stories/soft-framework.png
 problemHeading: The tools existed — but nothing could cross departmental boundaries
@@ -13,29 +13,27 @@ orgs:
   - name: HSBC
     logo: /assets/logos/hsbc.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
+    logo: /assets/logos/microsoft.webp
   - name: NTT DATA
     logo: /assets/logos/ntt-data.png
   - name: Siemens
     logo: /assets/logos/siemens.png
   - name: UBS
     logo: /assets/logos/ubs.png
-  - name: Cisco
-    logo: /assets/logos/cisco.svg
   - name: Avanade
     logo: /assets/logos/avanade.webp
-  - name: BCG X
-    logo: /assets/logos/bcg.png
+  - name: Amadeus
+    logo: /assets/logos/amadeus.jpg
 
 stats:
-  - value: "8"
+  - value: "4"
+    label: Operational domains — Strategy, Implementation, Operational, Compliance
+  - value: "100+"
+    label: Ready-to-use templates — from governance structures to carbon calculations — accelerate your implementation
+  - value: "7"
     label: Companies contributed to building the framework
   - value: "4"
     label: Global organisations piloting SOFT as of October 2025
-  - value: "4"
-    label: Operational domains — Strategy, Implementation, Operational, Compliance
-  - value: "2025"
-    label: Year SOFT was ratified as the first org-wide green software framework
 
 timeline:
   - date: Personal origins
@@ -72,8 +70,8 @@ timeline:
       Sustainable Software) within the GSF Standards Working Group. Co-chaired with
       Sean O'Keefe from Microsoft, the project was designed to address carbon emissions
       holistically — recognising that carbon emissions from software don't fall solely
-      under technology departments. Eight member organisations joined the effort: HSBC,
-      Microsoft, Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS.
+      under technology departments. Seven member organisations joined the effort: HSBC,
+      Microsoft, Avanade, Amadeus, NTT DATA, Siemens, and UBS.
     source:
       text: About the SOFT project
       href: https://directory.greensoftware.foundation/projects/soft/
@@ -121,10 +119,7 @@ contributors:
     role: Engineer
     org: Microsoft
     contribution: Co-chair of the SOFT project, bringing Microsoft's organisational transformation experience to the framework design.
-  - name: Gadhu Sundaram
-    role: VP of Application Service
-    org: NTT DATA UK
-    contribution: Demonstrated how collaborative, standards-based efforts can scale green software practices across global clients.
+
 
 quotes:
   - text: >
