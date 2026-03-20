@@ -93,8 +93,7 @@ const {
             {subtitle}
           </h6>
         )}
-        <p class="mt-5 text-lg font-normal md:mt-6 md:text-xl lg:text-2xl">
-          {body}
+        <p class="mt-5 text-lg font-normal md:mt-6 md:text-xl lg:text-2xl" set:html={body}>
         </p>
         {ctas.length > 0 && (
           <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
