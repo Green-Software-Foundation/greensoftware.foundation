@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import TextWithImage from "@/components/text-with-image.astro";
+import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
@@ -113,7 +114,7 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     ctas={[
       { text: "Our standards process", variant: "outline", href: "/standards/" },
     ]}
-    imageSrc="/assets/dive-illustration.svg"
+    imageSrc="/assets/assemblies-hero-illustration.svg"
     imageAlt="Assemblies illustration"
     bgClass="bg-accent-lightest-2"
     scrollIndicator
@@ -193,15 +194,14 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
   )}
 
   <!-- How Assemblies Work -->
-  <TextWithImage
-    heading="From problem to"
-    headingAccent="ratified standard"
+  <CTACard
+    heading="From problem to *ratified standard*"
     body="Every assembly starts with a challenge that one organisation can't solve alone. We bring together experts from across the industry, give them structured questions, and use AI synthesis to accelerate consensus. Human review, iterative refinement, and explicit decision gates at every stage ensure quality — but at a pace traditional standards bodies can't match."
     ctaText="Learn about our standards process →"
     ctaHref="/standards/"
-    imageSrc="/assets/why-wdpc-feat-1.svg"
+    imageSrc="/assets/assemblies-process-illustration.svg"
     imageAlt="Assembly process illustration"
-    bgClass="bg-white"
+    variant="dark"
   />
 
   <FeatureGrid

@@ -133,13 +133,13 @@ export const TabbedSection = (props: Props) => {
           reversed && "lg:order-1",
         )}
       >
-        <div className="flex items-center justify-center overflow-hidden">
+        <div className="flex w-full items-center justify-center overflow-hidden">
           {hasPerTabImages
             ? tabs.map((tab) => (
                 <TabsContent
                   key={tab.value}
                   value={tab.value}
-                  className="flex items-center justify-end data-[state=active]:animate-tabs"
+                  className="flex w-full items-center justify-end data-[state=active]:animate-tabs"
                 >
                   {tab.image && (
                     <Img
