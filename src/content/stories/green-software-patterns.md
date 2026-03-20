@@ -1,9 +1,9 @@
 ---
 title: "Engineers know the theory but not what to change in code"
 summary: >
-  How NTT DATA, Goldman Sachs, AVEVA, and contributors from 11 organisations built the
-  Green Software Patterns catalogue — a peer-reviewed library of actionable techniques
-  for reducing software emissions, with measurable before-and-after impact.
+  How NTT DATA, Goldman Sachs, Accenture, AVEVA, and contributors from 11 organisations
+  built the Green Software Patterns catalogue — a peer-reviewed library of actionable
+  techniques for reducing software emissions, with measurable before-and-after impact.
 
 mainImage: /assets/stories/green-software-patterns.png
 problemHeading: The knowledge existed in fragments — but there was no single trusted source of actionable patterns
@@ -58,9 +58,9 @@ timeline:
   - date: "2023"
     heading: NTT DATA turns patterns into measurable interventions
     body: >
-      NTT DATA Germany built a patterns accelerator — enabling before-and-after SCI
-      measurement for each pattern. Franziska Warncke and Denis Angeletta developed a
-      comprehensive methodology for serverless applications on AWS, using Lambda, DynamoDB,
+      NTT DATA Germany developed a methodology for measuring the carbon impact of a
+      specific pattern. Franziska Warncke and Denis Angeletta created a comprehensive
+      measurement approach for serverless applications on AWS, using Lambda, DynamoDB,
       S3, and API Gateway with k6 load testing to generate comparable emission values.
       Their "Reduce transmitted data" pattern test demonstrated approximately 4% carbon
       reduction — proving patterns weren't theoretical advice but quantifiable interventions.
@@ -100,6 +100,12 @@ featuredQuote:
   author: Design Thinking Workshop participants, Green Software Foundation
 
 contributors:
+  - name: Bill Johnson
+    role: Principal Software Engineering Manager
+    org: Microsoft
+    contribution: >
+      Core contributor to the Green Software Patterns catalogue, bringing Microsoft's
+      engineering perspective to pattern development and review.
   - name: Franziska Warncke
     role: Project Co-Lead, Green Software Patterns
     org: NTT DATA
@@ -112,24 +118,36 @@ contributors:
     contribution: >
       Co-leading the vision and execution of Green Software Patterns v2 with Franziska
       Warncke, bringing Goldman Sachs's software engineering perspective to the roadmap.
-  - name: Denis Angeletta
-    role: Engineer
-    org: NTT DATA
+  - name: Navveen Balani
+    role: Software Standards Working Group Chair
+    org: Accenture
     contribution: >
-      Co-developed the serverless carbon footprint methodology and SCI calculator,
-      including a novel network emissions approach using VPC Flow Logs and Athena.
+      Core contributor and working group chair, bringing Accenture's sustainability
+      expertise to the patterns catalogue development and review process.
   - name: Daniel Lazaro
     role: Senior Technical Program Manager
     org: AVEVA
     contribution: >
       Contributed to the design thinking workshop and the catalogue's strategic evolution,
       representing AVEVA's perspective on patterns for industrial software.
-  - name: Gadhu Sundaram
-    role: VP of Application Services
-    org: NTT DATA
+  - name: Sarah Hsu
+    role: Site Reliability Engineer
+    org: Goldman Sachs
     contribution: >
-      Demonstrated how NTT DATA Germany built a patterns accelerator enabling before-and-after
-      SCI measurement for each pattern — turning the catalogue into a measurable tool.
+      Core contributor to the patterns catalogue, bringing site reliability and
+      operational sustainability expertise from Goldman Sachs.
+  - name: Markus Seidl
+    role: Core Contributor
+    org: Green Software Foundation
+    contribution: >
+      Core contributor to the Green Software Patterns catalogue development and
+      review process.
+  - name: Yassine El Ghali
+    role: Core Contributor
+    org: Green Software Foundation
+    contribution: >
+      Core contributor to the Green Software Patterns catalogue development and
+      review process.
 
 quotes:
   - text: >
