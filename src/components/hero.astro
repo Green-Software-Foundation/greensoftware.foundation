@@ -125,13 +125,26 @@ const {
 </section>
 {scrollIndicator && (
   <script>
-    import { DotLottie } from "@lottiefiles/dotlottie-web";
-
-    new DotLottie({
-      autoplay: true,
-      loop: true,
-      canvas: document.querySelector("#hero-decor") as HTMLCanvasElement,
-      src: "/assets/hero-decor.lottie",
-    });
+    const canvas = document.querySelector("#hero-decor") as HTMLCanvasElement | null;
+    if (canvas) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(async (entry) => {
+            if (entry.isIntersecting) {
+              observer.disconnect();
+              const { DotLottie } = await import("@lottiefiles/dotlottie-web");
+              new DotLottie({
+                autoplay: true,
+                loop: true,
+                canvas,
+                src: "/assets/hero-decor.lottie",
+              });
+            }
+          });
+        },
+        { rootMargin: "200px" },
+      );
+      observer.observe(canvas);
+    }
   </script>
 )}
