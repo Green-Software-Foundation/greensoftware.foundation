@@ -432,3 +432,15 @@ import Footer from "@/components/footer.astro";
 
   <Footer />
 </Layout>
+
+<script>
+  // Track membership enquiry mailto clicks
+  document.addEventListener("click", (e) => {
+    const link = (e.target as HTMLElement).closest("a[href*='mailto:'][href*='Membership']");
+    if (link && (window as any).gtag) {
+      (window as any).gtag("event", "membership_enquiry", {
+        click_location: link.closest("section")?.querySelector("h2, h1")?.textContent?.trim() || "unknown",
+      });
+    }
+  });
+</script>

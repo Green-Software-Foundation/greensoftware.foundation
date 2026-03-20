@@ -465,6 +465,12 @@ const vis = visibilityStyle(assembly.visibility);
               successEl?.classList.remove("hidden");
               // Scroll to success message
               document.getElementById("form-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
+              // Track assembly application in GA4
+              if ((window as any).gtag) {
+                (window as any).gtag("event", "assembly_application", {
+                  assembly_name: (formData.get("assembly-name") as string) || "",
+                });
+              }
             } else {
               throw new Error("Submission failed");
             }

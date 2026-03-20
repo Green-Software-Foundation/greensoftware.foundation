@@ -2,79 +2,62 @@
 
 ## Next Up
 
-- [ ] **Published flags for stories & articles** — add `published` boolean to success stories and articles frontmatter so unpublished content can be excluded from builds
-- [ ] **Domain: .org → .foundation** — update site URL, links, and references from greensoftware.org back to greensoftware.foundation
-- [ ] **Evaluate Keystatic** — check out [Keystatic](https://keystatic.com/) as an alternative CMS to Sveltia
+- [ ] **Google Analytics (GA4)** — configure GA4 for the new site, add tracking script to layout, define key events/conversions, set up automated email reports from GA4 and search console. Consider annotation strategy for the website migration from greensoftware.org.
 - [ ] **Legacy redirects** — create redirects from old page paths to new pages (in `netlify.toml` or `_redirects`)
-- [ ] **Update rollout plan** — revise the greensoftware.org rollout plan with current status and next steps
-- [ ] **Google Analytics (GA4)** — configure GA4 for the new site, define key events/conversions to track
-- [ ] **Analytics & search reporting** — set up automated email reports from GA4 and search console to the team
 
-## Quick Fixes (href changes, swaps, deletions — no new pages)
+## Backlog
 
-- [x] **Homepage testimonial** — replaced with Gadhu Sundaram (GSF Chair) quote
-- [x] **Homepage story links** — wired TabbedSection CTAs to story pages (practitioner, sci-measurement, soft-framework, sci-for-ai, ai-accelerated-consensus)
-- [x] **Homepage map image** — replace current image with the map from Genya
-- [x] **Remove logos from featured content** — set `showOrganizations={false}` on ArticleCarousel
-- [x] **"Explore membership" CTA** → `/membership/`
-- [x] **"Implementing in your engineering team" CTA** → `/education/` (placeholder — page needs building)
-- [x] **"Want to contribute?" CTA** → `/community/` (placeholder — page needs building)
-- [x] **"Discuss your challenge with us"** → `/membership/` (Hero, CTACard, CTABanner)
-- [x] **Membership page story links** — updated with real story data/links from content collection
-- [x] **Nav menu link updates** — most links already correct; updated: Policy Radar → `policy-radar.greensoftware.foundation`, Assemblies → `assemblies.greensoftware.foundation`, State of Green Software → `stateof.greensoftware.foundation`, CXO Bytes → `wiki.greensoftware.foundation/cxo-bytes-podcast`, Community Platform → Movement Platform (`movement.greensoftware.foundation`), Carbon Hack → `hack.greensoftware.foundation/`, Success Stories → Member Stories (`/stories/`), Press & Media → `/press/`. Footer dropdown links renamed to "About our standards/policy/community programme →". Removed Partners directory. Membership page now uses shared `navItems` from `nav-items.ts`.
-- [x] **Remove Partners directory** from nav
-- [x] **Footer update** — updated homepage and membership page footers with real URLs
-- [x] **Nav project icons** — fetch official icons from directory project, update navbar data
-- [x] **Standards nav label** — rename to something like "Our standards process" and restructure dropdown
-- [ ] **Google Analytics** — add tracking script to the site layout
-- [x] **Component playground** — Astrobook at `/playground/` with 24 components, 51 story variants
 - [ ] [Asset deduplication](docs/features/asset-deduplication.md) — scan for duplicate images, consolidate, add asset registry to CLAUDE.md
-- [x] **404 page** — created `src/pages/404.astro`
-
-## Find from Notion (batch session — just need to locate the right Notion pages/URLs)
-
-- [x] **Members Playbook** → `wiki.greensoftware.foundation/getting-started` (labelled "Getting Started")
-- [x] **Members Onboarding** → `wiki.greensoftware.foundation/orientation`
-- [x] **Employee Registration** → `wiki.greensoftware.foundation/register`
-- [x] **Contact form** — find the existing form (there should be one already)
-- [x] **Press & Media content** — find in Notion, will need importing
-- [x] **Brand & Assets** — built `/brand/` page with colour palette, logos, asset downloads, Canva templates, official description
-- [x] **Newsletter page/form** — verify if a signup page exists, or find the form URL to create one
-
-## Medium Effort (a few hours each)
-
-- [x] **Member stories as content collection** — stories wired as Astro content collection with dynamic `[slug].astro` template
-- [x] **Manifesto page** — migrate existing content from legacy site into a new Astro page
-- [x] **Newsletter page** — simple "join our newsletter" page with signup form (once Notion form URL is found)
-- [x] **Search (PageFind)** — integrated PageFind for static site search with custom React dialog, phrase search, English-only indexing, keyboard shortcut (Cmd+K)
-- [x] **Governance & Leadership team fix** — fixed Person/Role property type swap (title vs rich_text) and added direct photo download from GSF Team DB
-- [x] **Footer update** — updated homepage and membership footers with real URLs
-- [ ] **Roll out to greensoftware.org** — DNS + Netlify config for production domain
-- [x] [Centralised data layer](docs/features/data-layer.md) — Notion UUIDs in all exported JSON, typed query functions in `src/lib/data.ts`, ID-based lookups replacing name-based references, build-time warnings for unresolved IDs, static `/api/` endpoints for cross-microsite consumption
-
-## Bigger Pieces (new pages, need content decisions + creative session)
-
-- [x] **Standards page** — built `/standards/` with lifecycle pipeline, dynamic project cards from projects.json, AI consensus section, assemblies, spec quality grid
-- [x] **Policy & Research page** — built `/policy/` with PWG leadership, Policy Radar, engagement cards, principles, partnerships, research publications, tagged article carousel
-- [x] **About page** — built `/about/` with mission, vision, values, founding story, structure, what we do, stats
-- [x] **Education page** — built `/education/` landing page
-- [x] **Community landing page** — built `/community/` with podcasts, meetups, events, Champions, Movement Platform
-- [-] **History page** — GSF timeline/history (needs figuring out and building)
-- [ ] **Assemblies page** — own page eventually; link out to existing assemblies page for now
-- [x] **Press & Media section** — import content from Notion sources into a new page/section
-- [x] **Certification page** — built `/standards/certification/` (SCI self-attestation programme, membership benefit)
-- [x] **SEE page** — build `/standards/see/` detail page for the Software Energy Efficiency standard
-- [x] **SCI for Web page** — build `/standards/sci-web/` detail page (similar pattern to sci, sci-ai)
-- [ ] **Carbon Aware SDK site** — create a dedicated project page (or microsite) for the Carbon Aware SDK
-- [ ] **Impact Framework site** — create a dedicated project page (or microsite) for the Impact Framework
-- [ ] **Claude Desktop content updates** — implement workflow so content can be updated directly from Claude Desktop (MCP / structured content editing)
-- [~] **Roll out to greensoftware.org** — code pushed to `Green-Software-Foundation/greensoftware.org` repo; Netlify site `greensoftware-org` created, env vars set, live at `greensoftware-org.netlify.app`. Remaining: (1) connect GitHub App in Netlify UI for auto-deploy on push, (2) add custom domain once DNS is ready, (3) add foundation → org redirect rule to existing `netlify.toml`
 
 ## Done
 
-- [x] Notion fetch script: flat logos directory (merged steering/general into single `public/assets/logos/`)
-- [x] Notion fetch script: historical members (fetch all statuses, `active` flag on each record)
-- [x] Notion fetch script: skip-if-exists for image downloads (`--force` flag to override)
-- [x] Notion fetch script: performance optimisation (pre-fetch volunteers, caches, parallel PWCI lookups — 5.5min → 2.5min)
-- [x] Member stories: 13 problem-first stories mined from 188 legacy articles (`docs/content/stories/original/`)
-- [x] RTC story: Real-Time Cloud standard story researched and written
+- [x] **Published flags for stories & articles** — added `published` boolean to frontmatter to exclude unpublished content
+- [x] **Domain: .org → .foundation** — updated site URL, links, and references
+- [x] **Update rollout plan** — revised rollout plan with current status
+- [x] **Roll out to greensoftware.foundation** — code pushed, Netlify site created, env vars set, live
+- [x] **Assemblies page** — built and linked
+- [x] **Claude Desktop content updates** — MCP workflow implemented
+- [x] **Homepage testimonial** — replaced with Gadhu Sundaram (GSF Chair) quote
+- [x] **Homepage story links** — wired TabbedSection CTAs to story pages
+- [x] **Homepage map image** — replaced with map from Genya
+- [x] **Remove logos from featured content** — set `showOrganizations={false}` on ArticleCarousel
+- [x] **"Explore membership" CTA** → `/membership/`
+- [x] **"Implementing in your engineering team" CTA** → `/education/`
+- [x] **"Want to contribute?" CTA** → `/community/`
+- [x] **"Discuss your challenge with us"** → `/membership/`
+- [x] **Membership page story links** — updated with real story data/links
+- [x] **Nav menu link updates** — all links updated
+- [x] **Remove Partners directory** from nav
+- [x] **Footer update** — updated with real URLs
+- [x] **Nav project icons** — fetched from directory project
+- [x] **Standards nav label** — restructured dropdown
+- [x] **Component playground** — Astrobook at `/playground/`
+- [x] **404 page** — created `src/pages/404.astro`
+- [x] **Members Playbook** → `wiki.greensoftware.foundation/getting-started`
+- [x] **Members Onboarding** → `wiki.greensoftware.foundation/orientation`
+- [x] **Employee Registration** → `wiki.greensoftware.foundation/register`
+- [x] **Contact form** — found existing form
+- [x] **Press & Media content** — imported from Notion
+- [x] **Brand & Assets** — built `/brand/` page
+- [x] **Newsletter page/form** — signup page created
+- [x] **Member stories as content collection** — Astro content collection with dynamic template
+- [x] **Manifesto page** — migrated from legacy site
+- [x] **Newsletter page** — signup form page
+- [x] **Search (PageFind)** — static search with custom React dialog
+- [x] **Governance & Leadership team fix** — fixed property types, added photo download
+- [x] [Centralised data layer](docs/features/data-layer.md) — Notion UUIDs, typed queries, ID-based lookups
+- [x] **Standards page** — `/standards/` with lifecycle pipeline, project cards
+- [x] **Policy & Research page** — `/policy/` with PWG leadership, engagement, research
+- [x] **About page** — `/about/` with mission, vision, values, founding story
+- [x] **Education page** — `/education/` landing page
+- [x] **Community landing page** — `/community/` with podcasts, meetups, Champions
+- [x] **Press & Media section** — imported from Notion
+- [x] **Certification page** — `/standards/certification/`
+- [x] **SEE page** — `/standards/see/`
+- [x] **SCI for Web page** — `/standards/sci-web/`
+- [x] Notion fetch script: flat logos directory
+- [x] Notion fetch script: historical members
+- [x] Notion fetch script: skip-if-exists for image downloads
+- [x] Notion fetch script: performance optimisation (5.5min → 2.5min)
+- [x] Member stories: 13 problem-first stories
+- [x] RTC story: Real-Time Cloud standard story
