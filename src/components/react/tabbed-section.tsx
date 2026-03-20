@@ -187,6 +187,8 @@ export const TabbedSection = (props: Props) => {
                       src={org.logo}
                       alt={org.name}
                       title={org.name}
+                      width={80}
+                      height={24}
                       className="h-6 w-auto max-w-[80px] shrink-0 object-contain brightness-0 invert opacity-60"
                     />
                   ))}

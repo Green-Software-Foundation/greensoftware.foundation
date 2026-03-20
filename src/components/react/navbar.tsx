@@ -132,7 +132,11 @@ function NavIcon({ link }: { link: NavLink }) {
   if (link.iconSrc) {
     return (
       <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center">
-        <img src={link.iconSrc} alt="" className="max-h-8 max-w-8 object-contain" />
+        <img
+          src={link.iconSrc}
+          alt=""
+          className="max-h-8 max-w-8 object-contain"
+        />
       </span>
     );
   }
@@ -160,7 +164,9 @@ function MegaMenuLink({ link }: { link: NavLink }) {
       <div className="flex flex-col gap-0.5">
         <span className="flex items-center gap-1 text-sm font-medium text-primary-dark group-hover/link:text-primary">
           {link.label}
-          {link.external && <ExternalLink className="size-3 text-gray-darker" />}
+          {link.external && (
+            <ExternalLink className="size-3 text-gray-darker" />
+          )}
         </span>
         {link.description && (
           <span className="text-xs leading-snug text-gray-darker">
@@ -417,11 +423,17 @@ const NavigationComponent = ({
 
       {/* Search */}
       {showSearch && (
-        <Suspense fallback={
-          <button type="button" className="hidden rounded-md p-2 text-gray-darker lg:block" aria-label="Search">
-            <Search className="size-5" />
-          </button>
-        }>
+        <Suspense
+          fallback={
+            <button
+              type="button"
+              className="hidden rounded-md p-2 text-gray-darker lg:block"
+              aria-label="Search"
+            >
+              <Search className="size-5" />
+            </button>
+          }
+        >
           <SearchDialog />
         </Suspense>
       )}
@@ -430,12 +442,21 @@ const NavigationComponent = ({
       <div className="lg:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="outline" className="p-2 text-gray-darker">
+            <Button
+              variant="outline"
+              className="p-2 text-gray-darker"
+              aria-label="Open menu"
+            >
               <Menu className="size-5" />
             </Button>
           </SheetTrigger>
           <SheetContent className="overflow-y-auto">
-            <MobileNav items={items} onNavigate={() => setIsOpen(false)} ctaText={ctaText} ctaHref={ctaHref} />
+            <MobileNav
+              items={items}
+              onNavigate={() => setIsOpen(false)}
+              ctaText={ctaText}
+              ctaHref={ctaHref}
+            />
           </SheetContent>
         </Sheet>
       </div>
