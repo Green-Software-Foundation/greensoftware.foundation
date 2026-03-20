@@ -1,0 +1,106 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import { fetchWhitepapers } from "@/lib/whitepapers";
+
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeStringify from "rehype-stringify";
+
+export async function getStaticPaths() {
+  const papers = await fetchWhitepapers();
+  return papers.map((paper) => ({
+    params: { slug: paper.slug },
+    props: { paper },
+  }));
+}
+
+const { paper } = Astro.props;
+
+const result = await unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, { behavior: "wrap" })
+  .use(rehypeStringify)
+  .process(paper.content);
+
+const html = String(result);
+---
+
+<Layout
+  title={`${paper.title} — Green Software Foundation`}
+  description={`${paper.title} — a white paper from the Green Software Foundation Policy Working Group.`}
+>
+  <Navbar
+    navItems={navItems}
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Breadcrumb + header -->
+  <div class="bg-primary-darker text-white">
+    <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
+      <div class="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/policy/" class="hover:text-white transition-colors">Policy & Research</a></li>
+            <li class="text-white/30">/</li>
+            <li><a href="/policy/whitepapers/" class="hover:text-white transition-colors">Whitepapers</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80 truncate max-w-[300px]">{paper.title}</li>
+          </ol>
+        </nav>
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Whitepaper</p>
+        <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight">
+          {paper.title}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Whitepaper content -->
+  <div class="bg-white">
+    <div class="container py-16 md:py-20">
+      <div class="max-w-4xl mx-auto prose prose-lg max-w-none
+        prose-headings:text-primary prose-headings:font-extrabold
+        prose-a:text-primary prose-a:underline hover:prose-a:text-primary-dark
+        prose-strong:text-primary-dark
+        prose-table:border-collapse prose-th:bg-primary-lightest-2 prose-th:p-3 prose-td:p-3 prose-td:border prose-td:border-border prose-th:border prose-th:border-border
+      ">
+        <Fragment set:html={html} />
+      </div>
+    </div>
+  </div>
+
+  <CTABanner
+    heading="Want to get involved?"
+    body="Join the Policy Working Group and contribute to shaping green software policy worldwide."
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
