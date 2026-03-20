@@ -45,7 +45,11 @@ export function ArticleCarousel({
   ctaText,
   ctaHref,
 }: Props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    containScroll: false,
+  });
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();

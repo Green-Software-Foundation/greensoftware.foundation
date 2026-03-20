@@ -10,9 +10,10 @@ import { Card } from "@/components/ui/card";
 import Image from "@/components/image.astro";
 import { navItems } from "@/lib/nav-items";
 import membersData from "@/data/members.json";
+import peopleData from "@/data/people.json";
 
 export async function getStaticPaths() {
-  const stories = await getCollection("stories", (s) => !!s.data.timeline);
+  const stories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.timeline);
   return stories.map((story) => ({
     params: { slug: story.id },
     props: { story },
@@ -29,7 +30,7 @@ const {
 
 // ── Related articles ──────────────────────────────────────────────────────────
 const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))
   .filter(Boolean)
@@ -48,6 +49,13 @@ const relatedArticles = relatedSlugs
 function initials(name: string) {
   return name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
 }
+
+// Auto-resolve contributor photos from people.json
+const personByName = new Map((peopleData as any[]).map((p: any) => [p.fullName, p]));
+const resolvedContributors = contributors.map((c: any) => {
+  const found = personByName.get(c.name);
+  return { ...c, photo: c.photo ?? found?.photo ?? null };
+});
 ---
 
 <Layout title={`${title} — GSF Member Story`} description={summary}>
@@ -202,13 +210,16 @@ function initials(name: string) {
           </svg>
           <p class="font-extrabold text-3xl md:text-4xl leading-tight mb-6">{featuredQuote.text}</p>
           <p class="text-white/70 font-semibold">{featuredQuote.author}</p>
+          {featuredQuote.role && (
+            <p class="text-white/50 text-sm mt-1">{featuredQuote.role}</p>
+          )}
         </div>
       </div>
     </div>
   )}
 
   <!-- ── Who came together ─────────────────────────────────────────────────── -->
-  {contributors.length > 0 && (
+  {resolvedContributors.length > 0 && (
     <div class="bg-white">
       <div class="container py-16 md:py-20">
         <div class="max-w-4xl mx-auto">
@@ -218,7 +229,7 @@ function initials(name: string) {
             The people who made it happen
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-            {contributors.map(person => (
+            {resolvedContributors.map(person => (
               <Card className="flex flex-col items-center p-6 text-center h-full">
                 <div class="mb-4 flex w-20 h-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2 shrink-0">
                   {person.photo ? (
@@ -264,7 +275,7 @@ function initials(name: string) {
   </div><!-- end data-pagefind-body -->
 
   <!-- ── Related articles ──────────────────────────────────────────────────── -->
-  {relatedArticles.length > 0 && (
+  {relatedArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related articles"
       articles={relatedArticles}
@@ -277,8 +288,8 @@ function initials(name: string) {
     <CTABanner
       heading={cta.heading}
       body={cta.body}
-      ctaText="Discuss your challenges with us"
-      ctaHref="/membership/"
+      ctaText={cta.ctaText || "Discuss your challenges with us"}
+      ctaHref={cta.ctaHref || "/membership/"}
       note={cta.note}
     />
   )}

@@ -25,6 +25,7 @@ const articles = defineCollection({
     z.object({
       title: z.string(),
       date: z.coerce.date(),
+      published: z.boolean().default(true),
       summary: z.string(),
       teaserText: z.string().optional(),
       // Co-located image — Astro processes it for optimisation
@@ -48,6 +49,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
+    published: z.boolean().default(true),
     description: z.string().optional(),
   }),
 });
@@ -57,6 +59,7 @@ const research = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
+    published: z.boolean().default(true),
     abstract: z.string(),
     summary: z.string(),
     mainImage: z.string().optional(),
@@ -74,6 +77,7 @@ const stories = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    published: z.boolean().default(true),
     // ── Optional simple fields (legacy / future use) ──────────────────────────
     date: z.coerce.date().optional(),
     challenge: z.string().optional(),
@@ -86,45 +90,75 @@ const stories = defineCollection({
     // ── Rich story fields ─────────────────────────────────────────────────────
     problemHeading: z.string().optional(),
     journeyHeading: z.string().optional(),
-    orgs: z.array(z.object({
-      name: z.string(),
-      logo: z.string().nullable().optional(),
-    })).optional(),
-    stats: z.array(z.object({
-      value: z.string(),
-      label: z.string(),
-    })).optional(),
-    timeline: z.array(z.object({
-      date: z.string(),
-      heading: z.string(),
-      body: z.string(),
-      source: z.object({
+    orgs: z
+      .array(
+        z.object({
+          name: z.string(),
+          logo: z.string().nullable().optional(),
+        }),
+      )
+      .optional(),
+    stats: z
+      .array(
+        z.object({
+          value: z.string(),
+          label: z.string(),
+        }),
+      )
+      .optional(),
+    timeline: z
+      .array(
+        z.object({
+          date: z.string(),
+          heading: z.string(),
+          body: z.string(),
+          source: z
+            .object({
+              text: z.string(),
+              href: z.string(),
+            })
+            .nullable()
+            .optional(),
+        }),
+      )
+      .optional(),
+    featuredQuote: z
+      .object({
         text: z.string(),
-        href: z.string(),
-      }).nullable().optional(),
-    })).optional(),
-    featuredQuote: z.object({
-      text: z.string(),
-      author: z.string(),
-    }).optional(),
-    contributors: z.array(z.object({
-      name: z.string(),
-      role: z.string(),
-      org: z.string(),
-      photo: z.string().nullable().optional(),
-      contribution: z.string(),
-    })).optional(),
-    quotes: z.array(z.object({
-      text: z.string(),
-      author: z.string(),
-      role: z.string(),
-    })).optional(),
+        author: z.string(),
+        role: z.string().optional(),
+      })
+      .optional(),
+    contributors: z
+      .array(
+        z.object({
+          name: z.string(),
+          role: z.string(),
+          org: z.string(),
+          photo: z.string().nullable().optional(),
+          contribution: z.string(),
+        }),
+      )
+      .optional(),
+    quotes: z
+      .array(
+        z.object({
+          text: z.string(),
+          author: z.string(),
+          role: z.string(),
+        }),
+      )
+      .optional(),
     relatedSlugs: z.array(z.string()).optional(),
-    cta: z.object({
-      heading: z.string(),
-      body: z.string(),
-      note: z.string().optional(),
-    }).optional(),
+    cta: z
+      .object({
+        heading: z.string(),
+        body: z.string(),
+        ctaText: z.string().optional(),
+        ctaHref: z.string().optional(),
+        note: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 
