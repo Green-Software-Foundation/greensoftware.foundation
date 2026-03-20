@@ -58,7 +58,7 @@ const resolvedContributors = contributors.map((c: any) => {
 });
 ---
 
-<Layout title={`${title} — GSF Member Story`} description={summary}>
+<Layout title={`${title} — GSF Member Story`} description={summary} ogImage={story.data.mainImage}>
   <Navbar
     navItems={navItems}
     logoSrc="/assets/gsf-logo-full.svg"
