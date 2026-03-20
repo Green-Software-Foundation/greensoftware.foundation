@@ -14,8 +14,6 @@ orgs:
     logo: /assets/logos/goldman-sachs.png
   - name: Avanade
     logo: /assets/logos/avanade.webp
-  - name: HCLTech
-    logo: /assets/logos/hcltech.png
   - name: Microsoft
     logo: /assets/logos/microsoft.svg
   - name: Accenture
@@ -24,18 +22,20 @@ orgs:
     logo: /assets/logos/thoughtworks.svg
   - name: EPAM
     logo: /assets/logos/epam.svg
-  - name: Manchester Metropolitan University
-    logo: /assets/logos/manchester-metropolitan-university.svg
-  - name: GitHub
-    logo: /assets/logos/github.png
+  - name: Amadeus
+    logo: /assets/logos/amadeus.jpg
+  - name: NTT DATA
+    logo: /assets/logos/ntt-data.png
+  - name: Siemens
+    logo: /assets/logos/siemens.png
 
 stats:
   - value: "130,000+"
     label: Engineers who have completed the Green Software Practitioner course
   - value: "50,000+"
     label: Trained in under a year at launch
-  - value: "Free"
-    label: Available to any practitioner through the Green Software Foundation
+  - value: "10"
+    label: Translations available worldwide
 
 timeline:
   - date: Early years
@@ -121,13 +121,6 @@ contributors:
       Drove Avanade's grassroots green software movement from 20 interested people to 3,200
       trained — before the GSP course even existed — through consistent messaging, special
       interest groups, and GSF event sponsorship.
-  - name: Sunil Aggarwal
-    role: Senior Vice President & Global Client Partner
-    org: HCLTech
-    contribution: >
-      Built HCLTech's Sustainability Centre of Excellence with 100+ engineers, a Green
-      Software Engineering Lab in Redmond, and sustainability training reaching around
-      100,000 employees.
   - name: Chris Howard
     role: Head of the Open Source Program Office
     org: EPAM
@@ -135,13 +128,6 @@ contributors:
       Integrated the GSP into EPAM's enterprise learning platforms and aligned it with client
       delivery processes, establishing green software certification as a client-facing
       differentiator and revenue driver.
-  - name: Dr. Michael Bane
-    role: Senior Lecturer
-    org: Manchester Metropolitan University
-    contribution: >
-      Launched a Green Software Engineering course at Manchester Met and worked with
-      Dr. Ernest Edifor to embed green software across UK university curricula.
-
 quotes:
   - text: >
       I would like to see green software engineering become an integral part of the
