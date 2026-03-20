@@ -4,6 +4,8 @@
 
 **IMPORTANT: Never commit without explicit permission from the user. Always ask before committing, even if the work appears complete.**
 
+**IMPORTANT: Never push to any remote branch unless the user explicitly says "push". Every push triggers a Netlify build that costs money. Commit locally and tell the user what to push.**
+
 **IMPORTANT: Always restart the dev server yourself after making changes — never ask the user to do it. Kill the existing process on port 4322, then run `npm run dev -- --port 4322` in the background.**
 
 **IMPORTANT: Article links must use `/articles/<slug>/`, NOT `/articles/en/<slug>/`. English is the default language — including `/en/` would break when the site is translated. The `en/` prefix exists in the content directory structure but should never appear in URLs.**
