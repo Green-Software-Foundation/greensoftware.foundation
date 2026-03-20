@@ -1,5 +1,5 @@
 ---
-title: "We can't measure AI's carbon footprint"
+title: "How do you measure AI's carbon footprint?"
 summary: >
   How 20+ partner organisations came together to build the SCI for AI — the first
   consensus-based standard for measuring the carbon footprint of AI systems across

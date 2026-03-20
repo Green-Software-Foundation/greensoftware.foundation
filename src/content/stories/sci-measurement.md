@@ -1,5 +1,5 @@
 ---
-title: "We can't measure software carbon"
+title: "How do you measure software's carbon footprint?"
 summary: >
   How Abhishek Gupta, Henry Richardson, Navveen Balani, and contributors from
   across the industry built the Software Carbon Intensity specification — a rate-based
@@ -29,14 +29,14 @@ orgs:
     logo: /assets/logos/texas-state-university.svg
 
 stats:
-  - value: ISO 21031:2024
-    label: The SCI became an internationally recognised ISO standard in under three years
+  - value: ISO
+    label: The SCI achieved ISO 21031:2024 status — an internationally recognised standard
   - value: "7+"
     label: Independent implementations with published results across banking, consulting, and infrastructure
   - value: "15.1%"
     label: Average CO₂ saved per application at Autostrade per l'Italia across 60 applications
-  - value: "400 kg"
-    label: CO₂ reduction per year from fixing just ten green code deficiencies in a single enterprise application
+  - value: "< 3 years"
+    label: From alpha release to ISO standard — a process that typically takes five to seven years
 
 timeline:
   - date: "2021"
