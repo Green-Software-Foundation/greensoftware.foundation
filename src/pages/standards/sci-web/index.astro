@@ -4,7 +4,6 @@ import { navItems } from "@/lib/nav-items";
 
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
-import LogoMarquee from "@/components/logo-marquee.astro";
 import CTACard from "@/components/cta-card.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import TextBlock from "@/components/text-block.astro";
@@ -77,18 +76,13 @@ const carouselArticles = allArticles
     headingAccent="the Web"
     body="Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. SCI for Web extends the ISO-accredited Software Carbon Intensity standard to web applications — covering servers, networks, third-party services, and end-user devices."
     ctas={[
-      { text: "Read the Design Document", variant: "primary", href: "/articles/en/sci-web-assembly-report/" },
-      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+      { text: "Read the Design Document", variant: "primary", href: "/articles/sci-web-assembly-report/" },
+      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-web-(sci-for-web)/" },
     ]}
     imageSrc="/assets/standards/sci-web/hero-illustration.svg"
     imageAlt="SCI for Web illustration"
     bgClass="bg-accent-lightest-2"
     id="overview"
-  />
-
-  <!-- Logo Marquee -->
-  <LogoMarquee
-    heading="Developed with expertise from leading technology organisations"
   />
 
   <!-- What is SCI for Web? -->
@@ -333,7 +327,7 @@ const carouselArticles = allArticles
     heading="Built by Consensus in 10 Weeks"
     body="Fourteen GSF members from fifteen organisations — including Accenture, Google, Microsoft, NTT DATA, and the Green Web Foundation — piloted an AI-assisted assembly process that moved from a blank page to a consensus design document in just ten weeks. Participants answered structured questions, an LLM synthesised responses into draft content, and the group reviewed and refined through multiple rounds until all objections were resolved."
     ctaText="Read the full assembly report"
-    ctaHref="/articles/en/sci-web-assembly-report/"
+    ctaHref="/articles/sci-web-assembly-report/"
     imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
     imageAlt="Assembly process illustration"
   />
@@ -422,7 +416,7 @@ const carouselArticles = allArticles
         title: "Read the Design Document",
         description: "Explore the consensus positions on scope, personas, and evaluation criteria",
         ctaText: "Read Document",
-        ctaHref: "/articles/en/sci-web-assembly-report/",
+        ctaHref: "/articles/sci-web-assembly-report/",
         featured: true,
       },
       {
@@ -455,7 +449,7 @@ const carouselArticles = allArticles
     heading="The web serves billions — let's make it sustainable"
     body="SCI for Web provides the first standardised, SCI-aligned methodology for measuring web application emissions. Whether you're a developer, product owner, or sustainability professional, your expertise can help shape how the industry measures and reduces the web's carbon footprint."
     ctaText="Read the Design Document"
-    ctaHref="/articles/en/sci-web-assembly-report/"
+    ctaHref="/articles/sci-web-assembly-report/"
   />
 
   <Footer />

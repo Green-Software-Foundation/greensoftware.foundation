@@ -38,9 +38,13 @@ const cardColumnClasses: Record<number, string> = {
 const borderedColumnClasses: Record<number, string> = {
   2: "md:grid-cols-2",
   3: "md:grid-cols-2 lg:grid-cols-3",
-  4: "md:grid-cols-2",
+  4: "md:grid-cols-2 lg:grid-cols-4",
   5: "md:grid-cols-3 lg:grid-cols-5",
 };
+
+// Actual column counts at each responsive breakpoint for bordered variant border logic
+const borderedMdCols: Record<number, number> = { 2: 2, 3: 2, 4: 2, 5: 3 };
+const borderedLgCols: Record<number, number> = { 2: 2, 3: 3, 4: 4, 5: 5 };
 
 const {
   heading = "",
@@ -52,6 +56,28 @@ const {
   compact = false,
   bgClass = "bg-accent-lightest-2",
 } = Astro.props;
+
+// Compute responsive border classes for bordered variant
+const mdCols = borderedMdCols[columns] ?? columns;
+const lgCols = borderedLgCols[columns] ?? columns;
+
+function borderedBorderClasses(index: number): string[] {
+  const classes: string[] = [];
+  const mdLeft = index % mdCols !== 0;
+  const lgLeft = index % lgCols !== 0;
+  const mdTop = index >= mdCols;
+  const lgTop = index >= lgCols;
+
+  if (mdLeft && lgLeft) classes.push("md:border-l");
+  else if (mdLeft && !lgLeft) classes.push("md:border-l", "lg:border-l-0");
+  else if (!mdLeft && lgLeft) classes.push("lg:border-l");
+
+  if (mdTop && lgTop) classes.push("md:border-t");
+  else if (mdTop && !lgTop) classes.push("md:border-t", "lg:border-t-0");
+  else if (!mdTop && lgTop) classes.push("lg:border-t");
+
+  return classes;
+}
 
 // Split heading into plain and accent segments
 const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
@@ -83,8 +109,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
             <div class:list={[
               "relative px-2 py-6 md:p-10",
               "border-primary-lighter",
-              index % columns !== 0 && "md:border-l",
-              index >= columns && "md:border-t",
+              ...borderedBorderClasses(index),
             ]}>
               <div class="flex flex-col items-start">
                 {feature.icon && (
