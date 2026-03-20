@@ -150,6 +150,45 @@ Images are co-located with the English article and shared across translations.
 3. The new locale tab will appear in the CMS editor immediately
 4. No other config changes are needed — translations are opt-in
 
+## Article carousels & tagging
+
+Article carousels appear automatically on pages across the site. You control which articles appear where by setting **tags** and the **featured** flag in each article's frontmatter.
+
+### Tags reference
+
+Add one or more of these tags to an article to make it appear on the corresponding page:
+
+| Tag | Page it appears on |
+| --- | --- |
+| `standards` | [Standards overview](/standards/) |
+| `sci` | [SCI standard](/standards/sci/) |
+| `sci-web` | [SCI for Web standard](/standards/sci-web/) |
+| `sci-ai` | [SCI for AI standard](/standards/sci-ai/) |
+| `rtc` | [Real-Time Cloud](/standards/rtc/) |
+| `see` | [Software Emissions Estimator](/standards/see/) |
+| `soft` | [SCI Open Footprint](/standards/soft/) |
+| `wdpc` | [Web & Digital Product Carbon](/standards/wdpc/) |
+| `policy` | [Policy & Research](/policy/) |
+| `research` | [Policy & Research](/policy/) |
+| `community` | [Community](/community/) |
+| `education` | [Education](/education/) |
+
+### Featured articles
+
+To feature an article in the **homepage carousel**, check the "Feature on Homepage Carousel" toggle. This is separate from tags — an article can be both featured and tagged for a topic page.
+
+### How many articles are needed?
+
+A carousel only appears on a page if there are **at least 3 articles** with the matching tag. If fewer than 3 articles match, the carousel is hidden.
+
+### Multiple tags
+
+An article can have as many tags as you like. For example, an article about AI carbon measurement might use `tags: ["sci-ai", "research", "standards"]` and would appear on the SCI for AI page, the Policy & Research page, and the Standards overview page.
+
+### Story-related articles
+
+On individual story pages, related articles are curated per story using the "Related Article Slugs" field rather than tags.
+
 ## How-to guides
 
 - [Articles & Featured Content](docs/how-to-featured-articles.md) — How to write articles, manage frontmatter, and feature content on the homepage carousel

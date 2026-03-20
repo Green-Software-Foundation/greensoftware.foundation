@@ -89,6 +89,14 @@ collections:
         time_format: false
         i18n: duplicate
 
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        required: false
+        i18n: duplicate
+        hint: "Uncheck to hide this article from the site without deleting it."
+
       - label: Summary
         name: summary
         widget: text
@@ -280,6 +288,14 @@ collections:
         time_format: false
         i18n: duplicate
 
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        required: false
+        i18n: duplicate
+        hint: "Uncheck to hide this research paper from the site without deleting it."
+
       - label: Abstract
         name: abstract
         widget: text
@@ -397,6 +413,13 @@ collections:
       - label: Title
         name: title
         widget: string
+
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        required: false
+        hint: "Uncheck to hide this story from the site without deleting it."
 
       - label: Summary
         name: summary
@@ -581,6 +604,13 @@ collections:
       - label: Title
         name: title
         widget: string
+
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+        required: false
+        hint: "Uncheck to hide this page from the site without deleting it."
 
       - label: URL Slug
         name: slug

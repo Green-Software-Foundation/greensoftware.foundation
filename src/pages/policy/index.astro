@@ -21,7 +21,7 @@ const chrisAdams = teamData.find((p: any) => p.fullName === "Chris Adams");
 const josephCook = teamData.find((p: any) => p.fullName === "Joseph Cook");
 
 // ----- Articles tagged "policy" or "research" for the carousel -----
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const policyArticles = allArticles
   .filter((a: any) => {
     const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
@@ -317,7 +317,7 @@ const policyArticles = allArticles
   </section>
 
   <!-- Articles Carousel -->
-  {policyArticles.length > 0 && (
+  {policyArticles.length >= 3 && (
     <ArticleCarousel
       heading="Policy & Research Articles"
       body="The latest thinking from the green software community on policy, regulation, and research."

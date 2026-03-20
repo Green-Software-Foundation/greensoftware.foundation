@@ -4,9 +4,10 @@ date: "2024-04-25"
 summary: "The ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint, achieving a major milestone in green software."
 teaserText: "We've achieved a big win for green tech: The Software Carbon Intensity (SCI) Specification v1.0 is now an ISO standard."
 mainImage: "./main.png"
+tags: ["sci", "standards"]
 ---
 
-With the approval and publication of version 1.0, the ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint. The latest version 1.1 of the SCI Specification is now available and can be accessed [here](https://sci.greensoftware.foundation/). 
+With the approval and publication of version 1.0, the ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint. The latest version 1.1 of the SCI Specification is now available and can be accessed [here](https://sci.greensoftware.foundation/).
 
 > "Reaching this milestone represents a collective effort from GSF member organizations," said Sanjay Podder, Responsible AI CTO and Lead for Tech Sustainability Innovation at Accenture, and Chairperson of the GSF. "This achievement unlocks the potential to achieve industry-wide adoption of the SCI Specification, which is crucial in empowering organizations to achieve real-world emissions reductions."
 
@@ -22,7 +23,7 @@ Technology sustainability is a shared responsibility, and having the right set o
 
 > "We are also making it easy to calculate SCI scores using tools such as the Impact Framework," added Navveen Balani, Co-chair of the Standards Working Group and Impact Framework at the GSF. "We envision that SCI measurement will become a standard part of every developer's toolbox and the norm in the future."
 
-GSF member organizations, including Accenture, AVEVA, CAST Software, Intesa, Microsoft, NTT DATA, UBS, and others, made the SCI Specification actionable through various use cases. [**These examples are publicly available**](https://github.com/Green-Software-Foundation/sci-guide/tree/dev/use-case-submissions). 
+GSF member organizations, including Accenture, AVEVA, CAST Software, Intesa, Microsoft, NTT DATA, UBS, and others, made the SCI Specification actionable through various use cases. [**These examples are publicly available**](https://github.com/Green-Software-Foundation/sci-guide/tree/dev/use-case-submissions).
 
 The GSF invites teams applying the SCI Specification to [**submit a use case**](https://github.com/Green-Software-Foundation/sci-guide/issues/new?assignees=atg-abhishek%2C+Henry-WattTime%2C+navveenb%2C+srini1978&labels=Case-study+submissions&projects=&template=case-study-template.md&title=Case-study+submissions) for review.
 

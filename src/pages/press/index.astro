@@ -24,7 +24,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
 const governedBy = activeSteeringMembers.map((m) => m.companyName).join(", ");
 
 // Stories with stats for the impact section
-const stories = await getCollection("stories", (s) => !!s.data.stats?.length);
+const stories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.stats?.length);
 
 // Leadership — configure names here, data pulled from team.json
 const leadershipConfig = [

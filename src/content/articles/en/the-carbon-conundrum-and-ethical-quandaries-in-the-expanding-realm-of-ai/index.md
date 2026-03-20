@@ -4,15 +4,16 @@ date: "2023-10-03"
 summary: "In this blog, we'll provide a summary of the key messages and concepts shared in Abhishek Gupta’s latest article on The Imperative for Sustainable AI Systems, published on The Gradient. "
 teaserText: "In this blog, we'll provide a summary of the key messages and concepts shared in Abhishek Gupta’s latest article on The Imperative for Sustainable AI Systems, published on The Gradient. "
 mainImage: "./main.jpg"
+tags: ["sci-ai", "standards"]
 ---
 
 Abhishek Gupta is the Founder and Principal Researcher at Montreal AI Ethics Institute and Chair of the Green Software Foundation’s Standards Working Group. [**Click here**](https://thegradient.pub/sustainable-ai/) for the full article.
 
 ## AI Systems: environmental impact and growing challenges
 
-AI systems require significant computational resources for various tasks such as training, hyperparameter optimization, and inference. They rely on vast amounts of data, often requiring specialized hardware and data center facilities, consuming electricity and contributing to carbon emissions. The substantial carbon footprint raises concerns about environmental sustainability and social justice implications. 
+AI systems require significant computational resources for various tasks such as training, hyperparameter optimization, and inference. They rely on vast amounts of data, often requiring specialized hardware and data center facilities, consuming electricity and contributing to carbon emissions. The substantial carbon footprint raises concerns about environmental sustainability and social justice implications.
 
-As AI models continue to grow in size, the pace of compute consumption is increasing exponentially. For instance, high-compute AI systems have doubled their consumption every 3.4 months, and this rate may even be faster now. Despite the rapid increase in computational requirements, the improvements in performance achieved by these large-scale AI models are only marginal. Moreover, large-scale AI models introduce challenges such as biases, privacy concerns, vulnerability to attacks, and high training costs. 
+As AI models continue to grow in size, the pace of compute consumption is increasing exponentially. For instance, high-compute AI systems have doubled their consumption every 3.4 months, and this rate may even be faster now. Despite the rapid increase in computational requirements, the improvements in performance achieved by these large-scale AI models are only marginal. Moreover, large-scale AI models introduce challenges such as biases, privacy concerns, vulnerability to attacks, and high training costs.
 
 These challenges are compounded by the fact that the models are widely accessible through public application programming interfaces (APIs), limiting the ability to address the problems downstream (for those wondering, making large-scale AI models accessible through public APIs amplifies the risk of widespread bias and errors due to their extensive use, limited user control, and potential privacy breaches, and raises concerns about security vulnerabilities, scalability costs, and ethical challenges across diverse applications and user groups).
 
@@ -40,7 +41,7 @@ In research, well-funded labs enjoy computing resources for extensive searches, 
 
 ## The concept of Sustainable AI
 
-Sustainable AI offers an approach that harmonizes these issues and presents a potential path to addressing them holistically, keeping in mind our planet, organizational profits, and, above all, people at the center of the design, development, and deployment phases of an AI system. 
+Sustainable AI offers an approach that harmonizes these issues and presents a potential path to addressing them holistically, keeping in mind our planet, organizational profits, and, above all, people at the center of the design, development, and deployment phases of an AI system.
 
 [Sustainable AI](https://greensoftware.foundation/articles/what-do-we-need-to-build-more-sustainable-ai-systems) aims to guide AI system development, focusing on [ecological integrity and social justice](https://arxiv.org/abs/2006.06217) throughout the AI lifecycle to form a cohesive framework. Gupta suggests incorporating carbon accounting into AI development, gathering relevant data through instrumentation and telemetry, and making carbon impacts a fundamental consideration alongside functional and business requirements. This holistic approach can support the triple bottom line, emphasizing profits, people, and the planet, and contribute to more environmentally and socially responsible AI practices.
 
@@ -62,7 +63,7 @@ Federated learning, a decentralized training technique that keeps data on-device
 
 **Carbon-efficiency and carbon-awareness**
 
-Carbon-efficiency means optimizing software and hardware to achieve the desired output with the least computation and energy expenditure. Carbon awareness, on the other hand, involves adjusting an AI system's operational parameters based on the energy grid's carbon intensity. The system's carbon footprint can be reduced by dynamically selecting the most environmentally friendly times and locations for operation. 
+Carbon-efficiency means optimizing software and hardware to achieve the desired output with the least computation and energy expenditure. Carbon awareness, on the other hand, involves adjusting an AI system's operational parameters based on the energy grid's carbon intensity. The system's carbon footprint can be reduced by dynamically selecting the most environmentally friendly times and locations for operation.
 
 Energy grid disparities, with up to a 30x difference in carbon intensity, highlight the importance of considering **where** AI systems are trained and deployed. Tools like the Azure Sustainability Calculator and cloud providers' internal load balancing contribute to [achieving sustainability goals](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems) in this context.
 
@@ -74,9 +75,8 @@ Moving in the right direction largely depends on the efforts of the software dev
 
 Our first step should be to share the idea of sustainable AI within our research and practice communities. We can make it a standard practice to measure and report the carbon impact of AI systems, encouraging the adoption of "Green AI." Industry leaders can support these efforts, enabling experimentation and fostering a more sustainable AI approach.
 
-Instrumenting AI systems to collect and report energy consumption data is the next step on the sustainable AI journey. Tools like CodeCarbon, carbontracker, experiment-impact-tracker, and scaphandre offer ways to start measuring and managing carbon emissions. Researchers can promote these tools in their labs, integrate them into lab practices, and use them to onboard new members. 
+Instrumenting AI systems to collect and report energy consumption data is the next step on the sustainable AI journey. Tools like CodeCarbon, carbontracker, experiment-impact-tracker, and scaphandre offer ways to start measuring and managing carbon emissions. Researchers can promote these tools in their labs, integrate them into lab practices, and use them to onboard new members.
 
 Organizations in the AI industry need to make an active choice to prioritize carbon impacts alongside functional and business imperatives. According to Gupta, this is a choice for ethics and strategy. Informed consumers increasingly favor environmentally friendly products and services, directly affecting businesses. Implementing greener AI systems will yield cost savings, bolstering the business case. Even when immediate financial benefits are unclear, committing to sustainability secures a competitive market position and aligns with ESG efforts. While standardized environmental reporting for software and AI is lacking, organizations like the [Green Software Foundation](https://greensoftware.foundation/articles/software-carbon-intensity-crafting-a-standard) are working towards creating interoperable and actionable approaches to inform consumers and guide regulatory efforts. Taking recommended actions at research, practitioner, and management levels will help organizations future-proof and move ahead of the pack.
 
 Join us on October 5 for the virtual GSF event: [Responsible AI: Tackling AI's Environmental Challenge](https://www.meetup.com/gsf-global/events/295596991/)
-

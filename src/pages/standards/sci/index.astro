@@ -20,9 +20,25 @@ import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const sciProject = projects.find(p => p.slug === "sci");
 const parentWg = projects.find(p => p.name === sciProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -438,6 +454,17 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
     imageSrc="/assets/ready.svg"
     imageAlt="Certification illustration"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Software Carbon Intensity standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- CTA -->
   <CTABanner

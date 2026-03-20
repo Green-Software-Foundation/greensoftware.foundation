@@ -27,7 +27,7 @@ import membersData from "@/data/members.json";
 // ----- Featured articles -----
 const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
@@ -277,7 +277,7 @@ const featuredArticles = allArticles
   />
 
   <!-- Section 13: Featured Content -->
-  {featuredArticles.length > 0 && (
+  {featuredArticles.length >= 3 && (
     <ArticleCarousel
       heading="Featured Content"
       body="Stories, research, and insights from our members and community"

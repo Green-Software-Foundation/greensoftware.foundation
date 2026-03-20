@@ -11,7 +11,25 @@ import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
+import ArticleCarousel from "@/components/article-carousel.astro";
+
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("standards"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 
 // Standards to feature on this page, in display order
 // urlSlug overrides the project slug for the /standards/<slug>/ URL where they differ
@@ -183,6 +201,17 @@ for (const project of standardProjects) {
     imageSrc="/assets/ready.svg"
     imageAlt="Certification illustration"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Standards in the News"
+      body="Articles, announcements, and insights from across the GSF standards programme."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- Final CTA -->
   <CTABanner

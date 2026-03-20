@@ -18,7 +18,7 @@ import MemberStories from "@/components/member-stories.astro";
 import Footer from "@/components/footer.astro";
 
 // ----- Articles tagged "education" for the carousel -----
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const educationArticles = allArticles
   .filter((a: any) => {
     const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
@@ -170,7 +170,7 @@ const educationArticles = allArticles
   />
 
   <!-- Section 10: Education articles -->
-  {educationArticles.length > 0 && (
+  {educationArticles.length >= 3 && (
     <ArticleCarousel
       heading="Education & Learning"
       body="Stories and insights from practitioners, educators, and organisations building the green software movement."
