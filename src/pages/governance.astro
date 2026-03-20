@@ -28,9 +28,9 @@ const highlightedSteering = [
   steeringViceChair && { ...steeringViceChair, label: "Vice-Chair" },
 ].filter(Boolean);
 
-const remainingSteering = steeringMembers.filter(
-  p => p.fullName !== "Gadhu Sundaram" && p.fullName !== "Jonathan Turnbull"
-);
+const remainingSteering = steeringMembers
+  .filter(p => p.fullName !== "Gadhu Sundaram" && p.fullName !== "Jonathan Turnbull")
+  .sort((a, b) => a.fullName.localeCompare(b.fullName));
 
 // Staff / Administrative Team
 const staff = teamData.filter(p => p.groups.includes("administrativeTeam"));
@@ -55,15 +55,17 @@ const chairsFiltered = chairsAndLeadsRaw.filter(person => {
 
 // Use leadershipRoles from fetch script as labels (e.g. "Software Standards WG (Chair)")
 // Also strip out any "(Member)" roles from the labels since we're filtering those out
-const chairsWithLabels = chairsFiltered.map(person => {
-  const roles = ((person as any).leadershipRoles || []).filter(
-    (r: string) => !memberKeywords.some(kw => r.endsWith(kw))
-  );
-  return {
-    ...person,
-    label: roles.length > 0 ? roles.join(", ") : undefined,
-  };
-});
+const chairsWithLabels = chairsFiltered
+  .map(person => {
+    const roles = ((person as any).leadershipRoles || []).filter(
+      (r: string) => !memberKeywords.some(kw => r.endsWith(kw))
+    );
+    return {
+      ...person,
+      label: roles.length > 0 ? roles.join(", ") : undefined,
+    };
+  })
+  .sort((a, b) => a.fullName.localeCompare(b.fullName));
 
 // Organisation Leads (from organisationalLeads group, populated by fetch script)
 const orgLeadsRaw = teamData.filter(p => p.groups.includes("organisationalLeads"));
@@ -110,9 +112,9 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
   <!-- Section 1c: Governance Hierarchy Diagram -->
   <GovernanceDiagram />
 
-  <!-- Section 2: Steering Committee / Board -->
+  <!-- Section 2: Steering Committee -->
   <TeamGrid
-    heading="*Steering Committee* / Board"
+    heading="*Steering Committee*"
     body="The Steering Committee is the primary governing body of the Green Software Foundation. Members are selected by Steering Member organisations and are responsible for strategic direction, fiduciary oversight, budget approval, and ratification of working group deliverables."
     highlighted={highlightedSteering}
     members={remainingSteering}
