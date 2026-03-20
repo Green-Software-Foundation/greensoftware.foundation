@@ -1,6 +1,29 @@
-### Response to GHG Protocol Scope 2 Public Consultation Selected Questions
+---
+title: "Response to GHG Protocol Scope 2 Public Consultation"
+subtitle: "Selected Questions and GSF Responses"
+date: 2025-12-15
+published: true
+status: published
+type: consultation-response
+summary: >
+  GSF's formal response to the GHG Protocol Scope 2 proposed revisions, advocating for hourly granularity in carbon accounting to enable carbon-aware software operations.
+jurisdiction: Global
+framework: GHG Protocol Scope 2
+version: "1.0"
+workingGroup: policy-wg
+authors:
+  - name: Henry Richardson
+    org: Green Software Foundation
+  - name: Ryan Sholin
+    org: Green Software Foundation
+  - name: Policy Working Group
+    org: Green Software Foundation
+sourceUrl: "https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Response%20to%20GHG%20Protocol%20Scope%202%20Public%20Consultation.md"
+tags:
+  - policy
+---
 
-***This response to the GHG Protocol Scope 2 Proposed Revisions Public Consultation was drafted by the Policy Working Group, primarily led by Henry Richardson and Ryan Sholin. The full list of questions and the Policy WG's selections are detailed in](https://docs.google.com/spreadsheets/d/1K_yrxivnQS5i4eWmKbyQL2ZYwi7dAdIMz8vDYckaE90/edit?usp=sharing)* [this sheet](https://docs.google.com/spreadsheets/d/1K_yrxivnQS5i4eWmKbyQL2ZYwi7dAdIMz8vDYckaE90/edit?usp=sharing). 
+*This response to the GHG Protocol Scope 2 Proposed Revisions Public Consultation was drafted by the Policy Working Group, primarily led by Henry Richardson and Ryan Sholin. The full list of questions and the Policy WG's selections are detailed in [this sheet](https://docs.google.com/spreadsheets/d/1K_yrxivnQS5i4eWmKbyQL2ZYwi7dAdIMz8vDYckaE90/edit?usp=sharing).*
 
 The official GHG Protocol context document, which contains the questions, is available [here (PDF)](https://ghgprotocol.org/sites/default/files/2025-10/GHG-Protocol-Scope2-Public-Consultation.pdf).
 
@@ -25,4 +48,3 @@ The official GHG Protocol context document, which contains the questions, is ava
 | **147** | **147\. If you answer “yes” or “somewhat” to question 146, which of the following rationale captures your views (select all that apply). a. Allows for continued investment in electricity projects outside of my deliverable market boundary b. Provides a complementary metric to quantify actions such as energy storage or demand response c. Causes less disruption of existing electricity procurement practices d. Provides additional relevant information for users of GHG data e. Provides additional approaches for target setting f. Other (please specify)** | b, d, f |
 | **148** | **148\. Please provide comments regarding your selected choices in question 147\.** | The primary goal of the GSF is to enable software developers to accurately measure and reduce the emissions of software. We support the development of an impact metric that leads to action through more granular and reliable measurement of carbon emissions from software operations. A successful impact metric should capture the emissions reduction benefits of carbon-aware software actions, such as shifting workloads to match real-time clean energy availability.  By rewarding these high-integrity, abatement-focused operational changes, the metric will incentivize the widespread adoption of green software practices and ensure the reported outcomes genuinely reflect reduced climate impact. |
 | **152** | **In your view, balancing scientific integrity, climate impact, and feasibility, what scope 2 revisions or combination of revisions are most appropriate?  Please address each of the three core decision-making criteria: integrity, impact, and feasibility in your answer, and describe how the approach satisfies each criterion.** | With emphasis on LBM revisions:  The GSF’s preference is to establish hourly granularity as the *preferred quality standard* for carbon accounting.  Integrity: Granular LBM factors significantly increase scientific integrity by grounding the methodology in the physical and temporal reality of electricity generation. It ensures LBM reflects the actual grid mix at the time of consumption.  Impact: High-fidelity data is essential for driving meaningful climate impact in the digital sector. It enables carbon-aware computing (e.g. load shifting, flexible consumption), creating operational incentives to consume energy when the grid is clean, which directly supports grid decarbonization and accelerates the development of necessary clean technologies (e.g., storage).  Feasibility: Feasibility is addressed by the proposed exemptions and fallback metrics and accessibility requirements. However, the hourly or sub-hourly data required by the proposed revisions is increasingly available from System Operators and credible third-party providers. By establishing the highest temporal resolution data standard as the preferred path, the GHG Protocol creates a strong market signal to further improve data accessibility and quality globally. |
-

@@ -207,7 +207,66 @@
   text-decoration: none;
 }
 
-/* Callout blocks — :::note, :::warning, :::tip */
+/* GitHub-style alerts — > [!NOTE], > [!WARNING], > [!TIP], > [!IMPORTANT], > [!CAUTION] */
+.prose .markdown-alert {
+  border-left: 4px solid;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.prose .markdown-alert > :first-child {
+  margin-top: 0;
+}
+.prose .markdown-alert > :last-child {
+  margin-bottom: 0;
+}
+.prose .markdown-alert .markdown-alert-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.prose .markdown-alert-note {
+  background-color: var(--primary-lightest-1);
+  border-color: var(--primary);
+}
+.prose .markdown-alert-note .markdown-alert-title {
+  color: var(--primary);
+}
+.prose .markdown-alert-warning {
+  background-color: #fef3c7;
+  border-color: #f59e0b;
+}
+.prose .markdown-alert-warning .markdown-alert-title {
+  color: #b45309;
+}
+.prose .markdown-alert-tip {
+  background-color: var(--accent-lightest-2);
+  border-color: var(--accent);
+}
+.prose .markdown-alert-tip .markdown-alert-title {
+  color: var(--accent-darker);
+}
+.prose .markdown-alert-important {
+  background-color: #ede9fe;
+  border-color: #7c3aed;
+}
+.prose .markdown-alert-important .markdown-alert-title {
+  color: #6d28d9;
+}
+.prose .markdown-alert-caution {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+.prose .markdown-alert-caution .markdown-alert-title {
+  color: #dc2626;
+}
+
+/* Legacy callout blocks — :::note, :::warning, :::tip (remark-directive) */
 .prose .callout {
   border-left: 4px solid;
   border-radius: 0 0.5rem 0.5rem 0;

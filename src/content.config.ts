@@ -58,16 +58,33 @@ const research = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/research" }),
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(),
     date: z.coerce.date(),
     published: z.boolean().default(true),
-    abstract: z.string(),
+    status: z.enum(["published", "draft", "in-progress"]).default("published"),
+    type: z
+      .enum(["whitepaper", "consultation-response", "position-paper"])
+      .default("whitepaper"),
     summary: z.string(),
+    jurisdiction: z.string().optional(),
+    framework: z.string().optional(),
+    workingGroup: z.string().optional(),
+    authors: z
+      .array(
+        z.object({
+          name: z.string(),
+          org: z.string().optional(),
+        }),
+      )
+      .optional(),
+    version: z.string().optional(),
+    sourceUrl: z.string().optional(),
     mainImage: z.string().optional(),
-    authors: z.array(personSchema).optional(),
     organizations: z.array(z.string()).optional(),
     doi: z.string().optional(),
     pdfUrl: z.string().optional(),
     featured: z.boolean().optional(),
+    tags: z.array(z.string()).optional(),
     lang: z.string().default("en"),
   }),
 });
