@@ -1,4 +1,6 @@
 ---
+import Image from "@/components/image.astro";
+
 interface QuoteAttribution {
   avatar?: string;
   name: string;
@@ -93,7 +95,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
         {attribution && (
           <div class="mt-3 flex items-center gap-2 md:mt-4">
             {attribution.avatar && (
-              <img src={attribution.avatar} alt={attribution.name} class="h-12 w-12 rounded-full object-cover" />
+              <Image src={attribution.avatar} alt={attribution.name} class="h-12 w-12 rounded-full object-cover" sizes="48px" />
             )}
             <div>
               <h3 class="text-xl font-semibold text-black">{attribution.name}</h3>

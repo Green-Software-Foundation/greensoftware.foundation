@@ -11,6 +11,7 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
+import Image from "@/components/image.astro";
 import teamData from "@/data/people.json";
 import { getCollection } from "astro:content";
 import { articleUrl } from "@/lib/utils";
@@ -93,7 +94,7 @@ const policyArticles = allArticles
           <div class="flex flex-col items-center text-center">
             <div class="h-28 w-28 overflow-hidden rounded-full border-2 border-primary-lighter bg-accent-lightest-2">
               {person?.photo ? (
-                <img src={person.photo} alt={name} class="h-full w-full object-cover" />
+                <Image src={person.photo} alt={name} class="h-full w-full object-cover" sizes="112px" />
               ) : (
                 <div class="flex h-full w-full items-center justify-center text-2xl font-bold text-primary">
                   {name.split(" ").map((n: string) => n[0]).join("")}
