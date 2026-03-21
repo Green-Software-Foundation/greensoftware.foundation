@@ -445,14 +445,43 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-white"
   />
 
-  <!-- Certification -->
-  <CTACard
-    heading="SCI Certification Programme"
-    body="GSF members can certify their software product's SCI calculation — demonstrating that it was completed and disclosed following GSF guidelines. Certification is a membership benefit, available to all GSF members."
-    ctaText="Learn about certification"
-    ctaHref="/standards/certification/"
-    imageSrc="/assets/ready.svg"
-    imageAlt="Certification illustration"
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Help Shape the Future of Software Carbon Measurement"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "Read the Specification",
+        description: "Access the complete ISO/IEC 21031:2024 standard with technical methodology and implementation guidance",
+        ctaText: "Read the Spec",
+        ctaHref: "https://grnsft.org/sci",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Join the Software Standards Working Group",
+        description: "Collaborate with industry experts shaping this specification (members only)",
+        ctaText: "Join the WG",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
+      },
+      {
+        icon: "/assets/standards/sci/resource-guide-icon.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with the project lead and team",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-(sci)/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Become a GSF Member",
+        description: "Join the foundation to participate in standards development",
+        ctaText: "Get in touch",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
   />
 
   {carouselArticles.length >= 3 && (
@@ -468,10 +497,10 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- CTA -->
   <CTABanner
-    heading="Ready to measure your software's carbon impact?"
-    body="The SCI specification provides the tools and methodology you need to start measuring, reducing, and reporting your software's carbon intensity today."
-    ctaText="Read the Specification"
-    ctaHref="https://grnsft.org/sci"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />

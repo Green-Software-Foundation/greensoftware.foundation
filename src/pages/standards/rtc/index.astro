@@ -291,46 +291,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     }}
   />
 
-  <!-- Get Involved -->
-  <CardGrid
-    heading="Get Involved with RTC"
-    body="Join the working group advancing cloud carbon transparency"
-    columns={4}
-    align="left"
-    decorSrc="/assets/standards/rtc/shape-decor.svg"
-    cards={[
-      {
-        icon: "/assets/standards/rtc/shape-icon-1.svg",
-        title: "Contribute Data",
-        description: "Help produce best-estimate region metadata for the current year",
-        ctaText: "Submit a Contribution",
-        ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud/issues/new?template=question.yaml",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-2.svg",
-        title: "Join the Working Group",
-        description: "Collaborate with cloud providers and enterprises shaping the standard (Members Only)",
-        ctaText: "Subscribe (Members Only)",
-        ctaHref: "https://wiki.greensoftware.foundation/subscribe",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-3.svg",
-        title: "Visit the Directory",
-        description: "Get in touch with project leads and explore the community",
-        ctaText: "Learn more",
-        ctaHref: "https://directory.greensoftware.foundation/projects/real-time-cloud",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-4.svg",
-        title: "Become a GSF Member",
-        description: "Reach out to the GSF team about membership benefits",
-        ctaText: "Get in touch",
-        ctaHref: "/membership/",
-      },
-    ]}
-    bgClass="bg-accent-lightest-2"
-  />
-
   <!-- Resources -->
   <ResourceCards
     heading="Everything You Need to *Get Started*"
@@ -394,6 +354,46 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Join the working group advancing cloud carbon transparency"
+    columns={4}
+    align="left"
+    decorSrc="/assets/standards/rtc/shape-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/rtc/shape-icon-1.svg",
+        title: "Contribute Data",
+        description: "Help produce best-estimate region metadata for the current year",
+        ctaText: "Submit a Contribution",
+        ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud/issues/new?template=question.yaml",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-2.svg",
+        title: "Join the Working Group",
+        description: "Collaborate with cloud providers and enterprises shaping the standard (Members Only)",
+        ctaText: "Subscribe (Members Only)",
+        ctaHref: "https://wiki.greensoftware.foundation/subscribe",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-3.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with project leads and explore the community",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/real-time-cloud",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-4.svg",
+        title: "Become a GSF Member",
+        description: "Reach out to the GSF team about membership benefits",
+        ctaText: "Get in touch",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
@@ -407,10 +407,10 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- CTA -->
   <CTABanner
-    heading="Cloud Carbon Transparency Starts Here"
-    body="All RTC data is openly available on GitHub. If your organisation runs workloads across multiple cloud providers and struggles with inconsistent carbon reporting, the Cloud Region Metadata Table gives you comparable, standardised data now."
-    ctaText="View the Dataset"
-    ctaHref="https://github.com/Green-Software-Foundation/real-time-cloud"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />

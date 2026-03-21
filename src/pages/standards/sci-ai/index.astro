@@ -295,6 +295,16 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     }}
   />
 
+  <!-- Take the Course -->
+  <CTACard
+    heading="Learn to measure AI's carbon footprint"
+    body="Take the SCI for AI course on the Movement Platform to understand how to apply the methodology to AI systems."
+    ctaText="Take the course"
+    ctaHref="https://movement.greensoftware.foundation/spaces/23023497/page"
+    imageSrc="/assets/ready.svg"
+    imageAlt="SCI for AI course illustration"
+  />
+
   <!-- Explore Further -->
   <CardGrid
     heading="Explore Further"
@@ -320,9 +330,35 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     ]}
   />
 
-  <!-- Shape the Future of Sustainable AI -->
+  <!-- Timeline -->
+  <Timeline
+    heading="Development Timeline"
+    items={[
+      { date: "Q4 2024", description: "Proposal", completed: true, start: "2024-10-01", end: "2024-12-31" },
+      { date: "Q2 2025", description: "Pre-Draft", completed: true, start: "2025-04-01", end: "2025-06-30" },
+      { date: "Q3 2025", description: "Draft", completed: true, start: "2025-07-01", end: "2025-09-30" },
+      { date: "Q4 2025", description: "Consistency Review<br/>SC Ratification", completed: true, start: "2025-10-01", end: "2025-12-31" },
+      { date: "Q1 2026", description: "Publication<br/>ISO-readiness approval", current: true, start: "2026-01-01", end: "2026-03-31" },
+      { date: "Q2 2026", description: "ISO Submission", start: "2026-04-01", end: "2026-06-30" },
+    ]}
+  />
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={sciAiProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(sciAiProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Get Involved -->
   <CardGrid
-    heading="Shape the Future of Sustainable AI"
+    heading="Get Involved"
     body="Your expertise and experience can help refine this transformative standard"
     columns={4}
     align="left"
@@ -361,42 +397,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Timeline -->
-  <Timeline
-    heading="Development Timeline"
-    items={[
-      { date: "Q4 2024", description: "Proposal", completed: true, start: "2024-10-01", end: "2024-12-31" },
-      { date: "Q2 2025", description: "Pre-Draft", completed: true, start: "2025-04-01", end: "2025-06-30" },
-      { date: "Q3 2025", description: "Draft", completed: true, start: "2025-07-01", end: "2025-09-30" },
-      { date: "Q4 2025", description: "Consistency Review<br/>SC Ratification", completed: true, start: "2025-10-01", end: "2025-12-31" },
-      { date: "Q1 2026", description: "Publication<br/>ISO-readiness approval", current: true, start: "2026-01-01", end: "2026-03-31" },
-      { date: "Q2 2026", description: "ISO Submission", start: "2026-04-01", end: "2026-06-30" },
-    ]}
-  />
-
-  <!-- Team (driven from projects.json) -->
-  <TeamGrid
-    heading="Project *Leadership*"
-    body={parentWg ? `Part of the ${parentWg.name}` : ""}
-    columns={sciAiProject?.leads?.length === 2 ? 2 : 3}
-    highlighted={[]}
-    members={(sciAiProject?.leads ?? []).map(lead => ({
-      fullName: lead.fullName,
-      role: lead.roleLabel,
-    }))}
-    bgClass="bg-accent-lightest-2"
-  />
-
-  <!-- Certification -->
-  <CTACard
-    heading="SCI for AI Certification Programme"
-    body="GSF members can certify their AI product's SCI for AI calculation — demonstrating that it was completed and disclosed following GSF guidelines. Certification is a membership benefit, available to all GSF members."
-    ctaText="Learn about certification"
-    ctaHref="/standards/certification/"
-    imageSrc="/assets/ready.svg"
-    imageAlt="Certification illustration"
-  />
-
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
@@ -410,10 +410,10 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- CTA -->
   <CTABanner
-    heading="The Future of AI is Sustainable"
-    body="SCI for AI provides the first standardized methodology to measure and reduce the carbon emissions of artificial intelligence systems. Whether you're developing AI, making procurement decisions, or driving sustainability strategy, join us in making AI's environmental impact transparent and actionable."
-    ctaText="Read the Specification"
-    ctaHref="https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />
