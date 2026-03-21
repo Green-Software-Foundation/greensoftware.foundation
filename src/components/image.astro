@@ -50,7 +50,7 @@ const fallbackWidth = parseFallbackWidth();
 ---
 
 {useNetlify ? (
-  <picture>
+  <picture style="display: contents;">
     <source
       type="image/avif"
       srcset={makeSrcset(src, "avif", widths)}

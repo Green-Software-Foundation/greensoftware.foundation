@@ -54,7 +54,7 @@ export function Img({
   }
 
   return (
-    <picture>
+    <picture style={{ display: "contents" }}>
       <source
         type="image/avif"
         srcSet={makeSrcset(src, "avif", widths)}
