@@ -1,15 +1,17 @@
 # TODO
 
-## Next Up
-
-- [ ] **Google Analytics (GA4)** — configure GA4 for the new site, add tracking script to layout, define key events/conversions, set up automated email reports from GA4 and search console. Consider annotation strategy for the website migration from greensoftware.org.
-- [ ] **Legacy redirects** — create redirects from old page paths to new pages (in `netlify.toml` or `_redirects`)
-
 ## Backlog
 
 - [ ] [Asset deduplication](docs/features/asset-deduplication.md) — scan for duplicate images, consolidate, add asset registry to CLAUDE.md
 
 ## Done
+
+- [x] **Google Analytics (GA4)** — replaced GTM with direct GA4 (`G-593HJXNS18`), added `newsletter_submission`, `membership_enquiry`, `assembly_application` events, documented in `docs/google-analytics.md`
+- [x] **Legacy redirects** — 29 redirect rules in `netlify.toml` covering renamed pages, translated manifestos, translated articles, and DatoCMS-era slugs
+- [x] **Restored missing English articles** — recovered 3 articles from DatoCMS (what-is-green-software, 10-recommendations, gsf-global-summit-2022-tokyo) that were mislabelled during migration
+- [x] **Article language switcher** — pill-style language badges on articles with translations
+- [x] **Normalised translated article frontmatter** — fixed author data, broken DatoCMS LinkedIn URLs, added missing `authors` to JA translations
+- [x] **Site URL fix** — updated `astro.config.mjs` site from `greensoftware.org` to `greensoftware.foundation`
 
 - [x] **Published flags for stories & articles** — added `published` boolean to frontmatter to exclude unpublished content
 - [x] **Domain: .org → .foundation** — updated site URL, links, and references

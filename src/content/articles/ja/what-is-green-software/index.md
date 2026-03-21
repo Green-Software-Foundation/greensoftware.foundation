@@ -4,6 +4,15 @@ date: "2022-09-02"
 summary: "ソフトウェアには大きく分けて2つの側面があります。気候問題の一部という側面、そして気候問題の解決 方法という側面です。 グリーンソフトウェアを開発し、普及させるためには、人材、標準、ツール、およびベストプラクティス からなる信頼できるエコシステムを構築する必要があります。まさにそれがグリーンソフトウェア財団の ミッションです。"
 teaserText: "人材、標準、ツール、ベストプラクティスからなるグリーンソフトウェア 開発ための信頼できるエコシステムを構築する"
 mainImage: "./main.png"
+authors:
+  - fullName: "Asim Hussain"
+    role: "Executive Director"
+    company: "Green Software Foundation"
+    companyWebsite: "https://greensoftware.foundation"
+    photo: "/assets/articles/authors/asim-hussain.png"
+    socialMedia:
+      - platform: "Linkedin"
+        link: "https://www.linkedin.com/in/asimhussain/"
 translators:
   - fullName: "Yusuke Kobayashi"
     role: "Manager, Green Innovation Office"
@@ -31,7 +40,7 @@ translators:
 
 ### 削減
 
-私たちは削減に注力しています。相殺ではありません。大気中に排出されなかった1グラムの炭素と、相殺 された1グラムの炭素は同じではありません。明らかに望ましいのはまずに炭素を排出しないことです。 
+私たちは削減に注力しています。相殺ではありません。大気中に排出されなかった1グラムの炭素と、相殺 された1グラムの炭素は同じではありません。明らかに望ましいのはまずに炭素を排出しないことです。
 
 削減することは、相殺することよりも困難です。それは必然的に、より多くのリスクと投資を伴います。 リスクと軽減し投資へのインセンティブを増すためには、人材、標準、ツール、およびベストプラクティ スからなるソフトウェアの炭素排出量削減のためのエコシステムを構築する必要があります。財団のミッ ションは、そのエコシステムを育てることです。
 
