@@ -319,6 +319,17 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     />
   )}
 
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the SOFT framework."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
   <!-- CTA -->
   <CTABanner
     heading="Shape the standards that define sustainable software"
