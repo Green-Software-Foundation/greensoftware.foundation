@@ -36,7 +36,7 @@ const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.h
 const resolvedOrgs = orgs.map((org: any) => ({
   ...org,
   logo: org.logo || logoMap.get(org.name.toLowerCase()) || null,
-}));
+})).sort((a: any, b: any) => a.name.localeCompare(b.name));
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))
