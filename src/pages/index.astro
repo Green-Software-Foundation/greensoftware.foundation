@@ -25,7 +25,8 @@ import Footer from "@/components/footer.astro";
 import membersData from "@/data/members.json";
 
 // ----- Featured articles -----
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const resolveOrgs = (names: string[]) => names.map(name => ({ name, logo: logoMap.get(name.toLowerCase()) || "" }));
 
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
@@ -107,16 +108,7 @@ const featuredArticles = allArticles
     imageAlt="Education illustration"
     ctaText="Explore the Practitioner course →"
     ctaHref="/stories/green-software-practitioner/"
-    orgs={[
-      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
-      { name: "Avanade", logo: "/assets/logos/avanade.webp" },
-      { name: "EPAM", logo: "/assets/logos/epam.svg" },
-      { name: "GitHub", logo: "/assets/logos/github.png" },
-      { name: "Goldman Sachs", logo: "/assets/logos/goldman-sachs.png" },
-      { name: "HCLTech", logo: "/assets/logos/hcltech.png" },
-      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
-      { name: "Thoughtworks", logo: "/assets/logos/thoughtworks.svg" },
-    ]}
+    orgs={resolveOrgs(["Accenture", "Avanade", "EPAM", "GitHub", "Goldman Sachs", "HCLTech", "Microsoft", "Thoughtworks"])}
     tabs={[
       { value: "challenge", heading: "Challenge", description: "IT and infrastructure represent a growing portion of energy footprints. Engineering teams lack the specialised training to build in the efficiencies leadership requires. Without a common framework, teams make inconsistent decisions, unable to distinguish genuine emissions reduction from well-intentioned guesswork" },
       { value: "solution", heading: "Solution", description: "The Green Software Practitioner Course, equipping engineering teams to turn board-level strategy into technical reality. Developed with Microsoft, Accenture, Thoughtworks, and GitHub" },
@@ -133,15 +125,7 @@ const featuredArticles = allArticles
     imageAlt="SCI illustration"
     ctaText="Discover the SCI standard →"
     ctaHref="/stories/sci-measurement/"
-    orgs={[
-      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
-      { name: "AVEVA", logo: "/assets/logos/aveva.svg" },
-      { name: "CAST", logo: "/assets/logos/cast.png" },
-      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
-      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
-      { name: "UBS", logo: "/assets/logos/ubs.png" },
-      { name: "WattTime", logo: "/assets/logos/watttime.png" },
-    ]}
+    orgs={resolveOrgs(["Accenture", "Aveva", "CAST", "Microsoft", "NTT DATA", "UBS", "WattTime"])}
     tabs={[
       { value: "challenge", heading: "Challenge", description: "GHG reporting gives compliance but not insight. An annual total doesn't translate into actionable targets for engineering teams. Cloud migrations, architectural changes, infrastructure investments, they all blur into one number" },
       { value: "solution", heading: "Solution", description: "The Software Carbon Intensity standard (SCI), an ISO-certified metric that lets teams set targets engineers can actually act on. Not an aggregate total. A rate teams can own and reduce" },
@@ -157,16 +141,7 @@ const featuredArticles = allArticles
     imageAlt="SOFT illustration"
     ctaText="Learn about the SOFT framework →"
     ctaHref="/stories/soft-framework/"
-    orgs={[
-      { name: "Avanade", logo: "/assets/logos/avanade.webp" },
-      { name: "BCG X", logo: "/assets/logos/bcg.png" },
-      { name: "Cisco", logo: "/assets/logos/cisco.svg" },
-      { name: "HSBC", logo: "/assets/logos/hsbc.svg" },
-      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
-      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
-      { name: "Siemens", logo: "/assets/logos/siemens.png" },
-      { name: "UBS", logo: "/assets/logos/ubs.png" },
-    ]}
+    orgs={resolveOrgs(["Avanade", "BCG", "Cisco", "HSBC", "Microsoft", "NTT DATA", "Siemens", "UBS"])}
     tabs={[
       { value: "challenge", heading: "Challenge", description: "Sustainability pilots launched. Emissions measured. But initiatives stay trapped in IT, never scaling across procurement, operations, and business units. Boards expect transformation; teams are delivering point solutions" },
       { value: "solution", heading: "Solution", description: "The SOFT framework, co-chaired by HSBC and Microsoft, built with Avanade, BCG X, Cisco, NTT DATA, Siemens, and UBS. Not another measurement tool. The comprehensive framework for embedding software practices systematically across every function" },
@@ -183,16 +158,7 @@ const featuredArticles = allArticles
     imageAlt="SCI for AI illustration"
     ctaText="Explore SCI for AI →"
     ctaHref="/stories/sci-for-ai/"
-    orgs={[
-      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
-      { name: "Globant", logo: "/assets/logos/globant.svg" },
-      { name: "Google", logo: "/assets/logos/google.png" },
-      { name: "IBM", logo: "/assets/logos/ibm.gif" },
-      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
-      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
-      { name: "Siemens", logo: "/assets/logos/siemens.png" },
-      { name: "UBS", logo: "/assets/logos/ubs.png" },
-    ]}
+    orgs={resolveOrgs(["Accenture", "Globant", "Google", "IBM", "Microsoft", "NTT DATA", "Siemens", "UBS"])}
     tabs={[
       { value: "challenge", heading: "Challenge", description: "Organisations are deploying AI at scale. When stakeholders ask about the carbon footprint, there is no standardised answer. Multi-million dollar infrastructure decisions are being made without understanding their relative carbon efficiency" },
       { value: "solution", heading: "Solution", description: "SCI for AI, extending the proven SCI methodology specifically for artificial intelligence systems. Standardised measurement across training and inference, applicable from LLMs to computer vision. Developed by members including Microsoft, UBS, Google, and Accenture" },
@@ -208,16 +174,7 @@ const featuredArticles = allArticles
     imageAlt="Standards illustration"
     ctaText="Discover consensus at speed →"
     ctaHref="/stories/ai-accelerated-consensus/"
-    orgs={[
-      { name: "Accenture", logo: "/assets/logos/accenture.svg" },
-      { name: "Globant", logo: "/assets/logos/globant.svg" },
-      { name: "Google", logo: "/assets/logos/google.png" },
-      { name: "Green Web Foundation", logo: "/assets/logos/the-green-web-foundation.png" },
-      { name: "HSBC", logo: "/assets/logos/hsbc.svg" },
-      { name: "Microsoft", logo: "/assets/logos/microsoft.svg" },
-      { name: "NTT DATA", logo: "/assets/logos/ntt-data.png" },
-      { name: "WattTime", logo: "/assets/logos/watttime.png" },
-    ]}
+    orgs={resolveOrgs(["Accenture", "Globant", "Google", "The Green Web Foundation", "HSBC", "Microsoft", "NTT DATA", "WattTime"])}
     tabs={[
       { value: "challenge", heading: "Challenge", description: "Traditional standards development takes years. By the time specifications reach certification, regulations have evolved and technology has shifted. The bottleneck isn't technical complexity, it's coordination across dozens of stakeholders with competing priorities" },
       { value: "solution", heading: "Solution", description: "AI-accelerated consensus. GSF achieved ISO certification for SCI in under 3 years, unprecedented. Now applying AI to synthesise perspectives from hundreds of participants in days, not months" },

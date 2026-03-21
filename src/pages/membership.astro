@@ -12,6 +12,10 @@ import FeatureGrid from "@/components/feature-grid.astro";
 import ProjectCards from "@/components/project-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
+
+import membersData from "@/data/members.json";
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: logoMap.get(name.toLowerCase()) || "" }));
 ---
 
 <Layout
@@ -116,52 +120,25 @@ import Footer from "@/components/footer.astro";
       {
         title: "Our engineers don't know how to build green software",
         description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
-        orgs: [
-          { name: "Goldman Sachs", logoSrc: "/assets/logos/goldman-sachs.png" },
-          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
-          { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
-          { name: "ThoughtWorks", logoSrc: "/assets/logos/thoughtworks.svg" },
-          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
-        ],
+        orgs: resolveOrgs(["Goldman Sachs", "Avanade", "Microsoft", "Accenture", "Thoughtworks", "NTT DATA"]),
         href: "/stories/green-software-practitioner/",
       },
       {
         title: "Our pilots work but nothing scales across the org",
         description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
-        orgs: [
-          { name: "HSBC", logoSrc: "/assets/logos/hsbc.svg" },
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
-          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
-          { name: "Siemens", logoSrc: "/assets/logos/siemens.png" },
-          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
-          { name: "Cisco", logoSrc: "/assets/logos/cisco.svg" },
-        ],
+        orgs: resolveOrgs(["HSBC", "Microsoft", "NTT DATA", "Siemens", "UBS", "Cisco"]),
         href: "/stories/soft-framework/",
       },
       {
         title: "We can't shift workloads to clean energy",
         description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
-        orgs: [
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
-          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
-          { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },
-          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
-          { name: "Energy Web", logoSrc: "/assets/logos/energy-web.png" },
-        ],
+        orgs: resolveOrgs(["Microsoft", "UBS", "Avanade", "NTT DATA", "Energy Web"]),
         href: "/stories/carbon-aware-sdk/",
       },
       {
         title: "We can't measure software carbon",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
-        orgs: [
-          { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
-          { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
-          { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
-          { name: "NTT DATA", logoSrc: "/assets/logos/ntt-data.png" },
-          { name: "WattTime", logoSrc: "/assets/logos/watttime.png" },
-          { name: "AVEVA", logoSrc: "/assets/logos/aveva.svg" },
-        ],
+        orgs: resolveOrgs(["Accenture", "UBS", "Microsoft", "NTT DATA", "WattTime", "Aveva"]),
         href: "/stories/sci-measurement/",
       },
     ]}

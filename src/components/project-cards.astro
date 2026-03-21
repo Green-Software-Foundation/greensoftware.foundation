@@ -99,10 +99,13 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
                   {[0, 1].map(() => (
                     <div class="flex shrink-0 animate-marquee items-center gap-6 pr-12">
                       {project.orgs!.map((org) => (
-                        <img
+                        <Image
                           src={org.logoSrc}
                           alt={org.name}
                           class="h-5 w-auto max-w-[72px] shrink-0 object-contain brightness-0 invert opacity-50"
+                          sizes="72px"
+                          widths={[72, 144]}
+                          height={20}
                         />
                       ))}
                     </div>
