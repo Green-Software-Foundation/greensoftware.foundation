@@ -10,26 +10,16 @@ problemHeading: The bottleneck isn't technical complexity — it's coordinating 
 journeyHeading: From a blank page to consensus in ten weeks
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Google
-    logo: /assets/logos/google.png
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: ClimateAction.tech
-    logo: /assets/logos/climateaction.tech.png
   - name: HSBC
-    logo: /assets/logos/hsbc.svg
 
 stats:
   - value: "10 weeks"

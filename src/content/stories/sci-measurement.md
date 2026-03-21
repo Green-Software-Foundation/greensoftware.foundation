@@ -12,21 +12,13 @@ journeyHeading: From a fragmented measurement landscape to an ISO standard in un
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: CAST
-    logo: /assets/logos/cast.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
-  - name: AVEVA
-    logo: /assets/logos/aveva.svg
+  - name: Aveva
   - name: Texas State University
-    logo: /assets/logos/texas-state-university.svg
 
 stats:
   - value: ISO

@@ -11,26 +11,16 @@ problemHeading: Web emissions tools existed — but results weren't comparable, 
 journeyHeading: From a measurement gap to a formal W3C collaboration and consensus design document
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Google
-    logo: /assets/logos/google.png
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: HSBC
-    logo: /assets/logos/hsbc.svg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: ClimateAction.tech
-    logo: /assets/logos/climateaction.tech.png
 
 stats:
   - value: "10 weeks"

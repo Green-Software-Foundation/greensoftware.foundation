@@ -11,23 +11,14 @@ journeyHeading: From a free course to 130,000 engineers trained
 
 orgs:
   - name: Goldman Sachs
-    logo: /assets/logos/goldman-sachs.png
   - name: Avanade
-    logo: /assets/logos/avanade.webp
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Thoughtworks
-    logo: /assets/logos/thoughtworks.svg
   - name: EPAM
-    logo: /assets/logos/epam.svg
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
 
 stats:
   - value: "130,000+"

@@ -12,23 +12,14 @@ journeyHeading: From a conference proposal to a ratified standard with all three
 
 orgs:
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Google
-    logo: /assets/logos/google.png
   - name: Avanade
-    logo: /assets/logos/avanade.webp
   - name: Cisco
-    logo: /assets/logos/cisco.svg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
 
 stats:
   - value: April 2025

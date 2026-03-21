@@ -11,15 +11,10 @@ journeyHeading: From concept to the first graduated GSF project
 
 orgs:
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Energy Web
-    logo: /assets/logos/energy-web.png
   - name: Avanade
-    logo: /assets/logos/avanade.webp
 
 stats:
   - value: "13–24%"

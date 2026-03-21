@@ -11,19 +11,12 @@ journeyHeading: From a triangle sketched at sea to a ratified standard
 
 orgs:
   - name: HSBC
-    logo: /assets/logos/hsbc.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.webp
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: Avanade
-    logo: /assets/logos/avanade.webp
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
 
 stats:
   - value: "4"

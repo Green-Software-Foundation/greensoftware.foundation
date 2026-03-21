@@ -11,23 +11,14 @@ journeyHeading: From hackathon appetite to a production-scale measurement ecosys
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
-  - name: AVEVA
-    logo: /assets/logos/aveva.svg
-  - name: BCG X
-    logo: /assets/logos/bcg.png
+  - name: Aveva
+  - name: BCG
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
-  - name: Sentry Software
-    logo: /assets/logos/sentry.png
-  - name: IMDA Singapore
-    logo: /assets/logos/imda.png
+  - name: Sentry
+  - name: Infocomm Media Development Authority
   - name: Thoughtworks
-    logo: /assets/logos/thoughtworks.svg
 
 stats:
   - value: "500+"

@@ -10,24 +10,15 @@ problemHeading: By the time organisations heard about a new regulation, the cons
 journeyHeading: From independent policy tracking to a shared radar and formal GHG Protocol engagement
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Scope3
-    logo: /assets/logos/scope3.jpg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Google
-    logo: /assets/logos/google.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: Cisco
-    logo: /assets/logos/cisco.svg
   - name: UBS
-    logo: /assets/logos/ubs.png
 
 stats:
   - value: "11"

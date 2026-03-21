@@ -29,7 +29,14 @@ const {
 } = story.data;
 
 // ── Related articles ──────────────────────────────────────────────────────────
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+// Logo lookup: include inactive members (they still appear in stories) but respect hideLogo
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+
+// Auto-resolve org logos from members.json when not provided in frontmatter
+const resolvedOrgs = orgs.map((org: any) => ({
+  ...org,
+  logo: org.logo || logoMap.get(org.name.toLowerCase()) || null,
+}));
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))
@@ -99,19 +106,20 @@ const resolvedContributors = contributors.map((c: any) => {
   </div>
 
   <!-- ── Org logos ─────────────────────────────────────────────────────────── -->
-  {orgs.length > 0 && (
+  {resolvedOrgs.length > 0 && (
     <div class="bg-white border-b border-border">
       <div class="container py-10 md:py-12">
         <div class="max-w-4xl mx-auto">
           <p class="text-gray-darker text-xs uppercase tracking-wider font-semibold mb-6 text-center">Organisations involved</p>
           <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {orgs.map(org => (
+            {resolvedOrgs.map(org => (
               org.logo ? (
-                <img
+                <Image
                   src={org.logo}
                   alt={org.name}
-                  style="height: 32px; width: auto; max-width: 130px; object-fit: contain;"
-                  onerror="this.outerHTML='<span class=\'text-primary-dark font-bold text-sm\'>' + this.alt + '</span>'"
+                  class="h-8 w-auto max-w-[130px] object-contain"
+                  sizes="130px"
+                  widths={[130, 260]}
                 />
               ) : (
                 <span class="text-primary-dark font-bold text-sm">{org.name}</span>

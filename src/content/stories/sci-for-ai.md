@@ -11,41 +11,23 @@ journeyHeading: From panel discussion to the world's first AI carbon standard
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.jpg
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
   - name: Avanade
-    logo: /assets/logos/avanade.webp
   - name: BCG
-    logo: /assets/logos/bcg.png
   - name: Boavizta
-    logo: /assets/logos/boavizta.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Google
-    logo: /assets/logos/google.png
   - name: IBM
-    logo: /assets/logos/ibm.gif
-  - name: IMDA Singapore
-    logo: /assets/logos/infocomm-media-development-authority.png
+  - name: Infocomm Media Development Authority
   - name: Microsoft
-    logo: /assets/logos/microsoft.webp
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Schneider Electric
-    logo: /assets/logos/schneider-electric.jpg
   - name: Scope3
-    logo: /assets/logos/scope3.jpg
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: UCL
-    logo: /assets/logos/ucl.png
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: WattTime
-    logo: /assets/logos/watttime.png
 
 stats:
   - value: "20+"

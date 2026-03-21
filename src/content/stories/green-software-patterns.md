@@ -11,25 +11,15 @@ journeyHeading: From 50 patterns to a 2030 vision for green-by-default developme
 
 orgs:
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Goldman Sachs
-    logo: /assets/logos/goldman-sachs.png
-  - name: AVEVA
-    logo: /assets/logos/aveva.svg
+  - name: Aveva
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Mastercard
-    logo: /assets/logos/mastercard.svg
   - name: Shell
-    logo: /assets/logos/shell.svg
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: CAST
-    logo: /assets/logos/cast.png
 
 stats:
   - value: "50"

@@ -11,25 +11,15 @@ journeyHeading: From five companies talking about the same problem to a global m
 
 orgs:
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: GitHub
-    logo: /assets/logos/github.png
   - name: Thoughtworks
-    logo: /assets/logos/thoughtworks.svg
   - name: Goldman Sachs
-    logo: /assets/logos/goldman-sachs.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Google
-    logo: /assets/logos/google.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: Cisco
-    logo: /assets/logos/cisco.svg
 
 stats:
   - value: "5"
