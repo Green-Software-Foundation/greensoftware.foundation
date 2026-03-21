@@ -3,10 +3,11 @@ import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
+import DraftBanner from "@/components/draft-banner.astro";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("pages", (p) => p.data.published !== false);
+  const pages = await getCollection("pages");
   return pages.map((page) => ({
     params: { page: page.data.slug },
     props: { page },
@@ -20,6 +21,7 @@ const { Content } = await render(page);
 <Layout
   title={`${page.data.title} — Green Software Foundation`}
   description={page.data.description || "Green Software Foundation — building a trusted ecosystem of people, standards, tooling, and best practices for green software."}
+  noindex={page.data.published === false}
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -31,6 +33,7 @@ const { Content } = await render(page);
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
+  {page.data.published === false && <DraftBanner />}
   <div class="py-16 md:py-20 bg-white">
     <div class="container">
       <div class="max-w-3xl mx-auto">
