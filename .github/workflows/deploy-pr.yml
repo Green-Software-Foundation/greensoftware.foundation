@@ -48,8 +48,7 @@ jobs:
 
           This PR merges \`dev\` into \`main\` to deploy staged changes to production.
 
-          **Production site:** greensoftware.org
-          **Staging site:** dev-green-software-org.netlify.app
+          **Production site:** greensoftware.foundation
 
           > Auto-created by the Deploy PR workflow. Review changes carefully before merging."
 

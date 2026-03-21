@@ -1,39 +1,40 @@
 # Green Software Foundation Website
 
-The official website for the [Green Software Foundation](https://greensoftware.org), built with Astro 5, React 19, and Tailwind CSS 4.
+The official website for the [Green Software Foundation](https://greensoftware.foundation), built with Astro 5, React 19, and Tailwind CSS 4.
 
 ## Branching & Deployment
 
 ```mermaid
 graph BT
-    F1[feature-branch-1] -->|PR| DEV[dev branch]
-    F2[feature-branch-2] -->|PR| DEV
-    DEV -->|"Deploy PR (auto-created)"| MAIN[main branch]
-    MAIN -->|"Backfill PR (auto-created)"| DEV
-    DEV -.-|Netlify auto-deploys| STAGING["dev-green-software-org.netlify.app<br/>(staging)"]
-    MAIN -.-|Netlify auto-deploys| PROD["greensoftware.org<br/>(production)"]
+    F1[feature-branch-1] -->|PR| MAIN[main branch]
+    F2[feature-branch-2] -->|PR| MAIN
+    MAIN -.-|Netlify auto-deploys| PROD["greensoftware.foundation<br/>(production)"]
+    F1 -.-|Netlify deploy preview| PREV1["preview URL"]
+    F2 -.-|Netlify deploy preview| PREV2["preview URL"]
 ```
 
 | Branch | Deploys to | Purpose |
 |--------|-----------|---------|
-| `main` | [greensoftware.org](https://greensoftware.org) | Production — protected, no direct pushes |
-| `dev` | [dev-green-software-org.netlify.app](https://dev-green-software-org.netlify.app) | Staging — all work merges here first |
+| `main` | [greensoftware.foundation](https://greensoftware.foundation) | Production — protected, no direct pushes |
+| Feature branches | Netlify deploy previews | Preview changes before merging |
 
 ### Rules
 
-1. **Never push or PR directly to `main`.** The `main` branch is protected.
-2. **All pull requests target `dev`.** Whether you're using Claude Code, the CMS, or working manually — always branch from `dev` and PR back into `dev`.
-3. **Deploy to production** by merging `dev` → `main` via the auto-created **Deploy PR**.
-4. **Backfill** happens automatically — if anything lands on `main` directly (hotfix, accident), a **Backfill PR** is auto-created to sync it back into `dev`.
+1. **Never push directly to `main`.** The `main` branch is protected.
+2. **All pull requests target `main`.** Branch from `main`, PR back into `main`.
+3. **Every PR gets a Netlify deploy preview** — review changes on a real URL before merging.
+4. **Use merge commits** (not squash) when merging PRs to keep history clean.
 
-### Automated PRs (GitHub Actions)
+### Draft content
 
-Two workflows keep `dev` and `main` in sync:
+Content that isn't ready to go live uses the `published: false` flag in frontmatter. Unpublished content:
 
-- **Deploy PR** ([`.github/workflows/deploy-pr.yml`](.github/workflows/deploy-pr.yml)) — On every push to `dev`, checks if `dev` is ahead of `main`. If so, creates a "Deploy v{N}" PR from `dev` → `main` (with incrementing version numbers). Requests review from @seanmcilroy29 and @JamieACowan.
-- **Backfill PR** ([`.github/workflows/backfill-pr.yml`](.github/workflows/backfill-pr.yml)) — On every push to `main`, checks if `main` is ahead of `dev`. If so, creates a "Backfill" PR from `main` → `dev`. Requests review from @seanmcilroy29 and @JamieACowan.
+- **Renders at its direct URL** — so you can preview and share the link
+- **Hidden from all listings** — doesn't appear in article indexes, carousels, or search
+- **Shows a draft banner** — a visible "Draft" indicator at the top of the page
+- **Excluded from search engines** — `noindex` meta tag prevents indexing
 
-Neither workflow auto-merges — a human must always review and merge.
+This means Sveltia CMS can commit to `main` without content going live until `published` is set to `true`.
 
 ## Quick start
 
@@ -42,7 +43,7 @@ npm install
 npm run dev          # Dev server on localhost:4322
 ```
 
-The homepage is at `/` and the component catalogue is at `/catalogue`.
+The homepage is at `/` and the component playground is at `/playground/`.
 
 ## Data from Notion
 
@@ -72,9 +73,9 @@ The site uses [Sveltia CMS](https://sveltiacms.app) — a modern, Git-based head
 
 ### Logging in
 
-Access is controlled entirely by **GitHub repository permissions**. Anyone with write access to `Green-Software-Foundation/greensoftware.foundation` can log into the CMS — no separate account or invitation needed.
+Access is controlled entirely by **GitHub repository permissions**. Anyone with write access to the repo can log into the CMS — no separate account or invitation needed.
 
-1. Go to `https://greensoftware.org/admin/`
+1. Go to `https://greensoftware.foundation/admin/`
 2. Click **Login with GitHub**
 3. Authorise via GitHub OAuth (first time only)
 
@@ -82,21 +83,20 @@ That's it. If you can push to the repo, you can edit in the CMS.
 
 ### Publishing workflow
 
-The CMS is configured to write to the **`dev` branch**. Changes you save in the CMS are committed to `dev` immediately — they appear on any preview/staging environment pointed at that branch, but **not on the live site**.
+The CMS commits directly to the **`main` branch**. New content should be created with `published: false` (the default in the CMS). This means:
 
-To publish to the live website:
+1. Content is committed to `main` and deployed immediately
+2. Because `published` is `false`, it's hidden from all listings — only accessible via direct URL
+3. When you're ready to go live, set `published: true` in the CMS and save
 
-1. Merge `dev` into `main` (via a pull request or direct merge — project owner's call)
-2. Netlify automatically builds and deploys `main`
-
-This means you can make and preview as many CMS edits as you like on `dev` without affecting the live site. When you're ready to go live, do a single merge.
+This gives you a preview-able staging workflow without needing a separate branch.
 
 ### Local development
 
 Sveltia uses the browser's **File System Access API** for local editing — no proxy server or extra tooling needed.
 
-1. Run `npm run dev` (dev server starts on `localhost:4401`)
-2. Open `http://localhost:4401/admin/` in **Chrome or Edge** (Safari and Firefox don't support the File System API)
+1. Run `npm run dev` (dev server starts on `localhost:4322`)
+2. Open `http://localhost:4322/admin/` in **Chrome or Edge** (Safari and Firefox don't support the File System API)
 3. Click **"Work with Local Repository"** and select the project root folder
 4. Sveltia reads and writes your local files directly
 
@@ -193,12 +193,13 @@ On individual story pages, related articles are curated per story using the "Rel
 
 - [Articles & Featured Content](docs/how-to-featured-articles.md) — How to write articles, manage frontmatter, and feature content on the homepage carousel
 - [Governance & Leadership Page](docs/how-to-governance-leadership.md) — Where governance page data comes from, Notion data sources, and how to keep it updated
+- [Google Analytics](docs/google-analytics.md) — GA4 setup, property IDs, and implementation details
 
 ## Project documentation
 
 - [CLAUDE.md](CLAUDE.md) — Full project context: architecture, component library, design tokens, data pipeline
-- [Component Catalogue](docs/component-catalogue/README.md) — Guide to the parameterised component library
 - [Site Rebuild Spec](docs/features/site-rebuild-componentisation.md) — Original feature spec for the Astro rebuild
+- [Site Rollout Plan](docs/features/site-rollout.md) — Plan for deploying to greensoftware.foundation
 
 ## Key directories
 
