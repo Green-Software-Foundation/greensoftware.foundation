@@ -13,7 +13,9 @@ import ProjectCards from "@/components/project-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
-import { resolveOrgsSrc as resolveOrgs } from "@/lib/logo-map";
+import membersData from "@/data/members.json";
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: logoMap.get(name.toLowerCase()) || "" }));
 ---
 
 <Layout
