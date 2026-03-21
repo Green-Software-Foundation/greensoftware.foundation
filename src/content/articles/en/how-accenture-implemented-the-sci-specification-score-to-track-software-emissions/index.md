@@ -7,16 +7,19 @@ mainImage: "./main.png"
 featured: true
 organizations:
   - "Accenture"
+tags: ["sci", "standards"]
 ---
 
 The design, development, and deployment of all software applications should prioritize sustainability as an essential outcome. This requires using energy-efficient hardware, developing climate-conscious code, optimizing energy consumption, and increasing the use of renewable and clean energy sources.
 
-Upon the 1.0 release of the [Software Carbon Intensity (SCI) specification](https://github.com/Green-Software-Foundation/sci/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md) by Green Software Foundation, Accenture took quick action to calculate a measure to track and, ultimately, reduce the carbon emissions of one of its internal reference applications. “SCI specification provided a practical methodology to baseline carbon emissions of the application, including embodied emissions and reducing the same.” says Navveen Balani. 
+Upon the 1.0 release of the [Software Carbon Intensity (SCI) specification](https://github.com/Green-Software-Foundation/sci/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md) by Green Software Foundation, Accenture took quick action to calculate a measure to track and, ultimately, reduce the carbon emissions of one of its internal reference applications. “SCI specification provided a practical methodology to baseline carbon emissions of the application, including embodied emissions and reducing the same.” says Navveen Balani.
 
 ## What is the SCI Specification?
+
 The SCI specification describes a methodology for calculating the rate of carbon emissions for a software system. The purpose of the score is to increase awareness and transparency of an application’s sustainability credentials. The score helps software practitioners make better, evidence-based decisions during system design, development, and deployment that ultimately minimize carbon emissions. A reliable, consistent, fair, and comparable measure better positions technology leaders to set  targets during development and for progress to be tracked.
 
 ## Technology Stack of Reference Application
+
 The following graph defines the technology stack for the reference application.
 
 ![Architecture diagram showing mobile and desktop clients, API Gateway, Kubernetes compute cluster, and managed database with reporting, security, and monitoring](./image.png)
@@ -26,6 +29,7 @@ The architecture has an API Gateway that exposes all the required APIs that any 
 The microservices implementation uses a managed database like Azure Database for PostgreSQL or Google Cloud SQL for persistence. The technology stack uses PowerBI as a reporting module. The application leverages the monitoring environment offered by the cloud vendor, which includes central logging, alerts, backups, etc.
 
 ## Releasing SCI for Reference Application
+
 To calculate the SCI for the above technology stack, Accenture took the following steps:
 
 1. **Bound - Software Boundary**
@@ -54,7 +58,7 @@ The VM1 to VM8 represent the nodes running containers that auto-scale based on a
 
 For the Embodied Emissions calculation, based on Node type (i.e., processor type), we used  [spec.org](https://www.spec.org/) to find a match and get the embodied emissions. For a specific node (VM instance type), the team identified the underlying hardware provisioned, mapped it to an identical bare metal server (e.g., Dell PowerEdge R740), and then considered the embodied emission from the Product Lifecycle Assessment. They later apportioned the embodied emissions of the server to the cloud VMs based on the virtual cores.
 
-Another source that can be used for embodied carbon is the [Cloud Carbon Footprint](https://www.cloudcarbonfootprint.org/docs/embodied-emissions/) (emission data is available [here](https://docs.google.com/spreadsheets/d/1k-6JtneEu4E9pXQ9QMCXAfyntNJl8MnV2YzO4aKHh-0/edit#gid=0)). Cloud Carbon Footprint lists the embodied carbon based on a cloud VM/server type. 
+Another source that can be used for embodied carbon is the [Cloud Carbon Footprint](https://www.cloudcarbonfootprint.org/docs/embodied-emissions/) (emission data is available [here](https://docs.google.com/spreadsheets/d/1k-6JtneEu4E9pXQ9QMCXAfyntNJl8MnV2YzO4aKHh-0/edit#gid=0)). Cloud Carbon Footprint lists the embodied carbon based on a cloud VM/server type.
 
 For the Emission factor, we assessed where the Node is hosted and took average marginal values from the IEA emission factor table (for country-level values) and the EPA emission factor table (for state-level values for the US). You can use APIs from vendors like [WattTime](https://www.watttime.org/) and [ElectricityMaps](https://www.electricitymaps.com/) to get the carbon intensity data.
 
@@ -63,17 +67,17 @@ For the Emission factor, we assessed where the Node is hosted and took average m
 Calculations were based on API as the functional unit. The total average monthly API request was 890k. We got an SCI score of 0.025 gC02 per API for our internal reference application.
 
 ## What we Learned
+
 We gained three major takeaways while working on the implementation of the SCI specification:
 
- 
-
-1. **Energy calculation** – There are various approaches to calculating energy curves. Some are based on coefficient values (like how many watt-hours it takes to run a virtual server), some are based on statistical methods, and some provide their methodology through APIs. Most of these energy calculation strategies are based on certain approximations. There is no single source of truth, and the intent here is to use the same method for future calculations to compare against the baseline. We documented the various approaches as part of [SCI guidance ](https://sci-data.greensoftware.foundation/E/)to help software practitioners calculate the energy of the software systems. 
+1. **Energy calculation** – There are various approaches to calculating energy curves. Some are based on coefficient values (like how many watt-hours it takes to run a virtual server), some are based on statistical methods, and some provide their methodology through APIs. Most of these energy calculation strategies are based on certain approximations. There is no single source of truth, and the intent here is to use the same method for future calculations to compare against the baseline. We documented the various approaches as part of [SCI guidance](https://sci-data.greensoftware.foundation/E/)to help software practitioners calculate the energy of the software systems.
 
 2. **Embodied emissions** – The type of underlying hardware for running VMs and its embodied emissions are currently abstracted by the cloud vendors. We are forced to use certain approximations based on VM type to calculate the embodied emissions. We have documented our learnings and approaches [here](https://sci-data.greensoftware.foundation/M/).
 
 3. **Cloud-managed services emissions** – There are certain managed and shared services like API Gateway, Load Balancer, etc., where the type of hardware is not listed. In such scenarios, you can apply some approximation as we did with the API gateway. Similarly, we used an approximation based on usage (utilization, time) for serverless components.
 
-## What’s Next   
+## What’s Next
+
 The SCI score provided us with a benchmark for the carbon emissions of the reference application. Please note that the data used was approximated and should not be reported as part of carbon accounting. The intent was to develop an SCI score that we track and reduce. Our next step is to reduce the SCI score by applying the three fundamental principles: developing energy-efficient code, using less and efficient hardware for the same amount of workload and making applications carbon-aware.
 
 *About Accenture*

@@ -11,23 +11,14 @@ journeyHeading: From hackathon appetite to a production-scale measurement ecosys
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
-  - name: AVEVA
-    logo: /assets/logos/aveva.svg
-  - name: BCG X
-    logo: /assets/logos/bcg.png
+  - name: Aveva
+  - name: BCG
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
-  - name: Sentry Software
-    logo: /assets/logos/sentry.png
-  - name: IMDA Singapore
-    logo: /assets/logos/imda.png
+  - name: Sentry
+  - name: Infocomm Media Development Authority
   - name: Thoughtworks
-    logo: /assets/logos/thoughtworks.svg
 
 stats:
   - value: "500+"
@@ -71,9 +62,8 @@ timeline:
     body: >
       The Foundation announced a second hackathon, this time centred squarely on the
       Impact Framework. The framing was explicit: solving the biggest pain point facing
-      the industry — measuring software for sustainability. Software's ecological impact
-      was approaching 14% of global emissions, and the IF was the tool to make measurement
-      scalable.
+      the industry — measuring software for sustainability. The IF was the tool to make
+      measurement scalable.
     source:
       text: Read the Carbon Hack 24 announcement
       href: /articles/carbon-hack-24-where-measurement-meets-innovation-and-impact-knows-no-bounds/
@@ -194,7 +184,8 @@ cta:
     The Impact Framework was built by organisations who came together through the Green
     Software Foundation. If your teams are struggling to measure software emissions,
     or you've built something that solves a measurement gap, join us.
-  note: Explore the Impact Framework and its plugin ecosystem at if.greensoftware.foundation
+  ctaText: "Explore the Impact Framework"
+  ctaHref: "https://if.greensoftware.foundation"
 ---
 
 By 2023, the SCI specification had given the world a standard way to express software carbon intensity. But having a formula and being able to use it were two different things. Calculating an SCI score required gathering CPU utilisation data, mapping it to energy curves, finding the right carbon intensity factors for the location, estimating embodied emissions from hardware specifications, and choosing an appropriate functional unit. Each step involved specialist knowledge — energy engineering, hardware lifecycle analysis, regional grid data — that most software teams simply didn't have.
@@ -203,5 +194,5 @@ Clients were coming to companies like Accenture, NTT DATA, and BCG X asking for 
 
 The result was a growing gap between ambition and execution. Organisations wanted to measure. Regulations like the CSRD and EU AI Act were beginning to require it. But the expertise barrier meant that only a handful of well-resourced companies could actually calculate their software's carbon footprint. The measurement revolution promised by the SCI standard was stuck behind a wall of complexity.
 
-> "While we all know the importance of lowering our carbon footprint, software usually feels cleaner than it is. Furthermore, one cannot improve without measuring."
+> While we all know the importance of lowering our carbon footprint, software usually feels cleaner than it is. Furthermore, one cannot improve without measuring.
 > — Toru Shimogaki, NTT DATA

@@ -15,7 +15,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
 // ----- Articles tagged "community" for the carousel -----
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const communityArticles = allArticles
   .filter((a: any) => {
     const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
@@ -65,11 +65,11 @@ const communityArticles = allArticles
     heading="Our *Reach*"
     body="A global community of practitioners, leaders, and organisations driving sustainable software forward."
     stats={[
-      { value: "450,000", label: "Podcast downloads" },
-      { value: "12,000+", label: "Global meetup community members" },
-      { value: "12,000", label: "LinkedIn followers" },
-      { value: "7,800+", label: "Newsletter subscribers" },
-      { value: "37", label: "Meetup groups across 17 countries" },
+      { value: "450,000", label: "Podcast downloads", ctaText: "Listen now", ctaHref: "https://podcast.greensoftware.foundation" },
+      { value: "12,000+", label: "Global meetup community members", ctaText: "Find a meetup", ctaHref: "https://www.meetup.com/pro/gsf/" },
+      { value: "12,000", label: "LinkedIn followers", ctaText: "Follow us", ctaHref: "https://www.linkedin.com/company/green-software-foundation/" },
+      { value: "7,800+", label: "Newsletter subscribers", ctaText: "Subscribe", ctaHref: "/newsletter/" },
+      { value: "37", label: "Meetup groups across 17 countries", ctaText: "Find a meetup", ctaHref: "https://www.meetup.com/pro/gsf/" },
     ]}
     ctaText="Join the Movement Platform"
     ctaHref="https://movement.greensoftware.foundation"
@@ -138,7 +138,7 @@ const communityArticles = allArticles
     columns={2}
     features={[
       {
-        icon: "/assets/project-icons/meetup-program.png",
+        icon: "/assets/project-icons/community-wg.png",
         title: "Movement Platform",
         description: "The community hub for green software. Access courses, join discussions, attend community sessions, and connect with fellow practitioners — all in one place.",
         linkText: "Join the platform →",
@@ -189,13 +189,13 @@ const communityArticles = allArticles
             37 groups across 17 countries. 12,000+ members meeting locally to discuss, learn, and practice green software together.
           </p>
           <p class="mt-4 text-base leading-relaxed text-primary-dark/80">
-            With global carbon emissions caused by software approaching 5%, now is the time to get involved in your local community. Find a meetup near you — or start your own.
+            Find a meetup near you — or start your own.
           </p>
           <div class="mt-8 flex flex-wrap gap-4">
             <a href="https://www.meetup.com/pro/gsf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark">
               Find a local meetup →
             </a>
-            <a href="mailto:meetup@greensoftware.foundation" class="inline-flex items-center rounded-lg border border-primary px-6 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-white">
+            <a href="mailto:help@greensoftware.foundation" class="inline-flex items-center rounded-lg border border-primary px-6 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-white">
               Start a meetup group
             </a>
           </div>
@@ -215,21 +215,21 @@ const communityArticles = allArticles
         icon: "/assets/co2-icon.svg",
         title: "Global Summit",
         description: "An annual series of in-person events hosted by GSF members across the globe. Leaders and practitioners come together to share progress, set direction, and strengthen the movement.",
-        linkText: "Learn about the Summit →",
+        linkText: "See our previous Summit →",
         linkHref: "https://summit.greensoftware.foundation",
       },
       {
         icon: "/assets/realtime-icon.svg",
         title: "Carbon Hack",
         description: "Our flagship hackathon challenging practitioners to build, measure, and optimise software for sustainability. Open to everyone — from students to seasoned engineers.",
-        linkText: "Join the next Carbon Hack →",
+        linkText: "See our previous Carbon Hack →",
         linkHref: "https://hack.greensoftware.foundation/",
       },
     ]}
   />
 
   <!-- Community Articles -->
-  {communityArticles.length > 0 && (
+  {communityArticles.length >= 3 && (
     <ArticleCarousel
       heading="Community & Events"
       body="Stories and highlights from the green software community worldwide."

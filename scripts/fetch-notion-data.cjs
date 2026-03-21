@@ -408,7 +408,7 @@ async function fetchChairsAndLeads(memberById) {
     "Project Lead",
     "Project Co-Lead",
     "Committee Chair",
-    "Committee Vice Chair",
+    "Committee Vice-Chair",
     "Committee Member",
   ];
 
@@ -447,7 +447,7 @@ async function fetchChairsAndLeads(memberById) {
     "Project Lead": "Lead",
     "Project Co-Lead": "Co-Lead",
     "Committee Chair": "Chair",
-    "Committee Vice Chair": "Vice-Chair",
+    "Committee Vice-Chair": "Vice-Chair",
   };
 
   const people = [];

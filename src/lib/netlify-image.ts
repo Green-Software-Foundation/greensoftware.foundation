@@ -6,18 +6,23 @@
  * isn't available, so we fall back to the original URL.
  */
 
-const DEFAULT_WIDTHS = [400, 800, 1200, 1600];
+const DEFAULT_WIDTHS = [200, 400, 800, 1200];
 
 /** Returns true for raster image paths that the Netlify CDN can transform. */
 export function isRaster(src: string): boolean {
   return /\.(jpe?g|png|gif|webp|avif)(\?.*)?$/i.test(src);
 }
 
+/** Returns true if the source image format supports transparency. */
+export function hasAlpha(src: string): boolean {
+  return /\.(png|webp|gif|avif)(\?.*)?$/i.test(src);
+}
+
 /** Build a single Netlify Image CDN URL for the given width and format. */
 export function netlifyUrl(
   src: string,
   width: number,
-  format: "avif" | "webp" | "jpeg",
+  format: "avif" | "webp" | "jpeg" | "png",
 ): string {
   if (import.meta.env.DEV) return src;
   return `/.netlify/images?url=${encodeURIComponent(src)}&w=${width}&fm=${format}&q=80`;

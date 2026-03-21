@@ -5,7 +5,12 @@
  * <img> elements; raster images get a <picture> with AVIF + WebP sources backed
  * by the Netlify Image CDN. Falls back to a plain <img> in local dev.
  */
-import { isRaster, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
+import {
+  isRaster,
+  hasAlpha,
+  makeSrcset,
+  netlifyUrl,
+} from "@/lib/netlify-image";
 
 interface ImgProps {
   src: string;
@@ -29,6 +34,16 @@ export function Img({
   widths,
 }: ImgProps) {
   const useNetlify = isRaster(src) && !import.meta.env.DEV;
+  const fallbackFormat = hasAlpha(src) ? ("png" as const) : ("jpeg" as const);
+
+  // Derive a sensible fallback width from props
+  const fallbackWidth = (() => {
+    if (width) return width;
+    const pxMatch = sizes.match(/^(\d+)px$/);
+    if (pxMatch) return Math.min(parseInt(pxMatch[1], 10) * 2, 800);
+    const ws = widths || [200, 400, 800, 1200];
+    return ws[Math.min(1, ws.length - 1)];
+  })();
 
   if (!useNetlify) {
     return (
@@ -45,7 +60,7 @@ export function Img({
   }
 
   return (
-    <picture>
+    <picture style={{ display: "contents" }}>
       <source
         type="image/avif"
         srcSet={makeSrcset(src, "avif", widths)}
@@ -57,7 +72,7 @@ export function Img({
         sizes={sizes}
       />
       <img
-        src={netlifyUrl(src, width ?? 1200, "jpeg")}
+        src={netlifyUrl(src, fallbackWidth, fallbackFormat)}
         alt={alt}
         className={className}
         width={width}

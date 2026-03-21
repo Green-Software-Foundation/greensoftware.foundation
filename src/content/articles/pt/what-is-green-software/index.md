@@ -6,11 +6,13 @@ teaserText: "Criando um ecossistema confiável de pessoas, metodologias, ferrame
 mainImage: "./main.png"
 authors:
   - fullName: "Asim Hussain"
-    role: "Chairperson"
+    role: "Executive Director"
+    company: "Green Software Foundation"
+    companyWebsite: "https://greensoftware.foundation"
     photo: "/assets/articles/authors/asim-hussain.png"
     socialMedia:
       - platform: "Linkedin"
-        link: "https://green-software-foundation.admin.datocms.com/editor/item_types/1245874/items/63645581/edit"
+        link: "https://www.linkedin.com/in/asimhussain/"
 translators:
   - fullName: "Aline Naoe"
     role: "Software Development Consultant"
@@ -38,7 +40,7 @@ translators:
 
 Existem duas maneiras amplas de olhar para o software: software como parte do problema climático e software como parte da solução.
 
-Construir software sustentável, e fazer isso de maneira escalável, exige a criação de um ecossistema confiável de pessoas, padrões, ferramentas e boas práticas. A missão da *Green Software Foundation *é exatamente essa.
+Construir software sustentável, e fazer isso de maneira escalável, exige a criação de um ecossistema confiável de pessoas, padrões, ferramentas e boas práticas. A missão da *Green Software Foundation*é exatamente essa.
 
 ## **Carbono**
 
@@ -46,7 +48,7 @@ Queremos que o software se torne parte da solução climática em vez de ser par
 
 Software também pode ser um facilitador para possíveis soluções climáticas. Software pode ser desenvolvido para ajudar a acelerar a descarbonização em todos os setores na indústria e na sociedade. Precisamos de pessoas e organizações para focar em ambos os aspectos: fazer software sustentável e softwares que possibilitem a sustentabilidade. Mas nosso foco principal é na criação de um ecossistema para desenvolvimento de software sustentável.
 
-A *Green Software Foundation *não tem fins lucrativos e foi criada para pessoas que estão no ramo do desenvolvimento de software. Nossa tarefa é dar respostas sobre o que elas podem fazer para reduzir as emissões pelas quais são responsáveis.
+A *Green Software Foundation*não tem fins lucrativos e foi criada para pessoas que estão no ramo do desenvolvimento de software. Nossa tarefa é dar respostas sobre o que elas podem fazer para reduzir as emissões pelas quais são responsáveis.
 
 ## **Redução**
 
@@ -56,7 +58,7 @@ Reduzir é mais desafiador do que compensar. Implica em mais risco e mais invest
 
 ## **Ação**
 
-Nossa visão é de que há apenas três ações para reduzir a emissão de carbono pelo software: 
+Nossa visão é de que há apenas três ações para reduzir a emissão de carbono pelo software:
 
 - Usando menos recursos físicos
 - Usando menos energia

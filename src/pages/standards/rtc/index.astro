@@ -19,10 +19,28 @@ import TeamGrid from "@/components/team-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
+import ArticleCarousel from "@/components/article-carousel.astro";
+
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const rtcProject = projects.find(p => p.slug === "real-time-cloud");
 const parentWg = projects.find(p => p.name === rtcProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("rtc"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -58,6 +76,7 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
     body="Cloud providers are the world's largest purchasers of renewable energy, yet they only release carbon data to customers monthly, with delays of several months. The Real Time Cloud (RTC) standard changes this by normalising energy and carbon metadata from AWS, Azure, and GCP into a single, comparable dataset — enabling accurate emissions reporting, carbon-aware workload scheduling, and regulatory compliance."
     ctas={[
       { text: "View the Dataset", variant: "primary", href: "https://github.com/Green-Software-Foundation/real-time-cloud" },
+      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/real-time-cloud/" },
     ]}
     imageSrc="/assets/standards/rtc/hero-illustration.svg"
     imageAlt="RTC illustration"
@@ -67,7 +86,7 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="Developed with cloud providers, enterprise consumers, and data partners"
+    heading="Developed with consensus from GSF member organisations"
   />
 
   <!-- What is RTC? -->
@@ -91,8 +110,8 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
     heading="Industry"
     headingAccent="Impact"
     headingStyle="light"
-    body="Every organisation trying to measure the carbon footprint of its cloud workloads faced the same foundational problem: the data from cloud providers was late, incomplete, and incomparable. If you ran workloads across AWS, Azure, and GCP, you received three different reports using three different methodologies on three different timescales. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure, creating a single source of truth that the entire industry can build upon."
-    imageSrc="/assets/standards/rtc/tabs-cloud-engineers.svg"
+    body="Organisations measuring the carbon footprint of their cloud workloads have faced the same foundational problem: data from cloud providers is late, incomplete, and incomparable across platforms. If you run workloads across AWS, Azure, and GCP, you receive three different reports using three different methodologies on three different timescales. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure, creating a single source of truth that the entire industry can build upon."
+    imageSrc="/assets/standards/rtc/industry-impact-illustration.svg"
     imageAlt="Industry impact illustration"
     bgClass="bg-accent-lightest-2"
   />
@@ -102,7 +121,7 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
     heading="Business"
     headingAccent="Benefits"
     headingStyle="light"
-    imageSrc="/assets/standards/rtc/tabs-business.svg"
+    imageSrc="/assets/standards/rtc/business-benefits-illustration.svg"
     imageAlt="Business benefits illustration"
     reversed
     iconFeatures={[
@@ -137,7 +156,7 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
     headingAccent="Impact"
     headingStyle="light"
     body="Customers reporting Scope 3 emissions were forced to produce estimates using incomplete public information that excluded the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organisations that had invested heavily in clean cloud infrastructure were being penalised by the data gap. RTC solves this by capturing carbon-free energy percentages, renewable energy breakdowns including Guarantees of Origin, Power Purchase Agreements, and on-site generation, giving a true picture of each cloud region's environmental footprint."
-    imageSrc="/assets/standards/rtc/tabs-sustainability.svg"
+    imageSrc="/assets/standards/rtc/environmental-impact-illustration.svg"
     imageAlt="Environmental impact illustration"
     bgClass="bg-accent-lightest-2"
   />
@@ -157,12 +176,12 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
       {
         icon: "/assets/standards/rtc/transforming-icon-2.svg",
         title: "Carbon Free Energy",
-        description: "Hourly and annual carbon-free energy percentages, with renewable energy broken down by certificates, PPAs, and on-site generation",
+        description: "Hourly and annual carbon-free energy percentages, with renewable energy broken down by certificates, Power Purchase Agreements (PPAs), and on-site generation",
       },
       {
         icon: "/assets/standards/rtc/transforming-icon-3.svg",
         title: "Carbon Intensity",
-        description: "Five carbon intensity metrics covering market-based, location-based, marginal, and average consumption at both provider and grid level",
+        description: "Five carbon intensity metrics — location-based (local grid mix), market-based (contractual instruments), marginal (impact of additional demand), and average — at both provider and grid level",
       },
       {
         icon: "/assets/standards/rtc/transforming-icon-4.svg",
@@ -374,6 +393,17 @@ const parentWg = projects.find(p => p.name === rtcProject?.parent);
     }))}
     bgClass="bg-accent-lightest-2"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Real Time Cloud standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- CTA -->
   <CTABanner

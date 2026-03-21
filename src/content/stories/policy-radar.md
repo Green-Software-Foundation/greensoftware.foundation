@@ -1,42 +1,32 @@
 ---
 title: "We don't know what legislation is coming"
 summary: >
-  How Chris Adams of the Green Web Foundation and Aya Saed of Scope3 built the
-  GSF Policy Radar — a shared, transparent tool tracking forthcoming green software
-  legislation — and established the Policy Working Group as the connective tissue
-  between technical expertise and policy action.
+  How the Green Software Foundation built the Policy Radar — a shared, transparent
+  tool tracking forthcoming green software legislation — and established the Policy
+  Working Group as the connective tissue between technical expertise and policy action.
 
 mainImage: /assets/stories/policy-radar.png
 problemHeading: By the time organisations heard about a new regulation, the consultation period was often over
 journeyHeading: From independent policy tracking to a shared radar and formal GHG Protocol engagement
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Scope3
-    logo: /assets/logos/scope3.jpg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Google
-    logo: /assets/logos/google.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: Cisco
-    logo: /assets/logos/cisco.svg
   - name: UBS
-    logo: /assets/logos/ubs.png
 
 stats:
-  - value: May 2025
-    label: Policy Radar ratified — a shared public database of upcoming green software legislation
+  - value: "11"
+    label: Global policies and regulations tracked across jurisdictions
+  - value: "3"
+    label: Formal consultation responses coordinated across the foundation
   - value: "5"
-    label: Core principles guiding the PWG — legitimacy, opportunity, consistency, transparency, accountability
-  - value: GHG Protocol
-    label: Formal consultation response submitted, advocating for granular time- and location-sensitive emissions data
+    label: Core principles — legitimacy, opportunity, consistency, transparency, accountability
 
 timeline:
   - date: March 2024
@@ -75,19 +65,6 @@ timeline:
     source:
       text: Read about the Policy Radar ratification
       href: /articles/celebrating-the-ratification-of-the-policy-radar/
-
-  - date: June 2025
-    heading: Aya Saed elected co-chair
-    body: >
-      Aya Saed, Director of AI Policy and Strategy at Scope3, brought experience as Counsel
-      and Legislative Director in the U.S. House of Representatives. As she explained: "Drawing
-      from my experience with Congress, I've seen firsthand how decision-makers struggle to
-      navigate this territory without comprehensive, technically grounded frameworks. My goal
-      is to help make this Working Group the connective tissue between technical expertise and
-      policy action."
-    source:
-      text: Read about Aya Saed's election as PWG co-chair
-      href: /articles/leadership-update-aya-saed-elected-co-chair-of-the-policy-working-group/
 
   - date: August 2025
     heading: PWG defines its mission and principles
@@ -137,9 +114,16 @@ contributors:
     role: Director of AI Policy and Strategy
     org: Scope3
     contribution: >
-      Elected co-chair of the Policy Working Group in June 2025, bringing legislative
+      Contributed to the Policy Working Group as an early member, bringing legislative
       experience from the U.S. House of Representatives and applied expertise in
       measuring emissions across digital supply chains.
+  - name: Sean McIlroy
+    role: Programme Director
+    org: Green Software Foundation
+    contribution: >
+      Standards expert who has been driving policy engagement through the foundation
+      and the Linux Foundation, helping coordinate the Policy Working Group's
+      activities and ensuring alignment with broader sustainability initiatives.
 
 quotes:
   - text: >
@@ -166,7 +150,6 @@ quotes:
 
 relatedSlugs:
   - en/celebrating-the-ratification-of-the-policy-radar
-  - en/leadership-update-aya-saed-elected-co-chair-of-the-policy-working-group
   - en/mission-statement-update-gsf-s-policy-working-group-defines-its-path-forward
   - en/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation
   - en/the-gsf-endorses-the-ai-environmental-impacts-act
@@ -178,7 +161,8 @@ cta:
     GSF members can submit new policies and participate in the Policy Working Group's
     consultation responses — ensuring your voice reaches policymakers before regulations
     are finalised.
-  note: Browse the Policy Radar at policy-radar.greensoftware.foundation
+  ctaText: Visit the Policy Radar
+  ctaHref: https://policy-radar.greensoftware.foundation
 ---
 
 In 2024, many technology and sustainability professionals across GSF's membership were facing the same challenge: they couldn't keep up with new environmental legislation. While guidance on existing regulations was available, there was far less visibility into *developing* legislation — the bills being drafted, the consultations being opened, the deadlines approaching. By the time organisations heard about a new regulation, the consultation period was often over.

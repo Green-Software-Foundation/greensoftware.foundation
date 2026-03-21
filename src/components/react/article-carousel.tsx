@@ -37,8 +37,19 @@ interface Props {
   ctaHref?: string;
 }
 
-export function ArticleCarousel({ heading, body, articles, showOrganizations = true, ctaText, ctaHref }: Props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+export function ArticleCarousel({
+  heading,
+  body,
+  articles,
+  showOrganizations = true,
+  ctaText,
+  ctaHref,
+}: Props) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    containScroll: false,
+  });
 
   const scrollPrev = React.useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -86,31 +97,35 @@ export function ArticleCarousel({ heading, body, articles, showOrganizations = t
                   )}
                   <div className="flex flex-col justify-between flex-grow p-6">
                     <div>
-                      {showOrganizations && article.organizations && article.organizations.length > 0 && (
-                        <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                          {article.organizations.map((org, i) => (
-                            <React.Fragment key={i}>
-                              {org.logoSrc ? (
-                                <Img
-                                  src={org.logoSrc}
-                                  alt={org.name}
-                                  className="h-4 max-w-[60px] w-auto object-contain"
-                                  sizes="60px"
-                                />
-                              ) : (
-                                <span className="text-xs font-semibold text-primary">
-                                  {org.name}
+                      {showOrganizations &&
+                        article.organizations &&
+                        article.organizations.length > 0 && (
+                          <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                            {article.organizations.map((org, i) => (
+                              <React.Fragment key={i}>
+                                {org.logoSrc ? (
+                                  <Img
+                                    src={org.logoSrc}
+                                    alt={org.name}
+                                    className="h-4 max-w-[60px] w-auto object-contain"
+                                    sizes="60px"
+                                    widths={[60, 120]}
+                                  />
+                                ) : (
+                                  <span className="text-xs font-semibold text-primary">
+                                    {org.name}
+                                  </span>
+                                )}
+                              </React.Fragment>
+                            ))}
+                            {article.additionalOrgCount &&
+                              article.additionalOrgCount > 0 && (
+                                <span className="text-xs text-gray-darker">
+                                  +{article.additionalOrgCount} more members
                                 </span>
                               )}
-                            </React.Fragment>
-                          ))}
-                          {article.additionalOrgCount && article.additionalOrgCount > 0 && (
-                            <span className="text-xs text-gray-darker">
-                              +{article.additionalOrgCount} more members
-                            </span>
-                          )}
-                        </div>
-                      )}
+                          </div>
+                        )}
                       <h3 className="mb-2 text-xl font-bold leading-tight">
                         {article.title}
                       </h3>
@@ -133,17 +148,30 @@ export function ArticleCarousel({ heading, body, articles, showOrganizations = t
 
         {ctaText && ctaHref && (
           <div className="mt-8 text-center">
-            <a href={ctaHref} className="inline-flex items-center text-sm font-bold text-primary hover:underline">
+            <a
+              href={ctaHref}
+              className="inline-flex items-center text-sm font-bold text-primary hover:underline"
+            >
               {ctaText}
             </a>
           </div>
         )}
 
         <div className="mt-4 flex justify-center gap-4">
-          <Button variant="outline" size="icon" onClick={scrollPrev}>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollPrev}
+            aria-label="Previous articles"
+          >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <Button variant="outline" size="icon" onClick={scrollNext}>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollNext}
+            aria-label="Next articles"
+          >
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>

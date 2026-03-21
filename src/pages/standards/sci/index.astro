@@ -15,13 +15,30 @@ import TeamGrid from "@/components/team-grid.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
+import CardGrid from "@/components/card-grid.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const sciProject = projects.find(p => p.slug === "sci");
 const parentWg = projects.find(p => p.name === sciProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -56,7 +73,7 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
     body="Every software application has a carbon footprint through the energy it consumes and the hardware it requires. The Software Carbon Intensity (SCI) specification provides the first ISO-accredited methodology to measure this impact as a score."
     ctas={[
       { text: "Read the Specification", variant: "primary", href: "https://grnsft.org/sci" },
-      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-(sci)/" },
     ]}
     imageSrc="/assets/standards/sci/hero-illustration.svg"
     imageAlt="SCI illustration"
@@ -66,7 +83,7 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="ISO-accredited and endorsed by leading technology organisations"
+    heading="Developed with consensus from GSF member organisations"
   />
 
   <!-- What is SCI? -->
@@ -159,7 +176,26 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
           </p>
         </div>
 
-        <p class="text-lg md:text-xl">
+        <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">E — Energy</h3>
+            <p class="mt-2 text-sm text-gray-darker">Energy consumed by your software across all infrastructure — servers, storage, networking, and end-user devices.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">I — Carbon Intensity</h3>
+            <p class="mt-2 text-sm text-gray-darker">The carbon intensity of the energy used, varying by location and time — enabling carbon-aware scheduling and deployment.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">M — Embodied</h3>
+            <p class="mt-2 text-sm text-gray-darker">Embodied emissions from manufacturing the hardware your software runs on, amortised over its expected lifespan.</p>
+          </div>
+          <div class="rounded-xl border bg-white p-5">
+            <h3 class="font-bold text-primary text-lg">R — Functional Unit</h3>
+            <p class="mt-2 text-sm text-gray-darker">A unit of work meaningful to your software — per user, per transaction, per API call — that turns totals into a rate.</p>
+          </div>
+        </div>
+
+        <p class="mt-10 text-lg md:text-xl">
           This simple equation transforms how teams approach software development. Instead of guessing at environmental impact, you can measure it. Instead of generic best practices, you have specific targets. Instead of greenwashing, you have genuine reductions.
         </p>
       </div>
@@ -168,6 +204,7 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
 
   <!-- Organizations Leading with SCI (Success Stories Carousel) -->
   <ArticleCarousel
+    id="case-studies"
     heading="Organisations Leading with SCI"
     body="Financial institutions, consultancies, and technology companies worldwide are implementing SCI to measure and reduce software carbon emissions."
     showOrganizations={false}
@@ -203,7 +240,7 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
       {
         title: "Carbon-Aware Computing at UBS",
         organizations: [{ name: "UBS & Microsoft" }],
-        description: "UBS and Microsoft implemented the first enterprise-scale carbon-aware computing system, using SCI and the Carbon Aware SDK to reduce emissions in their core risk platform workloads.",
+        description: "UBS and Microsoft implemented the first enterprise-scale carbon-aware computing system, using SCI and the Carbon Aware Software Development Kit (SDK) to reduce emissions in their core risk platform workloads.",
         href: "https://news.microsoft.com/de-ch/carbon-aware-computing-whitepaper/",
         cta: "Read Whitepaper →",
       },
@@ -241,8 +278,8 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
               <span class="text-sm text-gray-darker">Peer-Reviewed Research since 2022</span>
             </div>
             <div class="flex flex-col gap-2">
-              <span class="text-3xl font-bold text-primary">ACM FAccT & SoCC</span>
-              <span class="text-sm text-gray-darker">Published in Top Venues</span>
+              <span class="text-3xl font-bold text-primary">ACM</span>
+              <span class="text-sm text-gray-darker">Published at ACM Conference on Fairness, Accountability, and Transparency (FAccT) and Symposium on Cloud Computing (SoCC)</span>
             </div>
           </div>
         </div>
@@ -283,18 +320,24 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
         heading: "Practitioners",
         description: "Transform your daily work into climate action. The SCI score gives you a clear target for optimisation — whether you're writing code, designing systems, or managing databases. See the immediate impact of your choices on your software's carbon footprint. Make efficiency improvements that matter both technically and environmentally. Join a global community of practitioners building the future of sustainable software.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-1.svg" },
+        ctaText: "Read the Specification",
+        ctaHref: "https://grnsft.org/sci",
       },
       {
         value: "business-leaders",
         heading: "Business Leaders",
         description: "Turn sustainability commitments into measurable business value. The SCI specification provides ISO-certified metrics that satisfy stakeholder demands, regulatory requirements, and corporate responsibility goals. Reduce operational costs through improved efficiency. Differentiate your products with verified sustainability credentials. Build trust with customers who increasingly choose partners based on environmental leadership.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-2.svg" },
+        ctaText: "See Case Studies",
+        ctaHref: "#case-studies",
       },
       {
         value: "sustainability-teams",
         heading: "Sustainability Teams",
         description: "Finally, a standardised way to measure and report software's environmental impact. The SCI specification integrates seamlessly with existing sustainability frameworks while providing the technical depth needed for accurate carbon accounting. Track progress with confidence using ISO-accredited methodology. Compare solutions objectively. Drive organisation-wide improvements with clear, actionable metrics that everyone can understand and act upon.",
         image: { src: "/assets/standards/sci/why-wdpc-feat-3.svg" },
+        ctaText: "Browse the SCI Guide",
+        ctaHref: "https://sci-guide.greensoftware.foundation/",
       },
     ]}
     bgClass="bg-accent-lighter/10"
@@ -303,6 +346,7 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
   <!-- Resources -->
   <ResourceCards
     heading="Everything You Need to *Get Started*"
+    columns={2}
     cards={[
       {
         icon: "/assets/standards/sci/resource-spec-icon.svg",
@@ -319,11 +363,57 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
         ctaHref: "https://sci-guide.greensoftware.foundation/",
       },
       {
+        icon: "/assets/standards/sci/resource-if-icon.svg",
+        title: "Impact Framework",
+        description: "An open-source tool for calculating your software's SCI score — model your application, plug in real data, and get actionable results.",
+        ctaText: "Explore the Framework",
+        ctaHref: "https://if.greensoftware.foundation",
+      },
+      {
         icon: "/assets/standards/sci/resource-discuss-icon.svg",
         title: "Ask Questions",
         description: "Connect with the SCI community, get implementation help, and share your experiences.",
         ctaText: "Join the Discussion",
         ctaHref: "https://github.com/Green-Software-Foundation/sci/discussions",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Help Shape the Future of Software Carbon Measurement"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "Read the Specification",
+        description: "Access the complete ISO/IEC 21031:2024 standard with technical methodology and implementation guidance",
+        ctaText: "Read the Spec",
+        ctaHref: "https://grnsft.org/sci",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Join the Software Standards Working Group",
+        description: "Collaborate with industry experts shaping this specification (members only)",
+        ctaText: "Join the WG",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
+      },
+      {
+        icon: "/assets/standards/sci/resource-guide-icon.svg",
+        title: "Visit the Directory",
+        description: "Get in touch with the project lead and team",
+        ctaText: "Learn more",
+        ctaHref: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-(sci)/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Become a GSF Member",
+        description: "Join the foundation to participate in standards development",
+        ctaText: "Get in touch",
+        ctaHref: "/membership/",
       },
     ]}
     bgClass="bg-accent-lightest-2"
@@ -364,6 +454,17 @@ const parentWg = projects.find(p => p.name === sciProject?.parent);
     imageSrc="/assets/ready.svg"
     imageAlt="Certification illustration"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Software Carbon Intensity standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- CTA -->
   <CTABanner

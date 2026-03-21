@@ -9,9 +9,13 @@ import LogoMarquee from "@/components/logo-marquee.astro";
 import TextBlock from "@/components/text-block.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
-import MemberStories from "@/components/member-stories.astro";
+import ProjectCards from "@/components/project-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
+
+import membersData from "@/data/members.json";
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: logoMap.get(name.toLowerCase()) || "" }));
 ---
 
 <Layout
@@ -31,9 +35,9 @@ import Footer from "@/components/footer.astro";
 
   <!-- Section 1: Hero -->
   <Hero
-    heading="You've been handed a sustainability mandate"
-    headingAccent="with no playbook"
-    body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results."
+    heading="Have you been handed a sustainability mandate"
+    headingAccent="with no playbook?"
+    body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results"
     ctas={[
       { text: "Book a discussion", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=Membership%20enquiry" },
     ]}
@@ -45,8 +49,8 @@ import Footer from "@/components/footer.astro";
 
   <!-- Section 2: The Room — intro text above the logos -->
   <TextBlock
-    heading="These organisations don't just use our standards — they *shape* them"
-    body="They bring their hardest problems to the foundation, and together we build solutions that benefit the entire industry."
+    heading="Members bring their *hardest problems* to the foundation, and together we build solutions that benefit the entire industry"
+    body="These organisations don't just use our standards — they shape them."
     compact
   />
 
@@ -61,7 +65,7 @@ import Footer from "@/components/footer.astro";
   <TextWithImage
     heading="Bring us your"
     headingAccent="hardest problem"
-    body="Steering membership isn't a subscription — it's a partnership. You bring the challenge your organisation is facing. We put the foundation's resources, expertise, and member network behind solving it. Bespoke. Email help@greensoftware.foundation to arrange a meeting to discuss how we can help."
+    body="Steering membership isn't a subscription — it's a partnership. You bring the challenge your organisation is facing. We put the foundation's resources, expertise, and member network behind solving it."
     imageSrc="/assets/dive-illustration.svg"
     imageAlt="Partnership illustration"
   />
@@ -69,9 +73,9 @@ import Footer from "@/components/footer.astro";
   <!-- Contact Section -->
   <section class="bg-primary-darker py-16 md:py-24">
     <div class="mx-auto max-w-4xl px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Get in Touch</h2>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Is membership right for your organisation?</h2>
       <p class="text-lg text-white/70 mb-6">
-        Email us to arrange a meeting to discuss how membership can help your organisation.
+        Email us to arrange a private conversation to discuss whether we can help with the specific challenges your organisation is facing
       </p>
       <a href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry" class="inline-block text-2xl font-bold text-accent hover:text-accent-light transition-colors">
         help@greensoftware.foundation
@@ -80,18 +84,20 @@ import Footer from "@/components/footer.astro";
   </section>
 
   <FeatureGrid
-    heading="What *steering members* get"
+    heading="Steering membership means *shaping the agenda*"
+    body="As a steering member, you don't just participate — you lead. Here's what that looks like."
     columns={2}
     features={[
       {
         icon: "/assets/shape-icon-1.svg",
         title: "A bespoke plan for your biggest problem",
         description: "We combine assemblies, policy work, standards proposals, networking events, and educational material into a tailored offering that addresses your specific challenge.",
+        featured: true,
       },
       {
         icon: "/assets/shape-icon-2.svg",
-        title: "Guaranteed seat on the governing board",
-        description: "Direct influence on the foundation's direction and priorities.",
+        title: "Direct the foundation's resources and projects",
+        description: "Steering members don't just participate — they set the priorities, approve the roadmap, and decide where the foundation focuses its energy.",
       },
       {
         icon: "/assets/shape-icon-3.svg",
@@ -100,64 +106,40 @@ import Footer from "@/components/footer.astro";
       },
       {
         icon: "/assets/shape-icon-4.svg",
-        title: "Guaranteed seats on all committees and assemblies",
-        description: "You'll never be shut out of the room where decisions are made.",
+        title: "Guaranteed seats on the board, all committees, and assemblies",
+        description: "A seat on the governing board plus guaranteed places on every committee and assembly. You'll never be shut out of the room where decisions are made.",
       },
     ]}
   />
 
-  <!-- Section 4: Proof — Member Stories -->
-  <MemberStories
+  <!-- Section 4: Proof — Member Projects -->
+  <ProjectCards
     heading="How members are *solving real problems*"
-    body="Every story starts the same way: an organisation brings us a problem they can't solve alone."
-    stories={[
+    body="Every story starts the same way: an organisation brings us a problem they can't solve alone"
+    projects={[
       {
         title: "Our engineers don't know how to build green software",
         description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
-        organizations: [
-          { name: "Goldman Sachs" },
-          { name: "Avanade" },
-          { name: "Microsoft" },
-        ],
-        imageSrc: "/assets/stories/green-software-practitioner.jpg",
+        orgs: resolveOrgs(["Goldman Sachs", "Avanade", "Microsoft", "Accenture", "Thoughtworks", "NTT DATA"]),
         href: "/stories/green-software-practitioner/",
-        cta: "Read the story →",
       },
       {
         title: "Our pilots work but nothing scales across the org",
         description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
-        organizations: [
-          { name: "HSBC" },
-          { name: "Microsoft" },
-          { name: "NTT DATA" },
-        ],
-        imageSrc: "/assets/stories/soft-framework.png",
+        orgs: resolveOrgs(["HSBC", "Microsoft", "NTT DATA", "Siemens", "UBS", "Cisco"]),
         href: "/stories/soft-framework/",
-        cta: "Read the story →",
       },
       {
         title: "We can't shift workloads to clean energy",
         description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
-        organizations: [
-          { name: "Microsoft" },
-          { name: "UBS" },
-          { name: "Avanade" },
-        ],
-        imageSrc: "/assets/stories/carbon-aware-sdk.png",
+        orgs: resolveOrgs(["Microsoft", "UBS", "Avanade", "NTT DATA", "Energy Web"]),
         href: "/stories/carbon-aware-sdk/",
-        cta: "Read the story →",
       },
       {
         title: "We can't measure software carbon",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
-        organizations: [
-          { name: "Accenture" },
-          { name: "UBS" },
-          { name: "Microsoft" },
-        ],
-        imageSrc: "/assets/stories/sci-measurement.png",
+        orgs: resolveOrgs(["Accenture", "UBS", "Microsoft", "NTT DATA", "WattTime", "Aveva"]),
         href: "/stories/sci-measurement/",
-        cta: "Read the story →",
       },
     ]}
     footerCtaText="Browse all member stories"
@@ -165,15 +147,10 @@ import Footer from "@/components/footer.astro";
   />
 
   <!-- Section 5: General Membership -->
-  <TextBlock
-    heading="Start with access to *everything* our members have built — general membership *includes*"
-    body="General membership gives you immediate access to the standards, training, and community that 130,000+ practitioners already use."
-    compact
-  />
-
   <FeatureGrid
+    heading="General membership — *access* the standards, training, and community that 130,000+ practitioners already use"
+    body="General membership is the entry point for any organisation that wants to participate in the foundation's work, contribute to projects, and build internal capability."
     columns={3}
-    compact
     features={[
       {
         icon: "/assets/standardized-icon.svg",
@@ -257,7 +234,172 @@ import Footer from "@/components/footer.astro";
     ]}
   />
 
-  <!-- Section 7: Final CTA -->
+  <!-- Section 7: Membership Fees -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Membership <span class="font-bold text-primary">fees</span>
+        </h2>
+        <p class="mt-4 max-w-3xl mx-auto text-base leading-relaxed text-primary-dark md:text-lg">
+          GSF operates under the Linux Foundation. Membership requires at least silver-level Linux Foundation membership. All fees are annual.
+        </p>
+      </div>
+
+      <div class="mt-12 mx-auto max-w-4xl space-y-12">
+        <!-- Table 1: Already an LF member -->
+        <div>
+          <h3 class="mb-4 text-lg font-bold text-primary-dark md:text-xl">Already a Linux Foundation member?</h3>
+          <p class="mb-6 text-sm text-gray-darker">If your organisation is already a Linux Foundation member, you only pay the GSF fee</p>
+
+          <!-- Desktop -->
+          <div class="hidden md:block overflow-hidden rounded-xl border bg-white shadow-sm">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="border-b bg-primary-darker text-white">
+                  <th class="px-6 py-4 text-sm font-bold">Membership type</th>
+                  <th class="px-6 py-4 text-right text-sm font-bold">Annual fee</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-primary-dark">
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">Steering</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$100,000</td>
+                </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General (5,000+ employees)</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$30,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 5,000 employees)</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$20,000</td>
+                </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 500 employees)</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$10,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 100 employees)</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$5,000</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-semibold">Non-Profits, Academic & Government</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile -->
+          <div class="space-y-3 md:hidden">
+            {[
+              { type: "Steering", fee: "$100,000" },
+              { type: "General (5,000+ employees)", fee: "$30,000" },
+              { type: "General (< 5,000 employees)", fee: "$20,000" },
+              { type: "General (< 500 employees)", fee: "$10,000" },
+              { type: "General (< 100 employees)", fee: "$5,000" },
+              { type: "Non-Profits, Academic & Government", fee: "Free" },
+            ].map((item) => (
+              <div class="flex items-center justify-between rounded-lg border bg-white px-5 py-4 shadow-sm">
+                <span class="font-semibold text-primary-dark text-sm">{item.type}</span>
+                <span class="font-bold text-primary text-sm">{item.fee}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Table 2: Not yet an LF member -->
+        <div>
+          <h3 class="mb-4 text-lg font-bold text-primary-dark md:text-xl">Not yet a Linux Foundation member?</h3>
+          <p class="mb-6 text-sm text-gray-darker">If your organisation is new to the Linux Foundation, the combined fee covers both GSF and LF membership</p>
+
+          <!-- Desktop -->
+          <div class="hidden md:block overflow-hidden rounded-xl border bg-white shadow-sm">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="border-b bg-primary-darker text-white">
+                  <th class="px-6 py-4 text-sm font-bold">Membership type</th>
+                  <th class="px-6 py-4 text-right text-sm font-bold">GSF fee</th>
+                  <th class="px-6 py-4 text-right text-sm font-bold">LF fee</th>
+                  <th class="px-6 py-4 text-right text-sm font-bold">Total annual fee</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-primary-dark">
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">Steering</td>
+                  <td class="px-6 py-4 text-right">$100,000</td>
+                  <td class="px-6 py-4 text-right">$20,000</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$120,000</td>
+                </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General (5,000+ employees)</td>
+                  <td class="px-6 py-4 text-right">$30,000</td>
+                  <td class="px-6 py-4 text-right">$20,000</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$50,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 5,000 employees)</td>
+                  <td class="px-6 py-4 text-right">$20,000</td>
+                  <td class="px-6 py-4 text-right">$15,000</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$35,000</td>
+                </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 500 employees)</td>
+                  <td class="px-6 py-4 text-right">$10,000</td>
+                  <td class="px-6 py-4 text-right">$10,000</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$20,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-4 font-semibold">General (&lt; 100 employees)</td>
+                  <td class="px-6 py-4 text-right">$5,000</td>
+                  <td class="px-6 py-4 text-right">$5,000</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">$10,000</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-semibold">Non-Profits, Academic & Government</td>
+                  <td class="px-6 py-4 text-right">$0</td>
+                  <td class="px-6 py-4 text-right">$0</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile -->
+          <div class="space-y-3 md:hidden">
+            {[
+              { type: "Steering", gsf: "$100,000", lf: "$20,000", total: "$120,000" },
+              { type: "General (5,000+)", gsf: "$30,000", lf: "$20,000", total: "$50,000" },
+              { type: "General (< 5,000)", gsf: "$20,000", lf: "$15,000", total: "$35,000" },
+              { type: "General (< 500)", gsf: "$10,000", lf: "$10,000", total: "$20,000" },
+              { type: "General (< 100)", gsf: "$5,000", lf: "$5,000", total: "$10,000" },
+              { type: "Non-Profits, Academic & Gov", gsf: "$0", lf: "$0", total: "Free" },
+            ].map((item) => (
+              <div class="rounded-lg border bg-white px-5 py-4 shadow-sm">
+                <p class="font-semibold text-primary-dark text-sm">{item.type}</p>
+                <div class="mt-2 grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <p class="text-xs text-gray-darker">GSF</p>
+                    <p class="text-sm font-bold text-primary-dark">{item.gsf}</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-darker">LF</p>
+                    <p class="text-sm font-bold text-primary-dark">{item.lf}</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-darker">Total</p>
+                    <p class="text-sm font-bold text-primary">{item.total}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Final CTA -->
   <CTABanner
     heading="Every member's journey starts with a conversation"
     body="Tell us what you're trying to solve. We'll tell you how membership can help."
@@ -267,3 +409,15 @@ import Footer from "@/components/footer.astro";
 
   <Footer />
 </Layout>
+
+<script>
+  // Track membership enquiry mailto clicks
+  document.addEventListener("click", (e) => {
+    const link = (e.target as HTMLElement).closest("a[href*='mailto:'][href*='Membership']");
+    if (link && (window as any).gtag) {
+      (window as any).gtag("event", "membership_enquiry", {
+        click_location: link.closest("section")?.querySelector("h2, h1")?.textContent?.trim() || "unknown",
+      });
+    }
+  });
+</script>

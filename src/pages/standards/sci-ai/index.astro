@@ -18,10 +18,28 @@ import TeamGrid from "@/components/team-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
+import ArticleCarousel from "@/components/article-carousel.astro";
+
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const sciAiProject = projects.find(p => p.slug === "sci-ai");
 const parentWg = projects.find(p => p.name === sciAiProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci-ai"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -54,11 +72,11 @@ const parentWg = projects.find(p => p.name === sciAiProject?.parent);
     heading="Measure"
     headingAccent="AI's Carbon Footprint"
     headingSuffix="with Purpose"
-    subtitle="A standardized specification extending the Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle."
-    body="AI systems have become increasingly resource-intensive, yet there's no consistent way to measure their environmental impact. SCI for AI changes that by providing the first consensus-based standard that makes AI's carbon footprint transparent, comparable, and actionable. Help refine this transformative specification with your feedback and experience as we revolutionize how we build and deploy sustainable AI."
+    subtitle="Extending the ISO-certified Software Carbon Intensity (SCI) methodology to measure the carbon emissions of AI systems throughout their lifecycle."
+    body="AI systems have become increasingly resource-intensive, yet there's no consistent way to measure their environmental impact. SCI for AI changes that by building on <a href='https://sci.greensoftware.foundation/' class='text-primary underline' target='_blank' rel='noopener noreferrer'>ISO/IEC 21031:2024</a> — the world's first ISO standard for software carbon measurement — to provide a consensus-based standard that makes AI's carbon footprint transparent, comparable, and actionable."
     ctas={[
       { text: "Read the Specification", variant: "primary", href: "https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md" },
-      { text: "Provide Feedback", variant: "outline", href: "https://github.com/Green-Software-Foundation/sci-ai/issues/new?template=Consistency_and_IPR_Review.yaml" },
+      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-artificial-intelligence/" },
     ]}
     imageSrc="/assets/standards/sci-ai/hero-illustration.svg"
     imageAlt="SCI for AI illustration"
@@ -68,7 +86,7 @@ const parentWg = projects.find(p => p.name === sciAiProject?.parent);
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="Leading organizations collaborating to standardize AI carbon measurement"
+    heading="Developed with consensus from GSF member organisations"
   />
 
   <!-- What is SCI for AI? -->
@@ -239,18 +257,24 @@ const parentWg = projects.find(p => p.name === sciAiProject?.parent);
         heading: "AI Practitioners",
         description: "Transform your AI development with clear metrics that reveal optimization opportunities without sacrificing performance. SCI for AI empowers you to make informed architecture choices and demonstrate the environmental efficiency of your work, turning sustainability into a competitive advantage for your models and applications.",
         image: { src: "/assets/standards/sci-ai/tabs-ai-practitioners.svg", alt: "AI Practitioners" },
+        ctaText: "Read the Specification",
+        ctaHref: "https://github.com/Green-Software-Foundation/sci-ai/blob/dev/SPEC.md",
       },
       {
         value: "business-leaders",
         heading: "Business Leaders",
         description: "Turn AI sustainability from a cost center into strategic value. SCI for AI enables data-driven decisions about AI investments while reducing operational costs through efficiency improvements. Position your organization as a leader in responsible AI deployment with transparent, standardized metrics that stakeholders trust.",
         image: { src: "/assets/standards/sci-ai/tabs-business-leaders.svg", alt: "Business Leaders" },
+        ctaText: "Learn About Membership",
+        ctaHref: "/membership/",
       },
       {
-        value: "data-centers",
-        heading: "Data Centers",
+        value: "sustainability-teams",
+        heading: "Sustainability Teams",
         description: "Finally, a standardized methodology designed specifically for AI's unique characteristics. SCI for AI aligns with established frameworks while providing consistent measurement across your entire AI portfolio. Identify specific reduction opportunities and support broader sustainability reporting with confidence and precision.",
-        image: { src: "/assets/standards/sci-ai/tabs-data-centers.svg", alt: "Data Centers" },
+        image: { src: "/assets/standards/sci-ai/tabs-data-centers.svg", alt: "Sustainability Teams" },
+        ctaText: "Join the Discussion",
+        ctaHref: "https://github.com/Green-Software-Foundation/sci-ai/discussions",
       },
     ]}
   />
@@ -310,6 +334,7 @@ const parentWg = projects.find(p => p.name === sciAiProject?.parent);
         description: "Read the full specification and share your feedback",
         ctaText: "Visit the GitHub Issue",
         ctaHref: "https://github.com/Green-Software-Foundation/sci-ai/issues/new?template=Consistency_and_IPR_Review.yaml",
+        featured: true,
       },
       {
         icon: "/assets/standards/sci-ai/shape-icon-2.svg",
@@ -371,6 +396,17 @@ const parentWg = projects.find(p => p.name === sciAiProject?.parent);
     imageSrc="/assets/ready.svg"
     imageAlt="Certification illustration"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the SCI for AI standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- CTA -->
   <CTABanner

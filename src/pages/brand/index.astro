@@ -8,6 +8,8 @@ import TextBlock from "@/components/text-block.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
+
+const brandGuidelinesUrl = "https://drive.google.com/file/d/14fzFhUYLIvQJUug10EGY3e_MWFpNt2yt/view";
 ---
 
 <Layout
@@ -31,20 +33,81 @@ import Footer from "@/components/footer.astro";
     headingAccent="& Assets"
     body="Everything you need to represent the Green Software Foundation consistently across digital and print media. Download logos, icons, illustrations, and presentation templates."
     ctas={[
-      { text: "Download brand guidelines", variant: "primary", href: "https://drive.google.com/file/d/1aqa1Idj-2K1r09ezCMwN38kjWTegOSSd/view" },
+      { text: "Download brand guidelines", variant: "primary", href: brandGuidelinesUrl },
       { text: "View trademark policy", variant: "outline", href: "/policy/trademark" },
     ]}
-    imageSrc="/assets/hero-illustration.svg"
+    imageSrc="/assets/brand-hero-illustration.svg"
     imageAlt="Brand assets illustration"
     bgClass="bg-accent-lightest-2"
   />
 
   <!-- Brand Guidelines -->
-  <TextBlock
-    heading="Using our *brand*"
-    body="Please review our Brand Guidelines and Trademark Policy before using GSF branding in any materials. These resources will help you communicate our shared mission with consistency and clarity."
-    compact
-  />
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Using our <span class="font-bold text-primary">brand</span>
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
+          Please review our <a href={brandGuidelinesUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-primary underline hover:text-primary-dark">Brand Guidelines</a> and <a href="/policy/trademark" class="font-semibold text-primary underline hover:text-primary-dark">Trademark Policy</a> before using GSF branding in any materials. These resources will help you communicate our shared mission with consistency and clarity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Logos (moved before palette) -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Our <span class="font-bold text-primary">Logos</span>
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-primary-dark/80">
+          Use the approved logo variants below. Always download from the official source — do not recreate or modify.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <!-- Full Logo -->
+          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
+            <div class="flex h-24 items-center">
+              <img src="/assets/gsf-logo-full.svg" alt="GSF Full Logo" class="h-14" />
+            </div>
+            <p class="mt-4 text-sm font-semibold text-primary-dark">Full Logo</p>
+            <p class="text-xs text-gray-darker">Primary use</p>
+          </div>
+
+          <!-- Short Version -->
+          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
+            <div class="flex h-24 items-center">
+              <img src="/assets/gsf-logo-short.svg" alt="GSF Short Logo" class="h-20" />
+            </div>
+            <p class="mt-4 text-sm font-semibold text-primary-dark">Short Version</p>
+            <p class="text-xs text-gray-darker">Limited space</p>
+          </div>
+
+          <!-- Logo Mark -->
+          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
+            <div class="flex h-24 items-center">
+              <img src="/assets/gsf-logo-mark.svg" alt="GSF Logo Mark" class="h-16" />
+            </div>
+            <p class="mt-4 text-sm font-semibold text-primary-dark">Logo Mark</p>
+            <p class="text-xs text-gray-darker">Favicon, small spaces</p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a
+            href="https://drive.google.com/drive/folders/13fMib7sl6mHdq0W_tZKE-N3kAYxO1LqP"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+          >
+            Download all logos →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Colour Palette -->
   <section class="bg-white py-16 md:py-20">
@@ -117,39 +180,7 @@ import Footer from "@/components/footer.astro";
           ))}
         </div>
 
-        <!-- Accent Highlights -->
-        <h3 class="mt-10 text-lg font-bold text-primary-dark">Accent Highlights</h3>
-        <div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2 md:w-2/7">
-          {[
-            { name: "Orange", hex: "#D87814" },
-            { name: "Cyan", hex: "#00E7FF" },
-          ].map(({ name, hex }) => (
-            <div class="text-center">
-              <div class="mx-auto h-16 w-full rounded-lg border border-border" style={`background-color: ${hex}`} />
-              <p class="mt-2 text-xs font-semibold text-primary-dark">{name}</p>
-              <p class="text-xs text-gray-darker">{hex}</p>
-            </div>
-          ))}
-        </div>
-
-        <div class="mt-12 rounded-xl border border-primary/20 bg-primary-lightest-1 p-6 text-center">
-          <p class="text-base font-semibold text-primary-dark">
-            This is just a snapshot of our brand palette.
-          </p>
-          <p class="mt-2 text-sm text-primary-dark/80">
-            The full brand guidelines include colour usage ratios, logo placement rules, correct and incorrect usage examples, background guidelines, and much more. Please read them before using GSF branding.
-          </p>
-          <a
-            href="https://drive.google.com/file/d/1aqa1Idj-2K1r09ezCMwN38kjWTegOSSd/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-4 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
-          >
-            Read the full brand guidelines →
-          </a>
-        </div>
-
-        <!-- Font -->
+        <!-- Typography -->
         <h3 class="mt-10 text-lg font-bold text-primary-dark">Typography</h3>
         <div class="mt-4 rounded-xl border border-border bg-accent-lightest-2 p-6">
           <p class="text-3xl font-extrabold text-primary-dark">Nunito Sans</p>
@@ -166,58 +197,22 @@ import Footer from "@/components/footer.astro";
             <span class="font-black">Black (900)</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Logo Preview -->
-  <section class="bg-accent-lightest-2 py-16 md:py-20">
-    <div class="container">
-      <div class="mx-auto max-w-5xl">
-        <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
-          Our <span class="font-bold text-primary">Logos</span>
-        </h2>
-        <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-primary-dark/80">
-          Use the approved logo variants below. Always download from the official source — do not recreate or modify.
-        </p>
-
-        <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <!-- Full Logo -->
-          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
-            <div class="flex h-24 items-center">
-              <img src="/assets/gsf-logo-full.svg" alt="GSF Full Logo" class="h-14" />
-            </div>
-            <p class="mt-4 text-sm font-semibold text-primary-dark">Full Logo</p>
-            <p class="text-xs text-gray-darker">Primary use</p>
-          </div>
-
-          <!-- Vertical Logo -->
-          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
-            <div class="flex h-24 items-center">
-              <img src="/assets/gsf-logo-vertical.svg" alt="GSF Vertical Logo" class="h-20" />
-            </div>
-            <p class="mt-4 text-sm font-semibold text-primary-dark">Vertical Logo</p>
-            <p class="text-xs text-gray-darker">Stacked layout</p>
-          </div>
-
-          <!-- Icon -->
-          <div class="flex flex-col items-center rounded-xl border border-border bg-white p-8">
-            <div class="flex h-24 items-center">
-              <img src="/assets/gsf-logo.svg" alt="GSF Icon" class="h-16" />
-            </div>
-            <p class="mt-4 text-sm font-semibold text-primary-dark">Icon</p>
-            <p class="text-xs text-gray-darker">Favicon, small spaces</p>
-          </div>
-        </div>
-
-        <div class="mt-8 text-center">
+        <!-- Disclaimer (moved after Typography) -->
+        <div class="mt-12 rounded-xl border border-primary/20 bg-primary-lightest-1 p-6 text-center">
+          <p class="text-base font-semibold text-primary-dark">
+            This is just a snapshot of our brand palette.
+          </p>
+          <p class="mt-2 text-sm text-primary-dark/80">
+            The full brand guidelines include colour usage ratios, logo placement rules, correct and incorrect usage examples, background guidelines, and much more. Please read them before using GSF branding.
+          </p>
           <a
-            href="https://drive.google.com/drive/folders/13fMib7sl6mHdq0W_tZKE-N3kAYxO1LqP"
+            href={brandGuidelinesUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+            class="mt-4 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
           >
-            Download all logos →
+            Read the full brand guidelines →
           </a>
         </div>
       </div>
@@ -232,42 +227,42 @@ import Footer from "@/components/footer.astro";
     columns={3}
     features={[
       {
-        icon: "/assets/shape-icon-1.svg",
+        icon: "/assets/brand-icon-logos.svg",
         title: "Logos",
-        description: "Full logo, vertical, icon, and monochrome variants in SVG and PNG formats.",
+        description: "Full logo, short version, logo mark, and monochrome variants in SVG and PNG formats.",
         linkText: "Download logos →",
         linkHref: "https://drive.google.com/drive/folders/13fMib7sl6mHdq0W_tZKE-N3kAYxO1LqP",
       },
       {
-        icon: "/assets/shape-icon-2.svg",
+        icon: "/assets/brand-icon-icons.svg",
         title: "Icons",
         description: "Project and programme icons used across GSF materials and microsites.",
         linkText: "Download icons →",
         linkHref: "https://drive.google.com/drive/folders/1BFMn9Pk1Fa9ukLmQj6I2JgdbC8ah8PB9",
       },
       {
-        icon: "/assets/shape-icon-3.svg",
+        icon: "/assets/brand-icon-illustrations.svg",
         title: "Illustrations",
         description: "Custom illustrations used across the website and marketing materials.",
         linkText: "Download illustrations →",
         linkHref: "https://drive.google.com/drive/folders/1Vh5fT1UJb5Csommb50_NioYlnSeMH8ep",
       },
       {
-        icon: "/assets/standardized-icon.svg",
+        icon: "/assets/brand-icon-templates.svg",
         title: "Presentation Templates",
         description: "Branded slide decks for member presentations, talks, and workshops.",
         linkText: "Download templates →",
         linkHref: "https://drive.google.com/drive/folders/11Ty2C4l4gVUMES9cLw0glrhD4EbvHDif",
       },
       {
-        icon: "/assets/co2-icon.svg",
+        icon: "/assets/brand-icon-our-work.svg",
         title: "Our Work",
         description: "Assets for individual projects, specifications, and working groups.",
         linkText: "Download project assets →",
         linkHref: "https://drive.google.com/drive/folders/1jiAZjhZ7vvT73rNyxYEwM1dcjLhX-ys0",
       },
       {
-        icon: "/assets/renewable-icon.svg",
+        icon: "/assets/brand-icon-all-assets.svg",
         title: "All Brand Assets",
         description: "The complete brand asset library — everything in one place.",
         linkText: "Browse all assets →",
@@ -277,7 +272,7 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-white"
   />
 
-  <!-- Canva Templates & Community Resources -->
+  <!-- Canva Templates -->
   <section class="bg-accent-lightest-2 py-16 md:py-20">
     <div class="container">
       <div class="mx-auto max-w-5xl">
@@ -331,41 +326,7 @@ import Footer from "@/components/footer.astro";
                 </a>
               </li>
             </ul>
-
-            <h3 class="mt-8 text-lg font-bold text-primary-dark">More Resources</h3>
-            <ul class="mt-4 space-y-3">
-              <li>
-                <a href="https://drive.google.com/drive/folders/1QRJZTWPYFWrrzXSuYE14coFH_TZ4X1ve" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:underline">
-                  All meetup assets (Google Drive) →
-                </a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/drive/folders/1sj9HAadY0lWj035K5DVSlNT2P6nvFJ3l" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:underline">
-                  Champions assets (Google Drive) →
-                </a>
-              </li>
-            </ul>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Official Description -->
-  <section class="bg-white py-16 md:py-20">
-    <div class="container">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
-          Official <span class="font-bold text-primary">Description</span>
-        </h2>
-        <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-primary-dark/80">
-          Please use this approved description when referring to the Green Software Foundation.
-        </p>
-
-        <div class="mt-8 rounded-xl border border-border bg-accent-lightest-2 p-8">
-          <p class="text-base leading-relaxed text-primary-dark/80">
-            "The Green Software Foundation is a non-profit with the mission to create a trusted ecosystem of people, standards, tooling, and best practices for building green software. The Foundation has been created for people who are in the business of building software. We are tasked with giving them answers about what they can do to reduce the software emissions they are responsible for. We create trust through representing a diverse mix of organisations. We welcome non-profits, for-profits, and academia and have members across all sectors and across the globe."
-          </p>
         </div>
       </div>
     </div>

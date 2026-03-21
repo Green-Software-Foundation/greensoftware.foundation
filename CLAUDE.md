@@ -4,6 +4,8 @@
 
 **IMPORTANT: Never commit without explicit permission from the user. Always ask before committing, even if the work appears complete.**
 
+**IMPORTANT: Never push to any remote branch unless the user explicitly says "push". Every push triggers a Netlify build that costs money. Commit locally and tell the user what to push.**
+
 **IMPORTANT: Always restart the dev server yourself after making changes — never ask the user to do it. Kill the existing process on port 4322, then run `npm run dev -- --port 4322` in the background.**
 
 **IMPORTANT: Article links must use `/articles/<slug>/`, NOT `/articles/en/<slug>/`. English is the default language — including `/en/` would break when the site is translated. The `en/` prefix exists in the content directory structure but should never appear in URLs.**
@@ -187,14 +189,28 @@ The policy page at `src/pages/policy/index.astro` covers the Policy Working Grou
 - **Research** — 4 hardcoded publication cards (AI Environmental Assessments, Green AI Position Paper, Texas State study, UBS/Microsoft whitepaper)
 - **Article carousel** — dynamically filtered by `tags` field containing "policy" or "research"
 
-### Article Tags
+### Article Tags & Carousels
 
-Articles support an optional `tags` field (string array) in frontmatter. Tags are used to surface articles on topic pages:
+Articles support an optional `tags` field (string array) in frontmatter. Tags control which page carousels an article appears in. **Carousels only render when 3+ articles match** — below that threshold the section is hidden.
 
-- `"policy"` — appears in the Policy & Research carousel
-- `"research"` — appears in the Policy & Research carousel
-- `"community"` — appears in the Community page carousel
-- Tags are managed via the Sveltia CMS Tags widget or directly in frontmatter
+| Tag | Page |
+|-----|------|
+| `"standards"` | Standards overview (`/standards/`) |
+| `"sci"` | SCI standard (`/standards/sci/`) |
+| `"sci-web"` | SCI for Web (`/standards/sci-web/`) |
+| `"sci-ai"` | SCI for AI (`/standards/sci-ai/`) |
+| `"rtc"` | Real-Time Cloud (`/standards/rtc/`) |
+| `"see"` | Software Emissions Estimator (`/standards/see/`) |
+| `"soft"` | SCI Open Footprint (`/standards/soft/`) |
+| `"wdpc"` | Web & Digital Product Carbon (`/standards/wdpc/`) |
+| `"policy"` | Policy & Research (`/policy/`) |
+| `"research"` | Policy & Research (`/policy/`) |
+| `"community"` | Community (`/community/`) |
+| `"education"` | Education (`/education/`) |
+
+The homepage carousel uses the `featured: true` frontmatter flag instead of tags. An article can be both featured and tagged for topic pages. Story detail pages use the `relatedSlugs` frontmatter field to curate related articles.
+
+Tags are managed via the Sveltia CMS Tags widget or directly in frontmatter. Articles can have multiple tags — they'll appear on every matching page.
 
 ### Standards Page (`/standards/`)
 

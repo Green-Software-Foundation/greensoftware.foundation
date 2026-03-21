@@ -1,4 +1,6 @@
 ---
+import Image from "@/components/image.astro";
+
 interface Props {
   /** Heading text. Wrap words in *asterisks* to highlight them in accent colour, e.g. "What is *Software Carbon Intensity?*" */
   heading?: string;
@@ -70,7 +72,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
       </div>
       {imageSrc && (
         <div class="flex justify-center">
-          <img src={imageSrc} alt={imageAlt} class="w-full max-w-sm" />
+          <Image src={imageSrc} alt={imageAlt} class="w-full max-w-sm" sizes="384px" />
         </div>
       )}
       {ticker.length > 0 && (

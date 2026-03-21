@@ -10,7 +10,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import { navItems } from "@/lib/nav-items";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const articles = await getCollection("articles");
+  const articles = await getCollection("articles", (a) => a.data.published !== false);
 
   const englishArticles = articles
     .filter((a) => a.data.lang === "en")

@@ -6,7 +6,7 @@ import Footer from "@/components/footer.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import { navItems } from "@/lib/nav-items";
 
-const allStories = await getCollection("stories", (s) => !!s.data.timeline);
+const allStories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.timeline);
 
 // Most recent first — fall back to title sort if no date
 const stories = allStories.sort((a, b) => {

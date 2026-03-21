@@ -11,25 +11,15 @@ journeyHeading: From five companies talking about the same problem to a global m
 
 orgs:
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: GitHub
-    logo: /assets/logos/github.png
   - name: Thoughtworks
-    logo: /assets/logos/thoughtworks.svg
   - name: Goldman Sachs
-    logo: /assets/logos/goldman-sachs.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Google
-    logo: /assets/logos/google.png
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: Cisco
-    logo: /assets/logos/cisco.svg
 
 stats:
   - value: "5"
@@ -178,6 +168,7 @@ featuredQuote:
   author: Jeff Sandquist, Corporate Vice President, Developer Relations, Microsoft
 
 contributors:
+  # ── Founding members ──
   - name: Jeff Sandquist
     role: Corporate Vice President, Developer Relations
     org: Microsoft
@@ -199,14 +190,109 @@ contributors:
       Brought the open source community's perspective and articulated the vision for
       "green developers by default" — making sustainability a default part of every
       developer's workflow.
+  - name: Dan Lewis-Toakley
+    role: Green Cloud Lead & Senior Developer Consultant
+    org: Thoughtworks
+    contribution: >
+      Represented Thoughtworks as a founding steering committee member, passionate about
+      building a large and diverse movement of green software practitioners around the world.
+  - name: Sarah Hsu
+    role: Associate, Site Reliability Engineering
+    org: Goldman Sachs
+    contribution: >
+      Represented Goldman Sachs as a founding member, championing the idea that sustainability
+      is reliability over time and advocating for green software in educational curricula.
+  # ── Steering members who joined later ──
   - name: Gadhu Sundaram
     role: Vice President of Application Services
-    org: NTT DATA UK
+    org: NTT DATA
     contribution: >
-      Joined as a founding steering member in September 2021, was elected GSF Chair in
+      Joined as a steering member in September 2021, was elected GSF Chair in
       January 2025, and now leads the foundation's transition from creation to global adoption.
+  - name: Yusuke Kobayashi
+    role: Senior Manager, R&D / Green Innovation
+    org: NTT DATA
+    contribution: >
+      Steering committee member from NTT DATA, working to establish standards that
+      correctly reflect reduction efforts in software development and help all developers
+      know whether they are building green software.
+  - name: Toru Shimogaki
+    role: Head of Green Innovation Office
+    org: NTT DATA
+    contribution: >
+      Steering committee member who championed the insight that software used by hardware
+      and data centres has great power to contribute to climate change issues.
+  - name: Kin Chiu
+    role: Executive Director and Sustainable Technology Lead
+    org: UBS
+    contribution: >
+      Represented UBS on the steering committee from April 2022, driving toward a common
+      definition and measure of what constitutes "green" software.
+  - name: Vinjosh Varghese
+    role: Data Engineer
+    org: UBS
+    contribution: >
+      Current UBS steering committee member, contributing to Green AI and sustainable
+      technology initiatives.
+  - name: Ben Logan
+    role: Global Technology Lead
+    org: UBS
+    contribution: >
+      Current UBS steering committee member, bringing global technology leadership
+      perspective to the foundation's strategic direction.
+  - name: Savannah Goodman
+    role: Data and Software Climate Solutions Lead
+    org: Google
+    contribution: >
+      Led Google's engagement with the GSF from June 2023, contributing to and learning
+      from the broader ecosystem of green software.
+  - name: Jonathan Turnbull
+    role: Program Manager
+    org: Google
+    contribution: >
+      Current Google steering committee Vice-Chair, contributing to the Green AI Committee
+      and the foundation's strategic direction.
+  - name: Carolin Rubner
+    role: Head of Research Group, Sustainable Software Engineering
+    org: Siemens
+    contribution: >
+      Siemens steering committee member from October 2023, bringing research expertise
+      in sustainable software engineering and a deep personal connection to environmental
+      stewardship.
+  - name: Navveen Balani
+    role: Managing Director and Chief Technologist, Technology Sustainability Innovation
+    org: Accenture
+    contribution: >
+      Current Accenture steering committee member and Software Standards Working Group Chair,
+      leading the SCI, SCI for AI, Impact Framework, and Software Energy Efficiency projects.
+  - name: Christopher Liljenstolpe
+    role: Data Center Architecture & Sustainability
+    org: Cisco
+    contribution: >
+      Cisco steering committee member and Hardware Standards Working Group Chair, joining
+      when the SSIA merged with the GSF in March 2025.
+  # ── Former steering members from organisations that have moved on ──
+  - name: Santiago Fontanarrosa
+    role: VP of Technology, Sustainable Business Studio
+    org: Globant
+    contribution: >
+      Globant steering committee member who championed adopting a carbon-oriented mindset
+      with a renewed design approach to sustain transitions and curb emissions.
+  - name: Matthew Kropp
+    role: Managing Director and Partner
+    org: BCG GAMMA
+    contribution: >
+      BCG GAMMA steering committee member who pushed to make it "stupidly simple" to measure
+      the climate impact of code and to elevate the conversation across the industry.
+  - name: Elise Zelechowski
+    role: Global Head of DEI, Sustainability, and Social Change
+    org: Thoughtworks
+    contribution: >
+      Thoughtworks steering committee member who advocated for building a shared understanding
+      and empowering technologists with best practices and standards.
 
 quotes:
+  # ── Founding era ──
   - text: >
       Early in 2021, as I was researching the green software development space, I came
       across some work from Jeff Sandquist and his team at Microsoft. We connected and
@@ -221,28 +307,83 @@ quotes:
     author: Erica Brescia
     role: Chief Operating Officer, GitHub
   - text: >
-      One critical challenge in developing green software is that there are no commonly
-      agreed standards, practices, metrics and tools to measure and minimize software
-      related carbon emissions.
-    author: Accenture steering committee statement
-    role: GSF founding interview
+      Building software will be the responsibility of everyone on the development team, much
+      like when we look at security, or performance or reliability today.
+    author: Jeff Sandquist
+    role: Corporate Vice President, Developer Relations, Microsoft
+  - text: >
+      We can think of sustainability as reliability over time. We want to guarantee that the
+      present needs are met without compromising any future demands.
+    author: Sarah Hsu
+    role: Associate, Site Reliability Engineering, Goldman Sachs
+  # ── Growth era ──
+  - text: >
+      Our familiar IT systems and services emit carbon. I want to spread this knowledge to
+      help people understand and choose greener software.
+    author: Yusuke Kobayashi
+    role: Manager, Green Innovation Office, NTT DATA
+  - text: >
+      As the father of two young children, and someone who works in a technology organisation
+      that enables and creates software, I feel a responsibility to ensure that this digital
+      world isn't delivered at the expense of the natural world.
+    author: Kin Chiu
+    role: Executive Director and Sustainable Technology Lead, UBS
+  - text: >
+      Google joined GSF to contribute to and learn from the broader ecosystem of green
+      software. We have worked hard to make our software products green — through
+      energy-efficient data centres paired with clean energy procurement and through
+      providing tools to our consumers for reducing their digital footprint.
+    author: Savannah Goodman
+    role: Data and Software Climate Solutions Lead, Google
+  - text: >
+      In the pursuit of sustainability, isolation is costly. We share a common belief that
+      collaboration and collective intelligence will drive systemic shifts toward
+      sustainability in tech.
+    author: Peter Korte
+    role: Chief Technology Officer and Chief Strategy Officer, Siemens AG
+  - text: >
+      As an avid Girl Scout, I learned about nature and built a deep connection to the
+      environment. I'm excited to contribute privately and with my work at Siemens.
+    author: Carolin Rubner
+    role: Head of Research Group, Sustainable Software Engineering, Siemens
+  - text: >
+      We have the opportunity to make this industry net zero — this is not a hard-to-abate
+      sector. But it takes measurement, awareness, and empowerment for technologists to be
+      able to get there.
+    author: Matthew Kropp
+    role: Managing Director and Partner, BCG GAMMA
+  - text: >
+      I had the privilege of growing up in one of the world's top ten biodiversity hotspots,
+      the Nilgiri Biosphere Reserve. My community has lived in harmony with nature for
+      thousands of years, embodying a sustainable way of life.
+    author: Gadhu Sundaram
+    role: Chair, Green Software Foundation; Vice President, NTT DATA
+  - text: >
+      At Globant, we understand technology's impact on the environment and share the
+      responsibility to support projects oriented to making our products and software greener.
+    author: Santiago Fontanarrosa
+    role: VP of Technology, Sustainable Business Studio, Globant
+  - text: >
+      The Green Software Foundation initiatives will improve the tech ecosystem for all by
+      building a shared understanding and empowering technologists with best practices and
+      standards to measure their sustainability performance.
+    author: Elise Zelechowski
+    role: Global Head of DEI, Sustainability, and Social Change, Thoughtworks
 
 relatedSlugs:
   - en/the-green-software-foundation-how-it-all-began
   - en/meet-a-steering-committee-member-sanjay-podder-of-accenture
   - en/meet-a-steering-committee-member-erica-brescia
   - en/meet-our-steering-committee-thoughtworks
+  - en/meet-our-steering-committee-ntt-data
+  - en/meet-savannah-goodman-of-google
+  - en/siemens-joins-green-software-foundation-s-steering-committee-to-drive-sustainable
+  - en/creating-technology-with-purpose-meet-carolin-rubner-head-of-research-group-at-si
+  - en/ubs-joins-green-software-foundation-as-a-steering-member
   - en/new-leadership-appointment-gadhu-sundaram-elected-as-the-gsf-chairperson
   - en/sci-specification-achieves-iso-standard-status
+  - en/ssia-joins-the-green-software-foundation
 
-cta:
-  heading: Join the Green Software Foundation
-  body: >
-    Whether you are a technology company, consultancy, financial institution, academic
-    institution, or non-profit, GSF provides the neutral ground where competitors
-    collaborate on the standards, tools, and training that reduce software's
-    environmental impact.
-  note: Visit greensoftware.foundation/join-us to become a member
 ---
 
 In 2020, multiple organisations were independently trying to figure out how to reduce software's environmental impact. None of them knew the others were working on the same problem. At Microsoft, Jeff Sandquist's team had discovered "a deep lack of knowledge specifically regarding software and sustainability." At Accenture, Sanjay Podder had published in the Harvard Business Review. At GitHub, Erica Brescia wanted every developer to be "green by default." At Thoughtworks, the view was that "issues like climate change can only be resolved through global solidarity."

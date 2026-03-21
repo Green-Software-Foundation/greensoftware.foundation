@@ -6,18 +6,19 @@ teaserText: "Our biggest pain point is how we measure the carbon emissions of so
 mainImage: "./main.png"
 translators:
   - fullName: "Asim Hussain"
-    role: "Chairperson"
+    role: "Executive Director"
+    company: "Green Software Foundation"
     photo: "/assets/articles/authors/asim-hussain.png"
     socialMedia:
       - platform: "Linkedin"
-        link: "https://green-software-foundation.admin.datocms.com/editor/item_types/1245874/items/63645581/edit"
+        link: "https://www.linkedin.com/in/asimhussain/"
 ---
 
-## INTRO.
+## INTRO
 
 We shared the Green Software Foundation vision with 245 people in the audience at GSF Global Summit Tokyo held online on June 10th.
 
-[Recording ](https://www.youtube.com/watch?v=yFOubumGt60)
+[Recording](https://www.youtube.com/watch?v=yFOubumGt60)
 
 GSF Global Summit is a series of free events. Regional events were held in June 2022 all around the globe. This event was broadcasted from a studio in Tokyo. Microsoft Japan, Intel, Nomura Research Institute, and NTT DATA talked about green software and exchanged their ideas. The Summit attracted audiences and contributed to a growing the presence of Green Software Foundation in Japan as well as a sense of unity among the Japanese members.
 
@@ -30,7 +31,7 @@ GSF Global Summit is a series of free events. Regional events were held in June 
 5. The way to utilize the energy-saving functions of hardware with software - Hideaki Doki, Intel
 6. Panel discussion on future Green Software
 
-### 1.[Introduction to Green Software Foundation – To achieve Green Software ](https://www.youtube.com/watch?v=yFOubumGt60)[development - Toru Shimogaki, NTT DATA](https://www.youtube.com/watch?v=yFOubumGt60)
+### 1.[Introduction to Green Software Foundation – To achieve Green Software](https://www.youtube.com/watch?v=yFOubumGt60)[development - Toru Shimogaki, NTT DATA](https://www.youtube.com/watch?v=yFOubumGt60)
 
 Green Software Foundation is a non-profit foundation with 32 organizations and 694 individuals in various industries and consists of four working groups. Our mission is to build a trusted ecosystem for green software engineering. Green software is software that is responsible for emitting fewer greenhouse gases and the focus is reduction, not neutralization. We contribute to the reduction of the environmental impact and will send a message at the time of COP27 in November 2022.
 
@@ -62,8 +63,9 @@ There are three effective ways to use the energy-saving functions of the hardwar
 
 Software is important to make hardware work effectively as well as hardware itself. We can make efficient and low-carbon software by understanding hardware functions and utilizing libraries.
 
-### 6. Panel discussion on future Green Software:
-**Moderator:** 
+### 6. Panel discussion on future Green Software
+
+**Moderator:**
 
 - Kenichiro Hamano, NTT DATA
 

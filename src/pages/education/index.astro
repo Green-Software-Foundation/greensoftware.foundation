@@ -13,11 +13,12 @@ import FeatureGrid from "@/components/feature-grid.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import CTABanner from "@/components/cta-banner.astro";
+import CTACard from "@/components/cta-card.astro";
 import MemberStories from "@/components/member-stories.astro";
 import Footer from "@/components/footer.astro";
 
 // ----- Articles tagged "education" for the carousel -----
-const allArticles = await getCollection("articles");
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const educationArticles = allArticles
   .filter((a: any) => {
     const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
@@ -54,7 +55,7 @@ const educationArticles = allArticles
     headingAccent="greener software"
     body="Free courses, practical patterns, and a global community of practitioners. Whether you're just starting out or scaling green software across your organisation — everything you need to build the skills is here."
     ctas={[
-      { text: "Take the free course", variant: "primary", href: "https://learn.greensoftware.foundation" },
+      { text: "Take the free course", variant: "primary", href: "https://grnsft.org/mov-plat-gs-practitioner" },
       { text: "Browse patterns", variant: "outline", href: "https://patterns.greensoftware.foundation" },
     ]}
     imageSrc="/assets/why-feat-1.svg"
@@ -76,7 +77,7 @@ const educationArticles = allArticles
     imageSrc="/assets/why-feat-1.svg"
     imageAlt="Green Software Practitioner course"
     ctaText="Take the course →"
-    ctaHref="https://learn.greensoftware.foundation"
+    ctaHref="https://grnsft.org/mov-plat-gs-practitioner"
     compact
     tabs={[
       { value: "overview", heading: "Overview", description: "The comprehensive course that teaches you how to build, maintain, and run greener applications — regardless of domain, industry, or technology stack. Covers carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and climate commitments." },
@@ -92,7 +93,7 @@ const educationArticles = allArticles
     imageSrc="/assets/why-feat-3.svg"
     imageAlt="SOFT Essentials course"
     ctaText="Take the course →"
-    ctaHref="https://movement.greensoftware.foundation"
+    ctaHref="https://grnsft.org/mov-plat-soft-essentials"
     compact
     tabs={[
       { value: "overview", heading: "Overview", description: "Learn the essentials of the Sustainable Organisational Framework for Technology (SOFT) — the comprehensive framework for embedding green software practices across your entire organisation, from strategy to operations." },
@@ -108,7 +109,17 @@ const educationArticles = allArticles
     compact
   />
 
-  <!-- Section 7: Education stories -->
+  <!-- Section 7: Movement Platform CTA -->
+  <CTACard
+    heading="Join the Movement Platform"
+    body="The Movement Platform is your hub for green software learning. Access all courses, join discussions, connect with fellow practitioners, and track your progress — all in one place."
+    ctaText="Explore the platform →"
+    ctaHref="https://movement.greensoftware.foundation"
+    imageSrc="/assets/dive-illustration.svg"
+    imageAlt="Movement Platform illustration"
+  />
+
+  <!-- Section 8: Education stories -->
   <MemberStories
     heading="Education in *action*"
     body="See how our courses and patterns are being used by organisations and educators worldwide."
@@ -130,7 +141,7 @@ const educationArticles = allArticles
     footerCtaHref="/stories/"
   />
 
-  <!-- Section 8: Learning resources -->
+  <!-- Section 9: Learning resources -->
   <ResourceCards
     heading="Learning *resources*"
     body="Beyond our courses, a growing ecosystem of resources to support your green software journey."
@@ -138,6 +149,9 @@ const educationArticles = allArticles
       { icon: "/assets/shape-icon-1.svg", title: "Green Software Patterns", description: "An open-source catalogue of peer-reviewed, actionable techniques for reducing software emissions across AI, Cloud, and Web.", ctaText: "Browse the catalogue", ctaHref: "https://patterns.greensoftware.foundation" },
       { icon: "/assets/shape-icon-2.svg", title: "Awesome Green Software", description: "A curated list of tools, articles, research papers, and open-source projects in the green software space.", ctaText: "Explore the list", ctaHref: "https://github.com/Green-Software-Foundation/awesome-green-software" },
       { icon: "/assets/shape-icon-3.svg", title: "Environment Variables Podcast", description: "Practitioner-focused conversations with the people building the green software movement.", ctaText: "Listen now", ctaHref: "https://podcast.greensoftware.foundation" },
+      { icon: "/assets/shape-icon-1.svg", title: "CXO Bytes Podcast", description: "Bite-sized insights for technology leaders on sustainability, digital transformation, and the business case for green software.", ctaText: "Listen now", ctaHref: "https://podcasts.castplus.fm/cxo-bytes" },
+      { icon: "/assets/shape-icon-2.svg", title: "GSF Meetup Network", description: "Join local meetups around the world to connect with green software practitioners in your region, share experiences, and learn together.", ctaText: "Find a meetup", ctaHref: "https://www.meetup.com/pro/gsf/" },
+      { icon: "/assets/shape-icon-3.svg", title: "Member Stories", description: "Real-world case studies from organisations applying green software practices — see how GSF members are reducing their environmental impact at scale.", ctaText: "Read the stories", ctaHref: "/stories/" },
     ]}
   />
 
@@ -156,7 +170,7 @@ const educationArticles = allArticles
   />
 
   <!-- Section 10: Education articles -->
-  {educationArticles.length > 0 && (
+  {educationArticles.length >= 3 && (
     <ArticleCarousel
       heading="Education & Learning"
       body="Stories and insights from practitioners, educators, and organisations building the green software movement."
@@ -172,7 +186,7 @@ const educationArticles = allArticles
     heading="Start your green software journey today"
     body="The Green Software Practitioner course is free, self-paced, and takes just a few hours. Join 130,000+ practitioners who've already taken the first step."
     ctaText="Take the free course"
-    ctaHref="https://learn.greensoftware.foundation"
+    ctaHref="https://grnsft.org/mov-plat-gs-practitioner"
   />
 
   <Footer />

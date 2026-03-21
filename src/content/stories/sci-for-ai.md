@@ -1,5 +1,5 @@
 ---
-title: "We can't measure AI's carbon footprint"
+title: "How do you measure AI's carbon footprint?"
 summary: >
   How 20+ partner organisations came together to build the SCI for AI — the first
   consensus-based standard for measuring the carbon footprint of AI systems across
@@ -11,41 +11,23 @@ journeyHeading: From panel discussion to the world's first AI carbon standard
 
 orgs:
   - name: Accenture
-    logo: /assets/logos/accenture.jpg
   - name: Amadeus
-    logo: /assets/logos/amadeus.jpg
   - name: Avanade
-    logo: /assets/logos/avanade.webp
   - name: BCG
-    logo: /assets/logos/bcg.png
   - name: Boavizta
-    logo: /assets/logos/boavizta.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Google
-    logo: /assets/logos/google.png
   - name: IBM
-    logo: /assets/logos/ibm.gif
-  - name: IMDA Singapore
-    logo: /assets/logos/infocomm-media-development-authority.png
+  - name: Infocomm Media Development Authority
   - name: Microsoft
-    logo: /assets/logos/microsoft.webp
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Schneider Electric
-    logo: /assets/logos/schneider-electric.jpg
   - name: Scope3
-    logo: /assets/logos/scope3.jpg
   - name: Siemens
-    logo: /assets/logos/siemens.png
   - name: UCL
-    logo: /assets/logos/ucl.png
   - name: UBS
-    logo: /assets/logos/ubs.png
   - name: WattTime
-    logo: /assets/logos/watttime.png
 
 stats:
   - value: "20+"
@@ -232,7 +214,8 @@ cta:
     The SCI for AI was built by organisations who came together through the Green
     Software Foundation. Join us to shape the practical guidance, case studies, and
     training resources that follow.
-  note: Already exploring SCI for AI? Review the methodology at sci-for-ai.greensoftware.foundation
+  ctaText: "Read the SCI for AI Specification"
+  ctaHref: "/standards/sci-ai/"
 ---
 
 AI workloads were exploding across the software industry, but nobody had a standardised way to measure their carbon footprint. Training GPT-3 alone produced approximately 500 tonnes of CO₂ emissions — equivalent to a petrol car driving roughly 2 million kilometres — and close to 1,300 megawatt hours of electricity. And that was just one model from 2020.

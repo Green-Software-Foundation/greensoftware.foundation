@@ -4,7 +4,7 @@ date: "2022-10-07"
 summary: "The Texas State University has just released its report on a study evaluating software carbon intensity of foundation models. Among other findings, the study confirms that the SCI is suitable for effectively measuring the carbon impact of software."
 teaserText: "The Texas State University has just released its report on a study evaluating software carbon intensity of foundation models. Among other findings, the study confirms that the SCI is suitable for effectively measuring the carbon impact of software."
 mainImage: "./main.png"
-tags: ["research"]
+tags: ["research", "sci", "standards"]
 ---
 
 ## What are foundation models?
@@ -23,7 +23,7 @@ To narrow the project scope, the study focuses on a specific type of AI model, t
 
 ## SCI - Measuring carbon intensity
 
-Measuring and reducing carbon emissions from foundation models is a daunting task. The study used the GSF SCI specification to quantitatively evaluate the carbon impact of the foundation models. The SCI provides us with the rate of carbon emissions per unit of R. For the study, R symbolized one request sent to the AI, producing the relevant output. 
+Measuring and reducing carbon emissions from foundation models is a daunting task. The study used the GSF SCI specification to quantitatively evaluate the carbon impact of the foundation models. The SCI provides us with the rate of carbon emissions per unit of R. For the study, R symbolized one request sent to the AI, producing the relevant output.
 
 <include SCI graphic>
 
@@ -35,9 +35,9 @@ I = Location-based marginal carbon emissions
 
 M = Embodied emissions of a software system
 
-## Study conclusions 
+## Study conclusions
 
-When looking at carbon emissions of various foundation models, the study finds that some have more adverse environmental effects than others due to their higher energy consumption. The Key was applying the SCI approach to calculate and compare the SCI metric for each model. GPT-Neo 125M, for example, shows massive energy savings compared to the other models, although with lower quality results. At the same time, GPT-J 6B produces nearly 100% more carbon emissions than GPT-Neo 2.7B. 
+When looking at carbon emissions of various foundation models, the study finds that some have more adverse environmental effects than others due to their higher energy consumption. The Key was applying the SCI approach to calculate and compare the SCI metric for each model. GPT-Neo 125M, for example, shows massive energy savings compared to the other models, although with lower quality results. At the same time, GPT-J 6B produces nearly 100% more carbon emissions than GPT-Neo 2.7B.
 
 The study also compares the deployment of foundation models on CPUs versus GPUs, which did not affect the output quality. However, leveraging GPU acceleration significantly benefits both response time and energy efficiency.
 

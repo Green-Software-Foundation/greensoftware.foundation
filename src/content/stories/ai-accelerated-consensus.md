@@ -10,34 +10,24 @@ problemHeading: The bottleneck isn't technical complexity — it's coordinating 
 journeyHeading: From a blank page to consensus in ten weeks
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Google
-    logo: /assets/logos/google.png
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: ClimateAction.tech
-    logo: /assets/logos/climateaction.tech.png
   - name: HSBC
-    logo: /assets/logos/hsbc.svg
 
 stats:
   - value: "10 weeks"
     label: From blank page to consensus design document — compared to multi-year traditional standards timelines
   - value: "14"
     label: Expert participants from 15 organisations reaching consensus through the AI-assisted process
-  - value: W3C
-    label: Formal collaboration between the world's web standards body and GSF — a first
+  - value: "2"
+    label: Standards developed using AI-facilitated consensus — SCI for AI and SCI for Web
 
 timeline:
   - date: April 2024
@@ -53,15 +43,28 @@ timeline:
       text: Read about the SCI achieving ISO standard status
       href: /articles/sci-specification-achieves-iso-standard-status/
 
+  - date: Early 2025
+    heading: SCI for AI proves the concept
+    body: >
+      The AI industry was moving so fast that GSF needed to reach consensus on
+      standardising AI emissions measurement quickly. Rather than follow the traditional
+      multi-year process, the team experimented with a rudimentary version of AI-facilitated
+      consensus — structured workshops where expert responses were synthesised and refined
+      collaboratively. The SCI for AI specification was ratified in late 2025, and the
+      experience revealed that AI-facilitated consensus was a vibrant area with significant
+      potential to compress standards timelines further.
+    source:
+      text: Read the SCI for AI workshop report
+      href: /articles/sci-for-ai-workshop-report/
+
   - date: September 2025
     heading: W3C and GSF announce formal collaboration
     body: >
       The Green Web Foundation, active in both communities, brokered a strategic
-      collaboration between GSF and W3C to advance sustainable web development through
-      shared research, standards development, and measurement frameworks. The collaboration
-      focused on developing SCI for Web — extending the proven SCI methodology to web
-      applications, covering the full delivery chain: servers, networks, third-party
-      services, and end-user devices.
+      collaboration between GSF and W3C to advance sustainable web development. The
+      collaboration's first major initiative was SCI for Web, and GSF chose it as the
+      proving ground for a fully developed AI-facilitated consensus process — building
+      on the lessons learned from the rudimentary approach used for SCI for AI.
     source:
       text: Read about the GSF and W3C collaboration
       href: /articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
@@ -108,11 +111,13 @@ timeline:
 
 featuredQuote:
   text: >
-    Almost all of us use the web daily, and like everything else, we need to make using
-    it more sustainable. By defining a standard for measuring website emissions, we make
-    it easier for people to request greener digital services, for responsible technologists
-    to build them, and to reach the fossil-free internet we all need.
-  author: GSF–W3C collaboration announcement
+    Traditional standards processes take years. But regulations aren't waiting, and
+    neither is the technology. We needed a way to keep the rigour of multi-stakeholder
+    consensus while compressing the timeline from years to weeks. AI-facilitated
+    consensus gave us that — and now we have a replicable model for every standard
+    we develop.
+  author: Asim Hussain
+  role: Executive Director, Green Software Foundation
 
 contributors:
   - name: Asim Hussain
@@ -127,21 +132,20 @@ contributors:
     contribution: >
       Proposed SCI for Web, brokered the W3C collaboration as an active member of both
       communities, and leads the SCI for Web project.
-  - name: Daniel Schien
-    role: Academic
-    org: University of Bristol
+  - name: Joseph Cook
+    role: Head of Research
+    org: Green Software Foundation
     contribution: >
-      Brought academic rigour to the web measurement methodology, drawing on years of
-      research into the environmental impact of internet infrastructure.
+      Designed the AI-facilitated consensus mechanism and facilitated the assembly
+      process, enabling 14 experts to move from a blank page to consensus in ten weeks.
 
 quotes:
   - text: >
-      We believe that the opensource SCI Specification will catalyze a new era of
-      sustainable innovation within the technology industry. And, hopefully, is another
-      indicator for how important collective contributions from the opensource community
-      are to scale green software.
-    author: Henry Richardson
-    role: Senior Analyst, WattTime; Co-chair, Standards Working Group
+      Traditional standards processes take years. But regulations aren't waiting, and
+      neither is the technology. We needed a way to keep the rigour of multi-stakeholder
+      consensus while compressing the timeline from years to weeks.
+    author: Asim Hussain
+    role: Executive Director, Green Software Foundation
   - text: >
       A specification that is technically accurate but unused won't serve its purpose,
       and a widely used metric that lacks credibility also won't serve the purpose.
@@ -152,15 +156,17 @@ relatedSlugs:
   - en/designing-sci-web-what-we-agreed-and-what-comes-next
   - en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad
   - en/sci-specification-achieves-iso-standard-status
+  - en/sci-for-ai-workshop-report
+  - en/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the
 
 cta:
-  heading: Join the SCI for Web project
+  heading: Participate in a GSF Assembly
   body: >
-    GSF members with web expertise can join the SCI for Web project team and help
-    shape the specification through draft review, implementation testing, and technical
-    feedback. The AI-assisted assembly model is open to participation from anyone with
-    domain expertise.
-  note: Contact sci-for-web@greensoftware.foundation to get involved
+    GSF uses AI-facilitated assemblies to build consensus on new standards and
+    specifications. If you have domain expertise and want to help shape the next
+    generation of green software standards, assemblies are open to participation.
+  ctaText: "Explore assemblies"
+  ctaHref: "/assemblies/"
 ---
 
 Traditional standards development takes years. The SCI specification — widely celebrated as moving at unprecedented speed — still took over three years from inception to ISO certification. By the time specifications reach final form, regulations have evolved, technology has shifted, and the window for influence has narrowed. The bottleneck is not technical complexity. It is the challenge of coordinating dozens of stakeholders with competing priorities, different terminologies, and divergent views on scope, accuracy, and implementation.

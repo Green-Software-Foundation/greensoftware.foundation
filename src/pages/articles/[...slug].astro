@@ -9,15 +9,62 @@ import NewsletterSignup from "@/components/newsletter-signup.astro";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((article) => ({
-    params: { slug: article.id.startsWith("en/") ? article.id.slice(3) : article.id },
-    props: { article },
-  }));
+  const LANG_LABELS: Record<string, string> = {
+    en: "English",
+    ja: "日本語",
+    zh: "中文",
+    pt: "Português",
+    es: "Español",
+    de: "Deutsch",
+    it: "Italiano",
+  };
+
+  const getLang = (id: string) => {
+    const prefix = id.split("/")[0];
+    return LANG_LABELS[prefix] ? prefix : "en";
+  };
+
+  const getSlug = (id: string) => {
+    const parts = id.split("/");
+    return LANG_LABELS[parts[0]] ? parts.slice(1).join("/") : id;
+  };
+
+  const getPath = (id: string) => {
+    const lang = getLang(id);
+    const slug = getSlug(id);
+    return lang === "en" ? `/articles/${slug}/` : `/articles/${lang}/${slug}/`;
+  };
+
+  const articles = await getCollection("articles", (a) => a.data.published !== false);
+
+  // Group articles by their base slug to find translations
+  const translationGroups = new Map<string, { lang: string; path: string; title: string }[]>();
+  for (const article of articles) {
+    const baseSlug = getSlug(article.id);
+    const lang = getLang(article.id);
+    if (!translationGroups.has(baseSlug)) translationGroups.set(baseSlug, []);
+    translationGroups.get(baseSlug)!.push({
+      lang,
+      path: getPath(article.id),
+      title: LANG_LABELS[lang] || lang,
+    });
+  }
+
+  return articles.map((article) => {
+    const baseSlug = getSlug(article.id);
+    const translations = translationGroups.get(baseSlug) || [];
+    return {
+      params: { slug: article.id.startsWith("en/") ? article.id.slice(3) : article.id },
+      props: { article, translations: translations.length > 1 ? translations : [] },
+    };
+  });
 }
 
-const { article } = Astro.props;
+const { article, translations } = Astro.props;
 const { Content } = await render(article);
+
+const currentLangPrefix = article.id.split("/")[0];
+const currentLang = ["en","ja","zh","pt","es","de","it"].includes(currentLangPrefix) ? currentLangPrefix : "en";
 
 const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
   day: "numeric",
@@ -83,6 +130,23 @@ const isEnglish = article.data.lang === "en";
             <li class="text-primary-dark truncate max-w-[300px]">{article.data.title}</li>
           </ol>
         </nav>
+
+        <!-- Language switcher -->
+        {translations.length > 0 && (
+          <div class="flex items-center gap-2 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-darker"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            {translations
+              .sort((a, b) => (a.lang === "en" ? -1 : b.lang === "en" ? 1 : a.title.localeCompare(b.title)))
+              .map((t) =>
+                t.lang === currentLang ? (
+                  <span class="px-2.5 py-1 text-xs font-bold rounded-full bg-primary text-white">{t.title}</span>
+                ) : (
+                  <a href={t.path} class="px-2.5 py-1 text-xs font-bold rounded-full border border-primary-lighter text-primary hover:bg-primary hover:text-white transition-colors">{t.title}</a>
+                )
+              )
+            }
+          </div>
+        )}
 
         <!-- Title -->
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 leading-tight">

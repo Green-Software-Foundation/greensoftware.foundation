@@ -20,10 +20,28 @@ import Footer from "@/components/footer.astro";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+import ArticleCarousel from "@/components/article-carousel.astro";
+
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const wdpcProject = projects.find(p => p.slug === "wdpc");
 const parentWg = projects.find(p => p.name === wdpcProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("wdpc"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -69,7 +87,7 @@ const parentWg = projects.find(p => p.name === wdpcProject?.parent);
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="Developed with industry leaders in data centre infrastructure"
+    heading="Developed with consensus from GSF member organisations"
   />
 
   <!-- What is WDPC? (bordered feature grid) -->
@@ -210,7 +228,7 @@ const parentWg = projects.find(p => p.name === wdpcProject?.parent);
   <!-- A Platform for Energy Innovation -->
   <FeatureGrid
     heading="A Platform for *Energy Innovation*"
-    body="Connecting traditionally disparate components in the datacentre via a data bus to develop novel approaches to power management."
+    body="Connecting traditionally disparate components in the data centre via a data bus to develop novel approaches to power management."
     columns={4}
     variant="cards"
     features={[
@@ -307,10 +325,10 @@ const parentWg = projects.find(p => p.name === wdpcProject?.parent);
       { date: "May 2025", description: "Proposal", completed: true, start: "2025-05-01", end: "2025-05-31" },
       { date: "Current", description: "Pre-Draft", current: true, start: "2025-09-01", end: "2025-10-30" },
       { date: "Nov/Dec 2025", description: "Draft", start: "2025-11-01", end: "2025-12-31" },
-      { date: "Upcoming", description: "Consistency Review", start: "2026-01-01", end: "2026-03-31" },
-      { date: "Upcoming", description: "WG Final Approval", start: "2026-04-01", end: "2026-06-30" },
-      { date: "Upcoming", description: "SC Ratification", start: "2026-07-01", end: "2026-09-30" },
-      { date: "Upcoming", description: "Publication", start: "2026-10-01", end: "2026-12-30" },
+      { date: "Dec 2025", description: "Consistency Review", start: "2025-12-01", end: "2025-12-31" },
+      { date: "Feb 2026", description: "WG Final Approval", start: "2026-02-01", end: "2026-02-28" },
+      { date: "Mar 2026", description: "SC Ratification", start: "2026-03-01", end: "2026-03-31" },
+      { date: "Mar 2026", description: "Publication", start: "2026-03-01", end: "2026-03-31" },
     ]}
   />
 
@@ -410,6 +428,17 @@ const parentWg = projects.find(p => p.name === wdpcProject?.parent);
     ]}
     bgClass="bg-accent-lightest-2"
   />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the WDPC standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- CTA -->
   <CTABanner

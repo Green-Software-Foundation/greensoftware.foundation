@@ -7,11 +7,13 @@ import Footer from "@/components/footer.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import { Card } from "@/components/ui/card";
+import Image from "@/components/image.astro";
 import { navItems } from "@/lib/nav-items";
 import membersData from "@/data/members.json";
+import peopleData from "@/data/people.json";
 
 export async function getStaticPaths() {
-  const stories = await getCollection("stories", (s) => !!s.data.timeline);
+  const stories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.timeline);
   return stories.map((story) => ({
     params: { slug: story.id },
     props: { story },
@@ -27,8 +29,15 @@ const {
 } = story.data;
 
 // ── Related articles ──────────────────────────────────────────────────────────
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
-const allArticles = await getCollection("articles");
+// Logo lookup: include inactive members (they still appear in stories) but respect hideLogo
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+
+// Auto-resolve org logos from members.json when not provided in frontmatter
+const resolvedOrgs = orgs.map((org: any) => ({
+  ...org,
+  logo: org.logo || logoMap.get(org.name.toLowerCase()) || null,
+})).sort((a: any, b: any) => a.name.localeCompare(b.name));
+const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const relatedArticles = relatedSlugs
   .map(slug => allArticles.find(a => a.id === slug))
   .filter(Boolean)
@@ -47,9 +56,16 @@ const relatedArticles = relatedSlugs
 function initials(name: string) {
   return name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
 }
+
+// Auto-resolve contributor photos from people.json
+const personByName = new Map((peopleData as any[]).map((p: any) => [p.fullName.toLowerCase(), p]));
+const resolvedContributors = contributors.map((c: any) => {
+  const found = personByName.get(c.name.toLowerCase());
+  return { ...c, photo: c.photo ?? found?.photo ?? null };
+});
 ---
 
-<Layout title={`${title} — GSF Member Story`} description={summary}>
+<Layout title={`${title} — GSF Member Story`} description={summary} ogImage={story.data.mainImage}>
   <Navbar
     navItems={navItems}
     logoSrc="/assets/gsf-logo-full.svg"
@@ -90,18 +106,20 @@ function initials(name: string) {
   </div>
 
   <!-- ── Org logos ─────────────────────────────────────────────────────────── -->
-  {orgs.length > 0 && (
+  {resolvedOrgs.length > 0 && (
     <div class="bg-white border-b border-border">
       <div class="container py-10 md:py-12">
         <div class="max-w-4xl mx-auto">
           <p class="text-gray-darker text-xs uppercase tracking-wider font-semibold mb-6 text-center">Organisations involved</p>
           <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {orgs.map(org => (
+            {resolvedOrgs.map(org => (
               org.logo ? (
-                <img
+                <Image
                   src={org.logo}
                   alt={org.name}
-                  style="height: 32px; width: auto; max-width: 130px; object-fit: contain;"
+                  class="h-8 w-auto max-w-[130px] object-contain"
+                  sizes="130px"
+                  widths={[130, 260]}
                 />
               ) : (
                 <span class="text-primary-dark font-bold text-sm">{org.name}</span>
@@ -118,10 +136,10 @@ function initials(name: string) {
     <div class="bg-accent-lightest-2 border-b border-border">
       <div class="container py-16 md:py-20">
         <div class="max-w-4xl mx-auto">
-          <div class={`grid gap-8 md:gap-12 ${stats.length === 3 ? 'grid-cols-3 max-w-2xl mx-auto' : 'grid-cols-2 md:grid-cols-4'}`}>
+          <div class={`grid gap-8 md:gap-12 items-start ${stats.length === 3 ? 'grid-cols-3 max-w-2xl mx-auto' : 'grid-cols-2 md:grid-cols-4'}`}>
             {stats.map(stat => (
               <div class="text-center">
-                <p class="font-extrabold text-4xl md:text-5xl text-primary mb-2">{stat.value}</p>
+                <p class={`font-extrabold text-primary mb-2 leading-tight ${stat.value.length > 8 ? 'text-2xl md:text-3xl' : 'text-4xl md:text-5xl'}`}>{stat.value}</p>
                 <p class="text-sm text-gray-darker leading-snug">{stat.label}</p>
               </div>
             ))}
@@ -200,13 +218,27 @@ function initials(name: string) {
           </svg>
           <p class="font-extrabold text-3xl md:text-4xl leading-tight mb-6">{featuredQuote.text}</p>
           <p class="text-white/70 font-semibold">{featuredQuote.author}</p>
+          {featuredQuote.role && (
+            <p class="text-white/50 text-sm mt-1">{featuredQuote.role}</p>
+          )}
         </div>
       </div>
     </div>
   )}
 
+  {cta && cta.ctaHref && (
+    <CTABanner
+      heading={cta.heading}
+      body={cta.body}
+      ctaText={cta.ctaText || "Learn more"}
+      ctaHref={cta.ctaHref}
+      note={cta.note}
+      bgClass="bg-primary-darkest"
+    />
+  )}
+
   <!-- ── Who came together ─────────────────────────────────────────────────── -->
-  {contributors.length > 0 && (
+  {resolvedContributors.length > 0 && (
     <div class="bg-white">
       <div class="container py-16 md:py-20">
         <div class="max-w-4xl mx-auto">
@@ -216,11 +248,11 @@ function initials(name: string) {
             The people who made it happen
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-            {contributors.map(person => (
+            {resolvedContributors.map(person => (
               <Card className="flex flex-col items-center p-6 text-center h-full">
                 <div class="mb-4 flex w-20 h-20 items-center justify-center overflow-hidden rounded-full bg-primary-lightest-2 shrink-0">
                   {person.photo ? (
-                    <img src={person.photo} alt={person.name} class="w-full h-full object-cover" />
+                    <Image src={person.photo} alt={person.name} class="w-full h-full object-cover" sizes="80px" widths={[80, 160]} />
                   ) : (
                     <span class="text-xl font-bold text-primary/40">{initials(person.name)}</span>
                   )}
@@ -262,7 +294,7 @@ function initials(name: string) {
   </div><!-- end data-pagefind-body -->
 
   <!-- ── Related articles ──────────────────────────────────────────────────── -->
-  {relatedArticles.length > 0 && (
+  {relatedArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related articles"
       articles={relatedArticles}
@@ -271,15 +303,12 @@ function initials(name: string) {
     />
   )}
 
-  {cta && (
-    <CTABanner
-      heading={cta.heading}
-      body={cta.body}
-      ctaText="Discuss your challenges with us"
-      ctaHref="/membership/"
-      note={cta.note}
-    />
-  )}
+  <CTABanner
+    heading="Join the Green Software Foundation"
+    body="This story was made possible by organisations collaborating through the Green Software Foundation. Join us to help build the standards, tools, and training that reduce software's environmental impact."
+    ctaText="Become a member"
+    ctaHref="/membership/"
+  />
 
   <Footer />
 </Layout>

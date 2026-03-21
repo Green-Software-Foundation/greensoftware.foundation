@@ -6,7 +6,7 @@ import Footer from "@/components/footer.astro";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("pages");
+  const pages = await getCollection("pages", (p) => p.data.published !== false);
   return pages.map((page) => ({
     params: { page: page.data.slug },
     props: { page },

@@ -1,40 +1,30 @@
 ---
-title: "No standard exists for measuring a website's carbon"
+title: "How do you measure a website's carbon footprint?"
 summary: >
-  How Chris Adams of the Green Web Foundation, Emma Horrell of the University of Edinburgh,
-  and 14 assembly members from across the industry are building SCI for Web — a standard
-  for measuring website carbon intensity that covers the full delivery chain: servers,
-  networks, third-party services, and end-user devices.
+  How Chris Adams of the Green Web Foundation and 14 assembly members from across the
+  industry are building SCI for Web — a standard for measuring website carbon intensity
+  that covers the full delivery chain: servers, networks, third-party services, and
+  end-user devices.
 
 mainImage: /assets/stories/sci-for-web.jpg
 problemHeading: Web emissions tools existed — but results weren't comparable, boundaries weren't defined, and third parties were invisible
-journeyHeading: From a 13-tonne CO₂ case study to a formal W3C collaboration and consensus design document
+journeyHeading: From a measurement gap to a formal W3C collaboration and consensus design document
 
 orgs:
-  - name: Green Web Foundation
-    logo: /assets/logos/the-green-web-foundation.png
+  - name: The Green Web Foundation
   - name: Google
-    logo: /assets/logos/google.png
   - name: Accenture
-    logo: /assets/logos/accenture.svg
   - name: Microsoft
-    logo: /assets/logos/microsoft.svg
   - name: WattTime
-    logo: /assets/logos/watttime.png
   - name: HSBC
-    logo: /assets/logos/hsbc.svg
   - name: NTT DATA
-    logo: /assets/logos/ntt-data.png
   - name: Globant
-    logo: /assets/logos/globant.svg
   - name: Electricity Maps
-    logo: /assets/logos/electricity-maps.svg
   - name: ClimateAction.tech
-    logo: /assets/logos/climateaction.tech.png
 
 stats:
-  - value: "13 tonnes"
-    label: CO₂ saved per year at the University of Edinburgh from homepage image optimisation alone
+  - value: "10 weeks"
+    label: From blank page to consensus design document through AI-assisted assembly
   - value: "14"
     label: Assembly members from 15 organisations — tech giants, data providers, academics, and practitioners
   - value: W3C
@@ -67,20 +57,6 @@ timeline:
     source:
       text: Read about the GSF and W3C collaboration
       href: /articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/
-
-  - date: September 2025
-    heading: University of Edinburgh joins GSF
-    body: >
-      Emma Horrell, User Experience Manager at the University of Edinburgh, had led an
-      investigation into the university's digital estate — numerous websites each managed
-      by different teams. They found image formats were "unnecessarily heavy," and through
-      changes to homepage images alone, achieved 13 tonnes of CO₂ reduction per year. Their
-      experience demonstrated that sustainable digital transformation is "fundamentally about
-      behavioural change, not just technical solutions." The university joined GSF to
-      contribute their ground-level implementation experience to SCI for Web.
-    source:
-      text: Meet Emma Horrell of the University of Edinburgh
-      href: /articles/pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un/
 
   - date: September–November 2025
     heading: AI-assisted consensus assembly
@@ -133,22 +109,98 @@ contributors:
     role: Director of Technology and Policy
     org: Green Web Foundation
     contribution: >
-      Leads the SCI for Web project and brokered the W3C collaboration as an active member
-      of both communities. Participated in the AI-assisted assembly as one of the fourteen
-      expert members.
-  - name: Emma Horrell
-    role: User Experience Manager
-    org: University of Edinburgh
+      Proposed SCI for Web, brokered the W3C collaboration as an active member of both
+      communities, and leads the SCI for Web project.
+  - name: Joseph Cook
+    role: Head of Research
+    org: Green Software Foundation
     contribution: >
-      Brought practical implementation experience from two years of ground-level web
-      sustainability work, including the 13-tonne CO₂ case study, to inform the standard's
-      real-world applicability.
+      Designed the AI-facilitated consensus mechanism and facilitated the assembly
+      process, enabling 14 experts to move from a blank page to consensus in ten weeks.
+  - name: Alekh Gupta
+    role: Assembly participant
+    org: Google
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Alexander Dawson
+    role: Assembly participant
+    org: ClimateAction.tech
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Camille Fassett
+    role: Assembly participant
+    org: WattTime
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Facundo Armas
+    role: Assembly participant
+    org: Globant
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Florent Morel
+    role: Assembly participant
+    org: Amadeus
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Francesco Fullone
+    role: Assembly participant
+    org: GrUSP
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Mathias Uhlitzsch
+    role: Assembly participant
+    org: Evosoft
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Nisha Ramachandra
+    role: Assembly participant
+    org: Accenture
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Raghava Rao Battina
+    role: Assembly participant
+    org: HSBC
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Riccardo Pomato
+    role: Assembly participant
+    org: Microsoft
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Ryan Sholin
+    role: Assembly participant
+    org: Electricity Maps
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Thiago Falcao Silva
+    role: Assembly participant
+    org: NTT DATA
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
   - name: Daniel Schien
-    role: Academic
+    role: Assembly participant
     org: University of Bristol
     contribution: >
-      Brought academic rigour on web measurement methodology, drawing on published research
-      into the environmental impact of internet infrastructure.
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
+  - name: Asim Hussain
+    role: Executive Director
+    org: Green Software Foundation
+    contribution: >
+      Participated in the AI-assisted assembly, contributing expertise to the consensus
+      design document for SCI for Web.
 
 quotes:
   - text: >
@@ -159,28 +211,26 @@ quotes:
     author: GSF–W3C collaboration announcement
     role: September 2025
   - text: >
-      Digital sustainability is a relatively new area for us. We faced uncertainty about
-      whether our approaches were correct, which experts to engage, and where to find
-      guidance. The GSF provides the expertise and community we needed.
-    author: Emma Horrell
-    role: User Experience Manager, University of Edinburgh
-
+      Tools exist to measure a website's carbon footprint, but every tool uses different
+      boundaries, different assumptions, and gets different results. SCI for Web builds
+      industry consensus on how to measure — so organisations can finally compare, validate,
+      and act on the numbers with confidence.
+    author: Asim Hussain
+    role: Executive Director, Green Software Foundation
 relatedSlugs:
-  - en/designing-sci-web-what-we-agreed-and-what-comes-next
-  - en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad
-  - en/pioneering-digital-sustainability-in-higher-education-meet-emma-horrell-of-the-un
+  - designing-sci-web-what-we-agreed-and-what-comes-next
+  - the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad
 
 cta:
-  heading: Get involved in SCI for Web
+  heading: Learn more about SCI for Web
   body: >
-    GSF members can become a project co-chair to support Chris Adams in leading the
-    specification work, or join the Software Standards Working Group to help through
-    draft review, implementation testing, and technical feedback.
-  note: Contact sci-for-web@greensoftware.foundation to get started
+    SCI for Web is a domain-specific extension of the SCI standard for measuring the
+    carbon intensity of web applications across the full delivery chain — servers,
+    networks, third-party services, and end-user devices.
+  ctaText: "Learn about SCI for Web"
+  ctaHref: "/standards/sci-web/"
 ---
 
 Almost everyone uses the web daily. Yet no standard existed for measuring a website's carbon intensity. Tools like the Sustainable Web Design Model, CO2.js, and the W3C Web Sustainability Guidelines had made web emissions visible and established foundational methodologies that thousands of practitioners used. But as organisations moved from awareness to accountability, they needed something more rigorous: a measurement approach with clear boundaries, carbon per functional unit rather than totals, and disclosed methodology so results were comparable and defensible.
 
 The fragmentation ran deep. Modern web applications depend extensively on third-party services — analytics, advertising, CDNs, authentication — which consume energy on both servers and client devices. Without a standard that defined what to include and how to attribute emissions across this chain, any measurement was partial. Organisations could not compare results, validate reduction claims, or make informed decisions about where to invest optimisation effort.
-
-The University of Edinburgh discovered the scale of the opportunity first-hand: through changes to homepage images alone, Emma Horrell and her team achieved 13 tonnes of CO₂ reduction per year. But they had no systematic framework to measure the rest — or to know if their approaches were right.

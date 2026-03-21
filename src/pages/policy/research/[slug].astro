@@ -1,0 +1,220 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import { getCollection, render } from "astro:content";
+import projects from "@/data/projects.json";
+
+export async function getStaticPaths() {
+  const papers = await getCollection("research", (p) => p.data.published !== false);
+  return papers.map((paper) => ({
+    params: { slug: paper.id },
+    props: { paper },
+  }));
+}
+
+const { paper } = Astro.props;
+const { Content, headings } = await render(paper);
+
+const typeLabel = paper.data.type === "whitepaper" ? "White Paper" : "Consultation Response";
+const dateStr = new Date(paper.data.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+// Resolve working group name from slug
+const wgProject = projects.find((p: any) => p.slug === paper.data.workingGroup);
+const wgName = wgProject?.name || paper.data.workingGroup;
+
+// Build metadata items
+const meta: { label: string; value: string; href?: string }[] = [];
+meta.push({ label: "Type", value: typeLabel });
+meta.push({ label: "Published", value: dateStr });
+if (paper.data.status) meta.push({ label: "Status", value: paper.data.status.charAt(0).toUpperCase() + paper.data.status.slice(1) });
+if (paper.data.jurisdiction) meta.push({ label: "Jurisdiction", value: paper.data.jurisdiction });
+if (paper.data.framework) meta.push({ label: "Framework", value: paper.data.framework });
+if (wgName) meta.push({ label: "Working Group", value: wgName });
+if (paper.data.authors && paper.data.authors.length > 0) {
+  meta.push({ label: "Authors", value: paper.data.authors.map(a => a.name).join(", ") });
+}
+if (paper.data.version) meta.push({ label: "Version", value: paper.data.version });
+
+// Filter headings for TOC — only h2s
+const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Contents");
+---
+
+<Layout
+  title={`${paper.data.title} — Green Software Foundation`}
+  description={paper.data.summary}
+>
+  <Navbar
+    navItems={navItems}
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <!-- Hero (matching story page pattern) -->
+  <div class="bg-primary-darker text-white">
+    <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
+      <div class="max-w-4xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/policy/" class="hover:text-white transition-colors">Policy & Research</a></li>
+            <li class="text-white/30">/</li>
+            <li><a href="/policy/research/" class="hover:text-white transition-colors">Research</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80 truncate max-w-[300px]">{paper.data.title}</li>
+          </ol>
+        </nav>
+
+        <div class="flex items-center gap-3 mb-4">
+          <span class={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded ${
+            paper.data.type === "whitepaper" ? "bg-accent text-primary-darkest" : "bg-white/20 text-white"
+          }`}>{typeLabel}</span>
+          <span class="text-white/60 text-sm">{dateStr}</span>
+        </div>
+        <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight">
+          {paper.data.title}
+        </h1>
+        {paper.data.subtitle && (
+          <p class="mt-3 text-xl md:text-2xl text-white/80 font-light">{paper.data.subtitle}</p>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Metadata grid -->
+  <section class="bg-white border-b border-border py-6 md:py-8">
+    <div class="container">
+      <div class="mx-auto max-w-4xl">
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+          {meta.map((item) => (
+            <div class="rounded-lg border border-border px-3 py-2.5">
+              <dt class="text-[10px] font-medium uppercase tracking-wider text-gray-darker">{item.label}</dt>
+              <dd class="mt-0.5 text-sm font-semibold text-primary-dark">
+                {item.href ? (
+                  <a href={item.href} class="text-primary hover:underline" target="_blank" rel="noopener">{item.value}</a>
+                ) : (
+                  item.value
+                )}
+              </dd>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content with optional TOC sidebar -->
+  <div class="bg-white" data-pagefind-body>
+    <div class="container py-16 md:py-20">
+      <div class="mx-auto max-w-6xl flex gap-12">
+        <!-- Main content -->
+        <div class="min-w-0 flex-1 max-w-4xl prose prose-lg research-content
+          prose-headings:text-primary prose-headings:font-extrabold
+          prose-a:text-primary prose-a:underline hover:prose-a:text-primary-dark
+          prose-strong:text-primary-dark
+          prose-table:border-collapse prose-th:bg-primary-lightest-2 prose-th:p-3 prose-td:p-3 prose-td:border prose-td:border-border prose-th:border prose-th:border-border prose-th:text-left prose-td:text-sm prose-th:text-sm
+        ">
+          <Content />
+        </div>
+
+        <style>
+          /* Responsive tables — horizontal scroll on mobile */
+          .research-content :global(table) {
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            max-width: 100%;
+          }
+          .research-content :global(thead),
+          .research-content :global(tbody) {
+            min-width: 600px;
+          }
+          /* Fade hint for scrollable tables on small screens */
+          @media (max-width: 768px) {
+            .research-content :global(table) {
+              font-size: 0.8125rem;
+              line-height: 1.5;
+            }
+            .research-content :global(th),
+            .research-content :global(td) {
+              padding: 0.5rem;
+              min-width: 120px;
+            }
+          }
+        </style>
+
+        <!-- Sticky TOC sidebar (desktop only) -->
+        {tocItems.length > 3 && (
+          <aside class="hidden xl:block w-56 shrink-0">
+            <nav class="sticky top-8" aria-label="Table of contents">
+              <p class="text-[10px] font-medium uppercase tracking-wider text-gray-darker mb-3">On this page</p>
+              <ul class="space-y-2.5 border-l border-border pl-4">
+                {tocItems.map((heading) => (
+                  <li>
+                    <a
+                      href={`#${heading.slug}`}
+                      class="text-xs leading-relaxed text-primary-dark/70 hover:text-primary transition-colors line-clamp-2"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile TOC (floating button) -->
+  {tocItems.length > 3 && (
+    <div class="xl:hidden fixed bottom-4 right-4 z-40">
+      <details class="group">
+        <summary class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg cursor-pointer hover:bg-primary-dark transition-colors list-none [&::-webkit-details-marker]:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </summary>
+        <div class="absolute bottom-14 right-0 w-72 max-h-80 overflow-y-auto rounded-xl border border-border bg-white shadow-xl p-4">
+          <p class="text-[10px] font-medium uppercase tracking-wider text-gray-darker mb-3">On this page</p>
+          <ul class="space-y-2">
+            {tocItems.map((heading) => (
+              <li>
+                <a
+                  href={`#${heading.slug}`}
+                  class="text-sm text-primary-dark/70 hover:text-primary transition-colors block"
+                  onclick="this.closest('details').removeAttribute('open')"
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+    </div>
+  )}
+
+  <CTABanner
+    heading="Want to get involved?"
+    body="Join the Policy Working Group and contribute to shaping green software policy worldwide."
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>

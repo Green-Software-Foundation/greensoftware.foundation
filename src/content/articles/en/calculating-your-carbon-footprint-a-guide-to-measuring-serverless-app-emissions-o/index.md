@@ -4,15 +4,16 @@ date: "2025-01-23"
 summary: "Denis Angeletta and Franziska Warncke explain how NTT Data applied the SCI specification to quantify the carbon emissions of serverless applications."
 teaserText: "NTT Data is a leading global provider of end-to-end ICT services. Their comprehensive use case illustrates how to address the environmental metric challenges of serverless computing."
 mainImage: "./main.png"
+tags: ["sci", "standards"]
 ---
 
-Serverless applications, known for their scalability and efficiency, present unique opportunities and challenges in sustainability. 
+Serverless applications, known for their scalability and efficiency, present unique opportunities and challenges in sustainability.
 
-As part of a project measuring the impact of various [Green Software Patterns](https://patterns.greensoftware.foundation/) on reducing carbon emissions, NTT Data developed a comprehensive methodology for quantifying the carbon footprint of these applications. 
+As part of a project measuring the impact of various [Green Software Patterns](https://patterns.greensoftware.foundation/) on reducing carbon emissions, NTT Data developed a comprehensive methodology for quantifying the carbon footprint of these applications.
 
-Denis Angeletta and Franziska Warncke, co-lead for the Green Software Patterns project, share the results achieved by applying the SCI specification and highlight how low per-request emissions can quickly scale to significant levels (305 kg of CO2 for 1M requests) for high-traffic applications. 
+Denis Angeletta and Franziska Warncke, co-lead for the Green Software Patterns project, share the results achieved by applying the SCI specification and highlight how low per-request emissions can quickly scale to significant levels (305 kg of CO2 for 1M requests) for high-traffic applications.
 
-## The Challenge: Assessing the Environmental Impact of Serverless 
+## The Challenge: Assessing the Environmental Impact of Serverless
 
 Serverless computing has revolutionized how we deploy and scale applications, offering a high degree of operational flexibility and cost efficiency. However, this paradigm shift is not without its challenges, especially when it comes to environmental impact assessments such as carbon emissions. Two significant hurdles in this domain are the delay in availability and the difficulty in collecting relevant metrics.
 
@@ -34,9 +35,9 @@ As a basis for our measurements, we have built a comprehensive Campaign Manageme
 
 The architecture of the system relies on popular serverless solutions available in AWS, such as Lambda for backend processing, DynamoDB for campaign data storage, S3 for static content storage and frontend deployment, and API Gateway for managing access to the backend. The chosen CPU architecture for all components is the default, which is the x86. These specific services were chosen because they are well-established in the industry and have been widely adopted by developers, making them an ideal basis for evaluating the CO2 emissions of serverless solutions.
 
-## Measurement Strategy 
+## Measurement Strategy
 
-With the help of our SCI calculator, which is [a tool to measure software carbon footprint and carbon intensity](https://greensoftware.foundation/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software), we can approximate the carbon footprint of different hardware components based on the resource usage of the given serverless service. 
+With the help of our SCI calculator, which is [a tool to measure software carbon footprint and carbon intensity](https://greensoftware.foundation/articles/how-intesa-and-ntt-data-measure-energy-consumption-of-software), we can approximate the carbon footprint of different hardware components based on the resource usage of the given serverless service.
 
 In our first measurements, we focused on four key metrics:
 
@@ -47,7 +48,7 @@ In our first measurements, we focused on four key metrics:
 
 Because of the nature of the services, there are some significant challenges when it comes to collecting the relevant metrics to derive CO2 emissions. Nonetheless, it is possible to do so.
 
-To generate load for the application to have comparable emission values, a load testing framework is used called k6. The load test is executed for one hour and creates multiple campaigns. After a successful run, an HTTP request is executed that returns the current SCI value for the given time range of the load test execution. In that logic, for each previously mentioned metric, the relevant resource consumption values are retrieved as follows: allocated memory of a Lambda function and total size in bytes of files inside an S3 bucket are obtained via CloudWatch; the table size of a DynamoDB table is retrieved directly from DynamoDB; and network traffic in bytes via VPC Flow Logs is accessed through Athena. With those values, the API from our tool asks for current emission values per component. With that, we can calculate the SCI. 
+To generate load for the application to have comparable emission values, a load testing framework is used called k6. The load test is executed for one hour and creates multiple campaigns. After a successful run, an HTTP request is executed that returns the current SCI value for the given time range of the load test execution. In that logic, for each previously mentioned metric, the relevant resource consumption values are retrieved as follows: allocated memory of a Lambda function and total size in bytes of files inside an S3 bucket are obtained via CloudWatch; the table size of a DynamoDB table is retrieved directly from DynamoDB; and network traffic in bytes via VPC Flow Logs is accessed through Athena. With those values, the API from our tool asks for current emission values per component. With that, we can calculate the SCI.
 
 ![AWS serverless architecture diagram showing CloudFront, Cognito, API Gateway, Lambda, DynamoDB, and monitoring services](./image.png)
 
@@ -67,10 +68,10 @@ Upon conducting a pattern test on the application, the results yielded a carbon 
 
 When comparing different measurements with varying picture sizes, we observe that the “Reduce transmitted data” pattern can achieve approximately a 4% reduction in carbon emissions. This experiment is currently in progress and the results will be published in a future blog.
 
-## Looking Ahead   
+## Looking Ahead
 
 We plan to integrate the Real-Time Cloud Framework from the GSF into our approach for measuring carbon emissions. While this framework is implemented on AWS due to our use of specific AWS services, the aim is to expand this approach to include Azure and Google Cloud Platform (GCP). Additionally, we plan to measure various other patterns to gain a comprehensive understanding of these patterns and quantify the potential savings associated with each.
 
 It’s important to mention that this paper targets x86_64 architecture. Future work will include comparisons with Arm architecture to provide a more comprehensive analysis.
 
-Learn how to calculate the carbon intensity of a software application using [the SCI specification](https://sci.greensoftware.foundation/). 
+Learn how to calculate the carbon intensity of a software application using [the SCI specification](https://sci.greensoftware.foundation/).

@@ -6,11 +6,13 @@ teaserText: "了解绿色软件基金会的使命、运作方式、优先领域�
 mainImage: "./main.png"
 authors:
   - fullName: "Asim Hussain"
-    role: "Chairperson"
+    role: "Executive Director"
+    company: "Green Software Foundation"
+    companyWebsite: "https://greensoftware.foundation"
     photo: "/assets/articles/authors/asim-hussain.png"
     socialMedia:
       - platform: "Linkedin"
-        link: "https://green-software-foundation.admin.datocms.com/editor/item_types/1245874/items/63645581/edit"
+        link: "https://www.linkedin.com/in/asimhussain/"
 translators:
   - fullName: "Xiran Lyu"
     role: "Software Developer"

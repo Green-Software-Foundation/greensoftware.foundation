@@ -4,7 +4,6 @@ import { navItems } from "@/lib/nav-items";
 
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
-import LogoMarquee from "@/components/logo-marquee.astro";
 import CTACard from "@/components/cta-card.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import TextWithImage from "@/components/text-with-image.astro";
@@ -14,10 +13,28 @@ import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
+import ArticleCarousel from "@/components/article-carousel.astro";
+
 import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+import membersData from "@/data/members.json";
 
 const seeProject = projects.find(p => p.slug === "see");
 const parentWg = projects.find(p => p.name === seeProject?.parent);
+
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("see"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
+  }));
 ---
 
 <Layout
@@ -47,12 +64,12 @@ const parentWg = projects.find(p => p.name === seeProject?.parent);
       ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
       ...(seeProject?.lifecycle ? [{ text: seeProject.lifecycle, variant: "dark" as const }] : []),
     ]}
-    heading="Measure the Energy Cost of"
+    heading="Measure the Energy Efficiency of"
     headingAccent="Your Software"
     body="Every software system consumes energy through the hardware it runs on. The Software Energy Efficiency (SEE) specification provides a methodology for calculating the energy consumption rate of a software system — a score where lower is better and reaching zero is impossible."
     ctas={[
-      { text: "View on GitHub", variant: "primary", href: "https://github.com/Green-Software-Foundation/Software-Energy-Efficiency" },
-      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+      { text: "View the Project", variant: "primary", href: "https://directory.greensoftware.foundation/projects/software-energy-efficiency-(see)/" },
+      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/software-energy-efficiency-(see)/" },
     ]}
     imageSrc="/assets/standards/sci/hero-illustration.svg"
     imageAlt="SEE illustration"
@@ -60,15 +77,10 @@ const parentWg = projects.find(p => p.name === seeProject?.parent);
     id="overview"
   />
 
-  <!-- Logo Marquee -->
-  <LogoMarquee
-    heading="Developed within the Software Standards Working Group"
-  />
-
   <!-- What is SEE? -->
   <CTACard
     heading="What is SEE?"
-    body="SEE is a rate — energy consumption per one functional unit of work, measured in kilowatt hours (kWh). It gives developers and organisations a clear, comparable number that captures how efficiently their software uses energy. Reducing an SEE score is only possible through actions that genuinely reduce energy consumption: modifying software to use less hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure."
+    body="SEE is a rate — energy consumption (kWh) per one functional unit of work. It gives developers and organisations a clear, comparable number that captures how efficiently their software uses energy. Reducing an SEE score is only possible through actions that genuinely reduce energy consumption: modifying software to use less hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure."
     imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
     imageAlt="What is SEE illustration"
   />
@@ -232,10 +244,10 @@ const parentWg = projects.find(p => p.name === seeProject?.parent);
     cards={[
       {
         icon: "/assets/standards/sci/resource-spec-icon.svg",
-        title: "View the Draft Specification",
-        description: "Follow the development of the SEE specification on GitHub",
-        ctaText: "View on GitHub",
-        ctaHref: "https://github.com/Green-Software-Foundation/Software-Energy-Efficiency",
+        title: "View the Project",
+        description: "Learn about the SEE specification and connect with the project team",
+        ctaText: "Visit Directory",
+        ctaHref: "https://directory.greensoftware.foundation/projects/software-energy-efficiency-(see)/",
         featured: true,
       },
       {
@@ -256,12 +268,23 @@ const parentWg = projects.find(p => p.name === seeProject?.parent);
     bgClass="bg-accent-lightest-2"
   />
 
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Software Energy Efficiency standard."
+      articles={carouselArticles}
+      showOrganizations={false}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
   <!-- CTA -->
   <CTABanner
     heading="Energy efficiency is the foundation of sustainable software"
     body="SEE provides a clear, comparable score for the energy consumption of any software system. Whether you're optimising cloud workloads, edge applications, or AI pipelines, your expertise can help shape how the industry measures and reduces software energy consumption."
-    ctaText="View the Draft Specification"
-    ctaHref="https://github.com/Green-Software-Foundation/Software-Energy-Efficiency"
+    ctaText="View the Project"
+    ctaHref="https://directory.greensoftware.foundation/projects/software-energy-efficiency-(see)/"
   />
 
   <Footer />

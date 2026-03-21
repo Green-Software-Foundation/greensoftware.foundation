@@ -9,7 +9,7 @@
  * In local dev the Netlify CDN isn't available, so raster images also fall back
  * to a plain <img> with the original src.
  */
-import { isRaster, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
+import { isRaster, hasAlpha, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
 
 interface Props {
   src: string;
@@ -21,7 +21,7 @@ interface Props {
   loading?: "lazy" | "eager";
   /** Passed to <source> and <img> to help the browser pick the right srcset entry. */
   sizes?: string;
-  /** Override the default responsive widths [400, 800, 1200, 1600]. */
+  /** Override the default responsive widths [200, 400, 800, 1200]. */
   widths?: number[];
 }
 
@@ -37,10 +37,21 @@ const {
 } = Astro.props;
 
 const useNetlify = isRaster(src) && !import.meta.env.DEV;
+const fallbackFormat = hasAlpha(src) ? "png" as const : "jpeg" as const;
+
+// Derive a sensible fallback width: use explicit width, or parse a px sizes hint, or middle of widths array, or 800
+function parseFallbackWidth(): number {
+  if (width) return width;
+  const pxMatch = sizes.match(/^(\d+)px$/);
+  if (pxMatch) return Math.min(parseInt(pxMatch[1], 10) * 2, 800); // 2x for retina, capped
+  const ws = widths || [200, 400, 800, 1200];
+  return ws[Math.min(1, ws.length - 1)]; // second-smallest
+}
+const fallbackWidth = parseFallbackWidth();
 ---
 
 {useNetlify ? (
-  <picture>
+  <picture style="display: contents;">
     <source
       type="image/avif"
       srcset={makeSrcset(src, "avif", widths)}
@@ -52,7 +63,7 @@ const useNetlify = isRaster(src) && !import.meta.env.DEV;
       sizes={sizes}
     />
     <img
-      src={netlifyUrl(src, width ?? 1200, "jpeg")}
+      src={netlifyUrl(src, fallbackWidth, fallbackFormat)}
       alt={alt}
       class={className}
       width={width}

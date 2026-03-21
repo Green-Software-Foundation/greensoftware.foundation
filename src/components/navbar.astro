@@ -102,7 +102,7 @@ const {
       )}
     </a>
     <div class="flex items-center gap-1">
-      <NavigationComponent client:load items={navItems} showSearch={showSearch} ctaText={ctaText} ctaHref={ctaHref} />
+      <NavigationComponent client:idle items={navItems} showSearch={showSearch} ctaText={ctaText} ctaHref={ctaHref} />
       {ctaText ? (
         <a href={ctaHref} class="hidden lg:block ml-2">
           <Button variant="primary">{ctaText}</Button>

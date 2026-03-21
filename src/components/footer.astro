@@ -46,10 +46,9 @@ const defaultSections: FooterSection[] = [
     title: "Our Work",
     links: [
       { href: "/standards/", text: "Standards" },
-      { href: "/policy/", text: "Policy" },
+      { href: "/policy/", text: "Policy & Research" },
       { href: "/education/", text: "Education" },
-      { href: "/research/", text: "Research" },
-      { href: "/stories/", text: "Member Stories" },
+      { href: "/community/", text: "Community" },
     ],
   },
   {
@@ -57,8 +56,9 @@ const defaultSections: FooterSection[] = [
     links: [
       { href: "/about/", text: "About GSF" },
       { href: "/governance/", text: "Governance & Leadership" },
-      { href: "/history/", text: "History" },
+      { href: "/stories/", text: "Member Stories" },
       { href: "/articles/", text: "Articles" },
+      { href: "/press/", text: "Press & Media" },
     ],
   },
   {
@@ -67,7 +67,6 @@ const defaultSections: FooterSection[] = [
       { href: "/membership/", text: "Become a Member" },
       { href: "https://directory.greensoftware.foundation/members", text: "Member Directory" },
       { href: "/newsletter/", text: "Newsletter" },
-      { href: "https://summit.greensoftware.foundation", text: "Events" },
     ],
   },
   {
@@ -95,12 +94,12 @@ const {
       class="grid grid-cols-1 py-12 md:py-18 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:gap-16 lg:py-20"
     >
       <div class="flex w-full flex-col gap-4">
-        <img src={logoSrc} class="w-20" />
-        <p class="pt-4 text-xs font-normal text-white/50">
+        <img src={logoSrc} alt="Green Software Foundation" class="w-20" />
+        <p class="pt-4 text-xs font-normal text-white/60">
           Copyright &copy; {year} Green Software Foundation. All rights reserved.
         </p>
         {description && (
-          <p class="text-xs font-normal text-white/50">{description}</p>
+          <p class="text-xs font-normal text-white/60">{description}</p>
         )}
       </div>
 
@@ -120,7 +119,7 @@ const {
                   return (
                     <a
                       href={social.href}
-                      class="text-white/50 transition-colors hover:text-accent"
+                      class="text-white/60 transition-colors hover:text-accent"
                       aria-label={social.label}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener noreferrer" : undefined}
@@ -138,7 +137,7 @@ const {
                 return (
                   <a
                     href={link.href}
-                    class="text-xs text-white/50"
+                    class="text-xs text-white/60"
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
                   >
@@ -153,12 +152,9 @@ const {
     </div>
     <!-- Newsletter signup -->
     <div class="border-t border-white/10 py-6">
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-        <div class="shrink-0">
-          <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
-          <p class="text-xs text-white/40 mt-1">Weekly green software insights</p>
-        </div>
-        <div class="flex-1 max-w-sm">
+      <div class="flex flex-col items-center gap-3 max-w-md mx-auto text-center">
+        <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
+        <div class="w-full">
           <NewsletterForm
             client:visible
             variant="compact"
@@ -166,10 +162,11 @@ const {
             buttonText="Sign up"
           />
         </div>
+        <p class="text-xs text-white/60">Weekly insights on digital sustainability and industry news</p>
       </div>
     </div>
     <div class="border-t border-white/10 py-4">
-      <p class="text-center text-xs text-white/40">
+      <p class="text-center text-xs text-white/60">
         The Joint Development Foundation Projects, LLC is an affiliate of the Linux Foundation.
       </p>
     </div>
