@@ -34,6 +34,7 @@ const {
   directoryText = "View all members",
 } = Astro.props;
 
+import { logoMap } from "@/lib/logo-map";
 const logos: Logo[] = propLogos || (await import("../data/members.json")).default
   .filter((m: any) => m.active && m.logo && !m.hideLogo)
   .sort((a: any, b: any) => {
@@ -43,7 +44,7 @@ const logos: Logo[] = propLogos || (await import("../data/members.json")).defaul
     }
     return a.companyName.localeCompare(b.companyName);
   })
-  .map((m: any) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite }));
+  .map((m: any) => ({ name: m.companyName, logo: logoMap.get(m.companyName.toLowerCase()) || `/assets/${m.logo}`, website: m.companyWebsite }));
 const marqueeDuration = Math.max(logos.length * 3.75, 38);
 
 // Determine the gradient "from" color based on background

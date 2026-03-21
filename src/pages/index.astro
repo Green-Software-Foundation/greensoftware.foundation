@@ -21,12 +21,7 @@ import CTABanner from "@/components/cta-banner.astro";
 import CTACard from "@/components/cta-card.astro";
 import Footer from "@/components/footer.astro";
 
-// Load member logos for org name → logo lookup
-import membersData from "@/data/members.json";
-
-// ----- Featured articles -----
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
-const resolveOrgs = (names: string[]) => names.map(name => ({ name, logo: logoMap.get(name.toLowerCase()) || "" }));
+import { logoMap, resolveOrgs } from "@/lib/logo-map";
 
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
