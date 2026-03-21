@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Green Software Foundation website — an Astro 5 site with a parameterised component library. The legacy Gatsby 4 site has been moved to `_legacy/`.
+Green Software Foundation website — an Astro 5 site with a parameterised component library.
 
 ## Site Architecture
 
@@ -119,7 +119,6 @@ Tokens are defined in `src/styles/global.css`.
 - `src/data/` — Data files (logos.json with 60+ member logos)
 - `src/assets/` — SVG assets imported as components
 - `public/assets/` — Static assets (images, SVGs)
-- `.microsites/` — Reference microsites (sci, wdpc, soft) — separate repos, used as design reference
 
 ### Parameterised Components
 
@@ -277,7 +276,3 @@ The homepage is at `/` and the component catalogue is at `/catalogue`.
 - Build command: `npm run build:full` (via `netlify.toml`)
 - Node version: 22 (set in both `.nvmrc` and `netlify.toml`)
 - **Use the `netlify` CLI** to inspect deploy logs, site config, and environment variables when debugging build failures (e.g. `netlify deploy --build`, `netlify env:list`, `netlify logs`)
-
-## Legacy Gatsby Site
-
-The legacy Gatsby site has been moved to `_legacy/`. It was previously deployed on Netlify and may still be needed for reference.
