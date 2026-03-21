@@ -380,6 +380,32 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- Timeline -->
+  <Timeline
+    heading="Journey to *Transformation*"
+    body="Current focus: The specification is actively developing, and experts, operators, and sustainability practitioners are invited to refine and validate it."
+    items={[
+      { date: "June 2021", description: "Vision Launched", completed: true, start: "2021-06-01", end: "2021-06-30" },
+      { date: "March 2022", description: "v1.0 Published", completed: true, start: "2022-03-01", end: "2022-03-31" },
+      { date: "April 2024", description: "ISO Accreditation Achieved", completed: true, start: "2024-04-01", end: "2024-04-30" },
+      { date: "October 2024", description: "v1.1 Released", completed: true, start: "2024-10-01", end: "2024-10-31" },
+      { date: "2026", description: "Current", current: true, start: "2026-01-01", end: "2026-12-31" },
+    ]}
+  />
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={sciProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(sciProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
+
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
@@ -419,42 +445,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Timeline -->
-  <Timeline
-    heading="Journey to *Transformation*"
-    body="Current focus: The specification is actively developing, and experts, operators, and sustainability practitioners are invited to refine and validate it."
-    items={[
-      { date: "June 2021", description: "Vision Launched", completed: true, start: "2021-06-01", end: "2021-06-30" },
-      { date: "March 2022", description: "v1.0 Published", completed: true, start: "2022-03-01", end: "2022-03-31" },
-      { date: "April 2024", description: "ISO Accreditation Achieved", completed: true, start: "2024-04-01", end: "2024-04-30" },
-      { date: "October 2024", description: "v1.1 Released", completed: true, start: "2024-10-01", end: "2024-10-31" },
-      { date: "2026", description: "Current", current: true, start: "2026-01-01", end: "2026-12-31" },
-    ]}
-  />
-
-  <!-- Team (driven from projects.json) -->
-  <TeamGrid
-    heading="Project *Leadership*"
-    body={parentWg ? `Part of the ${parentWg.name}` : ""}
-    columns={sciProject?.leads?.length === 2 ? 2 : 3}
-    highlighted={[]}
-    members={(sciProject?.leads ?? []).map(lead => ({
-      fullName: lead.fullName,
-      role: lead.roleLabel,
-    }))}
-    bgClass="bg-white"
-  />
-
-  <!-- Certification -->
-  <CTACard
-    heading="SCI Certification Programme"
-    body="GSF members can certify their software product's SCI calculation — demonstrating that it was completed and disclosed following GSF guidelines. Certification is a membership benefit, available to all GSF members."
-    ctaText="Learn about certification"
-    ctaHref="/standards/certification/"
-    imageSrc="/assets/ready.svg"
-    imageAlt="Certification illustration"
-  />
-
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
@@ -468,10 +458,10 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- CTA -->
   <CTABanner
-    heading="Ready to measure your software's carbon impact?"
-    body="The SCI specification provides the tools and methodology you need to start measuring, reducing, and reporting your software's carbon intensity today."
-    ctaText="Read the Specification"
-    ctaHref="https://grnsft.org/sci"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />

@@ -204,14 +204,14 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Ready to Explore? -->
+  <!-- Take the Course -->
   <CTACard
-    heading="Ready to Explore?"
-    body="Take our 10-minute SOFT Essentials course to understand how the four-pillar framework drives organisational transformation — and whether it's right for your team."
+    heading="Learn the SOFT framework"
+    body="Take the SOFT Essentials course on the Movement Platform to understand how to assess and improve your organisation's technology sustainability."
     ctaText="Take the course"
-    ctaHref="http://grnsft.org/mov-plat-soft-essentials"
+    ctaHref="https://movement.greensoftware.foundation/spaces/21190216/content"
     imageSrc="/assets/standards/soft/ready.svg"
-    imageAlt="Ready to explore illustration"
+    imageAlt="SOFT Essentials course illustration"
   />
 
   <!-- SOFT Works for Everyone (audience cards) -->
@@ -256,6 +256,19 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     ]}
   />
 
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={softProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(softProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
+
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
@@ -295,19 +308,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Team (driven from projects.json) -->
-  <TeamGrid
-    heading="Project *Leadership*"
-    body={parentWg ? `Part of the ${parentWg.name}` : ""}
-    columns={softProject?.leads?.length === 2 ? 2 : 3}
-    highlighted={[]}
-    members={(softProject?.leads ?? []).map(lead => ({
-      fullName: lead.fullName,
-      role: lead.roleLabel,
-    }))}
-    bgClass="bg-white"
-  />
-
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
@@ -321,10 +321,10 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- CTA -->
   <CTABanner
-    heading="The Future of Software is Sustainable"
-    body="SOFT isn't just a framework, it's your organisation's pathway to meaningful environmental impact, operational excellence, and competitive advantage. Whether you're ready to join the pilot, explore the resources, or simply learn more, the time to act is now."
-    ctaText="Take the course"
-    ctaHref="http://grnsft.org/mov-plat-soft-essentials"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />

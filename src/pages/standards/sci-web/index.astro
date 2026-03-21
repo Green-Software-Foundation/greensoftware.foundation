@@ -322,25 +322,6 @@ const carouselArticles = allArticles
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- AI-Assisted Assembly Process -->
-  <CTACard
-    heading="Built by Consensus in 10 Weeks"
-    body="Fourteen GSF members from fifteen organisations — including Accenture, Google, Microsoft, NTT DATA, and the Green Web Foundation — piloted an AI-assisted assembly process that moved from a blank page to a consensus design document in just ten weeks. Participants answered structured questions, an LLM synthesised responses into draft content, and the group reviewed and refined through multiple rounds until all objections were resolved."
-    ctaText="Read the full assembly report"
-    ctaHref="/articles/sci-web-assembly-report/"
-    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
-    imageAlt="Assembly process illustration"
-  />
-
-  <!-- Articles & Reports -->
-  <ArticleCarousel
-    heading="Featured Articles"
-    body="Reports, announcements, and insights from the SCI for Web journey."
-    showOrganizations={false}
-    articles={carouselArticles}
-    bgClass="bg-accent-lighter/10"
-  />
-
   <!-- Testimonial -->
   <Testimonial
     quote="Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need."
@@ -444,12 +425,21 @@ const carouselArticles = allArticles
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- Articles & Reports -->
+  <ArticleCarousel
+    heading="Featured Articles"
+    body="Reports, announcements, and insights from the SCI for Web journey."
+    showOrganizations={false}
+    articles={carouselArticles}
+    bgClass="bg-accent-lighter/10"
+  />
+
   <!-- CTA -->
   <CTABanner
-    heading="The web serves billions — let's make it sustainable"
-    body="SCI for Web provides the first standardised, SCI-aligned methodology for measuring web application emissions. Whether you're a developer, product owner, or sustainability professional, your expertise can help shape how the industry measures and reduces the web's carbon footprint."
-    ctaText="Read the Design Document"
-    ctaHref="/articles/sci-web-assembly-report/"
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
   />
 
   <Footer />
