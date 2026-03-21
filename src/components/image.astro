@@ -9,7 +9,7 @@
  * In local dev the Netlify CDN isn't available, so raster images also fall back
  * to a plain <img> with the original src.
  */
-import { isRaster, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
+import { isRaster, hasAlpha, makeSrcset, netlifyUrl } from "@/lib/netlify-image";
 
 interface Props {
   src: string;
@@ -37,6 +37,7 @@ const {
 } = Astro.props;
 
 const useNetlify = isRaster(src) && !import.meta.env.DEV;
+const fallbackFormat = hasAlpha(src) ? "png" as const : "jpeg" as const;
 
 // Derive a sensible fallback width: use explicit width, or parse a px sizes hint, or middle of widths array, or 800
 function parseFallbackWidth(): number {
@@ -62,7 +63,7 @@ const fallbackWidth = parseFallbackWidth();
       sizes={sizes}
     />
     <img
-      src={netlifyUrl(src, fallbackWidth, "jpeg")}
+      src={netlifyUrl(src, fallbackWidth, fallbackFormat)}
       alt={alt}
       class={className}
       width={width}
