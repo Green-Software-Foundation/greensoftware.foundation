@@ -7,3 +7,172 @@
   NODE_VERSION = "22"
 
 [images]
+
+# =============================================================================
+# Redirects — legacy paths → new Astro paths
+# =============================================================================
+
+# -- Renamed pages --
+
+[[redirects]]
+from = "/team"
+to = "/governance/"
+status = 301
+
+[[redirects]]
+from = "/join-us"
+to = "/membership/"
+status = 301
+
+[[redirects]]
+from = "/helpdesk"
+to = "/contact/"
+status = 301
+
+[[redirects]]
+from = "/subscribe"
+to = "/newsletter/"
+status = 301
+
+[[redirects]]
+from = "/onboarding"
+to = "https://wiki.greensoftware.foundation/orientation"
+status = 301
+
+[[redirects]]
+from = "/projects"
+to = "/standards/"
+status = 301
+
+[[redirects]]
+from = "/projects/*"
+to = "/standards/"
+status = 301
+
+[[redirects]]
+from = "/manifesto"
+to = "/about/"
+status = 301
+
+# -- Translated manifestos → about page --
+
+[[redirects]]
+from = "/manifesto-italian"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/manifesto-mandarin"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/manifest-german"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/manifiesto-de-la-green-software-foundation"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/manifesto-japanese"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/manifesto-brazilian-portuguese"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/it/manifesto"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/de/manifesto"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/es/manifesto"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/ja/manifesto"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/zh/manifesto"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/pt/manifesto"
+to = "/about/"
+status = 301
+
+# -- Translated articles: old /ja/articles/slug → new /articles/ja/slug --
+
+[[redirects]]
+from = "/ja/articles/:slug"
+to = "/articles/ja/:slug/"
+status = 301
+
+[[redirects]]
+from = "/zh/articles/:slug"
+to = "/articles/zh/:slug/"
+status = 301
+
+[[redirects]]
+from = "/pt/articles/:slug"
+to = "/articles/pt/:slug/"
+status = 301
+
+# -- DatoCMS-era article slugs (romanised Japanese/Chinese) → new paths --
+
+[[redirects]]
+from = "/articles/gsf-global-summit-2022dong-jing-hui-chang-kai-cui"
+to = "/articles/ja/gsf-global-summit-2022-tokyo/"
+status = 301
+
+[[redirects]]
+from = "/articles/what-is-green-software-japanese"
+to = "/articles/ja/what-is-green-software/"
+status = 301
+
+[[redirects]]
+from = "/articles/10-recommendations-for-green-software-development-japanese"
+to = "/articles/ja/10-recommendations-for-green-software-development/"
+status = 301
+
+[[redirects]]
+from = "/articles/huan-ying-lai-dao-lu-se-ruan-jian-ji-jin-hui"
+to = "/articles/zh/welcome-to-the-green-software-foundation/"
+status = 301
+
+[[redirects]]
+from = "/articles/software-carbon-intensity-a"
+to = "/articles/ja/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity/"
+status = 301
+
+[[redirects]]
+from = "/articles/what-is-green-software-mandarin"
+to = "/articles/zh/what-is-green-software/"
+status = 301
+
+[[redirects]]
+from = "/articles/o-que-e-software-sustentavel"
+to = "/articles/pt/what-is-green-software/"
+status = 301
+
+# -- Legacy redirect that pointed to a romanised slug (now redirect to EN version) --
+
+[[redirects]]
+from = "/articles/10-recommendations-for-green-software-development"
+to = "/articles/10-recommendations-for-green-software-development/"
+status = 301

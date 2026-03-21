@@ -56,12 +56,10 @@ export default function NewsletterForm({
       if (data.result === "success") {
         setStatus("success");
         setMessage(data.msg || "Thanks for subscribing!");
-        // Push GTM event if available
-        if (typeof window !== "undefined" && (window as any).dataLayer) {
-          (window as any).dataLayer.push({
-            event: "formSubmitted",
-            formName: "newsletter",
-            formVariant: variant,
+        // Track in GA4
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag("event", "newsletter_submission", {
+            form_variant: variant,
           });
         }
       } else {
@@ -70,8 +68,8 @@ export default function NewsletterForm({
         setMessage(
           (data.msg || "Something went wrong. Please try again.").replace(
             /<[^>]*>/g,
-            ""
-          )
+            "",
+          ),
         );
       }
     } catch {
@@ -82,9 +80,7 @@ export default function NewsletterForm({
 
   if (status === "success") {
     if (variant === "compact") {
-      return (
-        <p className="text-sm text-accent font-medium">{message}</p>
-      );
+      return <p className="text-sm text-accent font-medium">{message}</p>;
     }
     return (
       <div className="bg-accent-lighter rounded-xl p-8 md:p-10 text-center">

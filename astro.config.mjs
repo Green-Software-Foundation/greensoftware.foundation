@@ -9,8 +9,9 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import astrobook from "astrobook";
 import remarkGfm from "remark-gfm";
-import remarkDirective from "remark-directive";
-import remarkDirectivesHandler from "./src/plugins/remark-directives-handler.mjs";
+import remarkGithubAlerts from "remark-github-alerts";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
@@ -18,7 +19,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://greensoftware.org",
+  site: "https://greensoftware.foundation",
   vite: {
     plugins: [tailwindcss()],
   },
@@ -38,8 +39,9 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkGfm, remarkDirective, remarkDirectivesHandler],
+    remarkPlugins: [remarkGfm, remarkGithubAlerts, remarkMath],
     rehypePlugins: [
+      rehypeKatex,
       rehypeSlug,
       [
         rehypeAutolinkHeadings,

@@ -1,0 +1,101 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+
+import { getCollection } from "astro:content";
+
+const papers = (await getCollection("research", (p) => p.data.published !== false))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout
+  title="Research & White Papers — Green Software Foundation"
+  description="White papers and consultation responses from the Green Software Foundation's Policy and Standards Working Groups."
+>
+  <Navbar
+    navItems={navItems}
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Policy & Research", href: "/policy/" },
+    { label: "Research" },
+  ]} />
+
+  <Hero
+    heading="Research &"
+    headingAccent="White Papers"
+    body="White papers, consultation responses, and policy analysis from the Green Software Foundation's working groups — aligning green software standards with global sustainability regulation and frameworks."
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/leading-illustration.svg"
+  />
+
+  <div class="bg-white">
+    <div class="container py-16 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        {papers.length === 0 ? (
+          <p class="text-gray-darker text-lg">No research papers available at this time.</p>
+        ) : (
+          <div class="grid gap-6">
+            {papers.map((paper) => (
+              <a
+                href={`/policy/research/${paper.id}/`}
+                class="block rounded-xl border border-border bg-accent-lightest-2 p-6 md:p-8 hover:border-primary-lighter hover:shadow-md transition-all group"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <span class={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded ${
+                    paper.data.type === "whitepaper"
+                      ? "bg-primary text-white"
+                      : "bg-accent text-primary-darkest"
+                  }`}>
+                    {paper.data.type === "whitepaper" ? "White Paper" : "Consultation Response"}
+                  </span>
+                  {paper.data.jurisdiction && (
+                    <span class="text-xs font-semibold text-gray-darker">{paper.data.jurisdiction}</span>
+                  )}
+                  <span class="text-xs text-gray-darker">
+                    {new Date(paper.data.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                  </span>
+                </div>
+                <h2 class="font-extrabold text-xl md:text-2xl text-primary group-hover:text-primary-dark transition-colors leading-tight">
+                  {paper.data.title}
+                </h2>
+                {paper.data.subtitle && (
+                  <p class="mt-1 text-base text-primary-dark font-medium">{paper.data.subtitle}</p>
+                )}
+                {paper.data.summary && (
+                  <p class="mt-2 text-sm text-primary-dark/70 line-clamp-2">{paper.data.summary}</p>
+                )}
+                <p class="mt-3 text-sm font-semibold text-primary group-hover:underline">
+                  Read more →
+                </p>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <CTABanner
+    heading="Want to get involved?"
+    body="Join the Policy Working Group and contribute to shaping green software policy worldwide."
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
