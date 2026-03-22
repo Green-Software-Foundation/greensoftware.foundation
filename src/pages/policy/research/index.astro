@@ -15,8 +15,8 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
 ---
 
 <Layout
-  title="Research & White Papers — Green Software Foundation"
-  description="White papers and consultation responses from the Green Software Foundation's Policy and Standards Working Groups."
+  title="Research & Publications — Green Software Foundation"
+  description="Research papers, policy responses, and project reports from the Green Software Foundation's working groups."
 >
   <Navbar
     navItems={navItems}
@@ -32,13 +32,13 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
   <Breadcrumb items={[
     { label: "Home", href: "/" },
     { label: "Policy & Research", href: "/policy/" },
-    { label: "Research" },
+    { label: "Publications" },
   ]} />
 
   <Hero
     heading="Research &"
-    headingAccent="White Papers"
-    body="White papers, consultation responses, and policy analysis from the Green Software Foundation's working groups — aligning green software standards with global sustainability regulation and frameworks."
+    headingAccent="Publications"
+    body="Research papers, policy responses, and project reports from the Green Software Foundation's working groups — advancing green software standards and aligning them with global sustainability regulation and frameworks."
     bgClass="bg-accent-lightest-2"
     imageSrc="/assets/leading-illustration.svg"
   />

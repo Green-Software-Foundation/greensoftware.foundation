@@ -129,9 +129,9 @@ export const navItems = [
         links: [
           {
             href: "/policy/research/",
-            label: "White Papers",
+            label: "Publications",
             description:
-              "Policy alignment white papers and consultation responses",
+              "Research papers, policy responses, and project reports",
           },
           {
             href: "https://policy-radar.greensoftware.foundation",
