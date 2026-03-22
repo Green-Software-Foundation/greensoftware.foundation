@@ -25,8 +25,8 @@ The Green AI Committee (GAIC) is formed of these members:
 
 |      |  |
 | ----------- | ----------- |
-| Sanjay Podder (Chair)  | Accenture
-|Thomas Lewis🪑| Microsoft |
+| Sanjay Podder (Co-Chair) | Accenture |
+| Thomas Lewis (Co-Chair) | Microsoft |
 | Arun Ravindran | BCG |
 | Chris Xie | Futurewei |
 | Federica Sarro | UCL |
