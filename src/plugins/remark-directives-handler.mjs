@@ -370,6 +370,34 @@ export default function remarkDirectivesHandler() {
           ];
           return;
         }
+
+        // ── Fallback: convert unrecognised directives back to plain text ──
+        // This prevents remark-directive from swallowing things like
+        // `:2024` in "ISO/IEC 21031:2024" or other colon-prefixed text.
+        if (node.type === "textDirective") {
+          // Reconstruct the original text including any children
+          // (e.g. `:name[label]{attrs}` — children hold the label)
+          let text = `:${name}`;
+          if (node.children && node.children.length > 0) {
+            const label = node.children.map((c) => c.value || "").join("");
+            if (label) text += `[${label}]`;
+          }
+          const attrs = node.attributes || {};
+          const attrStr = Object.entries(attrs)
+            .filter(([, v]) => v != null && v !== "")
+            .map(([k, v]) => `${k}="${v}"`)
+            .join(" ");
+          if (attrStr) text += `{${attrStr}}`;
+
+          // Replace this node with a plain text node
+          node.type = "text";
+          node.value = text;
+          delete node.children;
+          delete node.data;
+          delete node.name;
+          delete node.attributes;
+          return;
+        }
       }
     });
   };
