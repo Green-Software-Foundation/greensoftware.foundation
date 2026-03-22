@@ -1,19 +1,17 @@
 ---
 title: "SCI for Web — Assembly Report"
-date: "2026-02-01"
-summary: "The full consensus design document for SCI for Web, created by 14 GSF members through an AI-assisted assembly process. Covers scope definition, target personas, and implementation practices."
-teaserText: "The consensus design document that will shape the SCI for Web specification"
-mainImage: "./main.png"
-featured: true
-organizations:
-  - "Accenture"
-  - "Google"
-  - "Microsoft"
-  - "NTT DATA"
-  - "Green Web Foundation"
-  - "HSBC"
-additionalOrgCount: 9
+subtitle: "Consensus Design Document for Measuring Web Application Carbon Intensity"
+date: 2026-02-01
+published: true
+status: published
+type: report
+summary: >
+  The full consensus design document for SCI for Web, created by 14 GSF members through an AI-assisted assembly process. Covers scope definition, target personas, and implementation practices.
+workingGroup: software-wg
 tags: ["sci-web"]
+authors:
+  - name: SCI for Web Assembly
+    org: Green Software Foundation
 ---
 
 **Version**: 1.0 | **Published**: February 2026

@@ -55,7 +55,7 @@ timeline:
       potential to compress standards timelines further.
     source:
       text: Read the SCI for AI workshop report
-      href: /articles/sci-for-ai-workshop-report/
+      href: /policy/research/sci-for-ai-workshop-report/
 
   - date: September 2025
     heading: W3C and GSF announce formal collaboration
@@ -156,7 +156,6 @@ relatedSlugs:
   - en/designing-sci-web-what-we-agreed-and-what-comes-next
   - en/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad
   - en/sci-specification-achieves-iso-standard-status
-  - en/sci-for-ai-workshop-report
   - en/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the
 
 cta:

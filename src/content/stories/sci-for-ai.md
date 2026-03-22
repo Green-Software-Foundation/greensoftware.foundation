@@ -78,7 +78,7 @@ timeline:
       priority projects: an SCI for AI standard and a Green AI for Practitioners course.
     source:
       text: Read the Green AI Position Paper
-      href: /articles/green-ai-position-paper/
+      href: /policy/research/green-ai-position-paper/
 
   - date: October 2024
     heading: EU AI Act response
@@ -118,7 +118,7 @@ timeline:
       royalty-free.
     source:
       text: Read the SCI for AI Workshop Report
-      href: /articles/sci-for-ai-workshop-report/
+      href: /policy/research/sci-for-ai-workshop-report/
 
   - date: December 2025
     heading: SCI for AI specification ratified
@@ -202,8 +202,6 @@ quotes:
     role: Professor of Software Engineering, UCL
 
 relatedSlugs:
-  - en/sci-for-ai-workshop-report
-  - en/green-ai-position-paper
   - en/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the
   - en/the-eu-ai-act-insights-from-the-green-ai-committee
   - en/can-ai-truly-be-green

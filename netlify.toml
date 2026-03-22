@@ -170,6 +170,23 @@ from = "/articles/o-que-e-software-sustentavel"
 to = "/articles/pt/what-is-green-software/"
 status = 301
 
+# -- Articles migrated to Research & Publications --
+
+[[redirects]]
+from = "/articles/green-ai-position-paper/"
+to = "/policy/research/green-ai-position-paper/"
+status = 301
+
+[[redirects]]
+from = "/articles/sci-for-ai-workshop-report/"
+to = "/policy/research/sci-for-ai-workshop-report/"
+status = 301
+
+[[redirects]]
+from = "/articles/sci-web-assembly-report/"
+to = "/policy/research/sci-web-assembly-report/"
+status = 301
+
 # -- Legacy redirect that pointed to a romanised slug (now redirect to EN version) --
 
 [[redirects]]

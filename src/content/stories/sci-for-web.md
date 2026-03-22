@@ -83,7 +83,7 @@ timeline:
       consume energy on both servers and client devices.
     source:
       text: Read the SCI for Web assembly report
-      href: /articles/sci-web-assembly-report/
+      href: /policy/research/sci-web-assembly-report/
 
   - date: Q1 2026
     heading: SCI for Web specification accepted and launched

@@ -1,19 +1,17 @@
 ---
 title: "Green AI Position Paper"
-date: "2025-05-13"
-summary: "In a series of workshops in 2024, members of the GSF Green AI Committee defined Green AI, assessed its environmental impacts across the AI lifecycle, and outlined key actions for AI sustainability. In this paper, we share those outcomes. "
-teaserText: "Building a greener AI future through lifecycle accountability, standards, and collaboration. "
-mainImage: "./main.png"
-featured: true
+subtitle: "Defining Green AI, Assessing Lifecycle Impacts, and Outlining Key Actions"
+date: 2025-05-13
+published: true
+status: published
+type: report
+summary: >
+  In a series of workshops in 2024, members of the GSF Green AI Committee defined Green AI, assessed its environmental impacts across the AI lifecycle, and outlined key actions for AI sustainability.
+workingGroup: green-ai-committee
 tags: ["research", "sci-ai", "standards"]
-organizations:
-  - "Accenture"
-  - "Microsoft"
-  - "NTT DATA"
-  - "Siemens"
-  - "Google"
-  - "UBS"
-additionalOrgCount: 6
+authors:
+  - name: Green AI Committee
+    org: Green Software Foundation
 ---
 
 The Green AI Committee (GAIC) was established to unify efforts in innovation and sustainability. Its mission is to guide the Green Software Foundation’s (GSF) strategy in developing knowledge, standards, and tools that minimize the environmental impact of Artificial Intelligence (AI) systems, supporting net-zero goals.
@@ -64,7 +62,7 @@ Exploring these concepts would broaden the focus beyond the environmental impact
 
 Given the evolving nature of AI and its applications, the committee will periodically reassess this scope to ensure it remains aligned with the core objectives of Green AI and GAIC’s mission.
 
-![Infographic titled What Is Green AI showing the AI lifecycle stages: Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, and End of Life](./image.png)
+![Infographic titled What Is Green AI showing the AI lifecycle stages: Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, and End of Life](/assets/research/green-ai-lifecycle.png)
 
 ## Understanding the AI Lifecycle
 
