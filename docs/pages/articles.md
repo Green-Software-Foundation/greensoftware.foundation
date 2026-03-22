@@ -75,7 +75,7 @@ Setting `published: false` in frontmatter:
 
 Articles support custom Markdown directives for embedding rich content — videos, documents, buttons, and more. These work in plain `.md` files with no special setup.
 
-**See the live showcase:** The unpublished article at [`/articles/rich-content-showcase/`](http://localhost:4322/articles/rich-content-showcase/) demonstrates every directive with real GSF examples and syntax references. Source: `src/content/articles/en/rich-content-showcase/index.md`.
+**See the live showcase:** The unpublished article at [`/articles/rich-content-showcase/`](https://greensoftware.foundation/articles/rich-content-showcase/) demonstrates every directive with real GSF examples and syntax references. Source: `src/content/articles/en/rich-content-showcase/index.md`.
 
 ### Quick reference
 
