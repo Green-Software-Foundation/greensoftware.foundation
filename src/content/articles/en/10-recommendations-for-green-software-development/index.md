@@ -50,7 +50,7 @@ Development of green software spans the entire lifecycle of software: developmen
 
 Here are some recommendations for creating greener software. They focus on four areas:  design and coding options, choice of language, selection of AI models, and software development.
 
-### **Design and coding options**
+### Design and coding options
 
 Developers should think about and act on how to minimize environmental impacts of software from the early stage of software development.  Adopting the following general principles will help you in realizing green software.
 
@@ -70,19 +70,19 @@ Developers should think about and act on how to minimize environmental impacts o
 
 For additional related information, refer to [Principles of Green Software Engineering](https://principles.green/) which identifies eight key potential areas to focus on and [GreenCoding](https://www.gft.com/int/en/technology/greencoding) which offers guidelines on the logic, methodology and platform to write, develop and run the code.  
 
-### **Choice of language**
+### Choice of language
 
 (08) Even the choice of programming language you use can influence the energy efficiency of the software. In a 2018 study, a team of researchers from three universities in Portugal examined energy efficiency across programming languages. They wrote and [evaluated](http://greenlab.di.uminho.pt/wp-content/uploads/2017/10/sleFinal.pdf) software written in 27 different languages for 10 different problems. They monitored electricity consumption as well as the speed and memory usage of each. As highlighted in a brief [article](https://thenewstack.io/which-programming-languages-use-the-least-electricity/),  they concluded that there are several factors to be considered and no single language is the best under different criteria. We recommend further studies along these lines.
 
-###  **Choice of AI Model**
+### Choice of AI Model
 
-(09) As outlined in a recent  *IEEE Spectrum *article, AI can be made greener by developing and using [a less-power-consuming ML model](https://spectrum.ieee.org/energywise/artificial-intelligence/machine-learning/energy-efficient-green-ai-strategies); creating and sharing reproducible code that will reduce duplicated efforts; and developing and using specialized hardware optimized for AI workload. For further  details, refer to the ACM  [article](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext), [*Green AI*](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext). You may also want to check out this article:**[*Why should sustainability be a first class consideration for AI systems?*](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems)
+(09) As outlined in a recent  *IEEE Spectrum*article, AI can be made greener by developing and using [a less-power-consuming ML model](https://spectrum.ieee.org/energywise/artificial-intelligence/machine-learning/energy-efficient-green-ai-strategies); creating and sharing reproducible code that will reduce duplicated efforts; and developing and using specialized hardware optimized for AI workload. For further  details, refer to the ACM  [article](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext), [*Green AI*](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext). You may also want to check out this article:**[*Why should sustainability be a first class consideration for AI systems?*](https://greensoftware.foundation/articles/why-should-sustainability-be-a-first-class-consideration-for-ai-systems)
 
-### **Software Development**
+### Software Development
 
 (10) During development monitor real-time power consumption through techniques such as [dynamic code analysis](https://www.computerweekly.com/answer/Dynamic-code-analysis-vs-static-analysis-source-code-testing). The data you gather will be critical for understanding the gaps between the design choices and actual energy profiles. Tools and resources are now available for developers for managing energy consumption. For example,  Intel’s [Software Development Assistant](https://software.intel.com/en-us/articles/energy-efficient-software-development) allows developer to take energy measurements from the system as it executes specific workloads within their application and determine its efficiency.
 
-## **Prospects**
+## Prospects
 
 Greening software is—and will continue to be—a necessity, not an option. To help create a more sustainable environment, software professionals must understand the principles of green software and its potential, and embrace green IT practices. By successfully greening your software  systems, you can  harness new opportunities, enhance your business’s competitive advantage, and help create a sustainable environment that benefits current and future generations.
 

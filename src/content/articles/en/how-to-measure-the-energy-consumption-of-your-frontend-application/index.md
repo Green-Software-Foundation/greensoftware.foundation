@@ -22,10 +22,9 @@ This blog post focuses on measuring energy cost for applications running client-
 
 Measuring energy consumption directly from the wall socket is the same approach as for backend applications. Using a watt-hour meter, you can measure the total power consumption of your device, which helps you calculate energy cost. This will always be the best way to measure power consumption because it will measure exactly what your hardware consumes. 
 
-<figure>
-<img src="./illustration-measuring-power-consumption-directly-from-wall-socket.png" alt="illustration-measuring-power-consumption-directly-from-wall-socket" />
-<figcaption>*Measuring power consumption directly from the wall socket*</figcaption>
-</figure>
+![illustration-measuring-power-consumption-directly-from-wall-socket](./illustration-measuring-power-consumption-directly-from-wall-socket.png)
+*Measuring power consumption directly from the wall socket*
+
 
 Using a watt-hour meter gives you the energy usage of the entire device, but with some planning, you can also use it to determine the approximate energy consumption of an application running on your device. However, this will work best for applications that consume a lot of system resources on the host and/or are long-running. 
 
@@ -49,10 +48,9 @@ Measuring the energy consumption for a device’s screen is more challenging, be
 
  
 
-<figure>
-<img src="./illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed.png" alt="Illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed" />
-<figcaption>*Using tools to measure energy consumption of your backend service*</figcaption>
-</figure>
+![Illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed](./illustration-using-tools-to-measure-energy-consumption-of-applications-windows-and-already-deployed.png)
+*Using tools to measure energy consumption of your backend service*
+
 
 ## Tools for measuring energy consumption
 

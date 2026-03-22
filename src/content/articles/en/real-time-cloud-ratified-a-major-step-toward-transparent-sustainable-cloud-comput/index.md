@@ -41,10 +41,9 @@ Additionally, the Real Time Cloud has advocated for cloud providers to align the
 
 We officially released the collected data in August 2024, and several updates have been made since, with the most recent one in December 2024. To access these updates, visit the [project’s GitHub repository](https://github.com/Green-Software-Foundation/real-time-cloud?tab=readme-ov-file).
 
-<figure>
-<img src="./real-time-cloud-miro-flow-july-2024.png" alt="Miro board mapping cloud energy and carbon data sources, interfaces, and reporting products across providers" />
-<figcaption>*Real Time Cloud Miro flow, July 2024*</figcaption>
-</figure>
+![Miro board mapping cloud energy and carbon data sources, interfaces, and reporting products across providers](./real-time-cloud-miro-flow-july-2024.png)
+*Real Time Cloud Miro flow, July 2024*
+
 
 ## Building on Our Values
 

@@ -32,15 +32,13 @@ The system architecture:
 
 ![Four-phase process diagram: Groundwork, Initial Calculations, Automation, and Expand Coverage](./image.png)
 
-<figure>
-<img src="./hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png" alt="Two Rigol benchtop power supplies mounted in a server rack displaying voltage, current, and power readings" />
-<figcaption>*Hardware configuration as deployed in the AVEVA demo lab in Lake Forest*</figcaption>
-</figure>
+![Two Rigol benchtop power supplies mounted in a server rack displaying voltage, current, and power readings](./hardware-configuration-as-deployed-in-the-aveva-demo-lab-in-lake-forest.png)
+*Hardware configuration as deployed in the AVEVA demo lab in Lake Forest*
 
-<figure>
-<img src="./raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg" alt="Raspberry Pi board with Ethernet cable connected, mounted at the back of a server rack" />
-<figcaption>*Raspberry PI, located at the back of the hardware cluster*</figcaption>
-</figure>
+
+![Raspberry Pi board with Ethernet cable connected, mounted at the back of a server rack](./raspberry-pi-located-at-the-back-of-the-hardware-cluster.jpg)
+*Raspberry PI, located at the back of the hardware cluster*
+
 
 Two measurements are required to calculate the power consumption:
 
@@ -57,10 +55,9 @@ The baseline and loaded system measurements can be performed in parallel by runn
 
 A critical part of the system is its ability to archive data in Data Hub. The following graphic shows the power measurements of the baseline and loaded system (parallel configuration) over time.
 
-<figure>
-<img src="./power-trends-of-baseline-and-loaded-system-side-by-side.png" alt="AVEVA Data Hub trend view showing power consumption traces for baseline and loaded systems over time" />
-<figcaption>*Power trends of Baseline and Loaded system side by side*</figcaption>
-</figure>
+![AVEVA Data Hub trend view showing power consumption traces for baseline and loaded systems over time](./power-trends-of-baseline-and-loaded-system-side-by-side.png)
+*Power trends of Baseline and Loaded system side by side*
+
 
 The Raspberry PI (Voltage, Current, Power, and Energy) collects the measurements and stores them in AVEVA Datahub for data archival and further consumption and analysis. The following diagram illustrates the data flow in detail:
 

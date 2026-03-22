@@ -30,10 +30,9 @@ According to [Principles of chaos engineering](https://principlesofchaos.org/), 
 ### Build a Hypothesis around Steady State Behavior
 Let’s start with the first step: a steady state behavior is the condition our application should aspire to be in. If we translate this principle into a sustainable one, this becomes the most beautiful and efficient state of an application: *one where no energy is wasted, and efficiency and performance is at its best*.
 
-<figure>
-<img src="./green-software-foundation-carbon-monkey-illustration-paola-annis2.png" alt="green-software-foundation-carbon-monkey-illustration-paola-annis2" />
-<figcaption>*Call for more "carbon monkeys"*</figcaption>
-</figure>
+![green-software-foundation-carbon-monkey-illustration-paola-annis2](./green-software-foundation-carbon-monkey-illustration-paola-annis2.png)
+*Call for more "carbon monkeys"*
+
 
 The most difficult part is how to measure and set this initial state. My colleagues have shared numerous ideas on the [Sustainable Software Engineering blog](https://aka.ms/sse/blog) that might help you jumpstart your measurement. However, I feel that at some point, this will have to reach a standardized and widely accepted form where we have a “carbon limit” where an application is considered inefficient and not sustainable.
 

@@ -73,7 +73,7 @@ You can think about this in terms of cooling’s energy consumption and the impa
 
 Here, a good piece of metadata to associate with the calculation of these metrics is to provide more information about the cooling infrastructure, what is included in the boundaries, what the typical ambient temperatures are where the data centre is hosted, and any other related information that can better inform anyone who is a downstream consumer of this metric.
 
-> **Adding more dimensions to the metric itself can provide more surfaces for people to come up with innovative solutions through which they can reduce the environmental impacts of their digital systems. **
+> **Adding more dimensions to the metric itself can provide more surfaces for people to come up with innovative solutions through which they can reduce the environmental impacts of their digital systems.**
 
 ## Conclusion
 

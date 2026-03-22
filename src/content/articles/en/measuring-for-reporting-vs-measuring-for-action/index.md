@@ -24,7 +24,7 @@ But there's a second purpose for measurement that gets far less attention. Measu
 
 At the GSF, this second purpose became our focus. Not because reporting doesn't matter, but because we noticed something important. The qualities that make a metric good for reporting often make it less useful for driving action. And vice versa. Understanding that trade-off is the key to designing measurement systems that do both well.
 
-## **What Makes a Metric Good for Reporting**
+## What Makes a Metric Good for Reporting
 
 Reporting metrics need to be comparable across organizations. They need to be auditable. They need to be consistent over time so you can track trends. They need to withstand scrutiny from regulators and third-party auditors.
 
@@ -36,7 +36,7 @@ But here's the trade-off. The standardization and breadth that make a metric com
 
 > “A total tells you the size of the problem. It doesn't tell a specific team what to do about it”.
 
-##  **The Auditing Problem (or, Top-down vs. Bottom-up)**
+## The Auditing Problem (or, Top-down vs. Bottom-up)
 
 There's a practical reason why reporting metrics and action metrics pull in different directions, and it comes down to auditing.
 
@@ -50,7 +50,7 @@ Top-down measurement (starting from a total and allocating downward) serves repo
 
 This isn't a flaw in either approach. It's a fundamental difference in what they're designed for. And it's one of the clearest examples of why a single metric can't easily serve both purposes without compromise.
 
-## **What Makes a Metric Good for Driving Action**
+## What Makes a Metric Good for Driving Action
 
 Through our work at the GSF, we kept coming back to two conditions that need to be true for a metric to actually change behavior.
 
@@ -58,7 +58,7 @@ It needs to give a clear signal for action. The measurement has to tell someone 
 
 It needs to be within the team's agency to change. If the number moves up or down independent of anything the team does, it's not a useful action metric for them. It might be a perfectly valid reporting metric. But it won't drive the behavior you're looking for.
 
-## **How this Plays Out in Organizations**
+## How this Plays Out in Organizations
 
 Think about how KPIs work inside any large organization. The sales team has revenue targets. Engineering has performance and reliability metrics. HR tracks retention and hiring. Each team gets metrics aligned to their function, their skills, and their ability to actually move the number.
 
@@ -68,13 +68,13 @@ Carbon measurement has the same dynamic. A total organizational emissions figure
 
 The metric isn't wrong. It's just not designed for them.
 
-## **The Trade-off in Practice**
+## The Trade-off in Practice
 
 A quick example to make this concrete. [The Software Carbon Intensity (SCI) specification](https://sci.greensoftware.foundation/) doesn't include carbon offsets in its calculation. This isn't an ethical stance on offsets. It's a design decision about agency. If you're a software engineer and your SCI score improves because the energy procurement department purchased renewable energy credits, what signal does that give you? None. Your code didn't change. A separate team made a purchasing decision, and your number moved.
 
 For reporting purposes, you absolutely want offsets in the picture. They're part of the organization's overall emissions story. But for an action metric scoped to an engineering team, including them adds noise and removes signal. Same data, different purpose, different boundary.
 
-## **Designing a Metric for Action**
+## Designing a Metric for Action
 
 So how do you actually build a metric that drives action? There's a process to it, and it starts in a different place than most people expect.
 
@@ -94,7 +94,7 @@ The SCI specification is a practical example of this process in action. The pers
 
 This approach means you don't end up with one universal metric. You end up with many. Potentially thousands across a large organization, each scoped to a specific team. It's less elegant. It's harder to standardize. But each metric actually does the job it's supposed to do.
 
-## **Efficiency and the Growth Question**
+## Efficiency and the Growth Question
 
 This reporting/action distinction also shapes how you think about what kind of metric to use.
 
@@ -106,7 +106,7 @@ An efficiency metric works with that reality. It says: grow if you're going to g
 
 Someone will bring up Jevons' paradox (the idea that efficiency gains get consumed by increased usage). It's a fair concern. In practice, though, genuine Jevons' paradox is quite rare. What's more common is a rebound effect that eats somewhere between 5 and 50 percent of the efficiency gain. That's real, but it still leaves you ahead. And for a team looking at their KPIs each sprint, efficiency is the lever they can actually pull.
 
-## **Both, not Either**
+## Both, not Either
 
 The point isn't that reporting metrics are bad and action metrics are good. It's that they serve different purposes and involve real trade-offs.
 

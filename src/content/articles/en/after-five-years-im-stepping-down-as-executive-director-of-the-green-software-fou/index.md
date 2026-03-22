@@ -22,7 +22,7 @@ This has been in the works for a while. I've been planning this with the steerin
 
 After five years, it felt right to tell you directly where I've been, what I've learned, and why I'm ready for the next chapter.
 
-## **How It Started**
+## How It Started
 
 I walked into this as an engineer and technologist. I'd been casually involved in standards conversations before, but nothing I'd call active. Honestly, I didn't see the power of standards.
 
@@ -34,7 +34,7 @@ If you want to shift money, resources, and funding into the areas that matter, w
 
 That's the biggest lesson I'm taking with me.
 
-## **The Early Days**
+## The Early Days
 
 The first year was a whirlwind. We didn't know who we were. We didn't have a clear definition of green software. We didn't know what problems to solve or how to solve them. So we tried lots of things.
 
@@ -44,7 +44,7 @@ It's very easy to make something complex. It's very, very hard to make something
 
 I'm proud that the working groups never lost sight of that. And I'm proud of the culture Abhishek Gupta (rest his soul) set from the very start: it's not about measurement, it's about action. That philosophy spread through everything we did. Adoptability became the point. There's no value in something that doesn't drive action.
 
-## **What We Built**
+## What We Built
 
 From the SCI, we grew: [SCI for AI](https://sci-for-ai.greensoftware.foundation/), [SCI for Web](https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-web-(sci-for-web)/), certification programs, tooling like [the Impact Framework](https://if.greensoftware.foundation/), and now [Carmen](https://directory.greensoftware.foundation/projects/carbon-measurement-engine-(carmen)/).
 
@@ -68,7 +68,7 @@ The [Policy Working Group](https://directory.greensoftware.foundation/working-gr
 
 And recently, the explorations into AI-facilitated consensus building. I know that might raise alarm bells. But it's not AI making decisions. It's AI helping people listen to each other. Surfacing where the agreements and disagreements are. Bringing people on a journey faster. We piloted it with SCI for AI, used it properly with SCI for Web, and it's now rolling out across all our specs. That might be one of the most important things we've done.
 
-## **Why I'm Leaving**
+## Why I'm Leaving
 
 My interests have broadened.
 
@@ -88,7 +88,7 @@ On a personal level, my wife Zanete has built a successful knitwear design busin
 
 If you're working in the space of collective intelligence, deliberative processes, or consensus building, I'd love to connect.
 
-## **Thank You**
+## Thank You
 
 The current team is the best I've ever worked with. It took a long time to get here. But one of the reasons I feel comfortable leaving now is because of them. They're excellent. The Foundation is in very good hands.
 
@@ -98,7 +98,7 @@ Thank you especially to all the chairs and project leads who volunteered their t
 
 And to the broader community: thank you for being supportive in a complicated space. This is not a black-and-white issue. If anyone tells you it is, they're wrong.
 
-## **What's Next for the Foundation**
+## What's Next for the Foundation
 
 The new leader will be announced once they've worked through the processes on their side. As you'd expect for a senior position, there's a lot to sort out before they can go public. But trust me, it's worth the wait. I'm very, very excited to leave the Foundation in their capable hands. You need different types of people for different phases of an organisation. I was needed to help birth and grow this. They're the right person to scale its impact into the future.
 

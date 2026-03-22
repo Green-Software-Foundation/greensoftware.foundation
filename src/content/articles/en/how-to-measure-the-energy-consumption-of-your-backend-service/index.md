@@ -22,10 +22,9 @@ This post is operating system agnostic and is primarily meant for applications r
 
 The most reliable way is also the simplest way. Buy a cheap watt hour meter, plug it into the socket between your wall and your server and you are golden. This will always be the best way to measure power consumption because it will measure exactly what your server consumes.  
 
-<figure>
-<img src="./green-software-foundation-measuring-power-consumption-from-socket-by-software-creators-illustration.png" alt="green-software-foundation-measuring-power-consumption-from -socket-by-software-creators-illustration" />
-<figcaption>*Measuring energy consumption directly from the socket*</figcaption>
-</figure>
+![green-software-foundation-measuring-power-consumption-from -socket-by-software-creators-illustration](./green-software-foundation-measuring-power-consumption-from-socket-by-software-creators-illustration.png)
+*Measuring energy consumption directly from the socket*
+
 
 There are tricks to ensure you get reliable data:
 
@@ -48,10 +47,9 @@ If we approximate the TDP with the energy consumption of each component we will 
 
 > To get energy, we multiply by time: **E[kWh] = P*t**
 
-<figure>
-<img src="./green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components.png" alt="green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components" />
-<figcaption>*A formula for estimating power consumption *</figcaption>
-</figure>
+![green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components](./green-software-foundation-formula-for-measuring-power-consumption-of-different-hardware-components.png)
+*A formula for estimating power consumption*
+
 
 For our estimate to account for things such as cooling in a data center, this number needs to be multiplied with the PUE or the Power Usage Effectiveness (PUE) of your datacenter. 
 

@@ -30,10 +30,9 @@ Even without being a C# expert, it's interesting to look at the PR and see the i
 
 For the nitty-gritty (next paragraph), the core work is in updating the target framework version. This can be done in the property window of each C# project, for example, in the Japanese version of Visual Studio (Fig.1).
 
-<figure>
-<img src="./fig-1-property-window-of-c-project-in-carbon-aware-sdk-on-visual-studio-community-edition.png" alt="Visual Studio property window showing target framework set to .NET 8.0 for a Carbon Aware SDK project" />
-<figcaption>*Fig.1 Property window of C# project in Carbon Aware SDK on Visual Studio Community Edition*</figcaption>
-</figure>
+![Visual Studio property window showing target framework set to .NET 8.0 for a Carbon Aware SDK project](./fig-1-property-window-of-c-project-in-carbon-aware-sdk-on-visual-studio-community-edition.png)
+*Fig.1 Property window of C# project in Carbon Aware SDK on Visual Studio Community Edition*
+
 
 Carbon Aware SDK includes 30 C# projects (at least in v1.3.0), so automation is welcomed. The target framework version is described in /Project/PropertyGroup/TargetFramework in .csproj file. For example, running the command on WSL:
 

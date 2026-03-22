@@ -39,10 +39,9 @@ To better illustrate the problem, let us take a step back and look at the physic
 
 The units for energy, power and time are Joule, Watt, and Second respectively. A basic way to understand the correlations between performance, power, and energy consumption is that the energy consumed during a program’s run-time is the area under the curve of the power of the run-time of the program.
 
-<figure>
-<img src="./a-chart-with-power-against-runtime-to-show-energy-consumed.png" alt="A-chart-with-power-against-runtime-to-show-energy-consumed" />
-<figcaption>*Energy consumed during a program’s run-time*</figcaption>
-</figure>
+![A-chart-with-power-against-runtime-to-show-energy-consumed](./a-chart-with-power-against-runtime-to-show-energy-consumed.png)
+*Energy consumed during a program’s run-time*
+
 
 ## Energy Delay Product
 
@@ -86,10 +85,9 @@ It is worth noting that, because the energy for a program is the product of the 
 
 **G**up = (**T**ϕ  ×** P**ϕ ) / (**T**o ×** P**o) =** S**up /** P**up
 
-<figure>
-<img src="./a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png" alt="A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants " />
-<figcaption>*Software optimizations of all kinds categorized into eight quadrants *</figcaption>
-</figure>
+![A-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants](./a-chart-with-software-optimizations-of-all-kinds-categorized-into-eight-quadrants.png)
+*Software optimizations of all kinds categorized into eight quadrants*
+
 
 With Speedup, Powerup and Greenup,  software optimizations of all kinds can be categorized into one of the eight quadrants, as shown in the above graph. 
 

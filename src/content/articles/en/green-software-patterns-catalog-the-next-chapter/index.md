@@ -67,10 +67,9 @@ In the final stage of the workshop, participants reflected on each step to defin
 
 *Disclaimer: The vision above only reflects the perspectives of the workshop participants. It does not represent a consensus view of the project team or the Green Software Foundation.*
 
-<figure>
-<img src="./gs-patterns-catalog-roadmap.png" alt="Roadmap timeline from today to 2027 showing milestones for the Green Software Patterns Catalog" />
-<figcaption>*GS Patterns Catalog Roadmap*</figcaption>
-</figure>
+![Roadmap timeline from today to 2027 showing milestones for the Green Software Patterns Catalog](./gs-patterns-catalog-roadmap.png)
+*GS Patterns Catalog Roadmap*
+
 
 ## How to Contribute
 

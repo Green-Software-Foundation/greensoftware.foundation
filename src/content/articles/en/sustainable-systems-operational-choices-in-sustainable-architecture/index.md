@@ -46,10 +46,9 @@ Sustainable, aka green, software is designed and coded to require less power and
 
  
 
-<figure>
-<img src="./illustration-depicting-the-green-software-foundation-s-definition-of-green-software.png" alt="Illustration depicting The Green Software Foundation’s definition of Green Software" />
-<figcaption>*The Green Software Foundation’s definition of Green Software*</figcaption>
-</figure>
+![Illustration depicting The Green Software Foundation’s definition of Green Software](./illustration-depicting-the-green-software-foundation-s-definition-of-green-software.png)
+*The Green Software Foundation’s definition of Green Software*
+
 
 ## Operational Efficiency
 

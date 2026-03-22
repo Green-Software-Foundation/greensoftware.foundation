@@ -31,10 +31,9 @@ We live in the cloud era where we are enabled by platforms like Azure that have 
 
 Performance testing helps optimize the infrastructure needed for running a workload. Consider a web application that connects to the database and is used concurrently by more than 1,000 users within a geo-region. A typical infrastructure setup is as per this architecture [Basic web application – Azure Reference Architectures | Microsoft Docs](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/basic-web-app?tabs=cli) .
 
-<figure>
-<img src="./diagram-of-infrastructure-setup-for-a-basic-web-application.png" alt="diagram-of-infrastructure-setup-for-a-basic-web-application" />
-<figcaption>*Typical infrastructure set up for a basic web application*</figcaption>
-</figure>
+![diagram-of-infrastructure-setup-for-a-basic-web-application](./diagram-of-infrastructure-setup-for-a-basic-web-application.png)
+*Typical infrastructure set up for a basic web application*
+
 
 It has an Azure SQL database behind an App service. There are multiple pricing tiers you can consider to provision for this application, but we can use performance engineering techniques to derive the right tier. A high-level set of activities covering these techniques are:
 
@@ -50,19 +49,17 @@ Running [Azure Database tuning advisor](https://docs.microsoft.com/en-us/azure/a
 
 ### Before Tuning
 
-<figure>
-<img src="./a-graph-of-resource-utilization-before-tuning.png" alt="A-graph-of-resource-utilization-before-tuning" />
-<figcaption>*Resource utilization before tuning*</figcaption>
-</figure>
+![A-graph-of-resource-utilization-before-tuning](./a-graph-of-resource-utilization-before-tuning.png)
+*Resource utilization before tuning*
+
 
 ### After Tuning
 
 Incorporating the recommendations helped bring down the database utilization as you can see in the “After Tuning” graph. Now the same database at the same pricing tier can handle additional application querying.
 
-<figure>
-<img src="./a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
-<figcaption>*Resource utilization after tuning*</figcaption>
-</figure>
+![A-graph-of-resource-utilization-after-tuning](./a-graph-of-resource-utilization-after-tuning.png)
+*Resource utilization after tuning*
+
 
 ##  Another Example of Tuning
 
@@ -72,10 +69,9 @@ This is another scenario where we could have iteratively tried provisioning more
 
 ### Before tuning
 
-<figure>
-<img src="./a-graph-of-resource-utilization-after-tuning.png" alt="A-graph-of-resource-utilization-after-tuning" />
-<figcaption>*Resource utilization before tuning*</figcaption>
-</figure>
+![A-graph-of-resource-utilization-after-tuning](./a-graph-of-resource-utilization-after-tuning.png)
+*Resource utilization before tuning*
+
 
 Tuning techniques like asynchronous callback, caching and explicit garbage collection calls were implemented  to fix the code issues. This helped bring down the CPU utilization and, as the after tuning graph shows, now it  has enough excess capacity to handle more workloads. 
 
