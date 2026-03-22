@@ -15,6 +15,32 @@ authors:
     org: Green Software Foundation
 ---
 
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [1. Scope](#1-scope)
+  - [1.1. Foundational AI Paradigms](#11-foundational-ai-paradigms)
+  - [1.2. Emerging AI Technologies](#12-emerging-ai-technologies)
+  - [1.3. Application-Specific AI Solutions](#13-application-specific-ai-solutions)
+- [2. Existing AI Measurement Metrics](#2-existing-ai-measurement-metrics)
+  - [2.1. Green AI Index](#21-green-ai-index)
+  - [2.2. EcoLogits](#22-ecologits)
+  - [2.3. EnergyScore](#23-energyscore)
+- [3. Rubric](#3-rubric)
+  - [3.1. Adoption](#31-adoption)
+  - [3.2. Pathway to Policy & Certification](#32-pathway-to-policy--certification)
+  - [3.3. Existing Standards Alignment](#33-existing-standards-alignment)
+- [4. Measurement as a Tool for Incentivisation](#4-measurement-as-a-tool-for-incentivisation)
+- [5. Green AI](#5-green-ai)
+  - [5.1. Lifecycle Stages](#51-lifecycle-stages)
+- [6. Clarity and Consistency](#6-clarity-and-consistency)
+  - [6.1. Boundary Definition](#61-boundary-definition)
+  - [6.2. Methodology](#62-methodology)
+- [7. Next Steps](#7-next-steps)
+- [8. Further Reading](#8-further-reading)
+
+## Executive Summary
+
 The Software Carbon Intensity (SCI) specification provides a standardized method for measuring the carbon emissions associated with software systems. As Artificial Intelligence (AI) becomes an increasingly resource-intensive component of modern software, it is crucial to extend SCI methodology to account for the unique characteristics of AI.
 
 > "The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance." (Navveen Balani, Software Standards Working Group Chair)
@@ -48,12 +74,12 @@ In early 2025, AI experts from GSF member organizations participated in a series
 
 Here, we share the key insights and findings, and what’s coming next.
 
-## Scope
+## 1. Scope
 
 First, participants needed to establish the scope of the SCI for AI while recognizing the diversity and rapid evolution of AI technologies. To provide clarity and coverage across the ecosystem, the SCI for AI is designed to apply to both foundational AI paradigms and practical application areas. It also incorporates emerging categories of AI innovation to ensure adaptability over time.
 The SCI series of standards is designed to incentivize direct engineering optimizations that reduce the real-world carbon footprint of software systems. This focus on actionable and measurable efficiency improvements is central to its purpose.
 
-### Foundational AI Paradigms
+### 1.1. Foundational AI Paradigms
 
 These paradigms represent the fundamental approaches to AI model development and learning. During the workshop, they were classified as follows:
 
@@ -70,7 +96,7 @@ These paradigms represent the fundamental approaches to AI model development and
 
 Each paradigm has different carbon implications, depending on factors like hardware use, retraining frequency, and data dependency. The SCI for AI supports tracking emissions throughout each stage, from model design to retraining and deployment.
 
-### Emerging AI Technologies
+### 1.2. Emerging AI Technologies
 
 - Generative AI
 - Text Generation (e.g., GPT)
@@ -83,7 +109,7 @@ As agentic AI systems grow in autonomy, we must be mindful of their design and e
 
 We should also aim for efficient integration. For example, a restaurant booking should ideally utilize APIs between the user app and the table management system, rather than relying on two AI voice agents communicating with each other.
 
-### Application-Specific AI Solutions
+### 1.3. Application-Specific AI Solutions
 
 Application-specific AI solutions include, but are not limited to:
 
@@ -94,7 +120,7 @@ Application-specific AI solutions include, but are not limited to:
 - Natural Language Processing (NLP)
 - Speech Recognition/Processing
 
-## Existing AI Measurement Metrics
+## 2. Existing AI Measurement Metrics
 
 An important early step in developing the SCI for AI involves analyzing the current landscape of AI measurement metrics. The list is not exhaustive, but the metrics reviewed here reflect the main frameworks and indicators discussed across industry, academia, and standards bodies.
 
@@ -102,7 +128,7 @@ This section summarizes selected existing metrics and evaluates them using the r
 
 The characteristics of each metric may vary regarding specific user needs. Because each metric serves different purposes and audiences, it’s important to clarify why a metric is useful and who benefits most from it. This helps users select the right tools to meet their specific sustainability goals.
 
-### [Green AI Index](https://www.uasdf.org/whitepaper-ai/blog-post-title-one-4g6n3?srsltid=AfmBOorSqyciv1U-ytB1sUfYR7aewFfduTI5-oQzApweeXyk35gbmnBq)
+### 2.1. [Green AI Index](https://www.uasdf.org/whitepaper-ai/blog-post-title-one-4g6n3?srsltid=AfmBOorSqyciv1U-ytB1sUfYR7aewFfduTI5-oQzApweeXyk35gbmnBq)
 
 #### Description
 
@@ -144,7 +170,7 @@ Requires highly detailed measurement data. Currently, it doesn’t provide an ac
 > [!WARNING]
 > Carbon offsets are mentioned as a valid inventory item for the Data Center index but not mentioned for the Green AI model index — the suggestion is to make decisions based on the jurisdiction you are operating in.
 
-### [EcoLogits](https://ecologits.ai/latest/methodology/llm_inference/)
+### 2.2. [EcoLogits](https://ecologits.ai/latest/methodology/llm_inference/)
 
 #### Description
 
@@ -176,7 +202,7 @@ However, this simplicity comes with limitations in scope and transparency, as th
 
 Energy consumption and environmental impacts are tracked using Gen AI models through APIs. It supports major LLM providers such as OpenAI, Anthropic, Mistral AI, and others.
 
-### [EnergyScore](https://huggingface.github.io/AIEnergyScore/)
+### 2.3. [EnergyScore](https://huggingface.github.io/AIEnergyScore/)
 
 #### Description
 
@@ -205,7 +231,7 @@ However, this comparability comes at the cost of a narrow application boundary�
 
 Direct measurements made for models run on HF instances using CodeCarbon.
 
-## Rubric
+## 3. Rubric
 
 An essential step in developing the SCI for AI involves establishing a common evaluation framework to guide both the assessment of external AI measurement metrics and the shaping of our own specifications. The goal is not to produce a specification that "ticks every box" but to clarify trade-offs, define priorities, and align incentives with what truly matters for sustainable AI.
 
@@ -213,7 +239,7 @@ This rubric is built to help navigate an evolving field while ensuring the stand
 
 Below are the key dimensions of the rubric, grouped by focus area:
 
-### Adoption
+### 3.1. Adoption
 
 - **Flexibility:** Can the metric adapt to emerging AI architectures, including agentic AI, multi-modal systems, or AI that interacts with third-party APIs during inference?
 - **Granularity:** Does the framework break down emissions by component, system stage, or time? Can it provide actionable insight on where emissions come from and where reductions can be made?
@@ -222,12 +248,12 @@ Below are the key dimensions of the rubric, grouped by focus area:
 - **Broad Scope:** Can the framework be applied to the full spectrum of AI paradigms and applications, including symbolic AI, generative AI, and predictive models, as defined in the scope?
 - **Open Source & Proprietary Applicability:** Is it usable for both open models (e.g., LLaMA running locally) and closed models (e.g., ChatGPT or Claude), either through direct measurement or disclosure-based methodologies?
 
-### Pathway to Policy & Certification
+### 3.2. Pathway to Policy & Certification
 
 - **Consensus-Based Development:** Was the framework developed through collaboration across sectors, including organizations with competing interests? Standards developed through consensus are far more likely to be eventually adopted as policy, as broad participation ensures trust and adoption.
 - **IPR Considerations:** Has the metric been developed and released with a Patent Policy, for example, W3C or RAND?
 
-### Existing Standards Alignment
+### 3.3. Existing Standards Alignment
 
 Is the methodology aligned with established practices such as Life Cycle Assessment (LCA) or the Greenhouse Gas Protocol (GHG)?
 
@@ -248,7 +274,7 @@ Does it aim to complement or extend these standards, or is it designed as a new 
 | • IPR | ❌ | ❌ | ❌ | ❌ |
 | • Alignment to Existing Measurement Standards (ISO, LCA, GHG) | ✅ | ✅ | ❌ | ✅ |
 
-## Measurement as a Tool for Incentivization
+## 4. Measurement as a Tool for Incentivisation
 
 A key distinction between the SCI philosophy and other metrics is that it is, first and foremost, designed to incentivize behaviors, and only the behaviors we want. We believe that if you focus on developing a metric without paying attention to what that metric incentivizes, you will end up promoting the wrong behaviors, or your incentivization of the right behaviors will be accidental rather than intentional.
 
@@ -289,9 +315,9 @@ Other Green AI patterns as detailed here: [https://patterns.greensoftware.founda
 
 *[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.](https://huggingface.github.io/AIEnergyScore/)
 
-## Green AI
+## 5. Green AI
 
-### Lifecycle stages
+### 5.1. Lifecycle Stages
 
 The Green AI Committee (GAIC) at the GSF [has defined Green AI](https://greensoftware.foundation/articles/green-ai-position-paper)as:
 
@@ -322,15 +348,15 @@ The SCI measurement framework shall be designed to incentivize optimizations acr
 
 ***[The score excludes CPU, RAM, networking, and storage energy, which can contribute to an additional consumption of 30% or more.](https://huggingface.github.io/AIEnergyScore/#methodology)
 
-## Clarity and Consistency
+## 6. Clarity and Consistency
 
 Clarity enables consistency. A standard grounded in a clearly defined boundary and methodology ensures that results are both reproducible and trustworthy. With clarity, when different teams interpret the specifications, the scores they produce are consistent, which builds confidence in the utility and fairness of the measurement. The benchmark for such a metric is simple: two independent teams should be able to apply the SCI for AI to the same system and arrive at comparable figures without coordination, relying solely on the published standard.
 
-### Boundary Definition
+### 6.1. Boundary Definition
 
 A well-defined boundary is necessary. The standard must clearly specify what is included in the scope of measurement and what is excluded. Ambiguity, such as whether software dependencies or shared services fall within the boundary, undermines comparability. The more precisely this is articulated, the less room is left for subjective interpretation.
 
-### Methodology
+### 6.2. Methodology
 
 Defining the boundary is not sufficient on its own. To achieve clarity and consistency, the standard must also provide a robust methodology for attributing emissions to the relevant functional unit. In the LCA world, this is described as the “allocation” methodology. This includes addressing common challenges (e.g., shared resources) and more complex issues (e.g., historical emissions):
 
@@ -361,7 +387,7 @@ This level of specificity ensures that even complex or shared components can be 
 | Boundary | ✅ | ✅ | ✅ | ✅ |
 | Methodology | ✅ | ✅ | ✅ | ✅ |
 
-## SCI for AI: Next Steps
+## 7. Next Steps
 
 We recognize that no single framework will excel in all categories. With that in mind, the SCI for AI was designed with a clear set of priorities:
 
@@ -380,7 +406,7 @@ For any queries, reach out to <sci-for-ai@greensoftware.foundation>.
 
 To help shape standards, tools, and best practices in green software, consider [becoming a member.](https://greensoftware.foundation/join-us)
 
-## Further reading
+## 8. Further Reading
 
 [https://arxiv.org/pdf/2407.10237](https://arxiv.org/pdf/2407.10237)
 
