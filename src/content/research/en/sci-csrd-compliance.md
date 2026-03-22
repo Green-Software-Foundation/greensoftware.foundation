@@ -20,6 +20,16 @@ tags:
   - policy
 ---
 
+## Table of Contents
+
+1. [Understanding CSRD and ESRS E1](#1-understanding-csrd-and-esrs-e1)
+2. [The Challenge of Software Emissions](#2-the-challenge-of-software-emissions)
+3. [Introducing the Software Carbon Intensity (SCI) Standard](#3-introducing-the-software-carbon-intensity-sci-standard)
+4. [Strategic Alignment: SCI and CSRD](#4-strategic-alignment-sci-and-csrd)
+5. [Practical Implementation Framework](#5-practical-implementation-framework)
+6. [Benefits and Business Case](#6-benefits-and-business-case)
+7. [Conclusion and Recommendations](#7-conclusion-and-recommendations)
+8. [Resources and References](#8-resources-and-references)
 
 ## Executive Summary
 
@@ -36,19 +46,6 @@ For organisations that develop, deploy, or procure software, a critical challeng
 **Key Recommendation**: Organizations subject to CSRD should consider adopting the SCI standard as a practical methodology for calculating, tracking, and reducing software carbon emissions within their broader GHG inventory and sustainability reporting framework.
 
 **Disclaimer**: The SCI standard is a *complementary tool* that can support CSRD compliance, not a requirement of ESRS E1. Organizations should consult with their auditors, legal advisors, and sustainability professionals to determine the most appropriate methodologies for their specific reporting context. While SCI provides valuable technical granularity, ESRS E1 does not explicitly mandate its use, and alternative approaches may also be valid.
-
----
-
-## Table of Contents
-
-1. [Understanding CSRD and ESRS E1](#1-understanding-csrd-and-esrs-e1)  
-2. [The Challenge of Software Emissions](#2-the-challenge-of-software-emissions)  
-3. [Introducing the Software Carbon Intensity (SCI) Standard](#3-introducing-the-software-carbon-intensity-sci-standard)  
-4. [Strategic Alignment: SCI and CSRD](#4-strategic-alignment-sci-and-csrd)  
-5. [Practical Implementation Framework](#5-practical-implementation-framework)  
-6. [Benefits and Business Case](#6-benefits-and-business-case)  
-7. [Conclusion and Recommendations](#7-conclusion-and-recommendations)  
-8. [Resources and References](#8-resources-and-references)
 
 ---
 

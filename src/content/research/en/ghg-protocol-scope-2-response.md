@@ -23,6 +23,12 @@ tags:
   - policy
 ---
 
+## Table of Contents
+
+- [Response Table](#response-table)
+
+## Response Table
+
 *This response to the GHG Protocol Scope 2 Proposed Revisions Public Consultation was drafted by the Policy Working Group, primarily led by Henry Richardson and Ryan Sholin. The full list of questions and the Policy WG's selections are detailed in [this sheet](https://docs.google.com/spreadsheets/d/1K_yrxivnQS5i4eWmKbyQL2ZYwi7dAdIMz8vDYckaE90/edit?usp=sharing).*
 
 The official GHG Protocol context document, which contains the questions, is available [here (PDF)](https://ghgprotocol.org/sites/default/files/2025-10/GHG-Protocol-Scope2-Public-Consultation.pdf).

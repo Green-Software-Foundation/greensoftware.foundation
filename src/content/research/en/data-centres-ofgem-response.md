@@ -19,20 +19,6 @@ tags:
   - policy
 ---
 
----
-
-## Abstract
-
-Data centers consumed approximately 415 TWh of electricity globally in 2024, around 1.5% of world electricity consumption, and the International Energy Agency projects this will more than double to 945 TWh by 2030, driven primarily by artificial intelligence workloads ([IEA, 2025](https://www.iea.org/reports/energy-and-ai/executive-summary)). In Great Britain, total contracted offers in the demand connections queue rose from **41 GW** in November 2024 to **125 GW** by June 2025 — nearly three times GB's peak electricity demand of 45 GW. NESO's Call for Information identified approximately **140 data centres (50 GW)** in the queue, making data centre demand the single largest driver of the connections crisis ([Ofgem, 2026, para 2.5–2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
-
-Data centers possess latent flexibility assets — software-controlled workloads, battery storage, thermal inertia, and hardware power management — that can transform them from passive consumers into active grid participants. Software is the key that unlocks these assets. The evidence base is promising: pilot programmes report 10–40% load modulation capability ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)), GPU-intensive AI facilities may offer twice the flexibility at half the cost ([Zhou et al., 2024](https://arxiv.org/abs/2410.17435)), and integrated optimisation models suggest 10% operational cost reductions ([Takci, Day & Qadrdan, 2025](https://arxiv.org/abs/2511.07159)). A UK-first demonstration at Nebius's London AI Factory in March 2026, conducted by Emerald AI with National Grid, EPRI, and NVIDIA, showed that high-performance AI infrastructure can operate as a grid-responsive asset without disrupting mission-critical workloads ([NGP/Emerald AI, 2026](https://www.ngpartners.com/stories/emerald-ai-whitepaper)).
-
-However, flexibility is not a silver bullet. Knittel, Senga, and Wang ([2025](https://www.nber.org/papers/w34065)) demonstrate that in regions with carbon-intensive baseload generation, shifting loads to off-peak hours can *increase* emissions even as it reduces costs. Operator willingness remains the fundamental barrier: flexibility revenue is trivial compared to compute revenue, and any service disruption threatens customer relationships worth orders of magnitude more.
-
-We frame our analysis around the sources of flexibility available from the grid's perspective and examine how software systems (workload orchestrators, carbon-aware schedulers, optimisation engines, and grid-signal integrators) enable data centers to deliver these services. We argue that Ofgem's February 2026 **Demand Connections Reform** programme, with its **Curate, Plan, Connect** framework, represents a significant opportunity to move data center flexibility from pilot to practice — but only if the incentive framework is carefully designed.
-
----
-
 ## Table of Contents
 
 1. [Introduction: The Electrification Context](#1-introduction-the-electrification-context)
@@ -47,6 +33,16 @@ We frame our analysis around the sources of flexibility available from the grid'
 10. [Implications for GB Demand Connections Reform](#10-implications-for-gb-demand-connections-reform)
 11. [Conclusions](#11-conclusions)
 12. [Sources](#12-sources)
+
+## Abstract
+
+Data centers consumed approximately 415 TWh of electricity globally in 2024, around 1.5% of world electricity consumption, and the International Energy Agency projects this will more than double to 945 TWh by 2030, driven primarily by artificial intelligence workloads ([IEA, 2025](https://www.iea.org/reports/energy-and-ai/executive-summary)). In Great Britain, total contracted offers in the demand connections queue rose from **41 GW** in November 2024 to **125 GW** by June 2025 — nearly three times GB's peak electricity demand of 45 GW. NESO's Call for Information identified approximately **140 data centres (50 GW)** in the queue, making data centre demand the single largest driver of the connections crisis ([Ofgem, 2026, para 2.5–2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
+
+Data centers possess latent flexibility assets — software-controlled workloads, battery storage, thermal inertia, and hardware power management — that can transform them from passive consumers into active grid participants. Software is the key that unlocks these assets. The evidence base is promising: pilot programmes report 10–40% load modulation capability ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)), GPU-intensive AI facilities may offer twice the flexibility at half the cost ([Zhou et al., 2024](https://arxiv.org/abs/2410.17435)), and integrated optimisation models suggest 10% operational cost reductions ([Takci, Day & Qadrdan, 2025](https://arxiv.org/abs/2511.07159)). A UK-first demonstration at Nebius's London AI Factory in March 2026, conducted by Emerald AI with National Grid, EPRI, and NVIDIA, showed that high-performance AI infrastructure can operate as a grid-responsive asset without disrupting mission-critical workloads ([NGP/Emerald AI, 2026](https://www.ngpartners.com/stories/emerald-ai-whitepaper)).
+
+However, flexibility is not a silver bullet. Knittel, Senga, and Wang ([2025](https://www.nber.org/papers/w34065)) demonstrate that in regions with carbon-intensive baseload generation, shifting loads to off-peak hours can *increase* emissions even as it reduces costs. Operator willingness remains the fundamental barrier: flexibility revenue is trivial compared to compute revenue, and any service disruption threatens customer relationships worth orders of magnitude more.
+
+We frame our analysis around the sources of flexibility available from the grid's perspective and examine how software systems (workload orchestrators, carbon-aware schedulers, optimisation engines, and grid-signal integrators) enable data centers to deliver these services. We argue that Ofgem's February 2026 **Demand Connections Reform** programme, with its **Curate, Plan, Connect** framework, represents a significant opportunity to move data center flexibility from pilot to practice — but only if the incentive framework is carefully designed.
 
 ---
 
