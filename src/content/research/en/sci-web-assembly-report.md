@@ -16,8 +16,14 @@ authors:
     org: Green Software Foundation
 ---
 
-| | |
-| ----------- | ----------- |
+## Executive Summary
+
+This document was created in Autumn 2025 using and AI orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesised and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair. There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actuial specification will be created in Q1 2026 according to this design document.
+
+The following 14 GSF members participated in the assembly:
+
+| Name | Affiliation |
+| --- | --- |
 | Chris Adams (Chair) | Green Web Foundation |
 | Alekh Gupta | Google |
 | Alexander Dawson | ClimateAction.tech |
@@ -33,13 +39,6 @@ authors:
 | Ryan Sholin | Electricity Maps |
 | Thiago Falcao Silva | NTT DATA |
 
-
-## Executive Summary
-
-This document was created in Autumn 2025 using and AI orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesised and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair. There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actuial specification will be created in Q1 2026 according to this design document.
-
----
-
 ## 1. Scope Definition
 
 The SCI for Web specification applies to software applications that deliver functional value to human users primarily through browser-based interfaces accessed via HTTP/HTTPS protocols. A web application is characterized by three essential criteria: (1) content and functionality delivered over HTTP/HTTPS protocols, (2) rendering and execution occurring primarily within web browser environments or equivalent web rendering engines, and (3) interfaces designed for direct human interaction and consumption rather than exclusively machine-to-machine communication.
@@ -48,10 +47,7 @@ The scope encompasses the full spectrum of browser-based applications regardless
 
 API-driven services require additional classification based on their primary access pattern. Pure machine-to-machine APIs serving only programmatic clients are out of scope and should use the base SCI methodology. However, APIs accessed primarily through browser-based interfaces—such as those with interactive documentation as the primary usage method or those coupled with browser-based management dashboards—fall within scope when the browser interface represents the primary human interaction mode. The determining factor is whether human users consume the service's value through browser rendering, not whether HTTP protocols are involved.
 
----
-
 ## 2. Target Personas
-
 
 The SCI for Web specification is designed for **technical practitioners who create and optimize browser-mediated web applications**, spanning both server-side infrastructure and client-side implementation. Because the agreed scope defines web applications through "browser-mediated human interaction via HTTP/HTTPS," the specification must serve personas who control energy consumption across the entire delivery chain—from servers generating responses to browsers rendering content for human users.
 
@@ -110,20 +106,19 @@ When precise energy data from third-party suppliers is unavailable, practitioner
 
 **End users and consumers**: These individuals have limited agency based on choices made by practitioners. User-facing interventions (sustainable mode toggles, carbon-aware delivery options) depend on practitioner implementation and are better addressed through choice architecture design than direct user targeting.
 
----
-
 ## 3. Implementation Practices and Incentives
-
 
 This section defines the specific practices that SCI for Web should encourage or discourage in teams who measure and optimize web applications. These implementation practices guide design decisions throughout the specification, ensuring that measurement drives genuine carbon reduction rather than metric optimization.
 
-**Implementation Note**: While this section describes comprehensive practices across all system components, teams may adopt SCI for Web incrementally. Starting with measurable components (client-side and server-side infrastructure under direct control) and progressively expanding scope to include network transfer and third-party services is an acceptable path to comprehensive measurement. However, disclosed methodology must clearly identify which components are measured versus estimated versus excluded to maintain transparency and prevent gaming.
+> [!NOTE]
+> **Implementation Note**: While this section describes comprehensive practices across all system components, teams may adopt SCI for Web incrementally. Starting with measurable components (client-side and server-side infrastructure under direct control) and progressively expanding scope to include network transfer and third-party services is an acceptable path to comprehensive measurement. However, disclosed methodology must clearly identify which components are measured versus estimated versus excluded to maintain transparency and prevent gaming.
 
-**Note on Principles vs. Prescription**: The practices described below represent principles and patterns that reduce energy consumption. They are not prescriptive engineering requirements. Teams should evaluate these principles within their specific context and implement them using approaches appropriate to their architecture, constraints, and objectives.
+> [!NOTE]
+> **Principles vs. Prescription**: The practices described below represent principles and patterns that reduce energy consumption. They are not prescriptive engineering requirements. Teams should evaluate these principles within their specific context and implement them using approaches appropriate to their architecture, constraints, and objectives.
 
-## Encouraged Practices
+### Encouraged Practices
 
-### For Frontend Developers and Design Practitioners
+#### For Frontend Developers and Design Practitioners
 
 **Energy reduction outcomes targeted**: Reduce data transfer, reduce page weight, reduce client-side energy consumption, extend end-user device lifespan, reduce CPU/GPU utilization during rendering.
 
@@ -138,7 +133,7 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **How these practices reduce energy:** Client-side optimizations directly reduce energy consumed on end-user devices (operational) and can extend device lifespan (embodied). Smaller data transfers reduce network energy. Efficient rendering reduces CPU/GPU utilization and battery drain. User transparency enables informed decision-making about feature usage.
 
-### For Backend and Infrastructure Engineers
+#### For Backend and Infrastructure Engineers
 
 **Energy reduction outcomes targeted**: Minimize server-side resource usage, reduce datacenter electricity consumption, reduce CPU/memory/storage utilization, reduce network transmission distance and carbon intensity exposure.
 
@@ -152,7 +147,7 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **How these practices reduce energy:** Server optimizations directly reduce datacenter electricity consumption. Right-sizing reduces both operational energy and embodied emissions from idle hardware. Geographic hosting choices reduce both transmission distance and exposure to carbon-intensive grids. Benchmarking during development catches inefficiencies before production deployment.
 
-### For Product Owners and Technical Managers
+#### For Product Owners and Technical Managers
 
 **Energy reduction outcomes targeted**: Prevent feature bloat that increases page weight and server load, establish performance constraints that limit energy consumption, incentivize vendor efficiency improvements through market pressure.
 
@@ -168,7 +163,7 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **How these practices reduce energy:** Product and management decisions determine what gets built and maintained. Removing unused features eliminates ongoing server costs and client-side execution. Performance and environmental budgets prevent gradual efficiency degradation. Vendor transparency requirements create market incentives for supplier optimization. Carbon-aware scheduling reduces emissions by timing computation to periods of lower grid carbon intensity.
 
-### For Third-Party Service Providers and Hosting Suppliers
+#### For Third-Party Service Providers and Hosting Suppliers
 
 **Energy reduction outcomes targeted**: Reduce energy consumption per operation across all customer implementations, enable informed vendor selection through transparency, reduce grid carbon intensity through renewable energy procurement.
 
@@ -181,13 +176,14 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **How these practices reduce energy:** Supplier optimizations cascade across all customers. Transparency enables informed vendor selection. Renewable energy procurement reduces carbon intensity exposure for all customer workloads.
 
-## Discouraged Practices
+### Discouraged Practices
 
-### Energy Displacement Rather Than Reduction
+#### Energy Displacement Rather Than Reduction
 
 **Practice to discourage:** Shifting computation from measured locations to unmeasured locations to improve metrics without reducing total system energy.
 
 **Examples:**
+
 - Moving computation from servers to client devices through heavy JavaScript to reduce measured server energy while increasing unmeasured client energy
 - Outsourcing computation to third-party services to externalize emissions from first-party measurements
 - Increasing build-time computation to reduce runtime computation (if development lifecycle is unmeasured)
@@ -196,11 +192,12 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **Design implication:** SCI for Web must measure comprehensively across servers, networks, third-party services, and end-user devices to close displacement pathways.
 
-### Quality Degradation as "Optimization"
+#### Quality Degradation as "Optimization"
 
 **Practice to discourage:** Reducing functionality, accessibility, security, privacy, or user experience to improve energy metrics.
 
 **Examples:**
+
 - Reducing image quality below acceptable thresholds to decrease data transfer
 - Removing accessibility, security, or privacy features to reduce the website payload
 - Limiting essential functionality to reduce computation
@@ -210,11 +207,12 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **Design implication:** Functional units should measure energy per delivered functionality, not energy per technical operation. Multidimensional metrics capture quality-efficiency trade-offs.
 
-### Market-Based Measures Instead of Elimination
+#### Market-Based Measures Instead of Elimination
 
 **Practice to discourage:** Using carbon offsets, renewable energy certificates (RECs), or other market-based instruments to improve scores without reducing actual energy consumption.
 
 **Examples:**
+
 - Purchasing carbon offsets to neutralize emissions while maintaining inefficient operations
 - Buying RECs to claim "green" energy without reducing actual electricity use
 - Geographic arbitrage where applications claim low emissions by measuring only low-carbon regions while serving global users
@@ -223,11 +221,12 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **Design implication:** SCI for Web measures energy consumption and carbon intensity based on actual infrastructure location and operation, without adjustments for offsets or certificates. Carbon intensity calculations use location-based grid intensity, excluding market-based measures as defined in the parent specification.
 
-### Measurement Gaming and Boundary Manipulation
+#### Measurement Gaming and Boundary Manipulation
 
 **Practice to discourage:** Optimizing measurement boundaries and methodologies to improve scores without reducing actual emissions.
 
 **Examples:**
+
 - Selectively excluding high-emission components from measurement scope
 - Choosing functional units that make inefficient operations appear efficient
 - Reducing essential activities (testing, security updates) to improve operational metrics
@@ -237,11 +236,12 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **Design implication:** Mandatory comprehensive boundaries, disclosed methodologies, and consistent functional units prevent gaming while allowing legitimate architectural diversity.
 
-### Vanity Metrics and Proxy Optimization
+#### Vanity Metrics and Proxy Optimization
 
 **Practice to discourage:** Optimizing proxy metrics that correlate weakly with actual energy consumption.
 
 **Examples:**
+
 - Optimizing page weight without considering how assets are used (e.g., reducing rarely-loaded resources while ignoring frequently-loaded ones)
 - Focusing on first contentful paint while ignoring total page energy consumption
 - Reducing server response time by pushing computation to client without measuring total system impact
@@ -251,7 +251,7 @@ This section defines the specific practices that SCI for Web should encourage or
 
 **Design implication:** Where possible, measure actual energy consumption rather than proxies. When proxies are necessary, validate correlation with real energy impact and use multiple dimensions.
 
-## Design Implications for SCI for Web
+### Design Implications for SCI for Web
 
 These implementation goals inform specific design decisions:
 
@@ -273,33 +273,28 @@ These implementation goals inform specific design decisions:
 
 The overarching principle: SCI for Web design decisions should make practices that genuinely reduce total system energy the same practices that improve measured scores. When measurement and reality align, teams optimize actual efficiency rather than metrics.
 
-
----
-
 ## 4. Evaluation Criteria
-
-# Section 4: Evaluation Criteria - Merged Consensus Proposal
-
-## Overview
 
 This section establishes evaluation criteria for SCI for Web that balance scientific rigor with practical adoptability. The criteria recognize that unused specifications serve no one, while measurements lacking credibility undermine sustainability efforts. Our evaluation framework prioritizes defensible accuracy where teams have direct control, workflow integration over exceptional effort, and transparent limitations over false precision.
 
 The fundamental tension: scientifically rigorous specifications that nobody implements versus imperfect but widely adopted measurements that actually reduce carbon. SCI for Web must navigate this trade-off by being accurate enough to drive meaningful behavior change while simple enough for widespread adoption.
 
-## 1. The Accuracy-Adoption Trade-off
+### 1. The Accuracy-Adoption Trade-off
 
-### Sufficient Accuracy for Behavior Change
+#### Sufficient Accuracy for Behavior Change
 
 SCI for Web does not require laboratory-grade precision to drive meaningful behavior change, but accuracy must be real, not merely perceived. Measurements inform decisions with carbon and ethical implications, making actual accuracy critical even as we acknowledge that perfect precision is unattainable.
 
 **Accurate enough to be defensible**: Measurements should enable teams to make informed decisions about which approaches genuinely reduce carbon emissions. When comparing options or tracking changes over time (comparing version A to version B, or approach X to approach Y), teams need confidence that observed differences reflect reality. A measurement framework showing that one implementation approach has 20% higher energy consumption than another warrants investigation and drives optimization; a framework showing 50% variance for equivalent implementations creates confusion and mistrust.
 
 The acceptable variance range depends on what teams have direct control over:
+
 - **Directly measured components** (browser execution, server operations teams manage): measurements within 10-15% of actual consumption enable confident decision-making
 - **Well-modeled components** with substantial real-world data backing (network transfer, user device diversity): measurements within 15-20% are acceptable as a starting point, with expectation of improvement as datasets grow
 - **Components with limited data availability**: clearly labeled placeholders and estimates are acceptable when they are explicitly marked as such, based on best available data and reasonable assumptions, documented with clear methodology, and accompanied by a path to improvement
 
 **Proportional to control and influence**: Accuracy requirements should scale with the degree of direct control teams have:
+
 - High accuracy for directly controlled elements (browser rendering from code teams write, server operations they manage)
 - Moderate accuracy for indirectly influenced elements (user behavior patterns, caching effectiveness, third-party services where vendor selection is controlled)
 - Explicit acknowledgment of uncertainty for uncontrolled elements (network infrastructure beyond origin servers, diverse user device characteristics)
@@ -308,7 +303,7 @@ This proportionality principle aligns with the parent SCI specification's emphas
 
 **Grounded in measurable reality**: Where direct measurement is feasible, it should be the foundation. Where modeling is necessary, it should be backed by substantial datasets from real-world observations, not theoretical assumptions. This follows the parent SCI specification's guidance: "The SCI encourages calculation using granular real-world data" while allowing "data generated through modeling, using best estimates" when real-world data is unavailable.
 
-### Implementation Simplicity for Widespread Adoption
+#### Implementation Simplicity for Widespread Adoption
 
 The parent SCI specification establishes as a core characteristic that "The SCI is easy to implement" and that "anyone without much experience or training shall be able to follow the SCI specification instructions." SCI for Web must honor this principle while addressing web-specific complexity.
 
@@ -320,9 +315,9 @@ The parent SCI specification establishes as a core characteristic that "The SCI 
 
 **Progressive sophistication**: Teams at different capability levels and organizational contexts should be able to adopt SCI for Web appropriately. Entry-level adoption with simpler methodologies should be legitimate and valuable, with clear pathways to more comprehensive measurement as capabilities mature. (Note: specific maturity tier definitions belong in the formal specification, not this evaluation criteria section.)
 
-## 2. Trust and Transparency Requirements
+### 2. Trust and Transparency Requirements
 
-### Mandatory Disclosure
+#### Mandatory Disclosure
 
 Credibility requires transparency about methodology, data sources, and limitations. The parent SCI specification requires that teams "Disclose the SCI score, software boundary, and the calculation methodology." SCI for Web extends this principle to web-specific contexts.
 
@@ -336,17 +331,18 @@ Credibility requires transparency about methodology, data sources, and limitatio
 
 **Quantification method disclosure**: Following the parent SCI specification's procedure, teams must disclose whether they used measurement (real-world data) or calculation (models) for each component, and with what level of sophistication. This transparency enables comparability and prevents gaming through selective methodology choices.
 
-### Optional but Valuable Disclosure
+#### Optional but Valuable Disclosure
 
 Beyond minimum requirements, teams should be encouraged to share:
+
 - Comparative analyses showing changes over time (aligning with parent specification's baseline comparison guidance)
 - Context about organizational constraints that affected measurement choices
 - Lessons learned about what drove adoption or created barriers
 - Improvement plans for advancing measurement sophistication
 
-## 3. Threshold Criteria for Usefulness
+### 3. Threshold Criteria for Usefulness
 
-### Minimum Accuracy Thresholds
+#### Minimum Accuracy Thresholds
 
 For SCI for Web to be useful for driving the behavioral incentives identified in Section 3, it must meet minimum accuracy standards:
 
@@ -358,7 +354,7 @@ For SCI for Web to be useful for driving the behavioral incentives identified in
 
 The key principle: measurements must be accurate enough that optimizing the measured score reliably leads to actual carbon reduction, not merely metric improvement. This prevents the "vanity metrics and proxy optimization" practice discouraged in Section 3.
 
-### Maximum Complexity Boundaries
+#### Maximum Complexity Boundaries
 
 Complexity kills adoption. The parent SCI specification emphasizes that calculation "shall be possible without incurring any cost, for instance, for data, services, or tooling." SCI for Web should respect these boundaries:
 
@@ -370,11 +366,11 @@ Complexity kills adoption. The parent SCI specification emphasizes that calculat
 
 **Progressive entry barriers**: Teams new to sustainability measurement should be able to start with automated tooling and industry defaults. As they mature, they can invest in more sophisticated measurement. But the entry barrier must be low enough that starting is feasible for the frontend developers, backend engineers, and product managers identified in Section 2.
 
-## 4. Gaming Prevention Principles
+### 4. Gaming Prevention Principles
 
 Section 3 identified several discouraged practices: energy displacement, quality degradation, boundary manipulation, and vanity metrics. SCI for Web must be designed to prevent these forms of gaming while avoiding paralysis through over-complexity.
 
-### Design Against Gaming
+#### Design Against Gaming
 
 **Measure outcomes, not proxies**: Where possible, measure actual energy consumption rather than proxy metrics that can be optimized without real impact. This aligns with the parent SCI specification's focus on quantifying actual carbon emissions (operational plus embodied) rather than indirect proxies.
 
@@ -384,17 +380,18 @@ Section 3 identified several discouraged practices: energy displacement, quality
 
 **Avoid perverse incentives**: Ensure that optimizing for the SCI score aligns with genuine sustainability improvements. If the specification can be gamed by degrading user experience, shifting emissions elsewhere, or reducing essential quality attributes (accessibility, security, privacy), it will be gamed. Section 3 explicitly identifies these as discouraged practices.
 
-### Balanced Perspective on Gaming Risk
+#### Balanced Perspective on Gaming Risk
 
 Gaming is a real concern but should not cause design paralysis. Gaming requires effort, and for most teams, actually improving efficiency is easier than developing sophisticated gaming strategies. However, organizations facing performance pressure without strong sustainability culture may seek ways to show progress without actual improvement.
 
 The solution is not paralysis through over-complexity, but transparency and clear guardrails:
+
 - **Low-friction entry**: Make it easy to start measuring (reduces incentive to game by making genuine measurement easier than gaming)
 - **Mandatory disclosure**: Make methodology, boundaries, and quantification methods visible (makes gaming detectable)
 - **Clear improvement pathways**: Provide structured advancement to higher sophistication (channels competitive energy toward better measurement rather than gaming)
 - **Reputational accountability**: Market scrutiny and stakeholder pressure create natural disincentives for visible gaming
 
-### Design for Adversarial Defense
+#### Design for Adversarial Defense
 
 The specification must withstand scrutiny from people motivated to reject it—technical skeptics, budget guardians, and organizational resistance to sustainability investment.
 
@@ -404,11 +401,11 @@ The specification must withstand scrutiny from people motivated to reject it—t
 
 **Proportionate response to uncertainty**: Where uncertainty exists, acknowledge it rather than presenting false precision. As the parent specification acknowledges, access to data "might not always be available" and "modeling, using best estimates" is acceptable. Honest acknowledgment of uncertainty builds more trust than false precision.
 
-## 5. Success Indicators
+### 5. Success Indicators
 
 We will know SCI for Web succeeds when it drives the behavioral incentives identified in Section 3 and serves the target personas identified in Section 2.
 
-### Adoption Signals
+#### Adoption Signals
 
 **Cross-organizational adoption**: Implementation occurs across different organizational contexts (SaaS providers, e-commerce platforms, media companies, small startups, large enterprises) without requiring extensive customization. This demonstrates that the specification serves diverse environments while maintaining consistency.
 
@@ -426,7 +423,7 @@ We will know SCI for Web succeeds when it drives the behavioral incentives ident
 
 **Regulatory incorporation**: Government sustainability requirements and industry standards reference SCI for Web as an acceptable methodology, validating the specification's credibility.
 
-### Impact Signals
+#### Impact Signals
 
 **Behavioral change evidence**: Observable changes in development practices—optimization decisions, architectural choices, vendor selection, infrastructure planning—driven by SCI for Web insights. This is the ultimate success metric: does measurement actually change what teams build and how they build it?
 
@@ -442,19 +439,21 @@ We will know SCI for Web succeeds when it drives the behavioral incentives ident
 
 **Ecosystem emergence**: Tools, services, training, and consultancies built around SCI for Web create self-sustaining momentum and reduce implementation barriers over time. This ecosystem development indicates that the specification hit the right balance between rigor and adoptability.
 
-## 6. Implementation Feasibility Boundaries
+### 6. Implementation Feasibility Boundaries
 
-### What We Can Reasonably Expect
+#### What We Can Reasonably Expect
 
 The parent SCI specification acknowledges varying capabilities: "While teams should consider investing more time or money in calculating their SCI number to increase its accuracy," basic calculation "shall be possible without incurring any cost."
 
 **Universal expectations** (feasible for all organizations):
+
 - Automated measurement using open source tooling and reference devices for components under direct control
 - Integration into CI/CD pipelines for tracking changes over time
 - Documentation of methodology, boundaries, and limitations
 - Measurement of directly controlled components (browser environments they test, servers they operate)
 
 **Context-dependent expectations** (varies by organizational capability):
+
 - Mix of direct measurement and validated modeling for broader scope
 - Investment in measurement infrastructure proportional to organizational size and sustainability commitment
 - Expanded scope including network transfer and third-party estimation
@@ -462,7 +461,7 @@ The parent SCI specification acknowledges varying capabilities: "While teams sho
 
 This recognizes that the frontend developers at small startups and the sustainability engineers at large enterprises (both identified in Section 2) have vastly different resources while both needing to adopt SCI for Web.
 
-### What Is Too Complex to Expect Broadly
+#### What Is Too Complex to Expect Broadly
 
 **Universal real-time monitoring**: Continuous measurement of every component creates infrastructure and complexity burdens that most teams cannot sustain. This exceeds the parent specification's "easy to implement" principle.
 
@@ -472,7 +471,7 @@ This recognizes that the frontend developers at small startups and the sustainab
 
 **One-size-fits-all requirements**: Different organizational contexts face different constraints. A measurement methodology rigid enough to force uniformity will fail to achieve adoption across the diverse personas and contexts identified in Section 2.
 
-### Third-Party Service Disclosure
+#### Third-Party Service Disclosure
 
 Section 3 identifies third-party transparency as an encouraged practice for suppliers. Major third-party services (CDNs, analytics platforms, advertising networks, API services) should disclose carbon impact of their services. While full third-party measurement may not be feasible for most organizations, SCI for Web should create market pressure for this disclosure:
 
@@ -482,7 +481,7 @@ Section 3 identifies third-party transparency as an encouraged practice for supp
 
 This approach balances comprehensiveness with implementation feasibility while creating market pressure for suppliers to provide transparency.
 
-### Embodied Emissions Considerations
+#### Embodied Emissions Considerations
 
 The parent SCI specification requires including embodied emissions: "An estimate of all the embodied emissions for the hardware used within the software boundary shall be included." For web applications, this is particularly challenging where user devices are entirely outside the application provider's control.
 
@@ -490,7 +489,7 @@ The parent SCI specification requires including embodied emissions: "An estimate
 
 This balances the parent specification's requirement with practical limitations while maintaining transparency.
 
-## 7. Connection to Behavioral Incentives
+### 7. Connection to Behavioral Incentives
 
 The evaluation criteria directly enable the behavioral incentives identified in Section 3:
 
@@ -506,7 +505,7 @@ The evaluation criteria directly enable the behavioral incentives identified in 
 
 **Gaming prevented or exposed**: Through comprehensive boundaries and mandatory disclosure, the discouraged practices identified in Section 3 (energy displacement, boundary manipulation, vanity metrics) are either prevented by design or made visible through disclosure requirements.
 
-## 8. Key Principles Summary
+### 8. Key Principles Summary
 
 **Defensibility over comprehensiveness**: Better to measure a narrow scope accurately than claim broad coverage without credible data. Entry-level adoption measuring only directly controlled components is legitimately useful even with limited scope.
 
@@ -532,9 +531,7 @@ The evaluation criteria directly enable the behavioral incentives identified in 
 
 **Alignment with parent SCI specification**: All evaluation criteria honor the parent specification's core characteristics (sensitivity to sustainability actions, systems-impact view, ease of implementation, encouragement of granular data) and requirements (comprehensive boundaries, disclosure, exclusion of market-based measures).
 
----
-
-## Conformance to Parent SCI Specification
+### 9. Conformance to Parent SCI Specification
 
 This evaluation criteria section aligns with the parent SCI specification's core characteristics and requirements:
 
@@ -552,11 +549,7 @@ This evaluation criteria section aligns with the parent SCI specification's core
 
 The evaluation criteria ensure that SCI for Web extends the parent specification to web-specific contexts while honoring all core principles and requirements.
 
-
----
-
-## 9. Comparative Analysis
-
+### 10. Comparative Analysis
 
 This section evaluates existing frameworks and tools against the evaluation criteria established in Section 4. The assessment aims to understand current capabilities, identify gaps, and inform the development of SCI for Web specifications.
 
@@ -574,11 +567,13 @@ Before presenting comparative scores, it's essential to understand what is being
 | **Green Metrics Tool** | Testing/CI platform (SCI implementation) | Mature, growing | SCI score calculation for web apps using observed hardware data | 2024 | [Green Metrics Tool](https://docs.green-coding.io), [SCI Docs](https://docs.green-coding.io/docs/measuring/carbon/sci/) |
 | **Greenspector** | Testing platform | Established (France) | Carbon intensity measurement linked to functional units, CI/CD integration | 2024 | [Greenspector](https://greenspector.com/en/publicationss/) |
 
-**IMPORTANT**: Not all frameworks listed above are independent. Several tools use the same underlying model, which is essential context for interpreting comparative scores.
+> [!IMPORTANT]
+> Not all frameworks listed above are independent. Several tools use the same underlying model, which is essential context for interpreting comparative scores.
 
 The following matrices evaluate each approach against evaluation criteria from Section 4, with additional practical adoption criteria identified through community feedback.
 
 **Scoring Scale:**
+
 - 5: Excellent - Fully meets criteria with strong evidence
 - 4: Good - Substantially meets criteria with minor gaps
 - 3: Adequate - Partially meets criteria with notable limitations
@@ -586,7 +581,7 @@ The following matrices evaluate each approach against evaluation criteria from S
 - 1: Insufficient - Does not adequately address criteria
 - ~: Preliminary - Insufficient information for confident scoring
 
-### Core Evaluation Criteria (from Section 4)
+#### Core Evaluation Criteria (from Section 4)
 
 | Framework | Accuracy | Simplicity | Trust | Boundaries | Functional Units | Gaming Prevention | Personas | Incentives | **Core Avg** |
 |-----------|----------|-----------|-------|------------|------------------|-------------------|----------|------------|--------------|
@@ -600,14 +595,14 @@ The following matrices evaluate each approach against evaluation criteria from S
 | **Greenspector** | ~4 | ~3 | ~4 | ~3 | ~4 | ~3 | ~3 | ~3 | **~3.4** |
 
 **Annotations:**
+
 - *W3C WSG Accuracy: Acknowledged to be improving with forthcoming measurement enhancements (no release date specified). Score may increase in future assessments.
 - *Ecograder Trust: Beta version now includes W3C WSG integration for improved guidance on specific improvements. Score reflects current production version capabilities.
 - ‡W3C WSG Personas: Filter system exists in full document mode to sort by category/role/discipline, reducing cognitive load. Upgraded filter system planned for main documentation.
 - †Gaming Prevention: Scores reduced by 1 point for SWDM-based frameworks (CO2.js, Website Carbon Calculator, Ecograder) that rely on automatic "green hosting" detection via IP/hosting provider lookup. This approach is deeply flawed for enterprise environments with CDNs and complex hosting architectures, enabling potential gaming through hosting provider selection signals rather than genuine carbon reductions.
 - ~Greenspector scores are preliminary assessments based on limited publicly available documentation. Full methodology review would enable confident scoring.
 
-**Note on SWDM-based tool scoring**: CO2.js, Website Carbon Calculator, and Ecograder share underlying SWDM methodology and therefore have similar accuracy, functional unit, and gaming prevention characteristics. Differences in other criteria reflect application-level distinctions (UI, additional features, documentation).
+> [!NOTE]
+> **SWDM-based tool scoring**: CO2.js, Website Carbon Calculator, and Ecograder share underlying SWDM methodology and therefore have similar accuracy, functional unit, and gaming prevention characteristics. Differences in other criteria reflect application-level distinctions (UI, additional features, documentation).
 
 SCI for Web should aim to maximise its average score on the above matrix, and ensure the average score exceeds any existing entry.
-
----
