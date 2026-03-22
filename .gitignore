@@ -7,6 +7,7 @@ dist/
 .env.production
 .mcp.json
 .playwright-mcp/
+.claude/worktrees/
 # Local Netlify folder
 .netlify
 # Logs
