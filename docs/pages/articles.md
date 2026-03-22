@@ -71,6 +71,51 @@ Setting `published: false` in frontmatter:
 - Adds `noindex` to prevent search engine indexing
 - Excludes from PageFind site search
 
+## Rich content directives
+
+Articles support custom Markdown directives for embedding rich content — videos, documents, buttons, and more. These work in plain `.md` files with no special setup.
+
+**See the live showcase:** The unpublished article at [`/articles/rich-content-showcase/`](http://localhost:4322/articles/rich-content-showcase/) demonstrates every directive with real GSF examples and syntax references. Source: `src/content/articles/en/rich-content-showcase/index.md`.
+
+### Quick reference
+
+| Directive | What it does |
+|-----------|-------------|
+| `::youtube{id="VIDEO_ID"}` | Responsive YouTube embed (privacy-enhanced) |
+| `::vimeo{id="VIDEO_ID"}` | Responsive Vimeo embed |
+| `::google-slides{id="ID"}` | Embedded Google Slides presentation |
+| `::google-docs{id="ID"}` | Embedded Google Docs document |
+| `::google-sheets{id="ID"}` | Embedded Google Sheets spreadsheet |
+| `::google-drive{id="ID"}` | Google Drive file preview (PDFs, reports) |
+| `::pdf{src="URL" title="..."}` | External PDF with download fallback |
+| `::button{href="URL" label="..."}` | Centred CTA button (`variant="outline"` for outline style) |
+| `::link-card{href="URL" title="..." description="..."}` | Rich link preview card |
+| `::article{slug="article-slug"}` | Auto-reads title & summary from the linked article's frontmatter |
+| `:::card` ... `:::` | Bordered content card wrapper (can contain any Markdown) |
+
+All embeds accept an optional `caption="..."` attribute.
+
+### Cross-linking articles
+
+Use `::article{slug="..."}` to link to another GSF article. The slug is the folder name in `src/content/articles/en/`. Title and summary are pulled from the target article's frontmatter automatically — no need to type them.
+
+```markdown
+::article{slug="gsf-announces-executive-director-transition"}
+```
+
+### Existing Markdown features
+
+These were already supported before the directives and still work:
+
+- **GitHub-style alerts** — `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`, `> [!IMPORTANT]`, `> [!CAUTION]`
+- **GFM tables, task lists, strikethrough**
+- **KaTeX maths** — `$inline$` and `$$block$$`
+- **Auto heading anchors** — hover to see the `#` link
+
+### Technical details
+
+Directives are powered by `remark-directive` + a custom handler plugin at `src/plugins/remark-directives-handler.mjs`. Styles are in `src/styles/global.css` under the "Embed directives" section. Unrecognised text directives (e.g. `:2024` in `ISO/IEC 21031:2024`) are automatically preserved as plain text.
+
 ## How to update
 
 - **Add/edit articles** — use [Sveltia CMS](../cms.md) or edit Markdown files in `src/content/articles/en/`
