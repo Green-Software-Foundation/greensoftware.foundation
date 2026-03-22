@@ -103,7 +103,7 @@ We will know SCI for Web is working when: 
 
 We’re excited for SCI for Web to become a credible and usable standard across the industry, supported by active community participation. We’re inviting web specialists from across the membership to help develop the specification in Q1 of 2026: 
 
-**If you’re a GSF member:  **
+**If you’re a GSF member:  **
 
 - **Become a project co-chair** to support Chris Adams (Green Web Foundation) in leading the SCI for Web project. Co-chairs help facilitate working sessions and review draft content. **Get in touch with the project team: sci-for-web@greensoftware.foundation** 
 - **Join** [**the Software Standards Working Group**](https://directory.greensoftware.foundation/working-groups/software-standards-working-group/) and help shape the specification through draft review, implementation testing, and technical feedback.

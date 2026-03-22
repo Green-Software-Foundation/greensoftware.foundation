@@ -43,7 +43,7 @@ Since we are all aware that the best way is to measure power consumption directl
 
 If we approximate the TDP with the energy consumption of each component we will get this mathematical formula: 
 
-> **P[kW] = (c∙P_c+ P_r+g∙P_g)/1000 **
+> **P[kW] = (c∙P_c+ P_r+g∙P_g)/1000 **
 
 > To get energy, we multiply by time: **E[kWh] = P*t**
 

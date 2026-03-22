@@ -20,7 +20,7 @@ The choice of networking method significantly impacts energy efficiency. Wireles
 
 [According to Anne Currie](https://podcasts.bcast.fm/e/1n365448-building-green-software), the “last mile” of data transmission—delivering the connection to the end users’ premises, is crucial in the overall footprint of networking. Fiber optics emerges as the most efficient technology due to its capacity for high-speed data transfer with minimal energy loss, leading the space before copper cables and wireless technologies respectively. 
 
-**Organizations that want to improve their data transmission capabilities must make conscious decisions about the technology they want to invest in and adopt innovative practices in networking to minimize their emissions.   **
+**Organizations that want to improve their data transmission capabilities must make conscious decisions about the technology they want to invest in and adopt innovative practices in networking to minimize their emissions.   **
 
 ### Key Role of Renewables 
 
@@ -34,7 +34,7 @@ One solution that emerges is “demand response”; it involves balancing the de
 
 Judging by the current trends, we can anticipate further developments in cloud computing, such as dynamic pricing models, which reflect the real-time cost of power. These innovations encourage companies to adjust their data usage accordingly and promote a shift towards a low-carbon energy use model.
 
-**New technologies can help us make a strategic and informed transition. However, this is not without challenges. Hyperscalers and smaller providers should integrate renewables into their strategy and development and adopt systems at scale to respond to variable energy sources. **
+**New technologies can help us make a strategic and informed transition. However, this is not without challenges. Hyperscalers and smaller providers should integrate renewables into their strategy and development and adopt systems at scale to respond to variable energy sources. **
 
 ### Making Sustainability Everyone’s Responsibility
 
@@ -46,6 +46,6 @@ Implementing green software practices isn’t exactly rocket science. Most of th
 
 As Sarah Hsu pointed out, green software isn’t about giving people who are already stretched thin additional work. Nor does it require forming entirely new teams. Through green software principles and patterns, people who are already skilled in security and reliability can help our software perform more sustainably.
 
-**Software professionals and organizations aspiring to move toward greener software need to look at their current protocols and best practices and identify the areas that can benefit from integrating sustainability measures; the ultimate aim is to align business objectives with environmental sustainability goals. **
+**Software professionals and organizations aspiring to move toward greener software need to look at their current protocols and best practices and identify the areas that can benefit from integrating sustainability measures; the ultimate aim is to align business objectives with environmental sustainability goals. **
 
 Learn more every week on Environment Variables. [**Subscribe to listen**](https://podcasts.bcast.fm/environment-variables) today! 

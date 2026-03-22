@@ -44,7 +44,7 @@ Learn more about [Carmen's journey at Amadeus](https://amadeus.com/en/blog/artic
 # Get Involved
 We invite practitioners and organizations to implement the tool and contribute improvements. 
 
-- [**Register for the introductory webinar in April,**](https://grnsft.org/carmen-webinar-registration)** where you can learn hands-on how to integrate Carmen with your infrastructure. **
+- [**Register for the introductory webinar in April,**](https://grnsft.org/carmen-webinar-registration)** where you can learn hands-on how to integrate Carmen with your infrastructure. **
 - Deploy Carmen in your environment: Visit the [Carmen repository](https://github.com/Green-Software-Foundation/if-carmen) to get started.
 
 [Join the GSF](https://greensoftware.foundation/join-us/) as a member to shape the future of sustainable software. Work alongside industry leaders, including Accenture, Cisco, Google, NTT DATA, Siemens, and UBS, to develop practical measurement tools and standards.

@@ -24,7 +24,7 @@ Sustainability is foundational to being a modern digital business and we develop
 
  For the technology industry to do its part in helping curb climate change, everyone involved in the design, development and delivery of software needs to be involved. There needs to be a cultural shift towards shared action and accountability for making our software more sustainable. We imagine a not-too-distant future where carbon footprint is a central consideration in how software is built—similar to the considerations of performance, cost, quality and accessibility today.  
 
- **What challenges can get in the way of progress?**
+ **What challenges can get in the way of progress?**
 
 Measurement is a huge challenge. If, as an industry, we aren’t able to accurately measure the carbon emissions associated with our software, we won’t be able to improve and make progress. This will require new standards, tooling and approaches that are trusted across all industries and sectors. 
 

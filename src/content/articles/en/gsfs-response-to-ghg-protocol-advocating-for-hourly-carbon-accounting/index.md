@@ -33,7 +33,7 @@ It presents three positions. All support a central principle: carbon accounting 
 - **Physical deliverability requirements:** Carbon numbers should reflect only the grid mix an organization is connected to, not generation happening in a different region. Tighter geographic boundaries ensure the numbers that get reported reflect what's physically happening on the grid an organization is using.
 - **Accessible, transparent data:** Access to publicly available, free-to-use emission factors from credible sources is necessary for carbon-aware operations globally. Without accessible data, only enterprises with the resources to purchase proprietary datasets can make informed decisions. High-quality data requirements would help smaller organizations participate on more equal terms.
 
-[**Read the full submission. **](https://drive.google.com/file/d/11uFUZWMmvZDIHgjv6LV_qrRX2VfhVj0j/view)
+[**Read the full submission.**](https://drive.google.com/file/d/11uFUZWMmvZDIHgjv6LV_qrRX2VfhVj0j/view)
 
 ## A Collaborative Response Process
 

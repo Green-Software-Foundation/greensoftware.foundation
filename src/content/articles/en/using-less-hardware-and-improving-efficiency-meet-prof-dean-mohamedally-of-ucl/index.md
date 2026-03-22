@@ -43,7 +43,7 @@ Then, there are the goals of carbon reduction and sustainability in software. Ou
 
 # How does UCL hope to engage with the GSF and contribute to the green software movement? 
 
-UCL Computer Science works on many projects to address the UN SDGs and collaborates with many external partners.** **
+UCL Computer Science works on many projects to address the UN SDGs and collaborates with many external partners.** **
 
 The premise of UCL IXN was to establish collaborations between industry partners such as Microsoft, IBM, Intel, Avanade, NTT DATA, and other tech firms and organizations, including the NHS and charities such as the Red Cross. Our triparty framework agreements establish a conduit for these organizations to work together where they wouldn’t normally do so. We learn from each other and share best practices about sustainability. 
 

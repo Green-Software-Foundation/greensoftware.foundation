@@ -23,7 +23,7 @@ Below, Tammy and Chris share more about their passion for green software and the
 Meet Tammy McClellan, OC Chair
 Cloud Solution Architect - Developer Advocate at Microsoft
 
-**Tammy, how is green software relevant to you? **
+**Tammy, how is green software relevant to you? **
 
 “I have a small sustainable farm that I'm passionate about, where I grow veggies and flowers for my local community. When I started looking for ways to make an impact at work - I came across GSF and knew instantly I wanted to be a part of it. The idea that I could advocate for anything green at work ticked all the boxes. Although I don't have a sustainability title at Microsoft - this allows me to make an overall impact in my job too.”
 
