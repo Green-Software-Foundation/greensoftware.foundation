@@ -21,7 +21,7 @@ Instead of picking a side in the long-running debate between dedicated sustainab
 
 One participant put it this way:
 
-"I think initially dedicated teams within organisations are required to kickstart the sustainability efforts. This team can gather and spread information and workflows to help others outside the team understand the potential impacts. (...) Eventually, this would lead to a deprecation of this team as it is not required anymore."
+> "I think initially dedicated teams within organisations are required to kickstart the sustainability efforts. This team can gather and spread information and workflows to help others outside the team understand the potential impacts. (...) Eventually, this would lead to a deprecation of this team as it is not required anymore."
 
 This outcome didn't come from a single voice or the questions we asked. Practitioners from different organizations, roles, and countries arrived at the same solution through two rounds of structured debate. The binary question dissolved when they added a time dimension: both positions are right, depending on organizational maturity.
 
@@ -29,7 +29,9 @@ This outcome didn't come from a single voice or the questions we asked. Practiti
 
 Software's environmental footprint continues to grow, not because people don't care, but because the system isn't designed for organizations and practitioners to act on it.
 
-As one participant explained: "People generally want to do the right thing. They are simply under pressure to ship, to hit deadlines, and to keep up with demand."
+As one participant explained:
+
+> "People generally want to do the right thing. They are simply under pressure to ship, to hit deadlines, and to keep up with demand."
 
 The barriers are baked into how organisations work.  First, most don’t have visibility into energy consumption at the level where engineering decisions happen. Second, delivery pressure leaves no room for sustainability work. And third, the people who report on emissions are disconnected from those who could reduce them.
 
@@ -41,15 +43,24 @@ The researchers identified a lack of agency at the heart of the AI and sustainab
 
 Both studies point to the same thing: there is a need for structural change in how organizations assign responsibility, and practitioners themselves already know what that structure should look like.
 
-Reference: Görücü, S., Ren, Y., Samuel, G., & Panagiotidou, G. (2025). Environmental Sustainability Perceptions of Machine Learning Practitioners. *Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency (FAccT '25), 1312-1324. DOI: 10.1145/3715275.3732088*
+> [!NOTE]
+> **Reference:** Görücü, S., Ren, Y., Samuel, G., & Panagiotidou, G. (2025). Environmental Sustainability Perceptions of Machine Learning Practitioners. *Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency (FAccT '25), 1312-1324. DOI: 10.1145/3715275.3732088*
 
 ## The Phased Framework
 
 The solution Green IO participants converged on follows a three-phase model. Before we share why, here's the objection.
 
-One participant was blunt: "It should be everyone's role. Separate roles often end up with tokenistic responses and 'oh go speak to our green guy'." Another noted, "Creating dedicated roles will add friction and people will not be as concerned as they should."
+One participant was blunt:
 
-While they’re not wrong, others pointed out the opposite risk: when sustainability is everyone's responsibility, no one is accountable. Someone described the need for "a cleanup crew, a dedicated group focused on the areas with the highest footprint... Their work would not replace engineering teams but rather support them by identifying where improvements matter most."
+> "It should be everyone's role. Separate roles often end up with tokenistic responses and 'oh go speak to our green guy'."
+
+Another noted:
+
+> "Creating dedicated roles will add friction and people will not be as concerned as they should."
+
+While they’re not wrong, others pointed out the opposite risk: when sustainability is everyone's responsibility, no one is accountable. Someone described the need for:
+
+> "A cleanup crew, a dedicated group focused on the areas with the highest footprint... Their work would not replace engineering teams but rather support them by identifying where improvements matter most."
 
 The phased model resolves this by making dedicated teams the mechanism for reaching distributed responsibility.
 
@@ -62,7 +73,9 @@ Organizations create focused sustainability teams whose explicit mission is capa
 - Identify high-impact areas—the services or pipelines responsible for the bulk of the environmental footprint
 - Demonstrate initial improvements that build the case for broader adoption
 
-This requires direct leadership support. As one participant pointed out, dedicated efforts "would need explicit support from the board. Without that kind of sponsorship, sustainability remains optional."
+This requires direct leadership support. As one participant pointed out:
+
+> "Dedicated efforts would need explicit support from the board. Without that kind of sponsorship, sustainability remains optional."
 
 ### Phase 2: Knowledge spreads through evidence
 
@@ -72,7 +85,9 @@ Initial wins become the catalyst. When a dedicated team can show that a specific
 - Sustainability metrics integrate into existing dashboards and KPIs, alongside the performance and cost data that teams already watch
 - Teams outside the core group begin making sustainability-informed decisions independently
 
-As one participant put it: "It will eventually become a standard to have certain knowledge about the impact of your software in all kinds of roles."
+As one participant put it:
+
+> "It will eventually become a standard to have certain knowledge about the impact of your software in all kinds of roles."
 
 ### Phase 3: The dedicated team deprecates itself
 
@@ -82,7 +97,9 @@ The team's success metric is making itself unnecessary.
 - Senior leadership is assessed on sustainability outcomes alongside financial performance
 - Environmental impact becomes a standing item at the board level
 
-This is where the objection gets answered. Critics warned that separate teams lead to tokenistic outcomes: "Rather than having separate 'green' owners, incorporate green targets into all senior leaders' KPI framework. This would mean senior staff are judged on the sustainability of their outputs and will create team dynamics focused around that... It should be everyone's role, separate roles often end up with tokenistic responses and 'oh go speak to our green guy'."
+This is where the objection gets answered. Critics warned that separate teams lead to tokenistic outcomes:
+
+> "Rather than having separate 'green' owners, incorporate green targets into all senior leaders' KPI framework. This would mean senior staff are judged on the sustainability of their outputs and will create team dynamics focused around that... It should be everyone's role, separate roles often end up with tokenistic responses and 'oh go speak to our green guy'."
 
 The phased model doesn't end with a permanent green team. Instead, it creates a culture in which sustainability is integral to every role and responsibility.
 
@@ -92,11 +109,11 @@ Alongside the phased framework, four themes emerged with strong practitioner con
 
 **Responsibility is already distributed. The problem is visibility.** Every participant independently identified multiple stakeholders who shape software's environmental impact: engineers, platform teams, product owners, cloud providers, and leadership. This wasn't contested. What's missing is instrumentation, which means making environmental impact visible at each decision point where it's already being determined.
 
-"When I think about the environmental impact of software, I do not picture a single owner. I think of the people whose decisions shape how systems behave once they are in production."
+> "When I think about the environmental impact of software, I do not picture a single owner. I think of the people whose decisions shape how systems behave once they are in production."
 
 **Standardised measurement frameworks are prerequisites, not nice-to-haves.** Without common standards, every organization reinvents measurement in isolation. Comparison becomes difficult, knowledge can't spread, and tools get built multiple times for the same purpose.
 
-"An open framework for a standardized way to measure and report sustainability is a key part in my opinion for broad adaptation of these practices... generalised standards and tools could really help in this regard."
+> "An open framework for a standardized way to measure and report sustainability is a key part in my opinion for broad adaptation of these practices... generalised standards and tools could really help in this regard."
 
 Participants identified it as a prerequisite for making distributed responsibility work.
 
@@ -104,7 +121,7 @@ GSF is already applying this principle: [the Software Carbon Intensity (SCI) for
 
 **The top-down vs. bottom-up debate is a false choice**: Some practitioners emphasized executive accountability through KPIs and regulatory pressure. Others focused on team-level cultural shifts through code reviews and design decisions. Both camps agreed that both levels matter, but they disagreed on sequencing. The Assembly outcomes suggest running them in parallel: use early team wins as evidence to build executive commitment, and use leadership support to protect team-level experimentation from being deprioritized.
 
-"Some kind of mindset change is required for management to make sustainability among the highest priorities of the organisation... This should be incentivised by law."
+> "Some kind of mindset change is required for management to make sustainability among the highest priorities of the organisation... This should be incentivised by law."
 
 **Leadership commitment is the structural enabler.** The deeper theme across every response was about what organizations measure and prioritize. Better algorithms and more efficient infrastructure are important, but to succeed, they need changes to power structures and incentive systems. What leadership treats as strategic determines what changes.
 
