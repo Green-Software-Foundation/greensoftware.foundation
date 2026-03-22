@@ -23,7 +23,7 @@ import type { APIRoute } from "astro";
 const config = `backend:
   name: github
   repo: Green-Software-Foundation/greensoftware.foundation
-  branch: dev
+  branch: main
 
 # ---------------------------------------------------------------------------
 # Internationalisation
