@@ -5,6 +5,15 @@ published: true
 summary: "As he steps down, Asim Hussain reflects on what he built, what he learned, and why he's confident the Foundation is in good hands."
 teaserText: "A personal message from Asim Hussain to the GSF community. "
 mainImage: "./main.png"
+authors:
+  - fullName: "Asim Hussain"
+    role: "Executive Director"
+    company: "Green Software Foundation"
+    companyWebsite: "https://greensoftware.foundation"
+    photo: "/assets/articles/authors/asim-hussain.png"
+    socialMedia:
+      - platform: "Linkedin"
+        link: "https://www.linkedin.com/in/asimhussain/"
 ---
 
 I'm leaving at the end of March.

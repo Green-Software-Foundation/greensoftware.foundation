@@ -5,13 +5,22 @@ published: true
 summary: "The metrics designed for regulators aren't always the ones that help practitioners reduce emissions. Asim Hussain (ED of GSF) explores the trade-offs between measuring for reporting and measuring for action, and how to design systems that do both."
 teaserText: "Why the metrics that report emissions aren’t always the ones that help reduce them. "
 mainImage: "./main.png"
+authors:
+  - fullName: "Asim Hussain"
+    role: "Executive Director"
+    company: "Green Software Foundation"
+    companyWebsite: "https://greensoftware.foundation"
+    photo: "/assets/articles/authors/asim-hussain.png"
+    socialMedia:
+      - platform: "Linkedin"
+        link: "https://www.linkedin.com/in/asimhussain/"
 ---
 
 There are two reasons to measure carbon emissions. One is reporting. The other is driving action. Both matter. But they're not the same thing, and the trade-offs between them are worth understanding.
 
 Most of the carbon measurement conversation today focuses on reporting. Totals, life cycle assessments, scope 1/2/3 disclosures. This makes sense. Regulators need comparable data. Investors need consistent frameworks. Society needs organizations to be transparent about their impact. Reporting serves all of those needs.
 
-But there's a second purpose for measurement that gets far less attention. Measurement as a tool for actually reducing emissions. Measurement that gives teams clear signals for what to change and sits within their agency to make that change. 
+But there's a second purpose for measurement that gets far less attention. Measurement as a tool for actually reducing emissions. Measurement that gives teams clear signals for what to change and sits within their agency to make that change.
 
 At the GSF, this second purpose became our focus. Not because reporting doesn't matter, but because we noticed something important. The qualities that make a metric good for reporting often make it less useful for driving action. And vice versa. Understanding that trade-off is the key to designing measurement systems that do both well.
 
