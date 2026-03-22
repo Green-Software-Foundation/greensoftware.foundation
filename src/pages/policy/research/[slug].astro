@@ -12,10 +12,13 @@ import projects from "@/data/projects.json";
 
 export async function getStaticPaths() {
   const papers = await getCollection("research");
-  return papers.map((paper) => ({
-    params: { slug: paper.id },
-    props: { paper },
-  }));
+  return papers.map((paper) => {
+    const slug = paper.id.startsWith("en/") ? paper.id.slice(3) : paper.id;
+    return {
+      params: { slug },
+      props: { paper },
+    };
+  });
 }
 
 const { paper } = Astro.props;

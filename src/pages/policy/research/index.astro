@@ -52,7 +52,7 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
           <div class="grid gap-6">
             {papers.map((paper) => (
               <a
-                href={`/policy/research/${paper.id}/`}
+                href={`/policy/research/${paper.id.startsWith("en/") ? paper.id.slice(3) : paper.id}/`}
                 class="block rounded-xl border border-border bg-accent-lightest-2 p-6 md:p-8 hover:border-primary-lighter hover:shadow-md transition-all group"
               >
                 <div class="flex items-center gap-3 mb-3">
