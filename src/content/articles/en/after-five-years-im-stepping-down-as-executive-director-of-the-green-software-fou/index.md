@@ -108,4 +108,4 @@ It's been a privilege.
 
 Asim
 
-Read [the official GSF announcement](https://greensoftware.foundation/articles/gsf-announces-executive-director-transition).
+::article{slug="gsf-announces-executive-director-transition"}

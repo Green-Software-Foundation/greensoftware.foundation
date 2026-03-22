@@ -35,6 +35,8 @@ It presents three positions. All support a central principle: carbon accounting 
 
 [**Read the full submission.**](https://drive.google.com/file/d/11uFUZWMmvZDIHgjv6LV_qrRX2VfhVj0j/view)
 
+::google-drive{id="11uFUZWMmvZDIHgjv6LV_qrRX2VfhVj0j" caption="GSF's formal response to the GHG Protocol Scope 2 consultation"}
+
 ## A Collaborative Response Process
 
 This is our first policy engagement built through asynchronous member consensus to deliver a unified response.

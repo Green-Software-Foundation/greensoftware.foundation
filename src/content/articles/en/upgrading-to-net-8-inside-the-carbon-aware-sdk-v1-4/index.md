@@ -14,9 +14,10 @@ Containerization has made it easier for development teams to schedule upgrades a
 
 [Carbon Aware SDK v1.4.0](https://github.com/Green-Software-Foundation/carbon-aware-sdk/blob/dev/CHANGELOG.md#140---2024-05) was released in May 2024. Its core evolution was the upgrade to .NET 8. Until v1.3.x, the Carbon Aware SDK relied on the LTS (Long Term Support) version .NET 6. With an EOL (End of Life) set for November 2024, an upgrade was required. As Microsoft released .NET 8 in November 2023, this is the latest LTS version of .NET and [will be supported until November 2026](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core).
 
-For engineers undertaking similar upgrades, this article reveals what took place behind the scenes and how NTT and NTT DATA is using the latest version of the Carbon Aware SDK. 
+For engineers undertaking similar upgrades, this article reveals what took place behind the scenes and how NTT and NTT DATA is using the latest version of the Carbon Aware SDK.
 
 # Why .NET 8?
+
 To display the carbon intensity metrics from the Carbon Aware SDK WebAPI, we needed to use .NET 8, which introduced [enhanced support for implementing metrics features](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/runtime#extensions-metrics).  
 
 The new [IMeterFactory](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.metrics.imeterfactory?view=net-8.0) interface allowed us to create a [Meter](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.metrics.meter?view=net-8.0) instance while keeping our code modular, using dependency injection (i.e., use the .NET 8 implementation of the feature instead of recreating it, another software development sustainable pattern).
@@ -24,6 +25,7 @@ The new [IMeterFactory](https://learn.microsoft.com/en-us/dotnet/api/system.diag
 Handling carbon intensity metrics was integrated with the necessary support provided by the .NET 8 upgrade.
 
 # In practice
+
 The initial work for upgrading to .NET 8 was done in [Pull Request (PR) #404](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pull/404) (i.e., a code change proposal that was later merged into the main code).
 
 Even without being a C# expert, it's interesting to look at the PR and see the impact of a collaborative effort by scanning the number of files that changed and how tests and samples led to enhancements.
@@ -32,7 +34,6 @@ For the nitty-gritty (next paragraph), the core work is in updating the target f
 
 ![Visual Studio property window showing target framework set to .NET 8.0 for a Carbon Aware SDK project](./fig-1-property-window-of-c-project-in-carbon-aware-sdk-on-visual-studio-community-edition.png)
 *Fig.1 Property window of C# project in Carbon Aware SDK on Visual Studio Community Edition*
-
 
 Carbon Aware SDK includes 30 C# projects (at least in v1.3.0), so automation is welcomed. The target framework version is described in /Project/PropertyGroup/TargetFramework in .csproj file. For example, running the command on WSL:
 
@@ -58,9 +59,11 @@ Framework>net8.0</TargetFramework>|g' {} \;
 While the update might be done, the work has not ended.
 
 # Unexpected work items
+
 While the .NET 8 upgrade was done, some unexpected issues surfaced.
 
 ## Ripple effect on sample code
+
 A sample running on Azure Functions is available to help onboard newcomers to the Carbon Aware SDK.
 
 Azure Functions for .NET is transitioning one of its execution modes (the In-process model) for the Isolated worker model ([more details here](https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-in-process-differences)). Additionally, the initial release of .NET 8 does not yet provide an option to use the former model in its initial release (cf. [roadmap of Azure Functions](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/net-on-azure-functions-august-2023-roadmap-update/ba-p/3910098)) .NET 8 did not provide yet an option to use the former model in its initial release.
@@ -79,10 +82,12 @@ For the code lover, there is a helpful [guide](https://learn.microsoft.com/en-us
 For more details browse: [Pull Request #420](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pull/420).
 
 ## Port Number Breaking change
+
 Since the Carbon Aware SDK WebAPI uses ASP.NET Core technology, we had to make an additional update because .NET 8 changed its default port number from 80 to 8080 [Microsoft Learn document](https://learn.microsoft.com/en-us/dotnet/core/compatibility/containers/8.0/aspnet-port)). This involved updating the port number in the WebAPI container which also affected the containerPort in Helm chart and some GitHub Workflows that use WebAPI.
 
 ## Broken build pipeline on GitHub Actions
-GitHub allows for a lot of automation in publishing code, allowing developers a chance to focus more on coding. 
+
+GitHub allows for a lot of automation in publishing code, allowing developers a chance to focus more on coding.
 
 The Carbon Aware SDK repository is configured to publish WebAPI container images (like a snapshot build) when a commit occurs on the dev branch. But, after the .NET 8 upgrade, it suddenly stopped working.
 
@@ -102,6 +107,7 @@ Further investigation, aided by a [.NET blog](https://devblogs.microsoft.com/dot
 Fortunately .NET blog guides how to build multi platform container images.The workflow was fixed accordingly in [Pull Request #498](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pull/498). Now, the WebAPI container image with .NET 8 can be pulled from [GitHub Packages](https://github.com/Green-Software-Foundation/carbon-aware-sdk/pkgs/container/carbon-aware-sdk) now!
 
 ## .NET8 Upgrade in Action
+
 ### Carbon Intensity map
 
 Thanks to .NET 8, the new Carbon Aware SDK v1.4.0 includes a carbon metrics exporter that enhances visualization capabilities.
@@ -121,6 +127,9 @@ Emission data from the power grid can be accessed through the Prometheus exporte
 ![World map showing carbon intensity values by region in gCO2eq/kWh, visualised via Grafana](./image.png)
 
 ### Elevating Carbon Aware Computing
+
 By integrating new features such as the carbon metrics exporter and improving compatibility with tools like Prometheus and Grafana, the SDK is better equipped to help developers monitor and reduce carbon emissions. As we continue to improve, the Carbon Aware SDK will continue to serve an important role in building environmentally-conscious software that is responsive to climate change.
 
-The Carbon Aware SDK has [achieved graduation](https://greensoftware.foundation/articles/celebrating-the-graduation-of-the-carbon-aware-sdk) and continues to be improved thanks to the enduring efforts from individual contributors from our member organizations.
+The Carbon Aware SDK has achieved graduation and continues to be improved thanks to the enduring efforts from individual contributors from our member organizations.
+
+::article{slug="celebrating-the-graduation-of-the-carbon-aware-sdk"}

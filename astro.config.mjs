@@ -8,9 +8,11 @@ import { fileURLToPath } from "url";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import astrobook from "astrobook";
+import remarkDirective from "remark-directive";
 import remarkGfm from "remark-gfm";
 import remarkGithubAlerts from "remark-github-alerts";
 import remarkMath from "remark-math";
+import remarkDirectivesHandler from "./src/plugins/remark-directives-handler.mjs";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -39,7 +41,7 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkGfm, remarkGithubAlerts, remarkMath],
+    remarkPlugins: [remarkGfm, remarkGithubAlerts, remarkMath, remarkDirective, remarkDirectivesHandler],
     rehypePlugins: [
       rehypeKatex,
       rehypeSlug,
