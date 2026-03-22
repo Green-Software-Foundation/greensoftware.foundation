@@ -90,11 +90,11 @@ The phased model doesn't end with a permanent green team. Instead, it creates a 
 
 Alongside the phased framework, four themes emerged with strong practitioner consensus:
 
-**Responsibility is already distributed. The problem is visibility:**Every participant independently identified multiple stakeholders who shape software's environmental impact: engineers, platform teams, product owners, cloud providers, and leadership. This wasn't contested. What's missing is instrumentation, which means making environmental impact visible at each decision point where it's already being determined.
+**Responsibility is already distributed. The problem is visibility.** Every participant independently identified multiple stakeholders who shape software's environmental impact: engineers, platform teams, product owners, cloud providers, and leadership. This wasn't contested. What's missing is instrumentation, which means making environmental impact visible at each decision point where it's already being determined.
 
 "When I think about the environmental impact of software, I do not picture a single owner. I think of the people whose decisions shape how systems behave once they are in production."
 
-**Standardized measurement frameworks are prerequisites, not nice-to-haves:**Without common standards, every organization reinvents measurement in isolation. Comparison becomes difficult, knowledge can't spread, and tools get built multiple times for the same purpose.
+**Standardised measurement frameworks are prerequisites, not nice-to-haves.** Without common standards, every organization reinvents measurement in isolation. Comparison becomes difficult, knowledge can't spread, and tools get built multiple times for the same purpose.
 
 "An open framework for a standardized way to measure and report sustainability is a key part in my opinion for broad adaptation of these practices... generalised standards and tools could really help in this regard."
 
@@ -124,7 +124,7 @@ This three-day Assembly generated 87 distinct practitioner positions across two 
 
 Over three days, we ran a consensus-building session with 12 participants at the Green IO Paris conference. This sample produced multi-thousand-word responses and enabled depth that made the phased framework possible.
 
-**Round 1**posed three open-ended questions: who should be responsible for software's environmental impact, who currently makes those decisions, and what gets in the way. Participants responded with comprehensive answers ranging from 7,286 to 12,381 characters.
+**Round 1** posed three open-ended questions: who should be responsible for software's environmental impact, who currently makes those decisions, and what gets in the way. Participants responded with comprehensive answers ranging from 7,286 to 12,381 characters.
 
 AI synthesis then processed every response equally. The model extracted 42 distinct positions across 14 thematic areas, categorising each as a core position, implementation detail, nuance, or dissenting view. It mapped where participants agreed, where they diverged, and, critically, where tensions sat that hadn't been addressed.
 
@@ -146,9 +146,9 @@ The Assembly provided insights that will inform how we evolve AI-supported conse
 
 **Depth over breadth produced better results than expected.** Twelve practitioners generating detailed written responses surfaced more actionable insight than a poll of hundreds might have. The phased framework emerged because participants had space to think through contradictions rather than pick from pre-set options, providing written responses of 7,000+ characters.
 
-**Response quality varied enormously.**The most comprehensive single response contributed 45% of all Round 1 positions. Future assemblies might benefit from better scaffolding: structured prompts that help all participants articulate their thinking at comparable depth, without constraining what they say.
+**Response quality varied enormously.** The most comprehensive single response contributed 45% of all Round 1 positions. Future assemblies might benefit from better scaffolding: structured prompts that help all participants articulate their thinking at comparable depth, without constraining what they say.
 
-**AI synthesis surfaced tensions that a facilitated discussion might have missed.**The dedicated-teams-vs-distributed-responsibility tension was visible in Round 1 responses, but participants hadn't directly engaged with each other's positions. AI mapping made the tension explicit and gave Round 2 something concrete to push against. The phased framework emerged from that push.
+**AI synthesis surfaced tensions that a facilitated discussion might have missed.** The dedicated-teams-vs-distributed-responsibility tension was visible in Round 1 responses, but participants hadn't directly engaged with each other's positions. AI mapping made the tension explicit and gave Round 2 something concrete to push against. The phased framework emerged from that push.
 
 **The email format worked, but with limited iteration.** Two rounds over three conference days meant limited back-and-forth. A longer process with three or four rounds could test whether the phased framework holds up under sustained scrutiny, or whether it's a first-pass synthesis that needs further refinement.
 
