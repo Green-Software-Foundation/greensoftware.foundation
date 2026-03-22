@@ -33,7 +33,7 @@ Research papers are Markdown files in `src/content/research/`. Unlike articles, 
 |-------|------|----------|-------------|
 | `title` | string | Yes | Paper title |
 | `date` | date | Yes | Publication date |
-| `type` | enum | Yes | `"whitepaper"` or `"consultation_response"` — controls the badge colour and label |
+| `type` | enum | Yes | `"paper"`, `"response"`, or `"report"` — see type definitions below |
 | `summary` | string | No | Short summary for the listing card |
 | `subtitle` | string | No | Displayed below the title |
 | `published` | boolean | No | Defaults to `true`. Set `false` to hide from listings |
@@ -42,7 +42,17 @@ Research papers are Markdown files in `src/content/research/`. Unlike articles, 
 | `status` | enum | No | `"published"`, `"draft"`, or `"in-progress"` — for workflow tracking |
 | `jurisdiction` | string | No | Geographic scope (e.g. "EU", "US", "Global") |
 | `framework` | string | No | Related framework (e.g. "GHG Protocol", "EU AI Act") |
+| `doi` | string | No | Digital Object Identifier — displayed as a link in the hero |
+| `pdfUrl` | string | No | Direct PDF download link — displayed as a download button in the hero |
 | `version` | string | No | Document version |
+
+### Research types
+
+| Type | Label | Definition |
+|------|-------|-----------|
+| `paper` | Paper | Original research, analysis, or position authored by GSF. Makes a case, presents findings, or proposes a framework. |
+| `response` | Response | GSF's formal reply to an external consultation, regulation, or standard. Written in reaction to someone else's process. |
+| `report` | Report | Documents an outcome, process, or state of affairs. Descriptive rather than argumentative. Assembly reports, workshop summaries, State of Green Software. |
 
 ### Detail page metadata grid
 

@@ -4,7 +4,7 @@ subtitle: "Software, Storage, and System Design for Great Britain's Demand Conne
 date: 2026-03-10
 published: true
 status: published
-type: consultation-response
+type: response
 summary: >
   GSF response to Ofgem's Demand Connections Reform call for input, examining how software-controlled flexibility in data centres can help address Great Britain's connections crisis.
 jurisdiction: GB

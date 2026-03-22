@@ -4,7 +4,7 @@ subtitle: "A Strategic Framework for European Organisations"
 date: 2026-01-15
 published: true
 status: published
-type: whitepaper
+type: paper
 summary: >
   How the SCI standard (ISO/IEC 21031:2024) can help European organisations measure, report, and reduce software-specific carbon emissions within the CSRD and ESRS E1 reporting framework.
 jurisdiction: EU

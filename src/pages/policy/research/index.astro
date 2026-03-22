@@ -57,11 +57,13 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
               >
                 <div class="flex items-center gap-3 mb-3">
                   <span class={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded ${
-                    paper.data.type === "whitepaper"
+                    paper.data.type === "paper"
                       ? "bg-primary text-white"
-                      : "bg-accent text-primary-darkest"
+                      : paper.data.type === "report"
+                        ? "bg-primary-dark text-white"
+                        : "bg-accent text-primary-darkest"
                   }`}>
-                    {paper.data.type === "whitepaper" ? "White Paper" : "Consultation Response"}
+                    {{ paper: "Paper", response: "Response", report: "Report" }[paper.data.type] || paper.data.type}
                   </span>
                   {paper.data.jurisdiction && (
                     <span class="text-xs font-semibold text-gray-darker">{paper.data.jurisdiction}</span>

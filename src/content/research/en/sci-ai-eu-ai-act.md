@@ -4,7 +4,7 @@ subtitle: "A Framework for Measuring and Reducing AI's Climate Impact"
 date: 2026-02-15
 published: true
 status: published
-type: whitepaper
+type: paper
 summary: >
   How SCI for AI provides a comprehensive methodology for measuring and reducing AI's climate impact, exceeding current EU AI Act environmental documentation requirements.
 jurisdiction: EU

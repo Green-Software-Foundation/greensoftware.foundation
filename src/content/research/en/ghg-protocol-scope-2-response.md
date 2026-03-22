@@ -4,7 +4,7 @@ subtitle: "Selected Questions and GSF Responses"
 date: 2025-12-15
 published: true
 status: published
-type: consultation-response
+type: response
 summary: >
   GSF's formal response to the GHG Protocol Scope 2 proposed revisions, advocating for hourly granularity in carbon accounting to enable carbon-aware software operations.
 jurisdiction: Global

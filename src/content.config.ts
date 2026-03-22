@@ -62,9 +62,7 @@ const research = defineCollection({
     date: z.coerce.date(),
     published: z.boolean().default(true),
     status: z.enum(["published", "draft", "in-progress"]).default("published"),
-    type: z
-      .enum(["whitepaper", "consultation-response", "position-paper"])
-      .default("whitepaper"),
+    type: z.enum(["paper", "response", "report"]).default("paper"),
     summary: z.string(),
     jurisdiction: z.string().optional(),
     framework: z.string().optional(),

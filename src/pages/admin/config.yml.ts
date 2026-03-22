@@ -314,11 +314,12 @@ collections:
         name: type
         widget: select
         options:
-          - { label: "White Paper", value: whitepaper }
-          - { label: "Consultation Response", value: consultation-response }
-          - { label: "Position Paper", value: position-paper }
-        default: whitepaper
+          - { label: "Paper", value: paper }
+          - { label: "Response", value: response }
+          - { label: "Report", value: report }
+        default: paper
         i18n: duplicate
+        hint: "Paper = original research or analysis. Response = formal reply to an external consultation. Report = documents an outcome or process."
 
       - label: Summary
         name: summary
