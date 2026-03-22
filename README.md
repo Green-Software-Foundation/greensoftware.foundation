@@ -50,6 +50,8 @@ The site has three layers of documentation: **system docs** (how the data pipeli
 
 ### Pages
 
+- [Articles](docs/pages/articles.md) — article listing, detail pages, frontmatter, translations, draft mode
+- [Research & White Papers](docs/pages/research.md) — whitepapers, consultation responses, working groups
 - [Standards](docs/pages/standards.md) — individual standard pages (SCI, RTC, etc.)
 - [Press & Media](docs/pages/press.md) — member counts, leadership, timeline, press mentions
 - [Governance](docs/pages/governance.md) — steering committee, staff, chairs/leads, org leads
