@@ -15,6 +15,27 @@ authors:
     org: Green Software Foundation
 ---
 
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [1. What Is Green AI?](#1-what-is-green-ai)
+- [2. What Is Not Green AI?](#2-what-is-not-green-ai)
+- [3. Understanding the AI Lifecycle](#3-understanding-the-ai-lifecycle)
+  - [3.1. Prepare](#31-prepare)
+  - [3.2. Data Engineering](#32-data-engineering)
+  - [3.3. Model Training](#33-model-training)
+  - [3.4. System Integration](#34-system-integration)
+  - [3.5. Runtime Operations](#35-runtime-operations)
+  - [3.6. End-of-Life](#36-end-of-life)
+- [4. The AI Lifecycle: Key Stages and Elements](#4-the-ai-lifecycle-key-stages-and-elements)
+- [5. Why Is Green AI Important?](#5-why-is-green-ai-important)
+- [6. Priority Projects](#6-priority-projects)
+  - [6.1. Green AI for Practitioners Course](#61-green-ai-for-practitioners-course)
+  - [6.2. SCI for AI Standard](#62-sci-for-ai-standard)
+- [7. Get Involved](#7-get-involved)
+
+## Executive Summary
+
 The Green AI Committee (GAIC) was established to unify efforts in innovation and sustainability. Its mission is to guide the Green Software Foundation’s (GSF) strategy in developing knowledge, standards, and tools that minimize the environmental impact of Artificial Intelligence (AI) systems, supporting net-zero goals.
 
 Over a series of workshops at the end of 2024, the GAIC members discussed and agreed on a definition of Green AI. This paper presents the definition as well as a summary of the discussions in that workshop, representing GAIC’s commitment to driving sustainable and scalable AI development while addressing urgent environmental challenges.
@@ -38,7 +59,7 @@ The Green AI Committee (GAIC) is formed of these members:
 | Vincent Caldeira | IBM/ Red Hat |
 | Vinjosh Varghese | UBS |
 
-## What Is Green AI?
+## 1. What Is Green AI?
 
 > [!IMPORTANT]
 > **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
@@ -50,7 +71,7 @@ In their approach to establishing the definition, the committee prioritized the 
 - **Consideration of the full AI lifecycle**: The environmental footprint of AI systems extends beyond operational (inference) and training to include the entire lifecycle, from model development to deployment and end-of-life disposal. Breaking AI down into distinctive lifecycle stages helps identify specific areas for optimization, ensure adequate sustainability efforts at each step, and support environmental accountability across the AI ecosystem.
 - **Focus on the sustainability of AI**: The goal of Green AI is to reduce AI’s own environmental impact. Several other initiatives already focus on AI for sustainability, but fewer efforts are dedicated to making AI itself more sustainable. It is essential to keep Green AI’s scope clear and distinct.
 
-## What Is Not Green AI?
+## 2. What Is Not Green AI?
 
 For the purpose of this paper and in a broader scope of its activities, the Green AI Committee will not consider what AI can do for sustainability, Responsible AI, or AI safety.
 
@@ -66,21 +87,21 @@ Given the evolving nature of AI and its applications, the committee will periodi
 
 ![Infographic titled What Is Green AI showing the AI lifecycle stages: Prepare, Data Engineering, Model Training, System Integration, Runtime Operations, and End of Life](/assets/research/green-ai-lifecycle.png)
 
-## Understanding the AI Lifecycle
+## 3. Understanding the AI Lifecycle
 
 The AI lifecycle, as defined by the Green AI Committee, includes the following stages: Prepare, Build (Data Engineering), Model Training, System Integration, Runtime Operations, and Disposal/End-of-Life. Throughout its lifecycle, AI requires hardware and energy (computing resources), which means it has an environmental impact.
 
 Understanding the AI lifecycle and developing standardized methodologies for measuring AI's environmental footprint is critical for advancing sustainability efforts, allowing for a targeted approach at each stage.  
 
-### Prepare
+### 3.1. Prepare
 
 The AI lifecycle begins with preparation, where the goal is to understand the purpose of the AI model and the problem it will solve. Here, it is also crucial to consider the fundamental question: Do we need AI to solve this problem, or are there alternative, less resource-intensive solutions that can achieve the same outcome? The problem could be anything from recognizing objects in photos to predicting the weather or diagnosing diseases. At this stage, the involvement with end-users is required to understand their needs and expectations. Additionally, clear objectives must be set regarding performance benchmarks, data requirements, response times, and computational constraints. Establishing these is critical to avoid overuse of resource-intensive models.
 
-### Data Engineering  
+### 3.2. Data Engineering  
 
 Once the objectives and requirements are established, the next step is to build an AI system. As AI needs data to learn, building it will start with gathering data from different sources, such as websites, databases, or human input. Collected data goes through pre-processing, which involves cleaning (checking for potential errors, missing values, and inconsistencies) and normalizing (ensuring the data is in a consistent format for AI to understand). In some cases, synthetic data is created. Synthetic data, generated algorithmically, mimics the patterns and characteristics of real data. It can be used during the training stage as a substitute for test data sets of production or operational data to validate and train models. This allows for cost-efficient and scalable model training, reducing the need for excessive data collection and mitigating potential ethical concerns related to sensitive or private information.
 
-### Model Training
+### 3.3. Model Training
 
 With the prepared data, AI enters the training stage, where it learns to recognize patterns and make predictions. Training AI refers to teaching the system how to find connections in data. During training, the appropriate model is selected based on the task characteristics and available data, and optimized to improve its performance. A key part of the training stage, called feature engineering, is the process of transforming raw data into relevant information for use by AI models. Training involves exposing the model to the prepared data to develop and improve its ability to make predictions and decisions using the data provided.
 
@@ -92,7 +113,7 @@ The trained model is evaluated on test datasets to assess its performance on new
 
 The following step involves a cost and resource analysis. Understanding how much energy and hardware are used during development and deployment helps determine where to optimize and make improvements. Optimization means minimizing the amount of computational resources required to train and run the AI system without compromising its performance. This could involve simplifying the model, using more efficient algorithms, reducing data redundancy, and deleting or reallocating any underutilized resources.
 
-### System Integration
+### 3.4. System Integration
 
 The next step is system integration, which ensures that the AI model works seamlessly with other components, technologies, or systems and can be used effectively in practical scenarios. This could involve integrating AI into a web application, an autonomous vehicle, a smart home system, or any other element that will interact with the AI to complete tasks.
 
@@ -100,7 +121,7 @@ Successful integration requires careful design. Developers determine the archite
 
 Once the system has been integrated, it must be tested for performance issues or integration errors. Successful system integration testing confirms that the AI model is ready for deployment and can operate in real-world scenarios.
 
-### Runtime Operations  
+### 3.5. Runtime Operations  
 
 Deployment means setting up a trained model for inference, which involves running live data through it. As the model is deployed, it actively runs and performs tasks, including inference, in its deployed environment.
 
@@ -112,11 +133,11 @@ Introducing FinOps practices at this stage helps manage costs and usage related 
 
 The deployment of AI models spans across consumer (edge) devices, data centers, and cloud environments, with each having its own monitoring requirements due to unique capabilities and limitations.
 
-### End-of-Life
+### 3.6. End-of-Life
 
 The end-of-life stage refers to decommissioning a no longer maintained AI system in a runtime environment.
 
-## The AI Lifecycle: Key Stages and Elements
+## 4. The AI Lifecycle: Key Stages and Elements
 
 |                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -126,7 +147,7 @@ The end-of-life stage refers to decommissioning a no longer maintained AI system
 | **Runtime Operations**       | Model Deployment: <br>- Deployment, roll-out, and people training.<br>Model Operation (including inferencing):<br>- Inferencing  <br> Monitoring:<br>- Monitoring, iteration & reporting<br>- Model Performance Monitoring<br>- FinOps<br>- Consumer (Edge) Device / Datacenter / Cloud Usage<br>Maintenance (for example, model degradation)                                                                                                                                                                                               |
 | **End-of-Life/ Disposal**    | Decommissioning an AI system                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-## Why Is Green AI Important?
+## 5. Why Is Green AI Important?
 
 In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [water usage](https://arxiv.org/pdf/2304.03271), and [energy consumption](https://arxiv.org/pdf/2301.11047). Some predictions expect data centre emissions [to rise from 180 Mt to 300 Mt in the Base Case by 2035](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions.
 
@@ -134,19 +155,19 @@ The rapid and divergent nature of AI development has led to [growing concerns an
 
 While the challenges are significant, the GAIC believes a more sustainable future for AI is achievable. It is crucial to underline that Green AI is not a standalone solution but a fundamental pillar of a broader sustainability ecosystem. By adopting Green AI practices alongside collaboration, policy innovation, and technological advances, we can align AI’s growth with planetary boundaries.
 
-## Addressing Key Challenges in Green AI: Priority Projects
+## 6. Priority Projects
 
 Despite rapid advancements in AI, practitioners and users currently lack clear guidance and knowledge on how to measure, reduce, and report AI impacts. This absence limits public awareness and hinders efforts to address AI’s environmental footprint, making it more challenging to develop AI sustainably.
 
 To support further sustainable development, deployment, and use of AI systems, the committee will pursue the following initiatives:  
 
-### Green AI for Practitioners Course (also referred to as Green AI White Paper)
+### 6.1. Green AI for Practitioners Course
 
 The Green AI White Paper will be produced in collaboration with GSF members to increase awareness of Green AI and understanding of the implications of AI development. It will explain the fundamental principles of Green AI, developments, and solutions, and provide practical, actionable recommendations for practitioners, including guidelines for measurement.
 
 The project is led by Thomas Lewis (Microsoft).
 
-### SCI for AI Standard
+### 6.2. SCI for AI Standard
 
 In collaboration with the GSF Standards Working Group, the SCI (Software Carbon Intensity) specification will be extended to cover AI and address the challenges of measuring AI carbon emissions through the AI lifecycle. The purpose of the proposed specification is to support AI practitioners and decision-makers in understanding and reducing the carbon footprint of AI systems by providing a reliable, consistent, and comparable measure.
 
@@ -162,7 +183,7 @@ To support real-world adoption, the committee will work closely with the GSF to 
 
 By championing open tools, the committee aims to ensure that sustainability practices are accessible, transparent, and scalable across different environments and organizations.
 
-## Get Involved
+## 7. Get Involved
 
 **Collaborate**: The Green AI Committee recognizes that addressing AI’s environmental impact requires broad collaboration between industry, academia, and policymakers to establish comprehensive standards that prioritize transparency, software and hardware efficiency, and environmental accountability.
 
