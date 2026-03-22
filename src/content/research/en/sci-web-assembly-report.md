@@ -16,6 +16,34 @@ authors:
     org: Green Software Foundation
 ---
 
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [1. Scope Definition](#1-scope-definition)
+- [2. Target Personas](#2-target-personas)
+  - [2.1. Frontend Developers and Design Practitioners](#21-frontend-developers-and-design-practitioners)
+  - [2.2. Backend and Infrastructure Engineers](#22-backend-and-infrastructure-engineers)
+  - [2.3. Product Owners and Technical Managers](#23-product-owners-and-technical-managers)
+  - [2.4. Rationale: Connection to Scope](#24-rationale-connection-to-scope)
+  - [2.5. Critical Inclusion: Third-Party Dependencies and Transparency](#25-critical-inclusion-third-party-dependencies-and-transparency)
+  - [2.6. Acknowledged but Not Primary Targets](#26-acknowledged-but-not-primary-targets)
+- [3. Implementation Practices and Incentives](#3-implementation-practices-and-incentives)
+  - [3.1. Encouraged Practices](#31-encouraged-practices)
+  - [3.2. Discouraged Practices](#32-discouraged-practices)
+  - [3.3. Design Implications for SCI for Web](#33-design-implications-for-sci-for-web)
+- [4. Evaluation Criteria](#4-evaluation-criteria)
+  - [4.1. The Accuracy-Adoption Trade-off](#41-the-accuracy-adoption-trade-off)
+  - [4.2. Trust and Transparency Requirements](#42-trust-and-transparency-requirements)
+  - [4.3. Threshold Criteria for Usefulness](#43-threshold-criteria-for-usefulness)
+  - [4.4. Gaming Prevention Principles](#44-gaming-prevention-principles)
+  - [4.5. Success Indicators](#45-success-indicators)
+  - [4.6. Implementation Feasibility Boundaries](#46-implementation-feasibility-boundaries)
+  - [4.7. Connection to Behavioral Incentives](#47-connection-to-behavioral-incentives)
+  - [4.8. Key Principles Summary](#48-key-principles-summary)
+  - [4.9. Conformance to Parent SCI Specification](#49-conformance-to-parent-sci-specification)
+- [5. Comparative Analysis](#5-comparative-analysis)
+  - [5.1. Core Evaluation Criteria](#51-core-evaluation-criteria)
+
 ## Executive Summary
 
 This document was created in Autumn 2025 using and AI orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesised and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair. There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actuial specification will be created in Q1 2026 according to this design document.
