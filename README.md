@@ -29,39 +29,37 @@ Content that isn't ready to go live uses `published: false` in frontmatter — t
 
 ## Documentation
 
-### For content editors
+The site has three layers of documentation: **system docs** (how the data pipeline and infrastructure work), **component docs** (reusable elements that appear across pages), and **page docs** (what each page shows and where its data comes from).
+
+### Getting started
 
 - [Content Management (CMS)](docs/cms.md) — logging in, publishing workflow, draft mode, translations
-- [Articles & Tagging](docs/how-to-featured-articles.md) — writing articles, frontmatter, tags, featured flag, carousels
-- [Site Operations FAQ](docs/site-operations.md) — how to add logos, members, people, standards, press mentions, assemblies, and more
+- [CLAUDE.md](CLAUDE.md) — full project context: architecture, component library, design tokens
 
-### For developers
+### System
 
-- [CLAUDE.md](CLAUDE.md) — full project context: architecture, component library, design tokens, data pipeline
-- [Governance & Leadership](docs/how-to-governance-leadership.md) — Notion data sources, how the governance page works
-- [Google Analytics](docs/google-analytics.md) — GA4 setup and implementation
-- [Site Rollout Plan](docs/features/site-rollout.md) — deploying to greensoftware.foundation
+- [Notion data pipeline](docs/notion.md) — databases, output files, assets, refresh process, known limitations
+- [Search (PageFind)](docs/search.md) — static indexing, which pages are indexed, testing locally
+- [Google Analytics](docs/google-analytics.md) — GA4 setup, custom events, testing
 
-### Article tags reference
+### Components
 
-Add tags to an article's frontmatter to make it appear on page carousels:
+- [Logo marquee](docs/components/logo-marquee.md) — data source, sort order, how to add/hide logos
+- [Article carousels](docs/components/article-carousels.md) — tags reference, featured flag, 3-article minimum
+- [People & teams](docs/components/people.md) — people.json structure, TeamGrid, photo resolution
 
-| Tag | Page |
-| --- | --- |
-| `standards` | /standards/ |
-| `sci` | /standards/sci/ |
-| `sci-web` | /standards/sci-web/ |
-| `sci-ai` | /standards/sci-ai/ |
-| `rtc` | /standards/rtc/ |
-| `see` | /standards/see/ |
-| `soft` | /standards/soft/ |
-| `wdpc` | /standards/wdpc/ |
-| `policy` | /policy/ |
-| `research` | /policy/ |
-| `community` | /community/ |
-| `education` | /education/ |
+### Pages
 
-The homepage carousel uses the `featured: true` flag instead of tags. Carousels only appear when 3+ articles match.
+- [Standards](docs/pages/standards.md) — individual standard pages (SCI, RTC, etc.)
+- [Press & Media](docs/pages/press.md) — member counts, leadership, timeline, press mentions
+- [Governance](docs/pages/governance.md) — steering committee, staff, chairs/leads, org leads
+- [Policy & Research](docs/pages/policy.md) — engagement, partnerships, research papers
+- [Community](docs/pages/community.md) — podcasts, meetups, events
+- [Education](docs/pages/education.md) — courses, learning resources
+- [Membership](docs/pages/membership.md) — logo marquee, fee tables, member stories
+- [Stories](docs/pages/stories.md) — frontmatter schema, contributor photos, related articles
+- [Assemblies](docs/pages/assemblies.md) — status values, application form, completed assemblies
+- [Static pages](docs/pages/static-pages.md) — About, Brand, Contact, Certification, Newsletter
 
 ## Key directories
 
