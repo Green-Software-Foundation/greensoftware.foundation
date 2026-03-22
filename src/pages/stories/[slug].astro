@@ -9,11 +9,12 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import { Card } from "@/components/ui/card";
 import Image from "@/components/image.astro";
 import { navItems } from "@/lib/nav-items";
+import DraftBanner from "@/components/draft-banner.astro";
 import membersData from "@/data/members.json";
 import peopleData from "@/data/people.json";
 
 export async function getStaticPaths() {
-  const stories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.timeline);
+  const stories = await getCollection("stories", (s) => !!s.data.timeline);
   return stories.map((story) => ({
     params: { slug: story.id },
     props: { story },
@@ -65,7 +66,7 @@ const resolvedContributors = contributors.map((c: any) => {
 });
 ---
 
-<Layout title={`${title} — GSF Member Story`} description={summary} ogImage={story.data.mainImage}>
+<Layout title={`${title} — GSF Member Story`} description={summary} ogImage={story.data.mainImage} noindex={story.data.published === false}>
   <Navbar
     navItems={navItems}
     logoSrc="/assets/gsf-logo-full.svg"
@@ -76,8 +77,9 @@ const resolvedContributors = contributors.map((c: any) => {
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
+  {story.data.published === false && <DraftBanner />}
 
-  <div data-pagefind-body>
+  <div {...story.data.published !== false && { "data-pagefind-body": "" }}>
   <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
   <div class="bg-primary-darker text-white">
     <div class="container pt-10 pb-16 md:pt-14 md:pb-20">

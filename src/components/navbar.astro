@@ -48,11 +48,15 @@ const {
   githubUrl = "https://github.com/Green-Software-Foundation/",
   showSearch = false,
 } = Astro.props;
+
+const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production";
 ---
 
-<div class="bg-primary-dark text-white text-center text-xs py-1.5 px-4" data-pagefind-ignore>
-  This is a development preview. Visit <a href="https://greensoftware.foundation" class="underline font-bold hover:text-accent-light">greensoftware.foundation</a> for the official site.
-</div>
+{!isProduction && (
+  <div class="bg-primary-dark text-white text-center text-xs py-1.5 px-4" data-pagefind-ignore>
+    This is a development preview. Visit <a href="https://greensoftware.foundation" class="underline font-bold hover:text-accent-light">greensoftware.foundation</a> for the official site.
+  </div>
+)}
 <header class="container" data-pagefind-ignore>
   {topBar !== "none" && (
     <div class="border-b border-primary-lighter pb-3">

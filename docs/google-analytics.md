@@ -53,7 +53,7 @@ Subdomains like `wiki.greensoftware.foundation`, `assemblies.greensoftware.found
 
 ## Testing
 
-### On any domain (including localhost or greensoftware.org dev site)
+### On any domain (including localhost or deploy previews)
 
 GA4 receives events regardless of which domain sends them. The data stream URL doesn't need to match.
 

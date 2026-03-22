@@ -11,7 +11,7 @@
 - [x] **Restored missing English articles** — recovered 3 articles from DatoCMS (what-is-green-software, 10-recommendations, gsf-global-summit-2022-tokyo) that were mislabelled during migration
 - [x] **Article language switcher** — pill-style language badges on articles with translations
 - [x] **Normalised translated article frontmatter** — fixed author data, broken DatoCMS LinkedIn URLs, added missing `authors` to JA translations
-- [x] **Site URL fix** — updated `astro.config.mjs` site from `greensoftware.org` to `greensoftware.foundation`
+- [x] **Site URL fix** — updated `astro.config.mjs` site to `greensoftware.foundation`
 
 - [x] **Published flags for stories & articles** — added `published` boolean to frontmatter to exclude unpublished content
 - [x] **Domain: .org → .foundation** — updated site URL, links, and references

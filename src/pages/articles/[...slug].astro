@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import NewsletterSignup from "@/components/newsletter-signup.astro";
+import DraftBanner from "@/components/draft-banner.astro";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
@@ -35,7 +36,7 @@ export async function getStaticPaths() {
     return lang === "en" ? `/articles/${slug}/` : `/articles/${lang}/${slug}/`;
   };
 
-  const articles = await getCollection("articles", (a) => a.data.published !== false);
+  const articles = await getCollection("articles");
 
   // Group articles by their base slug to find translations
   const translationGroups = new Map<string, { lang: string; path: string; title: string }[]>();
@@ -82,6 +83,7 @@ const isEnglish = article.data.lang === "en";
   description={seoDescription}
   ogImage={article.data.mainImage?.src}
   ogType="article"
+  noindex={article.data.published === false}
   article={{
     publishedTime: article.data.date.toISOString(),
     authors: authorNames,
@@ -111,7 +113,8 @@ const isEnglish = article.data.lang === "en";
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
-  <article class="bg-accent-lightest-2" {...isEnglish && { "data-pagefind-body": "" }}>
+  {article.data.published === false && <DraftBanner />}
+  <article class="bg-accent-lightest-2" {...isEnglish && article.data.published !== false && { "data-pagefind-body": "" }}>
     <!-- Wide header section -->
     <div class="container pt-10 pb-12 md:pt-14 md:pb-16">
       <div class="max-w-4xl mx-auto">

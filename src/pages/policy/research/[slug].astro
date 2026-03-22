@@ -7,10 +7,11 @@ import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
 import { getCollection, render } from "astro:content";
+import DraftBanner from "@/components/draft-banner.astro";
 import projects from "@/data/projects.json";
 
 export async function getStaticPaths() {
-  const papers = await getCollection("research", (p) => p.data.published !== false);
+  const papers = await getCollection("research");
   return papers.map((paper) => ({
     params: { slug: paper.id },
     props: { paper },
@@ -47,6 +48,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
 <Layout
   title={`${paper.data.title} — Green Software Foundation`}
   description={paper.data.summary}
+  noindex={paper.data.published === false}
 >
   <Navbar
     navItems={navItems}
@@ -58,6 +60,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
     ctaText="Discuss your challenges"
     ctaHref="/membership/"
   />
+  {paper.data.published === false && <DraftBanner />}
 
   <!-- Hero (matching story page pattern) -->
   <div class="bg-primary-darker text-white">
@@ -119,7 +122,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
   </section>
 
   <!-- Content with optional TOC sidebar -->
-  <div class="bg-white" data-pagefind-body>
+  <div class="bg-white" {...paper.data.published !== false && { "data-pagefind-body": "" }}>
     <div class="container py-16 md:py-20">
       <div class="mx-auto max-w-6xl flex gap-12">
         <!-- Main content -->
