@@ -1,6 +1,5 @@
 ---
 import { Button } from "@/components/ui/button";
-import Image from "@/components/image.astro";
 
 interface CTA {
   text: string;
@@ -106,12 +105,13 @@ const {
         )}
       </div>
       <div class="flex items-center justify-center">
-        <Image
+        <img
           src={imageSrc}
           alt={imageAlt}
           class="shrink-0 object-cover w-full max-w-md"
           loading="eager"
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          fetchpriority="high"
+          decoding="async"
         />
       </div>
     </div>
