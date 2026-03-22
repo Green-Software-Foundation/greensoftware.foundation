@@ -152,15 +152,19 @@
 
 /* Prose overrides — brand the typography plugin with GSF tokens */
 .prose {
-  --tw-prose-body: var(--primary-dark);
+  --tw-prose-body: #3c3c3c;
   --tw-prose-headings: var(--primary);
   --tw-prose-links: var(--primary);
-  --tw-prose-bold: var(--primary-dark);
+  --tw-prose-bold: #1e1e1e;
   --tw-prose-quotes: var(--primary-dark);
   --tw-prose-quote-borders: var(--accent);
   --tw-prose-code: var(--primary-dark);
   --tw-prose-th-borders: var(--border);
   --tw-prose-td-borders: var(--border);
+
+  & :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    font-weight: 800;
+  }
 }
 
 /* Heading anchors — visible on hover */
