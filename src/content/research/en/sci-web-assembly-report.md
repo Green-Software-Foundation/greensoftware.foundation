@@ -1,10 +1,11 @@
 ---
-title: "SCI for Web — Assembly Report"
+title: "SCI for Web Assembly Report"
 subtitle: "Consensus Design Document for Measuring Web Application Carbon Intensity"
 date: 2026-02-01
 published: true
 status: published
 type: report
+version: "1.0"
 summary: >
   The full consensus design document for SCI for Web, created by 14 GSF members through an AI-assisted assembly process. Covers scope definition, target personas, and implementation practices.
 workingGroup: software-wg
@@ -14,11 +15,26 @@ authors:
     org: Green Software Foundation
 ---
 
-**Version**: 1.0 | **Published**: February 2026
-
 This document was created in Autumn 2025 using an AI-orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesised and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair.
 
 There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actual specification will be created in Q1 2026 according to this design document.
+
+| | |
+| ----------- | ----------- |
+| Chris Adams 🪑 | Green Web Foundation |
+| Alekh Gupta | Google |
+| Alexander Dawson | ClimateAction.tech |
+| Camille Fassett | WattTime |
+| Daniel Schien | University of Bristol |
+| Facundo Armas | Globant |
+| Florent Morel | Amadeus |
+| Francesco Fullone | GrUSP |
+| Mathias Uhlitzsch | Evosoft |
+| Nisha Ramachandra | Accenture |
+| Raghava Rao Battina | HSBC |
+| Riccardo Pomato | Microsoft |
+| Ryan Sholin | Electricity Maps |
+| Thiago Falcao Silva | NTT DATA |
 
 ---
 
@@ -162,5 +178,3 @@ Energy reduction practices to encourage:
 ---
 
 *This design document was produced through the AI-assisted assembly process. The actual SCI for Web specification will be developed in Q1 2026 based on these consensus positions.*
-
-*Assembly participants: Alekh Gupta (Google), Alexander Dawson (ClimateAction.tech), Asim Hussain (GSF), Camille Fassett (WattTime), Chris Adams (Green Web Foundation), Daniel Schien (University of Bristol), Facundo Armas (Globant), Florent Morel (Amadeus), Francesco Fullone (GrUSP), Mathias Uhlitzsch (Evosoft), Nisha Ramachandra (Accenture), Raghava Rao Battina (HSBC), Riccardo Pomato (Microsoft), Ryan Sholin (Electricity Maps), and Thiago Falcao Silva (NTT DATA).*

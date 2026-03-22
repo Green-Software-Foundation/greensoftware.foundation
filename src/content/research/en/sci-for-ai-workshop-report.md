@@ -1,16 +1,17 @@
 ---
-title: "SCI for AI Workshop Report"
+title: "SCI for AI Assembly Report"
 subtitle: "Defining the GSF Approach to AI Measurement and Evaluating Existing Metrics"
 date: 2025-07-03
 published: true
 status: published
 type: report
+version: "1.0"
 summary: >
   In early 2025, AI experts from GSF member organisations participated in workshops to define the GSF approach to AI measurement and evaluate existing metrics. This report shares the outcomes that laid the groundwork for the SCI for AI specification.
 workingGroup: software-wg
 tags: ["sci-ai", "standards"]
 authors:
-  - name: Software Standards Working Group
+  - name: SCI for AI Working Group
     org: Green Software Foundation
 ---
 
@@ -22,7 +23,28 @@ SCI for AI builds on the core principles of the SCI specification. However, it a
 
 In early 2025, AI experts from GSF member organizations participated in a series of workshops hosted by the Software Standards Working Group. These sessions were designed to define the GSF approach to AI measurement as well as evaluate existing metrics. The outcomes laid the groundwork for creating the SCI for AI specification, which extends the Software Carbon Intensity (SCI) specification with AI-specific considerations—a major step toward addressing the complexities of measuring AI-related carbon emissions. The material presented in this document reflects a consensus among participating members:
 
-Angel Cataron (Siemens), Brian O'Kelley (Scope3), Charlene Wong (IMDA Singapore), Daniel Lazaro (Aveva), Daniel Schien (University of Bristol), Facundo Armas (Globant), Henry Richardson (WattTime), Hongliu CAO (Amadeus), Jacques Kluska (Schneider Electric), James Dietrich (Electricity Maps), Jose Alejandro Sanchez (ACIS), Lena Hoffmann (German Informatics Society), Navveen Balani (Accenture), Noah Broestl (BCG), Samuel Rincé (Boavitza), Shiv Asthana (Trustwise), Stuart Sweeney Smith (Google), Tamar Eilam (IBM), Tammy McClellan (Microsoft), Vinjosh Varghese (UBS).
+| | |
+| ----------- | ----------- |
+| Navveen Balani 🪑 | Accenture |
+| Angel Cataron | Siemens |
+| Brian O’Kelley | Scope3 |
+| Charlene Wong | IMDA Singapore |
+| Daniel Lazaro | Aveva |
+| Daniel Schien | University of Bristol |
+| Facundo Armas | Globant |
+| Henry Richardson | WattTime |
+| Hongliu Cao | Amadeus |
+| Jacques Kluska | Schneider Electric |
+| James Dietrich | Electricity Maps |
+| Jose Alejandro Sanchez | ACIS |
+| Lena Hoffmann | German Informatics Society |
+| Noah Broestl | BCG |
+| Samuel Rincé | Boavizta |
+| Shiv Asthana | Trustwise |
+| Stuart Sweeney Smith | Google |
+| Tamar Eilam | IBM |
+| Tammy McClellan | Microsoft |
+| Vinjosh Varghese | UBS |
 
 Here, we share the key insights and findings, and what’s coming next.
 
@@ -119,7 +141,8 @@ The requirement for highly granular, direct measurements and the current lack of
 
 Requires highly detailed measurement data. Currently, it doesn’t provide an actual case study in the whitepaper.
 
-**⚠️ NOTE Carbon offsets are mentioned as a valid inventory item for the Data Center index** but not mentioned for the Green AI model index–the suggestion is to make decisions based on the jurisdiction you are operating in.
+> [!WARNING]
+> Carbon offsets are mentioned as a valid inventory item for the Data Center index but not mentioned for the Green AI model index — the suggestion is to make decisions based on the jurisdiction you are operating in.
 
 ### [EcoLogits](https://ecologits.ai/latest/methodology/llm_inference/)
 
@@ -318,15 +341,16 @@ The SCI specification includes “embodied emissions” in the boundary; it also
 
 Therefore, the SCI for AI will not only provide a statement outlining what to include but also the exact equation that illustrates how to allocate the emissions to a functional unit, e.g.:
 
-[**M = TE * (TiR/EL) * (RR/ToR)**](https://sci.greensoftware.foundation/)
+$$M = TE \times \frac{TiR}{EL} \times \frac{RR}{ToR}$$
 
-TiR = Time Reserved: the length of time the hardware is reserved for use by the software.
+Where:
 
-EL = Expected Lifespan: the anticipated time that the equipment will be installed.
+- $TiR$ = Time Reserved: the length of time the hardware is reserved for use by the software
+- $EL$ = Expected Lifespan: the anticipated time that the equipment will be installed
+- $RR$ = Resources Reserved: the number of resources reserved for use by the software
+- $ToR$ = Total Resources: the total number of resources available
 
-RR = Resources Reserved: the number of resources reserved for use by the software.
-
-ToR = Total Resources: the total number of resources available.
+See the [SCI specification](https://sci.greensoftware.foundation/) for the full methodology.
 
 Given the significant emissions associated with model development (training, testing, and evaluation), these stages should be included in the calculation of embodied emissions. A clear apportionment method is needed, as attribution is more complex than for hardware.
 

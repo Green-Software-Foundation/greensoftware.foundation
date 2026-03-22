@@ -7,7 +7,8 @@ status: published
 type: report
 summary: >
   In a series of workshops in 2024, members of the GSF Green AI Committee defined Green AI, assessed its environmental impacts across the AI lifecycle, and outlined key actions for AI sustainability.
-workingGroup: green-ai-committee
+version: "1.0"
+workingGroup: gaic
 tags: ["research", "sci-ai", "standards"]
 authors:
   - name: Green AI Committee
@@ -39,7 +40,8 @@ The Green AI Committee (GAIC) is formed of these members:
 
 ## What Is Green AI?
 
-***Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.***
+> [!NOTE]
+> **Green AI** focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
 
 In their approach to establishing the definition, the committee prioritized the following:
 

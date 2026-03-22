@@ -182,7 +182,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
         </style>
 
         <!-- Sticky TOC sidebar (desktop only) -->
-        {tocItems.length > 3 && (
+        {tocItems.length >= 3 && (
           <aside class="hidden xl:block w-56 shrink-0">
             <nav class="sticky top-8" aria-label="Table of contents">
               <p class="text-[10px] font-medium uppercase tracking-wider text-gray-darker mb-3">On this page</p>
@@ -206,7 +206,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
   </div>
 
   <!-- Mobile TOC (floating button) -->
-  {tocItems.length > 3 && (
+  {tocItems.length >= 3 && (
     <div class="xl:hidden fixed bottom-4 right-4 z-40">
       <details class="group">
         <summary class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg cursor-pointer hover:bg-primary-dark transition-colors list-none [&::-webkit-details-marker]:hidden">
