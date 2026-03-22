@@ -21,7 +21,7 @@ There were 14 participants in total, but the maximum number of active participan
 
 | | |
 | ----------- | ----------- |
-| Chris Adams 🪑 | Green Web Foundation |
+| Chris Adams (Chair) | Green Web Foundation |
 | Alekh Gupta | Google |
 | Alexander Dawson | ClimateAction.tech |
 | Camille Fassett | WattTime |

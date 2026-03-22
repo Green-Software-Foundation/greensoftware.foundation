@@ -25,7 +25,7 @@ In early 2025, AI experts from GSF member organizations participated in a series
 
 | | |
 | ----------- | ----------- |
-| Navveen Balani 🪑 | Accenture |
+| Navveen Balani (Chair) | Accenture |
 | Angel Cataron | Siemens |
 | Brian O’Kelley | Scope3 |
 | Charlene Wong | IMDA Singapore |

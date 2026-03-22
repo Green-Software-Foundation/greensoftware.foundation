@@ -25,7 +25,7 @@ The Green AI Committee (GAIC) is formed of these members:
 
 |      |  |
 | ----------- | ----------- |
-| Sanjay Podder 🪑  | Accenture
+| Sanjay Podder (Chair)  | Accenture
 |Thomas Lewis🪑| Microsoft |
 | Arun Ravindran | BCG |
 | Chris Xie | Futurewei |
@@ -40,8 +40,8 @@ The Green AI Committee (GAIC) is formed of these members:
 
 ## What Is Green AI?
 
-> [!NOTE]
-> **Green AI** focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
+> [!IMPORTANT]
+> **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
 
 In their approach to establishing the definition, the committee prioritized the following:
 
