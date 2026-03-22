@@ -280,6 +280,13 @@ collections:
         widget: string
         i18n: true
 
+      - label: Subtitle
+        name: subtitle
+        widget: string
+        required: false
+        i18n: true
+        hint: "Optional subtitle displayed below the title."
+
       - label: Date
         name: date
         widget: datetime
@@ -296,63 +303,76 @@ collections:
         i18n: duplicate
         hint: "Uncheck to hide this research paper from the site without deleting it."
 
-      - label: Abstract
-        name: abstract
-        widget: text
-        i18n: true
-        hint: "Academic abstract. Concise technical summary of the research."
+      - label: Status
+        name: status
+        widget: select
+        options: [published, draft, in-progress]
+        default: published
+        i18n: duplicate
+
+      - label: Type
+        name: type
+        widget: select
+        options:
+          - { label: "White Paper", value: whitepaper }
+          - { label: "Consultation Response", value: consultation-response }
+          - { label: "Position Paper", value: position-paper }
+        default: whitepaper
+        i18n: duplicate
 
       - label: Summary
         name: summary
         widget: text
         i18n: true
-        hint: "Accessible summary for a general audience (shown in listings)."
+        hint: "Concise summary shown in listings and search results."
 
-      - label: Main Image
-        name: mainImage
-        widget: image
+      - label: Jurisdiction
+        name: jurisdiction
+        widget: string
         required: false
         i18n: duplicate
+        hint: "Geographic scope, e.g. EU, US, Global."
+
+      - label: Framework
+        name: framework
+        widget: string
+        required: false
+        i18n: duplicate
+        hint: "Related framework, e.g. GHG Protocol, CSRD, EU AI Act."
+
+      - label: Working Group
+        name: workingGroup
+        widget: string
+        required: false
+        i18n: duplicate
+        hint: "Slug of the working group (e.g. software-wg, policy-wg). Resolved to a display name from projects.json."
+
+      - label: Version
+        name: version
+        widget: string
+        required: false
+        i18n: duplicate
+
+      - label: Source URL
+        name: sourceUrl
+        widget: string
+        required: false
+        i18n: duplicate
+        hint: "Link to the source document (e.g. GitHub repo)."
 
       - label: Authors
         name: authors
         widget: list
         required: false
-        i18n: true
-        fields:
-          - label: Full Name
-            name: fullName
-            widget: string
-          - label: Role / Title
-            name: role
-            widget: string
-            required: false
-          - label: Organisation
-            name: company
-            widget: string
-            required: false
-          - label: Organisation Website
-            name: companyWebsite
-            widget: string
-            required: false
-          - label: Photo
-            name: photo
-            widget: image
-            required: false
-          - label: Social Media
-            name: socialMedia
-            widget: list
-            required: false
-            fields:
-              - {label: Platform, name: platform, widget: string}
-              - {label: URL, name: link, widget: string}
-
-      - label: Organisations
-        name: organizations
-        widget: list
-        required: false
         i18n: duplicate
-        hint: "Member organisations involved in the research."
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Organisation
+            name: org
+            widget: string
+            required: false
 
       - label: DOI
         name: doi
@@ -368,12 +388,12 @@ collections:
         i18n: duplicate
         hint: "Direct link to download the full paper as PDF."
 
-      - label: Feature on Homepage Carousel
-        name: featured
-        widget: boolean
-        default: false
+      - label: Tags
+        name: tags
+        widget: list
         required: false
         i18n: duplicate
+        hint: "Tags control which page carousels this paper appears in (e.g. sci, policy, research)."
 
       - label: Language
         name: lang
