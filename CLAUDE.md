@@ -8,6 +8,8 @@
 
 **Article links must use `/articles/<slug>/`, NOT `/articles/en/<slug>/`. English is the default language — including `/en/` would break when the site is translated.**
 
+**When changing any page or component, update the relevant documentation in `docs/` before committing.** If you change what's dynamic vs static on a page, update its page doc. If you change how a component works, update its component doc. Documentation must stay in sync with the code.
+
 ## Before Making Any Changes
 
 **Read the documentation first.** Before changing any page or component, you MUST:
