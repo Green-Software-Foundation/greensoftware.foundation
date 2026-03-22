@@ -3,15 +3,43 @@ import Layout from "@/layouts/showcase.astro";
 import { navItems } from "@/lib/nav-items";
 
 import Navbar from "@/components/navbar.astro";
-import Hero from "@/components/hero.astro";
 import CTABanner from "@/components/cta-banner.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 
 import { getCollection } from "astro:content";
 
-const papers = (await getCollection("research", (p) => p.data.published !== false))
+const allPapers = (await getCollection("research", (p) => p.data.published !== false))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const papers = allPapers.filter(p => p.data.type === "paper");
+const reports = allPapers.filter(p => p.data.type === "report");
+const responses = allPapers.filter(p => p.data.type === "response");
+
+const slug = (id: string) => id.startsWith("en/") ? id.slice(3) : id;
+
+const sections = [
+  {
+    type: "paper",
+    label: "Papers",
+    description: "Original research, analysis, and positions authored by the Green Software Foundation. Papers make a case, present findings, or propose a framework.",
+    badge: "bg-primary text-white",
+    items: papers,
+  },
+  {
+    type: "response",
+    label: "Responses",
+    description: "Formal replies to external consultations, regulations, or standards. Written in reaction to someone else's process.",
+    badge: "bg-accent text-primary-darkest",
+    items: responses,
+  },
+  {
+    type: "report",
+    label: "Reports",
+    description: "Documents that record an outcome, process, or state of affairs. Assembly reports, workshop summaries, and annual reviews.",
+    badge: "bg-primary-dark text-white",
+    items: reports,
+  },
+];
 ---
 
 <Layout
@@ -29,42 +57,78 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
     ctaHref="/membership/"
   />
 
-  <Breadcrumb items={[
-    { label: "Home", href: "/" },
-    { label: "Policy & Research", href: "/policy/" },
-    { label: "Publications" },
-  ]} />
-
-  <Hero
-    heading="Research &"
-    headingAccent="Publications"
-    body="Research papers, policy responses, and project reports from the Green Software Foundation's working groups — advancing green software standards and aligning them with global sustainability regulation and frameworks."
-    bgClass="bg-accent-lightest-2"
-    imageSrc="/assets/leading-illustration.svg"
-  />
-
-  <div class="bg-white">
-    <div class="container py-16 md:py-20">
+  <!-- ── Header ─────────────────────────────────────────────────────────────── -->
+  <div class="bg-primary-darker text-white">
+    <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
       <div class="max-w-4xl mx-auto">
-        {papers.length === 0 ? (
-          <p class="text-gray-darker text-lg">No research papers available at this time.</p>
-        ) : (
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/policy/" class="hover:text-white transition-colors">Policy & Research</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80">Publications</li>
+          </ol>
+        </nav>
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Research & Publications</p>
+        <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Papers, reports, and responses
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
+          Research papers, policy responses, and project reports from the Green Software Foundation's working groups — advancing standards and aligning them with global sustainability regulation and frameworks.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Jump nav ────────────────────────────────────────────────────────────── -->
+  <div class="bg-white border-b border-border">
+    <div class="container py-4">
+      <div class="max-w-4xl mx-auto flex flex-wrap items-center gap-3">
+        {sections.map((section) => section.items.length > 0 && (
+          <a
+            href={`#${section.type}`}
+            class={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors hover:opacity-80 ${section.badge}`}
+          >
+            {section.label}
+            <span class="opacity-70">({section.items.length})</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Sections by type ───────────────────────────────────────────────────── -->
+  {sections.map((section) => section.items.length > 0 && (
+    <div id={section.type} class="bg-accent-lightest-2 border-b border-border scroll-mt-16">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <!-- Section heading -->
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <span class={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded ${section.badge}`}>
+                {section.label}
+              </span>
+              <span class="text-sm text-gray-darker">{section.items.length} {section.items.length === 1 ? "publication" : "publications"}</span>
+            </div>
+            <p class="text-primary-dark text-base leading-relaxed max-w-2xl">
+              {section.description}
+            </p>
+          </div>
+
+          <!-- Cards -->
           <div class="grid gap-6">
-            {papers.map((paper) => (
+            {section.items.map((paper) => (
               <a
-                href={`/policy/research/${paper.id.startsWith("en/") ? paper.id.slice(3) : paper.id}/`}
-                class="block rounded-xl border border-border bg-accent-lightest-2 p-6 md:p-8 hover:border-primary-lighter hover:shadow-md transition-all group"
+                href={`/policy/research/${slug(paper.id)}/`}
+                class="block rounded-xl border border-border bg-white p-6 md:p-8 hover:border-primary-lighter hover:shadow-md transition-all group"
               >
                 <div class="flex items-center gap-3 mb-3">
-                  <span class={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded ${
-                    paper.data.type === "paper"
-                      ? "bg-primary text-white"
-                      : paper.data.type === "report"
-                        ? "bg-primary-dark text-white"
-                        : "bg-accent text-primary-darkest"
-                  }`}>
-                    {{ paper: "Paper", response: "Response", report: "Report" }[paper.data.type] || paper.data.type}
-                  </span>
                   {paper.data.jurisdiction && (
                     <span class="text-xs font-semibold text-gray-darker">{paper.data.jurisdiction}</span>
                   )}
@@ -87,10 +151,20 @@ const papers = (await getCollection("research", (p) => p.data.published !== fals
               </a>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
-  </div>
+  ))}
+
+  {allPapers.length === 0 && (
+    <div class="bg-accent-lightest-2">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-gray-darker text-lg">No publications available at this time.</p>
+        </div>
+      </div>
+    </div>
+  )}
 
   <CTABanner
     heading="Want to get involved?"
