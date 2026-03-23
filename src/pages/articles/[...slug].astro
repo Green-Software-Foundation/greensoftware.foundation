@@ -89,6 +89,7 @@ const isEnglish = article.data.lang === "en";
     authors: authorNames,
   }}
 >
+  <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",

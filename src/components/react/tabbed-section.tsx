@@ -182,7 +182,7 @@ export const TabbedSection = (props: Props) => {
               } as React.CSSProperties
             }
           >
-            <p className="mb-2 text-center text-xs text-primary-lighter/60">
+            <p className="mb-2 text-center text-xs text-primary-lighter">
               Built with
             </p>
             <div className="relative flex items-center overflow-hidden">

@@ -1,6 +1,5 @@
 ---
 import { Button } from "@/components/ui/button";
-import Image from "@/components/image.astro";
 
 interface CTA {
   text: string;
@@ -27,8 +26,6 @@ interface Props {
   imageAlt?: string;
   /** Background class */
   bgClass?: string;
-  /** Show animated scroll indicator at the bottom (teardrop Lottie) */
-  scrollIndicator?: boolean;
   /** Section ID for anchor linking */
   id?: string;
   /** Small label shown above the heading (e.g. working group name) */
@@ -47,7 +44,6 @@ const {
   imageSrc = "/assets/hero-illustration.svg",
   imageAlt = "Hero illustration",
   bgClass = "bg-accent-lightest-2",
-  scrollIndicator = false,
   id = "overview",
   badge,
   badges = [],
@@ -106,44 +102,15 @@ const {
         )}
       </div>
       <div class="flex items-center justify-center">
-        <Image
+        <img
           src={imageSrc}
           alt={imageAlt}
           class="shrink-0 object-cover w-full max-w-md"
           loading="eager"
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          fetchpriority="high"
+          decoding="async"
         />
       </div>
     </div>
-    {scrollIndicator && (
-      <div class="mt-10 hidden lg:flex lg:items-center lg:justify-center">
-        <canvas id="hero-decor" style="width: 36px; height: 70px;"></canvas>
-      </div>
-    )}
   </div>
 </section>
-{scrollIndicator && (
-  <script>
-    const canvas = document.querySelector("#hero-decor") as HTMLCanvasElement | null;
-    if (canvas) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(async (entry) => {
-            if (entry.isIntersecting) {
-              observer.disconnect();
-              const { DotLottie } = await import("@lottiefiles/dotlottie-web");
-              new DotLottie({
-                autoplay: true,
-                loop: true,
-                canvas,
-                src: "/assets/hero-decor.lottie",
-              });
-            }
-          });
-        },
-        { rootMargin: "200px" },
-      );
-      observer.observe(canvas);
-    }
-  </script>
-)}
