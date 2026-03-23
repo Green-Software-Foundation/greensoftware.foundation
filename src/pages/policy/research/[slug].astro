@@ -54,6 +54,7 @@ const tocItems = headings.filter(h => h.depth === 2 && h.text !== "Table of Cont
   description={paper.data.summary}
   noindex={paper.data.published === false}
 >
+  <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" />
   <Navbar
     navItems={navItems}
     logoSrc="/assets/gsf-logo-full.svg"
