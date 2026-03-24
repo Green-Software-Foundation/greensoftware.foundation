@@ -1,6 +1,6 @@
 # Standards Pages
 
-Individual standards pages (SCI, RTC, WDPC, etc.) at `/standards/<slug>/`.
+Individual standards pages (SCI, RTC, WDPC, Open19, etc.) at `/standards/<slug>/`.
 
 **Example:** `src/pages/standards/sci/index.astro`
 
@@ -57,7 +57,16 @@ Most page content is hardcoded in each page's Astro file:
 - **Change lifecycle stage or leads** — edit in Notion PWCIs DB, run `npm run fetch-notion`
 - **Add articles to the carousel** — add the tag (e.g. `"sci"`) to the article's frontmatter `tags` array (see [article carousels doc](../components/article-carousels.md))
 - **Edit page copy** — modify the Astro file directly (e.g. `src/pages/standards/sci/index.astro`)
-- **Create a new standards page** — create a new Astro file; the data in `projects.json` is generated automatically from Notion but the page template is a code change
+- **Create a new standards page** — create a new Astro file; the data in `projects.json` is generated automatically from Notion but the page template is a code change. Also add the slug to `src/pages/standards/index.astro` (`standardDefs` array) and add a nav entry in `src/lib/nav-items.ts` under the appropriate Hardware/Software/Process section.
+
+## Hardware Standards Pages
+
+Currently two hardware standards have dedicated pages:
+
+- **WDPC** — `src/pages/standards/wdpc/index.astro` at `/standards/wdpc/`
+- **Open19** — `src/pages/standards/open19/index.astro` at `/standards/open19/`
+
+Both appear under the Hardware section in the nav (`src/lib/nav-items.ts`) and in the standards index (`src/pages/standards/index.astro`). Open19 uses WDPC's icon assets as placeholders — dedicated Open19 SVGs should be added to `public/assets/standards/open19/` once available. Articles tagged `"open19"` will automatically appear in the page carousel.
 
 ## Lifecycle Stages
 

@@ -1,0 +1,472 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CardGrid from "@/components/card-grid.astro";
+import Timeline from "@/components/timeline.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+import ArticleCarousel from "@/components/article-carousel.astro";
+
+import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+
+const open19Project = projects.find(p => p.slug === "open19");
+const parentWg = projects.find(p => p.name === open19Project?.parent);
+
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("open19"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+  }));
+
+const GSF_OPEN19_REPO = "https://github.com/Green-Software-Foundation/open19";
+const HARDWARE_WG = "https://github.com/Green-Software-Foundation/hardware-standards-wg";
+const MEMBERSHIP_CTA = "https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy";
+---
+
+<Layout
+  title="Open19 — Open Standard for Data Centre Hardware | Green Software Foundation"
+  description="Open19 standardises rack and server form factors within the 19-inch rack footprint, enabling multi-vendor flexibility, simplified deployment, and sustainable hardware innovation."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+    ctaText="Discuss your challenges"
+    ctaHref="/membership/"
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "Open19" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : [{ text: "A Hardware Standards Project" }]),
+      ...(open19Project?.lifecycle ? [{ text: open19Project.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Open Standard for"
+    headingAccent="Data Centre Hardware"
+    subtitle="Standardise rack infrastructure, reduce deployment complexity, and enable sustainable hardware innovation across the data centre ecosystem."
+    body="Open19 defines standardised form factors for servers, power delivery, and cooling within any 19-inch rack — enabling plug-and-play hardware from multiple vendors, eliminating cabling complexity, and providing the foundation for next-generation liquid-cooled, high-density compute."
+    ctas={[
+      { text: "View the Specification", variant: "primary", href: GSF_OPEN19_REPO },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/wdpc/hero-illustration.svg"
+    imageAlt="Open19 illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with consensus from GSF member organisations"
+  />
+
+  <!-- Plain-English Explainer -->
+  <TextBlock
+    heading="The Universal Cabinet — and the Standard it Was Missing"
+    body="The 19-inch rack is the near-universal server cabinet format used in data centres around the world. Despite this common physical footprint, servers, power, and cabling have historically been proprietary — meaning hardware from one vendor rarely connects cleanly with gear from another. Open19 fills that gap. Think of it like USB for data centre infrastructure: it defines a common connector contract for power, data, and cooling so that any compliant server brick slides into any compliant rack and works immediately — without bespoke cabling or vendor lock-in."
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Origin & History -->
+  <Timeline
+    heading="A Standard with a Track Record"
+    body="Open19 has been refined over nearly a decade of real-world deployments, evolving from a single-company proposal into an industry-wide open standard now stewarded by the Green Software Foundation."
+    items={[
+      {
+        date: "2016",
+        description: "<strong>Born at LinkedIn</strong> — LinkedIn developed and open-sourced the initial Open19 specification — designed to standardise 19-inch rack hardware and reduce deployment complexity at hyperscale.",
+        completed: true,
+      },
+      {
+        date: "2017",
+        description: "<strong>Open19 Foundation</strong> — The Open19 Foundation was created with founding members including Flex, GE Digital, Hewlett Packard Enterprise, and Vapor IO to broaden the spec beyond a single company.",
+        completed: true,
+      },
+      {
+        date: "2021",
+        description: "<strong>Linux Foundation</strong> — Open19 joined the Linux Foundation, gaining neutral governance and accelerating adoption across telecoms, colocation providers, and cloud-scale operators.",
+        completed: true,
+      },
+      {
+        date: "2023",
+        description: "<strong>SSIA & V2 Release</strong> — Rebranded as the Sustainable and Scalable Infrastructure Alliance (SSIA), the project released V2 in December 2023 — adding 48V native power and pluggable liquid cooling.",
+        completed: true,
+      },
+      {
+        date: "2025",
+        description: "<strong>Green Software Foundation</strong> — Open19 moved under the Green Software Foundation's Hardware Standards Working Group, explicitly aligning the standard with sustainability as a primary design criterion.",
+        current: true,
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- What is Open19? -->
+  <FeatureGrid
+    heading="What is *Open19*?"
+    body="Open19 is an open hardware specification that standardises server, storage, and networking form factors within the universal 19-inch rack footprint — removing proprietary barriers and unlocking a competitive multi-vendor ecosystem. Critically, the specification constrains only the physical envelope, power interfaces, and network connectors — never the internal components — so vendors retain full freedom to differentiate on processors, memory, storage, and GPUs."
+    columns={2}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/standardized-icon.svg",
+        title: "Standardised Brick Form Factors",
+        description: "Server 'bricks' are standardised half-width and full-width modules that slot into any Open19 cage. There are no constraints on internal components — vendors innovate freely on processors, memory, storage, and GPUs within the form factor.",
+      },
+      {
+        icon: "/assets/standards/wdpc/realtime-icon.svg",
+        title: "Blind-Mate Connectors",
+        description: "Power and data connections complete automatically on insertion — no rear-of-rack cabling once the cage is installed. Each brick receives 50 GbE networking (with a 200 GbE pathway) via standardised switch modules, making deployment as simple as sliding hardware into a slot.",
+      },
+      {
+        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
+        title: "Modular Power Architecture",
+        description: "Standardised 9.6 kW and 19.2 kW power shelves accept varied AC or DC inputs. V2 introduces native 48V DC distribution, eliminating inefficient voltage conversion stages and reducing energy waste at the infrastructure level.",
+      },
+      {
+        icon: "/assets/standards/wdpc/renewable-icon.svg",
+        title: "Liquid Cooling Ready",
+        description: "V2 adds a pluggable liquid cooling standard alongside air cooling, enabling direct-to-chip and immersion approaches. Brick density scales to 3.5 kW — up from 400 W in V1 — meeting the thermal demands of modern AI workloads.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Why Open19 Matters -->
+  <TextBlock
+    heading="Why *Open19* Matters"
+    body="As data centres face escalating power densities from AI workloads and increasing pressure to operate sustainably, the need for flexible, efficient, open hardware infrastructure has never been greater."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    body="The data centre industry has long suffered from proprietary lock-in, complex cabling requirements, and significant labour costs during hardware installation. Open19 addresses these challenges directly: by standardising the physical and electrical interfaces between servers and racks, it enables a competitive multi-vendor ecosystem where operators are not tied to a single supplier. This interoperability accelerates procurement cycles, simplifies maintenance, and allows operators to adopt the best available technology regardless of brand — a foundation for building modern, agile, sustainable infrastructure."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/wdpc/cost-icon.svg",
+        description: '<span class="font-extrabold">Cost Reduction</span> — target 50% reduction in common components such as cables and PDUs through standardised interfaces',
+      },
+      {
+        icon: "/assets/standards/wdpc/realtime-icon.svg",
+        description: '<span class="font-extrabold">Faster Deployment</span> — slide-in brick installation with automatic connections dramatically reduces rack-up time and human error',
+      },
+      {
+        icon: "/assets/standards/wdpc/standardized-icon.svg",
+        description: '<span class="font-extrabold">Vendor Flexibility</span> — multi-vendor interoperability means competitive procurement and no single-source dependency',
+      },
+      {
+        icon: "/assets/standards/wdpc/infra-icon.svg",
+        description: '<span class="font-extrabold">Retrofit Friendly</span> — works within existing 19-inch rack infrastructure with no forklift upgrade required',
+      },
+      {
+        icon: "/assets/standards/wdpc/renewable-icon.svg",
+        description: '<span class="font-extrabold">Future-Ready</span> — 48V native power and liquid cooling support in V2 positions infrastructure for high-density AI workloads',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/wdpc/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    body="Open19 is designed with sustainability as a core principle. Native 48V DC power distribution eliminates the efficiency losses associated with multiple voltage conversion stages, directly reducing energy waste. The V2 liquid cooling standard enables rack densities previously requiring custom proprietary solutions, allowing more compute per footprint and reducing the cooling overhead that accounts for a significant share of data centre energy consumption. By standardising these efficiencies, Open19 makes sustainable infrastructure practices accessible to operators of any scale — from edge deployments to hyperscale clouds."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- V2 Platform Highlight Card -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/wdpc/mission-card-up-decor.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">V1 → V2: What Changed</h3>
+          <p class="mt-3 text-base text-muted-foreground md:mt-4">
+            Released December 2023. V2 remains physically compatible with V1 racks — existing 19-inch infrastructure does not need replacement.
+          </p>
+        </div>
+        <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {[
+            {
+              label: "Per-brick power",
+              v1: "400 W · 12V DC",
+              v2: "3.5 kW · 48V DC native",
+            },
+            {
+              label: "Cooling",
+              v1: "Air cooling only",
+              v2: "Air + pluggable liquid cooling (blind-mate)",
+            },
+            {
+              label: "Networking",
+              v1: "100 Gbps baseline",
+              v2: "50 GbE per brick · 200 GbE pathway",
+            },
+          ].map((row) => (
+            <div class="rounded-2xl border bg-white/60 p-6 text-left">
+              <p class="text-xs font-bold uppercase tracking-widest text-muted-foreground">{row.label}</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <div class="flex items-start gap-2">
+                  <span class="mt-0.5 rounded bg-accent-lighter px-1.5 py-0.5 text-xs font-bold">V1</span>
+                  <span class="text-sm">{row.v1}</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="mt-0.5 rounded bg-primary px-1.5 py-0.5 text-xs font-bold text-white">V2</span>
+                  <span class="text-sm font-medium">{row.v2}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Building Blocks -->
+  <FeatureGrid
+    heading="The *Open19* Platform"
+    body="Four standardised building blocks that together eliminate proprietary lock-in and enable multi-vendor innovation at every layer of rack infrastructure."
+    columns={4}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-1.svg",
+        title: "Server Bricks",
+        description: "Half-width and full-width modules housing compute, storage, or networking. No constraints on internal components — innovate freely within the form factor.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-2.svg",
+        title: "Brick Cages",
+        description: "Sheet metal structures housing arrays of bricks with pre-arranged power and network locations. Available in 8U and 12U heights, fitting any 19-inch rack.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-3.svg",
+        title: "Power Shelves",
+        description: "9.6 kW and 19.2 kW shelves accepting AC or DC input. V2 adds 48V native distribution for optimal conversion efficiency at high densities.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-4.svg",
+        title: "Cooling Systems",
+        description: "Air cooling baseline with V2's pluggable liquid cooling standard, enabling direct-to-chip and immersion cooling approaches for next-generation density.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Open19 Audience -->
+  <CardGrid
+    heading="*Open19* Audience"
+    columns={3}
+    cards={[
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-1.svg",
+        icon: "/assets/standards/wdpc/blog-developers-icon.svg",
+        title: "Data Centre Operators",
+        description: "",
+        bodyHtml: "Open19 transforms your procurement strategy. With standardised interfaces across vendors, you gain true hardware flexibility — source the best brick for each workload without rack redesign.<br/><br/>V2's liquid cooling support prepares your infrastructure for the next wave of compute density, without replacing existing 19-inch rack investments.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-2.svg",
+        icon: "/assets/standards/wdpc/blog-business-icon.svg",
+        title: "Hardware Vendors",
+        description: "",
+        bodyHtml: "Build once, deploy anywhere. The Open19 specification defines a clear interface contract, letting you focus engineering investment on differentiating your product rather than proprietary connector schemes.<br/><br/>A single compliant design reaches every Open19-compatible deployment worldwide — from edge to hyperscale.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-3.svg",
+        icon: "/assets/standards/wdpc/blog-sustainability-icon.svg",
+        title: "Sustainability Teams",
+        description: "",
+        bodyHtml: "Open19 turns hardware efficiency from a vendor promise into a verifiable standard. Native 48V power and liquid cooling reduce energy waste at the infrastructure level, giving you a reliable baseline for emissions measurement and reporting.<br/><br/>Standardised efficiency means comparable data across your fleet — essential for credible sustainability disclosures.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Project Leadership -->
+  <section class="pb-12 md:pb-16 lg:pb-20">
+    <div class="container">
+      <div class="grid auto-cols-fr grid-cols-1 justify-between gap-5 lg:grid-cols-2 lg:gap-6">
+        <div class="relative flex flex-col justify-between rounded-2xl border p-6 md:p-8">
+          <img src="/assets/standards/wdpc/leading-decor.svg" class="absolute top-0 right-0 select-none pointer-events-none" />
+          <div>
+            <img src="/assets/standards/wdpc/leading-icon.svg" alt="" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Leading The Charge</h2>
+            <p class="mt-2 text-xl">Project Leadership</p>
+            <Badge className="mt-2">Actively recruiting contributors</Badge>
+            <p class="mt-4">
+              We're building this standard with input from data centre operators, hardware vendors, and sustainability experts worldwide. Your expertise can help shape how the industry deploys and manages hardware infrastructure for decades to come.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+              <a href={GSF_OPEN19_REPO} target="_blank" rel="noopener noreferrer">
+                <Button>View the Repository</Button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="/assets/standards/wdpc/leading-illustration.svg" class="rounded-2xl object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dive Deeper -->
+  <section id="resources" class="py-12 md:py-18 lg:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Dive Deeper</h2>
+      <div class="mt-8 grid grid-cols-1 items-center justify-center gap-12 md:mt-10 lg:grid-cols-2 lg:gap-x-20">
+        <div class="order-2 flex w-full items-center justify-center md:order-1 lg:justify-start">
+          <img src="/assets/standards/wdpc/dive-illustration.svg" class="object-cover" />
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="grid grid-cols-1">
+            {[
+              {
+                icon: "/assets/standards/wdpc/dive-icon-1.svg",
+                title: "View the Specification",
+                description: "Read the full Open19 platform specification — system architecture, brick mechanical specs, power, and cooling standards.",
+                buttonLink: GSF_OPEN19_REPO,
+                buttonText: "Open Repository",
+                badge: undefined,
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-2.svg",
+                title: "Contribute to the Project",
+                description: "Work on the Open19 specification — open issues, submit PRs, and collaborate on the document. The repository is public.",
+                buttonLink: GSF_OPEN19_REPO,
+                buttonText: "Get Involved",
+                badge: undefined,
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-4.svg",
+                title: "Hardware Standards WG",
+                description: "Join the working group overseeing Open19 and other hardware sustainability standards.",
+                buttonLink: HARDWARE_WG,
+                buttonText: "Join Working Group",
+                badge: "GSF Members Only",
+              },
+            ].map((feature) => (
+              <div class="flex flex-col items-start justify-start border-b border-primary-light/50 py-4 last:border-b-0">
+                <div class="flex w-full items-center justify-start">
+                  <div class="flex w-full items-center justify-center gap-3">
+                    <img src={feature.icon} alt="" class="h-8 w-auto" />
+                    <div class="flex w-full flex-wrap items-center justify-between gap-1">
+                      <h3 class="text-xl font-bold text-primary">{feature.title}</h3>
+                      {feature.badge && <Badge>{feature.badge}</Badge>}
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2">{feature.description}</p>
+                <a href={feature.buttonLink} target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4">
+                  {feature.buttonText} →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Open19 thrives on diverse expertise — from data centre operators to hardware engineers to sustainability practitioners. Help shape the open hardware standard for sustainable infrastructure."
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/wdpc/shape-icon-1.svg",
+        title: "Join the Hardware Standards Working Group (GSF Members Only)",
+        description: "Collaborate with industry leaders shaping this standard",
+        ctaText: "Subscribe",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups",
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-2.svg",
+        title: "Review the Specification (GSF Members Only)",
+        description: "Review the current specification and share your insights on GitHub",
+        ctaText: "View the Specification",
+        ctaHref: GSF_OPEN19_REPO,
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-3.svg",
+        title: "Enquire about becoming a GSF member",
+        description: "Reach out directly to the GSF team",
+        ctaText: "Get in Touch",
+        ctaHref: MEMBERSHIP_CTA,
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Open19 standard."
+      articles={carouselArticles}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Shape the standards that define sustainable hardware"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable infrastructure worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
