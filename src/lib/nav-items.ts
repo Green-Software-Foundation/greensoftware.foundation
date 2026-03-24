@@ -72,6 +72,12 @@ export const navItems = [
             description:
               "Data centre power and cooling efficiency" /* iconSrc: pi("wdpc"), icon: "cloud" */,
           },
+          {
+            href: "/standards/open19/",
+            label: "Open19",
+            description:
+              "Open standard for data centre rack hardware" /* iconSrc: pi("open19"), icon: "server" */,
+          },
         ],
       },
       {
