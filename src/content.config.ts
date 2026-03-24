@@ -40,7 +40,7 @@ const articles = defineCollection({
       featured: z.boolean().optional(),
       tags: z.array(z.string()).optional(),
       organizations: z.array(z.string()).optional(),
-      additionalOrgCount: z.number().optional(),
+      additionalOrgCount: z.number().nullable().optional(),
     }),
 });
 
@@ -99,7 +99,7 @@ const stories = defineCollection({
     outcome: z.string().optional(),
     mainImage: z.string().optional(),
     organizations: z.array(z.string()).optional(),
-    additionalOrgCount: z.number().optional(),
+    additionalOrgCount: z.number().nullable().optional(),
     featured: z.boolean().optional(),
     lang: z.string().default("en"),
     // ── Rich story fields ─────────────────────────────────────────────────────
