@@ -65,6 +65,7 @@ collections:
     extension: md
     format: frontmatter
     i18n: true
+    preview_path: /articles/{{slug}}/
     summary: "{{date}} — {{title}}"
     sortable_fields:
       fields: [date, title]
@@ -263,6 +264,7 @@ collections:
     extension: md
     format: frontmatter
     i18n: true
+    preview_path: /policy/research/{{slug}}/
     summary: "{{date}} — {{title}}"
     sortable_fields:
       fields: [date, title]
@@ -419,6 +421,7 @@ collections:
     extension: md
     format: frontmatter
     i18n: false
+    preview_path: /stories/{{slug}}/
     summary: "{{title}}"
     sortable_fields:
       fields: [title]
@@ -612,6 +615,7 @@ collections:
     slug: "{{fields.slug}}"
     extension: md
     format: frontmatter
+    preview_path: /{{slug}}/
     sortable_fields:
       fields: [title]
       default:
