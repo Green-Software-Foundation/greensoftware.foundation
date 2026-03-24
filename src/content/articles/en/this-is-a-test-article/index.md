@@ -14,7 +14,7 @@ authors:
     role: ED
     company: GSF
     companyWebsite: greensoftware.foundation
-    photo: ../../this-is-a-test-article/Aprīļačupas-25.jpg
+    photo: ''
     socialMedia:
       - platform: Twitter
         link: twitter.com
