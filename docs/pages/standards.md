@@ -47,6 +47,7 @@ Most page content is hardcoded in each page's Astro file:
 - Testimonials
 - Research & Recognition cards
 - "Built for Every Role" TabbedSection
+- Mandatory Metadata Parameters section (conformance level tables for Level 1 and Level 2, with links to the specification on GitHub)
 - Resource cards
 - "Get Involved" CardGrid
 - Timeline milestones
