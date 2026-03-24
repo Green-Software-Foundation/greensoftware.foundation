@@ -1,5 +1,6 @@
 ---
 title: "SCI Open Ontology Project of the Green Software Foundation "
+published: true
 date: "2022-03-08"
 summary: "In this series featuring GSF Projects, the first interview is with Naveeen Balani of Accenture who heads the SCI Open Ontology Project of the Innovation Working Group."
 teaserText: "Navveen is the Chief Technologist - Technology Sustainability Innovation at Accenture. In this interview he talks about the SCI Open Ontology Project, its goals and why you should be excited to join it and what you get from doing so. "

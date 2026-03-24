@@ -23,11 +23,10 @@ import Footer from "@/components/footer.astro";
 
 // Load member logos for org name → logo lookup
 import membersData from "@/data/members.json";
-
-// ----- Featured articles -----
 const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const resolveOrgs = (names: string[]) => names.map(name => ({ name, logo: logoMap.get(name.toLowerCase()) || "" }));
 
+// ----- Featured articles -----
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
@@ -39,11 +38,6 @@ const featuredArticles = allArticles
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
     cta: "Read the story →",
-    organizations: (a.data.organizations || []).map((name: string) => ({
-      name,
-      logoSrc: logoMap.get(name.toLowerCase()),
-    })),
-    additionalOrgCount: a.data.additionalOrgCount,
   }));
 ---
 
@@ -238,7 +232,6 @@ const featuredArticles = allArticles
       heading="Featured Content"
       body="Stories, research, and insights from our members and community"
       articles={featuredArticles}
-      showOrganizations={false}
       ctaText="View all articles →"
       ctaHref="/articles/"
     />

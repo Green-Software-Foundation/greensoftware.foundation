@@ -1,5 +1,6 @@
 ---
 title: "Building a Global Tech Community for Climate Action—Meet ClimateAction.tech"
+published: true
 date: "2025-09-30"
 summary: "Join us as we welcome ClimateAction.tech to the GSF. Learn how this global community of over 10,000 tech workers is championing sustainable practices and climate action across the industry."
 teaserText: "Championing a just and sustainable future for tech. "

@@ -1,5 +1,6 @@
 ---
 title: "GSF Steering Membership Policy"
+published: true
 slug: "policy/steering-membership"
 ---
 

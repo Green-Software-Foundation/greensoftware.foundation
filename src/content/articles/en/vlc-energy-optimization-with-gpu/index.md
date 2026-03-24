@@ -1,5 +1,6 @@
 ---
 title: "VLC Energy Optimization With GPU"
+published: true
 date: "2021-09-03"
 summary: "Follow the journey by the media player VLC to adopt Sustainable Software Engineering practices and reduce their carbon emissions. "
 teaserText: "Displaying video and decoding media are energy intensive software applications. Here's how VLC media player adopted Sustainable Software Engineering practices to reduce carbon emissions. "

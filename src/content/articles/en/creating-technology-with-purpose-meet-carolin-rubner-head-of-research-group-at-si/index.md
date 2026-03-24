@@ -1,5 +1,6 @@
 ---
 title: "Creating Technology with Purpose - Meet Carolin Rubner, Head of Research Group at Siemens"
+published: true
 date: "2024-01-03"
 summary: "For 175 years, Siemens has been turning ideas into innovations as a technology company focused on industry, infrastructure, transport, and healthcare. The world has changed a lot during these years, but technology with purpose remains a primary driver for improving people’s lives. Carolin Rubner now sits on the GSF Steering Committee to drive sustainability further within the software industry."
 teaserText: "Siemens develops state-of-the-art software solutions that help companies on their path to decarbonization. 90% of their business enables sustainability impact for customers.   "

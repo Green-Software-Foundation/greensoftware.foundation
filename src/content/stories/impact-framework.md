@@ -1,5 +1,6 @@
 ---
 title: "Measurement is too hard for non-specialists"
+published: true
 summary: >
   How Accenture, Microsoft, Amadeus, NTT DATA, and partners built the Impact Framework —
   an open-source tool that democratises software carbon measurement — and validated it

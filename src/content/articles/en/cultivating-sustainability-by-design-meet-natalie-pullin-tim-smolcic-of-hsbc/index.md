@@ -1,5 +1,6 @@
 ---
 title: "Cultivating Sustainability by Design - Meet Natalie Pullin & Tim Smolcic of HSBC"
+published: true
 date: "2024-07-09"
 summary: "The GSF new member interview shares why HSBC is embracing green software and choosing to set an example in being carbon-efficient."
 teaserText: "\"Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software.\""

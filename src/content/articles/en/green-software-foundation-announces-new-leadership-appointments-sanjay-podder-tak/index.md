@@ -1,5 +1,6 @@
 ---
 title: "Green Software Foundation Announces New Leadership Appointments: Sanjay Podder Takes Helm as Chair, Chris Lloyd-Jones Elected as Vice Chair"
+published: true
 date: "2024-02-08"
 summary: "The Green Software Foundation (GSF) proudly announces new leadership appointments within its Steering Committee. Sanjay Podder, managing director and global lead for Technology Sustainability Innovation at Accenture, takes on the role of Chair of the Board, succeeding Asim Hussain, recently appointed as Executive Director. Joining Sanjay as vice chair is Chris Lloyd-Jones, Head Architect and Strategy, Next Architecture and Transformation for the Office of the CTO at Avanade."
 teaserText: " ."

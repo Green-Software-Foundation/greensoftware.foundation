@@ -1,5 +1,6 @@
 ---
 title: "The Open Source Approach is Revolutionizing the Business World - Meet Christopher Howard, Lead Open Source Program Manager at EPAM Systems, Inc."
+published: true
 date: "2023-05-02"
 summary: "Since 1993, EPAM Systems, Inc. (EPAM) has leveraged its advanced software engineering heritage to become the foremost global digital transformation services provider – leading the industry in digital and physical product development and digital platform engineering services."
 teaserText: "Since 1993, EPAM Systems, Inc. (EPAM) has leveraged its advanced software engineering heritage to become the foremost global digital transformation services provider – leading the industry in digital and physical product development and digital platform engineering services."

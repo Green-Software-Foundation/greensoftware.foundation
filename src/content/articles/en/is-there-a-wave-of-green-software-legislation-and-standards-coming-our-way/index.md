@@ -1,5 +1,6 @@
 ---
 title: "Is there a wave of green software legislation and standards coming our way?"
+published: true
 date: "2023-01-27"
 summary: "Find out about some of the latest government policies, institutional actions, reporting and standards affecting green software. "
 teaserText: "Find out about some of the latest government policies, institutional actions, reporting and standards affecting green software. "

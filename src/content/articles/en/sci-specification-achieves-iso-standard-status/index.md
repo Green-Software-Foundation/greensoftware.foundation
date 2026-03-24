@@ -1,5 +1,6 @@
 ---
 title: "Software Carbon Intensity (SCI) Specification Achieves ISO Standard Status, Advancing Green Software Development"
+published: true
 date: "2024-04-25"
 summary: "The ISO confirms that the SCI Specification is a reliable, fair, and comparable protocol for measuring and reducing software's carbon footprint, achieving a major milestone in green software."
 teaserText: "We've achieved a big win for green tech: The Software Carbon Intensity (SCI) Specification v1.0 is now an ISO standard."

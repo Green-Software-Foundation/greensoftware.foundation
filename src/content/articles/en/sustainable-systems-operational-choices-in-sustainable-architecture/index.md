@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Systems: Operational Choices in Sustainable Architecture"
+published: true
 date: "2022-02-03"
 summary: "In this second article in the Sustainable Systems series, Anne Currie focuses on what operational choices you can make to improve how your software is run. "
 teaserText: "In the second article in the Sustainable Systems series, Anne Currie focuses on operational choices you can make to improve how your software is run."

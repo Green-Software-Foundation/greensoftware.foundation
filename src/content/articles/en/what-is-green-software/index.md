@@ -1,5 +1,6 @@
 ---
 title: "What is Green software?"
+published: true
 date: "2021-08-03"
 summary: "Creating a trusted ecosystem of people, standards, tooling, and best practices for building green software."
 teaserText: "Creating a trusted ecosystem of people, standards, tooling, and best practices for building green software."

@@ -1,5 +1,6 @@
 ---
 title: "Detecting Green Impact in Source Code -  Meet Greg Rivera, VP of Product at CAST"
+published: true
 date: "2023-05-03"
 summary: "CAST is a software vendor in the software intelligence category that provides products that ‘understand’ multi-technology software systems to automatically derive insights about their inner workings, enabling digital leaders to optimize for resiliency, performance, cost, modernization, open source risks, and more. "
 teaserText: "CAST is a software vendor in the software intelligence category that provides products that ‘understand’ multi-technology software systems to automatically derive insights about their inner workings, enabling digital leaders to optimize for resiliency, performance, cost, modernization, open source risks, and more. Recently, they introduced an intelligence category in the CAST Highlight product - Green Software Insights. It is a first-of-a-kind technology that automatically reads application source code for green impact, giving organizations holistic insight into opportunities to reduce software energy consumption and reduce carbon emissions."

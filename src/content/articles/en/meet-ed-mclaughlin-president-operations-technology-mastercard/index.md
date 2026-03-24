@@ -1,5 +1,6 @@
 ---
 title: "Meet Ed McLaughlin - President, Operations & Technology, Mastercard"
+published: true
 date: "2022-05-16"
 summary: "Ed McLaughlin, Ed McLaughlin (President, Operations & Technology, Mastercard) talks about the company’s green software development initiatives and the future of green software."
 teaserText: "Mastercard is a technology company in the global payments industry. Our mission is to connect and power an inclusive, sustainable digital economy that benefits everyone, everywhere, by making transactions safe, simple, fast and accessible."

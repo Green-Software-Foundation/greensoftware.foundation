@@ -73,7 +73,7 @@ const formattedDate = new Date(article.data.date).toLocaleDateString("en-GB", {
   year: "numeric",
 });
 
-const seoDescription = article.data.description || article.data.summary || article.data.teaserText || "";
+const seoDescription = article.data.summary || article.data.teaserText || "";
 const authorNames = article.data.authors?.map((a) => a.fullName) || [];
 const isEnglish = article.data.lang === "en";
 ---

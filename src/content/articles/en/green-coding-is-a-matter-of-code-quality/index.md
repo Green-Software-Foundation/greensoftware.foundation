@@ -1,5 +1,6 @@
 ---
 title: "Green Coding is a Matter of Code Quality"
+published: true
 date: "2023-11-23"
 summary: "By minimizing green code smells, we not only enhance the quality but also expedite the repayment of ecological debt."
 teaserText: "The systematization of green coding is essential across billions of lines of code, and tooling becomes the key to accomplish such a task."

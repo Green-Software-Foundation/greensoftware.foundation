@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Toru Shimogaki of NTT DATA"
+published: true
 date: "2021-11-22"
 summary: "Toru Shimogaki of NTT DATA believes that developing emission standards for software and making them easy to use would help people clearly see the link between software and emission reduction. "
 teaserText: "Meet Toru Shimogaki, the Head of Green Innovation Office and Head of Advanced Computing Technology Center at NTT DATA and learn what he  thinks about green software."

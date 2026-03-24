@@ -1,5 +1,6 @@
 ---
 title: "Mission Statement Update: GSF’s Policy Working Group Defines its Path Forward "
+published: true
 date: "2025-08-07"
 summary: "The GSF's Policy Working Group aims to translate technical sustainability expertise into accessible information for regulators. Learn more about our mission."
 teaserText: "Translating technical expertise into insights for policymakers. "

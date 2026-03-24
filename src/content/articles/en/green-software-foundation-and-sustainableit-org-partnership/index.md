@@ -1,5 +1,6 @@
 ---
 title: "Green Software Foundation and SustainableIT.org Partner to Advance Global Sustainability through Sustainable Software Development "
+published: true
 date: "2024-04-12"
 summary: "The Green Software Foundation and SustainableIT.org proudly announce a strategic partnership to advance knowledge-sharing between their global membership communities to empower technology leaders in accelerating their business sustainability transformation."
 teaserText: "Together, the GSF and SustainableIT.org aim to shift tech culture to prioritize sustainability in software development alongside performance, security, cost, and accessibility."

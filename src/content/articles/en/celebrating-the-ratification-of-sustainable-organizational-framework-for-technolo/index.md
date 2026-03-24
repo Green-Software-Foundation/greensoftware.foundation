@@ -1,5 +1,6 @@
 ---
 title: "Celebrating the Ratification of the Sustainable Organizational Framework for Technology (SOFT)"
+published: true
 date: "2025-11-13"
 summary: "We’re proud to announce the ratification of our Sustainable Organizational Framework for Technology, marking a key milestone in the adoption of green software across industries. "
 teaserText: "Guiding organizations in adopting, implementing, and transforming sustainable software practices across entire operations. "

@@ -25,7 +25,7 @@ const articles = defineCollection({
     z.object({
       title: z.string(),
       date: z.coerce.date(),
-      published: z.boolean().default(true),
+      published: z.boolean().default(false),
       summary: z.string(),
       teaserText: z.string().optional(),
       // Co-located image — Astro processes it for optimisation
@@ -39,8 +39,6 @@ const articles = defineCollection({
       lang: z.string().default("en"),
       featured: z.boolean().optional(),
       tags: z.array(z.string()).optional(),
-      organizations: z.array(z.string()).optional(),
-      additionalOrgCount: z.number().optional(),
     }),
 });
 
@@ -49,7 +47,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
-    published: z.boolean().default(true),
+    published: z.boolean().default(false),
     description: z.string().optional(),
   }),
 });
@@ -60,7 +58,7 @@ const research = defineCollection({
     title: z.string(),
     subtitle: z.string().optional(),
     date: z.coerce.date(),
-    published: z.boolean().default(true),
+    published: z.boolean().default(false),
     status: z.enum(["published", "draft", "in-progress"]).default("published"),
     type: z.enum(["paper", "response", "report"]).default("paper"),
     summary: z.string(),
@@ -78,7 +76,6 @@ const research = defineCollection({
     version: z.string().optional(),
     sourceUrl: z.string().optional(),
     mainImage: z.string().optional(),
-    organizations: z.array(z.string()).optional(),
     doi: z.string().optional(),
     pdfUrl: z.string().optional(),
     featured: z.boolean().optional(),
@@ -92,14 +89,12 @@ const stories = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    published: z.boolean().default(true),
+    published: z.boolean().default(false),
     // ── Optional simple fields (legacy / future use) ──────────────────────────
     date: z.coerce.date().optional(),
     challenge: z.string().optional(),
     outcome: z.string().optional(),
     mainImage: z.string().optional(),
-    organizations: z.array(z.string()).optional(),
-    additionalOrgCount: z.number().optional(),
     featured: z.boolean().optional(),
     lang: z.string().default("en"),
     // ── Rich story fields ─────────────────────────────────────────────────────

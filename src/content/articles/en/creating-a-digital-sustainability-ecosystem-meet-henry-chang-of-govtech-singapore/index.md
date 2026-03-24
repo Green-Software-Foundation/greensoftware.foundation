@@ -1,5 +1,6 @@
 ---
 title: "Creating a Digital Sustainability Ecosystem - Meet Henry Chang of GovTech Singapore"
+published: true
 date: "2023-09-19"
 summary: "GovTech, Singapore’s primary government agency for driving digital transformation across the public sector, plays a pivotal role in ensuring that the move towards a Smart Nation is environmentally sustainable."
 teaserText: "Taking small steps towards a smart and sustainable city, GovTech Singapore aims to achieve greener outcomes for Singapore’s digitalization efforts."

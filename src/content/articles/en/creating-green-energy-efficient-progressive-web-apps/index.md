@@ -1,5 +1,6 @@
 ---
 title: "Creating Green, Energy Efficient, Progressive Web Apps"
+published: true
 date: "2021-08-12"
 summary: "As web developers, can we adjust our code to participate in the global effort to reduce the carbon footprint? Results of my experiments show that we can. Read on to find out how. "
 teaserText: "As web developers, can we adjust our code to participate in the global effort to reduce the carbon footprint? Experiments show that we can. "

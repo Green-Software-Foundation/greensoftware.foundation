@@ -1,5 +1,6 @@
 ---
 title: "A Demand Curve for Compute"
+published: true
 date: "2021-12-07"
 summary: "The author borrows the idea of demand curves and different ways to generate electricity, and helps us consider the different ways we can provide a commodity like computing."
 teaserText: "Once you begin thinking of computing as an essential utility, we can consider different ways to provide a commodity like computing."

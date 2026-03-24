@@ -1,5 +1,6 @@
 ---
 title: "Software Carbon Intensity (SCI): Crafting a Standard"
+published: true
 date: "2021-10-05"
 summary: "The Software Carbon Intensity (SCI) standard provides an actionable approach to designers, developers and deployers of software systems to measure the carbon impacts of their systems."
 teaserText: "The Software Carbon Intensity (SCI) standard gives an actionable approach to software designers, developers and deployers to measure the carbon impacts of their systems."

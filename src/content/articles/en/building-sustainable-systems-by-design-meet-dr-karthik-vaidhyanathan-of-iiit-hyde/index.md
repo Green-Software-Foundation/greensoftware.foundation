@@ -1,5 +1,6 @@
 ---
 title: "Building Sustainable Systems by Design—Meet Dr Karthik Vaidhyanathan of the International Institute of Information Technology Hyderabad"
+published: true
 date: "2025-07-08"
 summary: "Join us in welcoming the IIIT Hyderabad to the GSF. In our Q&A, learn how they embed software sustainability into education, research, and smart city innovation."
 teaserText: "Where sustainability is the foundation, not an afterthought. "

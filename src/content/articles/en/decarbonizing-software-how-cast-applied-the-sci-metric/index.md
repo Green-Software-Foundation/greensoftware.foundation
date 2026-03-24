@@ -1,5 +1,6 @@
 ---
 title: "Decarbonizing Software: How CAST applied the SCI Metric to Make a Difference"
+published: true
 date: "2024-03-27"
 summary: "“The automatically generated Green Software Insights from CAST Highlight enabled us to identify exactly where in our code we could improve our green impact and then estimate the actual CO2 emissions savings with concrete numbers.”  - Michael Muller, Director Product Management, CAST"
 teaserText: "CAST is a leader in software intelligence. Their compelling use case demonstrates how targeted technological interventions can deliver substantial reductions in carbon emissions."

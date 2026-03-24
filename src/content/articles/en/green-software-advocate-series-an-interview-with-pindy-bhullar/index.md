@@ -1,5 +1,6 @@
 ---
 title: "Green Software Advocate Series: An Interview with Pindy Bhullar"
+published: true
 date: "2023-10-19"
 summary: "Pindy Bhullar is a driving force behind the green software movement. We asked her about her passion for sustainability and the future of green software."
 teaserText: "Pindy Bhullar is responsible for ESG architecture at UBS and a Ph.D. Researcher. Her reputation as a values-driven leader with an ethical compass is widely recognized, earning her the respect of peers, team members, and top management."

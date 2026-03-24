@@ -1,5 +1,6 @@
 ---
 title: "Endorsing Sustainability Through Professional Education—Meet Anastasios Avranas of Interfima"
+published: true
 date: "2024-08-23"
 summary: "Join us in welcoming Interfima to the GSF. Anastasios Avranas of Interfima shares more about Interfima's aspirations to green its IT infrastructure and services and how joining the GSF will strengthen Interfima's commitment to software sustainability."
 teaserText: "Interfima joins the GSF to strengthen its commitment to software sustainability."

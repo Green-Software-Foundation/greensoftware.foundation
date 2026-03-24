@@ -1,5 +1,6 @@
 ---
 title: "Can AI Truly Be Green? "
+published: true
 date: "2023-11-07"
 summary: "In a recent GSF-organized panel on responsible AI, experts discussed the environmental challenges of AI, prompting a critical question: Can AI be truly green?"
 teaserText: "We capture key themes/questions from the event on October 5 to help you better determine your stance on the issue and prepare for the fireside on November 16!  "

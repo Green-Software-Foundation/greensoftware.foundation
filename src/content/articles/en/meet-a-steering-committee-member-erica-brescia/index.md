@@ -1,5 +1,6 @@
 ---
 title: "Meet A Steering Committee Member: Erica Brescia of GitHub"
+published: true
 date: "2021-11-03"
 summary: "Meet Erica Brescia, the Chief Operating Officer of Github and understand her approach to green software, its challenges and what she hopes to achieve through the Green Software Foundation."
 teaserText: "Meet Erica Brescia, the Chief Operating Officer of Github and understand why she wants all developers to become \"green developers\" "

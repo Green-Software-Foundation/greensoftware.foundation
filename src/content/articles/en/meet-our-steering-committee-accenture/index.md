@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: Accenture"
+published: true
 date: "2021-09-01"
 summary: "Accenture on green software and how companies need to make software an integral part of their sustainability efforts by taking its carbon footprint into account in the way it is designed, developed, and deployed."
 teaserText: "Accenture on green software and how companies need to make software an integral part of their sustainability efforts by taking its carbon footprint into account in the way it is designed, developed, and deployed."

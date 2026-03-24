@@ -1,5 +1,6 @@
 ---
 title: "The EU AI Act: Insights from the Green AI Committee"
+published: true
 date: "2024-10-17"
 summary: "A few member representatives on the recently formed Green AI Committee share their thoughts on the publication of the EU AI Act and what it can mean for greening AI."
 teaserText: "Reflections on the first binding regulation on AI globally."

@@ -1,5 +1,6 @@
 ---
 title: "Sustainable and Scalable Infrastructure Alliance Joins the Green Software Foundation to Address Climate Challenges for an AI-Driven Future"
+published: true
 date: "2024-11-21"
 summary: " The merger between the SSIA and GSF creates a comprehensive organization to better navigate the interconnectedness of the software and hardware ecosystems in the digital economy."
 teaserText: "Strategic merger between the Linux Foundation projects will accelerate collaboration between the sustainable software and data center hardware ecosystems."

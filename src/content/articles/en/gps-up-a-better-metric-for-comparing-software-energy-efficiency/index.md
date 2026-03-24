@@ -1,5 +1,6 @@
 ---
 title: "GPS-UP: A Better Metric For Comparing Software Energy Efficiency"
+published: true
 date: "2021-12-14"
 summary: "Learn about Greenup, Powerup and Speedup (GPS-UP), an easy to use energy metric that helps developers, students, and researchers understand the energy efficiency of their optimizations in order to make informed choices.  "
 teaserText: "Greenup, Powerup and Speedup (GPS-UP) offers an easy to use energy metric that helps you understand the energy efficiency of your optimizations and the optimization choices you can make. "

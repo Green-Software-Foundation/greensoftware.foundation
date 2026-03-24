@@ -1,5 +1,6 @@
 ---
 title: "Shaping the Future of Sustainable Software Engineering—Meet Birgit Penzenstadler of Chalmers University of Technology "
+published: true
 date: "2025-09-18"
 summary: "Join us in welcoming Chalmers University to the GSF and learn how they educate engineers to design software that is sustainable and socially impactful."
 teaserText: "How sustainability and social responsibility converge in systems design. "

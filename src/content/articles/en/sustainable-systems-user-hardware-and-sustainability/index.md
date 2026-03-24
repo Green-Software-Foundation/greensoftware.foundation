@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Systems: User Hardware and Sustainability"
+published: true
 date: "2022-03-16"
 summary: "Anne Currie continues the Sustainable Systems series, talking about how user hardware impacts sustainability of systems and the responsibility that falls on developers creating new software.  "
 teaserText: "When you write an application, you take on responsibility for the devices that app runs on. Do you have a strategy for making them last as long as possible? If not, why not? asks Anne Currie, continuing the Sustainable Systems series. "

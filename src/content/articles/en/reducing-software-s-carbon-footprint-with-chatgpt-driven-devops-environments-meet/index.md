@@ -1,5 +1,6 @@
 ---
 title: "Reducing Software's Carbon Footprint with ChatGPT-driven DevOps Environments - Meet Rishi Yadav, Founder & CEO, Roost.ai"
+published: true
 date: "2023-02-23"
 summary: "Roost is a ChatGPT-driven DevOps platform. Developers love to write scripts and hate to write test cases. Roost eliminates the need for both so developers can focus on writing business code and delivering customer value."
 teaserText: "Roost is a ChatGPT-driven DevOps platform. Developers love to write scripts and hate to write test cases. Roost eliminates the need for both so developers can focus on writing business code and delivering customer value."

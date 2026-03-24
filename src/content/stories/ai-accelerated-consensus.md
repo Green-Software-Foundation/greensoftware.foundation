@@ -1,5 +1,6 @@
 ---
 title: "Standards move too slowly for our regulatory timeline"
+published: true
 summary: >
   How GSF used an AI-assisted assembly process to bring 14 experts from 15 organisations
   to consensus in ten weeks — a process that previously took years — proving a new model

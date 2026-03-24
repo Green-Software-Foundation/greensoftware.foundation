@@ -1,5 +1,6 @@
 ---
 title: "Sustainability superheroes – CIOs are pulling on their green capes"
+published: true
 date: "2022-01-13"
 summary: "As human interest drives organizations to rethink their approach to sustainability, more and more CIOs, empowered with increasing levels of digital technology investments, are emerging as sustainability superheroes."
 teaserText: "CIOs are leading the way in rethinking sustainability strategy as a majority of companies agree that sustainability is key to future performance and investments in digital technologies are on the rise to help companies achieve their sustainability objectives. "

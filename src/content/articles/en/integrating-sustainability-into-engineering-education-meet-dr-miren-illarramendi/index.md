@@ -1,5 +1,6 @@
 ---
 title: "Integrating Sustainability into Engineering Education—Meet Dr Miren Illarramendi Rezabal and Haizea Legorburu Gonzalez of Mondragon University"
+published: true
 date: "2025-06-17"
 summary: "Join us as we welcome Mondragon University to the GSF and learn how they’re preparing the next generation of engineers to lead the sustainability transition."
 teaserText: "Connecting research and industry to shape the next generation of sustainability leaders."

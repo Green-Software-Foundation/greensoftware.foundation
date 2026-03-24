@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Matthew Kropp of BCG GAMMA"
+published: true
 date: "2022-02-08"
 summary: "Matthew Kropp is a Managing Director and Partner at BCG GAMMA and Global Leader for GAMMA software. He says that the tech sector should become green in order to gain the moral authority to help drive other industries forward."
 teaserText: "Matthew leads 500 plus software developers creating transformational AI-driven solutions and products for Fortune 500 clients and says that is a terrific platform to advance the thinking on lowering the carbon impact of systems."

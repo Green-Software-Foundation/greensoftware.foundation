@@ -1,5 +1,6 @@
 ---
 title: "Real Time Cloud Ratified: A Major Step Toward Transparent, Sustainable Cloud Computing"
+published: true
 date: "2025-04-08"
 summary: "We’re thrilled to announce the ratification of the Real Time Energy and Carbon Standard for Cloud Providers! Learn more about the project, what this milestone means, and what’s coming next."
 teaserText: "Addressing critical gaps in cloud sustainability reporting. "

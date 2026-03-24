@@ -1,5 +1,6 @@
 ---
 title: "Supporting Sustainability Goals Through Technological Expertise and Innovation—Meet Stefano Capelli of Almaviva"
+published: true
 date: "2024-11-26"
 summary: "Join us in welcoming Almaviva to the GSF. Stefano Capelli, CSO and Head of Quality Group, shares more about advancing digital products and services while considering the environmental implications."
 teaserText: "Recognizing the importance of technological progress that is attentive to environmental impacts. "

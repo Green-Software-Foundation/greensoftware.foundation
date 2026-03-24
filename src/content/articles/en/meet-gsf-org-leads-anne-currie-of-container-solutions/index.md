@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Anne Currie of Container Solutions"
+published: true
 date: "2022-02-16"
 summary: "Anne is a Technologist at Container Solutions and the company’s Organizational Lead at GSF. She is also an author of science fiction and a painter. "
 teaserText: "Anne, a Technologist, author, painter and regular article contributor to GSF, shares her exciting and eventful career journey and her thoughts on the challenges to green software. "

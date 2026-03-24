@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Santiago Fontanarrosa of Globant"
+published: true
 date: "2021-11-05"
 summary: "Santiago is the VP of Technology, Sustainable Business Studio at Globant. Learn how digital sustainability drives his personal and professional goals."
 teaserText: "Santiago is the VP of Technology, Sustainable Business Studio at Globant. Learn how discovering the concept of digital sustainability impacted his personal and professional goals."

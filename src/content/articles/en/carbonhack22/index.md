@@ -1,5 +1,6 @@
 ---
 title: "Carbon Hack 22"
+published: true
 date: "2022-09-06"
 summary: "A contest for developers to build the best carbon aware software application with a total prize pool of USD 80,000. Carbon aware software does less when the electricity is dirty and more when the electricity is clean."
 teaserText: "A contest for developers to build the best carbon aware software application with a total prize pool of USD 80,000"

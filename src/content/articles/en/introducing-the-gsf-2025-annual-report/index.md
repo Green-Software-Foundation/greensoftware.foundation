@@ -1,5 +1,6 @@
 ---
 title: "From Standards to Adoption: Introducing the GSF 2025 Annual Report"
+published: true
 date: "2026-01-20"
 summary: "The GSF Annual Report highlights key milestones and achievements from 2025 and outlines our priorities for 2026."
 teaserText: "A year in the rearview, and what’s next in 2026"

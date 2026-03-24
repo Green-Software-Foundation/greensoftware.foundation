@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Jose Lopez Dominguez of Globant"
+published: true
 date: "2021-11-30"
 summary: "Jose is a Tech Manager at Globant. He believes that the biggest obstacle to green software is the lack of consciousness of the environmentally adverse impacts in software development. "
 teaserText: "Jose, a Tech Manager at Globant imagines the very near future when he can use  what he is learning and discovering with GSF within Globant and for the benefit of the whole world"

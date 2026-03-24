@@ -1,5 +1,6 @@
 ---
 title: "Building Green Software through Standards and Collaboration"
+published: true
 date: "2024-07-25"
 summary: "CAST, NTT DATA, and UBS share how they are reducing their software emissions and laying a solid foundation for a greener digital future."
 teaserText: "A spotlight on how our members are decarbonizing software with the GSF. "

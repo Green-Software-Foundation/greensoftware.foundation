@@ -1,5 +1,6 @@
 ---
 title: "Happy Green New Year to You in 2022!"
+published: true
 date: "2021-12-31"
 summary: "Best wishes from the Green Software Foundation."
 teaserText: "Best wishes coming your way from all of us at the Green Software Foundation!"

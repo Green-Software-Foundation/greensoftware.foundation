@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: Microsoft"
+published: true
 date: "2021-08-17"
 summary: "An interview with Jeff Sandquist of Microsoft about the birth of the Green Software Foundation"
 teaserText: "An interview with Jeff Sandquist of Microsoft about the birth of the Green Software Foundation"

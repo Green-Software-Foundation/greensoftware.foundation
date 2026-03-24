@@ -1,5 +1,6 @@
 ---
 title: "Making Decentralized Systems More Sustainable—Meet Mani Hagh Sefat of Energy Web"
+published: true
 date: "2024-10-10"
 summary: "Join us in welcoming Energy Web to the GSF. Energy Web's CTO and Board Member, Mani Hagh Sefat shares Energy Web’s goal to decarbonize the global energy sector and how green software fits into the Web3 Technology ecosystem. "
 teaserText: "Moving from theoretical sustainability to verifiable impact."

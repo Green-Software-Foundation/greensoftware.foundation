@@ -1,5 +1,6 @@
 ---
 title: "Integrating Green Software into Sustainability Strategy—Meet Rob Maher of Xero "
+published: true
 date: "2025-01-28"
 summary: "Join us in welcoming Xero to the GSF. Rob Maher, Xero’s EGM of engineering, shares insights into their sustainability strategy and their approach to measuring internal carbon emissions."
 teaserText: "Empowering engineers to reduce software emissions starts with measuring internal carbon footprint."

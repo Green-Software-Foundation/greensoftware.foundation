@@ -1,5 +1,6 @@
 ---
 title: "The Green Software Foundation Expands Efforts to Incentivize Decarbonization in the Software Industry"
+published: true
 date: "2022-12-13"
 summary: "Latest tools from the Green Software Foundation provide organizations a concrete action plan to measure, learn and reduce carbon emissions of software."
 teaserText: "Latest tools from the Green Software Foundation provide organizations a concrete action plan to measure, learn and reduce carbon emissions of software."

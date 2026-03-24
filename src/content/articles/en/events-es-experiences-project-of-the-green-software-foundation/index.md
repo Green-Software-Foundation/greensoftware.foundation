@@ -1,5 +1,6 @@
 ---
 title: "Events & Experiences Project of the Green Software Foundation"
+published: true
 date: "2022-03-23"
 summary: "Project Co-Chairs, Jenny and Tammy talked to us while deep in preparation for the GSF Global Summit scheduled for June 2022. Jenny is a Senior Event PM Team Lead and Tammy is a Customer Success Account Manager at  Microsoft. "
 teaserText: "Jenny and Tammy, Co-Chairs of the Events and Experience Project, talked to us about the GSF Global Summit and what you can gain from joining the Events & Experiences Team ahead of the Summit. There are speaking engagements available for those interested. "

@@ -1,5 +1,6 @@
 ---
 title: "We don't know what legislation is coming"
+published: true
 summary: >
   How the Green Software Foundation built the Policy Radar — a shared, transparent
   tool tracking forthcoming green software legislation — and established the Policy

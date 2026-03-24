@@ -1,5 +1,6 @@
 ---
 title: "Marcher: A Fine Grained Software Energy Efficiency Measuring Platform"
+published: true
 date: "2021-11-12"
 summary: "he Marcher offers an easy to use suite of tools for fine grain software energy profiling for developers, students and researchers."
 teaserText: "Discover an easy to use set of tools for fine grain software energy profiling for developers, students and researchers."

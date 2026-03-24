@@ -1,5 +1,6 @@
 ---
 title: "Syngenio AG Joins the Green Software Foundation"
+published: true
 date: "2022-04-26"
 summary: "Syngenio is one of the latest members of Green Software Foundation. We interviewed Jürgen Funke, Principal Consultant and Board member of Syngenio responsible for marketing, corporate development and the Syngenio start-up platform. "
 teaserText: "Jürgen Funke, a technology enthusiast and Board member at Syngenio, is convinced that, within five years, it will be unthinkable not to include sustainability aspects into software development projects."

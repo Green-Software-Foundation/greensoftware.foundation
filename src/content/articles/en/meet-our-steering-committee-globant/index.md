@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: Globant"
+published: true
 date: "2021-08-24"
 summary: "Globant shares its views on green software and how poorly written and badly performing code can push us to misuse resources."
 teaserText: "Globant shares its views on green software and how poorly written and badly performing code can lead to the misuse resources."

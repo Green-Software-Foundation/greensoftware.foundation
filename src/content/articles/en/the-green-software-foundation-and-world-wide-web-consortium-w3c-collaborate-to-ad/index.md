@@ -1,5 +1,6 @@
 ---
 title: "The Green Software Foundation and World Wide Web Consortium (W3C) Collaborate to Advance Adoption of Web Sustainability Measurement "
+published: true
 date: "2025-09-11"
 summary: "The Green Software Foundation and World Wide Web Consortium proudly announce a startegic collaboration to advance and standardize how we measure website carbon emissions."
 teaserText: "Through this agreement, the GSF and W3C aim to promote the adoption of sustainable web development best practices and standards. "

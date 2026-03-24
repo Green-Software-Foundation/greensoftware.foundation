@@ -1,5 +1,6 @@
 ---
 title: "Software Carbon Efficiency Rating  - A consumer-friendly rating for software carbon intensity"
+published: true
 date: "2023-10-12"
 summary: "The GSF Standards Working Group has initiated a project  to close the gap of a carbon efficiency rating. The objective is to prove a tool for informing procurement decisions and potentially shaping regulations surrounding software carbon emissions. "
 teaserText: "Wouldn’t it be great to have a rating for the carbon efficiency of software? A benchmark that scores software with the same functionality, similar to what the Energy Star does for the energy efficiency of appliances or the EPA Fuel Economy Ratings for the mileage of cars?"

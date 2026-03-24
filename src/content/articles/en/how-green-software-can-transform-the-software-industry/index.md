@@ -1,5 +1,6 @@
 ---
 title: "How Green Software Can Transform the Software Industry"
+published: true
 date: "2024-05-14"
 summary: "Drawing from insights from recent discussions on Environment Variables with Anne Currie, Sara Bergman (Microsoft), and Sarah Hsu (Goldman Sachs), we share how businesses can use green software to make strides in sustainability."
 teaserText: "Unlocking green software from networking efficiency to collective responsibility."

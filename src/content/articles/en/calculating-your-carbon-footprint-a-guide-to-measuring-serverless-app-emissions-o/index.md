@@ -1,5 +1,6 @@
 ---
 title: "Calculating Your Carbon Footprint: A Guide to Measuring Serverless App Emissions on AWS"
+published: true
 date: "2025-01-23"
 summary: "Denis Angeletta and Franziska Warncke explain how NTT Data applied the SCI specification to quantify the carbon emissions of serverless applications."
 teaserText: "NTT Data is a leading global provider of end-to-end ICT services. Their comprehensive use case illustrates how to address the environmental metric challenges of serverless computing."

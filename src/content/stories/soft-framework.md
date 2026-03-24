@@ -1,5 +1,6 @@
 ---
 title: "Our pilots work but nothing scales across the org"
+published: true
 summary: >
   How Pindy Bhullar, Sean O'Keefe, and contributors from seven GSF member organisations
   built SOFT — the Sustainable Organisational Framework for Technology — the first

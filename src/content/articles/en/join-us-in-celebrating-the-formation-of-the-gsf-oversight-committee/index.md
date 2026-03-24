@@ -1,5 +1,6 @@
 ---
 title: "Join us in celebrating the formation of the GSF Oversight Committee!"
+published: true
 date: "2023-03-02"
 summary: "We're proud to introduce the Oversight Committee (OC). The OC will guide the foundation’s technical direction and ensure the foundation meets best practices across all projects."
 teaserText: "To better manage our time, resources and interests, we recently launched the Oversight Committee (OC). The OC will guide the foundation’s technical direction and ensure the foundation meets best practices across all projects."

@@ -1,5 +1,6 @@
 ---
 title: "COP27 Book of News"
+published: true
 date: "2022-11-10"
 summary: "The Foundation wants a future where software produces no harmful environmental effects. To make this happen, we need software to emit the least amount of carbon possible- read our Book of News to understand how the GSF intend to do this."
 teaserText: "The Foundation wants a future where software produces no harmful environmental effects. To make this happen, we need software to emit the least amount of carbon possible. "

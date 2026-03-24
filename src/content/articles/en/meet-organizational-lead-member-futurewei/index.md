@@ -1,5 +1,6 @@
 ---
 title: "Meet organizational lead member Futurewei"
+published: true
 date: "2022-09-30"
 summary: "We looked at sustainability from two perspectives. Global network infrastructure and data centers can have more greenhouse gas emissions than the airline industry if following the current energy consumption path. "
 teaserText: "We looked at sustainability from two perspectives. Global network infrastructure and data centers can have more greenhouse gas emissions than the airline industry if following the current energy consumption path. "

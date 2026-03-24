@@ -1,5 +1,6 @@
 ---
 title: "The Carbon Monkey"
+published: true
 date: "2021-08-19"
 summary: "Can applying principles of Chaos Engineering and using carbon monkeys to simulate real-life energy events help us achieve our sustainable software engineering goals? "
 teaserText: "How principles of Chaos Engineering and using carbon monkeys to simulate real-life energy events help us achieve our sustainable software engineering goals. "

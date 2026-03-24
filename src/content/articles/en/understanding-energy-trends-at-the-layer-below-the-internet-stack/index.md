@@ -1,5 +1,6 @@
 ---
 title: "Understanding Energy Market Trends at the Layer Below the Internet Stack"
+published: true
 date: "2021-11-02"
 summary: "An intro to energy markets and the economics of transitioning digital services to fossil free power for those building digital services. Read how renewables and batteries have effectively created a pincer movement on fossil fuels."
 teaserText: "If you are building digital services, here's an intro to energy markets and the economics of transitioning digital services to fossil free power"

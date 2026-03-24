@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Henry Richardson of WattTime"
+published: true
 date: "2022-02-11"
 summary: "Henry is an Environmental Impact Analyst at WattTime. He believes that making the connection between emissions and software clear to developers through GSF’s work is important to overcome obstacles to green software."
 teaserText: "Developers need to look beyond their organisations to become more aware of the global impact their software may have, says Henry and that the new SCI specification makes this so much easier than it has been before. Henry also announces some job openings!"

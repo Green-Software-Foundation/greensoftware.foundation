@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Sanjay Podder of Accenture"
+published: true
 date: "2022-03-17"
 summary: "Sanjay, the Global Lead for Sustainable Technology at Accenture, talks about how his personal interest in sustainability and his company’s agenda merged with those of like minded others at Microsoft to pave the way for the Green Software Foundation."
 teaserText: "Being a very new area, skill sets for green software is one of the challenges we face. Many software developers and engineers lack the knowledge or the avenues to learn and develop expertise to put Green Software Engineering into actual practice."

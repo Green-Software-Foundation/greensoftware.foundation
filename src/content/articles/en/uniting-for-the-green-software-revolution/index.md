@@ -1,5 +1,6 @@
 ---
 title: "Uniting for the Green Software Revolution"
+published: true
 date: "2023-06-09"
 summary: "On June 5 for World Environment Day, GSF hosted a live virtual event for tech enthusiasts interested to know how software can help save the planet. Four experts debated the challenges and opportunities in the field of green software and revealed some of the findings of the State of Green Software Report."
 teaserText: "“Intertwining responsible AI with green AI is of utmost importance, something several people in our survey pointed out in their comments. As generative AI grows, we will have to pay even more attention to this aspect.”"

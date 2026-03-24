@@ -1,5 +1,6 @@
 ---
 title: "Bringing Academic Leadership to Accelerate Green Software Adoption—Meet Prof Javier Soriano of Universidad Politécnica de Madrid "
+published: true
 date: "2025-08-19"
 summary: "Join us in welcoming Universidad Politécnica de Madrid to the GSF. Learn how they bridge academia and industry while championing green software standards across Europe. "
 teaserText: "Leading green software adoption through academic excellence and industry collaboration. "

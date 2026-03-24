@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Systems: Architectural Choices and Sustainability "
+published: true
 date: "2022-02-25"
 summary: "Architecting for minimal carbon is about improving how software is designed, says Anne Currie, in our Sustainable Systems series. The most efficient code is no code at all, and the best time to spot unnecessary work is as early as possible in the design process."
 teaserText: "In continuing the Sustainable Systems series, Anne Currie focuses on architectural choices and sustainability and offers points for those who want to be carbon aware and follow principles of green software engineering in practice."

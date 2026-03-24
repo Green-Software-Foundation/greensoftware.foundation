@@ -1,5 +1,6 @@
 ---
 title: "Engineers know the theory but not what to change in code"
+published: true
 summary: >
   How NTT DATA, Goldman Sachs, Accenture, AVEVA, and contributors from 11 organisations
   built the Green Software Patterns catalogue — a peer-reviewed library of actionable

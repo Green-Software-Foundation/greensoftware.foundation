@@ -4,22 +4,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Img } from "@/components/react/image";
 
-export interface ArticleOrg {
-  /** Organisation name (shown as fallback if no logo) */
-  name: string;
-  /** Organisation logo (if present, replaces text) */
-  logoSrc?: string;
-}
-
 export interface Article {
   /** Article title */
   title: string;
   /** Short summary */
   description: string;
-  /** One or more organisations */
-  organizations?: ArticleOrg[];
-  /** Number of additional member orgs not listed by name */
-  additionalOrgCount?: number;
   /** Article thumbnail/hero image */
   imageSrc?: string;
   /** Link to the full article */
@@ -32,7 +21,6 @@ interface Props {
   heading?: string;
   body?: string;
   articles: Article[];
-  showOrganizations?: boolean;
   ctaText?: string;
   ctaHref?: string;
 }
@@ -41,7 +29,6 @@ export function ArticleCarousel({
   heading,
   body,
   articles,
-  showOrganizations = true,
   ctaText,
   ctaHref,
 }: Props) {
@@ -97,35 +84,6 @@ export function ArticleCarousel({
                   )}
                   <div className="flex flex-col justify-between flex-grow p-6">
                     <div>
-                      {showOrganizations &&
-                        article.organizations &&
-                        article.organizations.length > 0 && (
-                          <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                            {article.organizations.map((org, i) => (
-                              <React.Fragment key={i}>
-                                {org.logoSrc ? (
-                                  <Img
-                                    src={org.logoSrc}
-                                    alt={org.name}
-                                    className="h-4 max-w-[60px] w-auto object-contain"
-                                    sizes="60px"
-                                    widths={[60, 120]}
-                                  />
-                                ) : (
-                                  <span className="text-xs font-semibold text-primary">
-                                    {org.name}
-                                  </span>
-                                )}
-                              </React.Fragment>
-                            ))}
-                            {article.additionalOrgCount &&
-                              article.additionalOrgCount > 0 && (
-                                <span className="text-xs text-gray-darker">
-                                  +{article.additionalOrgCount} more members
-                                </span>
-                              )}
-                          </div>
-                        )}
                       <h3 className="mb-2 text-xl font-bold leading-tight">
                         {article.title}
                       </h3>

@@ -25,6 +25,7 @@ pnpm-debug.log*
 public/pagefind/
 # Generated data (fetched from Notion)
 public/assets/logos/
+public/assets/project-icons/
 public/assets/team/
 src/data/
 # @netlify/plugin-gatsby ignores start

@@ -1,5 +1,6 @@
 ---
 title: "GSF GLOBAL SUMMIT 2022 TOKYO"
+published: true
 date: "2022-09-02"
 summary: "GSF Global Summit is a series of free events. Regional events were held in June 2022 all around the globe. This event was broadcasted from a studio in Tokyo. Microsoft Japan, Intel, Nomura Research Institute, and NTT DATA talked about green software and exchanged their ideas. The Summit attracted audiences and contributed to a growing the presence of Green Software Foundation in Japan as well as a sense of unity among the Japanese members."
 teaserText: "Our biggest pain point is how we measure the carbon emissions of software. Green Software Foundation has developed SCI to define a methodology for calculating the rate of carbon emissions for a software system. SCI has become a common language for evaluating green software and we can change the software future with it."

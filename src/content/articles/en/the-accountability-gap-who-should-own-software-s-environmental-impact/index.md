@@ -1,5 +1,6 @@
 ---
 title: "The Accountability Gap: Who Should Own Software’s Environmental Impact? "
+published: true
 date: "2025-11-27"
 summary: "At Green IO Paris, we're asking 800+ technology experts who has the power to reduce software's environmental impact, using our consensus-building process to find answers."
 teaserText: "Mapping where 800+ technologists stand on accountability at Green IO Paris"

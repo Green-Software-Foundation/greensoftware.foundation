@@ -1,5 +1,6 @@
 ---
 title: "Energizing the ICT Sector - Meet Dr. Ong Chen Hui of Singapore’s IMDA"
+published: true
 date: "2023-09-27"
 summary: "As a statutory board in the Singapore government, IMDA seeks to deepen regulatory capabilities for a converged ICT sector to safeguard the interests of consumers and foster pro-enterprise regulations. "
 teaserText: "The digital economy is on a trajectory to contribute 1/3 of GHG emissions worldwide by 2050, driven by rising needs for computation from energy-intensive tech such as AI and blockchain. The global ICT sector must reduce its GHG emissions by 45% by 2030 to achieve net zero by 2050. **"

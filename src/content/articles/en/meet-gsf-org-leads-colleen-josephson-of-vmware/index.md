@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Colleen Josephson of VMware"
+published: true
 date: "2022-01-31"
 summary: "Colleen Josephson is a Research Scientist at VMware and the company’s Organizational Lead at GSF. Read about her thoughts on inspiring and implementing the next generation of digital infrastructure."
 teaserText: "Colleen, an Assistant Professor at UC Santa Cruz and a Research Scientist at VMware, explains how her team’s interest in green software comes from a passion for doing what’s  right, a willingness to tackle hard problems, and the belief that doing good for the planet aligns strongly with the best interests of their customers."

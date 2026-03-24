@@ -1,5 +1,6 @@
 ---
 title: "Embedding Software Sustainability into Digital Energy Solutions—Meet Hervé Guirado and Juan Ignacio Rubio of Schneider Electric"
+published: true
 date: "2025-02-06"
 summary: "In the GSF new member interview, Hervé Guirado and Juan Ignacio Rubio share how Schneider Electric leverages expertise in energy efficiency and decarbonization to drive sustainability in the software domain. "
 teaserText: "The aim is to develop software that is both efficient and environmentally responsible. "

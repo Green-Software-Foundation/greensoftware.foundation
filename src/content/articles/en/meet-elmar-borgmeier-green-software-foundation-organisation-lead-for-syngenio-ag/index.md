@@ -1,5 +1,6 @@
 ---
 title: "Meet Elmar Borgmeier, Green Software Foundation Organisation Lead for SYNGENIO AG"
+published: true
 date: "2022-05-05"
 summary: "In this interview Elmar Borgmeier, a co-founder of Syngenio, talks about the company’s green software development initiatives and the future of green software."
 teaserText: "Elmar Borgmeier co-founded Syngenio more than 20 years ago and today leads the company’s innovation teams. In this interview we asked Elmar about Syngenio’s growth and its journey towards green software and the Green Software Foundation."

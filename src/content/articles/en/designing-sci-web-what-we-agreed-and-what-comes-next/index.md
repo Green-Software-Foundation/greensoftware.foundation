@@ -1,5 +1,6 @@
 ---
 title: "Designing SCI for Web: What We Agreed and What Comes Next"
+published: true
 date: "2026-02-03"
 summary: "In autumn 2025, a group of GSF members reached consensus on the design foundation for SCI for Web.  Here is what they agreed on, how the AI-assisted process worked, and what's next."
 teaserText: "A consensus-built methodology for measuring the carbon intensity of web applications"

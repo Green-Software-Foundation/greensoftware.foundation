@@ -1,5 +1,6 @@
 ---
 title: "A truly energizing year in the rear view mirror - GSF in 2022"
+published: true
 date: "2023-01-26"
 summary: "The GSF Annual Report covers our activities and achievements throughout last year. It’s a quick and exciting read, so don’t miss out on going through the full report. Here is a short overview."
 teaserText: "A truly energizing year in the rear view mirror - GSF in 2022"

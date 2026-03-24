@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: NTT DATA"
+published: true
 date: "2021-09-07"
 summary: "NTT DATA on green software and the challenge of striking a balance between introducing technologies that enrich society and reducing CO2 emissions and the environmental impact."
 teaserText: "NTT DATA on green software and the challenge of striking a balance between introducing technologies that enrich society and reducing CO2 emissions and the environmental impact."

@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Systems: Mastering the Tradeoff Between High Server Utilization and Energy Efficiency in Designing Green Software"
+published: true
 date: "2022-02-15"
 summary: "Reducing hardware resources and aiming for high server utilization does not always bring down carbon intensity of software. Read the first article in Sustainable Systems series by Srinivasan Rakhunathan to understand why"
 teaserText: "What should you monitor as you try to increase the hardware efficiency of software? To find out, read this first article by Srinivasan Rakhunathan in the Sustainable Systems column."

@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Timo Muller of Leaders for Climate Action"
+published: true
 date: "2022-01-27"
 summary: "Timo Muller of LFCA says building truly carbon aware software is exciting and that he is looking forward to being an early adopter of new tech and promoting it among others. "
 teaserText: "Timo finds it exciting to build truly carbon aware software and says that as a player between the private and public sector, LFCA can help increase adoption of new technology in the field."

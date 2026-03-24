@@ -1,5 +1,6 @@
 ---
 title: "GSF Global Summit London hosted by Microsoft, Accenture, Avanade & Goldman Sachs"
+published: true
 date: "2022-06-07"
 summary: "Engaging discussions around green software principles, ways to measure a piece of software’s carbon footprint, and to learn more about sustainability for developers, designers, and technologists. "
 teaserText: "The Summit is a global event with regional experiences to provide educational content and networking opportunities for technologists looking to be more sustainable in their work. "

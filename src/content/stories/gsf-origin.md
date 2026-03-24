@@ -1,5 +1,6 @@
 ---
 title: "The biggest companies in the world were independently solving the same problem"
+published: true
 summary: >
   How Jeff Sandquist of Microsoft, Sanjay Podder of Accenture, Erica Brescia of GitHub,
   and leaders from Thoughtworks and Goldman Sachs discovered they were working on the same
