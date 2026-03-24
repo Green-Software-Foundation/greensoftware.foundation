@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-GSF's education programme: courses (Green Software Practitioner, SOFT Essentials), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
+GSF's education programme: courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
 
 ## Dynamic Elements
 
@@ -21,6 +21,7 @@ Everything else on this page is hardcoded:
 - **Courses heading** — intro to Movement Platform courses
 - **Green Software Practitioner** — TabbedSection (overview, audience, outcomes)
 - **SOFT Essentials** — TabbedSection (overview, audience, outcomes)
+- **SCI for AI Fundamentals** — TabbedSection (overview, audience, outcomes)
 - **"More courses coming"** — TextBlock placeholder
 - **Movement Platform CTA** — CTACard
 - **Member stories** — MemberStories component with 2 hardcoded stories (Green Software Practitioner, Green Software Patterns) linking to `/stories/`
