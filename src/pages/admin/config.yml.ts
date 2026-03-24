@@ -33,11 +33,12 @@ const config = `backend:
 #   src/content/articles/ja/slug/index.md  (only created if translated)
 #
 # initial_locales: [en] means only English is enabled when creating a new
-# entry. Editors opt-in to other locales by clicking the locale tab.
+# entry. Editors opt-in to other locales via the three-dot menu in the editor.
 i18n:
   structure: multiple_folders
   locales: [en, ja, pt, zh]
   default_locale: en
+  initial_locales: [en]
 
 # Global fallback media folder (used by collections that don't override it)
 media_folder: public/assets/uploads
@@ -64,7 +65,6 @@ collections:
     extension: md
     format: frontmatter
     i18n: true
-    initial_locales: [en]
     summary: "{{date}} — {{title}}"
     sortable_fields:
       fields: [date, title]
@@ -263,7 +263,6 @@ collections:
     extension: md
     format: frontmatter
     i18n: true
-    initial_locales: [en]
     summary: "{{date}} — {{title}}"
     sortable_fields:
       fields: [date, title]
