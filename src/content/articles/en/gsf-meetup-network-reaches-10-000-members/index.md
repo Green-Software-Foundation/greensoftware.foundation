@@ -1,5 +1,6 @@
 ---
 title: "The GSF Meetup Network Reaches 10,000 Members"
+published: true
 date: "2025-03-04"
 summary: "Members of the GSF Meetup community share what motivates them, key insights from the community building, and how anyone can get involved."
 teaserText: "Celebrating a major milestone and highlighting the community behind it."

@@ -1,5 +1,6 @@
 ---
 title: "Why We Are on the Cusp of a New Era of Carbon-Efficient Software "
+published: true
 date: "2022-02-28"
 summary: "Sanjay Podder of Accenture, a founder Steering Committee member of the Green Software Foundation, looks at the journey so far and the future prospects of green software"
 teaserText: "While the journey to lower-carbon software is well underway, we at the GSF know there’s much more to do. And we’re eager for like-minded parties to join us in our mission. "

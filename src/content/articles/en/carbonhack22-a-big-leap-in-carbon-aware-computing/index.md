@@ -1,5 +1,6 @@
 ---
 title: "That’s a wrap - CarbonHack22 a big leap in carbon aware computing"
+published: true
 date: "2022-11-15"
 summary: "The hackathon engaged the most talented developers from around the globe in building the best carbon aware application using the GSF Carbon Aware SDK."
 teaserText: "The hackathon engaged the most talented developers from around the globe in building the best carbon aware application using the GSF Carbon Aware SDK."

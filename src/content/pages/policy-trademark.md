@@ -1,5 +1,6 @@
 ---
 title: "Trademark Policy"
+published: true
 slug: "policy/trademark"
 ---
 

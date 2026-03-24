@@ -1,5 +1,6 @@
 ---
 title: "The Green Software Foundation Joins the UK Government Digital Sustainability Alliance (GDSA) to Shape Industry Standards"
+published: true
 date: "2025-10-16"
 summary: "We're excited to announce a new partnership that brings green software expertise to UK government digital strategy. Learn how the GSF and GDSA are working togther. "
 teaserText: "New partnership to advance digital sustainability standards across the UK government and its supply chain. "

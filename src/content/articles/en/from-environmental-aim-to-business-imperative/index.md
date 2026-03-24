@@ -1,5 +1,6 @@
 ---
 title: "From Environmental Aim to Business Imperative "
+published: true
 date: "2024-04-10"
 summary: "Recently, on Environmental Variables,  Anne Currie, a Green Software Champion, and Asim Hussain, Executive Director of the GSF, discussed the intersection of AI, sustainability, and the changing world of green software legislation.  Discover the core components of the conversation and what they mean for the future of sustainable software. "
 teaserText: "The intersection of AI, sustainability, and the changing world of green software legislation, and what it means."

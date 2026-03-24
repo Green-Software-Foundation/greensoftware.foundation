@@ -1,5 +1,6 @@
 ---
 title: "Beyond Single-Dimensional Metrics for Digital Sustainability"
+published: true
 date: "2022-01-05"
 summary: "Using multi-dimensional, rich metadata-supplemented metrics for measurement of energy consumption include higher transparency, less scope to game the metrics and more channels to implement actions that make systems greener. "
 teaserText: "In measuring energy consumption of software a move towards muti-dimensional, rich metadata-supplemented metrics offer better opportunities to implement actions that actually make software greener. "

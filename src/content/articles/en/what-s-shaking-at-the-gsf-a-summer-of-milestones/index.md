@@ -1,5 +1,6 @@
 ---
 title: "What’s Shaking at the GSF – A Summer of Milestones"
+published: true
 date: "2023-09-05"
 summary: "As we reflect on the Summer of 2023, let's delve into some of the key milestones achieved in green software."
 teaserText: "Explore the exciting progress in the mission to reduce software's carbon footprint as we highlight key milestones achieved in green software during the Summer of 2023."

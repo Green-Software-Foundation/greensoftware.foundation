@@ -1,5 +1,6 @@
 ---
 title: "Balancing Power and Responsibility: GSF's AI Environmental Panel Preview"
+published: true
 date: "2023-09-12"
 summary: "GSF is holding on online event on October 5, where experts will explore how we can make AI greener and carbon-aware."
 teaserText: "AI holds immense promise to combat greenhouse gas (GHG) emissions, optimize energy use, and protect natural resources. However, there's a twist: it's already proving to be a strain on our natural resources, energy systems and climate. "

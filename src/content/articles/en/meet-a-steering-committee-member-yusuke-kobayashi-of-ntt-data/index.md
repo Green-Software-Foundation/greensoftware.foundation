@@ -1,5 +1,6 @@
 ---
 title: "Meet a Steering Committee Member: Yusuke Kobayashi of NTT DATA"
+published: true
 date: "2021-12-03"
 summary: "Yusuke is the Manager, Green Innovation Office at NTT DATA. He wants to help establish standards so that all developers can know whether they are developing green software."
 teaserText: "Yusuke, the Manager Green Innovation at NTT DATA believes that we should motivate developers and users to benefit from innovative IT technologies, but without forgetting to consider their environmental impact."

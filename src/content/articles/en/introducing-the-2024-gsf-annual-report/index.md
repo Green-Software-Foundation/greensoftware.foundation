@@ -1,5 +1,6 @@
 ---
 title: "Introducing the 2024 GSF Annual Report"
+published: true
 date: "2024-12-17"
 summary: "The GSF Annual Report highlights our activities and achievements throughout the year and plans for 2025. "
 teaserText: "A closer look at 2024 and what lies ahead of us in 2025. "

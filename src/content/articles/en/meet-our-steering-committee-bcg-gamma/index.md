@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: BCG GAMMA"
+published: true
 date: "2022-01-26"
 summary: "BCG GAMMA envisions a future where sustainability is a cornerstone of software development and shares views on overcoming challenges to green software. "
 teaserText: "BCG GAMMA sees two key challenges on the road to adoption of green software: awareness and action and believes the next decade will be one of transformation. Software engineering is and will be the central piece of the puzzle."

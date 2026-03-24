@@ -1,5 +1,6 @@
 ---
 title: "GSF Member Interviews: Meet Alexander Kroll of NTT DATA, Deutschland"
+published: true
 date: "2022-03-05"
 summary: "Alexander is Competence Unit Manager, Innovation & Technology, and Senior Solution Architect with NTT DATA. Alex sees more opportunities than obstacles to green software due to the strong company focus on United Nations Sustainability goals."
 teaserText: "Alexander hopes that GSF participation and his work as guild leader at work, as a university lecturer on microservices, cloud computing and development helps him raise awareness of green software and make a wide impact on many people."

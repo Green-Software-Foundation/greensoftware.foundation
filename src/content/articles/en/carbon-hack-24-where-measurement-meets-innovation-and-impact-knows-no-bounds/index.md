@@ -1,5 +1,6 @@
 ---
 title: "Carbon Hack 24: Where measurement meets innovation, and impact knows no bounds"
+published: true
 date: "2023-12-18"
 summary: "From Monday, March 18 to Monday, April 8, 2024, developers and engineers will compete to showcase their best application of the GSF Impact Framework to reduce the ecological footprint of software."
 teaserText: "Participate in Carbon Hack 24 and redefine how we measure the impact of software."

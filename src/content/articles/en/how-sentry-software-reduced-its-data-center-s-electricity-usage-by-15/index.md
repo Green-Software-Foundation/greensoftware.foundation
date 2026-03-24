@@ -1,5 +1,6 @@
 ---
 title: "How Sentry Software Reduced Its Data Center’s Electricity Usage by 15%"
+published: true
 date: "2023-07-06"
 summary: "This article highlights how GSF member Sentry Software successfully raised the temperature of its data center from 18°C to 27°C, resulting in significant energy savings and carbon emissions reductions. A full recording of this Green IT success story can be found here."
 teaserText: "Increasing the data center temperature from 18°C to 27°C resulted in a decrease of 15% in energy required for air conditioning and 7% in carbon emissions. "

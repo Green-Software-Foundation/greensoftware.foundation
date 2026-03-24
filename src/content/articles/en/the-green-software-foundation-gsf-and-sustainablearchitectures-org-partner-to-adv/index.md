@@ -1,5 +1,6 @@
 ---
 title: "The Green Software Foundation and SustainableArchitectures.org Partner to Advance Sustainable Digital Architecture and Green Software Practices"
+published: true
 date: "2025-12-04"
 summary: " The Green Software Foundation and SustainableArchitectures.org are proud to announce a strategic partnership to advance knowledge-sharing and collaboration between their global communities."
 teaserText: "Making sustainability measurable in enterprise architecture decisions."

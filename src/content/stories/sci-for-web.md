@@ -1,5 +1,6 @@
 ---
 title: "How do you measure a website's carbon footprint?"
+published: true
 summary: >
   How Chris Adams of the Green Web Foundation and 14 assembly members from across the
   industry are building SCI for Web — a standard for measuring website carbon intensity

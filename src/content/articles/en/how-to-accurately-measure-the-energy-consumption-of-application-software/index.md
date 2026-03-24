@@ -1,5 +1,6 @@
 ---
 title: "How to Accurately Measure the Energy Consumption of Application Software"
+published: true
 date: "2023-06-05"
 summary: "According to the World Economic Forum, 70% of the new value created in the economy over the next decade is expected to be based on digitally enabled business platforms. This trend will continue to drive an exponential increase in data creation and consumption along with the technology sector’s global carbon footprint. "
 teaserText: "One of the most profound challenges in green software is measuring energy consumption. AVEVA has started calculating the energy consumption of its products and missions to understand how efficiently they currently operate. From there, they will define and implement the maturity and drive improvements in overall green design for all their solutions."

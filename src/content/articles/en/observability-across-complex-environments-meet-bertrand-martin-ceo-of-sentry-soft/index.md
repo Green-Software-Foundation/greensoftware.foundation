@@ -1,5 +1,6 @@
 ---
 title: "Observability Across Complex Environments – Meet Bertrand Martin, CEO of Sentry Software"
+published: true
 date: "2023-06-19"
 summary: "Bertrand Martin is the CEO and President of Sentry Software and one of the company’s co-founders. He is equally a developer and a system administrator by trade. His career has been dedicated to building monitoring and observability tools, initially as a user of such solutions and later as a developer."
 teaserText: "“I believe observability is paramount on our path to reduce carbon emissions. Robust monitoring and observability solutions are empowering organizations to tackle carbon emissions head-on. Supplying them with the necessary insights allows them to move in the right direction effectively.”"

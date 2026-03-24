@@ -1,5 +1,6 @@
 ---
 title: "Meet A Steering Committee Member: Dan Lewis-Toakley of Thoughtworks"
+published: true
 date: "2021-11-11"
 summary: "Dan Lewis-Toakley of Thoughtworks wants to see a large and diverse movement of green software practitioners around the world."
 teaserText: "Dan Lewis-Toakley is the Green Cloud Lead & Senior Developer Consultant at Thoughtworks. He believes that a critical mass of green software adoption will require stakeholders across all industries and sectors to come together."

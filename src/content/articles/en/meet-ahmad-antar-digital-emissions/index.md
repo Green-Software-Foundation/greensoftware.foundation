@@ -1,5 +1,6 @@
 ---
 title: "Understanding the Environmental Footprint of our Digital Activities - Meet Ahmad Antar, Digital Emissions"
+published: true
 date: "2024-02-27"
 summary: "Ahmad Antar explains how his non-profit Digital Emissions is raising awareness about the environmental impact of our digital actions. His work is based on the concept of digital carbon footprint modeling, which started at a Harvard Extension classroom."
 teaserText: "“We are excited to be part of the vibrant community of green software practitioners at GSF, and it’s promising to see the diversity of initiatives underway. We are eager to leverage the resources available to contribute to the green software movement.”"

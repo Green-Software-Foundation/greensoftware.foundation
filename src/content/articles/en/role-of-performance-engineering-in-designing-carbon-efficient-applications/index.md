@@ -1,5 +1,6 @@
 ---
 title: "Role of Performance Engineering in Designing Carbon Efficient Applications"
+published: true
 date: "2021-11-24"
 summary: "How can you use performance engineering and performance testing to make carbon efficient applications?  "
 teaserText: "Learn, with examples, how to use performance testing to optimize your infrastructure use in designing carbon efficient applications. "

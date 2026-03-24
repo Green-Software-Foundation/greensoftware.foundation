@@ -1,5 +1,6 @@
 ---
 title: "Green Software Foundation Q1 2022 Report is Released"
+published: true
 date: "2022-04-12"
 summary: "The Q1 report of the Green Software Foundation, released on 11 April 2022, lays out our journey so far and the achievements since our launch in mid 2021. "
 teaserText: "Take a look at the Q1 2022 report of the Green Software Foundation and where we stand today. You will also get an idea of our plans for the future. "

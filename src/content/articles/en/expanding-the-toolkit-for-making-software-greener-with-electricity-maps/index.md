@@ -1,5 +1,6 @@
 ---
 title: "Expanding the Toolkit for making software greener with Electricity Maps"
+published: true
 date: "2023-09-07"
 summary: "Recently, Electricity Maps launched an open-source Data Portal giving easy and free access to granular data on CO2 emissions from electricity consumption to every software practitioner. It's a significant leap forward for our community, and here's why."
 teaserText: "To decarbonize software at scale, simplifying the power system's complexities and ensuring we have accurate data about emissions from the electricity grid is a key step. Thanks to Electricity Maps, this journey is about to get significantly better.  "

@@ -1,5 +1,6 @@
 ---
 title: "Baselining Software Carbon Emissions - A Use Case by UBS"
+published: true
 date: "2024-01-17"
 summary: "Using the SCI specification, UBS compares two banking applications with regard to their carbon emissions."
 teaserText: "UBS shows in their use case how the SCI specification can be applied to measure software carbon emissions."

@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: Thoughtworks "
+published: true
 date: "2021-08-10"
 summary: "Some thoughts from Thoughtworks on green software "
 teaserText: "Thoughtworks on green software and working with the Green Software Foundation"

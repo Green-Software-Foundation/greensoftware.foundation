@@ -1,5 +1,6 @@
 ---
 title: "Meet Scott Chamberlin, Sr Director of Sustainability at Intel "
+published: true
 date: "2022-06-29"
 summary: "Intel joins the Green Software Foundation. We interview Scott Chamberlin, Sr Director of Sustainability at Intel "
 teaserText: "Intel announced its plans to reduce its greenhouse gas emissions further and develop more sustainable technology solutions. The pledge involves working with stakeholders and industry partnerships to find green solutions for the entire technology ecosystem."

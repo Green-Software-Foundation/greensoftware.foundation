@@ -1,5 +1,6 @@
 ---
 title: "Cloud Computing: The Business Case for 100% Carbon Free Energy"
+published: true
 date: "2023-05-02"
 summary: "The cloud computing industry is growing at an unprecedented pace. With businesses and consumers relying on cloud services for everything from data storage to application hosting, the demand for cloud computing solutions is on an upward trajectory. However, with this growth, there is a greater risk of increased carbon emissions from cloud computing. "
 teaserText: "The cloud computing industry is growing at an unprecedented pace. With businesses and consumers relying on cloud services for everything from data storage to application hosting, the demand for cloud computing solutions is on an upward trajectory. However, with this growth, there is a greater risk of increased carbon emissions from cloud computing."

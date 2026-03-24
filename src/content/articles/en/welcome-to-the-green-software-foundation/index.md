@@ -1,5 +1,6 @@
 ---
 title: "Welcome to the Green Software Foundation!"
+published: true
 date: "2021-10-26"
 summary: "Find out the mission of the Green Software Foundation, how we operate and our priority areas. Learn how  you can get involved in our working groups on Standards, Innovation, Community and Trademarks."
 teaserText: "Find out the mission of the Green Software Foundation, how we operate, our priority areas and about our Working Groups."

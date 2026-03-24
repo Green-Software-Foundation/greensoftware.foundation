@@ -1,5 +1,6 @@
 ---
 title: "Minimizing the Carbon Footprint in IT Operations – Meet Jörg Schwuchow and Daniel Geisel of Mercedes-Benz"
+published: true
 date: "2024-04-30"
 summary: "The GSF new member interview divulges how Mercedes-Benz and its subsidiary, Mercedes-Benz Tech Innovation, view green software and its potential for corporate sustainability."
 teaserText: "“We need to continue to reduce our carbon footprint and for this, green software is one of the most important levers for the future.”"

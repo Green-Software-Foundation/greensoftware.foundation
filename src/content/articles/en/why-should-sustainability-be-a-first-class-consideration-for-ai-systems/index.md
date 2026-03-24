@@ -1,5 +1,6 @@
 ---
 title: "Why Should Sustainability be a First-class Consideration for AI Systems?"
+published: true
 date: "2021-10-28"
 summary: "Should sustainability be a first-class consideration for AI systems? Yes, because AI systems have environmental and societal implications. What can you do to make green AI a reality?"
 teaserText: "Should sustainability be a first-class consideration for AI systems? Yes, because AI systems have environmental and societal implications. What can you do to make green AI a reality?"

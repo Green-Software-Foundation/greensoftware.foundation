@@ -1,5 +1,6 @@
 ---
 title: "Establishing Software Carbon Transparency: Why We’re Exploring SCI Disclosure Certification"
+published: true
 date: "2025-07-29"
 summary: "At GSF, we’re exploring a voluntary, structured approach to self-reported SCI disclosure, designed to build shared knowledge base needed for meaningful, measurable progress. Learn about its potential impact. "
 teaserText: "Building the data foundation for verifiable impact."

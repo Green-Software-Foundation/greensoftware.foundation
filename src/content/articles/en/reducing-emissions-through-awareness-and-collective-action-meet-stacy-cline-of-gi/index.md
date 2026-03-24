@@ -1,5 +1,6 @@
 ---
 title: "Reducing Emissions Through Awareness and Collective Action—Meet Stacy Cline of GitLab "
+published: true
 date: "2025-06-12"
 summary: "Join us in welcoming GitLab to the GSF. In our Q&A, Stacy Cline shares more about their sustainability strategy as an all-remote company. "
 teaserText: "Driving sustainability with measurement and education in a fully remote organization."

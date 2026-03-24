@@ -1,5 +1,6 @@
 ---
 title: "Meet Our Steering Committee: GitHub"
+published: true
 date: "2021-08-17"
 summary: "GitHub shares thoughts on green software and how developers have to make sustainability-conscious decisions throughout the process of building and shipping software."
 teaserText: "GitHub shares thoughts on green software and how developers have to make sustainability-conscious decisions throughout the process of building and shipping software."

@@ -1,5 +1,6 @@
 ---
 title: "Software Carbon Intensity (SCI) Specification Project"
+published: true
 date: "2022-04-06"
 summary: "An interview with Abhishek Gupta of Microsoft and Henry Richardson of WattTime, Co-Chairs of the Software Carbon Intensity (SCI) Specification Project "
 teaserText: "The Co-Chairs of the Software Carbon Intensity (SCI) Specification Project, Abhishek Gupta and Henry Richardson talk about the future of SCI and why they find the project exciting. "

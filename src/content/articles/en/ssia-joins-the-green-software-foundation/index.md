@@ -1,5 +1,6 @@
 ---
 title: "SSIA Joins the Green Software Foundation"
+published: true
 date: "2025-03-11"
 summary: "With the SSIA joining the GSF, we shed light on our key new initiatives and what the merger means for the future of green software. "
 teaserText: "What merging SSIA into the GSF means for green software"

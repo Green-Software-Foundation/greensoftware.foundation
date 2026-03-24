@@ -1,5 +1,6 @@
 ---
 title: "Terms & Conditions"
+published: true
 slug: "policy/terms"
 ---
 

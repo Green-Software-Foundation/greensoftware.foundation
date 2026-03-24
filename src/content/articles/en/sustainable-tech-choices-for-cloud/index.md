@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Tech Choices for Cloud "
+published: true
 date: "2022-01-20"
 summary: "The big three hypercloud providers need clever flexibility and targeted efficiency to achieve CZero. And the changes must come from them as well as from their users."
 teaserText: "Running highly available products and services on top of variably available power calls for flexibility and targeted efficiency from cloud providers and users."

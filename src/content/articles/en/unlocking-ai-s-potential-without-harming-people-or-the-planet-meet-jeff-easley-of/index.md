@@ -1,5 +1,6 @@
 ---
 title: "Unlocking AI's Potential Without Harming People or the Planet—Meet Jeff Easley of the Responsible AI Institute "
+published: true
 date: "2024-08-27"
 summary: "Join us in welcoming the Responsible AI (RAI) Institute to the GSF. Jeff Easley of RAI Institute shares more on deepening the Institute's commitment to promoting more energy-efficient AI models."
 teaserText: "Jeff Easley shares how joining the GSF underpins the Institute's commitment to promoting more energy-efficient AI models."

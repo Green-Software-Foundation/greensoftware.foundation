@@ -1,5 +1,6 @@
 ---
 title: "We can't shift workloads to clean energy"
+published: true
 summary: >
   How Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK —
   the first open-source toolkit for carbon-aware computing, now deployed on production

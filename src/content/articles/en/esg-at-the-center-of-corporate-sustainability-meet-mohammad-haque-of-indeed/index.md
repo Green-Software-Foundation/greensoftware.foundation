@@ -1,5 +1,6 @@
 ---
 title: "ESG at the Center of Corporate Sustainability - Meet Mohammad Haque of Indeed"
+published: true
 date: "2023-10-26"
 summary: "Indeed is a global force that has redefined how people find jobs and companies find the talent they need to thrive. Software is at the core of Indeed’s strategy, making it the main focus of corporate sustainability efforts."
 teaserText: "Mohammad Haque is a software engineer working on data infrastructure. His team manages Indeed’s data pipelines, configuring them and setting them up for various internal users. He spearheaded the internal Green Engineering Guild, driving green software at Indeed."

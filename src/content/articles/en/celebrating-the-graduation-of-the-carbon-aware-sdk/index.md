@@ -1,5 +1,6 @@
 ---
 title: "Celebrating the Graduation of the Carbon Aware SDK"
+published: true
 date: "2024-04-16"
 summary: "We’re thrilled to announce the Graduation of the Carbon Aware SDK. Learn more about the SDK, what this stage of maturity signals, how we got here, and what lies ahead."
 teaserText: "We recognize and appreciate the contributions from Avanade, Microsoft, UBS and NTT DATA in helping us achieve this milestone. "

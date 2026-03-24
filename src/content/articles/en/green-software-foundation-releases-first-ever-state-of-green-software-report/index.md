@@ -1,5 +1,6 @@
 ---
 title: "Green Software Foundation Releases First-Ever State of Green Software Report"
+published: true
 date: "2023-05-31"
 summary: "May 31, 2023/– The Green Software Foundation (GSF) has announced the release of the 2023 State of Green Softwarehttp://stateof.greensoftware.foundation  (SOGS) report - the first-ever analysis of green software, globally and across industries."
 teaserText: "A new digital publication that brings global insights and data to the forefront to decarbonize software at scale."

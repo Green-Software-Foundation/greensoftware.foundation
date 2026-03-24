@@ -1,5 +1,6 @@
 ---
 title: "Privacy Policy"
+published: true
 slug: "privacy-policy"
 ---
 

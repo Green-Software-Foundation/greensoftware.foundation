@@ -1,5 +1,6 @@
 ---
 title: "CTA: Success Factors, Measurements and Driving the Right Behaviour"
+published: true
 date: "2022-02-10"
 summary: "There's a growing understanding of the need for organisations to be green, to consider sustainability. But what metrics can we use to measure success? Read the second article in the CTA series for ideas and guidance."
 teaserText: "Business leaders need to set a direction. To do that effectively it is necessary to know what you're trying to measure to promote change, and drive the adoption of green software engineering practices."

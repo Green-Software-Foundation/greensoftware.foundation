@@ -1,5 +1,6 @@
 ---
 title: "How Accenture Implemented the SCI Specification Score to Track Software Emissions"
+published: true
 date: "2023-03-01"
 summary: "An in depth look at how Accenture implemented the SCI Specification Score to track software emissions."
 teaserText: "The design, development, and deployment of all software applications should prioritize sustainability as an essential outcome."

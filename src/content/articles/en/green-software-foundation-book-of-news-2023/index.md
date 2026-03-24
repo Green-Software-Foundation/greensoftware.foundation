@@ -1,5 +1,6 @@
 ---
 title: "Green Software Foundation - Book of News 2023"
+published: true
 date: "2023-11-16"
 summary: "The GSF Book of News delivers insights into the foundation's latest projects and initiatives."
 teaserText: "Our Book of News 2023 aims to ensure every individual within our ecosystem feels supported in their green software journey and has reasons to confidently advocate for using green software principles and patterns. "

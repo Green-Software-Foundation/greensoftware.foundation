@@ -1,5 +1,6 @@
 ---
 title: "Call to Action: Spreading the Message of Green Software"
+published: true
 date: "2022-02-01"
 summary: "In this new article series, Call to Action (CTA), Chris Lloyd-Jones discusses practical steps on spreading the message of green software, especially within organisations."
 teaserText: "In Call to Action (CTA), a new article series, Chris Lloyd-Jones of Avanade discusses practical steps for spreading the message of green software  within organisations."

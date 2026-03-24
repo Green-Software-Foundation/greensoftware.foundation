@@ -1,5 +1,6 @@
 ---
 title: "Democratizing Access to Sustainable Computing Tools—Meet Susannah Hill of Cloud Sustainability Watch"
+published: true
 date: "2025-10-30"
 summary: "The new GSF member shares how they equip technologists with practical guides and tools to reduce cloud and AI environmental impacts. "
 teaserText: "Making green computing knowledge accessible and actionable for all practitioners. "

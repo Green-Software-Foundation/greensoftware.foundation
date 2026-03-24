@@ -1,5 +1,6 @@
 ---
 title: "Measuring and Reducing the Environmental Impact of Digital Operations—Meet Lillie Ratliff and Aya Saed of Scope3"
+published: true
 date: "2025-02-19"
 summary: "Join us in welcoming Scope3 to the GSF. In our Q&A article, Lillie Ratliff and Aya Saed share more about Scope3’s commitment to decarbonization in the digital space and how industry-wide standards can drive a more unified approach to green software development."
 teaserText: "Developing standards that are technically sound and policy-aware to create a more cohesive approach to green software development."

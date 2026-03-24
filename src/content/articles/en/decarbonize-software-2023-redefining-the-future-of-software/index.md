@@ -1,5 +1,6 @@
 ---
 title: "Decarbonize Software 2023 - Redefining the Future of Software "
+published: true
 date: "2023-11-23"
 summary: "Find out what happened at Decarb 2023. This post gives a summary of the new ideas shared in the event's presentations and the new GSF projects that were unveiled."
 teaserText: "On the foothills of COP28, we hosted Decarbonize Software on November 16, a global virtual event that united software sustainability leaders and advocates across the technology, ICT, and energy sectors."

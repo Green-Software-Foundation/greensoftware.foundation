@@ -1,5 +1,6 @@
 ---
 title: "Green Software Writers Project"
+published: true
 date: "2022-04-19"
 summary: "Read our interview with Sara Bergman, Chair of Green Software Writers Project, to learn about the project goals, how it operates and how you can become a green software writer, reviewer or translator."
 teaserText: "Learn how the Green Software Writers Project operates and how you can get involved as a writer, reviewer or translator to spread the message of green software worldwide."

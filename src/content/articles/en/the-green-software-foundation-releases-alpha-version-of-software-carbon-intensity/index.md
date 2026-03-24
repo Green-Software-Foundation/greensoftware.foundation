@@ -1,5 +1,6 @@
 ---
 title: "The Green Software Foundation Releases Alpha Version of Software Carbon Intensity Specification for Comment"
+published: true
 date: "2021-12-06"
 summary: "The Green Software Foundation releases the alpha version of their Software Carbon Intensity (SCI) specification for comment. SCI is is a method of scoring software systems based on their carbon emission."
 teaserText: "We  welcome your comments on the alpha version of the Software Carbon Intensity (SCI) specification of the Green Software Foundation and invite those who are passionate about driving change to join us in our mission. "

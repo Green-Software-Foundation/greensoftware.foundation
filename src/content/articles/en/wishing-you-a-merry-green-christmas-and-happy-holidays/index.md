@@ -1,5 +1,6 @@
 ---
 title: "Wishing You A Merry Green Christmas and Happy Holidays!"
+published: true
 date: "2021-12-25"
 summary: "Christmas and holiday greetings from the Green Software Foundation"
 teaserText: "Christmas and holiday greetings from the Green Software Foundation"

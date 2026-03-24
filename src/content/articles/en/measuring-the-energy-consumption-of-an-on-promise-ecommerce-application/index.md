@@ -1,5 +1,6 @@
 ---
 title: "Measuring the Energy Consumption of an on premise ecommerce application"
+published: true
 date: "2023-05-17"
 summary: "While there is a desire by all enterprises to migrate to the cloud, there will be a considerable portfolio of on-premise solutions that we need to live with for the next few years. The carbon footprint of these applications must be measured and optimized, especially as they continue to scale."
 teaserText: "Several large scale multi-tier, on-premise software systems being developed and maintained by NTT DATA run enterprise applications like e-commerce. While there is a desire by all enterprises to migrate to the cloud, there will be a considerable portfolio of on-premise solutions that we need to live with for the next few years. The carbon footprint of these applications must be measured and optimized, especially as they continue to scale."

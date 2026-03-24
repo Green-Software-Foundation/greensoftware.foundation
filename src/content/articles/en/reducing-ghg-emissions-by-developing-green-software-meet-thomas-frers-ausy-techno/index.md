@@ -1,5 +1,6 @@
 ---
 title: "Reducing GHG Emissions by Developing Green Software - Meet Thomas Frers of Randstad Digital "
+published: true
 date: "2023-08-03"
 summary: "Digital solutions architect Thomas Frers of Randstad Digital Germany highlights the need for advances in green software. Creating a sustainability focused work culture within the company was a pivotal part for moving in the right direction."
 teaserText: "Randstad Digital provides customized digital solutions and consulting to its clients across the automotive, banking, insurance, and logistics sectors. More recently, sustainability has emerged as an important marker for success and progress. As a result, sustainability has become integral to the work culture. "

@@ -1,5 +1,6 @@
 ---
 title: "Fostering Carbon-Aware Operating Strategies - Meet Jared Temanson of NREL"
+published: true
 date: "2024-05-07"
 summary: "With a green energy mission and supercomputing capacity of 44 petaflops, NREL is predetermined to be at the forefront of the green software movement. Jared Temanson reveals more."
 teaserText: "“Green Software is a necessary pathway to a sustainable and prosperous future.”"

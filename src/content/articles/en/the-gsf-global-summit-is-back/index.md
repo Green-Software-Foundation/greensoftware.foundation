@@ -1,5 +1,6 @@
 ---
 title: "The GSF Global Summit is Back!"
+published: true
 date: "2024-09-20"
 summary: "Get ready for the 2024 GSF Global Summit—a series of in-person events hosted by GSF members between October 1 - 10."
 teaserText: "Join us to spark conversations, connect, and drive green software forward."

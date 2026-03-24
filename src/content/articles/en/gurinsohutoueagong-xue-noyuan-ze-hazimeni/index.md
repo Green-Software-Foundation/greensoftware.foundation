@@ -1,5 +1,6 @@
 ---
 title: "グリーンソフトウェア工学の原則 はじめに"
+published: true
 date: "2022-09-02"
 summary: "グリーンソフトウェア工学は、気候科学、ソフトウェアプラクティスとア ーキテクチャ、電力市場、ハードウェア、およびデータセンターの設計が 関連する新しい分野です。"
 teaserText: "The principles of green software engineering are A set of tools required to define, develop, and run a software application It's a core competency."

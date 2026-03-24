@@ -1,5 +1,6 @@
 ---
 title: "Our engineers don't know how to build green software"
+published: true
 summary: >
   How Sarah Hsu of Goldman Sachs, Chris Lloyd-Jones of Avanade, and GSF members worldwide
   built and scaled the Green Software Practitioner course — now completed by over 130,000

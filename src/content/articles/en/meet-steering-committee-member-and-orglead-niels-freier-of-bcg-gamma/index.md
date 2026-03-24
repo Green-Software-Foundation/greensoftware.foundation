@@ -1,5 +1,6 @@
 ---
 title: "Meet Steering Committee Member and OrgLead: Niels Freier of BCG GAMMA"
+published: true
 date: "2022-02-21"
 summary: "Niels, an Associate Director at BCG GAMMA, is the company’s Organizational Lead at GSF. He is based in Paris, France and says that a change of mindset is also necessary on top of technology to lead the way to a low-carbon world. "
 teaserText: "Niels, who has a passion for developing complex software and data solutions, believes that technology alone is not sufficient for reshaping business and product portfolios for a low-carbon world; we also need to change the mindset."

@@ -1,5 +1,6 @@
 ---
 title: "GSF Concludes First-Ever Global  Summit"
+published: true
 date: "2022-06-30"
 summary: "We reflect on our first global summit and how members in 14 different countries embarked on the 12-day journey to share the vision of changing the culture of how software is  built to make sustainability a core priority."
 teaserText: "As we conclude our first global summit, we reflect on our learnings."

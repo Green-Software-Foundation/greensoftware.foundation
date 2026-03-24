@@ -1,5 +1,6 @@
 ---
 title: "Looking Back at the GSF Global Summit 2024! "
+published: true
 date: "2024-12-10"
 summary: "Our second global summit brought together leaders and practitioners across eight countries, driven by a shared commitment to minimizing software's environmental impact. "
 teaserText: "In October, we concluded the second GSF Global Summit. Today, we reflect on the learnings and connections driving this global movement towards greener software. "

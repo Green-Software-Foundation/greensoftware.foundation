@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Adam Jordan of Shell"
+published: true
 date: "2022-02-18"
 summary: "Adam is a Distinguished Software Engineer at Shell and the company’s Org Lead at GSF. He sees green software as a core element of solution delivery in the future. "
 teaserText: "Adam sees green software as a core element of solution delivery in the future. As such, professional engineers and professional companies need to understand the true impacts of the solutions they offer. "

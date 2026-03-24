@@ -1,5 +1,6 @@
 ---
 title: "What Do We Need to Build More Sustainable AI Systems?"
+published: true
 date: "2021-09-21"
 summary: "AI systems can have significant environmental impact. We are risking severe environmental and social harm if we fail to make greener AI systems. "
 teaserText: "AI systems can have significant environmental impact. We are risking severe environmental and social harm if we fail to make greener AI systems. "

@@ -1,5 +1,6 @@
 ---
 title: "It’s World Environment Day: Here’s Our Reading List on Green Software"
+published: true
 date: "2024-06-05"
 summary: "Six essential publications to build your knowledge of green software to help you develop climate-conscious code."
 teaserText: "All we need is 3%. These books can help get us there! "

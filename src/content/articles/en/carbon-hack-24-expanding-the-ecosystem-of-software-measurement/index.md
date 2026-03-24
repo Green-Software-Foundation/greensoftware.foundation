@@ -1,5 +1,6 @@
 ---
 title: "Carbon Hack 24: Expanding the Ecosystem of Software Measurement with Impact Framework"
+published: true
 date: "2024-04-22"
 summary: "Carbon Hack 24, the year's largest global green software hackathon, has ended, but its global call to decentralize impact measurement and democratize data has just begun! "
 teaserText: "Carbon Hack 24, the year's largest global green software hackathon, has ended, but its global call to decentralize impact measurement and democratize data has just begun!"

@@ -1,5 +1,6 @@
 ---
 title: "Sustainability as a Primary Integrated Requirement for Software - Meet Mauro Caporuscio, Professor of Computer Science at Linnaeus University"
+published: true
 date: "2024-02-15"
 summary: "New GSF member Mauro Caporuscio of Linnaeus University demands sustainability to be a default primary requirement in software development, independent from the specific purpose of the system."
 teaserText: "“We need a paradigm shift in the way we develop software by turning sustainability from being an afterthought to being a primary and integral aspect of all software systems.”"

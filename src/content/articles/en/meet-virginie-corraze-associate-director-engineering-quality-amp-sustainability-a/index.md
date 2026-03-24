@@ -1,5 +1,6 @@
 ---
 title: "Meet Virginie Corraze, Associate Director, Engineering Quality & Sustainability, Amadeus"
+published: true
 date: "2022-08-18"
 summary: "The travel technology solutions provider includes sustainability as an important pillar for its future and the future of the travel industry. Amadeus is developing various initiatives and taking concrete actions aiming to create a more responsible and sustainable travel industry, starting by reducing the impact of their own operations. Joining GSF comes as a natural move for Amadeus routed in the desire to do more when it comes to sustainability."
 teaserText: "Simply put, we power travel. Amadeus offers IT solutions that connect travelers to the journeys they are seeking, be it through travel agents, search engines, tour operators, airlines, airports, hotels, car rentals, and railways."

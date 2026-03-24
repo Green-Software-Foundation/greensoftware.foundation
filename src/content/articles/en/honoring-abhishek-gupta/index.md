@@ -1,5 +1,6 @@
 ---
 title: "Honoring Abhishek Gupta"
+published: true
 date: "2024-10-08"
 summary: "One of our best has passed. A few members deeply impacted by Abhishek and his work share their heartfelt reflections."
 teaserText: "A Legacy of Leadership, Collaboration, and Heart in Green Software"

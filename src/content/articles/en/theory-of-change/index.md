@@ -1,5 +1,6 @@
 ---
 title: "Our Theory of Change – Defining the strategy  for the GSF"
+published: true
 date: "2022-11-02"
 summary: "The article outlines the three main pillars of the GSF strategy: Knowledge, Tech Culture, and Tooling. Together, they build the foundation of the Theory of Change (TOC) and explain how we will reach our goals with respect to green software."
 teaserText: "Learn about the three main pillars of the GSF strategy: Knowledge, Tech Culture, and Tooling. Together, they build the foundation of the Theory of Change (TOC) and explain how we will reach our goals with respect to green software."

@@ -1,5 +1,6 @@
 ---
 title: "How To Measure The Energy Consumption of Your Frontend Application"
+published: true
 date: "2021-09-14"
 summary: "Find out how to measure energy cost for applications running client-side on a computer, such as web-applications and native applications to make software in accordance with Principles of Sustainable Software Engineering. "
 teaserText: "Learn how to measure energy cost for applications running client-side on a computer, such as web-applications and native applications. "

@@ -1,5 +1,6 @@
 ---
 title: "How Intesa and NTT Data Measure Software Carbon Footprint and Carbon Intensity"
+published: true
 date: "2023-05-17"
 summary: "Intesa Sanpaolo (ISP), as a responsible business entity, acknowledges the importance of adopting sustainable practices to minimize its environmental impact. One of the key challenges that the bank faces in this regard is to track and measure energy consumption and carbon emissions associated with software and hardware usage. To address this challenge, Intesa Sanpaolo requires a monitoring tool that can provide accurate data on its environmental impact and help identify opportunities for improvement."
 teaserText: "One of the key challenges that the bank faces in this regard is to track and measure energy consumption and carbon emissions associated with software and hardware usage. "

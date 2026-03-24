@@ -1,5 +1,6 @@
 ---
 title: "10 Recommendations for Green Software Development "
+published: true
 date: "2021-11-18"
 summary: "How many of these ten green software development recommendations are you not following?"
 teaserText: "When it comes to green software development, every choice you make matters. Read these 10 recommendations for greener software. How many of  them are you not following?"

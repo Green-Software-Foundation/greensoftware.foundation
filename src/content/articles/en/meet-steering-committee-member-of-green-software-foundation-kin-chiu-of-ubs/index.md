@@ -1,5 +1,6 @@
 ---
 title: "Meet Steering Committee Member of Green Software Foundation: Kin Chiu of UBS"
+published: true
 date: "2022-04-14"
 summary: "Kin, Executive Director and Sustainable Technology Lead at UBS feels a responsibility to ensure that our digital world isn’t delivered at the expense of the natural world."
 teaserText: "Kin says that his interest in green software began in earnest while driving UBS’s strategic initiative to move parts of their technical estate to the cloud."

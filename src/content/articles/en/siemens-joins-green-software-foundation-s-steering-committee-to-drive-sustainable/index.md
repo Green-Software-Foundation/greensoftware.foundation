@@ -1,5 +1,6 @@
 ---
 title: "Siemens Joins Green Software Foundation’s Steering Committee To Drive Sustainable Software Development"
+published: true
 date: "2023-10-26"
 summary: "NEWS - Siemens joins Green Software Foundation - Read the Press Release"
 teaserText: "Siemens is proud to join the GSF as a new member of its steering committee to help guide the Foundation’s strategic direction. "

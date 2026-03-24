@@ -1,5 +1,6 @@
 ---
 title: "Terms of Use"
+published: true
 slug: "terms-of-use"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "UBS Joins Green Software Foundation as a Steering Member"
+published: true
 date: "2022-04-07"
 summary: "Green Software Foundation welcomes UBS as the latest Steering Member of the Foundation."
 teaserText: "UBS, a global wealth manager, joins the GSF to ensure that the technology enabling its operations across the world can be made as sustainable as possible."

@@ -1,5 +1,6 @@
 ---
 title: "Sustainability as a Core Principle of the Digital Ecosystem—Meet Francesco Fullone of GrUSP "
+published: true
 date: "2025-05-22"
 summary: "The GSF new member shares how they help practitioners improve the quality, accessibility, inclusiveness, and sustainability of the web."
 teaserText: "Fostering initiatives that bring environmental responsibility to the forefront of web development in Italy and beyond. "

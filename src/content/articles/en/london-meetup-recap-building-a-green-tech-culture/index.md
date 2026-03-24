@@ -1,5 +1,6 @@
 ---
 title: "London Meetup Recap: Building a Green Tech Culture"
+published: true
 date: "2023-03-29"
 summary: "London Meetup Recap: Building a Green Tech Culture"
 teaserText: "Last Tuesday, we held our first Meetup of the year in London. We were thrilled to see 27 enthusiastic practitioners attend in person for insightful talks on Green Software Principles and Patterns and a panel discussion with industry leaders. "

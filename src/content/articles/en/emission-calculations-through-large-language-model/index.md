@@ -1,5 +1,6 @@
 ---
 title: "Emission Calculations through Large Language Model"
+published: true
 date: "2024-09-12"
 summary: "Srinivasan Rakhunathan and Navveen Balani share how to estimate software emissions during the system design phase using LLMs."
 teaserText: "Five steps can help estimate software emissions during the system design phase using LLMs."

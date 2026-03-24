@@ -1,5 +1,6 @@
 ---
 title: "Pioneering Sustainability in Software – Meet Dr. Carlos Gamarra of HARC"
+published: true
 date: "2024-03-19"
 summary: "In our series of new member interviews, we feature Dr. Carlos Gamarra, Director of Clean Energy at the Houston Advanced Research Center (HARC). Dr. Gamarra shares his insights and experiences, offering a deep dive into HARC's mission and commitment to sustainability and green software. "
 teaserText: "\"My main goal is to assist both private companies and public entities in decarbonizing their operations.\""

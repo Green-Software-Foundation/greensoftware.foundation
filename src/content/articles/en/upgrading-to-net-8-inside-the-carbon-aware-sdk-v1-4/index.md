@@ -1,5 +1,6 @@
 ---
 title: "Upgrading to .NET 8: Inside the Carbon Aware SDK v1.4"
+published: true
 date: "2024-08-13"
 summary: "Takuya Iwatsuka, Damien Roux and Yasumasa Suenaga from NTT and NTT DATA explain the .NET8 update for the Carbon Aware SDK."
 teaserText: "We're revealing what took place behind the scenes and how NTT and NTT DATA are using the latest version of the Carbon Aware SDK. "

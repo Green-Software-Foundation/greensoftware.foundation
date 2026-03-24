@@ -1,5 +1,6 @@
 ---
 title: "The GSF Endorses the AI Environmental Impacts Act"
+published: true
 date: "2024-03-12"
 summary: "How the AI Environmental Impacts Act could foster a culture of greening software and support green software projects."
 teaserText: "GSF endorses bill that shows promise to shape a future for Green AI."

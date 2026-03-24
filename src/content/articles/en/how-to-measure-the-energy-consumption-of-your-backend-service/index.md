@@ -1,5 +1,6 @@
 ---
 title: "How to Measure the Energy Consumption of Your Backend Service"
+published: true
 date: "2021-10-16"
 summary: "Ability to measure the energy cost of your application helps you to work on making software more energy efficient. Measuring shows you whether you are improving or regressing. So, what is the best way to measure the energy consumption of your backend service? "
 teaserText: "What is the best way to measure the energy consumption of your backend service? Learn tricks to ensure you get reliable data and what to do if you are running in the cloud."

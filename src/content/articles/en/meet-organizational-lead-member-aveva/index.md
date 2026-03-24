@@ -1,5 +1,6 @@
 ---
 title: "Meet organizational lead member AVEVA "
+published: true
 date: "2022-08-25"
 summary: "AVEVA is a global industrial software leader focused on sparking innovation to drive responsible use of the world’s resources. More than 20,000 enterprises across 12 diverse industrial sectors in over 100 countries rely on AVEVA’s platform-agnostic solutions to help them deliver life’s essentials: safe and reliable energy, food, medicines, infrastructure and more."
 teaserText: "AVEVA is committed to leading on sustainable innovation and working in partnership with customers, peers and other stakeholders to make a more equitable, net-zero world a reality for the next generation. In July 2021 AVEVA made its first public pledge to join the United Nations’ Race to Zero. "

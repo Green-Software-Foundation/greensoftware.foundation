@@ -1,5 +1,6 @@
 ---
 title: "Welcoming Carmen (Carbon Measurement Engine) as a GSF Project"
+published: true
 date: "2026-02-05"
 summary: "Carmen, an open-source measurement engine from Amadeus joins GFS's ecosystem. Learn how Carmen builds on Impact Framework to deliver transparent carbon measurements, giving teams the application-level visibility needed to optimize emissions without building custom implementations."
 teaserText: "Amadeus transfers Carmen, an open-source measurement engine, to GSF, enabling organizations to measure emissions across cloud infrastructure and Kubernetes clusters "

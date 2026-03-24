@@ -1,5 +1,6 @@
 ---
 title: "SCI for AI Specification Ratified: Standard for Measuring AI Emissions Across the Lifecycle "
+published: true
 date: "2025-12-17"
 summary: "We're excited to announce the ratification of the SCI for AI specification, marking a major step in making the carbon footprint of AI systems transparent, comparable, and actionable. "
 teaserText: "A standardized specification extending the ISO Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle. "

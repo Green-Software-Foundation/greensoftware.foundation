@@ -1,5 +1,6 @@
 ---
 title: "ChatGPT & Sustainability - Green Software Foundation “Expert Perspectives”"
+published: true
 date: "2023-04-18"
 summary: "Artificial intelligence systems use vast amounts of energy. ChatGPT is arguably the most well-known AI application in today's IT landscape. How do experts see the role of ChatGPT and other Large Language Models (LLM) in light of the climate crisis? What are the benefits of AI, and how can they outweigh the negative aspects of increased energy consumption and, more specifically, carbon emissions attributed to developing, testing, and operating such applications?"
 teaserText: "“Expert Perspectives” is a new content format by the GSF. It covers the latest hot topics in the realm of IT sustainability. The series comprises opinion pieces featuring perspectives from leading experts in green software. "

@@ -1,5 +1,6 @@
 ---
 title: "New Leadership Appointment: Gadhu Sundaram Elected as the GSF Chairperson  "
+published: true
 date: "2025-01-21"
 summary: "The GSF proudly announces a new leadership appointment within its Steering Committee. Gadhu Sundaram, Vice President of Application Services at NTT DATA UK, assumes the position of Chair of the Board, succeeding Sanjay Podder. "
 teaserText: "Aligning technological innovation and sustainability under new leadership. "

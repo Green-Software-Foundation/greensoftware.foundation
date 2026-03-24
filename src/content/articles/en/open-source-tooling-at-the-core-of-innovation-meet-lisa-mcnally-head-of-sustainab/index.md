@@ -1,5 +1,6 @@
 ---
 title: "Open Source Tooling at the Core of Innovation - Meet Lisa McNally, Head of Sustainability Solutions at Thoughtworks"
+published: true
 date: "2023-11-29"
 summary: "Lisa is now the primary organizational lead for Thoughtworks at the GSF. She sits on the Steering Committee and co-leads the GSF’s Policy Working Group. She sees green software as a fundamental commodity with open-source tooling at the core of technology innovation."
 teaserText: "As the Head of Sustainability Solutions at Thoughtworks, Lisa McNally guides an international team of consultants and technologists to help clients expedite a shift toward a low-carbon and circular economy. Leveraging more than two decades of expertise in the energy and transportation sectors, she is fiercely committed to developing innovative solutions that effectively tackle environmental and social challenges."

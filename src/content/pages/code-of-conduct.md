@@ -1,5 +1,6 @@
 ---
 title: "Code Of Conduct"
+published: true
 slug: "code-of-conduct"
 ---
 

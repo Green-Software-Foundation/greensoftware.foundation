@@ -1,5 +1,6 @@
 ---
 title: "Call to Action on Green Software: Establishing a Centre of Excellence"
+published: true
 date: "2022-02-17"
 summary: "Continuing the CTA on Green Software series, Chris Lloyd-Jones discusses various approaches you could take for adopting green software practices and how to set up a Centre of Excellence. "
 teaserText: "Green software is yet to reach the tipping point—that magic moment when an idea, trend, or social behaviour crosses a threshold, tips, and spreads like wildfire. Part of our role should be to make our own evangelism unnecessary and green software the default."

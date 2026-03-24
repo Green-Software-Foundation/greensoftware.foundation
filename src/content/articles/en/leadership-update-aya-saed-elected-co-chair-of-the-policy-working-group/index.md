@@ -1,5 +1,6 @@
 ---
 title: "Leadership Update: Aya Saed Elected Co-Chair of the Policy Working Group "
+published: true
 date: "2025-06-05"
 summary: "The GSF is thrilled to announce the election of Aya Saed, Director of AI Policy and Strategy at Scope3, as Co-Chair of the Policy Working Group. Aya joins Chris Adams in leading efforts to align policy, practice, and sustainability in green software development."
 teaserText: "Providing practical solutions that balance economic growth with efficiency and sustainability."

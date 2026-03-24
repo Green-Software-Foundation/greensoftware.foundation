@@ -1,5 +1,6 @@
 ---
 title: "Carbon-Aware Kubernetes"
+published: true
 date: "2021-08-26"
 summary: "Kubernetes is built so it can make carbon-aware decisions balanced against the technical requirements of the system. "
 teaserText: "Kubernetes is built so it can make carbon-aware decisions balanced against the technical requirements of the system. "

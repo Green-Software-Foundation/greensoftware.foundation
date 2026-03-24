@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Organisational Leads: Sarah Hsu of Goldman Sachs"
+published: true
 date: "2022-03-15"
 summary: "Sarah Hsu is an Associate at Goldman Sachs and works on Site Reliability Engineering. She is very passionate about the Green Software Foundation's educational component, which includes raising awareness, encouraging discussions and amplifying voices."
 teaserText: "Sarah Hsu is an Associate at Goldman Sachs working on Site Reliability Engineering. She is also chairing the project on revising and extending the Principles of Green Software Engineering to reflect the evolution the field has seen since the original principles were created in 2019."

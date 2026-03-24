@@ -1,5 +1,6 @@
 ---
 title: "How do you measure software's carbon footprint?"
+published: true
 summary: >
   How Abhishek Gupta, Henry Richardson, Navveen Balani, and contributors from
   across the industry built the Software Carbon Intensity specification — a rate-based

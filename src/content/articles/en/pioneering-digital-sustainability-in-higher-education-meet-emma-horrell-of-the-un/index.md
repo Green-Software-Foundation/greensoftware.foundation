@@ -1,5 +1,6 @@
 ---
 title: "Pioneering Digital Sustainability in Higher Education—Meet Emma Horrell of the University of Edinburgh"
+published: true
 date: "2025-09-02"
 summary: "The new GSF member shares how the University of Edinburgh is reducing its digital carbon footprint through practical steps like website measurement, image optimization, and behavioral change initiatives."
 teaserText: "Turning sustainability goals into measurable action by rethinking digital practices. "

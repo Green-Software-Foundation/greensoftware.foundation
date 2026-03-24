@@ -1,5 +1,6 @@
 ---
 title: "Green Software Advocate Series: An Interview with Chris Lloyd-Jones"
+published: true
 date: "2023-09-14"
 summary: "The new GSF interview series is providing an look inside the minds of some of green software's fiercest advocats. We spoke to Avanade's Chris Lloyd-Jones."
 teaserText: "Chris is the Head of Open Innovation at Avanade, and a recipient of the Microsoft MVP Award. In the last two years, Chris has lent his leadership to the Green Software Foundation as Co-chair and member of the Oversight Committee and been instrumental in building a culture of green software at Avanade. "

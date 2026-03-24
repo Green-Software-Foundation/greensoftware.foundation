@@ -1,5 +1,6 @@
 ---
 title: "Meet GSF Org Leads: Ziliang Zong of Texas State University"
+published: true
 date: "2022-01-25"
 summary: "Ziliang is the Director of the Energy Efficient Computing and Systems Laboratory at Texas State University. For nearly a decade, he has been promoting green computing and fostering a green thinking mindset among students."
 teaserText: "Ziliang has long been bothered that hundreds of thousands of CS students the world over are graduating every year without exposure to a green thinking mindset and proper training. "

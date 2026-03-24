@@ -1,5 +1,6 @@
 ---
 title: "Cost Savings a Key Driver for Green Software Adoption - Meet Sunil Aggarwal, Sr. Vice President at HCLTech "
+published: true
 date: "2023-11-17"
 summary: "HCLTech is a software developer with a solid internal focus on green software training. SVP and Global Client Partner at HCLTech, Sunil Aggarwal, reveals more about their green software journey."
 teaserText: "HCLTech has developed multiple solutions based on GSF guidelines, helping its customers capture the carbon footprint of software, applications, services, and components. HCLTech has used the SCI formula to develop these solutions. "

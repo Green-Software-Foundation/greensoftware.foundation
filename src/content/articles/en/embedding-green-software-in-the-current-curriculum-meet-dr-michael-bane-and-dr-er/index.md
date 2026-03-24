@@ -1,5 +1,6 @@
 ---
 title: "Embedding Green Software in the Current Curriculum—Meet Dr. Michael Bane and Dr. Ernest Edifor of Manchester Metropolitan University"
+published: true
 date: "2024-10-03"
 summary: "Join us in welcoming the Manchester Metropolitan University (McrMet) to the GSF. Dr. Michael Bane and Dr. Ernest Edifor share more on advancing the teaching of green software engineering across universities and colleges."
 teaserText: "The aim is to form a new generation of green software and green software practitioners to develop timely and impactful solutions."

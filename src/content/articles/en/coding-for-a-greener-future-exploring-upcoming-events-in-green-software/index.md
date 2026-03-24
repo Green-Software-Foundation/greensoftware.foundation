@@ -1,5 +1,6 @@
 ---
 title: "Coding for a Greener Future: Exploring Upcoming Events in Green Software"
+published: true
 date: "2023-10-04"
 summary: "Find out about exciting events in the green software space. Our article sheds a light on what's in the pipeline, providing you the dates, topics and links."
 teaserText: "In a world where environmental concerns have taken center stage, the tech industry is expected to play its part in reducing its carbon footprint. "

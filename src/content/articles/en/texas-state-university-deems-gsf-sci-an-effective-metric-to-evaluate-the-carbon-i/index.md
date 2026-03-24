@@ -1,5 +1,6 @@
 ---
 title: "Texas State University deems GSF SCI an effective metric to evaluate the carbon impact of software"
+published: true
 date: "2022-10-07"
 summary: "The Texas State University has just released its report on a study evaluating software carbon intensity of foundation models. Among other findings, the study confirms that the SCI is suitable for effectively measuring the carbon impact of software."
 teaserText: "The Texas State University has just released its report on a study evaluating software carbon intensity of foundation models. Among other findings, the study confirms that the SCI is suitable for effectively measuring the carbon impact of software."
