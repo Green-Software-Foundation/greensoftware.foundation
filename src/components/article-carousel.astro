@@ -11,8 +11,6 @@ interface Props {
   articles?: Article[];
   /** Background class */
   bgClass?: string;
-  /** Whether to show organisation logos/names on cards (default true) */
-  showOrganizations?: boolean;
   /** CTA link text */
   ctaText?: string;
   /** CTA link href */
@@ -26,7 +24,6 @@ const {
   body,
   articles = [],
   bgClass = "bg-accent-lightest-2",
-  showOrganizations = true,
   ctaText,
   ctaHref,
   id,
@@ -40,7 +37,6 @@ const {
       heading={heading}
       body={body}
       articles={articles}
-      showOrganizations={showOrganizations}
       ctaText={ctaText}
       ctaHref={ctaHref}
     />

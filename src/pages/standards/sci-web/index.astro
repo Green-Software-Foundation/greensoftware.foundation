@@ -26,8 +26,6 @@ const parentWg = projects.find(p => p.name === sciWebProject?.parent);
 // Pull SCI for Web tagged articles for the carousel
 import { getCollection } from "astro:content";
 import { articleUrl } from "@/lib/utils";
-import membersData from "@/data/members.json";
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const carouselArticles = allArticles
   .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sci-web"))
@@ -38,10 +36,6 @@ const carouselArticles = allArticles
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
     cta: "Read more →",
-    organizations: (a.data.organizations || []).map((name: string) => ({
-      name,
-      logoSrc: logoMap.get(name.toLowerCase()),
-    })),
   }));
 ---
 
@@ -429,7 +423,6 @@ const carouselArticles = allArticles
   <ArticleCarousel
     heading="Featured Articles"
     body="Reports, announcements, and insights from the SCI for Web journey."
-    showOrganizations={false}
     articles={carouselArticles}
     bgClass="bg-accent-lighter/10"
   />

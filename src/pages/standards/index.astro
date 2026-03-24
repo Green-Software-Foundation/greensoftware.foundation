@@ -16,9 +16,6 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import projects from "@/data/projects.json";
 import { getCollection } from "astro:content";
 import { articleUrl } from "@/lib/utils";
-import membersData from "@/data/members.json";
-
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
   .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("standards"))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
@@ -28,7 +25,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
     cta: "Read more →",
-    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
   }));
 
 // Standards to feature on this page, in display order
@@ -207,7 +203,6 @@ for (const project of standardProjects) {
       heading="Standards in the News"
       body="Articles, announcements, and insights from across the GSF standards programme."
       articles={carouselArticles}
-      showOrganizations={false}
       ctaText="View all articles →"
       ctaHref="/articles/"
     />

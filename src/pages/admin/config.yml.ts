@@ -82,6 +82,13 @@ collections:
         widget: string
         i18n: true
 
+      - label: Subtitle
+        name: teaserText
+        widget: string
+        required: false
+        i18n: true
+        hint: "Optional subtitle displayed below the title on the article page."
+
       - label: Date
         name: date
         widget: datetime
@@ -105,13 +112,6 @@ collections:
         hint: >
           1-3 sentence description shown in article listings and the homepage
           featured carousel. Prefer this over Teaser Text - it displays in more places.
-
-      - label: Teaser Text
-        name: teaserText
-        widget: string
-        required: false
-        i18n: true
-        hint: "Optional one-sentence teaser. Falls back to Summary if not set."
 
       - label: Main Image
         name: mainImage
@@ -209,25 +209,6 @@ collections:
             fields:
               - {label: Platform, name: platform, widget: string}
               - {label: URL, name: link, widget: string}
-
-      - label: Organisations
-        name: organizations
-        widget: list
-        required: false
-        i18n: duplicate
-        hint: >
-          Member organisations associated with this article. Names must match
-          exactly (e.g. "Accenture", "NTT DATA", "UBS", "Google", "Siemens", "Cisco").
-
-      - label: Additional Org Count
-        name: additionalOrgCount
-        widget: number
-        required: false
-        value_type: int
-        i18n: duplicate
-        hint: >
-          Number of additional member organisations not listed above.
-          Displays as "+N more members" on carousel cards.
 
       - label: Original Blog Name
         name: originBlogName

@@ -39,8 +39,6 @@ const articles = defineCollection({
       lang: z.string().default("en"),
       featured: z.boolean().optional(),
       tags: z.array(z.string()).optional(),
-      organizations: z.array(z.string()).optional(),
-      additionalOrgCount: z.number().nullable().optional(),
     }),
 });
 
@@ -78,7 +76,6 @@ const research = defineCollection({
     version: z.string().optional(),
     sourceUrl: z.string().optional(),
     mainImage: z.string().optional(),
-    organizations: z.array(z.string()).optional(),
     doi: z.string().optional(),
     pdfUrl: z.string().optional(),
     featured: z.boolean().optional(),
@@ -98,8 +95,6 @@ const stories = defineCollection({
     challenge: z.string().optional(),
     outcome: z.string().optional(),
     mainImage: z.string().optional(),
-    organizations: z.array(z.string()).optional(),
-    additionalOrgCount: z.number().nullable().optional(),
     featured: z.boolean().optional(),
     lang: z.string().default("en"),
     // ── Rich story fields ─────────────────────────────────────────────────────

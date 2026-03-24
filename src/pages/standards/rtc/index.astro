@@ -24,12 +24,9 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import projects from "@/data/projects.json";
 import { getCollection } from "astro:content";
 import { articleUrl } from "@/lib/utils";
-import membersData from "@/data/members.json";
-
 const rtcProject = projects.find(p => p.slug === "real-time-cloud");
 const parentWg = projects.find(p => p.name === rtcProject?.parent);
 
-const logoMap = new Map((membersData as any[]).filter((m: any) => m.active && m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
   .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("rtc"))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
@@ -39,7 +36,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
     cta: "Read more →",
-    organizations: (a.data.organizations || []).map((name: string) => ({ name, logoSrc: logoMap.get(name.toLowerCase()) })),
   }));
 ---
 
@@ -399,7 +395,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       heading="Related Articles"
       body="News, insights, and updates about the Real Time Cloud standard."
       articles={carouselArticles}
-      showOrganizations={false}
       ctaText="View all articles →"
       ctaHref="/articles/"
     />

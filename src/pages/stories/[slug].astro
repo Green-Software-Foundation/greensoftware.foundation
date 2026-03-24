@@ -48,10 +48,6 @@ const relatedArticles = relatedSlugs
     imageSrc: a!.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a!.id),
     cta: "Read the article →",
-    organizations: (a!.data.organizations || []).map((name: string) => ({
-      name,
-      logoSrc: logoMap.get(name.toLowerCase()),
-    })),
   }));
 
 function initials(name: string) {
@@ -301,7 +297,6 @@ const resolvedContributors = contributors.map((c: any) => {
       heading="Related articles"
       articles={relatedArticles}
       bgClass="bg-white"
-      showOrganizations={false}
     />
   )}
 
