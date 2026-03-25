@@ -82,6 +82,7 @@
     "tailwindcss": "^4.1.12",
     "unified": "^11.0.5",
     "vaul": "^1.1.2",
+    "svgo": "^4.0.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -89,7 +90,6 @@
     "dotenv": "^17.2.3",
     "pagefind": "^1.4.0",
     "prettier-plugin-astro": "^0.14.1",
-    "svgo": "^4.0.1",
     "tw-animate-css": "^1.3.8"
   }
 }
