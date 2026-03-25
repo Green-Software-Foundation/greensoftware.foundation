@@ -1,10 +1,13 @@
 ---
-title: "GSF’s Response to GHG Protocol: Advocating for Hourly Carbon Accounting"
-date: "2026-03-10"
+title: 'GSF’s Response to GHG Protocol: Advocating for Hourly Carbon Accounting'
+teaserText: A member-led response to the Scope 2 consultation, championing hourly carbon accounting that closes reporting loopholes and makes practitioners' work more visible.
+date: 2026-03-10
 published: true
-summary: "In January, we submitted a consensus-based response to the GHG Protocol's Scope 2 consultation, advocating for hourly carbon accounting that closes reporting loopholes and recognizes the daily engineering decisions that reduce emissions."
-teaserText: " A member-led response to the Scope 2 consultation, championing hourly carbon accounting that closes reporting loopholes and makes practitioners' work more visible."
-mainImage: "./main.png"
+summary: In January, we submitted a consensus-based response to the GHG Protocol's Scope 2 consultation, advocating for hourly carbon accounting that closes reporting loopholes and recognizes the daily engineering decisions that reduce emissions.
+mainImage: ./main.png
+mainImageAlt: ''
+originBlogName: ''
+publishedOriginUrl: ''
 ---
 
 Earlier this year, the GSF submitted a formal response to the GHG Protocol's [public consultation on](https://ghgprotocol.org/ghg-protocol-public-consultations)the Scope 2 Guidance, the first revision to the standard proposed in ten years. Our submission argues that carbon accounting should reflect when and where electricity is consumed, not just how much. This change would give practitioners and companies clearer incentives to reduce emissions through carbon-aware operations.
@@ -19,7 +22,7 @@ Under the Scope 2 rules, an organization can claim clean energy credits from a s
 
 For practitioners, this means daily decisions that reduce emissions often go unrecognized in formal reporting.
 
-> “Under the current annual GHG carbon accounting rules, you can say that you're running on a hundred percent renewable energy even when your servers are powered by a massive on-site gas-fired power plant built just for your datacenter and no-one else. Switching to an hourly approach closes loopholes like this and brings us much closer to reality-based accounting practices.”
+> “Under the current annual GHG carbon accounting rules, you can say that you're running on a hundred percent renewable energy even when your servers are powered by a massive on-site gas-fired power plant built just for your datacenter and no-one else. Switching to an hourly approach closes loopholes like this and brings us much closer to reality-based accounting practices.”—Chris Adams, Director of Technology and Policy at Green Web Foundation, Chair of GSF's Policy Working Group 
 
 In [our December article](https://greensoftware.foundation/articles/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation), we outlined why we engage with the consultation and what this update means for green software. Now, with our formal submission complete, we share what's in it and what comes next.
 
