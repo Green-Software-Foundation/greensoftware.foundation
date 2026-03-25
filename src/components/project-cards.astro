@@ -70,7 +70,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
       )}
     </div>
 
-    <div class="mt-10 grid grid-cols-1 gap-6">
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
       {projects.map((project) => {
         const orgCount = project.orgs?.length ?? 0;
         const marqueeDuration = Math.max(orgCount * 3, 12);
@@ -93,21 +93,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
             {orgCount > 0 && (
               <div class="overflow-hidden border-t border-white/10 px-6 py-4 md:px-8">
                 <p class="mb-2 text-[10px] uppercase tracking-wider text-white/40">Members who Contributed</p>
-                {/* Static logos — shown on wider screens where they fit */}
-                <div class="hidden md:flex items-center gap-6 flex-wrap">
-                  {project.orgs!.map((org) => (
-                    <Image
-                      src={org.logoSrc}
-                      alt={org.name}
-                      class="h-5 w-auto max-w-[72px] shrink-0 object-contain brightness-0 invert opacity-50"
-                      sizes="72px"
-                      widths={[72, 144]}
-                      height={20}
-                    />
-                  ))}
-                </div>
-                {/* Scrolling marquee — shown on mobile where space is tight */}
-                <div class="marquee-track relative flex items-center overflow-hidden md:hidden">
+                <div class="marquee-track relative flex items-center overflow-hidden">
                   <div class="absolute top-0 bottom-0 left-0 z-10 w-6 bg-gradient-to-r from-primary-darker to-transparent" />
                   <div class="absolute top-0 right-0 bottom-0 z-10 w-6 bg-gradient-to-l from-primary-darker to-transparent" />
                   {[0, 1].map(() => (

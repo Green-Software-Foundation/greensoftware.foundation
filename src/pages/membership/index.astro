@@ -55,11 +55,10 @@ const resolveOrgs = (names: string[]) =>
   <div class="bg-accent-lightest-2 -mt-20 pb-12 md:-mt-28 md:pb-16 lg:-mt-32">
     <div class="container">
       <a
-        href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
-        class="inline-flex flex-col items-center rounded-lg bg-primary px-8 py-4 text-white transition-colors hover:bg-primary-dark"
+        href="/membership/enquire/"
+        class="inline-flex items-center rounded-lg bg-primary px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-primary-dark"
       >
-        <span class="text-base font-bold">Book a discussion</span>
-        <span class="text-sm font-normal opacity-80">help@greensoftware.foundation</span>
+        Book a discussion
       </a>
     </div>
   </div>
@@ -91,11 +90,14 @@ const resolveOrgs = (names: string[]) =>
   <section class="bg-primary-darker py-16 md:py-24">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Is membership right for your organisation?</h2>
-      <p class="text-lg text-white/70 mb-6">
-        Email us to arrange a private conversation to discuss whether we can help with the specific challenges your organisation is facing
+      <p class="text-lg text-white/70 mb-8">
+        Tell us about your challenges and we'll arrange a conversation to discuss how membership can help
       </p>
-      <a href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry" class="inline-block text-2xl font-bold text-accent hover:text-accent-light transition-colors">
-        help@greensoftware.foundation
+      <a
+        href="/membership/enquire/"
+        class="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3.5 text-base font-bold text-primary-darker transition-colors hover:bg-accent-light"
+      >
+        Book a discussion
       </a>
     </div>
   </section>
@@ -135,28 +137,32 @@ const resolveOrgs = (names: string[]) =>
     body="Every story starts the same way: an organisation brings us a problem they can't solve alone"
     projects={[
       {
-        title: "\u201CHow members created the Green Software Practitioners course\u201D",
+        title: "\u201COur engineers don\u2019t know how to build green software\u201D",
         description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
         orgs: resolveOrgs(["Goldman Sachs", "Avanade", "Microsoft", "Accenture", "Thoughtworks", "NTT DATA"]),
         href: "/stories/green-software-practitioner/",
+        cta: "How members created the Green Software Practitioners course →",
       },
       {
-        title: "\u201CRead how GSF members created SOFT Framework\u201D",
+        title: "\u201COur pilots work but nothing scales across the org\u201D",
         description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
         orgs: resolveOrgs(["HSBC", "Microsoft", "NTT DATA", "Siemens", "UBS", "Cisco"]),
         href: "/stories/soft-framework/",
+        cta: "Read how GSF members created SOFT Framework →",
       },
       {
-        title: "\u201CHow GSF members created Carbon Aware SDK\u201D",
+        title: "\u201CWe can\u2019t shift workloads to clean energy\u201D",
         description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
         orgs: resolveOrgs(["Microsoft", "UBS", "Avanade", "NTT DATA", "Energy Web"]),
         href: "/stories/carbon-aware-sdk/",
+        cta: "How GSF members created Carbon Aware SDK →",
       },
       {
-        title: "\u201CRead how GSF members created SCI ISO standard\u201D",
+        title: "\u201CWe can\u2019t measure software carbon\u201D",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
         orgs: resolveOrgs(["Accenture", "UBS", "Microsoft", "NTT DATA", "WattTime", "Aveva"]),
         href: "/stories/sci-measurement/",
+        cta: "Read how GSF members created SCI ISO standard →",
       },
     ]}
     footerCtaText="Browse all member stories"
@@ -430,8 +436,8 @@ const resolveOrgs = (names: string[]) =>
   <CTABanner
     heading="Every member's journey starts with a conversation"
     body="Tell us what you're trying to solve. We'll tell you how membership can help."
-    ctaText="Email help@greensoftware.foundation"
-    ctaHref="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
+    ctaText="Book a discussion"
+    ctaHref="/membership/enquire/"
   />
 
   <Footer />

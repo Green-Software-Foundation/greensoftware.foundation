@@ -1,0 +1,175 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout
+  title="Membership Enquiry — Green Software Foundation"
+  description="Get in touch to discuss GSF membership. Tell us about your organisation and what interests you in joining."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Membership", href: "/membership/" },
+    { label: "Enquire" },
+  ]} />
+
+  <section class="bg-accent-lightest-2 py-16 md:py-24">
+    <div class="container">
+      <div class="mx-auto max-w-2xl">
+
+        <div class="mb-10 text-center">
+          <h1 class="text-3xl font-extrabold text-primary-dark md:text-4xl">
+            Membership <span class="font-bold text-primary">enquiry</span>
+          </h1>
+          <p class="mt-4 text-base text-gray-darker md:text-lg">
+            Tell us a bit about yourself and what interests you in joining the GSF. We'll be in touch to arrange a conversation.
+          </p>
+        </div>
+
+        <div id="form-card" class="rounded-2xl border bg-white p-8 shadow-sm md:p-10">
+
+          <!-- Success state -->
+          <div id="form-success" class="hidden text-center py-12">
+            <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent-lightest-2">
+              <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-extrabold text-primary-dark">Thank you for your enquiry</h2>
+            <p class="mt-3 text-base text-gray-darker">
+              We've received your message and will be in touch shortly to arrange a conversation.
+            </p>
+            <a href="/membership/" class="mt-6 inline-block text-sm font-semibold text-primary underline underline-offset-2 hover:text-primary-dark">
+              Back to membership overview
+            </a>
+          </div>
+
+          <!-- Error state -->
+          <div id="form-error" class="hidden mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            Something went wrong. Please try again, or email us directly at <a href="mailto:help@greensoftware.foundation" class="font-semibold underline">help@greensoftware.foundation</a>.
+          </div>
+
+          <!-- Form -->
+          <div id="form-wrapper">
+            <form
+              id="membership-enquiry-form"
+              name="membership-enquiry"
+              method="POST"
+              action="/membership/enquire/"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="membership-enquiry" />
+              <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+              <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div>
+                  <label for="full-name" class="mb-1 block text-sm font-semibold text-primary-dark">Full name <span class="text-red-500">*</span></label>
+                  <input type="text" id="full-name" name="full-name" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                </div>
+                <div>
+                  <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Work email <span class="text-red-500">*</span></label>
+                  <input type="email" id="work-email" name="work-email" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                </div>
+              </div>
+
+              <div>
+                <label for="organisation" class="mb-1 block text-sm font-semibold text-primary-dark">Organisation <span class="text-red-500">*</span></label>
+                <input type="text" id="organisation" name="organisation" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              </div>
+
+              <div>
+                <label for="interest" class="mb-1 block text-sm font-semibold text-primary-dark">What interests you in joining the GSF? <span class="text-red-500">*</span></label>
+                <textarea id="interest" name="interest" required rows={4} placeholder="Tell us about the challenges you're facing or what you'd like to achieve through membership." class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+              </div>
+
+              <div>
+                <label class="flex items-start gap-3">
+                  <input type="checkbox" name="privacy-consent" value="true" required class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
+                  <span class="text-sm text-gray-darker">
+                    I agree to the <a href="/privacy-policy/" class="text-primary underline hover:text-primary-dark">Privacy Policy</a> and <a href="/terms-of-use/" class="text-primary underline hover:text-primary-dark">Terms of Use</a>. <span class="text-red-500">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 sm:w-auto"
+              >
+                Send enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <p class="mt-6 text-center text-xs text-gray-darker">
+          Prefer email? Write to us at <a href="mailto:help@greensoftware.foundation" class="font-semibold text-primary underline underline-offset-2 hover:text-primary-dark">help@greensoftware.foundation</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.getElementById("membership-enquiry-form");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const btn = document.getElementById("submit-btn") as HTMLButtonElement;
+      const errorEl = document.getElementById("form-error");
+      const successEl = document.getElementById("form-success");
+      const wrapperEl = document.getElementById("form-wrapper");
+
+      errorEl?.classList.add("hidden");
+
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+
+      try {
+        const formData = new FormData(form as HTMLFormElement);
+        const response = await fetch(form.getAttribute("action") || window.location.pathname, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData as any).toString(),
+        });
+
+        if (response.ok) {
+          wrapperEl?.classList.add("hidden");
+          successEl?.classList.remove("hidden");
+          document.getElementById("form-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
+          if ((window as any).gtag) {
+            (window as any).gtag("event", "membership_enquiry", {
+              organisation: (formData.get("organisation") as string) || "",
+            });
+          }
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch {
+        errorEl?.classList.remove("hidden");
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    });
+  }
+</script>

@@ -31,6 +31,15 @@ This gives you a preview-able staging workflow without needing a separate branch
 - The page has a **`noindex` meta tag** so search engines won't index it
 - The page is **excluded from site search** (PageFind)
 
+## Preview links
+
+All content collections have preview links configured. When editing an entry in the CMS, editors can click through to see the live page on the site:
+
+- Articles: `/articles/<slug>/`
+- Research: `/policy/research/<slug>/`
+- Stories: `/stories/<slug>/`
+- Pages: `/<slug>/`
+
 ## Local development
 
 Sveltia uses the browser's **File System Access API** for local editing — no proxy server or extra tooling needed.
