@@ -9,10 +9,13 @@ import TextBlock from "@/components/text-block.astro";
 import GovernanceDiagram from "@/components/governance-diagram.astro";
 import TeamGrid from "@/components/team-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
+import Image from "@/components/image.astro";
 import Footer from "@/components/footer.astro";
 
 // Load team data from Notion-sourced JSON
 import teamData from "@/data/people.json";
+import membersData from "@/data/members.json";
+const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
 
 // ----- Data preparation -----
 
@@ -152,6 +155,7 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
         <table class="w-full text-left">
           <thead>
             <tr class="border-b border-border bg-accent-lightest-2">
+              <th class="w-16 px-4 py-3 md:w-20"></th>
               <th class="px-6 py-3 text-sm font-bold text-primary-dark">Organisation</th>
               <th class="px-6 py-3 text-sm font-bold text-primary-dark">Lead</th>
               <th class="hidden px-6 py-3 text-sm font-bold text-primary-dark md:table-cell">Title</th>
@@ -164,8 +168,16 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
               .sort((a, b) => a.company.localeCompare(b.company))
               .map((lead, i) => {
                 const linkedin = lead.socialMedia?.find((s: any) => s.platform === "Linkedin");
+                const companyLogo = logoMap.get(lead.company.toLowerCase());
                 return (
                   <tr class={i % 2 === 0 ? "bg-white" : "bg-accent-lightest-2/50"}>
+                    <td class="px-4 py-3">
+                      {companyLogo ? (
+                        <Image src={companyLogo} alt={lead.company} class="h-6 w-auto max-w-[60px] object-contain" sizes="60px" widths={[60, 120]} height={24} loading="lazy" />
+                      ) : (
+                        <span class="block h-6 w-[60px]" />
+                      )}
+                    </td>
                     <td class="px-6 py-3 text-sm font-semibold text-primary-dark">{lead.company}</td>
                     <td class="px-6 py-3 text-sm">{lead.name}</td>
                     <td class="hidden px-6 py-3 text-sm text-gray-darker md:table-cell">{lead.role}</td>
