@@ -24,7 +24,16 @@ import Footer from "@/components/footer.astro";
 // Load member logos for org name → logo lookup
 import membersData from "@/data/members.json";
 const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
-const resolveOrgs = (names: string[]) => names.map(name => ({ name, logo: logoMap.get(name.toLowerCase()) || "" }));
+const levelMap = new Map((membersData as any[]).map((m: any) => [m.companyName.toLowerCase(), m.membershipLevel]));
+const resolveOrgs = (names: string[]) =>
+  names
+    .map(name => ({ name, logo: logoMap.get(name.toLowerCase()) || "", level: levelMap.get(name.toLowerCase()) || "General" }))
+    .sort((a, b) => {
+      const aS = a.level === "Steering" ? 0 : 1;
+      const bS = b.level === "Steering" ? 0 : 1;
+      if (aS !== bS) return aS - bS;
+      return a.name.localeCompare(b.name);
+    });
 
 // ----- Featured articles -----
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
@@ -53,8 +62,6 @@ const featuredArticles = allArticles
     topBar="none"
     showSearch
     navItems={navItems}
-    ctaText="Discuss your challenges"
-    ctaHref="/membership/"
   />
 
   <Hero
@@ -89,14 +96,14 @@ const featuredArticles = allArticles
     attribution={{
       avatar: "/assets/team/gadhu-sundaram.jpeg",
       name: "Gadhu Sundaram",
-      role: "Chair, GSF; VP of Application Services, NTT DATA",
+      role: "GSF Chair - VP of Application Services, NTT DATA",
     }}
   />
 
   <!-- Section 4: Organisational Upskilling -->
   <TabbedSection
     badge="ORGANISATIONAL UPSKILLING"
-    heading="We needed our engineers to share a common language for sustainability"
+    heading="\u201CWe needed our engineers to share a common language for sustainability\u201D"
     imageSrc="/assets/why-feat-1-new.svg"
     imageAlt="Education illustration"
     ctaText="Explore the Practitioner course →"
@@ -112,7 +119,7 @@ const featuredArticles = allArticles
   <!-- Section 5: Measurement & Targets -->
   <TabbedSection
     badge="MEASUREMENT & TARGETS"
-    heading="We reported emissions annually, but it didn't help set engineering targets"
+    heading="\u201CWe reported emissions annually, but it didn\u2019t help set engineering targets\u201D"
     imageSrc="/assets/why-feat-2-new.svg"
     reversed
     imageAlt="SCI illustration"
@@ -129,7 +136,7 @@ const featuredArticles = allArticles
   <!-- Section 6: Pilots to Implementation -->
   <TabbedSection
     badge="PILOTS TO IMPLEMENTATION"
-    heading="Our pilots were working, but we found it hard to scale"
+    heading="\u201COur pilots were working, but we found it hard to scale\u201D"
     imageSrc="/assets/why-feat-3-new.svg"
     imageAlt="SOFT illustration"
     ctaText="Learn about the SOFT framework →"
@@ -145,7 +152,7 @@ const featuredArticles = allArticles
   <!-- Section 7: SCI for AI -->
   <TabbedSection
     badge="SCI FOR AI"
-    heading="AI is the fastest-growing carbon cost and organisations can't measure it"
+    heading="\u201CAI is the fastest-growing carbon cost and organisations can\u2019t measure it\u201D"
     imageSrc="/assets/why-wdpc-feat-1-new.svg"
     reversed
     imageAlt="SCI for AI illustration"
@@ -162,7 +169,7 @@ const featuredArticles = allArticles
   <!-- Section 8: Consensus at Speed -->
   <TabbedSection
     badge="CONSENSUS AT SPEED"
-    heading="Getting consensus across time zones, languages, and competing priorities"
+    heading="\u201CGetting consensus across time zones, languages, and competing priorities\u201D"
     imageSrc="/assets/why-wdpc-feat-3-new.svg"
     imageAlt="Standards illustration"
     ctaText="Discover consensus at speed →"

@@ -15,7 +15,18 @@ import Footer from "@/components/footer.astro";
 
 import membersData from "@/data/members.json";
 const logoMap = new Map((membersData as any[]).filter((m: any) => m.logo && !m.hideLogo).map((m: any) => [m.companyName.toLowerCase(), `/assets/${m.logo}`]));
-const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: logoMap.get(name.toLowerCase()) || "" }));
+const levelMap = new Map((membersData as any[]).map((m: any) => [m.companyName.toLowerCase(), m.membershipLevel]));
+const resolveOrgs = (names: string[]) =>
+  names
+    .filter(name => logoMap.has(name.toLowerCase()))
+    .map(name => ({ name, logoSrc: logoMap.get(name.toLowerCase()) || "", level: levelMap.get(name.toLowerCase()) || "General" }))
+    .sort((a, b) => {
+      // Steering first, then General, then alphabetical within each group
+      const aS = a.level === "Steering" ? 0 : 1;
+      const bS = b.level === "Steering" ? 0 : 1;
+      if (aS !== bS) return aS - bS;
+      return a.name.localeCompare(b.name);
+    });
 ---
 
 <Layout
@@ -29,26 +40,28 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
     topBar="none"
     showSearch
     navItems={navItems}
-    ctaText="Discuss your challenges"
-    ctaHref="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
-    secondaryCtaText="Join the GSF"
-    secondaryCtaHref="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
   />
 
   <!-- Section 1: Hero -->
-  <!-- data-hero-sentinel is used by the floating join button IntersectionObserver -->
-  <div data-hero-sentinel>
-    <Hero
-      heading="Have you been handed a sustainability mandate"
-      headingAccent="with no playbook?"
-      body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results"
-      ctas={[
-        { text: "Book a discussion", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=Membership%20enquiry" },
-      ]}
-      imageSrc="/assets/hero-illustration.svg"
-      imageAlt="Membership illustration"
-      bgClass="bg-accent-lightest-2"
-    />
+  <Hero
+    heading="Have you been handed a sustainability mandate"
+    headingAccent="with no playbook?"
+    body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results"
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Membership illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+  <!-- Custom double-height CTA below hero body — sits inside the hero bg -->
+  <div class="bg-accent-lightest-2 -mt-20 pb-12 md:-mt-28 md:pb-16 lg:-mt-32">
+    <div class="container">
+      <a
+        href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
+        class="inline-flex flex-col items-center rounded-lg bg-primary px-8 py-4 text-white transition-colors hover:bg-primary-dark"
+      >
+        <span class="text-base font-bold">Book a discussion</span>
+        <span class="text-sm font-normal opacity-80">help@greensoftware.foundation</span>
+      </a>
+    </div>
   </div>
 
   <!-- Section 2: The Room — intro text above the logos -->
@@ -122,25 +135,25 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
     body="Every story starts the same way: an organisation brings us a problem they can't solve alone"
     projects={[
       {
-        title: "Our engineers don't know how to build green software",
+        title: "\u201CHow members created the Green Software Practitioners course\u201D",
         description: "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
         orgs: resolveOrgs(["Goldman Sachs", "Avanade", "Microsoft", "Accenture", "Thoughtworks", "NTT DATA"]),
         href: "/stories/green-software-practitioner/",
       },
       {
-        title: "Our pilots work but nothing scales across the org",
+        title: "\u201CRead how GSF members created SOFT Framework\u201D",
         description: "Pindy Bhullar, Sean O'Keefe, and contributors from eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
         orgs: resolveOrgs(["HSBC", "Microsoft", "NTT DATA", "Siemens", "UBS", "Cisco"]),
         href: "/stories/soft-framework/",
       },
       {
-        title: "We can't shift workloads to clean energy",
+        title: "\u201CHow GSF members created Carbon Aware SDK\u201D",
         description: "Microsoft, UBS, Avanade, NTT DATA, and partners built the Carbon Aware SDK — the first open-source toolkit for carbon-aware computing, now deployed on production banking systems.",
         orgs: resolveOrgs(["Microsoft", "UBS", "Avanade", "NTT DATA", "Energy Web"]),
         href: "/stories/carbon-aware-sdk/",
       },
       {
-        title: "We can't measure software carbon",
+        title: "\u201CRead how GSF members created SCI ISO standard\u201D",
         description: "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024 — the first standardised way to measure software's carbon impact as a rate, not a total.",
         orgs: resolveOrgs(["Accenture", "UBS", "Microsoft", "NTT DATA", "WattTime", "Aveva"]),
         href: "/stories/sci-measurement/",
@@ -403,26 +416,13 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
     </div>
   </section>
 
-  <!-- Join CTA below fees -->
-  <section class="bg-accent-lightest-2 pb-16 md:pb-20">
+  <!-- Apply nudge -->
+  <section class="bg-accent-lightest-2 pb-12 md:pb-16">
     <div class="container">
-      <div class="mx-auto max-w-5xl flex flex-col items-center gap-4 text-center">
-        <p class="text-sm text-gray-darker">Ready to join? Complete your application through the Linux Foundation enrolment portal.</p>
-        <a
-          href="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center rounded-lg border border-primary bg-white px-8 py-3 text-base font-bold text-primary transition-colors hover:bg-accent-lightest-2"
-        >
-          Join the GSF
-        </a>
-        <p class="text-xs text-gray-darker">
-          Not sure which tier is right for you?{" "}
-          <a href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry" class="font-semibold text-primary underline underline-offset-2 hover:text-primary-dark">
-            Discuss your challenges with us first
-          </a>
-        </p>
-      </div>
+      <p class="mx-auto max-w-3xl text-center text-sm text-gray-darker">
+        Ready to get started? Find out how to apply on our{" "}
+        <a href="/membership/apply/" class="font-semibold text-primary underline underline-offset-2 hover:text-primary-dark">step-by-step application guide</a>.
+      </p>
     </div>
   </section>
 
@@ -435,45 +435,9 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
   />
 
   <Footer />
-
-  <!-- Floating "Join the GSF" button — appears after user scrolls past the hero -->
-  <div
-    id="floating-join-btn"
-    class="fixed top-20 right-6 z-50 opacity-0 pointer-events-none transition-all duration-300 translate-y-[-8px]"
-    aria-hidden="true"
-  >
-    <a
-      href="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-2 rounded-lg border border-primary bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-md transition-colors hover:bg-accent-lightest-2"
-    >
-      Join the GSF
-    </a>
-  </div>
 </Layout>
 
 <script>
-  // Floating join button — show after user scrolls past the hero
-  (function () {
-    const btn = document.getElementById("floating-join-btn");
-    const hero = document.querySelector("[data-hero-sentinel]");
-    if (!btn || !hero) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const visible = !entry.isIntersecting;
-        btn.classList.toggle("opacity-0", !visible);
-        btn.classList.toggle("pointer-events-none", !visible);
-        btn.classList.toggle("translate-y-[-8px]", !visible);
-        btn.classList.toggle("translate-y-0", visible);
-        btn.setAttribute("aria-hidden", String(!visible));
-      },
-      { threshold: 0 }
-    );
-    observer.observe(hero);
-  })();
-
   // Track membership enquiry mailto clicks
   document.addEventListener("click", (e) => {
     const link = (e.target as HTMLElement).closest("a[href*='mailto:'][href*='Membership']");

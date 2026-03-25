@@ -38,7 +38,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
 const GSF_OPEN19_REPO = "https://github.com/Green-Software-Foundation/open19";
 const HARDWARE_WG = "https://github.com/Green-Software-Foundation/hardware-standards-wg";
-const MEMBERSHIP_CTA = "https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy";
+const MEMBERSHIP_CTA = "/membership/";
 ---
 
 <Layout
@@ -52,8 +52,6 @@ const MEMBERSHIP_CTA = "https://share.hsforms.com/1NNvkCLgfS4GIUJ0XPH93iw4tvhy";
     topBar="none"
     showSearch
     navItems={navItems}
-    ctaText="Discuss your challenges"
-    ctaHref="/membership/"
   />
 
   <Breadcrumb items={[

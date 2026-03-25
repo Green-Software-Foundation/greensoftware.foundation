@@ -293,17 +293,9 @@ function MobileNavSection({ section }: { section: NavSection }) {
 function MobileNav({
   items,
   onNavigate,
-  ctaText,
-  ctaHref,
-  secondaryCtaText,
-  secondaryCtaHref,
 }: {
   items: NavItem[];
   onNavigate: () => void;
-  ctaText?: string;
-  ctaHref?: string;
-  secondaryCtaText?: string;
-  secondaryCtaHref?: string;
 }) {
   const handleLinkClick = (e: React.MouseEvent) => {
     // Only close sheet when an actual navigation link is clicked
@@ -361,28 +353,14 @@ function MobileNav({
           );
         })}
       </Accordion.Root>
-      {(ctaText || secondaryCtaText) && (
-        <div className="mt-4 px-2 flex flex-col gap-2">
-          {secondaryCtaText && secondaryCtaHref && (
-            <a
-              href={secondaryCtaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center rounded-lg border border-primary bg-white px-6 py-3 text-base font-bold text-primary transition-colors hover:bg-accent-lightest-2"
-            >
-              {secondaryCtaText}
-            </a>
-          )}
-          {ctaText && ctaHref && (
-            <a
-              href={ctaHref}
-              className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
-            >
-              {ctaText}
-            </a>
-          )}
-        </div>
-      )}
+      <div className="mt-4 px-2 flex flex-col gap-2">
+        <a
+          href="/membership/"
+          className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
+        >
+          Discuss Membership
+        </a>
+      </div>
     </nav>
   );
 }
@@ -392,19 +370,11 @@ function MobileNav({
 interface NavigationComponentProps {
   items?: NavItem[];
   showSearch?: boolean;
-  ctaText?: string;
-  ctaHref?: string;
-  secondaryCtaText?: string;
-  secondaryCtaHref?: string;
 }
 
 const NavigationComponent = ({
   items = [],
   showSearch = false,
-  ctaText,
-  ctaHref,
-  secondaryCtaText,
-  secondaryCtaHref,
 }: NavigationComponentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -447,7 +417,7 @@ const NavigationComponent = ({
           fallback={
             <button
               type="button"
-              className="hidden rounded-md p-2 text-gray-darker lg:block"
+              className="rounded-md p-2 text-gray-darker"
               aria-label="Search"
             >
               <Search className="size-5" />
@@ -471,14 +441,7 @@ const NavigationComponent = ({
             </Button>
           </SheetTrigger>
           <SheetContent className="overflow-y-auto">
-            <MobileNav
-              items={items}
-              onNavigate={() => setIsOpen(false)}
-              ctaText={ctaText}
-              ctaHref={ctaHref}
-              secondaryCtaText={secondaryCtaText}
-              secondaryCtaHref={secondaryCtaHref}
-            />
+            <MobileNav items={items} onNavigate={() => setIsOpen(false)} />
           </SheetContent>
         </Sheet>
       </div>

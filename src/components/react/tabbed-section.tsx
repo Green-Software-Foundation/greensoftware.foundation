@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ChevronRight } from "lucide-react";
 import { Img } from "@/components/react/image";
 
 export type Tab = {
@@ -98,13 +99,19 @@ export const TabbedSection = (props: Props) => {
             <div className="flex w-full flex-col items-start justify-start text-left">
               <h3
                 className={cn(
-                  "text-xl font-bold",
+                  "text-xl font-bold flex items-center gap-1.5",
                   activeTab === tab.value
                     ? "text-primary-lightest-1"
                     : "text-primary-lightest-1/50",
                 )}
               >
                 {tab.heading}
+                <ChevronRight
+                  className={cn(
+                    "size-5 shrink-0 transition-transform duration-200",
+                    activeTab === tab.value ? "rotate-90" : "rotate-0",
+                  )}
+                />
               </h3>
               <motion.div
                 initial={false}
@@ -183,7 +190,7 @@ export const TabbedSection = (props: Props) => {
             }
           >
             <p className="mb-2 text-center text-xs text-primary-lighter">
-              Built with
+              Members who Contributed
             </p>
             <div className="relative flex items-center overflow-hidden">
               <div className="absolute top-0 bottom-0 left-0 z-10 w-8 bg-gradient-to-r from-primary-dark to-transparent" />
