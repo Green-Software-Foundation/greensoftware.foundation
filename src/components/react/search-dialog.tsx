@@ -1,5 +1,12 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { Search, X, FileText, BookOpen, Newspaper, Loader2 } from "lucide-react";
+import {
+  Search,
+  X,
+  FileText,
+  BookOpen,
+  Newspaper,
+  Loader2,
+} from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 interface PagefindResult {
@@ -64,13 +71,17 @@ export default function SearchDialog() {
         const w = window as unknown as { pagefind?: PagefindAPI };
         if (!w.pagefind) {
           // Use new Function to create a dynamic import that Vite cannot analyse
-          const loadPagefind = new Function("return import('/pagefind/pagefind.js')");
+          const loadPagefind = new Function(
+            "return import('/pagefind/pagefind.js')",
+          );
           w.pagefind = await loadPagefind();
           await w.pagefind!.init();
         }
         setPagefind(w.pagefind!);
       } catch {
-        console.warn("PageFind index not found — run `npm run build` to generate it.");
+        console.warn(
+          "PageFind index not found — run `npm run build` to generate it.",
+        );
       }
     })();
   }, [open, pagefind]);
@@ -109,7 +120,7 @@ export default function SearchDialog() {
           response = await pagefind.search(trimmed);
         }
         const resolved = await Promise.all(
-          response.results.slice(0, 8).map((r) => r.data())
+          response.results.slice(0, 8).map((r) => r.data()),
         );
         setResults(resolved);
       } catch {
@@ -117,7 +128,7 @@ export default function SearchDialog() {
       }
       setLoading(false);
     },
-    [pagefind]
+    [pagefind],
   );
 
   // Debounced search
@@ -147,7 +158,7 @@ export default function SearchDialog() {
       <Dialog.Trigger asChild>
         <button
           type="button"
-          className="hidden rounded-md p-2 text-gray-darker transition-colors hover:bg-accent-lightest-2 hover:text-primary lg:block"
+          className="rounded-md p-2 text-gray-darker transition-colors hover:bg-accent-lightest-2 hover:text-primary"
           aria-label="Search"
         >
           <Search className="size-5" />
@@ -237,19 +248,26 @@ export default function SearchDialog() {
           {/* Footer */}
           <div className="flex items-center justify-between border-t border-gray px-4 py-2 text-xs text-gray-darker">
             <span>
-              <kbd className="rounded border border-gray px-1 py-0.5">&#8593;</kbd>{" "}
-              <kbd className="rounded border border-gray px-1 py-0.5">&#8595;</kbd>{" "}
+              <kbd className="rounded border border-gray px-1 py-0.5">
+                &#8593;
+              </kbd>{" "}
+              <kbd className="rounded border border-gray px-1 py-0.5">
+                &#8595;
+              </kbd>{" "}
               to navigate
             </span>
             <span>
-              <kbd className="rounded border border-gray px-1 py-0.5">&#8984;K</kbd>{" "}
+              <kbd className="rounded border border-gray px-1 py-0.5">
+                &#8984;K
+              </kbd>{" "}
               to toggle
             </span>
           </div>
 
           <Dialog.Title className="sr-only">Search</Dialog.Title>
           <Dialog.Description className="sr-only">
-            Search articles, stories, and pages on the Green Software Foundation website.
+            Search articles, stories, and pages on the Green Software Foundation
+            website.
           </Dialog.Description>
         </Dialog.Content>
       </Dialog.Portal>

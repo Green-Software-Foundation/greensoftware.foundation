@@ -111,8 +111,6 @@ const isEnglish = article.data.lang === "en";
     topBar="none"
     showSearch
     navItems={navItems}
-    ctaText="Discuss your challenges"
-    ctaHref="/membership/"
   />
   {article.data.published === false && <DraftBanner />}
   <article class="bg-accent-lightest-2" {...isEnglish && article.data.published !== false && { "data-pagefind-body": "" }}>

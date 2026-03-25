@@ -41,6 +41,7 @@ The site has three layers of documentation: **system docs** (how the data pipeli
 - [Notion data pipeline](docs/notion.md) — databases, output files, assets, refresh process, known limitations
 - [Search (PageFind)](docs/search.md) — static indexing, which pages are indexed, testing locally
 - [Google Analytics](docs/google-analytics.md) — GA4 setup, custom events, testing
+- [Forms](docs/forms.md) — Netlify Forms, Notion integration, troubleshooting, spam protection
 
 ### Components
 

@@ -1,11 +1,26 @@
 # Membership Page
 
 **URL:** `/membership/`
-**File:** `src/pages/membership.astro`
+**File:** `src/pages/membership/index.astro`
 
 ## What the Page Shows
 
 The membership proposition: steering and general membership benefits, real member stories, fee tables, and the process to join.
+
+## Sub-pages
+
+### How to Apply
+
+**URL:** `/membership/apply/`
+**File:** `src/pages/membership/apply.astro`
+
+Step-by-step guide to the Linux Foundation enrolment process. Includes annotated screenshots of the LF login page, LFID creation, and the GSF enrolment form. Also contains an important callout about the non-negotiable membership agreement.
+
+Screenshots are stored in `public/assets/membership/`:
+
+- `lf-login.png` — LF login page (LFID + social login)
+- `lf-create-lfid.png` — LFID creation page
+- `lf-enrollment-form.png` — LFX Member Enrollment form
 
 ## Dynamic Elements
 
@@ -45,7 +60,9 @@ Clicks on membership enquiry mailto links fire a `membership_enquiry` GA4 event 
 
 | Change | Where |
 |--------|-------|
-| Update fee tables | Edit the table data in `membership.astro` |
-| Add/change member stories | Edit the `ProjectCards` props in `membership.astro` |
-| Update steering benefits | Edit the FeatureGrid in `membership.astro` |
+| Update fee tables | Edit the table data in `membership/index.astro` |
+| Add/change member stories | Edit the `ProjectCards` props in `membership/index.astro` |
+| Update steering benefits | Edit the FeatureGrid in `membership/index.astro` |
 | Change contact email | Edit the mailto link (currently `help@greensoftware.foundation`) |
+| Update apply screenshots | Replace PNGs in `public/assets/membership/` |
+| Update apply page copy | Edit `membership/apply.astro` |

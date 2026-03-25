@@ -33,6 +33,8 @@ All dynamic site data is fetched from Notion via `scripts/fetch-notion-data.cjs`
 | Team/volunteer photos | `public/assets/team/` | Volunteers DB `Photo` field |
 | Project icons | `public/assets/project-icons/` | PWCIs DB icon/image fields |
 
+All three asset directories are gitignored — assets are fetched fresh from Notion at build time. This ensures that updates made in Notion (e.g. a new logo or updated project icon) are always picked up on the next build rather than being masked by stale files in Git.
+
 ## How to Refresh Data
 
 ### Locally

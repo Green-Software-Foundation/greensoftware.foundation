@@ -1,0 +1,166 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+---
+
+<Layout
+  title="How to Apply — Green Software Foundation"
+  description="Step-by-step guide to applying for GSF membership through the Linux Foundation enrolment portal."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Membership", href: "/membership/" },
+    { label: "How to Apply" },
+  ]} />
+
+  <Hero
+    heading="How to apply for"
+    headingAccent="GSF membership"
+    body="GSF membership is managed through the Linux Foundation. This guide walks you through the enrolment process step by step."
+    ctas={[
+      { text: "Go to enrolment form", variant: "primary", href: "https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund" },
+    ]}
+    imageSrc="/assets/leading-illustration.svg"
+    imageAlt="Membership application illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Step-by-step guide -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+
+        <div class="mb-12 text-center">
+          <h2 class="text-2xl font-extrabold text-primary-dark md:text-3xl">
+            What to expect when you <span class="font-bold text-primary">click apply</span>
+          </h2>
+          <p class="mt-4 text-base text-gray-darker md:text-lg">
+            The enrolment form is hosted by the Linux Foundation. The first thing you'll see is a login page — don't worry, you're in the right place.
+          </p>
+        </div>
+
+        <!-- Step 1: Login -->
+        <div class="mb-16">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-extrabold text-white">1</span>
+            <h3 class="text-xl font-extrabold text-primary-dark">Sign in or create an account</h3>
+          </div>
+          <p class="mb-6 ml-13 text-base text-gray-darker">
+            When you click the enrolment link, you'll be taken to the Linux Foundation login page. <strong class="text-primary-dark">You can sign in with an existing Linux Foundation ID, or create an account using Google, GitHub, or LinkedIn.</strong>
+          </p>
+          <div class="ml-13 overflow-hidden rounded-xl border shadow-sm">
+            <img
+              src="/assets/membership/lf-login.png"
+              alt="Linux Foundation login page showing username/password fields and social login options for Google, GitHub, and LinkedIn"
+              class="w-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step 2: Create LFID -->
+        <div class="mb-16">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-extrabold text-white">2</span>
+            <h3 class="text-xl font-extrabold text-primary-dark">Create an LFID if you don't have one</h3>
+          </div>
+          <p class="mb-6 ml-13 text-base text-gray-darker">
+            If you create an account, you'll be asked to choose an LFID — a Linux Foundation username.
+          </p>
+          <div class="ml-13 overflow-hidden rounded-xl border shadow-sm">
+            <img
+              src="/assets/membership/lf-create-lfid.png"
+              alt="Linux Foundation account creation page with a username field and Create Account button"
+              class="w-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step 3: Enrollment form -->
+        <div class="mb-16">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-extrabold text-white">3</span>
+            <h3 class="text-xl font-extrabold text-primary-dark">Complete the membership enrolment form</h3>
+          </div>
+          <p class="mb-6 ml-13 text-base text-gray-darker">
+            Once signed in, you'll be taken to the GSF Member Enrollment form. This is a five-step process where you'll enter your organisation's details, choose your membership tier, provide billing and contact information, and review your application.
+          </p>
+          <div class="ml-13 overflow-hidden rounded-xl border shadow-sm">
+            <img
+              src="/assets/membership/lf-enrollment-form.png"
+              alt="LFX Member Enrollment form showing the Green Software Foundation logo and a five-step process: Member, Membership Tier, Billing, Contacts, Review & Submit"
+              class="w-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step 4: What happens next -->
+        <div class="mb-16">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-extrabold text-white">4</span>
+            <h3 class="text-xl font-extrabold text-primary-dark">What happens next</h3>
+          </div>
+          <p class="ml-13 text-base text-gray-darker">
+            After you submit the enrolment form, the membership agreement and related documents will be sent to you via <strong>DocuSign</strong>. Multiple parties are involved in the signing process, so please allow some time for all signatures to be collected.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Important callout: Non-negotiable agreement -->
+  <section class="bg-primary-darker py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-6">
+      <h2 class="text-2xl font-extrabold text-white md:text-3xl">
+        About the membership agreement
+      </h2>
+      <div class="mt-6 space-y-4 text-base leading-relaxed text-white/80 md:text-lg">
+        <p>
+          <strong class="text-white">Our membership agreement is non-negotiable.</strong> This is intentional and important: every one of our 90+ member organisations has signed exactly the same agreement. This ensures a fair, egalitarian environment where no member has more rights than any other.
+        </p>
+        <p>
+          The same terms, the same obligations, the same protections — for everyone. This is how we maintain trust and equal standing across the foundation.
+        </p>
+        <p>
+          We understand that your legal team may have questions. Our legal team is more than happy to speak with yours to walk through the agreement and answer any questions. However, the agreement cannot be redlined or adjusted on a per-member basis.
+        </p>
+      </div>
+      <div class="mt-8">
+        <a
+          href="mailto:help@greensoftware.foundation?subject=Membership%20agreement%20questions"
+          class="inline-block text-lg font-bold text-accent hover:text-accent-light transition-colors"
+        >
+          Questions? Email help@greensoftware.foundation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Ready to apply?"
+    body="Complete your application through the Linux Foundation enrolment portal."
+    ctaText="Go to enrolment form"
+    ctaHref="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
+  />
+
+  <Footer />
+</Layout>

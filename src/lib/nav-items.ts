@@ -292,6 +292,15 @@ export const navItems = [
         title: "For Members",
         links: [
           {
+            href: "/membership/",
+            label: "About GSF Membership",
+          },
+          {
+            href: "/membership/apply/",
+            label: "How to Apply",
+            description: "Step-by-step guide to the enrolment process",
+          },
+          {
             href: "https://wiki.greensoftware.foundation/getting-started",
             label: "Getting Started",
             /* icon: "book-open", */ external: true,

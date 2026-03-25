@@ -4,7 +4,7 @@ import NavigationComponent from "@/components/react/navbar";
 import type { NavItem } from "@/components/react/navbar";
 
 import DefaultLogo from "@/assets/sci-logo.svg";
-import GithubIcon from "@/assets/github-icon-navbar.svg";
+
 import GSFLogo from "@/assets/gsf-logo.svg";
 
 interface TopBarLink {
@@ -26,16 +26,6 @@ interface Props {
   topBar?: "project-by" | "utility" | "none";
   /** Custom top bar links (used when topBar="utility") */
   topBarLinks?: TopBarLink[];
-  /** CTA button text. If not provided, shows GitHub icon button */
-  ctaText?: string;
-  /** CTA button href */
-  ctaHref?: string;
-  /** Secondary CTA button text (outline-primary style, shown alongside ctaText) */
-  secondaryCtaText?: string;
-  /** Secondary CTA button href */
-  secondaryCtaHref?: string;
-  /** GitHub repo URL for the GitHub icon button */
-  githubUrl?: string;
   /** Show search icon placeholder */
   showSearch?: boolean;
 }
@@ -47,11 +37,6 @@ const {
   logoHref = "#",
   topBar = "project-by",
   topBarLinks = [],
-  ctaText,
-  ctaHref = "#",
-  secondaryCtaText,
-  secondaryCtaHref = "#",
-  githubUrl = "https://github.com/Green-Software-Foundation/",
   showSearch = false,
 } = Astro.props;
 
@@ -112,29 +97,12 @@ const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production
       )}
     </a>
     <div class="flex items-center gap-1">
-      <NavigationComponent client:idle items={navItems} showSearch={showSearch} ctaText={ctaText} ctaHref={ctaHref} secondaryCtaText={secondaryCtaText} secondaryCtaHref={secondaryCtaHref} />
-      {ctaText ? (
-        <div class="hidden lg:flex items-center gap-2 ml-2">
-          {secondaryCtaText && (
-            <a href={secondaryCtaHref} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline-primary">{secondaryCtaText}</Button>
-            </a>
-          )}
-          <a href={ctaHref}>
-            <Button variant="primary">{ctaText}</Button>
-          </a>
-        </div>
-      ) : (
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button className="p-2">
-            <GithubIcon />
-          </Button>
+      <NavigationComponent client:idle items={navItems} showSearch={showSearch} />
+      <div class="hidden lg:flex items-center gap-2 ml-2">
+        <a href="/membership/">
+          <Button variant="primary">Discuss Membership</Button>
         </a>
-      )}
+      </div>
     </div>
   </div>
 </header>
