@@ -295,11 +295,15 @@ function MobileNav({
   onNavigate,
   ctaText,
   ctaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
 }: {
   items: NavItem[];
   onNavigate: () => void;
   ctaText?: string;
   ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
 }) {
   const handleLinkClick = (e: React.MouseEvent) => {
     // Only close sheet when an actual navigation link is clicked
@@ -357,14 +361,26 @@ function MobileNav({
           );
         })}
       </Accordion.Root>
-      {ctaText && ctaHref && (
-        <div className="mt-4 px-2">
-          <a
-            href={ctaHref}
-            className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
-          >
-            {ctaText}
-          </a>
+      {(ctaText || secondaryCtaText) && (
+        <div className="mt-4 px-2 flex flex-col gap-2">
+          {secondaryCtaText && secondaryCtaHref && (
+            <a
+              href={secondaryCtaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full items-center justify-center rounded-lg border border-primary bg-white px-6 py-3 text-base font-bold text-primary transition-colors hover:bg-accent-lightest-2"
+            >
+              {secondaryCtaText}
+            </a>
+          )}
+          {ctaText && ctaHref && (
+            <a
+              href={ctaHref}
+              className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
+            >
+              {ctaText}
+            </a>
+          )}
         </div>
       )}
     </nav>
@@ -378,6 +394,8 @@ interface NavigationComponentProps {
   showSearch?: boolean;
   ctaText?: string;
   ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
 }
 
 const NavigationComponent = ({
@@ -385,6 +403,8 @@ const NavigationComponent = ({
   showSearch = false,
   ctaText,
   ctaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
 }: NavigationComponentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -456,6 +476,8 @@ const NavigationComponent = ({
               onNavigate={() => setIsOpen(false)}
               ctaText={ctaText}
               ctaHref={ctaHref}
+              secondaryCtaText={secondaryCtaText}
+              secondaryCtaHref={secondaryCtaHref}
             />
           </SheetContent>
         </Sheet>

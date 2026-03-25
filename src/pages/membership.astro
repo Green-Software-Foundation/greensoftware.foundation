@@ -31,20 +31,25 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
     navItems={navItems}
     ctaText="Discuss your challenges"
     ctaHref="mailto:help@greensoftware.foundation?subject=Membership%20enquiry"
+    secondaryCtaText="Join the GSF"
+    secondaryCtaHref="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
   />
 
   <!-- Section 1: Hero -->
-  <Hero
-    heading="Have you been handed a sustainability mandate"
-    headingAccent="with no playbook?"
-    body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results"
-    ctas={[
-      { text: "Book a discussion", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=Membership%20enquiry" },
-    ]}
-    imageSrc="/assets/hero-illustration.svg"
-    imageAlt="Membership illustration"
-    bgClass="bg-accent-lightest-2"
-  />
+  <!-- data-hero-sentinel is used by the floating join button IntersectionObserver -->
+  <div data-hero-sentinel>
+    <Hero
+      heading="Have you been handed a sustainability mandate"
+      headingAccent="with no playbook?"
+      body="GSF membership gives you the peer network, frameworks, and foundation resources to turn that mandate into measurable results"
+      ctas={[
+        { text: "Book a discussion", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=Membership%20enquiry" },
+      ]}
+      imageSrc="/assets/hero-illustration.svg"
+      imageAlt="Membership illustration"
+      bgClass="bg-accent-lightest-2"
+    />
+  </div>
 
   <!-- Section 2: The Room — intro text above the logos -->
   <TextBlock
@@ -398,6 +403,29 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
     </div>
   </section>
 
+  <!-- Join CTA below fees -->
+  <section class="bg-accent-lightest-2 pb-16 md:pb-20">
+    <div class="container">
+      <div class="mx-auto max-w-5xl flex flex-col items-center gap-4 text-center">
+        <p class="text-sm text-gray-darker">Ready to join? Complete your application through the Linux Foundation enrolment portal.</p>
+        <a
+          href="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-lg border border-primary bg-white px-8 py-3 text-base font-bold text-primary transition-colors hover:bg-accent-lightest-2"
+        >
+          Join the GSF
+        </a>
+        <p class="text-xs text-gray-darker">
+          Not sure which tier is right for you?{" "}
+          <a href="mailto:help@greensoftware.foundation?subject=Membership%20enquiry" class="font-semibold text-primary underline underline-offset-2 hover:text-primary-dark">
+            Discuss your challenges with us first
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 9: Final CTA -->
   <CTABanner
     heading="Every member's journey starts with a conversation"
@@ -407,9 +435,45 @@ const resolveOrgs = (names: string[]) => names.map(name => ({ name, logoSrc: log
   />
 
   <Footer />
+
+  <!-- Floating "Join the GSF" button — appears after user scrolls past the hero -->
+  <div
+    id="floating-join-btn"
+    class="fixed top-20 right-6 z-50 opacity-0 pointer-events-none transition-all duration-300 translate-y-[-8px]"
+    aria-hidden="true"
+  >
+    <a
+      href="https://enrollment.lfx.linuxfoundation.org?project=green-software-foundation-fund"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2 rounded-lg border border-primary bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-md transition-colors hover:bg-accent-lightest-2"
+    >
+      Join the GSF
+    </a>
+  </div>
 </Layout>
 
 <script>
+  // Floating join button — show after user scrolls past the hero
+  (function () {
+    const btn = document.getElementById("floating-join-btn");
+    const hero = document.querySelector("[data-hero-sentinel]");
+    if (!btn || !hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visible = !entry.isIntersecting;
+        btn.classList.toggle("opacity-0", !visible);
+        btn.classList.toggle("pointer-events-none", !visible);
+        btn.classList.toggle("translate-y-[-8px]", !visible);
+        btn.classList.toggle("translate-y-0", visible);
+        btn.setAttribute("aria-hidden", String(!visible));
+      },
+      { threshold: 0 }
+    );
+    observer.observe(hero);
+  })();
+
   // Track membership enquiry mailto clicks
   document.addEventListener("click", (e) => {
     const link = (e.target as HTMLElement).closest("a[href*='mailto:'][href*='Membership']");
