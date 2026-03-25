@@ -1,19 +1,22 @@
 ---
-title: "Measuring for Reporting vs. Measuring for Action"
-date: "2026-03-05"
+title: Measuring for Reporting vs. Measuring for Action
+teaserText: Why the metrics that report emissions aren’t always the ones that help reduce them.
+date: 2026-03-05
 published: true
-summary: "The metrics designed for regulators aren't always the ones that help practitioners reduce emissions. Asim Hussain (ED of GSF) explores the trade-offs between measuring for reporting and measuring for action, and how to design systems that do both."
-teaserText: "Why the metrics that report emissions aren’t always the ones that help reduce them. "
-mainImage: "./main.png"
+summary: The metrics designed for regulators aren't always the ones that help practitioners reduce emissions. Asim Hussain (ED of GSF) explores the trade-offs between measuring for reporting and measuring for action, and how to design systems that do both.
+mainImage: ./main.png
+mainImageAlt: ''
 authors:
-  - fullName: "Asim Hussain"
-    role: "Executive Director"
-    company: "Green Software Foundation"
-    companyWebsite: "https://greensoftware.foundation"
-    photo: "/assets/articles/authors/asim-hussain.png"
+  - fullName: Asim Hussain
+    role: Executive Director
+    company: Green Software Foundation
+    companyWebsite: https://greensoftware.foundation
+    photo: /assets/articles/authors/asim-hussain.png
     socialMedia:
-      - platform: "Linkedin"
-        link: "https://www.linkedin.com/in/asimhussain/"
+      - platform: Linkedin
+        link: https://www.linkedin.com/in/asimhussain/
+originBlogName: ''
+publishedOriginUrl: ''
 ---
 
 There are two reasons to measure carbon emissions. One is reporting. The other is driving action. Both matter. But they're not the same thing, and the trade-offs between them are worth understanding.
@@ -34,7 +37,7 @@ This is genuinely valuable work. Without it, there's no accountability at scale,
 
 But here's the trade-off. The standardization and breadth that make a metric comparable across organizations also make it less specific to any individual team inside an organization. A total tells you the size of the problem. It doesn't tell a specific team what to do about it.
 
-> “A total tells you the size of the problem. It doesn't tell a specific team what to do about it”.
+> “A total tells you the size of the problem. It doesn't tell a specific team what to do about it”.—Asim Hussain, ED of the GSF 
 
 ## The Auditing Problem (or, Top-down vs. Bottom-up)
 
@@ -122,4 +125,4 @@ If your goal is actual emissions reduction, design your measurement system aroun
 
 The best measurement programs do both. They report at the organizational level for accountability and transparency. And they decompose that into granular, team-scoped action metrics that actually drive change. The key is knowing which is which, and not expecting one type of metric to do the other's job.
 
-*By Asim Hussain, Executive Director of the GSF*
+_By Asim Hussain, Executive Director of the GSF_
