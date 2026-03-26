@@ -162,7 +162,7 @@ export const navItems = [
             /* iconSrc: pi("carbon-aware-sdk"), icon: "cloud", */ external: true,
           },
           {
-            href: "https://github.com/Green-Software-Foundation/carmen",
+            href: "https://github.com/Green-Software-Foundation/if-carmen",
             label: "Carmen",
             description: "Automated carbon reporting for cloud workloads",
             /* iconSrc: pi("carmen"), icon: "calculator", */ external: true,
