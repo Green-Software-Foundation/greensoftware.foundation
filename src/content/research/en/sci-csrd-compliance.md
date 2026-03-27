@@ -319,7 +319,6 @@ SCI and CSRD/ESRS E1 operate at different levels but can be highly complementary
 
 ![](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-02.webp)
 
-
   **Important**: SCI can support CSRD compliance but is not explicitly required by ESRS E1. Organizations should engage their auditors early to confirm that SCI-based approaches will be accepted as part of their GHG inventory methodology.
 
 ### 4.2 Potential Support for ESRS E1 Requirements
@@ -401,7 +400,7 @@ This foundational alignment ensures that SCI-based calculations maintain integri
 
 #### Principle 2: GHG Protocol Methodology
 
-\*\*ESRS E1 Requirement (paragraph 45):\*\* "The undertaking shall calculate its Scope 1, Scope 2 and Scope 3 emissions in accordance with the Greenhouse Gas Protocol."
+**ESRS E1 Requirement (paragraph 45):** "The undertaking shall calculate its Scope 1, Scope 2 and Scope 3 emissions in accordance with the Greenhouse Gas Protocol."
 
 The GHG Protocol uses an attributional approach: allocating a share of actual emissions to the reporting organisation using average emission factors. SCI's specification also requires average location-based carbon intensity for the I term, making its output compatible with attributional accounting. However, SCI's design philosophy — elimination-only, sensitive to action — is consequential in spirit: it is built to drive operational decisions, not to allocate shares of global emissions.
 
