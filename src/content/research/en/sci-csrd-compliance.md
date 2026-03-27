@@ -316,6 +316,10 @@ SCI and CSRD/ESRS E1 operate at different levels but can be highly complementary
 - **SCI provides the "how"**: Detailed methodology for calculating software emissions
 - **GHG Protocol provides the "where"**: Classification into Scopes 1, 2, 3
 - **ESRS E1 provides the "what"**: Disclosure requirements for external reporting
+
+![](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-02.webp)
+
+
   **Important**: SCI can support CSRD compliance but is not explicitly required by ESRS E1. Organizations should engage their auditors early to confirm that SCI-based approaches will be accepted as part of their GHG inventory methodology.
 
 ### 4.2 Potential Support for ESRS E1 Requirements
@@ -381,6 +385,8 @@ CSRD requires organizations to assess sustainability matters through a **double 
 - Identifies carbon-intensive components vulnerable to carbon pricing
 - Demonstrates competitive advantage through efficient software
 - Supports customer sustainability requirements (increasingly material for B2B)
+
+![Diagram illustrating double materiality: climate impact flows into an organization through three financial risk factors — carbon pricing, customer requirements, and competitive advantage — and the organization in turn creates an impact on climate.](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-03.webp)
 
 Organizations can use SCI scores to demonstrate that software-related climate impacts are material from both perspectives, justifying detailed disclosure under ESRS E1.
 
@@ -470,6 +476,8 @@ For software companies, Scope 3 presents unique challenges:
 ### 5.1 Integration with CSRD Readiness
 
 Organizations can consider integrating SCI into their CSRD implementation roadmap:
+
+![Timeline diagram showing a four-phase SCI implementation roadmap: Phase 1 Foundation (Months 1–3), Phase 2 Baseline Measurement (Months 4–6), Phase 3 Target Setting and Strategy (Months 7–9), and Phase 4 Reporting and Assurance (Months 10–12+)](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-05.webp)
 
 #### Phase 1: Foundation (Months 1-3)
 
@@ -666,6 +674,8 @@ Organizations can leverage various tools to support SCI implementation:
 ***
 
 ## 6. Benefits and Business Case
+
+![Illustration representing software carbon measurement, featuring a server stack, a document folder with a compass icon, a report document, and an energy donut chart, on a dark green background.](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-06.webp)
 
 ### 6.1 CSRD Compliance Benefits
 
@@ -938,6 +948,8 @@ This intensity target demonstrates efficiency improvement even as transaction vo
 ***
 
 ## 8. Conclusion and Recommendations
+
+![Illustration representing software emissions reporting challenges, featuring a document, a globe with topographic contour lines, a compass icon, and a server stack with error markers, on a dark green background.](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-07.webp)
 
 ### 8.1 Key Takeaways
 
