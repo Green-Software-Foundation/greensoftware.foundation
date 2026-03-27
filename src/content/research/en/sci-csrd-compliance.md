@@ -317,7 +317,7 @@ SCI and CSRD/ESRS E1 operate at different levels but can be highly complementary
 - **GHG Protocol provides the "where"**: Classification into Scopes 1, 2, 3
 - **ESRS E1 provides the "what"**: Disclosure requirements for external reporting
 
-![](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-02.webp)
+![Diagram showing the ESRS E1 integration flow: ESRS E1 sits at the top, connecting via the GHG Protocol to Scope 1, Scope 2, and Scope 3 categories, with the SCI standard feeding into each scope through on-premise servers, software applications, and cloud infrastructure.](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-02.webp)
 
 **Important**: SCI can support CSRD compliance but is not explicitly required by ESRS E1. Organizations should engage their auditors early to confirm that SCI-based approaches will be accepted as part of their GHG inventory methodology.
 
