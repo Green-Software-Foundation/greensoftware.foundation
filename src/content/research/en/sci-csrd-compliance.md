@@ -43,8 +43,8 @@ For organisations that develop, deploy, or procure software, a critical challeng
 - **Drive measurable reductions** in software-related emissions
 - **Demonstrate double materiality** by linking software impacts to business value
 - **Support science-based target** development and tracking
-  **Key Recommendation**: Organizations subject to CSRD should consider adopting the SCI standard as a practical methodology for calculating, tracking, and reducing software carbon emissions within their broader GHG inventory and sustainability reporting framework.
-  **Disclaimer**: The SCI standard is a _complementary tool_ that can support CSRD compliance, not a requirement of ESRS E1. Organizations should consult with their auditors, legal advisors, and sustainability professionals to determine the most appropriate methodologies for their specific reporting context. While SCI provides valuable technical granularity, ESRS E1 does not explicitly mandate its use, and alternative approaches may also be valid.
+- **Key Recommendation**: Organizations subject to CSRD should consider adopting the SCI standard as a practical methodology for calculating, tracking, and reducing software carbon emissions within their broader GHG inventory and sustainability reporting framework.
+- **Disclaimer**: The SCI standard is a _complementary tool_ that can support CSRD compliance, not a requirement of ESRS E1. Organizations should consult with their auditors, legal advisors, and sustainability professionals to determine the most appropriate methodologies for their specific reporting context. While SCI provides valuable technical granularity, ESRS E1 does not explicitly mandate its use, and alternative approaches may also be valid.
   ---
 
 ## 1. Understanding CSRD and ESRS E1
