@@ -395,7 +395,7 @@ This foundational alignment ensures that SCI-based calculations maintain integri
 
 #### Principle 2: GHG Protocol Methodology
 
-**ESRS E1 Requirement (paragraph 45):** "The undertaking shall calculate its Scope 1, Scope 2 and Scope 3 emissions in accordance with the Greenhouse Gas Protocol."
+\*\*ESRS E1 Requirement (paragraph 45):\*\* "The undertaking shall calculate its Scope 1, Scope 2 and Scope 3 emissions in accordance with the Greenhouse Gas Protocol."
 
 The GHG Protocol uses an attributional approach: allocating a share of actual emissions to the reporting organisation using average emission factors. SCI's specification also requires average location-based carbon intensity for the I term, making its output compatible with attributional accounting. However, SCI's design philosophy — elimination-only, sensitive to action — is consequential in spirit: it is built to drive operational decisions, not to allocate shares of global emissions.
 
@@ -756,7 +756,7 @@ Organizations can develop a business case across multiple value dimensions. The 
 ## 7. Example SCI integration in CSRD
 
   **Company**: FinTech SaaS provider "PaymentCo" (fictional)
-**CSRD Requirement**: ESRS E1-6 - Report Scope 3, Category 11 (Use of Sold Products) emissions **Challenge**: How to calculate emissions from customers using their payment processing API
+**CSRD Requirement**: ESRS E1-6 - Report GHG emissions, including software-related Scope 3 emissions **Challenge**: How to calculate and report emissions from cloud-hosted software services, using conventional GHG accounting for compliance and SCI for granular, actionable insight
 
 ***
 
@@ -892,36 +892,48 @@ This intensity target demonstrates efficiency improvement even as transaction vo
 
 ### 7.6 What This Example Shows
 
-#### ✅ SCI Provides
+#### GHG Protocol Accounting Provides:
 
-1. **Granular calculation method** for a specific software service
-2. **Defensible methodology** with documented data sources
-3. **Component-level insight** (can see database is optimization opportunity)
-4. **Functional unit** that enables intensity-based targets
-5. **Audit trail** from measurements → calculation → disclosure
+[](https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Leveraging%20the%20SCI%20Standard%20for%20CSRD%20Compliance.md#ghg-protocol-accounting-provides)
 
-#### ✅ Maps to CSRD Requirements
+1. **Scope classification** and corporate-level emissions total
+2. **Market-based Scope 2 figure** (from AWS carbon reporting / contractual instruments)
+3. **CSRD-compliant reporting boundary** under financial control approach
+4. **ESRS E1-6 (para 44)**: Documents calculation methodology as required
 
-1. **ESRS E1-6**: Provides Scope 3 Category 11 emissions total (49.4 tCO2e)
-2. **ESRS E1-6 (para 44)**: Documents calculation methodology as required
-3. **ESRS E1-4**: Enables intensity-based target setting (0.988 → 0.690)
-4. **ESRS E1-1**: Identifies specific decarbonization levers (database optimization, hardware upgrade)
+#### SCI Adds:
 
-#### ⚠️ Realistic Limitations
+[](https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Leveraging%20the%20SCI%20Standard%20for%20CSRD%20Compliance.md#sci-adds)
+
+1. **Component-level granularity** — identifies which service is the optimisation target
+2. **Rate-based metric** enabling intensity targets independent of business growth
+3. **Documented methodology** with audit trail from telemetry to disclosure
+4. **Actionable engineering insight** that corporate totals cannot provide
+5. **ESRS E1-4**: Enables intensity-based target setting (0.988 → 0.690)
+6. **ESRS E1-1**: Identifies specific decarbonisation levers (database optimisation, hardware upgrade)
+
+#### Realistic Limitations:
+
+[](https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Leveraging%20the%20SCI%20Standard%20for%20CSRD%20Compliance.md#realistic-limitations)
 
 1. **Data quality**: 35% based on models/estimates (embodied emissions)
 2. **Uncertainty**: AWS doesn't provide exact workload-level energy data
-3. **Assumptions**: Server hardware proxy, average utilization patterns
-4. **Documentation burden**: Requires detailed methodology disclosure
+3. **Assumptions**: Server hardware proxy, average utilisation patterns
+4. **SCI alone is not sufficient for CSRD compliance**: Market-based Scope 2, scope classification, and reporting boundaries require conventional GHG accounting
+5. **Documentation burden**: Requires detailed methodology disclosure
 
-#### 🔍 Auditor Would Verify
+#### Auditor Would Verify:
+
+[](https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Leveraging%20the%20SCI%20Standard%20for%20CSRD%20Compliance.md#auditor-would-verify)
 
 - Source of energy consumption data (AWS CloudWatch exports)
+- **Confirmation that average location-based (not marginal) emission factors were used**
 - Carbon intensity data source (Electricity Maps API logs)
 - Embodied emissions LCA source (Dell documentation)
 - Transaction volume (billing system records)
 - Calculation logic (spreadsheet or tool outputs)
 - Year-over-year consistency (same methodology applied)
+- **Separate market-based calculation where applicable**
 
 ***
 
