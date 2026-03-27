@@ -318,7 +318,7 @@ SCI and CSRD/ESRS E1 operate at different levels but can be highly complementary
 - **ESRS E1 provides the "what"**: Disclosure requirements for external reporting
 
 ![](/assets/uploads/02-SCI%20Standard%20for%20CSRD%20Compliance-02.webp)
-  
+
 **Important**: SCI can support CSRD compliance but is not explicitly required by ESRS E1. Organizations should engage their auditors early to confirm that SCI-based approaches will be accepted as part of their GHG inventory methodology.
 
 ### 4.2 Potential Support for ESRS E1 Requirements
