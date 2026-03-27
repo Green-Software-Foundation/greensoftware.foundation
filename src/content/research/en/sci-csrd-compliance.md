@@ -47,6 +47,8 @@ For organisations that develop, deploy, or procure software, a critical challeng
 **Key Recommendation**: Organizations subject to CSRD should consider adopting the SCI standard as a practical methodology for calculating, tracking, and reducing software carbon emissions within their broader GHG inventory and sustainability reporting framework.
 
 **Disclaimer**: The SCI standard is a _complementary tool_ that can support CSRD compliance, not a requirement of ESRS E1. Organizations should consult with their auditors, legal advisors, and sustainability professionals to determine the most appropriate methodologies for their specific reporting context. While SCI provides valuable technical granularity, ESRS E1 does not explicitly mandate its use, and alternative approaches may also be valid.
+
+
   ---
 
 ## 1. Understanding CSRD and ESRS E1
@@ -126,7 +128,9 @@ Software emissions manifest across multiple Scope 3 categories:
 - **Category 2**: Capital goods (hardware infrastructure)
 - **Category 8**: Upstream leased assets (data center operations)
 - **Category 11**: Use of sold products (customer usage of software products)
-  ---
+  
+
+---
 
 ## 2. The Challenge of Software Emissions
 
@@ -179,7 +183,9 @@ Organizations subject to CSRD require a methodology that:
 - Facilitates documentation for audit purposes
 
 This is where the Software Carbon Intensity standard can provide value.
-  ---
+  
+
+---
 
 ## 3. Introducing the Software Carbon Intensity (SCI) Standard
 
@@ -290,7 +296,9 @@ Key features of SCI for AI:
 - **Broad applicability**: Covers classical ML, computer vision, NLP, generative AI, and agentic systems
 
 For organizations with significant AI workloads, SCI for AI provides much-needed methodology for a rapidly growing source of emissions.
-  ---
+  
+
+---
 
 ## 4. Strategic Alignment: SCI and CSRD
 
@@ -456,7 +464,9 @@ For software companies, Scope 3 presents unique challenges:
 - For Scope 3 Category 11, focus on emissions that occur beyond your organizational boundary
 - Consult GHG Protocol Scope 3 guidance on attribution principles
 - Engage auditors on appropriate value chain attribution methodologies
-  ---
+  
+
+---
 
 ## 5. Practical Implementation Framework
 
@@ -655,7 +665,9 @@ Organizations can leverage various tools to support SCI implementation:
 - Be prepared to provide additional verification steps beyond standard SCI documentation
 - Consider engaging sustainability consultants with both CSRD and software carbon expertise
 - Plan additional time and budget for auditor education and review
-  ---
+  
+
+---
 
 ## 6. Benefits and Business Case
 
@@ -749,7 +761,9 @@ Organizations can develop a business case across multiple value dimensions. The 
 
   **Company**: FinTech SaaS provider "PaymentCo" (fictional)
 **CSRD Requirement**: ESRS E1-6 - Report Scope 3, Category 11 (Use of Sold Products) emissions **Challenge**: How to calculate emissions from customers using their payment processing API
-  ---
+  
+
+---
 
 ### 7.1 Step 1: Define the Software Boundary and Functional Unit
 
@@ -761,7 +775,9 @@ Organizations can develop a business case across multiple value dimensions. The 
 - Database (transaction records)
 - Message Queue (async processing)
   **Functional Unit (R)**: Per 1,000 payment transactions processed
-  ---
+  
+
+---
 
 ### 7.2 Step 2: Calculate SCI Score
 
@@ -811,7 +827,9 @@ $$M = TE \times TS \times RS = 4{,}800{,}000 \times 0.0000713 \times 1.0 = 342 \
 #### 7.2.3 Total SCI Score
 
 $$SCI = \frac{O + M}{R} = \frac{646 + 342}{1{,}000} = 0.988 \text{ gCO}_2\text{e per transaction}$$
-  ---
+  
+
+---
 
 ### 7.3 Step 3: Aggregate to Corporate GHG Inventory
 
@@ -823,7 +841,9 @@ $$50{,}000{,}000 \times 0.988 = 49{,}400{,}000 \text{ gCO}_2\text{e} = 49.4 \tex
 
 - Emissions occur in AWS infrastructure (not owned/controlled by PaymentCo)
 - Result from customers using PaymentCo's sold service
-  ---
+  
+
+---
 
 ### 7.4 Step 4: CSRD Disclosure (ESRS E1-6)
 
@@ -843,7 +863,9 @@ $$50{,}000{,}000 \times 0.988 = 49{,}400{,}000 \text{ gCO}_2\text{e} = 49.4 \tex
 > The functional unit (per transaction) was selected to align with our revenue model and enable year-over-year intensity tracking independent of business growth.
 > >
 > **Data quality:** 65% based on measured data (energy consumption), 35% based on industry-standard models (embodied emissions). We are working with AWS to obtain more granular workload-level emissions data.
->   ---
+>   
+
+---
 
 ### 7.5 Step 5: Value Beyond Compliance
 
@@ -873,7 +895,9 @@ Now PaymentCo can see that:
 - Implement carbon-aware scheduling (2026): −8%
 
 This intensity target demonstrates efficiency improvement even as transaction volume grows.
-  ---
+  
+
+---
 
 ### 7.6 What This Example Shows
 
@@ -907,7 +931,9 @@ This intensity target demonstrates efficiency improvement even as transaction vo
 - Transaction volume (billing system records)
 - Calculation logic (spreadsheet or tool outputs)
 - Year-over-year consistency (same methodology applied)
-  ---
+  
+
+---
 
 ## 8. Conclusion and Recommendations
 
@@ -1001,7 +1027,9 @@ The adoption of the Software Carbon Intensity standard is not merely a complianc
 - Recognize that alternative approaches may be equally valid
 - Understand that regulatory guidance continues to evolve
 - Exercise appropriate professional judgment in applying these methodologies
-  ---
+  
+
+---
 
 ## 9. Resources and References
 
@@ -1105,7 +1133,9 @@ This white paper draws on the following verified sources:
 - ISO/IEC 21031:2024 (published March 2024): [https://www.iso.org/standard/86612.html](https://www.iso.org/standard/86612.html)
 - SCI for AI Specification (ratified December 2024): [https://greensoftware.foundation/articles/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the/](https://greensoftware.foundation/articles/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the/)
 - Scope 3 emissions research showing 65-95% of total footprint: [https://www.lseg.com/content/dam/ftse-russell/en_us/documents/research/solving-scope-3-conundrum.pdf](https://www.lseg.com/content/dam/ftse-russell/en_us/documents/research/solving-scope-3-conundrum.pdf)
-  ---
+  
+
+---
 
 ## Document Information
 
@@ -1116,5 +1146,7 @@ This white paper draws on the following verified sources:
   **License**: This white paper is published under a Creative Commons Attribution 4.0 International License (CC BY 4.0). You are free to share and adapt this material with appropriate attribution.
   **Disclaimer**: This white paper provides general information and analysis. It does not constitute legal, accounting, or professional advice. The Software Carbon Intensity (SCI) standard is a complementary tool that may support CSRD compliance but is not explicitly required by ESRS E1. Organizations should consult qualified advisors regarding their specific CSRD compliance obligations and sustainability reporting requirements. Regulatory guidance continues to evolve, and organizations should stay informed of the latest developments from EFRAG and the European Commission.
   **Acknowledgments**: This white paper draws on publicly available resources from the Green Software Foundation, European Commission, EFRAG, GHG Protocol, and various industry sources. We acknowledge the pioneering work of these organizations in advancing sustainable software practices and corporate sustainability reporting. Special thanks to the Green Software Foundation for developing and maintaining the SCI specification and achieving its ISO standardization.
+
+
   ---
   **For inquiries regarding this white paper or to discuss SCI implementation support, please contact:** <help@greensoftware.foundation>
