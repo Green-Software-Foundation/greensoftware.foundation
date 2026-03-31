@@ -6,7 +6,7 @@ published: true
 summary: A new white paper from GSF's Software Standards Working Group maps the SCI standard to CSRD's reporting requirements. Learn how to go from software energy data to a CSRD-compliant disclosure, and how SCI complements GHG accounting by adding the granularity needed to measure software impacts.
 mainImage: 02-SCI Standard for CSRD Compliance-01.webp
 mainImageAlt: White paper cover illustration for the Green Software Foundation's SCI white paper. Dark green background with illustrated icons including stacked document folders, an EU flag, a compass, a judge's gavel, and a large central medallion with the text "SCI". Top left reads "WHITEPAPER" with the SCI logo. Bottom left shows the Green Software Foundation logo and greensoftware.foundation URL.
-featured: false
+featured: true
 tags:
   - '"policy", "standards","research"'
 authors: []
