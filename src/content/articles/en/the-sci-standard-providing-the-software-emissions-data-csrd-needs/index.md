@@ -40,7 +40,7 @@ That creates a gap between what the regulation requires and what most organizati
 
 ## How the SCI Standard Can Help
 
-The Software Carbon Intensity (SCI) specification, published as ISO/IEC 21031:2024, provides a methodology for calculating a carbon intensity score for any software system. In a worked example from the paper, a payment API processing 50 million transactions annually can produce an SCI score of under 1 gCO₂e per transaction—a granular, traceable figure that can directly support a CSRD report when used alongside conventional GHG accounting.
+The Software Carbon Intensity (SCI) specification, published as [ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html), provides a methodology for calculating a carbon intensity score for any software system. In a worked example from the paper, a payment API processing 50 million transactions annually can produce an SCI score of under 1 gCO₂e per transaction—a granular, traceable figure that can directly support a CSRD report when used alongside conventional GHG accounting.
 
 Two things make the standard a useful complement to CSRD reporting.
 
