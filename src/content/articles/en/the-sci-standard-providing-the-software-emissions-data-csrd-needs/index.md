@@ -54,7 +54,7 @@ What SCI adds is the granularity that those frameworks lack: the ability to meas
 
 Besides regulatory compliance, there is a strong practical upside: the same optimizations that lower an SCI score tend to lower your cloud bill.
 
-> _"Working with the Software Standards WG, we set out to show that when you combine SCI with standard GHG accounting, you can go from software energy data to a figure that works in a CSRD report, and tells your engineering team where to improve. The paper walks through exactly how, step by step”. _—_Joseph Cook, Head of R&D at GSF_
+> _"Working with the Software Standards WG, we set out to show that when you combine SCI with standard GHG accounting, you can go from software energy data to a figure that works in a CSRD report, and tells your engineering team where to improve. The paper walks through exactly how, step by step”. —Joseph Cook, Head of R&D at GSF_
 
 ## What's in the White Paper
 
