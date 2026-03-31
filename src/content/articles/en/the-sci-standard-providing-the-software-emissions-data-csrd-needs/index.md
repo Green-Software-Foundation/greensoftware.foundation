@@ -1,6 +1,6 @@
 ---
 title: 'The SCI Standard: Providing the Software Emissions Data CSRD Needs'
-teaserText: A new white paper maps SCI to the reporting requirements European organizations face under new regulations.
+teaserText: A new white paper from our Software Standards WG maps SCI to the reporting requirements European organizations face under new regulations.
 date: 2026-03-31
 published: true
 summary: A new white paper from GSF's Software Standards Working Group maps the SCI standard to CSRD's reporting requirements. Learn how to go from software energy data to a CSRD-compliant disclosure, and how SCI complements GHG accounting by adding the granularity needed to measure software impacts.
