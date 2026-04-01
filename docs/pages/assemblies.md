@@ -13,14 +13,13 @@ The index page has these sections in order:
 
 | Section | Component | Content type |
 |---------|-----------|--------------|
-| Hero | `Hero` | Static — new headline and body |
-| The Problem | `FeatureGrid` (3 cols, cards) | Static — 3 barriers to consensus |
-| What is an Assembly | `TextWithImage` | Static — explanation + image |
-| How It Works | `VerticalPipeline` | Static — 6-step Harmony process |
+| Hero | `Hero` | Static — "Fair decisions, fast." headline and body |
 | What Harmony Does | `FeatureGrid` (3 cols, bordered) | Static — 3 accountability features |
+| What is an Assembly | `TextWithImage` | Static — explanation + image |
+| Assembly Types | `FeatureGrid` (3 cols, cards) | Static — Private / Public / Open (Open has CTA to enquiry form) |
+| How It Works | `VerticalPipeline` | Static — 6-step Harmony process |
+| The Problem | `FeatureGrid` (3 cols, cards) | Static — 3 barriers to consensus |
 | Upcoming Assemblies | Inline `<section id="active">` | **Dynamic** — from `assemblies.json` |
-| Assembly Types | `FeatureGrid` (3 cols, cards) | Static — Private / Public / Open |
-| Track Record | `StatsGrid` | **Dynamic** — aggregated from `assemblies.json` (only shown if completed assemblies exist) |
 | Who Gets Access | `FeatureGrid` (2 cols, cards) | Static — 4 access tiers |
 | Completed Assemblies | Inline `<section>` | **Dynamic** — from `assemblies.json` (only shown if completed exist) |
 | FAQ | Inline `<section>` with `<details>` accordion | Static — 10 questions |
@@ -69,15 +68,6 @@ Each assembly has an optional `Visibility` field:
 | `Public` | Green (accent) | Open to anyone |
 | `GSF Members Only` | Teal (primary) | Members-only |
 | `Invite Only` | Dark teal (primary-darker) | By invitation |
-
-## Track Record Section
-
-Shown only when `completed.length > 0`. Aggregates stats from completed assemblies at build time:
-
-- **Assemblies completed** — `completed.length`
-- **Total participants** — sum of `averageAttendees` across completed assemblies (omitted if 0)
-- **Under 3 yrs** — hardcoded (refers to SCI concept-to-ISO achievement)
-- **Cards** — top 3 most recent completed assemblies (name + summary)
 
 ## Hero CTAs
 
@@ -162,7 +152,7 @@ If the assembly has a `workingGroup` relation (resolved from Notion PWCIs), a "G
 | Add details content | Add content below a "Details" heading in the Notion page body |
 | Set report URL | Set `Report` URL field in Notion |
 | Change visibility | Set `Visibility` field in Notion |
-| Update FAQ answers | Edit the inline array in `src/pages/assemblies/index.astro` section 11 |
-| Update static section text (problem, what is, types, access) | Edit the component props directly in `src/pages/assemblies/index.astro` |
+| Update FAQ answers | Edit the inline array in `src/pages/assemblies/index.astro` section 10 |
+| Update static section text (harmony, what is, types, problem, access) | Edit the component props directly in `src/pages/assemblies/index.astro` |
 
 See [Notion doc](../notion.md) for the full list of Assemblies DB properties.

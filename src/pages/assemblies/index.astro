@@ -7,7 +7,6 @@ import Hero from "@/components/hero.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import VerticalPipeline from "@/components/vertical-pipeline.astro";
-import StatsGrid from "@/components/stats-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
@@ -58,13 +57,6 @@ const completed = visible
     const dateB = b.endDate || b.startDate || "";
     return dateB.localeCompare(dateA);
   });
-
-// Track record — aggregate stats from completed assemblies
-const totalParticipants = completed.reduce((sum, a) => sum + (a.averageAttendees || 0), 0);
-const trackRecordCards = completed.slice(0, 3).map(a => ({
-  title: a.name,
-  description: a.summary || "",
-}));
 
 // Hero CTAs — only offer anchor link if active assemblies exist
 const heroCtas = [
@@ -125,36 +117,37 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
 
   <!-- 1. Hero -->
   <Hero
-    heading="Ask a Question."
-    headingAccent="Get the Industry's Answer."
-    body="Getting consensus at scale — across organisations, time zones, and languages — is one of the hardest problems in standards-making. An Assembly brings the right people together around your question and uses AI-assisted consensus to produce a validated, citable answer everyone stands behind. No six-month committee. Typically 6 weeks."
+    heading="Fair decisions,"
+    headingAccent="fast."
+    body="An Assembly gets a hard question answered by the right people — across organisations, time zones, and languages — and produces a result everyone can stand behind. The output could be a consensus statement, white paper, set of recommendations, or the foundation for a new standard. Typically 6 weeks, not 6 years."
     ctas={heroCtas}
     imageSrc="/assets/assemblies-hero-illustration.svg"
     imageAlt="Assemblies illustration"
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- 2. The Problem -->
+  <!-- 2. What Harmony Does (moved before The Problem) -->
   <FeatureGrid
-    heading="Why consensus at scale *breaks down*"
-    body="The traditional multi-stakeholder meeting isn't broken by accident. It's structurally biased against the quiet, the remote, and the outvoted."
+    heading="Harmony: *AI-assisted consensus* built on human accountability"
+    body="At the centre of every Assembly is Harmony — GSF's AI-assisted consensus engine. Think of it as an intelligent facilitator that never sleeps, never forgets, and can hold the perspectives of hundreds of people simultaneously. The decisions it helps reach are provably fair."
     columns={3}
+    variant="bordered"
     bgClass="bg-white"
     features={[
       {
-        icon: "/assets/shape-icon-1.svg",
-        title: "Competing organisations, competing interests",
-        description: "Competitors around the same table don't freely share. The loudest voice dominates. Minority views get drowned out — and conformity pressure shapes what people say before they even speak.",
+        icon: "/assets/dive-icon-1.svg",
+        title: "Human-in-the-loop at every stage",
+        description: "AI reads, synthesises, and surfaces patterns. Humans rate candidates, validate outputs, and cast every vote. The AI is a lens, not a judge — it cannot make decisions, cast votes, or determine outcomes.",
       },
       {
-        icon: "/assets/shape-icon-2.svg",
-        title: "Time zones and language barriers",
-        description: "Synchronous meetings always disadvantage someone. Real-time discussions reward fluency over insight. Participants who aren't native speakers of the meeting language are structurally sidelined.",
+        icon: "/assets/dive-icon-2.svg",
+        title: "Cryptographic inclusion proofs",
+        description: "Every response is hashed into a Merkle tree. After synthesis, you can receive a mathematical proof that your exact response was included. If it had been altered or excluded, the proof would not validate.",
       },
       {
-        icon: "/assets/shape-icon-3.svg",
-        title: "Slow by design",
-        description: "Traditional multi-stakeholder standards take 5–7 years. By the time you reach consensus, the world has moved on. The process optimises for procedure, not outcomes.",
+        icon: "/assets/dive-icon-3.svg",
+        title: "Full auditability",
+        description: "The chain from individual submission to published output is transparent and logged. Every action — responses received, syntheses generated, votes cast — is timestamped and auditable.",
       },
     ]}
   />
@@ -173,11 +166,39 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     </p>
   </TextWithImage>
 
-  <!-- 4. How It Works -->
+  <!-- 4. Assembly Types (moved up from section 7) -->
+  <FeatureGrid
+    heading="Three types of Assembly"
+    body="The type determines who participates and what the output feeds into."
+    columns={3}
+    bgClass="bg-white"
+    features={[
+      {
+        icon: "/assets/shape-icon-1.svg",
+        title: "Private",
+        description: "GSF members only. Produces the baseline for a specification or guideline. Feeds directly into Working Group development. How the SCI specification went from concept to ISO certification (ISO/IEC 21031:2024) in under 3 years.",
+        featured: true,
+      },
+      {
+        icon: "/assets/shape-icon-2.svg",
+        title: "Public",
+        description: "Open to non-GSF members by invitation from a convening member. Exploratory. Produces a white paper or consensus statement. Goes to the GSF Steering Committee to assess whether further investment is warranted.",
+      },
+      {
+        icon: "/assets/shape-icon-3.svg",
+        title: "Open",
+        description: "Available by agreement with the GSF Steering Committee to established government bodies, regulatory authorities, and recognised policy institutions where open participation serves a clear public interest. Not open to all by default.",
+        linkText: "Get in touch →",
+        linkHref: "/membership/enquire/",
+      },
+    ]}
+  />
+
+  <!-- 5. How It Works -->
   <VerticalPipeline
     heading="From question to *validated answer*"
     badge="THE PROCESS"
-    bgClass="bg-white"
+    bgClass="bg-accent-lightest-2"
     steps={[
       {
         name: "Define the question",
@@ -206,33 +227,32 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     ]}
   />
 
-  <!-- 5. What Harmony Does -->
+  <!-- 6. The Problem (moved after How It Works) -->
   <FeatureGrid
-    heading="Harmony: *AI-assisted consensus* built on human accountability"
-    body="Think of Harmony as an intelligent facilitator that never sleeps, never forgets what someone said, and can hold the perspectives of hundreds of people simultaneously. It does the boring parts so humans can focus on the hard parts."
+    heading="Why consensus at scale *breaks down*"
+    body="The traditional multi-stakeholder meeting isn't broken by accident. It's structurally biased against the quiet, the remote, and the outvoted."
     columns={3}
-    variant="bordered"
-    bgClass="bg-accent-lightest-2"
+    bgClass="bg-white"
     features={[
       {
-        icon: "/assets/dive-icon-1.svg",
-        title: "Human-in-the-loop at every stage",
-        description: "AI reads, synthesises, and surfaces patterns. Humans rate candidates, validate outputs, and cast every vote. The AI is a lens, not a judge — it cannot make decisions, cast votes, or determine outcomes.",
+        icon: "/assets/shape-icon-1.svg",
+        title: "Competing organisations, competing interests",
+        description: "Competitors around the same table don't freely share. The loudest voice dominates. Minority views get drowned out — and conformity pressure shapes what people say before they even speak.",
       },
       {
-        icon: "/assets/dive-icon-2.svg",
-        title: "Cryptographic inclusion proofs",
-        description: "Every response is hashed into a Merkle tree. After synthesis, you can receive a mathematical proof that your exact response was included. If it had been altered or excluded, the proof would not validate.",
+        icon: "/assets/shape-icon-2.svg",
+        title: "Time zones and language barriers",
+        description: "Synchronous meetings always disadvantage someone. Real-time discussions reward fluency over insight. Participants who aren't native speakers of the meeting language are structurally sidelined.",
       },
       {
-        icon: "/assets/dive-icon-3.svg",
-        title: "Full auditability",
-        description: "The chain from individual submission to published output is transparent and logged. Every action — responses received, syntheses generated, votes cast — is timestamped and auditable.",
+        icon: "/assets/shape-icon-3.svg",
+        title: "Slow by design",
+        description: "Traditional multi-stakeholder processes can take years. By the time you reach consensus, the world has moved on. The process optimises for procedure, not outcomes.",
       },
     ]}
   />
 
-  <!-- 6. Active Assemblies -->
+  <!-- 7. Active Assemblies -->
   {active.length > 0 && (
     <section id="active" class="py-12 md:py-16 bg-white">
       <div class="container">
@@ -306,53 +326,11 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     </section>
   )}
 
-  <!-- 7. Assembly Types -->
-  <FeatureGrid
-    heading="Three types of Assembly"
-    body="The type determines who participates and what the output feeds into."
-    columns={3}
-    bgClass="bg-accent-lightest-2"
-    features={[
-      {
-        icon: "/assets/shape-icon-1.svg",
-        title: "Private",
-        description: "GSF members only. Produces the baseline for a specification or guideline. Feeds directly into Working Group development. How the SCI specification went from concept to ISO certification (ISO/IEC 21031:2024) in under 3 years.",
-        featured: true,
-      },
-      {
-        icon: "/assets/shape-icon-2.svg",
-        title: "Public",
-        description: "Open to non-GSF members by invitation from a convening member. Exploratory. Produces a white paper or consensus statement. Goes to the GSF Steering Committee to assess whether further investment is warranted.",
-      },
-      {
-        icon: "/assets/shape-icon-3.svg",
-        title: "Open",
-        description: "Accessible to all. Used for broad industry engagement and community input. Outputs are published openly and attributed to participating organisations.",
-      },
-    ]}
-  />
-
-  <!-- 8. Track Record -->
-  {completed.length > 0 && (
-    <StatsGrid
-      heading="The Track"
-      headingAccent="Record"
-      body="Every Assembly started with a question that no single organisation could answer alone."
-      bgClass="bg-white"
-      stats={[
-        { value: String(completed.length), label: "Assemblies completed" },
-        ...(totalParticipants > 0 ? [{ value: `${totalParticipants}+`, label: "Total participants" }] : []),
-        { value: "Under 3 yrs", label: "SCI concept to ISO certification" },
-      ]}
-      cards={trackRecordCards}
-    />
-  )}
-
-  <!-- 9. Who Gets Access -->
+  <!-- 8. Who Gets Access -->
   <FeatureGrid
     heading="Who can *participate and convene*"
     columns={2}
-    bgClass={completed.length > 0 ? "bg-accent-lightest-2" : "bg-white"}
+    bgClass="bg-accent-lightest-2"
     features={[
       {
         icon: "/assets/dive-icon-1.svg",
