@@ -149,7 +149,7 @@ If the assembly has a `workingGroup` relation (resolved from Notion PWCIs), a "G
 |--------|-------|
 | Create new assembly | Add to Notion Assemblies DB |
 | Open/close applications | Change `Status` in Notion |
-| Add details content | Add content below a "Details" heading in the Notion page body |
+| Add details content | Add content directly to the Notion page body |
 | Set report URL | Set `Report` URL field in Notion |
 | Change visibility | Set `Visibility` field in Notion |
 | Update FAQ answers | Edit the inline array in `src/pages/assemblies/index.astro` section 9 |

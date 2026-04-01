@@ -958,38 +958,20 @@ async function fetchAssemblies() {
       }
     }
 
-    // Fetch page body — look for a "Details" heading, extract content below it
+    // Fetch the full page body and convert to HTML
     let detailsHtml = null;
     try {
-      const blocksResp = await notion.blocks.children.list({ block_id: page.id, page_size: 100 });
-      const blocks = blocksResp.results;
+      const blocks = [];
+      let cursor;
+      do {
+        const resp = await notion.blocks.children.list({ block_id: page.id, page_size: 100, start_cursor: cursor });
+        blocks.push(...resp.results);
+        cursor = resp.has_more ? resp.next_cursor : undefined;
+      } while (cursor);
 
-      // Find the "Details" heading
-      let detailsStart = -1;
-      for (let i = 0; i < blocks.length; i++) {
-        const b = blocks[i];
-        if (b.type === "heading_1" || b.type === "heading_2" || b.type === "heading_3") {
-          const text = richText(b[b.type]?.rich_text).toLowerCase();
-          if (text.includes("detail")) {
-            detailsStart = i + 1;
-            break;
-          }
-        }
-      }
-
-      if (detailsStart >= 0) {
-        // Collect blocks until next heading or end
-        const detailBlocks = [];
-        const detailBlockRefs = [];
-        for (let i = detailsStart; i < blocks.length; i++) {
-          const b = blocks[i];
-          if (b.type === "heading_1" || b.type === "heading_2" || b.type === "heading_3") break;
-          detailBlocks.push(blockToHtml(b));
-          detailBlockRefs.push(b);
-        }
-        const html = wrapListItems(detailBlocks, detailBlockRefs);
-        if (html.trim()) detailsHtml = html;
-      }
+      const htmlParts = blocks.map(blockToHtml);
+      const html = wrapListItems(htmlParts, blocks);
+      if (html.trim()) detailsHtml = html;
     } catch (err) {
       console.warn(`  WARN: Could not fetch blocks for assembly "${name}": ${err.message}`);
     }
