@@ -71,7 +71,7 @@ Beyond the framework, the paper covers cross-functional responsibilities—from 
 
 This is the first paper in the _Software Carbon Intensity Standard in Policy_ series, published by GSF's Software Standards Working Group, mapping the SCI standard to regulatory frameworks worldwide.
 
-Paper two maps SCI to the EU AI Act, showing how the standard applies to organizations deploying or procuring AI systems under the Act's requirements.
+Paper two maps SCI for AI to the EU AI Act, showing how the standard applies to organizations deploying or procuring AI systems under the Act's requirements.
 
 As reporting deadlines approach, the series gives organizations a practical path from GSF's measurement standards to the data they need.
 
