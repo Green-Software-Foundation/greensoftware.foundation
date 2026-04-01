@@ -13,13 +13,13 @@ The index page has these sections in order:
 
 | Section | Component | Content type |
 |---------|-----------|--------------|
-| Hero | `Hero` | Static — "Fair decisions, fast." headline and body |
+| Hero | `Hero` | Static — "Ask a Question. Get the Industry's Answer." headline and body |
+| Upcoming Assemblies | Inline `<section id="active">` | **Dynamic** — from `assemblies.json` (only shown if active assemblies exist) |
 | What Harmony Does | `FeatureGrid` (3 cols, bordered) | Static — 3 accountability features |
 | What is an Assembly | `TextWithImage` | Static — explanation + image |
 | Assembly Types | `FeatureGrid` (3 cols, cards) | Static — Private / Public / Open (Open has CTA to enquiry form) |
 | How It Works | `VerticalPipeline` | Static — 6-step Harmony process |
 | The Problem | `FeatureGrid` (3 cols, cards) | Static — 3 barriers to consensus |
-| Upcoming Assemblies | Inline `<section id="active">` | **Dynamic** — from `assemblies.json` |
 | Who Gets Access | `FeatureGrid` (2 cols, cards) | Static — 4 access tiers |
 | Completed Assemblies | Inline `<section>` | **Dynamic** — from `assemblies.json` (only shown if completed exist) |
 | FAQ | Inline `<section>` with `<details>` accordion | Static — 10 questions |
@@ -152,7 +152,7 @@ If the assembly has a `workingGroup` relation (resolved from Notion PWCIs), a "G
 | Add details content | Add content below a "Details" heading in the Notion page body |
 | Set report URL | Set `Report` URL field in Notion |
 | Change visibility | Set `Visibility` field in Notion |
-| Update FAQ answers | Edit the inline array in `src/pages/assemblies/index.astro` section 10 |
+| Update FAQ answers | Edit the inline array in `src/pages/assemblies/index.astro` section 9 |
 | Update static section text (harmony, what is, types, problem, access) | Edit the component props directly in `src/pages/assemblies/index.astro` |
 
 See [Notion doc](../notion.md) for the full list of Assemblies DB properties.
