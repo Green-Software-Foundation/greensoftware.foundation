@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import TextWithImage from "@/components/text-with-image.astro";
-import CTACard from "@/components/cta-card.astro";
+import VerticalPipeline from "@/components/vertical-pipeline.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
@@ -42,14 +42,14 @@ type Assembly = {
 
 const assemblies = assembliesData as Assembly[];
 
-// Visible statuses — exclude Backlog and Pending
+// Visible statuses: exclude Backlog and Pending
 const visible = assemblies.filter(a => a.status && a.status !== "Backlog" && a.status !== "Pending");
 
 // Split into active (open/upcoming/in-progress) and completed
 const activeStatuses = ["Apply now", "Register interest", "Upcoming", "In Progress"];
 const active = visible.filter(a => activeStatuses.includes(a.status));
 
-// Completed — most recent first (by endDate, then startDate)
+// Completed: most recent first (by endDate, then startDate)
 const completed = visible
   .filter(a => a.status === "Done")
   .sort((a, b) => {
@@ -57,6 +57,14 @@ const completed = visible
     const dateB = b.endDate || b.startDate || "";
     return dateB.localeCompare(dateA);
   });
+
+// Hero CTAs: only offer anchor link if active assemblies exist
+const heroCtas = [
+  { text: "Propose an Assembly", variant: "primary" as const, href: "/membership/enquire/" },
+  ...(active.length > 0
+    ? [{ text: "See active assemblies", variant: "outline" as const, href: "#active" }]
+    : []),
+];
 
 function formatDateRange(start: string | null, end: string | null): string {
   if (!start) return "";
@@ -87,7 +95,7 @@ function badgeColor(status: string): string {
   }
 }
 
-// Resolve the governing body label — prefer workingGroup, fall back to project
+// Resolve the governing body label: prefer workingGroup, fall back to project
 function governingBody(a: Assembly): { name: string; slug: string | null } | null {
   if (a.workingGroup) return { name: a.workingGroup, slug: null };
   if (a.project) return { name: a.project, slug: a.projectSlug };
@@ -95,7 +103,7 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
 }
 ---
 
-<Layout title="Assemblies — Green Software Foundation" description="Assemblies are dedicated workshops where experts collaborate on specific challenges, using AI-facilitated consensus to move from problem to solution.">
+<Layout title="Assemblies | Green Software Foundation" description="Assemblies use AI-facilitated consensus to answer hard industry questions at scale, across timezones, organisations, and languages, in weeks, not years.">
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"
@@ -107,20 +115,20 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     ctaHref="/membership/"
   />
 
+  <!-- 1. Hero -->
   <Hero
-    heading="Assemblies"
-    headingAccent="AI-facilitated consensus at scale"
-    body="Assemblies are dedicated workshops — public or member-only — where experts collaborate on a specific challenge. Using AI-facilitated consensus, we move from blank page to agreement in weeks, not years."
-    ctas={[
-      { text: "Our standards process", variant: "outline", href: "/standards/" },
-    ]}
+    heading="Ask a Question."
+    headingAccent="Get the Industry's Answer."
+    body="Getting consensus at scale, across organisations, time zones, and languages, is one of the hardest problems in standards-making. An Assembly brings the right people together around your question and uses AI-assisted consensus to produce a validated, citable answer everyone stands behind. No six-month committee. Typically 6 weeks."
+    ctas={heroCtas}
     imageSrc="/assets/assemblies-hero-illustration.svg"
     imageAlt="Assemblies illustration"
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- 2. Active Assemblies -->
   {active.length > 0 && (
-    <section class="py-12 md:py-16 bg-white">
+    <section id="active" class="py-12 md:py-16 bg-white">
       <div class="container">
         <div class="mx-auto max-w-3xl text-center">
           <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
@@ -192,47 +200,165 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     </section>
   )}
 
-  <!-- How Assemblies Work -->
-  <CTACard
-    heading="From problem to *ratified standard*"
-    body="Every assembly starts with a challenge that one organisation can't solve alone. We bring together experts from across the industry, give them structured questions, and use AI synthesis to accelerate consensus. Human review, iterative refinement, and explicit decision gates at every stage ensure quality — but at a pace traditional standards bodies can't match."
-    ctaText="Learn about our standards process →"
-    ctaHref="/standards/"
-    imageSrc="/assets/assemblies-process-illustration.svg"
-    imageAlt="Assembly process illustration"
-    variant="dark"
-  />
-
+  <!-- 3. What Harmony Does -->
   <FeatureGrid
-    heading="The assembly *lifecycle*"
-    columns={4}
-    compact
+    heading="Harmony: *AI-assisted consensus* built on human accountability"
+    body="At the centre of every Assembly is Harmony, GSF's AI-assisted consensus engine. Think of it as an intelligent facilitator that never sleeps, never forgets, and can hold the perspectives of hundreds of people simultaneously. The decisions it helps reach are provably fair."
+    columns={3}
+    variant="bordered"
+    bgClass="bg-white"
     features={[
       {
         icon: "/assets/dive-icon-1.svg",
-        title: "Analysis",
-        description: "Define the problem space, identify stakeholders, and scope the work.",
+        title: "Human-in-the-loop at every stage",
+        description: "AI reads, synthesises, and surfaces patterns. Humans rate candidates, validate outputs, and cast every vote. The AI is a lens, not a judge: it cannot make decisions, cast votes, or determine outcomes.",
       },
       {
         icon: "/assets/dive-icon-2.svg",
-        title: "Selection",
-        description: "Recruit participants. Applications are reviewed to ensure diverse, qualified representation.",
+        title: "Cryptographic inclusion proofs",
+        description: "Every response is hashed into a Merkle tree. After synthesis, you can receive a mathematical proof that your exact response was included. If it had been altered or excluded, the proof would not validate.",
       },
       {
         icon: "/assets/dive-icon-3.svg",
-        title: "Development",
-        description: "Structured sessions with AI-facilitated synthesis. Participants answer questions, review outputs, and iterate toward consensus.",
-      },
-      {
-        icon: "/assets/dive-icon-4.svg",
-        title: "Delivery",
-        description: "The assembly's output — a specification, framework, or decision — is ratified and published.",
+        title: "Full auditability",
+        description: "The chain from individual submission to published output is transparent and logged. Every action (responses received, syntheses generated, votes cast) is timestamped and auditable.",
       },
     ]}
   />
 
+  <!-- 4. What is an Assembly -->
+  <TextWithImage
+    heading="A structured process for getting a"
+    headingAccent="hard question answered together"
+    body="An Assembly is a time-boxed process for getting a group of experts to answer a hard question together. The question could be technical, strategic, or exploratory. The output is flexible: a consensus statement, white paper, set of recommendations, or foundation for a new standard. What stays consistent is the process."
+    imageSrc="/assets/assemblies-process-illustration.svg"
+    imageAlt="Assembly process illustration"
+    bgClass="bg-accent-lightest-2"
+  >
+    <p class="mt-4 text-base leading-relaxed text-primary-dark">
+      At the centre of every Assembly is <strong>Harmony</strong>, GSF's AI-assisted consensus engine, designed and built by Joseph Cook, GSF Head of Research. Harmony synthesises every contribution, surfaces patterns of agreement and disagreement, and asks participants to verify its work. AI handles synthesis; humans make every decision.
+    </p>
+  </TextWithImage>
+
+  <!-- 5. Assembly Types -->
+  <FeatureGrid
+    heading="Three types of Assembly"
+    body="The type determines who participates and what the output feeds into."
+    columns={3}
+    bgClass="bg-white"
+    features={[
+      {
+        icon: "/assets/shape-icon-1.svg",
+        title: "Private",
+        description: "GSF members only. Produces the baseline for a specification or guideline. Feeds directly into Working Group development. How the SCI specification went from concept to ISO certification (ISO/IEC 21031:2024) in under 3 years.",
+        featured: true,
+      },
+      {
+        icon: "/assets/shape-icon-2.svg",
+        title: "Public",
+        description: "Open to non-GSF members by invitation from a convening member. Exploratory. Produces a white paper or consensus statement. Goes to the GSF Steering Committee to assess whether further investment is warranted.",
+      },
+      {
+        icon: "/assets/shape-icon-3.svg",
+        title: "Open",
+        description: "Available by agreement with the GSF Steering Committee to established government bodies, regulatory authorities, and recognised policy institutions where open participation serves a clear public interest. Not open to all by default.",
+        linkText: "Get in touch →",
+        linkHref: "/membership/enquire/",
+      },
+    ]}
+  />
+
+  <!-- 6. How It Works -->
+  <VerticalPipeline
+    heading="From question to *validated answer*"
+    badge="THE PROCESS"
+    bgClass="bg-accent-lightest-2"
+    steps={[
+      {
+        name: "Define the question",
+        description: "Before anything starts: scope, rubric, and the core questions the group needs to answer are agreed. What exactly are we asking? What's in bounds, what's out? How will we know if the output is good?",
+      },
+      {
+        name: "Bring the right people together",
+        description: "The convening member invites participants: other members, non-members, academics, policymakers, or NGOs, whoever can best answer the question. The assembly is as broad or as focused as the question demands.",
+      },
+      {
+        name: "DISCOVER: What does everyone think?",
+        description: "Participants reply by email with their honest views. No meetings, no travel, no turn-taking. Harmony reads every response and produces an anonymous synthesis: themes, areas of agreement, areas of disagreement. Roughly 10 minutes every few days.",
+      },
+      {
+        name: "DELIBERATE: Which approach works best?",
+        description: "Harmony generates candidate positions, one optimised for the least-satisfied participant (minimax), one for mean satisfaction. Participants rate each 0–10. A position isn't viable until even the lowest rating reaches at least 5/10. Rounds continue until a viable candidate emerges.",
+      },
+      {
+        name: "DECIDE: All aboard?",
+        description: "The strongest candidate goes to a final vote: ENDORSE (active support), CONSENT (can live with it), or OBJECT (blocks consensus). A single OBJECT halts the process until the objection is resolved. This is not majority rule: one person's concern can stop the whole process.",
+      },
+      {
+        name: "Output is published",
+        description: "The validated document (consensus statement, white paper, design document) is published and attributed to participating organisations, available for reference, citation, and action.",
+      },
+    ]}
+  />
+
+  <!-- 7. The Problem -->
+  <FeatureGrid
+    heading="Why consensus at scale *breaks down*"
+    body="The traditional multi-stakeholder meeting isn't broken by accident. It's structurally biased against the quiet, the remote, and the outvoted."
+    columns={3}
+    bgClass="bg-white"
+    features={[
+      {
+        icon: "/assets/shape-icon-1.svg",
+        title: "Competing organisations, competing interests",
+        description: "Competitors around the same table don't freely share. The loudest voice dominates. Minority views get drowned out, and conformity pressure shapes what people say before they even speak.",
+      },
+      {
+        icon: "/assets/shape-icon-2.svg",
+        title: "Time zones and language barriers",
+        description: "Synchronous meetings always disadvantage someone. Real-time discussions reward fluency over insight. Participants who aren't native speakers of the meeting language are structurally sidelined.",
+      },
+      {
+        icon: "/assets/shape-icon-3.svg",
+        title: "Slow by design",
+        description: "Traditional multi-stakeholder processes can take years. By the time you reach consensus, the world has moved on. The process optimises for procedure, not outcomes.",
+      },
+    ]}
+  />
+
+  <!-- 8. Who Gets Access -->
+  <FeatureGrid
+    heading="Who can *participate and convene*"
+    columns={2}
+    bgClass="bg-accent-lightest-2"
+    features={[
+      {
+        icon: "/assets/dive-icon-1.svg",
+        title: "GSF Members",
+        description: "Can participate in all Assemblies and, critically, can convene their own. Define the question, invite whoever you need, and commission a validated output the industry trusts.",
+        featured: true,
+      },
+      {
+        icon: "/assets/dive-icon-2.svg",
+        title: "Government bodies & NGOs",
+        description: "Select public-interest bodies are offered access to Harmony and Public Assemblies on a case-by-case basis. The outputs shaping sustainable technology should be informed by public-interest voices.",
+      },
+      {
+        icon: "/assets/dive-icon-3.svg",
+        title: "Non-members",
+        description: "Can be invited to participate in Public Assemblies by the convening member. Participation is by invitation only. Public Assembly outputs are published openly.",
+      },
+      {
+        icon: "/assets/dive-icon-4.svg",
+        title: "Internal specification Assemblies",
+        description: "Assemblies that feed directly into GSF specification development are exclusively available to Steering and General members. The hard alignment work is done before formal Working Group development begins.",
+      },
+    ]}
+  />
+
+  <!-- 9. Completed Assemblies -->
   {completed.length > 0 && (
-    <section class="py-12 md:py-16">
+    <section class="py-12 md:py-16 bg-white">
       <div class="container">
         <div class="mx-auto max-w-3xl text-center">
           <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
@@ -291,9 +417,77 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
     </section>
   )}
 
+  <!-- 10. FAQ -->
+  <section class="py-16 md:py-20 bg-accent-lightest-2">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl">
+          Frequently asked <span class="text-primary">questions</span>
+        </h2>
+        <div class="mt-8 divide-y divide-primary-lighter">
+          {[
+            {
+              q: "Does Harmony make decisions?",
+              a: "No. Harmony synthesises: it produces a summary of what the group said, identifies themes, and drafts candidate positions. It does not make decisions, cast votes, or determine outcomes. Every substantive decision is made by human participants.",
+            },
+            {
+              q: "Doesn't AI remove the human connection?",
+              a: "Harmony replaces the logistics of deliberation (scheduling, minute-taking, circulating summaries), not the deliberation itself. Research on group dynamics shows that in-person discussions amplify dominance effects, conformity pressure, and status bias: the most articulate speaker wins, not the best idea. An asynchronous, anonymised process neutralises these. Every participant gets equal space. Nothing prevents running Harmony alongside in-person sessions if social connection is also a goal.",
+            },
+            {
+              q: "How do I know my view was accurately represented?",
+              a: "Every response is cryptographically hashed and committed to a Merkle tree. After synthesis, you can receive an inclusion proof, a short piece of data that mathematically proves your exact response was included. If it had been altered or excluded, the proof would not validate. You can inspect the plaintext submitted to the model and verify it through a public web app.",
+            },
+            {
+              q: "What if the AI misrepresents my view?",
+              a: "The DECIDE phase gives every participant a veto. A single OBJECT vote blocks consensus entirely and forces the group to address your specific concern before the process can move forward. Additionally, the minimax metric means a synthesis that ignored someone's concerns would produce a candidate that person rates poorly, flagging it as non-viable regardless of what the AI did.",
+            },
+            {
+              q: "How does the consensus model work?",
+              a: "GSF uses a three-tier model: ENDORSE (full agreement), CONSENT (agreement with possible reservations, also the default if you don't respond), and OBJECT (formal veto that halts the process until the objection is resolved). Any participant can object regardless of their organisation's size or seniority.",
+            },
+            {
+              q: "What's the difference between an Assembly and a Working Group?",
+              a: "An Assembly is fast, time-boxed, and question-driven: it produces a defined output in weeks. A Working Group is the ongoing governance structure that, if appropriate, takes an Assembly's output and develops it into a formal specification through the full standards lifecycle. Not every Assembly leads to a Working Group. Many produce standalone research, recommendations, or policy positions.",
+            },
+            {
+              q: "How long does an Assembly take?",
+              a: "A standard asynchronous Assembly runs approximately 6 weeks. Compressed formats can run in 2 days when participants are co-located. Internal specification Assemblies typically take 8–12 weeks.",
+            },
+            {
+              q: "Can non-members participate?",
+              a: "Yes. The convening member defines the participant list. Public Assemblies are specifically designed to bring in external subject matter experts, academics, policymakers, and practitioners from non-member organisations.",
+            },
+            {
+              q: "What about energy use and carbon?",
+              a: "LLM inference for a complete assembly uses roughly 0.01–0.1 kWh. A single 1-hour video call with 10 participants uses ~0.3–1.5 kWh. Harmony also displaces travel. Token usage is tracked per assembly and available as a JSON report at conclusion, so you can calculate actual emissions rather than estimates.",
+            },
+            {
+              q: "Can my organisation propose an Assembly?",
+              a: "Yes, if you're a GSF member. The first step is defining the question and whether it's suited to a Public Assembly (broad input, published output) or a Private Assembly (members-only, specification-track). Get in touch to start the conversation.",
+            },
+          ].map(({ q, a }) => (
+            <details class="group py-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold text-primary-dark marker:hidden [&::-webkit-details-marker]:hidden">
+                {q}
+                <span class="shrink-0 transition-transform group-open:rotate-180">
+                  <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 text-sm leading-relaxed text-gray-darker">{a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CTA Banner -->
   <CTABanner
-    heading="Want to propose a new assembly?"
-    body="Members can bring their toughest challenges to the foundation. We'll help you find collaborators and build a solution."
+    heading="Want to convene an Assembly?"
+    body="GSF members can propose an Assembly, define the question, and invite whoever they need. Start with a conversation."
     ctaText="Discuss membership"
     ctaHref="/membership/"
   />
