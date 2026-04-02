@@ -1,11 +1,17 @@
 ---
-title: "SCI for AI Specification Ratified: Standard for Measuring AI Emissions Across the Lifecycle "
+title: 'SCI for AI Specification Ratified: Standard for Measuring AI Emissions Across the Lifecycle'
+teaserText: A standardized specification extending the ISO Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle.
+date: 2025-12-17
 published: true
-date: "2025-12-17"
-summary: "We're excited to announce the ratification of the SCI for AI specification, marking a major step in making the carbon footprint of AI systems transparent, comparable, and actionable. "
-teaserText: "A standardized specification extending the ISO Software Carbon Intensity methodology to measure the carbon emissions of AI systems throughout their lifecycle. "
-mainImage: "./main.png"
-tags: ["sci-ai", "standards"]
+summary: We're excited to announce the ratification of the SCI for AI specification, marking a major step in making the carbon footprint of AI systems transparent, comparable, and actionable.
+mainImage: ./main.png
+mainImageAlt: ''
+featured: true
+tags:
+  - sci-ai
+  - standards
+originBlogName: ''
+publishedOriginUrl: ''
 ---
 
 Since the publication of the [Software Carbon Intensity (SCI) specification](https://sci.greensoftware.foundation/), practitioners and organizations worldwide have consistently used it to measure and report emissions across their systems. But as AI entered mainstream software development, one question has remained unanswered: How do we reliably measure its carbon footprint?
