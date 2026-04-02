@@ -1,13 +1,14 @@
 ---
-title: "Fostering Carbon-Aware Operating Strategies - Meet Jared Temanson of NREL"
+title: Fostering Carbon-Aware Operating Strategies - Meet Jared Temanson of NREL
+teaserText: “Green Software is a necessary pathway to a sustainable and prosperous future.”
+date: 2024-05-07
 published: true
-date: "2024-05-07"
-summary: "With a green energy mission and supercomputing capacity of 44 petaflops, NREL is predetermined to be at the forefront of the green software movement. Jared Temanson reveals more."
-teaserText: "“Green Software is a necessary pathway to a sustainable and prosperous future.”"
-mainImage: "./main.jpg"
-featured: true
+summary: With a green energy mission and supercomputing capacity of 44 petaflops, NREL is predetermined to be at the forefront of the green software movement. Jared Temanson reveals more.
+mainImage: ./main.jpg
+mainImageAlt: ''
+featured: false
 organizations:
-  - "Renewable Energy Laboratory (NREL)"
+  - Renewable Energy Laboratory (NREL)
 ---
 
 Jared started his career at NREL in 2009. He worked for several clean tech software startups from 2017-2023, before returning to NREL. He now runs the [Joint Institute for Strategic Energy Analysis’s (JISEA)](https://www.jisea.org/) Catalyzer Initiative. The program focuses on planning and assessment activities around novel, cross-cutting research areas of emerging critical importance and develops new capabilities to support those topics.
@@ -42,4 +43,4 @@ To effectively leverage the partnership with the Green Software Foundation, we e
 
 We see green software as key to satisfying society’s insatiable appetite for computing and digital services in a way that is sustainable, resilient, and just. We believe efficiency and sustainability don’t end at the building envelope or HVAC system. Efficiency and sustainability demand novel operational approaches and sophisticated application design, development, and deployment.
 
-The challenge is breaking down barriers in this hyper-competitive space and battling the inertia of existing business models. We need more and better science around green computing, especially as it pertains to AI and the tradeoff between performance and energy needs in different contexts. Fortunately, there is a strong demand for sustainable solutions across the board! 
+The challenge is breaking down barriers in this hyper-competitive space and battling the inertia of existing business models. We need more and better science around green computing, especially as it pertains to AI and the tradeoff between performance and energy needs in different contexts. Fortunately, there is a strong demand for sustainable solutions across the board!
