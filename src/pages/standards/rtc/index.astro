@@ -190,6 +190,89 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     ]}
   />
 
+  <!-- Conformance Levels -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container max-w-5xl">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-3xl font-extrabold md:text-4xl">Mandatory Metadata <span class="text-primary font-bold">Parameters</span></h2>
+        <p class="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          The specification defines two conformance levels for cloud providers implementing the Cloud Region Metadata Table. Each level specifies the mandatory parameters that must be provided for every cloud region.
+        </p>
+      </div>
+
+      <!-- Level 1 -->
+      <div class="mb-10 md:mb-14">
+        <h3 class="text-2xl font-extrabold mb-2">Level 1 — Basic Conformance</h3>
+        <p class="text-muted-foreground mb-6">
+          Cloud providers claiming Level 1 conformance must provide these eight mandatory parameters for each cloud region, covering essential identifiers, geographic data, efficiency metrics, and carbon intensity.
+        </p>
+        <div class="overflow-x-auto rounded-2xl border border-accent-lighter">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-accent-lightest-2">
+              <tr>
+                <th class="px-4 py-3 font-extrabold">Parameter</th>
+                <th class="px-4 py-3 font-extrabold">Unit</th>
+                <th class="px-4 py-3 font-extrabold">Update Frequency</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-accent-lighter">
+              <tr><td class="px-4 py-3 font-semibold">year</td><td class="px-4 py-3">numeric</td><td class="px-4 py-3">Annual</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">cloud-provider</td><td class="px-4 py-3">string</td><td class="px-4 py-3">Static</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">cloud-region</td><td class="px-4 py-3">string</td><td class="px-4 py-3">Static</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">location</td><td class="px-4 py-3">string</td><td class="px-4 py-3">Static</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">geolocation</td><td class="px-4 py-3">decimal degrees</td><td class="px-4 py-3">Static</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">power-usage-effectiveness</td><td class="px-4 py-3">ratio</td><td class="px-4 py-3">Annual</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">grid-carbon-intensity</td><td class="px-4 py-3">gCO₂eq/kWh</td><td class="px-4 py-3">Annual</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">provider-cfe-annual</td><td class="px-4 py-3">proportion</td><td class="px-4 py-3">Annual</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-sm text-muted-foreground">
+          <a href="https://github.com/Green-Software-Foundation/real-time-cloud/blob/main/Cloud_Region_Metadata_specification.md#a1-level-1-conformance-requirements" class="text-primary underline" target="_blank" rel="noopener noreferrer">View Level 1 requirements in the specification →</a>
+        </p>
+      </div>
+
+      <!-- Level 2 -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-2">Level 2 — Advanced Conformance</h3>
+        <p class="text-muted-foreground mb-6">
+          Cloud providers claiming Level 2 conformance must provide all Level 1 parameters plus the following additional parameters specified in Table 1 of the specification, enabling advanced carbon-aware computing and regulatory compliance.
+        </p>
+        <div class="overflow-x-auto rounded-2xl border border-accent-lighter">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-accent-lightest-2">
+              <tr>
+                <th class="px-4 py-3 font-extrabold">Parameter</th>
+                <th class="px-4 py-3 font-extrabold">Unit</th>
+                <th class="px-4 py-3 font-extrabold">Description</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-accent-lighter">
+              <tr><td class="px-4 py-3 font-semibold">cfe-region</td><td class="px-4 py-3">string</td><td class="px-4 py-3">Carbon-free energy grid region name as reported by the provider</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">em-zone-id</td><td class="px-4 py-3">string</td><td class="px-4 py-3">Electricity Maps zone identifier for real-time lookups</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">wt-region-id</td><td class="px-4 py-3">string</td><td class="px-4 py-3">WattTime region identifier for real-time lookups</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">provider-cfe-hourly</td><td class="px-4 py-3">proportion</td><td class="px-4 py-3">Carbon-free energy proportion, hourly weighted through the year</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">water-usage-effectiveness</td><td class="px-4 py-3">L/kWh</td><td class="px-4 py-3">Water usage effectiveness for the region</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">provider-carbon-intensity-market-annual</td><td class="px-4 py-3">gCO₂eq/kWh</td><td class="px-4 py-3">Scope 2 market-based carbon intensity including offsets</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">provider-carbon-intensity-average-consumption-hourly</td><td class="px-4 py-3">gCO₂eq/kWh</td><td class="px-4 py-3">Consumption-based carbon intensity, hourly weighted (24×7)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">grid-carbon-intensity-average-consumption-annual</td><td class="px-4 py-3">gCO₂eq/kWh</td><td class="px-4 py-3">Electricity Maps consumption-based annual average</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">grid-carbon-intensity-marginal-consumption-annual</td><td class="px-4 py-3">gCO₂eq/kWh</td><td class="px-4 py-3">WattTime marginal carbon intensity annual average</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">total-ICT-energy-consumption-annual</td><td class="px-4 py-3">kWh</td><td class="px-4 py-3">Total energy for all data centres in cloud region (EED)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">total-water-input</td><td class="px-4 py-3">L</td><td class="px-4 py-3">Total water for all data centres in cloud region (EED)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">renewable-energy-consumption</td><td class="px-4 py-3">kWh</td><td class="px-4 py-3">Total renewable energy (EED)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">renewable-energy-consumption-goe</td><td class="px-4 py-3">kWh</td><td class="px-4 py-3">Renewable energy from Guarantees of Origin / RECs (EED)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">renewable-energy-consumption-ppa</td><td class="px-4 py-3">kWh</td><td class="px-4 py-3">Renewable energy from power purchase agreements (EED)</td></tr>
+              <tr><td class="px-4 py-3 font-semibold">renewable-energy-consumption-onsite</td><td class="px-4 py-3">kWh</td><td class="px-4 py-3">Renewable energy from on-site generation (EED)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-sm text-muted-foreground">
+          <a href="https://github.com/Green-Software-Foundation/real-time-cloud/blob/main/Cloud_Region_Metadata_specification.md#a2-level-2-conformance-requirements" class="text-primary underline" target="_blank" rel="noopener noreferrer">View Level 2 requirements in the specification →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Mission Card: The Data Gap -->
   <section class="py-8 md:py-12 lg:py-16">
     <div class="container">
