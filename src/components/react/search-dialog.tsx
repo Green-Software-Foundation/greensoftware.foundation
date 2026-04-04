@@ -5,6 +5,7 @@ import {
   FileText,
   BookOpen,
   Newspaper,
+  ScrollText,
   Loader2,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -35,12 +36,14 @@ interface PagefindAPI {
 const contentTypeIcons: Record<string, typeof FileText> = {
   article: Newspaper,
   story: BookOpen,
+  research: ScrollText,
   page: FileText,
 };
 
 function getContentType(url: string): string {
   if (url.startsWith("/articles/")) return "article";
   if (url.startsWith("/stories/")) return "story";
+  if (url.startsWith("/policy/research/")) return "research";
   return "page";
 }
 
@@ -174,7 +177,7 @@ export default function SearchDialog() {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search articles, stories, and pages..."
+              placeholder="Search articles, research, stories, and more..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="flex-1 bg-transparent text-base text-primary-dark outline-none placeholder:text-gray-dark"
@@ -266,7 +269,7 @@ export default function SearchDialog() {
 
           <Dialog.Title className="sr-only">Search</Dialog.Title>
           <Dialog.Description className="sr-only">
-            Search articles, stories, and pages on the Green Software Foundation
+            Search articles, research, stories, and pages on the Green Software Foundation
             website.
           </Dialog.Description>
         </Dialog.Content>
