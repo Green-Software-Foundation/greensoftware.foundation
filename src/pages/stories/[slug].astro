@@ -163,6 +163,83 @@ const resolvedContributors = contributors.map((c: any) => {
     </div>
   </div>
 
+  <!-- ── SCI Formula (sci-measurement only) ──────────────────────────────── -->
+  {story.id === "sci-measurement" && (
+    <div class="bg-accent-lighter/30">
+      <div class="container py-12 md:py-16 lg:py-20">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
+            A New Way to Think About Software
+          </h2>
+          <p class="text-lg md:text-xl">
+            The SCI score combines three essential factors that determine software's carbon footprint: the energy your software consumes (E), the carbon intensity of that energy based on location and time (I), and the embodied emissions from manufacturing the hardware (M). These are calculated per functional unit (R) — creating a rate that reveals true efficiency.
+          </p>
+          <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
+            <p class="font-bold text-primary font-mono text-3xl md:text-4xl lg:text-5xl">
+              SCI = (E &times; I + M) per R
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-xl border bg-white p-5">
+              <h3 class="font-bold text-primary text-lg">E — Energy</h3>
+              <p class="mt-2 text-sm text-gray-darker">Energy consumed by your software across all infrastructure — servers, storage, networking, and end-user devices.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-5">
+              <h3 class="font-bold text-primary text-lg">I — Carbon Intensity</h3>
+              <p class="mt-2 text-sm text-gray-darker">The carbon intensity of the energy used, varying by location and time — enabling carbon-aware scheduling and deployment.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-5">
+              <h3 class="font-bold text-primary text-lg">M — Embodied</h3>
+              <p class="mt-2 text-sm text-gray-darker">Embodied emissions from manufacturing the hardware your software runs on, amortised over its expected lifespan.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-5">
+              <h3 class="font-bold text-primary text-lg">R — Functional Unit</h3>
+              <p class="mt-2 text-sm text-gray-darker">A unit of work meaningful to your software — per user, per transaction, per API call — that turns totals into a rate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- ── SOFT Framework (soft-framework only) ─────────────────────────────── -->
+  {story.id === "soft-framework" && (
+    <div class="bg-accent-lightest-2">
+      <div class="container py-12 md:py-16 lg:py-20">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl">
+            The <strong class="font-bold text-primary">SOFT</strong> Framework
+          </h2>
+          <p class="mb-10 text-lg md:text-xl md:mb-12">
+            Four pillars. One transformation. Unlimited potential.
+          </p>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-xl border bg-white p-6 text-center">
+              <img src="/assets/standards/soft/strategy.svg" alt="" class="mx-auto mb-4 h-12 w-12" aria-hidden="true" />
+              <h3 class="mb-2 font-bold text-primary text-lg">Strategy</h3>
+              <p class="text-sm text-gray-darker">Strategic planning and vision alignment for transformative business outcomes.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-6 text-center">
+              <img src="/assets/standards/soft/implementation.svg" alt="" class="mx-auto mb-4 h-12 w-12" aria-hidden="true" />
+              <h3 class="mb-2 font-bold text-primary text-lg">Implementation</h3>
+              <p class="text-sm text-gray-darker">Seamless execution and deployment of solutions with precision and expertise.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-6 text-center">
+              <img src="/assets/standards/soft/operational.svg" alt="" class="mx-auto mb-4 h-12 w-12" aria-hidden="true" />
+              <h3 class="mb-2 font-bold text-primary text-lg">Operational</h3>
+              <p class="text-sm text-gray-darker">Streamlined processes and optimised workflows for maximum efficiency.</p>
+            </div>
+            <div class="rounded-xl border bg-white p-6 text-center">
+              <img src="/assets/standards/soft/compliance.svg" alt="" class="mx-auto mb-4 h-12 w-12" aria-hidden="true" />
+              <h3 class="mb-2 font-bold text-primary text-lg">Compliance and Regulations</h3>
+              <p class="text-sm text-gray-darker">Robust compliance frameworks and security measures to protect your business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
   <!-- ── The Journey ──────────────────────────────────────────────────────── -->
   {timeline.length > 0 && (
     <div class="bg-accent-lightest-2">
