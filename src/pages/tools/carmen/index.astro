@@ -15,7 +15,6 @@ import Testimonial from "@/components/testimonial.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import Timeline from "@/components/timeline.astro";
 import TeamGrid from "@/components/team-grid.astro";
-import CardGrid from "@/components/card-grid.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
@@ -69,7 +68,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     body="Most organisations can estimate their total carbon footprint, but can't answer a harder question: which applications are responsible? Carmen bridges that gap — deployable across your Kubernetes clusters and cloud services, it delivers per-application SCI measurements that are transparent, auditable, and reproducible without requiring any custom implementation."
     ctas={[
       { text: "Get Started", variant: "primary", href: "https://github.com/Green-Software-Foundation/if-carmen" },
-      { text: "Join the Community", variant: "outline", href: "https://movement.greensoftware.foundation" },
+      { text: "Register for Webinar", variant: "outline", href: "https://zoom.us/webinar/register/WN_E2YV9ntmT7WdYQY70frx_Q#/registration" },
     ]}
     imageSrc="/assets/tools/carmen/hero.png"
     imageAlt="Carmen — Carbon Measurement Engine"
@@ -167,7 +166,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Origin Story -->
   <SplitCards
     heading="From Amadeus to *Open Source*"
-    body="In 2022, Amadeus faced a measurement challenge that many large organisations were quietly struggling with: how do you measure carbon emissions across hundreds of applications at the scale of three billion flight search requests per day? Led by Florent Morel, the Amadeus engineering team built Carmen on top of Impact Framework. By late 2023, the first dashboards were live in production. In December 2025, Carmen was open-sourced under Apache 2.0. On January 31, 2026, Amadeus transferred the repository to the Green Software Foundation — making Carmen freely available to any organisation worldwide."
+    body="In 2022, Amadeus faced a measurement challenge that many large organisations were quietly struggling with: how do you measure carbon emissions across hundreds of applications at the scale of three billion flight search requests per day? Led by Florent Morel, the Amadeus engineering team built Carmen on top of Impact Framework. By late 2023, the first dashboards were live in production. In December 2025, Carmen was open-sourced under MIT. On January 31, 2026, Amadeus transferred the repository to the Green Software Foundation — making Carmen freely available to any organisation worldwide."
     iconSrc="/assets/standards/rtc/leading-icon.svg"
     decorSrc="/assets/standards/rtc/leading-decor.svg"
     ctaText="Read the GSF announcement"
@@ -232,7 +231,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     items={[
       { date: "2022", description: "Amadeus engineering team begins building Carmen to measure emissions across hundreds of applications", completed: true, start: "2022-01-01", end: "2022-12-31" },
       { date: "Late 2023", description: "First Carmen dashboards live in production at Amadeus", completed: true, start: "2023-10-01", end: "2023-12-31" },
-      { date: "December 2025", description: "Carmen open-sourced under Apache 2.0", completed: true, start: "2025-12-01", end: "2025-12-31" },
+      { date: "December 2025", description: "Carmen open-sourced under MIT", completed: true, start: "2025-12-01", end: "2025-12-31" },
       { date: "January 2026", description: "Repository transferred to GSF; Florent Morel and Robin Castellon continue as project leads", completed: true, start: "2026-01-01", end: "2026-01-31" },
       { date: "April 2026", description: "Public launch webinar — Carmen available to organisations worldwide", current: true, start: "2026-04-01", end: "2026-04-30" },
     ]}
@@ -255,46 +254,6 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
           { fullName: "Joseph Cook", role: "GSF Project Manager" },
         ]
     )}
-    bgClass="bg-accent-lightest-2"
-  />
-
-  <!-- Get Involved -->
-  <CardGrid
-    heading="Get Involved"
-    body="Join the community building practical, open carbon measurement tools"
-    columns={4}
-    align="left"
-    decorSrc="/assets/standards/rtc/shape-decor.svg"
-    cards={[
-      {
-        icon: "/assets/standards/rtc/shape-icon-1.svg",
-        title: "Try Carmen",
-        description: "Deploy Carmen in your Kubernetes environment using the quickstart guide",
-        ctaText: "Get Started",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-2.svg",
-        title: "Join the Community",
-        description: "Connect with other adopters, share your experience, and get help on the Movement Platform",
-        ctaText: "Join Now",
-        ctaHref: "https://movement.greensoftware.foundation",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-3.svg",
-        title: "Contribute",
-        description: "Pick up a good first issue on GitHub and help improve Carmen for everyone",
-        ctaText: "Browse Issues",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22",
-      },
-      {
-        icon: "/assets/standards/rtc/shape-icon-4.svg",
-        title: "Become a GSF Member",
-        description: "Shape the future of green software measurement alongside industry leaders",
-        ctaText: "Learn More",
-        ctaHref: "/membership/",
-      },
-    ]}
     bgClass="bg-accent-lightest-2"
   />
 
