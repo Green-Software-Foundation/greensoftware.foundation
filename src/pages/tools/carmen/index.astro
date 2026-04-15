@@ -1,0 +1,320 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import CTACard from "@/components/cta-card.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import SplitCards from "@/components/split-cards.astro";
+import Testimonial from "@/components/testimonial.astro";
+import ResourceCards from "@/components/resource-cards.astro";
+import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CardGrid from "@/components/card-grid.astro";
+import ArticleCarousel from "@/components/article-carousel.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+
+const carmenProject = projects.find((p: any) => p.slug === "carmen");
+const parentWg = projects.find((p: any) => p.name === carmenProject?.parent);
+
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("carmen"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+  }));
+---
+
+<Layout
+  title="Carmen — Carbon Measurement Engine | Green Software Foundation"
+  description="Carmen is the open-source measurement engine that implements the Software Carbon Intensity (SCI) at scale across cloud infrastructure and Kubernetes applications. Built by Amadeus, now a GSF project."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Carmen" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(carmenProject?.lifecycle ? [{ text: carmenProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Carbon"
+    headingAccent="Measurement Engine"
+    subtitle="Carmen is the measurement engine that implements the Software Carbon Intensity (SCI) at scale across cloud infrastructure and applications."
+    body="Most organisations can estimate their total carbon footprint, but can't answer a harder question: which applications are responsible? Carmen bridges that gap — deployable across your Kubernetes clusters and cloud services, it delivers per-application SCI measurements that are transparent, auditable, and reproducible without requiring any custom implementation."
+    ctas={[
+      { text: "Get Started", variant: "primary", href: "https://github.com/Green-Software-Foundation/if-carmen" },
+      { text: "Join the Community", variant: "outline", href: "https://movement.greensoftware.foundation" },
+    ]}
+    imageSrc="/assets/tools/carmen/hero.png"
+    imageAlt="Carmen — Carbon Measurement Engine"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with support from GSF member organisations"
+  />
+
+  <!-- What is Carmen? -->
+  <CTACard
+    heading="What is *Carmen?*"
+    bodyHtml="Carmen is an open-source measurement engine built on the <a href='https://if.greensoftware.foundation/' class='text-primary underline' target='_blank' rel='noopener noreferrer'>GSF Impact Framework</a> that delivers transparent, reproducible carbon calculations at two critical levels.<br/><br/><strong>Infrastructure level:</strong> Tracks energy consumption and carbon emissions from virtual machines, storage, and cloud services.<br/><br/><strong>Application level:</strong> Monitors individual applications and workloads running in Kubernetes clusters using Prometheus and Kube State Metrics — tools already running in most production environments.<br/><br/>Every calculation is backed by a manifest file that records exactly which models were used, so any engineer can open it and verify the numbers independently."
+    imageSrc="/assets/tools/carmen/hero.png"
+    imageAlt="Carmen measurement engine illustration"
+  />
+
+  <!-- Why Carmen Matters (heading) -->
+  <TextBlock
+    heading="Why *Carmen* Matters"
+    body="Understanding total carbon is no longer enough. Teams need to know which applications drive the most emissions before they can act."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    headingStyle="light"
+    body="Early in the green software journey, a pattern emerged: organisations could estimate overall carbon emissions, but lacked visibility into which applications and workloads had the biggest impact. Without granular data at the team level, sustainability leaders struggled to engage engineers and identify optimisation priorities. The GSF Impact Framework provided the calculation methodology, but implementing it consistently at scale across hundreds of applications remained a significant barrier for most organisations. Carmen was built to close that gap — a production-proven engine that brings SCI measurement to any team, at any scale, without months of custom integration work."
+    imageSrc="/assets/tools/carmen/hero.png"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    headingStyle="light"
+    imageSrc="/assets/tools/carmen/hero.png"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/rtc/co2-icon.svg",
+        description: '<span class="font-extrabold">SCI at scale without custom implementations</span> — Deploy Carmen in your environment and get standardised carbon measurements across every application without writing custom measurement code',
+      },
+      {
+        icon: "/assets/standards/rtc/infra-icon.svg",
+        description: '<span class="font-extrabold">Cross-team carbon accountability</span> — Per-application SCI scores give every engineering team direct ownership of their emissions, turning sustainability from a central concern into a distributed practice',
+      },
+      {
+        icon: "/assets/standards/rtc/standardized-icon.svg",
+        description: '<span class="font-extrabold">Auditable and reproducible measurements</span> — Manifest files record every model and parameter used in each calculation, so auditors and engineers can verify results independently',
+      },
+      {
+        icon: "/assets/standards/rtc/cost-icon.svg",
+        description: '<span class="font-extrabold">Carbon and cost in one view</span> — CPU, memory, and network consumption drive both cloud spend and carbon emissions. Carmen surfaces these shared signals, letting one dataset serve both sustainability and finance teams',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/rtc/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Built for Every Role -->
+  <TabbedSection
+    heading="Built for Every Role"
+    tabs={[
+      {
+        value: "platform-engineers",
+        heading: "Platform Engineers",
+        description: "Integrate Carmen with the tools already running in your cluster — Prometheus and Kube State Metrics. Carmen's manifests slot into your existing observability stack and surface per-application carbon data alongside the metrics your teams already track. No new monitoring infrastructure required.",
+        image: { src: "/assets/standards/rtc/tabs-cloud-engineers.svg", alt: "Platform Engineers" },
+      },
+      {
+        value: "sustainability-teams",
+        heading: "Sustainability Teams",
+        description: "Get per-application SCI scores that map directly to CSRD reporting requirements and internal reduction targets. Track progress across quarters with consistent, comparable measurements. Carmen's auditable manifest files give you the evidence trail needed to satisfy regulators and internal compliance teams.",
+        image: { src: "/assets/standards/rtc/tabs-sustainability.svg", alt: "Sustainability Teams" },
+      },
+      {
+        value: "business-leaders",
+        heading: "Business Leaders",
+        description: "Validate that carbon reduction commitments are backed by granular, application-level data rather than top-down estimates. Carmen's reproducible calculations satisfy auditors and procurement teams who need to verify supplier sustainability claims. Make informed decisions about cloud investment using data that connects resource spend directly to carbon impact.",
+        image: { src: "/assets/standards/rtc/tabs-business.svg", alt: "Business Leaders" },
+      },
+    ]}
+  />
+
+  <!-- Origin Story -->
+  <SplitCards
+    heading="From Amadeus to *Open Source*"
+    body="In 2022, Amadeus faced a measurement challenge that many large organisations were quietly struggling with: how do you measure carbon emissions across hundreds of applications at the scale of three billion flight search requests per day? Led by Florent Morel, the Amadeus engineering team built Carmen on top of Impact Framework. By late 2023, the first dashboards were live in production. In December 2025, Carmen was open-sourced under Apache 2.0. On January 31, 2026, Amadeus transferred the repository to the Green Software Foundation — making Carmen freely available to any organisation worldwide."
+    iconSrc="/assets/standards/rtc/leading-icon.svg"
+    decorSrc="/assets/standards/rtc/leading-decor.svg"
+    ctaText="Read the GSF announcement"
+    ctaHref="/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/"
+    quote="Carmen represents exactly what we need more of in the green software ecosystem—practical tools built on solid measurement foundations that help teams act. By building on the Impact Framework, Amadeus showed how our open standards and frameworks enable interoperability and verification across the industry."
+    quoteIconSrc="/assets/standards/rtc/quote-icon.svg"
+    attribution={{
+      name: "Asim Hussain",
+      role: "Executive Director, Green Software Foundation",
+      company: "Green Software Foundation",
+    }}
+  />
+
+  <!-- Virginie Corraze quote -->
+  <Testimonial
+    quote="Open-sourcing Carmen is our way of contributing back to the community and accelerating the development of practical, standardized tools for green software. As more organizations adopt and contribute to it, the engine is expected to become more accurate, more robust, and more useful."
+    author="Virginie Corraze"
+    title="Head of Engineering Centers of Excellence"
+    company="Amadeus"
+  />
+
+  <!-- Resources -->
+  <ResourceCards
+    heading="Everything You Need to *Get Started*"
+    columns={4}
+    cards={[
+      {
+        icon: "/assets/standards/rtc/dive-icon-1.svg",
+        title: "GitHub Repository",
+        description: "Carmen's source code, manifests, architecture documentation, and contribution guidelines.",
+        ctaText: "View on GitHub",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen",
+      },
+      {
+        icon: "/assets/standards/rtc/dive-icon-2.svg",
+        title: "Quickstart Guide",
+        description: "Step-by-step instructions for integrating Carmen with Prometheus and Kube State Metrics in your cluster.",
+        ctaText: "Get Started",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
+      },
+      {
+        icon: "/assets/standards/rtc/dive-icon-3.svg",
+        title: "Movement Platform Community",
+        description: "Ask questions, share deployment experiences, and connect with other Carmen adopters.",
+        ctaText: "Join the Community",
+        ctaHref: "https://movement.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/standards/rtc/dive-icon-4.svg",
+        title: "GSF Announcement Article",
+        description: "Learn about Carmen's journey from Amadeus to GSF, how it works, and what comes next.",
+        ctaText: "Read the Article",
+        ctaHref: "/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Timeline -->
+  <Timeline
+    heading="From Internal Tool to *GSF Project*"
+    items={[
+      { date: "2022", description: "Amadeus engineering team begins building Carmen to measure emissions across hundreds of applications", completed: true, start: "2022-01-01", end: "2022-12-31" },
+      { date: "Late 2023", description: "First Carmen dashboards live in production at Amadeus", completed: true, start: "2023-10-01", end: "2023-12-31" },
+      { date: "December 2025", description: "Carmen open-sourced under Apache 2.0", completed: true, start: "2025-12-01", end: "2025-12-31" },
+      { date: "January 2026", description: "Repository transferred to GSF; Florent Morel and Robin Castellon continue as project leads", completed: true, start: "2026-01-01", end: "2026-01-31" },
+      { date: "April 2026", description: "Public launch webinar — Carmen available to organisations worldwide", current: true, start: "2026-04-01", end: "2026-04-30" },
+    ]}
+  />
+
+  <!-- Team -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={3}
+    highlighted={[]}
+    members={(carmenProject?.leads?.length
+      ? carmenProject.leads.map((lead: any) => ({
+          fullName: lead.fullName,
+          role: lead.roleLabel,
+        }))
+      : [
+          { fullName: "Florent Morel", role: "Project Lead" },
+          { fullName: "Robin Castellon", role: "Project Lead" },
+          { fullName: "Joseph Cook", role: "GSF Project Manager" },
+        ]
+    )}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Join the community building practical, open carbon measurement tools"
+    columns={4}
+    align="left"
+    decorSrc="/assets/standards/rtc/shape-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/rtc/shape-icon-1.svg",
+        title: "Try Carmen",
+        description: "Deploy Carmen in your Kubernetes environment using the quickstart guide",
+        ctaText: "Get Started",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-2.svg",
+        title: "Join the Community",
+        description: "Connect with other adopters, share your experience, and get help on the Movement Platform",
+        ctaText: "Join Now",
+        ctaHref: "https://movement.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-3.svg",
+        title: "Contribute",
+        description: "Pick up a good first issue on GitHub and help improve Carmen for everyone",
+        ctaText: "Browse Issues",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-4.svg",
+        title: "Become a GSF Member",
+        description: "Shape the future of green software measurement alongside industry leaders",
+        ctaText: "Learn More",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  {carouselArticles.length >= 1 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about Carmen and software carbon measurement."
+      articles={carouselArticles}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Shape the tools that define sustainable software"
+    body="GSF tools are built by members working together. Join the Green Software Foundation to contribute to open measurement tools, participate in working groups, and help set the direction for practical green software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
