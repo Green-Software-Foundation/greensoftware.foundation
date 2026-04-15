@@ -15,6 +15,7 @@ import Testimonial from "@/components/testimonial.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import Timeline from "@/components/timeline.astro";
 import TeamGrid from "@/components/team-grid.astro";
+import CardGrid from "@/components/card-grid.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
@@ -67,7 +68,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     subtitle="Carmen is the measurement engine that implements the Software Carbon Intensity (SCI) at scale across cloud infrastructure and applications."
     body="Most organisations can estimate their total carbon footprint, but can't answer a harder question: which applications are responsible? Carmen bridges that gap — deployable across your Kubernetes clusters and cloud services, it delivers per-application SCI measurements that are transparent, auditable, and reproducible without requiring any custom implementation."
     ctas={[
-      { text: "Get Started", variant: "primary", href: "https://github.com/Green-Software-Foundation/if-carmen" },
+      { text: "Try Carmen", variant: "primary", href: "https://github.com/Green-Software-Foundation/if-carmen" },
       { text: "Register for Webinar", variant: "outline", href: "https://zoom.us/webinar/register/WN_E2YV9ntmT7WdYQY70frx_Q#/registration" },
     ]}
     imageSrc="/assets/tools/carmen/hero.png"
@@ -102,7 +103,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     heading="Industry"
     headingAccent="Impact"
     headingStyle="light"
-    body="Early in the green software journey, a pattern emerged: organisations could estimate overall carbon emissions, but lacked visibility into which applications and workloads had the biggest impact. Without granular data at the team level, sustainability leaders struggled to engage engineers and identify optimisation priorities. The GSF Impact Framework provided the calculation methodology, but implementing it consistently at scale across hundreds of applications remained a significant barrier for most organisations. Carmen was built to close that gap — a production-proven engine that brings SCI measurement to any team, at any scale, without months of custom integration work."
+    body="You can estimate your total cloud carbon footprint. But without knowing which applications are responsible, you cannot engage engineers on reduction or tell them where to focus. The GSF Impact Framework gave you the methodology. Carmen gives you the infrastructure to use it at scale — across every application, every team, without months of custom integration work."
     imageSrc="/assets/tools/carmen/hero.png"
     imageAlt="Industry impact illustration"
     bgClass="bg-accent-lightest-2"
@@ -182,7 +183,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- Virginie Corraze quote -->
   <Testimonial
-    quote="Open-sourcing Carmen is our way of contributing back to the community and accelerating the development of practical, standardized tools for green software. As more organizations adopt and contribute to it, the engine is expected to become more accurate, more robust, and more useful."
+    quote="Open-sourcing Carmen is our way of contributing back to the community and accelerating the development of practical, standardised tools for green software. As more organisations adopt and contribute to it, the engine is expected to become more accurate, more robust, and more useful."
     author="Virginie Corraze"
     title="Head of Engineering Centers of Excellence"
     company="Amadeus"
@@ -204,7 +205,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
         icon: "/assets/standards/rtc/dive-icon-2.svg",
         title: "Quickstart Guide",
         description: "Step-by-step instructions for integrating Carmen with Prometheus and Kube State Metrics in your cluster.",
-        ctaText: "Get Started",
+        ctaText: "Follow the Quickstart",
         ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
       },
       {
@@ -217,7 +218,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       {
         icon: "/assets/standards/rtc/dive-icon-4.svg",
         title: "GSF Announcement Article",
-        description: "Learn about Carmen's journey from Amadeus to GSF, how it works, and what comes next.",
+        description: "The story behind Carmen's transfer from Amadeus to GSF, how the engine works, and what the roadmap holds.",
         ctaText: "Read the Article",
         ctaHref: "/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/",
       },
@@ -257,6 +258,47 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Join the community building practical, open carbon measurement tools"
+    columns={4}
+    align="left"
+    decorSrc="/assets/standards/rtc/shape-decor.svg"
+    cards={[
+      {
+        icon: "/assets/standards/rtc/shape-icon-1.svg",
+        title: "Try Carmen",
+        description: "Deploy Carmen in your Kubernetes environment using the quickstart guide",
+        ctaText: "Deploy Carmen",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-2.svg",
+        title: "Join the Community",
+        description: "Connect with other adopters, share your experience, and get help on the Movement Platform",
+        ctaText: "Join the Community",
+        ctaHref: "https://movement.greensoftware.foundation",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-3.svg",
+        title: "Contribute",
+        description: "Pick up a good first issue on GitHub and help improve Carmen for everyone",
+        ctaText: "Browse Issues",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22",
+      },
+      {
+        icon: "/assets/standards/rtc/shape-icon-4.svg",
+        title: "Become a GSF Member",
+        description: "Shape the future of green software measurement alongside industry leaders",
+        ctaText: "Discuss Membership",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+
   {carouselArticles.length >= 1 && (
     <ArticleCarousel
       heading="Related Articles"
@@ -270,7 +312,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- CTA -->
   <CTABanner
     heading="Shape the tools that define sustainable software"
-    body="GSF tools are built by members working together. Join the Green Software Foundation to contribute to open measurement tools, participate in working groups, and help set the direction for practical green software worldwide."
+    body="Your peers are already in the room where practical green software solutions get built. Join the Green Software Foundation to bring your organisation's measurement challenges into Working Groups that turn them into shared tools — and shared answers."
     ctaText="Get a seat at the table"
     ctaHref="/membership/"
   />
