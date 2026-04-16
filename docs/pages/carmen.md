@@ -6,7 +6,7 @@ Project page for Carmen (Carbon Measurement Engine) at `/tools/carmen/`.
 
 ## What the Page Shows
 
-A long-form landing page for Carmen, the open-source measurement engine that implements SCI at scale across cloud infrastructure and Kubernetes applications. Covers: hero, what it is, why it matters, business benefits, audience roles, origin story, resources, timeline, project leadership, and get-involved cards.
+A long-form landing page for Carmen, the open-source measurement engine that implements SCI at scale across cloud infrastructure and Kubernetes applications. Covers: hero, origin story, what it is, why it matters, business benefits, audience roles, prerequisites, resources, timeline, project leadership, and get-involved cards.
 
 ## Dynamic Elements
 
@@ -38,20 +38,30 @@ Standard LogoMarquee showing member logos.
 
 ## Static Elements
 
-All other content is hardcoded in the Astro file:
+All other content is hardcoded in the Astro file (in page order):
 
 - Hero copy (heading, subtitle, body, CTAs)
-- "What is Carmen?" CTACard
+- "From Amadeus to Open Source" SplitCards (origin story with Asim Hussain quote)
+- Virginie Corraze Testimonial
+- "What is Carmen?" CTACard — includes "Two ways to deploy Carmen" (Carbon Daemon and Carmen as a Service) as an inline two-column section within `bodyHtml`
 - "Why Carmen Matters" TextBlock
 - "Industry Impact" TextWithImage
 - "Business Benefits" TextWithImage with iconFeatures
-- "Built for Every Role" TabbedSection (3 tabs)
-- "From Amadeus to Open Source" SplitCards (origin story with Asim Hussain quote)
-- Virginie Corraze Testimonial
+- "Built for Every Role" — three always-visible cards (inline `<section>` with Tailwind grid, replacing former TabbedSection)
+- "What you need to run Carmen" prerequisites callout (inline `<section>`, two-column card)
 - "Get Started" ResourceCards (GitHub, Quickstart, Movement Platform, GSF Article)
 - Timeline milestones
-- "Get Involved" CardGrid
+- Project Status info callout (inline `<section>`, left-bordered note)
+- "Get Involved" CardGrid (4 cards including "21 Contributors and Growing")
 - CTABanner
+
+### Secondary CTA (webinar vs community)
+
+The hero's secondary CTA switches automatically at build time:
+- Before 23 April 2026: "Register for Webinar" (Zoom link)
+- On/after 23 April 2026: "Join the Carmen community" (Movement Platform)
+
+This uses `new Date()` at build time. It switches on the next Netlify deploy after April 22. If no deploy happens that day, trigger a manual deploy on April 23.
 
 ## Assets
 
