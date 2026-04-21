@@ -66,7 +66,7 @@ The IF was designed to be flexible and general-purpose, but it doesn’t provide
 
 When Amadeus, a company that processes approximately three billion flight search requests every day, faced this challenge in 2022, measuring emissions across hundreds of applications wasn’t possible with existing solutions. To solve the problem, their engineering team built Carmen, a measurement engine that implements IF across cloud infrastructure and Kubernetes clusters. 
 
-> "Carmen is the enterprise version of the IF." —Florent Morel, Carmen Project Lead and Head of Green IT at Amadeus 
+> "Carmen is the enterprise version of the IF." —Florent Morel, Carmen Project Lead, Amadeus 
 
 In January 2026, [Amadeus transferred ownership of Carmen to the GSF](https://greensoftware.foundation/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/), making it available for organizations and practitioners to use and build on. Carmen integrates with the infrastructure tools that enterprise platform teams already use, such as Kubernetes and Prometheus, to collect real-time resource utilization data from virtual machines and container workloads. It feeds that data into IF manifests and runs the calculation pipeline automatically, producing per-application and per-infrastructure carbon measurements without requiring each application team to manually instrument their systems. Since carbon emissions and cloud costs stem from resource consumption, these insights help practitioners make decisions that reduce both.
 
