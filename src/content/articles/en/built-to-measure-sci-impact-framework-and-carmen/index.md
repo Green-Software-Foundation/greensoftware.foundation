@@ -4,7 +4,7 @@ teaserText: How open-source tools are helping organizations measure and reduce t
 date: 2026-04-21
 published: true
 summary: Three GSF tools, SCI, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
-mainImage: ../../built-to-measure-sci-impact-framework-and-carmen/579359366-3b09820b-6570-4485-9ad2-4ae11cde321f.png
+mainImage: 579359366-3b09820b-6570-4485-9ad2-4ae11cde321f.png
 mainImageAlt: "Illustrated graphic showing three connected circular icons representing the Green Software Foundation's measurement tools: the SCI specification (shown with the formula ((E x I) + M) per R), the Impact Framework (represented by a manifest file icon below), and Carmen (represented by dashboard and grid icons below). The three tools are visually linked, suggesting they work together as a system. Teal and green color palette on a teal background. Green Software Foundation logo and website URL in the bottom left corner."
 featured: false
 tags:
