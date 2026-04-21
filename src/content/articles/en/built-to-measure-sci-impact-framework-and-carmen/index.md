@@ -3,12 +3,11 @@ title: 'Built to Measure: SCI, Impact Framework, and Carmen'
 teaserText: How open-source tools are helping organizations measure and reduce their software carbon emissions.
 date: 2026-04-21
 published: true
-summary: Three GSF tools, the Software Carbon Intensity (SCI) standard, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
-mainImage: 579359366-3b09820b-6570-4485-9ad2-4ae11cde321f.png
+summary: Three GSF tools, SCI, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
+mainImage: ../../built-to-measure-sci-impact-framework-and-carmen/579359366-3b09820b-6570-4485-9ad2-4ae11cde321f.png
 mainImageAlt: "Illustrated graphic showing three connected circular icons representing the Green Software Foundation's measurement tools: the SCI specification (shown with the formula ((E x I) + M) per R), the Impact Framework (represented by a manifest file icon below), and Carmen (represented by dashboard and grid icons below). The three tools are visually linked, suggesting they work together as a system. Teal and green color palette on a teal background. Green Software Foundation logo and website URL in the bottom left corner."
 featured: false
-tags:
-  - measurement, standards, tools, metrics, Software Carbon Intensity
+tags: []
 authors:
   - fullName: GSF Team on behalf of the Software Standards Working Group
     role: ''
@@ -24,7 +23,7 @@ lang: en
 
 In 2021, when GSF was founded, our goal was to make software emissions visible at the industry level. Five years on, the problem has shifted. Software is now recognized as a significant carbon source, but knowing that software has an environmental impact isn't the same as being able to measure it. What we heard consistently from organizations was the need for a systematic way to quantify, track, and mitigate the carbon intensity of their software.
 
-While existing metrics work well for annual reporting, they are not accurate enough for real-time tracking and exposing information that help organizations and practitioners make better optimization decisions, set reduction targets, and respond to regulatory requirements. 
+While existing metrics work well for annual reporting, they are not accurate enough for real-time tracking and exposing information that helps organizations and practitioners make better optimization decisions, set reduction targets, and prepare for regulatory requirements. 
 
 The Software Carbon Intensity (SCI) specification, the Impact Framework (IF), and Carmen (Carbon Measurement Engine) are three complementary tools from the Green Software Foundation designed to address these gaps. 
 
@@ -52,11 +51,11 @@ The IF is the open-source engine built to make SCI calculations practical, repea
 
 At its core, IF works with “manifest files”. These are simple YAML documents that describe your software system, the data sources you are drawing from, and the chain of calculations you want to run to turn those observations into SCI scores. 
 
-A basic manifest might say: "take my CPU utilization data, look up the thermal design power of my cloud instance type, convert utilization to energy, multiply by the local grid carbon intensity, add the amortized embodied emissions of the hardware, and divide by the number of users served." Each step in that chain is handled by a plugin—a small, composable piece of logic. IF ships with a library of built-in plugins for common operations (interpolation, arithmetic, CSV lookups, time synchronisation), and anyone can write and share their own. IF is more than a carbon calculator; it’s a framework that allows you to share not only your SCI score, but the methodology you chose to get there.
+A basic manifest might say: "take my CPU utilization data, look up the thermal design power of my cloud instance type, convert utilization to energy, multiply by the local grid carbon intensity, add the amortised embodied emissions of the hardware, and divide by the number of users served." Each step in that chain is handled by a plugin—a small, composable piece of logic. IF ships with a library of built-in plugins for common operations (interpolation, arithmetic, CSV lookups, time synchronisation), and anyone can write and share their own. IF is more than a carbon calculator; it’s a framework that allows you to share not only your SCI score, but the methodology you chose to get there.
 
 When you share an IF manifest, you are not just sharing a number. You are sharing the entire calculation pipeline, with every assumption, every data source, every conversion factor. A colleague, an auditor, or a regulator could inspect the manifest, re-run it, challenge the inputs, and verify the output. It’s more of a credibility engine than a carbon calculator.
 
-> "I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
+"I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
 
 IF also comes with practical tooling for the day-to-day work of carbon measurement. if-diff lets you compare two manifests side by side, which is useful for answering questions like "Did last month's optimization have a real impact on reducing our SCI score?" if-csv exports results for integration with existing reporting dashboards. if-merge combines manifests from different teams or services into a unified view. These are small features, but they turn a one-off calculation into an ongoing practice. 
 
@@ -66,7 +65,7 @@ The IF was designed to be flexible and general-purpose, but it doesn’t provide
 
 When Amadeus, a company that processes approximately three billion flight search requests every day, faced this challenge in 2022, measuring emissions across hundreds of applications wasn’t possible with existing solutions. To solve the problem, their engineering team built Carmen, a measurement engine that implements IF across cloud infrastructure and Kubernetes clusters. 
 
-> "Carmen is the enterprise version of the IF." —Florent Morel, Carmen Project Lead, Amadeus 
+> "Carmen is the enterprise version of the IF." —Florent Morel, Carmen Project Lead and Head of Green IT at Amadeus 
 
 In January 2026, [Amadeus transferred ownership of Carmen to the GSF](https://greensoftware.foundation/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/), making it available for organizations and practitioners to use and build on. Carmen integrates with the infrastructure tools that enterprise platform teams already use, such as Kubernetes and Prometheus, to collect real-time resource utilization data from virtual machines and container workloads. It feeds that data into IF manifests and runs the calculation pipeline automatically, producing per-application and per-infrastructure carbon measurements without requiring each application team to manually instrument their systems. Since carbon emissions and cloud costs stem from resource consumption, these insights help practitioners make decisions that reduce both.
 
