@@ -35,7 +35,7 @@ The formula is deliberately simple:
 
 **SCI = ((E x I) + M) per R**
 
-
+![Diagram illustrating the Software Carbon Intensity formula: SCI equals ((E multiplied by I) plus M) per R. Four color-coded callout bubbles define each variable: E (orange) is the energy consumed by software in kWh; I (green) is the carbon emitted per kWh of energy in gCO2/kWh; M (teal) is the carbon emitted through the hardware the software is running on; and R (grey) is the functional unit, described as how software scales, for example per user or per device. Green Software Foundation logo and website URL in the bottom left corner.](02-Measuring-Serverless-App-Emissions-on-AWS%20(1).png)
 
 **E** is the energy your software consumes. **I** is the carbon intensity of the electricity grid from which that energy is drawn. **M** captures the “embodied emissions,”—the carbon baked into manufacturing, transporting, and eventually disposing of the hardware your code runs on. **R** is the functional unit you choose (e.g., per user, per transaction, per API call, per inference request), which translates a raw emissions number into a rate that can be compared over time and across systems.
 
