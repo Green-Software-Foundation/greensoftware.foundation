@@ -3,7 +3,7 @@ title: 'Built to Measure: SCI, Impact Framework, and Carmen'
 teaserText: How open-source tools are helping organizations measure and reduce their software carbon emissions.
 date: 2026-04-21
 published: true
-summary: Three GSF tools, SCI, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
+summary: Three GSF tools, the Software Carbon Intensity (SCI) standard, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
 mainImage: 579359366-3b09820b-6570-4485-9ad2-4ae11cde321f.png
 mainImageAlt: "Illustrated graphic showing three connected circular icons representing the Green Software Foundation's measurement tools: the SCI specification (shown with the formula ((E x I) + M) per R), the Impact Framework (represented by a manifest file icon below), and Carmen (represented by dashboard and grid icons below). The three tools are visually linked, suggesting they work together as a system. Teal and green color palette on a teal background. Green Software Foundation logo and website URL in the bottom left corner."
 featured: false
@@ -56,7 +56,7 @@ A basic manifest might say: "take my CPU utilization data, look up the thermal d
 
 When you share an IF manifest, you are not just sharing a number. You are sharing the entire calculation pipeline, with every assumption, every data source, every conversion factor. A colleague, an auditor, or a regulator could inspect the manifest, re-run it, challenge the inputs, and verify the output. It’s more of a credibility engine than a carbon calculator.
 
-"I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
+> "I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
 
 IF also comes with practical tooling for the day-to-day work of carbon measurement. if-diff lets you compare two manifests side by side, which is useful for answering questions like "Did last month's optimization have a real impact on reducing our SCI score?" if-csv exports results for integration with existing reporting dashboards. if-merge combines manifests from different teams or services into a unified view. These are small features, but they turn a one-off calculation into an ongoing practice. 
 
