@@ -107,4 +107,4 @@ The GSF maintains all three as open-source projects. If you want to understand a
 
 [Carmen (Carbon Measurement Engine)](https://github.com/Green-Software-Foundation/if-carmen) 
 
-**Join us:** Become a GSF Member to collaborate with organizations like Amadeus and CAST, building the standards and tools for sustainable software measurement.
+**Join us:** [Become a GSF Member](https://greensoftware.foundation/membership/) to collaborate with organizations like Amadeus and CAST, building the standards and tools for sustainable software measurement.
