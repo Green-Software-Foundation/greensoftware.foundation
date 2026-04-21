@@ -5,6 +5,8 @@ date: "2026-02-05"
 summary: "Carmen, an open-source measurement engine from Amadeus joins GFS's ecosystem. Learn how Carmen builds on Impact Framework to deliver transparent carbon measurements, giving teams the application-level visibility needed to optimize emissions without building custom implementations."
 teaserText: "Amadeus transfers Carmen, an open-source measurement engine, to GSF, enabling organizations to measure emissions across cloud infrastructure and Kubernetes clusters "
 mainImage: "./main.png"
+tags:
+  - carmen
 ---
 
 Early in our journey, our members identified a measurement challenge: organizations could estimate their overall carbon emissions, but lacked visibility into which applications and which workloads had the biggest impact. Without granular data at the team level, sustainability leaders struggled to engage engineers and identify optimization priorities. While [Impact Framework](https://if.greensoftware.foundation/) provided the calculation methodology, implementing it consistently at scale across hundreds of applications remained a significant barrier.

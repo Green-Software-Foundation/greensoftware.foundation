@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 501.55 397.95">
+  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st7 {
+        stroke-width: .64px;
+      }
+
+      .st7, .st8, .st9 {
+        stroke-linejoin: round;
+      }
+
+      .st7, .st8, .st9, .st10, .st11, .st12 {
+        stroke: #fff;
+      }
+
+      .st7, .st8, .st9, .st11, .st12 {
+        stroke-linecap: round;
+      }
+
+      .st7, .st13, .st9, .st14 {
+        fill: #fff;
+      }
+
+      .st15 {
+        fill: url(#linear-gradient);
+      }
+
+      .st8 {
+        stroke-width: 1.86px;
+      }
+
+      .st8, .st10 {
+        fill: none;
+      }
+
+      .st13 {
+        opacity: .3;
+      }
+
+      .st9, .st12 {
+        stroke-width: 1.26px;
+      }
+
+      .st10 {
+        stroke-miterlimit: 10;
+        stroke-width: .66px;
+      }
+
+      .st16 {
+        fill: #00524f;
+      }
+
+      .st11 {
+        stroke-width: 1.23px;
+      }
+
+      .st11, .st12 {
+        fill: #cee098;
+        stroke-linejoin: bevel;
+      }
+
+      .st17 {
+        opacity: .5;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="3.06" y1="255.37" x2="498.87" y2="255.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6baca9"/>
+      <stop offset="1" stop-color="#afd3d0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="146.02" y1="264.64" x2="215" y2="264.64" gradientUnits="userSpaceOnUse">
+      <stop offset=".28" stop-color="#cee098"/>
+      <stop offset=".37" stop-color="#c5db96"/>
+      <stop offset=".51" stop-color="#accd94"/>
+      <stop offset=".69" stop-color="#85b78f"/>
+      <stop offset=".9" stop-color="#4e9989"/>
+      <stop offset="1" stop-color="#338a86"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="216.22" y1="326.14" x2="286.86" y2="326.14" xlink:href="#linear-gradient1"/>
+    <linearGradient id="linear-gradient3" x1="77.19" y1="226.98" x2="77.19" y2="19.74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".1" stop-color="#4e9989"/>
+      <stop offset=".31" stop-color="#85b78f"/>
+      <stop offset=".49" stop-color="#accd94"/>
+      <stop offset=".63" stop-color="#c5db96"/>
+      <stop offset=".72" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient4" x1="351.39" y1="257.72" x2="351.39" y2="26.86" xlink:href="#linear-gradient3"/>
+    <linearGradient id="linear-gradient5" x1="236.84" y1="160.55" x2="392.84" y2="160.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fafac"/>
+      <stop offset=".32" stop-color="#479793"/>
+      <stop offset=".78" stop-color="#137874"/>
+      <stop offset="1" stop-color="#006d68"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient6" x1="282.26" y1="295.56" x2="282.26" y2="64.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006d68"/>
+      <stop offset="1" stop-color="#003834"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient7" x1="277.42" y1="295.56" x2="277.42" y2="102.01" xlink:href="#linear-gradient6"/>
+  </defs>
+  <polygon class="st15" points="3.06 255.74 250.97 114.68 498.87 255.74 251.24 396.06 3.06 255.74"/>
+  <g>
+    <g>
+      <line class="st10" x1="251.1" y1="396.46" x2="498.87" y2="256.19"/>
+      <line class="st10" x1="215.69" y1="376.31" x2="463.46" y2="236.04"/>
+      <line class="st10" x1="180.27" y1="356.16" x2="428.04" y2="215.89"/>
+      <line class="st10" x1="144.86" y1="336.01" x2="392.63" y2="195.73"/>
+      <line class="st10" x1="109.44" y1="315.86" x2="357.21" y2="175.58"/>
+      <line class="st10" x1="74.03" y1="295.7" x2="321.8" y2="155.43"/>
+      <line class="st10" x1="38.61" y1="275.55" x2="286.38" y2="135.28"/>
+      <line class="st10" x1="3.2" y1="255.4" x2="250.97" y2="115.13"/>
+    </g>
+    <g>
+      <line class="st10" x1="2.68" y1="255.53" x2="251.76" y2="395.8"/>
+      <line class="st10" x1="38.07" y1="235.49" x2="286.97" y2="375.77"/>
+      <line class="st10" x1="73.47" y1="215.45" x2="322.18" y2="355.73"/>
+      <line class="st10" x1="108.87" y1="195.42" x2="357.38" y2="335.69"/>
+      <line class="st10" x1="144.26" y1="175.38" x2="392.59" y2="315.65"/>
+      <line class="st10" x1="179.66" y1="155.34" x2="427.8" y2="295.61"/>
+      <line class="st10" x1="215.05" y1="135.3" x2="463.01" y2="275.57"/>
+      <line class="st10" x1="250.45" y1="115.26" x2="498.22" y2="255.53"/>
+    </g>
+  </g>
+  <g>
+    <polygon class="st1" points="215 295.44 215 214.1 181.02 233.21 146.02 214.1 146.02 295.44 181.04 315.18 215 295.44"/>
+    <path class="st14" d="M170.53,274.97v-12.33c-3.47-4.34-4.95-6.33-7.81-10.29-2.83.96-4.2,1.46-7.32,2.28v12.33c2.96,3.98,4.37,5.91,7.41,9.96,3.02-.87,4.47-1.3,7.72-1.95Z"/>
+    <polygon class="st11" points="146.02 214.2 180.51 194.57 215 214.2 181.04 233.23 146.02 214.2"/>
+    <line class="st7" x1="181.04" y1="233.23" x2="181.04" y2="315.18"/>
+  </g>
+  <g>
+    <polygon class="st0" points="286.86 336.22 286.86 295.84 252.06 315.42 216.22 295.84 216.22 336.22 252.08 356.43 286.86 336.22"/>
+    <polygon class="st12" points="216.22 295.95 251.54 275.85 286.86 295.95 252.08 315.44 216.22 295.95"/>
+    <line class="st9" x1="252.08" y1="315.44" x2="252.08" y2="356.43"/>
+  </g>
+  <g>
+    <g>
+      <polygon class="st2" points="151.51 19.74 150.8 142.8 2.87 226.98 3.42 103.47 151.51 19.74"/>
+      <polygon class="st16" points="151.51 19.74 151.43 1.49 3.5 85.66 3.42 103.47 151.51 19.74"/>
+      <path class="st14" d="M130.04,23.16c-.53-.88-.25-2.03.64-2.55h0c.88-.53,2.02-.25,2.55.64h0c.53.88.25,2.02-.63,2.55h0c-.3.18-.63.27-.96.27h0c-.63,0-1.25-.32-1.6-.9ZM136.42,19.33c-.53-.88-.25-2.02.64-2.55h0c.88-.53,2.02-.24,2.55.64h0c.53.88.25,2.02-.64,2.55h0c-.3.18-.63.27-.96.27h0c-.63,0-1.25-.32-1.6-.9ZM142.8,15.51c-.53-.88-.25-2.02.64-2.55h0c.88-.53,2.02-.25,2.55.64h0c.53.88.25,2.02-.63,2.55h0c-.3.18-.63.26-.96.26h0c-.63,0-1.25-.32-1.6-.9Z"/>
+      <g>
+        <path class="st8" d="M17.3,180.43l19.61-47.72c3.15-7.65,10.5-12.73,18.77-12.96l23.4-.65c6.43-.18,12.42-3.31,16.25-8.48l34.55-46.74"/>
+        <polygon class="st14" points="132.81 67.73 133.86 58.51 125.36 62.21 132.81 67.73"/>
+      </g>
+      <line class="st8" x1="17.3" y1="190.97" x2="133.86" y2="125.37"/>
+    </g>
+    <path class="st13" d="M134.51,125.37L17.18,190.92l.66-11.14,19.31-49.34c2.6-6.64,8.92-11.09,16.05-11.29l26.88-.75c5.41-.15,10.45-2.75,13.7-7.08l40.74-54.12v68.17Z"/>
+  </g>
+  <g>
+    <path class="st6" d="M325.81,49.46l-37.68-21.3c-6.58-3.72-14.74,1.04-14.73,8.6l.08,132.3,155.84,88.67.08-123.32c0-4.21-2.22-8.1-5.84-10.24l-85.81-50.67c-3.56-2.1-5.77-5.9-5.84-10.03l-.06-3.86c-.07-4.21-2.36-8.07-6.03-10.15Z"/>
+    <path class="st5" d="M289.25,67.72l-37.68-21.3c-6.58-3.72-14.74,1.04-14.73,8.6l.08,132.3,155.84,88.67.08-123.32c0-4.21-2.22-8.1-5.84-10.24l-85.81-50.67c-3.56-2.1-5.77-5.9-5.84-10.03l-.06-3.86c-.07-4.21-2.36-8.07-6.03-10.15Z"/>
+    <path class="st3" d="M256.67,87.29l-37.68-21.3c-6.58-3.72-14.74,1.04-14.73,8.6l.08,132.3,155.84,88.67.08-123.32c0-4.21-2.22-8.1-5.84-10.24l-85.81-50.67c-3.56-2.1-5.77-5.9-5.84-10.03l-.06-3.86c-.07-4.21-2.36-8.07-6.03-10.15Z"/>
+    <polygon class="st14" points="196.71 80.29 204.34 198.47 360.18 295.56 352.72 168.5 196.71 80.29"/>
+    <path class="st4" d="M194.72,114.23l9.63,92.66,155.84,88.68-11.09-108.75c-.36-3.57-2.44-6.74-5.56-8.5l-132.38-74.85c-7.82-4.42-17.37,1.83-16.44,10.77Z"/>
+  </g>
+  <polygon class="st16" points="74.99 198.31 75.01 241.69 127.16 271.36 127.19 227.82 74.99 198.31"/>
+  <g class="st17">
+    <polygon class="st16" points="60.11 204.26 60.14 247.64 112.29 277.31 112.32 233.77 60.11 204.26"/>
+  </g>
+  <path class="st14" d="M242.43,336.95v-12.58c-3.54-4.43-5.05-6.46-7.96-10.5-2.89.98-4.29,1.49-7.46,2.33v12.58c3.02,4.06,4.45,6.03,7.56,10.16,3.09-.88,4.56-1.33,7.87-1.99Z"/>
+</svg>
