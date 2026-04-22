@@ -303,7 +303,7 @@ export const navItems = [
           {
             href: "/membership/academic/",
             label: "Academic Membership",
-            description: "Free membership for universities and research institutions",
+            description: "Collaborate with GSF Members",
           },
           {
             href: "https://wiki.greensoftware.foundation/getting-started",
