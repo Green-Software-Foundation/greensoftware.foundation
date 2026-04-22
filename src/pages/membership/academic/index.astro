@@ -109,28 +109,197 @@ const engagementForms = [
   },
 ];
 
-const standardsItems = [
+const softwareStandards = [
   {
-    title: "SCI Standard — ISO/IEC 21031:2024",
+    title: "Software Carbon Intensity (SCI)",
+    status: "Published · ISO/IEC 21031:2024",
+    statusColor: "bg-primary/10 text-primary",
     description:
-      "The only ISO-certified metric for software carbon. Active research need: independent methodology validation; domain extension to emerging system types; implementation benchmarking across sectors.",
-    link: "https://sci.greensoftware.foundation/",
-    linkText: "View the SCI standard →",
+      "Measures carbon intensity of software as a rate per unit of work. The only ISO-certified metric for software carbon — the foundation for all downstream SCI extensions and the primary metric referenced in CSRD Scope 3 reporting.",
+    link: "/standards/sci/",
+    linkText: "About the SCI Standard",
   },
   {
-    title: "SCI for AI — ratified December 2025",
+    title: "SCI for Artificial Intelligence",
+    status: "Ratified · Dec 2025",
+    statusColor: "bg-primary/10 text-primary",
     description:
-      "The first consensus-based standard for measuring AI carbon footprint across six lifecycle stages. Active research need: training vs. inference carbon apportionment; embodied carbon in AI hardware; long-running workload optimisation. A UCL team's carbon-aware scheduler work — presented to the GSF Steering Committee in April 2026 — demonstrates the level of applied academic engagement the Foundation actively supports.",
+      "Extends SCI to cover AI systems across the full lifecycle — training, fine-tuning, inference, storage, transmission, and end-of-life. Directly addresses the gap in existing corporate AI emissions reporting. A UCL carbon-aware scheduler project, presented to the GSF Steering Committee in April 2026, demonstrated 44–56% carbon savings.",
+    link: "/standards/sci-ai/",
+    linkText: "About SCI for AI",
   },
   {
-    title: "SCI for Web — in active development",
+    title: "SCI for Web",
+    status: "Draft",
+    statusColor: "bg-yellow-100 text-yellow-800",
     description:
-      "Extending SCI methodology to web-based software. Active research need: design foundations for the specification; measurement methodology for client-side and CDN carbon. Academic input is directly relevant at this early stage.",
+      "Extends SCI to web applications and digital services. Developed via AI-accelerated consensus process — 14 experts, 15 organisations, full agreement in 10 weeks. An early-stage specification where academic input into design foundations and client-side measurement methodology is directly relevant.",
+    link: "/standards/sci-web/",
+    linkText: "About SCI for Web",
   },
   {
-    title: "SOFT Framework — ratified November 2025",
+    title: "Sustainable Organisational Framework for Technology (SOFT)",
+    status: "Ratified · Nov 2025",
+    statusColor: "bg-primary/10 text-primary",
     description:
-      "The first ratified standard for embedding green software practices across an entire organisation. Active research need: implementation case studies; compliance pathway analysis under CSRD; sector-specific adaptation frameworks.",
+      "The first ratified standard for embedding green software practice across an entire organisation — not just individual projects. Addresses the endemic problem of green pilots that never scale. Active research need: implementation case studies; CSRD compliance pathway analysis; sector-specific adaptation frameworks.",
+    link: "/standards/soft/",
+    linkText: "About the SOFT Framework",
+  },
+  {
+    title: "Real Time Energy and Carbon Standard for Cloud (RTC)",
+    status: "Published",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Establishes a benchmark for real-time carbon and energy reporting by cloud providers. Underpins demand-side carbon-aware computing and directly feeds into the Carbon Aware SDK. Active research need: granular grid carbon intensity data integration; provider compliance benchmarking.",
+    link: "/standards/rtc/",
+    linkText: "About the RTC Standard",
+  },
+  {
+    title: "Software Energy Efficiency (SEE)",
+    status: "Pre-Draft",
+    statusColor: "bg-orange-100 text-orange-700",
+    description:
+      "Methodology for calculating the energy consumption rate of a software system. Earlier in the specification lifecycle — an active research area where foundational academic input can directly shape the standard's direction. Not yet ratified.",
+    link: "/standards/see/",
+    linkText: "About SEE",
+  },
+  {
+    title: "Software Water Efficiency (SWE)",
+    status: "Pre-Proposal",
+    statusColor: "bg-gray-100 text-gray-600",
+    description:
+      "Methodology for calculating the water consumption rate of a software system. At the earliest lifecycle stage — signals GSF's forward research agenda into water as a resource constraint alongside carbon and energy. Academic research proposals in this area are particularly welcome.",
+  },
+];
+
+const hardwareStandards = [
+  {
+    title: "Workload Dynamic Power and Cooling (WDPC)",
+    status: "Approved",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Standardises data coordination between computational workloads and energy and cooling infrastructure. Critical for data centre operators optimising at the hardware–software boundary, and underpins defensible measurement baselines for EU mandatory environmental reporting.",
+    link: "/standards/wdpc/",
+    linkText: "About the WDPC Standard",
+  },
+  {
+    title: "Open19",
+    status: "Published",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Open hardware specification standardising server, storage, and networking form factors within the 19-inch rack footprint. Features 48V DC native power architecture, modular design, and pluggable liquid cooling — enabling multi-vendor flexibility and sustainable hardware innovation.",
+    link: "/standards/open19/",
+    linkText: "About Open19",
+  },
+];
+
+const crossCuttingAreas = [
+  {
+    title: "SCI for Games",
+    description:
+      "Joint GSF and Sustainable Games Alliance initiative launched March 2026. Applies SCI measurement methodology to the gaming industry — a high-energy sector with limited existing sustainability metrics.",
+  },
+  {
+    title: "SCI for OpenTelemetry",
+    description:
+      "Assembly-in-formation linking SCI measurement to OTel observability tooling, with Goldman Sachs as assembly champion. Research need: integrating carbon intensity signals into existing engineering observability stacks.",
+  },
+  {
+    title: "SCI for Automotive (ECUs / LCA)",
+    description:
+      "Exploratory thread with Volvo applying SCI methodology to embedded software in vehicles. Addresses lifecycle carbon assessment for automotive ECU software — a domain where academic expertise in embedded systems and LCA methodology is directly applicable.",
+  },
+  {
+    title: "SCI Disclosure Certification",
+    description:
+      "Voluntary structured self-reporting programme under development. Bridges SCI into ESG and CSRD disclosure workflows — providing a certification pathway for organisations that want to demonstrate SCI compliance in regulatory reporting.",
+  },
+  {
+    title: "Green AI Committee",
+    description:
+      "Policy and standards body responding to EU AI Act obligations and active contributor to the SCI for AI ratification process. Coordinates GSF's technical response to AI environmental regulation across member organisations.",
+  },
+  {
+    title: "Hardware–Software Interoperability for Data Centre Sustainability",
+    description:
+      "Assembly seeded by Zutacore, sitting at the intersection of WDPC and operational data centre practice. Addresses the gap between hardware-level efficiency metrics and software-level workload decisions.",
+  },
+];
+
+const policyEngagements = [
+  {
+    title: "GHG Protocol Scope 2 Consultation",
+    description:
+      "Formal response submitted. GSF argued for time- and location-sensitive emissions data, pushing back against annual averages and broad geographic boundaries that strip out the granularity software engineers need to act.",
+    link: "/articles/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/",
+    linkText: "Read the response",
+  },
+  {
+    title: "AI Environmental Impacts Act",
+    description:
+      "GSF's first formal policy endorsement. Called for mandated environmental impact studies on AI, an AI Environmental Impacts Consortium, and a voluntary reporting framework for AI developers.",
+    link: "/articles/the-gsf-endorses-the-ai-environmental-impacts-act/",
+    linkText: "Read the endorsement",
+  },
+  {
+    title: "EU AI Act",
+    description:
+      "Analysis via the Green AI Committee on what the first binding global AI regulation means for sustainable software development and emissions disclosure. Directly relevant to researchers working on AI environmental assessment frameworks.",
+    link: "/articles/the-eu-ai-act-insights-from-the-green-ai-committee/",
+    linkText: "Read the analysis",
+  },
+  {
+    title: "NY Corporate Climate Accountability Act",
+    description:
+      "Coordinated technical responses to proposed New York state legislation on corporate climate accountability. GSF contributed standards expertise to the policy development process.",
+  },
+  {
+    title: "European Green Digital Coalition (EGDC)",
+    description:
+      "Engaging to align GSF standards with EU digital sustainability policy objectives. Provides a route for academic research that informs GSF standards to reach EU-level policy formation.",
+  },
+  {
+    title: "UK Government Digital Sustainability Alliance (GDSA)",
+    description:
+      "GSF is a member — contributing technical expertise to UK government digital sustainability strategy. Academic institutions with UK research profiles can engage with government digital policy via GSF membership.",
+    link: "/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+    linkText: "Read about GDSA",
+  },
+];
+
+const researchProgramme = [
+  {
+    title: "AI Environmental Assessments",
+    date: "Ratified November 2025",
+    description:
+      "Key publication examining the environmental impact of AI systems — frameworks for assessing and reducing the carbon footprint of AI workloads. Co-authored with academic partners.",
+    link: "https://research-information.bris.ac.uk/en/publications/beyond-counting-carbon-ai-environmental-assessments-struggle-to-i/",
+    linkText: "Read the publication",
+  },
+  {
+    title: "Green AI Position Paper",
+    date: "Policy research",
+    description:
+      "Defines Green AI, assesses environmental impacts across the AI lifecycle, and outlines key actions for industry and policy. The foundational document for GSF's AI sustainability work.",
+    link: "/policy/research/green-ai-position-paper/",
+    linkText: "Read the paper",
+  },
+  {
+    title: "SCI for Foundation Models — Texas State University",
+    date: "GSF-funded academic study",
+    description:
+      "Independent academic study confirming SCI as an effective metric for measuring the carbon impact of AI software. Demonstrates the type of industry-funded academic research GSF facilitates.",
+    link: "/articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/",
+    linkText: "Read the article",
+  },
+  {
+    title: "Carbon-Aware Computing Whitepaper — UBS & Microsoft",
+    date: "Industry case study",
+    description:
+      "First enterprise-scale implementation of carbon-aware computing using SCI and the Carbon Aware SDK. Demonstrates avoidance of multiple metric tons of CO₂eq annually — a direct example of academic research methodology deployed at production scale.",
+    link: "/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/",
+    linkText: "Read the whitepaper",
   },
 ];
 
@@ -395,21 +564,125 @@ const membershipBenefits = [
       <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark md:text-lg">
         GSF produces and maintains ISO-certified standards. The following specifications have active, open research needs.
       </p>
-      <div class="mt-12 grid gap-6 sm:grid-cols-2">
-        {standardsItems.map((item) => (
-          <div class="rounded-lg border bg-white p-5 shadow-sm">
-            <h3 class="text-lg font-bold text-primary">{item.title}</h3>
-            <p class="mt-2 text-sm text-gray-darker">{item.description}</p>
+
+      <!-- Software Standards Working Group -->
+      <div class="mt-12">
+        <div class="mb-6 flex items-center gap-4">
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Software Standards Working Group</h3>
+          <div class="h-px flex-1 bg-accent-lighter"></div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {softwareStandards.map((item) => (
+            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+              <div class="mb-3 flex items-start justify-between gap-2">
+                <h4 class="text-base font-bold leading-snug text-primary-dark">{item.title}</h4>
+                <span class={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${item.statusColor}`}>{item.status}</span>
+              </div>
+              <p class="flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              {item.link && (
+                <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                  {item.linkText} →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Hardware Standards Working Group -->
+      <div class="mt-10">
+        <div class="mb-6 flex items-center gap-4">
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Hardware Standards Working Group</h3>
+          <div class="h-px flex-1 bg-accent-lighter"></div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          {hardwareStandards.map((item) => (
+            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+              <div class="mb-3 flex items-start justify-between gap-2">
+                <h4 class="text-base font-bold leading-snug text-primary-dark">{item.title}</h4>
+                <span class={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${item.statusColor}`}>{item.status}</span>
+              </div>
+              <p class="flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              {item.link && (
+                <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                  {item.linkText} →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Cross-Cutting Research Areas -->
+      <div class="mt-10">
+        <div class="mb-6 flex items-center gap-4">
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Cross-Cutting Research Areas</h3>
+          <div class="h-px flex-1 bg-accent-lighter"></div>
+        </div>
+        <p class="mb-6 text-sm text-gray-darker">Active initiatives feeding into the standards pipeline — where academic collaboration is being actively sought.</p>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {crossCuttingAreas.map((item) => (
+            <div class="rounded-lg border border-dashed border-accent-lighter bg-white/60 p-5">
+              <h4 class="text-base font-bold text-primary-dark">{item.title}</h4>
+              <p class="mt-2 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5b: Active GSF Policy Engagements -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Active GSF Policy Engagements</h2>
+      <p class="mt-4 max-w-2xl text-base text-primary-dark md:text-lg">
+        GSF participates directly in regulatory consultations and policy formation. Academic researchers working in these areas can contribute formal expertise via GSF membership.
+      </p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {policyEngagements.map((item) => (
+          <div class="flex flex-col rounded-lg border bg-accent-lightest-2 p-5">
+            <h3 class="text-base font-bold text-primary-dark">{item.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
             {item.link && (
-              <a
-                href={item.link}
-                class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline"
-              >
-                {item.linkText}
+              <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                {item.linkText} →
               </a>
             )}
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5c: Research Programme -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Research Programme</h2>
+      <p class="mt-4 max-w-2xl text-base text-primary-dark md:text-lg">
+        Selected publications and case studies from GSF's research programme — demonstrating the type of industry-linked academic work the Foundation facilitates.
+      </p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
+        {researchProgramme.map((item) => (
+          <div class="flex flex-col rounded-lg border bg-white p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-primary">{item.date}</p>
+            <h3 class="mt-2 text-base font-bold text-primary-dark">{item.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+            {item.link && (
+              <a href={item.link} class="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                {item.linkText} →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 text-center">
+        <a
+          href="/policy/research/"
+          class="inline-block rounded-lg border border-primary px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+        >
+          Full publications library →
+        </a>
       </div>
     </div>
   </section>
