@@ -18,7 +18,7 @@ All content on this page is hardcoded:
 - **Hero** — eyebrow badge, headline "Where Research Becomes Standard", 3-paragraph body, two CTAs (primary → `#submission-form`, secondary → `/governance/`)
 - **The Convening Model** — heading, two body paragraphs, 4-step numbered list with preamble, governance disclaimer
 - **What Our Members Are Working On** — 5 research challenge cards with icons and closing line
-- **Forms of Engagement** — 6 bullet items describing how institutions can engage
+- **Forms of Engagement** — 6 cards in a numbered grid (3-column on desktop, 2-column on tablet) describing how institutions can engage
 - **Standards — Active Research Areas** — 4 standard items (SCI, SCI for AI, SCI for Web, SOFT) with research needs; SCI links to `https://sci.greensoftware.foundation/`
 - **Academic Membership** — heading, body, 4 benefit items, membership note, current member text list (8 universities), closing line
 - **Submission Form** — anchor `#submission-form`, 6 form fields (4 required, 2 optional), client-side confirmation UX (no backend endpoint), privacy note
