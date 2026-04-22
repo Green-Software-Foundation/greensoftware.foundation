@@ -207,17 +207,23 @@ const crossCuttingAreas = [
   {
     title: "SCI for Games",
     description:
-      "Joint GSF and Sustainable Games Alliance initiative launched March 2026. Applies SCI measurement methodology to the gaming industry — a high-energy sector with limited existing sustainability metrics.",
+      "The gaming industry is one of the largest and fastest-growing software sectors by energy consumption, yet no standardised methodology exists for measuring its carbon intensity. This GSF Assembly, developed in partnership with the Sustainable Games Alliance, is working to extend SCI to cover game software — defining the measurement boundaries, functional units, and data sources that reflect how games are developed, distributed, and played.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
   },
   {
     title: "SCI for OpenTelemetry",
     description:
-      "Assembly-in-formation linking SCI measurement to OTel observability tooling, with Goldman Sachs as assembly champion. Research need: integrating carbon intensity signals into existing engineering observability stacks.",
+      "Engineering teams routinely instrument software with observability tooling to monitor performance and reliability — but carbon intensity is absent from those signals. This assembly is developing a methodology to integrate SCI measurement directly into OpenTelemetry tooling, enabling teams to surface carbon data alongside latency and error rates within their existing observability stacks.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
   },
   {
-    title: "SCI for Automotive (ECUs / LCA)",
+    title: "SCI for Automotive",
     description:
-      "Exploratory thread with Volvo applying SCI methodology to embedded software in vehicles. Addresses lifecycle carbon assessment for automotive ECU software — a domain where academic expertise in embedded systems and LCA methodology is directly applicable.",
+      "Software in modern vehicles spans a wide range of systems — from embedded control units to cloud-connected services — yet no standard methodology exists for measuring its carbon intensity across the full vehicle lifecycle. This assembly is applying SCI methodology to automotive software, defining how to calculate carbon intensity across the hardware and connectivity boundaries of a modern vehicle.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
   },
   {
     title: "SCI Disclosure Certification",
@@ -232,7 +238,7 @@ const crossCuttingAreas = [
   {
     title: "Hardware–Software Interoperability for Data Centre Sustainability",
     description:
-      "Assembly seeded by Zutacore, sitting at the intersection of WDPC and operational data centre practice. Addresses the gap between hardware-level efficiency metrics and software-level workload decisions.",
+      "Sitting at the intersection of hardware efficiency standards and operational data centre practice, this assembly addresses a critical gap: hardware-level efficiency metrics and software-level workload decisions are currently optimised in isolation. The goal is a shared framework that enables data centre operators to align workload scheduling with real-time energy and cooling constraints.",
   },
 ];
 
@@ -631,9 +637,14 @@ const membershipBenefits = [
         <p class="mb-6 text-sm text-gray-darker">Active initiatives feeding into the standards pipeline — where academic collaboration is being actively sought.</p>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {crossCuttingAreas.map((item) => (
-            <div class="rounded-lg border border-dashed border-accent-lighter bg-white/60 p-5">
+            <div class="flex flex-col rounded-lg border border-dashed border-accent-lighter bg-white/60 p-5">
               <h4 class="text-base font-bold text-primary-dark">{item.title}</h4>
-              <p class="mt-2 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              {item.link && (
+                <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                  {item.linkText} →
+                </a>
+              )}
             </div>
           ))}
         </div>
