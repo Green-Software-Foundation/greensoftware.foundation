@@ -1,49 +1,50 @@
-# Academic Membership Page
+# Academic & Research Engagement Page
 
 **URL:** `/membership/academic/`
 **File:** `src/pages/membership/academic/index.astro`
 
 ## What it shows
 
-A dedicated landing page for academic institutions explaining the GSF academic membership programme. Academic (and non-profit/government) membership is free. The page covers what GSF is working on, what membership enables, maps research disciplines to active projects, lists current academic member universities, and provides an enquiry pathway.
+A landing page for academic and research institutions explaining how they can engage with and join the Green Software Foundation. Targets Vice-Chancellors, Provosts, Directors of Research, and Heads of Department. The page presents the GSF convening model, active research challenges from member organisations, forms of engagement, standards with open research needs, academic membership benefits, and a proposal submission form.
 
 ## Dynamic elements
 
-| Element | Source | Notes |
-|---|---|---|
-| Steering member logos | `src/data/members.json` via `LogoMarquee` | Fetched from Notion via `npm run fetch-notion` |
+None. All content is static and hardcoded (see below for update guidance).
 
 ## Static elements
 
-All other content on this page is hardcoded static copy — this is intentional:
+All content on this page is hardcoded:
 
-- **Hero** — pitch text, CTA to `/membership/enquire/`
-- **What the Foundation is working on** — 5 domain feature cards
-- **What academic membership enables** — 8 benefit feature cards
-- **Discipline mapping table** — 9 research disciplines mapped to GSF projects
-- **Universities currently participating** — list of 17 academic member institutions (verified March 2026)
-- **Relevance to institutional sustainability objectives** — body copy
-- **Complementary academic programmes** — 4 resource cards (SE4GD, GREENER, ARCHER2, Texas State)
-- **How to enquire** — 4-step bordered feature grid
-- **FAQ** — 5 Q&As using native `<details>/<summary>` accordion
-- **Final CTA** — links to `/membership/enquire/`
+- **Hero** — eyebrow badge, headline "Where Research Becomes Standard", 3-paragraph body, two CTAs (primary → `#submission-form`, secondary → `/governance/`)
+- **The Convening Model** — heading, two body paragraphs, 4-step numbered list with preamble, governance disclaimer
+- **What Our Members Are Working On** — 5 research challenge cards with icons and closing line
+- **Forms of Engagement** — 6 bullet items describing how institutions can engage
+- **Standards — Active Research Areas** — 4 standard items (SCI, SCI for AI, SCI for Web, SOFT) with research needs; SCI links to `https://sci.greensoftware.foundation/`
+- **Academic Membership** — heading, body, 4 benefit items, membership note, current member text list (8 universities), closing line
+- **Submission Form** — anchor `#submission-form`, 6 form fields (4 required, 2 optional), client-side confirmation UX (no backend endpoint), privacy note
 
 ## How to update
 
-### Adding a new university
-Find the universities array in the "Universities currently participating" section (appears twice — once for desktop table, once for mobile cards). Add the institution to both arrays in alphabetical or logical order. Update the heading count and the "Verified against..." footnote date.
+### Adding or removing a "Working On" card
+Edit the `workingOnCards` array in the frontmatter. Each item has `title`, `description`, and `icon` (path to a `/assets/` SVG).
 
-### Updating discipline mappings
-Find the rows array in the "Discipline mapping table" section (appears twice — desktop and mobile). Edit the relevant `discipline` and `work` fields.
+### Updating the Standards section
+Edit the `standardsItems` array. Items may have an optional `link` and `linkText` for a "view standard" link below the description.
 
-### Updating the enquiry contact
-Search for `jamie.cowan@greensoftware.foundation` and update the name and email in the "How to enquire" FeatureGrid.
+### Adding a benefit to Academic Membership
+Edit `membershipBenefits` in the frontmatter. Items render as `**title** — body`.
 
-### Adding/editing FAQ items
-Find the FAQ `<details>` section and edit the `q` and `a` fields in the items array.
+### Updating the current academic members list
+Find the `Current academic members:` line in Section 6 and edit the `·`-separated list of institution names.
 
-### Changing the CTA destination
-The primary CTA links to `/membership/enquire/`. This appears in three places: the Hero `ctas` prop, the "How to enquire" section, and the final `CTABanner`.
+### Updating the Convening Model text or disclaimer
+Edit the text directly in Section 2 of the template (the custom `<section>` block).
+
+### Updating the Forms of Engagement list
+Edit the `engagementForms` array in the frontmatter.
+
+### Wiring up the submission form backend
+The form currently prevents the default submit, hides itself, and shows an inline confirmation message. The `<script>` tag at the bottom of the file handles this. To add a real backend, update the `form.addEventListener("submit", ...)` handler to POST the form data before showing the confirmation.
 
 ## Navigation
 
