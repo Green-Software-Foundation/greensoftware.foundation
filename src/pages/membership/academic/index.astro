@@ -49,26 +49,38 @@ const engagementForms = [
   {
     title: "Co-authorship",
     body: "on white papers and technical guidance aligned with GSF standards — research that reaches the organisations implementing it, not only those reading it.",
+    buttonText: "Published Papers",
+    buttonHref: "https://greensoftware.foundation/policy/research/",
   },
   {
     title: "Assembly participation",
     body: "via GSF's Harmony platform — the AI-facilitated consensus mechanism through which standards are shaped from blank-page problem statement to ratified specification; academic voices participate in the process, not just the output.",
+    buttonText: "View Past Hackathons",
+    buttonHref: "https://hack.greensoftware.foundation/",
   },
   {
     title: "Structured introductions",
     body: "to specific GSF member organisations where a research project aligns with an active member challenge — subject to Policy Working Group review and approval.",
+    buttonText: "GSF Membership Governance",
+    buttonHref: "https://greensoftware.foundation/governance/",
   },
   {
     title: "Named researcher recognition",
     body: "in GSF publications and communications — providing evidence of real-world impact, a publication route, and a named industry partner.",
+    buttonText: "Published Papers",
+    buttonHref: "https://greensoftware.foundation/policy/research/",
   },
   {
     title: "Hackathon & event participation",
     body: ", including the annual Carbon Hack, providing applied research opportunities with direct industry involvement.",
+    buttonText: "GSF Past Hackathons",
+    buttonHref: "https://hack.greensoftware.foundation/",
   },
   {
     title: "Formal academic membership",
     body: "— available at no cost — as the collaboration matures and alignment with GSF's mission is established.",
+    buttonText: "Submit your interest",
+    buttonHref: "#submission-form",
   },
 ];
 
@@ -212,14 +224,18 @@ const membershipBenefits = [
         Engagement with the Green Software Foundation is not a single pathway. The following forms have emerged from real collaborations.
       </p>
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {engagementForms.map((item, index) => (
-          <div class="flex flex-col gap-3 rounded-xl border bg-accent-lightest-2 p-6">
-            <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-extrabold text-white">
-              {index + 1}
+        {engagementForms.map((item) => (
+          <div class="flex flex-col rounded-xl border bg-accent-lightest-2 p-6">
+            <h3 class="text-lg font-extrabold text-primary-dark">{item.title}</h3>
+            <p class="mt-3 flex-1 text-base leading-relaxed text-primary-dark">{item.body}</p>
+            <div class="mt-5">
+              <a
+                href={item.buttonHref}
+                class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+              >
+                {item.buttonText}
+              </a>
             </div>
-            <p class="text-base leading-relaxed text-primary-dark">
-              <span class="font-extrabold">{item.title}</span>{item.body}
-            </p>
           </div>
         ))}
       </div>
