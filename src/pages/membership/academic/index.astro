@@ -315,6 +315,42 @@ const researchProgramme = [
   },
 ];
 
+const greenAICommitteeMembers = [
+  { name: "Sanjay Podder", org: "Accenture", role: "Co-Chair" },
+  { name: "Thomas Lewis", org: "Microsoft", role: "Co-Chair" },
+  { name: "Arun Ravindran", org: "BCG", role: "Member" },
+  { name: "Chris Xie", org: "Futurewei", role: "Member" },
+  { name: "Federica Sarro", org: "UCL", role: "Member" },
+  { name: "Gadhu Sundaram", org: "NTT Data", role: "Member" },
+  { name: "Juan José Lopez Murphy", org: "Globant", role: "Member" },
+  { name: "Nadim Kapadia", org: "HSBC", role: "Member" },
+  { name: "Nisha Menon", org: "Siemens", role: "Member" },
+  { name: "Savannah Goodman", org: "Google", role: "Member" },
+  { name: "Vincent Caldeira", org: "IBM / Red Hat", role: "Member" },
+  { name: "Vinjosh Varghese", org: "UBS", role: "Member" },
+];
+
+const committeeWithLogos = greenAICommitteeMembers.map((member) => {
+  const matched = (membersData as any[]).find((m: any) => {
+    if (!m.active || !m.logo || m.hideLogo) return false;
+    const mName = (m.companyName || "").toLowerCase();
+    const orgLower = member.org.toLowerCase();
+    return mName.includes(orgLower) || orgLower.includes(mName);
+  });
+  const initials = member.name
+    .split(" ")
+    .filter(Boolean)
+    .map((w: string) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+  return {
+    ...member,
+    logo: matched ? `/assets/${matched.logo}` : null,
+    initials,
+  };
+});
+
 const membershipBenefits = [
   {
     title: "Named industry partnerships",
@@ -652,13 +688,13 @@ const membershipBenefits = [
   <!-- Green AI Committee full-width section -->
   <section class="bg-primary py-16 md:py-20">
     <div class="container">
-      <div class="mx-auto max-w-4xl">
+      <div class="mx-auto max-w-5xl">
         <p class="mb-4 text-xs font-bold uppercase tracking-widest text-accent">GSF Committee</p>
         <h2 class="text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">Green AI Committee</h2>
-        <p class="mt-6 text-base leading-relaxed text-white/90 md:text-lg">
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-white/90 md:text-lg">
           The Green AI Committee is GSF's dedicated policy and standards body responding to EU AI Act obligations — and was an active contributor to the SCI for AI ratification process. It coordinates GSF's collective technical response to AI environmental regulation across member organisations, translating industry deployment realities into policy positions that regulators can act on.
         </p>
-        <p class="mt-4 text-base leading-relaxed text-white/90 md:text-lg">
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-white/90 md:text-lg">
           For academic researchers working at the intersection of AI, environmental assessment, and regulatory compliance, the Green AI Committee is the point of engagement — connecting academic expertise directly to the policy and standards processes where it carries weight.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
@@ -674,6 +710,55 @@ const membershipBenefits = [
           >
             Express your interest →
           </a>
+        </div>
+
+        <!-- Committee Members -->
+        <div class="mt-14">
+          <div class="mb-8 flex items-center gap-4">
+            <p class="shrink-0 text-xs font-bold uppercase tracking-widest text-white/50">Committee Members</p>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+
+          <!-- Co-chairs featured row -->
+          <div class="mb-6 grid gap-4 sm:grid-cols-2">
+            {committeeWithLogos.filter(m => m.role === "Co-Chair").map((member) => (
+              <div class="flex items-center gap-4 rounded-xl border border-accent/40 bg-white/10 p-4 backdrop-blur-sm">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-10 w-10 object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-lg font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <p class="text-sm font-extrabold text-white">{member.name}</p>
+                    <span class="rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
+                  </div>
+                  <p class="mt-0.5 text-xs text-white/60">{member.org}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Regular members grid -->
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {committeeWithLogos.filter(m => m.role !== "Co-Chair").map((member) => (
+              <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3.5">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-7 w-7 object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-xs font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-semibold leading-tight text-white">{member.name}</p>
+                  <p class="truncate text-xs text-white/50">{member.org}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
