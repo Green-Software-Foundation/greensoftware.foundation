@@ -186,6 +186,29 @@ const membershipBenefits = [
     bgClass="bg-accent-lightest-2"
   />
 
+  <!-- Academic member logos (directly below hero) -->
+  {academicLogos.length > 0 ? (
+    <LogoMarquee
+      heading="Institutions already working with the Green Software Foundation"
+      logos={academicLogos}
+      bgClass="bg-white"
+      fadeBgClass="from-white"
+      directoryHref="/membership/"
+      directoryText="About membership"
+    />
+  ) : (
+    <section class="bg-white py-10 md:py-12">
+      <div class="container">
+        <p class="mb-4 text-center text-sm font-medium text-gray-darker">
+          Institutions already working with the Green Software Foundation
+        </p>
+        <p class="text-center text-base font-semibold text-primary-dark">
+          Chalmers University of Technology · Concordia University · University College London · University of Amsterdam · University of Bristol · University of Edinburgh · Manchester Metropolitan University · Texas State University
+        </p>
+      </div>
+    </section>
+  )}
+
   <!-- Bridge section: GSF's unique position -->
   <section class="bg-primary py-14 md:py-20">
     <div class="container">
@@ -208,14 +231,14 @@ const membershipBenefits = [
         <!-- Statement text -->
         <div class="text-center">
           <p class="text-xl font-extrabold leading-snug text-white md:text-2xl lg:text-3xl">
-            GSF is where a computer science department's measurement methodology research connects directly to the ESG reporting reality of a Fortune 500 company implementing it next quarter.
+            GSF is where a computer science department's measurement methodology research <span class="text-accent">connects directly</span> to the ESG reporting reality of a Fortune 500 company implementing it next quarter.
           </p>
           <p class="mt-4 text-base font-semibold text-white/70 md:text-lg">
-            No other organisation holds both sides of that relationship simultaneously.
+            That structural position — trusted by research institutions and industry organisations simultaneously — is what makes the work possible.
           </p>
           <div class="mx-auto mt-8 h-px w-16 bg-white/20"></div>
           <p class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
-            GSF convenes the industry members who need answers and the research institutions who develop them — and provides the governance infrastructure to turn that collaboration into ratified, ISO-certified standards.
+            Within the Foundation, industry organisations bring specific, unsolved challenges. Research institutions bring the methodology to address them. GSF provides the governance structure to make that exchange productive — turning collaboration into co-authored white papers, technical reports, and ratified ISO standards that the industry deploys at scale.
           </p>
         </div>
       </div>
@@ -430,29 +453,6 @@ const membershipBenefits = [
       </p>
     </div>
   </section>
-
-  <!-- Academic member logos -->
-  {academicLogos.length > 0 ? (
-    <LogoMarquee
-      heading="Institutions already working with the Green Software Foundation"
-      logos={academicLogos}
-      bgClass="bg-accent-lightest-2"
-      fadeBgClass="from-accent-lightest-2"
-      directoryHref="/membership/"
-      directoryText="About membership"
-    />
-  ) : (
-    <section class="bg-accent-lightest-2 py-10 md:py-12">
-      <div class="container">
-        <p class="mb-4 text-center text-sm font-medium text-gray-darker">
-          Institutions already working with the Green Software Foundation
-        </p>
-        <p class="text-center text-base font-semibold text-primary-dark">
-          Chalmers University of Technology · Concordia University · University College London · University of Amsterdam · University of Bristol · University of Edinburgh · Manchester Metropolitan University · Texas State University
-        </p>
-      </div>
-    </section>
-  )}
 
   <!-- Section 7: Submission Form -->
   <section id="submission-form" class="bg-white py-16 md:py-20">
