@@ -5,6 +5,7 @@ import { navItems } from "@/lib/nav-items";
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import Footer from "@/components/footer.astro";
+import Testimonial from "@/components/testimonial.astro";
 
 const heroBody = [
   "The Green Software Foundation is where a computer science department's measurement methodology research connects directly to the ESG reporting reality of a Fortune 500 company implementing it next quarter. No other organisation holds both sides of that relationship simultaneously.",
@@ -175,42 +176,84 @@ const membershipBenefits = [
   />
 
   <!-- Section 2: The Convening Model -->
-  <section class="bg-white py-16 md:py-20">
+  <section class="bg-white py-16 md:py-24">
     <div class="container">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">The Convening Model</h2>
-        <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
-          GSF operates at the intersection of two populations that rarely meet with the right structure in place: industry organisations with specific, unsolved green software problems — and research institutions with the methodology and rigour to address them.
-        </p>
-        <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
-          The Foundation's role is to hold the network, run the matching process, and provide the governance infrastructure through which collaboration becomes output — a white paper, a co-authored technical report, or a ratified specification that changes how the industry reduces software carbon.
-        </p>
-        <p class="mt-8 font-semibold text-primary-dark">
-          Browse the current areas of research interest submitted by the GSF members or…
-        </p>
-        <ol class="mt-3 list-decimal list-outside space-y-3 pl-5">
-          <li class="text-base leading-relaxed text-primary-dark">
-            Institutions submit an idea, proposal, or white paper using the form on this page.
-          </li>
-          <li class="text-base leading-relaxed text-primary-dark">
-            The GSF Policy Working Group reviews all submissions and determines the appropriate form of engagement — which may include connection to a specific industry member, integration into an active Assembly or working group, or co-authorship on a GSF publication.
-          </li>
-          <li class="text-base leading-relaxed text-primary-dark">
-            Where a strong match exists between a research submission and an active industry member challenge, GSF facilitates the introduction — subject to review and approval by the Policy Working Group.
-          </li>
-          <li class="text-base leading-relaxed text-primary-dark">
-            Substantive collaborations may progress toward formal academic membership — available at no cost for qualifying institutions.
-          </li>
-        </ol>
-        <p class="mt-6 text-sm text-gray-darker">
-          There is no guaranteed outcome from submission. All substantive proposals receive a considered review, and the process has genuine governance integrity — decisions are made collectively, not by a single point of contact.
-        </p>
+      <p class="mb-3 text-center text-xs font-bold uppercase tracking-widest text-primary">How It Works</p>
+      <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">The Convening <span class="text-primary">Model</span></h2>
+
+      <div class="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2 md:gap-10">
+        <div class="rounded-2xl border border-accent-lighter bg-accent-lightest-2 p-6 md:p-8">
+          <p class="text-base leading-relaxed text-primary-dark">
+            GSF operates at the intersection of two populations that rarely meet with the right structure in place: industry organisations with specific, unsolved green software problems — and research institutions with the methodology and rigour to address them.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-accent-lighter bg-accent-lightest-2 p-6 md:p-8">
+          <p class="text-base leading-relaxed text-primary-dark">
+            The Foundation's role is to hold the network, run the matching process, and provide the governance infrastructure through which collaboration becomes output — a white paper, a co-authored technical report, or a ratified specification that changes how the industry reduces software carbon.
+          </p>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-12 max-w-2xl">
+        <p class="text-center text-sm font-semibold uppercase tracking-wide text-primary">How engagement works</p>
+        <div class="mt-6 space-y-0">
+          {[
+            "Institutions submit an idea, proposal, or white paper using the form on this page.",
+            "The GSF Policy Working Group reviews all submissions and determines the appropriate form of engagement — which may include connection to a specific industry member, integration into an active Assembly or working group, or co-authorship on a GSF publication.",
+            "Where a strong match exists between a research submission and an active industry member challenge, GSF facilitates the introduction — subject to review and approval by the Policy Working Group.",
+            "Substantive collaborations may progress toward formal academic membership — available at no cost for qualifying institutions.",
+          ].map((step, i) => (
+            <div class="relative flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                  {i + 1}
+                </div>
+                {i < 3 && <div class="w-0.5 grow bg-primary-lighter my-1" />}
+              </div>
+              <div class={`${i < 3 ? "pb-6" : "pb-0"} pt-1.5`}>
+                <p class="text-base leading-relaxed text-primary-dark">{step}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 rounded-xl border-l-4 border-primary bg-accent-lightest-2 px-5 py-4">
+          <p class="text-sm text-gray-darker">
+            There is no guaranteed outcome from submission. All substantive proposals receive a considered review, and the process has genuine governance integrity — decisions are made collectively, not by a single point of contact.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: What Our Members Are Working On -->
+  <!-- Section 3: Forms of Engagement (moved above What Our Members Are Working On) -->
   <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Forms of Engagement</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
+        Engagement with GSF is not a single pathway. The following forms have emerged from real collaborations.
+      </p>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {engagementForms.map((item) => (
+          <div class="flex flex-col rounded-xl border bg-white p-6">
+            <h3 class="text-lg font-extrabold text-primary-dark">{item.title}</h3>
+            <p class="mt-3 flex-1 text-base leading-relaxed text-primary-dark">{item.body}</p>
+            <div class="mt-5">
+              <a
+                href={item.buttonHref}
+                class="inline-block rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                {item.buttonText}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: What Our Members Are Working On -->
+  <section class="bg-white py-16 md:py-20">
     <div class="container">
       <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
         What Our Members Are Working On
@@ -235,7 +278,7 @@ const membershipBenefits = [
               </div>
             </div>
           ) : (
-            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+            <div class="flex flex-col rounded-lg border bg-accent-lightest-2 p-5 shadow-sm">
               <img src={card.icon} alt="" class="mb-4 h-10 w-10" loading="lazy" decoding="async" />
               <h3 class="text-lg font-bold text-primary">{card.title}</h3>
               <p class="mt-2 flex-1 text-sm text-gray-darker">{card.description}</p>
@@ -253,37 +296,15 @@ const membershipBenefits = [
           )
         ))}
       </div>
-      <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-darker">
-        If your institution is active in any of these areas, use the submission form below. Our members' problem statements evolve as the field develops. This list is not exhaustive, and we welcome suggestions.
-      </p>
     </div>
   </section>
 
-  <!-- Section 4: Forms of Engagement -->
-  <section class="bg-white py-16 md:py-20">
-    <div class="container">
-      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Forms of Engagement</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
-        Engagement with GSF is not a single pathway. The following forms have emerged from real collaborations.
-      </p>
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {engagementForms.map((item) => (
-          <div class="flex flex-col rounded-xl border bg-accent-lightest-2 p-6">
-            <h3 class="text-lg font-extrabold text-primary-dark">{item.title}</h3>
-            <p class="mt-3 flex-1 text-base leading-relaxed text-primary-dark">{item.body}</p>
-            <div class="mt-5">
-              <a
-                href={item.buttonHref}
-                class="inline-block rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
-              >
-                {item.buttonText}
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <Testimonial
+    quote="If your institution is active in any of these areas, use the submission form below. Our members' problem statements evolve as the field develops. This list is not exhaustive, and we welcome suggestions."
+    author="Gadhu Sundaram"
+    title="Chairperson"
+    company="Green Software Foundation"
+  />
 
   <!-- Section 5: Standards — Active Research Areas -->
   <section class="bg-accent-lightest-2 py-16 md:py-20">
