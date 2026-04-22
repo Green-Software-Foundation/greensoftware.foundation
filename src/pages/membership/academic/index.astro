@@ -16,32 +16,49 @@ const workingOnCards = [
   {
     title: "AI Workload Carbon Quantification",
     description:
-      "Measuring the full lifecycle footprint of AI systems across training, inference, and end-of-life. Direct input into the SCI for AI standard, ratified December 2025.",
+      "The SCI for AI standard (ratified December 2025) is the first consensus-based methodology for measuring the carbon footprint of AI systems across six lifecycle stages — training, fine-tuning, inference, storage, transmission, and end-of-life. GSF members need independent academic input to validate training-versus-inference carbon apportionment, embodied carbon in AI hardware, and optimisation of long-running workloads.",
     icon: "/assets/realtime-icon.svg",
+    link: "/standards/sci-ai/",
+    linkText: "About SCI for AI",
   },
   {
     title: "Carbon-Aware Scheduling Methodology",
     description:
-      "Optimising when and where software workloads run based on grid carbon intensity. A UCL carbon-aware scheduler project, presented to the GSF Steering Committee in April 2026, demonstrated 44–56% carbon savings through temporal and spatial scheduling.",
+      "Carbon-aware scheduling shifts computational workloads to times and locations where electricity grids are running on lower-carbon sources. A UCL research project presented to the GSF Steering Committee in April 2026 demonstrated 44–56% carbon savings through temporal and spatial scheduling — a result that directly informed active work on GSF standards.",
     icon: "/assets/co2-icon.svg",
   },
   {
     title: "SCI Methodology Validation",
     description:
-      "Independent academic validation of Software Carbon Intensity measurement approaches under CSRD Scope 3 reporting requirements carries regulatory and procurement weight that industry-produced documentation does not.",
+      "The Software Carbon Intensity standard (ISO/IEC 21031:2024) is the only ISO-certified metric for measuring the carbon footprint of software systems. Under CSRD Scope 3 reporting requirements, independent academic validation of SCI measurement approaches carries regulatory and procurement weight that industry-produced documentation cannot provide — giving academic researchers a direct route to policy-relevant impact.",
     icon: "/assets/standardized-icon.svg",
+    link: "/standards/sci/",
+    linkText: "About the SCI Standard",
   },
   {
     title: "Data Centre Water & Energy Baseline Standards",
     description:
-      "Establishing defensible measurement baselines for water consumption and energy use across hyperscale and edge infrastructure.",
+      "The WDPC standard addresses measurement of power, cooling, and water consumption in data centres. Establishing defensible measurement baselines for water and energy use across hyperscale and edge infrastructure is an active research need — particularly as EU and national regulations introduce mandatory environmental reporting for digital infrastructure operators.",
     icon: "/assets/shape-icon-1.svg",
+    link: "/standards/wdpc/",
+    linkText: "About the WDPC Standard",
   },
   {
     title: "SCI for Web",
     description:
-      "Extending Software Carbon Intensity methodology to web-based systems. An early-stage specification where academic input into design foundations is directly relevant.",
+      "SCI for Web is an early-stage specification extending Software Carbon Intensity methodology to web-based software systems — addressing client-side rendering, CDN energy use, and carbon measurement across distributed web architectures. Because the standard is still in development, academic input into its design foundations is actively sought.",
     icon: "/assets/shape-icon-2.svg",
+    link: "/standards/sci-web/",
+    linkText: "About SCI for Web",
+  },
+  {
+    title: "Your Research. Your Vision.",
+    description:
+      "GSF members are actively looking for research that addresses unsolved green software problems. If your institution is working in this field and you don't see your area above, tell us about it — we welcome proposals, ideas, and white papers on any aspect of software sustainability.",
+    icon: "/assets/shape-icon-2.svg",
+    link: "#submission-form",
+    linkText: "Submit Your Idea",
+    cta: true,
   },
 ];
 
@@ -203,11 +220,37 @@ const membershipBenefits = [
       </p>
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {workingOnCards.map((card) => (
-          <div class="rounded-lg border bg-white p-5 shadow-sm">
-            <img src={card.icon} alt="" class="mb-4 h-10 w-10" loading="lazy" decoding="async" />
-            <h3 class="text-lg font-bold text-primary">{card.title}</h3>
-            <p class="mt-2 text-sm text-gray-darker">{card.description}</p>
-          </div>
+          card.cta ? (
+            <div class="flex flex-col rounded-lg border-2 border-dashed border-primary bg-primary/5 p-5">
+              <img src={card.icon} alt="" class="mb-4 h-10 w-10 opacity-60" loading="lazy" decoding="async" />
+              <h3 class="text-lg font-bold text-primary">{card.title}</h3>
+              <p class="mt-2 flex-1 text-sm text-primary-dark">{card.description}</p>
+              <div class="mt-4">
+                <a
+                  href={card.link}
+                  class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+                >
+                  {card.linkText}
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+              <img src={card.icon} alt="" class="mb-4 h-10 w-10" loading="lazy" decoding="async" />
+              <h3 class="text-lg font-bold text-primary">{card.title}</h3>
+              <p class="mt-2 flex-1 text-sm text-gray-darker">{card.description}</p>
+              {card.link && (
+                <div class="mt-4">
+                  <a
+                    href={card.link}
+                    class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+                  >
+                    {card.linkText} →
+                  </a>
+                </div>
+              )}
+            </div>
+          )
         ))}
       </div>
       <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-darker">
