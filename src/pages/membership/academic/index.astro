@@ -48,37 +48,37 @@ const workingOnCards = [
 const engagementForms = [
   {
     title: "Co-authorship",
-    body: "on white papers and technical guidance aligned with GSF standards — research that reaches the organisations implementing it, not only those reading it.",
+    body: "On white papers and technical guidance aligned with GSF standards — research that reaches the organisations implementing it, not only those reading it.",
     buttonText: "Published Papers",
     buttonHref: "https://greensoftware.foundation/policy/research/",
   },
   {
     title: "Assembly participation",
-    body: "via GSF's Harmony platform — the AI-facilitated consensus mechanism through which standards are shaped from blank-page problem statement to ratified specification; academic voices participate in the process, not just the output.",
-    buttonText: "View Past Hackathons",
-    buttonHref: "https://hack.greensoftware.foundation/",
+    body: "Via GSF's Harmony platform — the AI-facilitated consensus mechanism through which standards are shaped from blank-page problem statement to ratified specification. Academic voices participate in the process, not just the output.",
+    buttonText: "About GSF Assemblies",
+    buttonHref: "https://greensoftware.foundation/assemblies/",
   },
   {
     title: "Structured introductions",
-    body: "to specific GSF member organisations where a research project aligns with an active member challenge — subject to Policy Working Group review and approval.",
+    body: "To specific GSF member organisations where a research project aligns with an active member challenge — subject to Policy Working Group review and approval.",
     buttonText: "GSF Membership Governance",
     buttonHref: "https://greensoftware.foundation/governance/",
   },
   {
     title: "Named researcher recognition",
-    body: "in GSF publications and communications — providing evidence of real-world impact, a publication route, and a named industry partner.",
+    body: "In GSF publications and communications — providing evidence of real-world impact, a publication route, and a named industry partner.",
     buttonText: "Published Papers",
     buttonHref: "https://greensoftware.foundation/policy/research/",
   },
   {
     title: "Hackathon & event participation",
-    body: ", including the annual Carbon Hack, providing applied research opportunities with direct industry involvement.",
+    body: "Including the annual Carbon Hack, providing applied research opportunities with direct industry involvement.",
     buttonText: "GSF Past Hackathons",
     buttonHref: "https://hack.greensoftware.foundation/",
   },
   {
     title: "Formal academic membership",
-    body: "— available at no cost — as the collaboration matures and alignment with GSF's mission is established.",
+    body: "Available at no cost as the collaboration matures and alignment with GSF's mission is established.",
     buttonText: "Submit your interest",
     buttonHref: "#submission-form",
   },
@@ -221,7 +221,7 @@ const membershipBenefits = [
     <div class="container">
       <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Forms of Engagement</h2>
       <p class="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
-        Engagement with the Green Software Foundation is not a single pathway. The following forms have emerged from real collaborations.
+        Engagement with GSF is not a single pathway. The following forms have emerged from real collaborations.
       </p>
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {engagementForms.map((item) => (
@@ -231,7 +231,7 @@ const membershipBenefits = [
             <div class="mt-5">
               <a
                 href={item.buttonHref}
-                class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+                class="inline-block rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
               >
                 {item.buttonText}
               </a>
