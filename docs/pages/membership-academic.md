@@ -20,7 +20,8 @@ All content on this page is hardcoded:
 - **Forms of Engagement** — 6 cards (3-column on desktop) describing how institutions can engage; each has a button with an external link
 - **What Our Members Are Working On** — 6 cards (5 research challenges + 1 "Your Research" CTA card); followed by a full-width Testimonial quote attributed to the GSF Chairperson
 - **Standards — Active Research Areas** — 4 standard items (SCI, SCI for AI, SCI for Web, SOFT) with research needs; SCI links to `https://sci.greensoftware.foundation/`
-- **Academic Membership** — heading, body, 4 benefit items, membership note, current member text list (8 universities), closing line
+- **Academic Membership** — eyebrow badge, heading with accent, intro paragraph, 4 benefit cards (each with checkmark icon, bold title, and body text), green callout box ("Available at no cost") with CTA, closing line
+- **Academic member logos marquee** — scrolling logo marquee filtered to `organisationType === "Academia"` from `src/data/members.json`. Falls back to a static text list of 8 university names if no academic logos are available (e.g. during local dev without Notion data).
 - **Submission Form** — anchor `#submission-form`, 6 form fields (4 required, 2 optional), client-side confirmation UX (no backend endpoint), privacy note
 
 ## How to update
@@ -32,10 +33,13 @@ Edit the `workingOnCards` array in the frontmatter. Each item has `title`, `desc
 Edit the `standardsItems` array. Items may have an optional `link` and `linkText` for a "view standard" link below the description.
 
 ### Adding a benefit to Academic Membership
-Edit `membershipBenefits` in the frontmatter. Items render as `**title** — body`.
+Edit `membershipBenefits` in the frontmatter. Each item has `title`, `body`, and `icon` (unused in the current layout — checkmark icons are rendered inline). Items render as a card with a green checkmark, bold title, and body paragraph.
 
-### Updating the current academic members list
-Find the `Current academic members:` line in Section 6 and edit the `·`-separated list of institution names.
+### Updating the academic member logos
+Academic member logos are fetched from Notion (`Members` DB, `Organisation Type = Academia`) at build time. To add or update a logo, update the member's entry in Notion — the logo downloads automatically on the next `npm run build:full`. The marquee uses `LogoMarquee` with a pre-filtered `logos` prop.
+
+### Updating the fallback university list
+If academic logos are unavailable (e.g. during local dev), a static text list is shown. Edit the `·`-separated list in the fallback `<section>` inside the `{academicLogos.length > 0 ? ... : ...}` conditional.
 
 ### Updating the Convening Model text or disclaimer
 Edit the text directly in Section 2 of the template. The two intro paragraphs are in the two-column card grid. The numbered steps are an inline `.map()` array — edit the strings there. The disclaimer is in the `border-l-4` callout box below the steps.

@@ -4,8 +4,19 @@ import { navItems } from "@/lib/nav-items";
 
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
 import Footer from "@/components/footer.astro";
 import Testimonial from "@/components/testimonial.astro";
+
+import membersData from "@/data/members.json";
+const academicLogos = (membersData as any[])
+  .filter((m: any) => m.active && m.logo && !m.hideLogo && m.organisationType === "Academia")
+  .sort((a: any, b: any) => a.companyName.localeCompare(b.companyName))
+  .map((m: any) => ({
+    name: m.companyName,
+    logo: `/assets/${m.logo}`,
+    website: m.companyWebsite || "greensoftware.foundation",
+  }));
 
 const heroBody = [
   "The Green Software Foundation is where a computer science department's measurement methodology research connects directly to the ESG reporting reality of a Fortune 500 company implementing it next quarter. No other organisation holds both sides of that relationship simultaneously.",
@@ -130,19 +141,23 @@ const standardsItems = [
 const membershipBenefits = [
   {
     title: "Named industry partnerships",
-    body: "structured connections to GSF member organisations working on adjacent challenges, providing the industry-linked research context that EU Horizon, UKRI, and NSF funding applications increasingly require.",
+    body: "Structured connections to GSF member organisations working on adjacent challenges, providing the industry-linked research context that EU Horizon, UKRI, and NSF funding applications increasingly require.",
+    icon: "leading-icon.svg",
   },
   {
     title: "Publication routes",
-    body: "co-authorship credit on GSF technical reports, reviewed by the relevant Assembly and released publicly; a route to work that is read by the organisations deploying it, not only the academics citing it.",
+    body: "Co-authorship credit on GSF technical reports, reviewed by the relevant Assembly and released publicly — a route to work that is read by the organisations deploying it, not only the academics citing it.",
+    icon: "standardized-icon.svg",
   },
   {
     title: "Evidence of real-world impact",
-    body: "GSF standards are ISO-certified and in active deployment across banking, technology, and infrastructure; research that contributes to them produces the impact evidence that determines career progression and institutional research rankings.",
+    body: "GSF standards are ISO-certified and in active deployment across banking, technology, and infrastructure. Research that contributes to them produces the impact evidence that determines career progression and institutional research rankings.",
+    icon: "realtime-icon.svg",
   },
   {
     title: "Peer network access",
-    body: "participation in working groups, Assemblies, and GSF events alongside the member organisations deploying green software at scale.",
+    body: "Participation in working groups, Assemblies, and GSF events alongside the member organisations deploying green software at scale.",
+    icon: "co2-icon.svg",
   },
 ];
 ---
@@ -335,35 +350,80 @@ const membershipBenefits = [
   </section>
 
   <!-- Section 6: Academic Membership -->
-  <section class="bg-white py-16 md:py-20">
+  <section class="bg-white py-16 md:py-24">
     <div class="container">
-      <div class="mx-auto max-w-3xl">
-        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Academic Membership</h2>
-        <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
-          Academic membership in the Green Software Foundation is the formal relationship that follows substantive engagement when research and mission are genuinely aligned.
-        </p>
-        <ul class="mt-6 space-y-4">
-          {membershipBenefits.map((item) => (
-            <li class="text-base leading-relaxed text-primary-dark">
-              <span class="font-bold">{item.title}</span> — {item.body}
-            </li>
-          ))}
-        </ul>
-        <p class="mt-6 text-sm text-gray-darker">
-          Academic membership is available at no cost for qualifying institutions. Membership decisions are made at the Policy Working Group level.
-        </p>
-        <p class="mt-6 text-base text-primary-dark">
-          <span class="font-semibold">Current academic members:</span>{" "}Chalmers University of Technology · Concordia University · University College London · University of Amsterdam · University of Bristol · University of Edinburgh · Manchester Metropolitan University · Texas State University
-        </p>
-        <p class="mt-4 font-semibold text-primary-dark">
-          Academic engagement within the GSF is established, not experimental.
-        </p>
+      <p class="mb-3 text-center text-xs font-bold uppercase tracking-widest text-primary">Academic Membership</p>
+      <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">
+        The formal relationship that follows <span class="text-primary">substantive engagement</span>
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
+        When research and mission are genuinely aligned, academic membership provides structured access to the network and governance infrastructure through which that alignment creates measurable real-world impact.
+      </p>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2">
+        {membershipBenefits.map((item) => (
+          <div class="flex gap-4 rounded-xl border border-accent-lighter bg-accent-lightest-2 p-6">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-extrabold text-primary-dark">{item.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-gray-darker">{item.body}</p>
+            </div>
+          </div>
+        ))}
       </div>
+
+      <div class="mx-auto mt-10 max-w-3xl rounded-2xl bg-primary p-6 text-white md:p-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-lg font-extrabold">Available at no cost for qualifying institutions</p>
+            <p class="mt-1 text-sm leading-relaxed text-white/80">
+              Membership decisions are made at the Policy Working Group level — collectively, not by a single point of contact.
+            </p>
+          </div>
+          <a
+            href="#submission-form"
+            class="inline-block shrink-0 rounded-lg bg-white px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-accent-lightest-2"
+          >
+            Submit a proposal →
+          </a>
+        </div>
+      </div>
+
+      <p class="mt-10 text-center text-base font-semibold text-primary-dark">
+        Academic engagement within the GSF is established, not experimental.
+      </p>
     </div>
   </section>
 
+  <!-- Academic member logos -->
+  {academicLogos.length > 0 ? (
+    <LogoMarquee
+      heading="Institutions already working with the Green Software Foundation"
+      logos={academicLogos}
+      bgClass="bg-accent-lightest-2"
+      fadeBgClass="from-accent-lightest-2"
+      directoryHref="/membership/"
+      directoryText="About membership"
+    />
+  ) : (
+    <section class="bg-accent-lightest-2 py-10 md:py-12">
+      <div class="container">
+        <p class="mb-4 text-center text-sm font-medium text-gray-darker">
+          Institutions already working with the Green Software Foundation
+        </p>
+        <p class="text-center text-base font-semibold text-primary-dark">
+          Chalmers University of Technology · Concordia University · University College London · University of Amsterdam · University of Bristol · University of Edinburgh · Manchester Metropolitan University · Texas State University
+        </p>
+      </div>
+    </section>
+  )}
+
   <!-- Section 7: Submission Form -->
-  <section id="submission-form" class="bg-accent-lightest-2 py-16 md:py-20">
+  <section id="submission-form" class="bg-white py-16 md:py-20">
     <div class="container">
       <div class="mx-auto max-w-2xl">
         <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Submit a Proposal</h2>
