@@ -18,11 +18,7 @@ const academicLogos = (membersData as any[])
     website: m.companyWebsite || "greensoftware.foundation",
   }));
 
-const heroBody = [
-  "The Green Software Foundation is where a computer science department's measurement methodology research connects directly to the ESG reporting reality of a Fortune 500 company implementing it next quarter. No other organisation holds both sides of that relationship simultaneously.",
-  "GSF convenes the industry members who need answers and the research institutions who develop them — and provides the governance infrastructure to turn that collaboration into ratified, ISO-certified standards.",
-  "If your institution is working on software sustainability, AI energy footprint, or digital environmental methodology — there are GSF members actively looking for what you are already building.",
-].join("<br><br>");
+const heroBody = "If your institution is working on software sustainability, AI energy footprint, or digital environmental methodology — there are GSF members actively looking for what you are already building.";
 
 const workingOnCards = [
   {
@@ -189,6 +185,42 @@ const membershipBenefits = [
     imageAlt="Academic & Research Engagement illustration"
     bgClass="bg-accent-lightest-2"
   />
+
+  <!-- Bridge section: GSF's unique position -->
+  <section class="bg-primary py-14 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-4xl">
+        <!-- Two-column bridge visual -->
+        <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-5 mb-10 md:mb-12">
+          <div class="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-center sm:flex-1 sm:max-w-xs">
+            <p class="text-xs font-bold uppercase tracking-widest text-white/50">Research Institutions</p>
+            <p class="mt-1.5 text-base font-extrabold text-white">Methodology &amp; Rigour</p>
+          </div>
+          <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-white/30 text-white font-bold text-lg">
+            +
+          </div>
+          <div class="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-center sm:flex-1 sm:max-w-xs">
+            <p class="text-xs font-bold uppercase tracking-widest text-white/50">Industry Members</p>
+            <p class="mt-1.5 text-base font-extrabold text-white">Real-World Deployment</p>
+          </div>
+        </div>
+
+        <!-- Statement text -->
+        <div class="text-center">
+          <p class="text-xl font-extrabold leading-snug text-white md:text-2xl lg:text-3xl">
+            GSF is where a computer science department's measurement methodology research connects directly to the ESG reporting reality of a Fortune 500 company implementing it next quarter.
+          </p>
+          <p class="mt-4 text-base font-semibold text-white/70 md:text-lg">
+            No other organisation holds both sides of that relationship simultaneously.
+          </p>
+          <div class="mx-auto mt-8 h-px w-16 bg-white/20"></div>
+          <p class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
+            GSF convenes the industry members who need answers and the research institutions who develop them — and provides the governance infrastructure to turn that collaboration into ratified, ISO-certified standards.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Section 2: The Convening Model -->
   <section class="bg-white py-16 md:py-24">
