@@ -318,12 +318,8 @@ const researchProgramme = [
 const greenAICommitteeMembers = [
   { name: "Sanjay Podder", org: "Accenture", role: "Co-Chair" },
   { name: "Thomas Lewis", org: "Microsoft", role: "Co-Chair" },
-  { name: "Arun Ravindran", org: "BCG", role: "Member" },
-  { name: "Chris Xie", org: "Futurewei", role: "Member" },
   { name: "Federica Sarro", org: "UCL", role: "Member" },
   { name: "Gadhu Sundaram", org: "NTT Data", role: "Member" },
-  { name: "Juan José Lopez Murphy", org: "Globant", role: "Member" },
-  { name: "Nadim Kapadia", org: "HSBC", role: "Member" },
   { name: "Nisha Menon", org: "Siemens", role: "Member" },
   { name: "Savannah Goodman", org: "Google", role: "Member" },
   { name: "Vincent Caldeira", org: "IBM / Red Hat", role: "Member" },
@@ -722,39 +718,39 @@ const membershipBenefits = [
           <!-- Co-chairs featured row -->
           <div class="mb-6 grid gap-4 sm:grid-cols-2">
             {committeeWithLogos.filter(m => m.role === "Co-Chair").map((member) => (
-              <div class="flex items-center gap-4 rounded-xl border border-accent/40 bg-white/10 p-4 backdrop-blur-sm">
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
+              <div class="flex items-center gap-4 rounded-xl border border-white/20 bg-white p-5">
+                <div class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-accent-lightest-2 p-2">
                   {member.logo ? (
-                    <img src={member.logo} alt={member.org} class="h-10 w-10 object-contain" loading="lazy" decoding="async" />
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
                   ) : (
-                    <span class="text-lg font-extrabold text-primary">{member.initials}</span>
+                    <span class="text-xl font-extrabold text-primary">{member.initials}</span>
                   )}
                 </div>
                 <div class="min-w-0">
                   <div class="flex flex-wrap items-center gap-2">
-                    <p class="text-sm font-extrabold text-white">{member.name}</p>
+                    <p class="text-sm font-extrabold text-primary-dark">{member.name}</p>
                     <span class="rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
                   </div>
-                  <p class="mt-0.5 text-xs text-white/60">{member.org}</p>
+                  <p class="mt-0.5 text-xs text-gray-darker">{member.org}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <!-- Regular members grid -->
-          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {committeeWithLogos.filter(m => m.role !== "Co-Chair").map((member) => (
-              <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3.5">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
+              <div class="flex items-center gap-4 rounded-xl border border-white/20 bg-white p-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-accent-lightest-2 p-1.5">
                   {member.logo ? (
-                    <img src={member.logo} alt={member.org} class="h-7 w-7 object-contain" loading="lazy" decoding="async" />
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
                   ) : (
-                    <span class="text-xs font-extrabold text-primary">{member.initials}</span>
+                    <span class="text-sm font-extrabold text-primary">{member.initials}</span>
                   )}
                 </div>
                 <div class="min-w-0">
-                  <p class="truncate text-sm font-semibold leading-tight text-white">{member.name}</p>
-                  <p class="truncate text-xs text-white/50">{member.org}</p>
+                  <p class="truncate text-sm font-semibold leading-tight text-primary-dark">{member.name}</p>
+                  <p class="truncate text-xs text-gray-darker">{member.org}</p>
                 </div>
               </div>
             ))}
