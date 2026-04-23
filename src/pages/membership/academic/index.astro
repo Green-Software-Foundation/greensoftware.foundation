@@ -718,16 +718,30 @@ const membershipBenefits = [
   <!-- Green AI Committee full-width section -->
   <section class="bg-primary py-16 md:py-20">
     <div class="container">
-      <!-- Header -->
+      <!-- Header + CTAs -->
       <div class="mb-10">
         <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">GSF Committee</p>
-        <h2 class="text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">Green AI Committee</h2>
+        <h2 class="mb-6 text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">Green AI Committee</h2>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="#submission-form"
+            class="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent hover:text-primary-dark"
+          >
+            GSF Academic Members can join the Green AI Committee →
+          </a>
+          <a
+            href="/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
+            class="inline-block rounded-lg border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+          >
+            EU AI Act analysis →
+          </a>
+        </div>
       </div>
 
-      <!-- Left-right layout: text left, members right -->
+      <!-- Left-right layout: text left (bottom-aligned), members right -->
       <div class="grid gap-10 lg:grid-cols-2 lg:gap-14">
-        <!-- Left: text boxes + CTAs -->
-        <div class="flex flex-col gap-5">
+        <!-- Left: text boxes pushed to bottom of grid row -->
+        <div class="flex flex-col justify-end gap-5">
           <div class="rounded-2xl bg-white/10 p-6">
             <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Policy &amp; Standards</p>
             <p class="text-base leading-relaxed text-white/90">
@@ -739,20 +753,6 @@ const membershipBenefits = [
             <p class="text-base leading-relaxed text-white/90">
               For academic researchers working at the intersection of AI, environmental assessment, and regulatory compliance, the Green AI Committee is the point of engagement — connecting academic expertise directly to the policy and standards processes where it carries weight.
             </p>
-          </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a
-              href="#submission-form"
-              class="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent hover:text-primary-dark"
-            >
-              GSF Academic Members can join the Green AI Committee →
-            </a>
-            <a
-              href="/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
-              class="inline-block rounded-lg border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
-            >
-              EU AI Act analysis →
-            </a>
           </div>
         </div>
 
