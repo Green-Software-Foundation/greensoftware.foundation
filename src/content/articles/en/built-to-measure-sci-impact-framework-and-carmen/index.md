@@ -55,7 +55,7 @@ A basic manifest might say: "take my CPU utilization data, look up the thermal d
 
 When you share an IF manifest, you are not just sharing a number. You are sharing the entire calculation pipeline, with every assumption, every data source, every conversion factor. A colleague, an auditor, or a regulator could inspect the manifest, re-run it, challenge the inputs, and verify the output. It’s more of a credibility engine than a carbon calculator.
 
-"I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
+> "I like to refer to these files as executable audits because they mean that you don't just report emissions numbers anymore, you actually show your working too."—Joseph Cook, Head of R&D at GSF 
 
 IF also comes with practical tooling for the day-to-day work of carbon measurement. if-diff lets you compare two manifests side by side, which is useful for answering questions like "Did last month's optimization have a real impact on reducing our SCI score?" if-csv exports results for integration with existing reporting dashboards. if-merge combines manifests from different teams or services into a unified view. These are small features, but they turn a one-off calculation into an ongoing practice. 
 
