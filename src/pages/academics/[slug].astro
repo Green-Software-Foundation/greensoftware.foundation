@@ -34,17 +34,12 @@ const {
   links = [],
 } = academic.data;
 
-type Stat = { value: string; label: string };
-type ResolvedLink = { label: string; url: string; group: string };
-
-const resolvedLinks: ResolvedLink[] = links
-  .filter((l): l is { label: string; url: string; group?: string } =>
-    typeof l.url === "string" && l.url !== "" && l.url !== "[to be added]"
-  )
-  .map((l) => ({ label: l.label, url: l.url, group: l.group ?? "other" }));
+const resolvedLinks = links
+  .filter(l => !!l.url && l.url !== "" && l.url !== "[to be added]")
+  .map(l => ({ label: l.label, url: l.url as string, group: l.group ?? "other" }));
 
 // Separate social/profile links for the hero strip
-const heroLinks = resolvedLinks.filter((l) => l.group === "profile");
+const heroLinks = resolvedLinks.filter(l => l.group === "profile");
 
 // Group all links by category for the further reading section
 const groupOrder = ["profile", "research", "institutional", "books", "appearances", "other"];
@@ -58,22 +53,19 @@ const groupLabels: Record<string, string> = {
 };
 
 const linkGroups = groupOrder
-  .map((g) => ({
+  .map(g => ({
     id: g,
     label: groupLabels[g] ?? g,
-    items: resolvedLinks.filter((l) => l.group === g),
+    items: resolvedLinks.filter(l => l.group === g),
   }))
-  .filter((g) => g.items.length > 0);
+  .filter(g => g.items.length > 0);
 
 // Publication stats for the stats strip
-function buildFallbackStats(pub: typeof publications): Stat[] {
-  const result: Stat[] = [];
-  if (pub.peerReviewed) result.push({ value: pub.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" });
-  if (pub.patents) result.push({ value: pub.patents.split("+")[0] + "+", label: "Patents" });
-  if (pub.citations) result.push({ value: pub.citations.split("+")[0] + "+", label: "Google Scholar citations" });
-  return result;
-}
-const displayStats: Stat[] = stats.length > 0 ? stats : buildFallbackStats(publications);
+const fallbackStats: { value: string; label: string }[] = [];
+if (publications.peerReviewed) fallbackStats.push({ value: publications.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" });
+if (publications.patents) fallbackStats.push({ value: publications.patents.split("+")[0] + "+", label: "Patents" });
+if (publications.citations) fallbackStats.push({ value: publications.citations.split("+")[0] + "+", label: "Google Scholar citations" });
+const displayStats = stats.length > 0 ? stats : fallbackStats;
 
 const lastName = name.split(" ").at(-1) ?? name;
 ---
@@ -335,9 +327,3 @@ const lastName = name.split(" ").at(-1) ?? name;
 
   <Footer />
 </Layout>
-
-<style>
-  :global(.prose a) {
-    @apply text-primary hover:text-primary-dark transition-colors;
-  }
-</style>
