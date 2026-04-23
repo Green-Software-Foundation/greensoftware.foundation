@@ -5,12 +5,19 @@ import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import TextBlock from "@/components/text-block.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/nav-items";
 
 const academics = (await getCollection("academics")).filter(
   (a) => a.data.published !== false
 );
+
+const institutionLogos = academics.map((a) => ({
+  name: a.data.institution,
+  logo: a.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg",
+  website: a.data.institutionUrl ?? "https://greensoftware.foundation/",
+}));
 ---
 
 <Layout
@@ -51,6 +58,18 @@ const academics = (await getCollection("academics")).filter(
     body="The Green Software Foundation collaborates with leading academic institutions and researchers to advance the science of green software. Our academic partners contribute cutting-edge research, validation of our standards, and expertise in emerging areas like energy-efficient AI and neuromorphic computing."
     bgClass="bg-accent-lightest-2"
   />
+
+  <!-- Academic institution logo bar -->
+  {institutionLogos.length > 0 && (
+    <LogoMarquee
+      heading="Partnering with leading research institutions"
+      logos={institutionLogos}
+      bgClass="bg-white"
+      fadeBgClass="from-white"
+      directoryHref="/academics/"
+      directoryText="View all academic members"
+    />
+  )}
 
   <!-- Academics Grid -->
   {academics.length > 0 ? (
