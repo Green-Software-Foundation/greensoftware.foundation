@@ -166,6 +166,15 @@ const lastName = name.split(" ").at(-1) ?? name;
       bgClass="bg-white"
     />
 
+    <!-- ── About ────────────────────────────────────────────────────────────────── -->
+    <div class="bg-accent-lightest-2">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-3xl mx-auto prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+
     <!-- ── Key Areas of Expertise ─────────────────────────────────────────────── -->
     {keyAreas.length > 0 && (
       <div class="bg-accent-lightest-2">
@@ -335,15 +344,6 @@ const lastName = name.split(" ").at(-1) ?? name;
         </div>
       </div>
     )}
-
-    <!-- ── Full Markdown Content ──────────────────────────────────────────────── -->
-    <div class="bg-accent-lightest-2">
-      <div class="container py-16 md:py-20">
-        <div class="max-w-3xl mx-auto prose prose-lg max-w-none">
-          <Content />
-        </div>
-      </div>
-    </div>
 
     <!-- ── CTA Banner ─────────────────────────────────────────────────────────── -->
     <CTABanner
