@@ -198,26 +198,26 @@ function parseLinks(text: string): string {
     <!-- ── Research Mission + About ──────────────────────────────────────────── -->
     {(researchMission || aboutParagraphs.length > 0) && (
       <div class="bg-white">
-        <div class="container py-10 md:py-14">
-          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
+        <div class="container py-14 md:py-20">
+          <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
-            <!-- Left: Research Mission + SDG + Books -->
-            <div class="md:col-span-2">
+            <!-- Left: Research Mission + SDG -->
+            <div>
               {researchMission && (
-                <div class="mb-6">
+                <div class="mb-8">
                   <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">Research Mission</p>
-                  <div class="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4">
-                    <p class="text-sm text-primary-dark leading-relaxed italic">{researchMission}</p>
+                  <div class="bg-primary/5 border-l-4 border-primary rounded-r-xl px-6 py-5">
+                    <p class="text-base text-primary-dark leading-relaxed italic">{researchMission}</p>
                   </div>
                 </div>
               )}
 
               {sdgAlignment.length > 0 && (
-                <div class="mb-6">
-                  <p class="text-accent font-bold text-xs uppercase tracking-widest mb-2">SDG Alignment</p>
-                  <div class="flex flex-wrap gap-1.5">
+                <div>
+                  <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">SDG Alignment</p>
+                  <div class="flex flex-wrap gap-2">
                     {sdgAlignment.map((sdg) => (
-                      <span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs">
+                      <span class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs">
                         <span class="font-bold text-primary">SDG {sdg.number}</span>
                         <span class="text-gray-darker">{sdg.title}</span>
                       </span>
@@ -225,46 +225,13 @@ function parseLinks(text: string): string {
                   </div>
                 </div>
               )}
-
-              {bookLinks.length > 0 && (
-                <div>
-                  <div class="flex items-baseline gap-2 mb-3">
-                    <p class="text-accent font-bold text-xs uppercase tracking-widest">2025 Books</p>
-                    <span class="text-xs text-gray-darker">Springer Nature · Foreword by <span class="font-bold text-primary">Nassim Taleb</span></span>
-                  </div>
-                  <div class="space-y-2">
-                    {bookLinks.map((book) => (
-                      <a
-                        href={book.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="group flex items-center gap-3 rounded-lg bg-accent-lightest-2 border border-border p-3 hover:border-primary/40 hover:shadow-sm transition-all"
-                      >
-                        <div class="flex-none w-10 rounded overflow-hidden shadow-sm border border-border shrink-0">
-                          {book.cover ? (
-                            <img src={book.cover} alt={book.label} class="w-full h-auto object-cover block" />
-                          ) : (
-                            <div class="w-10 h-14 bg-primary/10 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                            </div>
-                          )}
-                        </div>
-                        <div class="flex-1 min-w-0">
-                          <p class="font-semibold text-xs text-primary-dark group-hover:text-primary transition-colors leading-snug">{book.label}</p>
-                          <p class="text-xs text-gray-darker mt-0.5 flex items-center gap-1">springer.com <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10M7 17L17 7"/></svg></p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
 
             <!-- Right: About paragraphs -->
-            <div class="md:col-span-3">
+            <div>
               <p class="text-accent font-bold text-xs uppercase tracking-widest mb-4">About</p>
               {aboutParagraphs.length > 0 && (
-                <div class="space-y-4">
+                <div class="space-y-5">
                   {aboutParagraphs[0] && (
                     <p class="text-base font-semibold text-primary-dark leading-relaxed border-l-4 border-primary pl-4" set:html={parseLinks(aboutParagraphs[0])} />
                   )}
@@ -278,6 +245,55 @@ function parseLinks(text: string): string {
                   )}
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Books ──────────────────────────────────────────────────────────────── -->
+    {bookLinks.length > 0 && (
+      <div class="bg-accent-lightest-2">
+        <div class="container py-14 md:py-20">
+          <div class="max-w-5xl mx-auto">
+            <div class="mb-8">
+              <p class="text-accent font-bold text-xs uppercase tracking-widest mb-2">Publications</p>
+              <div class="flex flex-wrap items-baseline gap-3">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">2025 Books</h2>
+                <span class="text-sm text-gray-darker">Springer Nature · Foreword by <strong class="font-bold text-primary">Nassim Taleb</strong></span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {bookLinks.map((book) => (
+                <a
+                  href={book.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex gap-5 rounded-2xl bg-white border border-border p-6 hover:border-primary/40 hover:shadow-md transition-all"
+                >
+                  <div class="flex-none w-24 rounded-lg overflow-hidden shadow-sm border border-border shrink-0">
+                    {book.cover ? (
+                      <img src={book.cover} alt={book.label} class="w-full h-auto object-cover block" />
+                    ) : (
+                      <div class="w-24 h-32 bg-primary/10 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                      </div>
+                    )}
+                  </div>
+                  <div class="flex-1 min-w-0 flex flex-col justify-between">
+                    <div>
+                      <p class="font-bold text-base text-primary-dark group-hover:text-primary transition-colors leading-snug mb-3">{book.label}</p>
+                      <p class="text-sm text-gray-darker mb-1">Springer Nature, 2025</p>
+                      <p class="text-sm text-gray-darker">Foreword by <span class="font-semibold text-primary">Nassim Taleb</span></p>
+                    </div>
+                    <p class="text-xs text-primary flex items-center gap-1 mt-4 font-medium">
+                      View on springer.com
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                    </p>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
