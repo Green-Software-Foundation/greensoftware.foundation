@@ -205,35 +205,40 @@ const hardwareStandards = [
 
 const crossCuttingAreas = [
   {
-    title: "SCI for Games",
+    title: "Reducing Carbon in the Gaming Industry",
+    assemblyName: "SCI for Games",
     description:
       "The gaming industry is one of the largest and fastest-growing software sectors by energy consumption, yet no standardised methodology exists for measuring its carbon intensity. This GSF Assembly, developed in partnership with the Sustainable Games Alliance, is working to extend SCI to cover game software — defining the measurement boundaries, functional units, and data sources that reflect how games are developed, distributed, and played.",
     link: "/assemblies/",
     linkText: "Register your interest in the assembly",
   },
   {
-    title: "SCI for OpenTelemetry",
+    title: "Making Carbon a First-Class Signal in Software Observability",
+    assemblyName: "SCI for OpenTelemetry",
     description:
       "Engineering teams routinely instrument software with observability tooling to monitor performance and reliability — but carbon intensity is absent from those signals. This assembly is developing a methodology to integrate SCI measurement directly into OpenTelemetry tooling, enabling teams to surface carbon data alongside latency and error rates within their existing observability stacks.",
     link: "/assemblies/",
     linkText: "Register your interest in the assembly",
   },
   {
-    title: "SCI for Automotive",
+    title: "Measuring Software Carbon Across the Vehicle Lifecycle",
+    assemblyName: "SCI for Automotive",
     description:
       "Software in modern vehicles spans a wide range of systems — from embedded control units to cloud-connected services — yet no standard methodology exists for measuring its carbon intensity across the full vehicle lifecycle. This assembly is applying SCI methodology to automotive software, defining how to calculate carbon intensity across the hardware and connectivity boundaries of a modern vehicle.",
     link: "/assemblies/",
     linkText: "Register your interest in the assembly",
   },
   {
-    title: "SCI Disclosure Certification",
+    title: "Bridging Carbon Measurement into ESG and Regulatory Disclosure",
+    assemblyName: "SCI Disclosure Certification",
     description:
       "Voluntary structured self-reporting programme under development. Bridges SCI into ESG and CSRD disclosure workflows — providing a certification pathway for organisations that want to demonstrate SCI compliance in regulatory reporting.",
     link: "https://greensoftware.foundation/standards/certification/",
     linkText: "View certification programme",
   },
   {
-    title: "Hardware–Software Interoperability for Data Centre Sustainability",
+    title: "Closing the Gap Between Hardware Efficiency and Software Workload Decisions",
+    assemblyName: "Hardware–Software Interoperability for Data Centre Sustainability",
     description:
       "Sitting at the intersection of hardware efficiency standards and operational data centre practice, this assembly addresses a critical gap: hardware-level efficiency metrics and software-level workload decisions are currently optimised in isolation. The goal is a shared framework that enables data centre operators to align workload scheduling with real-time energy and cooling constraints.",
     link: "/assemblies/hardware-software-interoperability-for-data-centre-sustainability/",
@@ -676,6 +681,9 @@ const membershipBenefits = [
         {crossCuttingAreas.map((item) => (
           <div class="flex flex-col rounded-lg border border-dashed border-primary/30 bg-primary/5 p-5">
             <h3 class="text-base font-bold text-primary-dark">{item.title}</h3>
+            {item.assemblyName && (
+              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-primary/70">{item.assemblyName}</p>
+            )}
             <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
             {item.link && (
               <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
