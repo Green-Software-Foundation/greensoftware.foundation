@@ -19,15 +19,15 @@ An overview page showcasing all published academic members collaborating with GS
 
 A detailed profile page for each academic member, featuring:
 
-1. **Hero section** — name, title, institution, and research focus summary
-2. **Research mission** — highlighted card with the academic's core research statement
-3. **Key areas of expertise** — 3-column grid of expertise areas (with title and description)
-4. **Collaboration opportunities** — detailed sections showing how the academic's work aligns with GSF initiatives (up to 3 areas)
-5. **Affiliations & leadership** — current roles and institutional affiliations
-6. **Experience & recognition** — key achievements and career milestones
-7. **Publications & output** — publication counts and citation metrics
-8. **Resources & links** — cards linking to external profiles (research profiles, GitHub, ResearchGate, etc.)
-9. **Extended content** — full markdown body content for additional information
+1. **Hero section** — name, title, institution, breadcrumb, and profile links
+2. **Stats strip** — key numbers (publications, patents, citations, years of experience)
+3. **Research mission** — highlighted card with the academic's core research statement
+4. **About** — structured biographical section: first `aboutParagraphs` item shown large with a left accent border; subsequent items as body text; book cards for `links` with `group: "books"`; SDG alignment chips
+5. **Key areas of expertise** — 3-column grid of expertise areas (with title and description)
+6. **Collaboration opportunities** — numbered editorial layout showing how the academic's work aligns with GSF initiatives
+7. **Affiliations & leadership** — current roles and institutional affiliations; linked items render as hover cards
+8. **Experience & background** — career milestones; linked items render as hover cards
+9. **Further reading & links** — links grouped by category (Profile & CV, Research Output, Institutional Affiliations, Books, Appearances)
 10. **CTA banner** — call to action for collaboration inquiries
 
 ## Content Structure
@@ -65,16 +65,28 @@ recognition:  # Optional array
   - "Recognition or achievement 1"
   - "Years of experience"
 
+aboutParagraphs:  # Optional - biographical paragraphs for the About section
+  - "First paragraph — shown large with a left accent border (the hook/intro)"
+  - "Second paragraph — shown as regular body text"
+
+sdgAlignment:  # Optional - UN Sustainable Development Goals this work maps onto
+  - number: "9"
+    title: "Industry & Infrastructure"
+  - number: "13"
+    title: "Climate Action"
+
 publications:  # Optional object
   peerReviewed: "50+ peer-reviewed publications"
   patents: "10+ patents"
   citations: "500+ citations"
 
-links:  # Optional - external resource links
+links:  # Optional - external resource links; use group: "books" to surface in About section
   - label: "Research Profile"
     url: "https://..."
+    group: "profile"
   - label: "GitHub"
     url: "https://..."
+    group: "research"
 
 lang: "en"  # Language code
 ---
@@ -82,11 +94,7 @@ lang: "en"  # Language code
 
 ### Body Content
 
-The Markdown body after frontmatter is rendered as the "Extended Content" section on the profile page. Use it for:
-- Additional biography or career narrative
-- Details about specific research programs
-- Recent publications or awards
-- Any other long-form information
+The Markdown body after the frontmatter `---` is **not rendered** on the profile page. All biographical and structured content should go in the frontmatter fields (`aboutParagraphs`, `sdgAlignment`, `affiliations`, `recognition`, `collaborationAreas`, etc.). The Markdown body can be left empty.
 
 ## How to Create a New Academic Profile
 

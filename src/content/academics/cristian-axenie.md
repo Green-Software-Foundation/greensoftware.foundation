@@ -60,6 +60,16 @@ recognition:
   - label: "Principal Investigator at the Audi Konfuzius-Institut Ingolstadt Laboratory"
   - label: "Speaker at Beyond Silicon 2026, Fraunhofer IIS Nürnberg (April 2026)"
     url: "https://www.bayern-innovativ.de/en/events-dates/detail/beyond-silicon-2026-the-future-of-computing"
+aboutParagraphs:
+  - "Dr. Axenie is not arriving at green software from an adjacent field — his entire research programme is built around making AI systems radically more energy-efficient. He holds the High Tech Agenda Bayern Professorship of Artificial Intelligence at TH Nürnberg Georg Simon Ohm and simultaneously leads the Neuromorphic Computing Solutions Group at Fraunhofer IIS, funded by the competitive Fraunhofer Attract Research Grant."
+  - "He is a Steering Committee Member of the ITU/UN AI for Good Impact Initiative, a Guest Speaker at the Alan Turing Institute, a Senior Member of IEEE, and serves as Group Leader of the Applied Antifragility Research Group and as a Board Member of Neuromorphic Computing Labs of Northern Bavaria. He holds 50+ peer-reviewed publications and 10+ patents, and brings 15+ years of academic research combined with 10+ years of industrial research — including six years as Staff Research Engineer at Huawei's largest R&D centre outside China, and as Principal Investigator at the Audi Konfuzius-Institut Ingolstadt Laboratory."
+sdgAlignment:
+  - number: "9"
+    title: "Industry & Infrastructure"
+  - number: "11"
+    title: "Sustainable Cities"
+  - number: "13"
+    title: "Climate Action"
 publications:
   peerReviewed: "50+ peer-reviewed publications"
   patents: "10+ patents"
@@ -117,31 +127,3 @@ links:
     url: "https://www.bayern-innovativ.de/en/events-dates/detail/beyond-silicon-2026-the-future-of-computing"
     group: "appearances"
 ---
-
-## About
-
-Dr. Axenie is not arriving at green software from an adjacent field — his entire research programme is built around making AI systems radically more energy-efficient. He holds the High Tech Agenda Bayern Professorship of Artificial Intelligence at TH Nürnberg Georg Simon Ohm and simultaneously leads the Neuromorphic Computing Solutions Group at Fraunhofer IIS, funded by the competitive Fraunhofer Attract Research Grant.
-
-He is a Steering Committee Member of the ITU/UN AI for Good Impact Initiative, a Guest Speaker at the Alan Turing Institute, a Senior Member of IEEE, and serves as Group Leader of the Applied Antifragility Research Group and as a Board Member of Neuromorphic Computing Labs of Northern Bavaria. He holds 50+ peer-reviewed publications and 10+ patents, and brings 15+ years of academic research combined with 10+ years of industrial research — including six years as Staff Research Engineer at Huawei's largest R&D centre outside China, and as Principal Investigator at the Audi Konfuzius-Institut Ingolstadt Laboratory.
-
-## Research Focus: The SPICES Lab
-
-His [SPICES Lab's](https://www.th-nuernberg.de/en/faculties/in/research/cognitive-neurocomputing/) stated mission — deploying algorithms on energy-efficient compute systems, from embedded devices to edge devices, with a specific focus on "green, scalable, and sustainable learning and inference" — places him squarely inside the territory GSF's Green AI Committee and SCI for AI Assembly are actively mapping.
-
-The research explicitly maps onto:
-- **SDG 9** (Industry and Infrastructure)
-- **SDG 11** (Sustainable Cities)
-- **SDG 13** (Climate Action)
-
-These align with GSF's own policy positioning on sustainability and AI governance.
-
-## 2025 Books — Both Springer Nature, Both Foreworded by Nassim Taleb
-
-- **[Applied Antifragility in Technical Systems: From Principles to Applications](https://link.springer.com/book/10.1007/978-3-031-90425-7)** — traffic engineering, robotics, and control systems
-- **[Applied Antifragility in Natural Systems: From Principles to Applications](https://link.springer.com/book/10.1007/978-3-031-90391-5)** — oncology, neuroscience, and ecology
-
-## Key Roles & Recognition
-
-- **Leadership roles** across academic institutions, research consortia, and international standards bodies
-- **Regional coordinator** for the [TinyAI Bayern Initiative](https://www.tinyai.bayern/)
-- **Recent speaker** at [Beyond Silicon 2026](https://www.bayern-innovativ.de/en/events-dates/detail/beyond-silicon-2026-the-future-of-computing) (April 2026, Fraunhofer IIS Nürnberg) on "Neuromorphic Technology for Industrial Streamlined Solutions"

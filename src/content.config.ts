@@ -232,6 +232,15 @@ const academics = defineCollection({
         citations: z.string().optional(),
       })
       .optional(),
+    aboutParagraphs: z.array(z.string()).optional(),
+    sdgAlignment: z
+      .array(
+        z.object({
+          number: z.string(),
+          title: z.string(),
+        }),
+      )
+      .optional(),
     stats: z
       .array(
         z.object({
