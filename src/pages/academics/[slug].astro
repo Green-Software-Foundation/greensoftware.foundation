@@ -69,6 +69,13 @@ if (publications.citations) fallbackStats.push({ value: publications.citations.s
 const displayStats = stats.length > 0 ? stats : fallbackStats;
 
 const lastName = name.split(" ").at(-1) ?? name;
+
+function parseLinks(text: string): string {
+  return text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-primary transition-colors">$1</a>'
+  );
+}
 ---
 
 <Layout
@@ -180,16 +187,14 @@ const lastName = name.split(" ").at(-1) ?? name;
                 <!-- First paragraph: large intro with left accent border -->
                 <div class="md:col-span-2">
                   <div class="border-l-4 border-primary pl-6">
-                    <p class="text-xl font-semibold text-primary-dark leading-relaxed">
-                      {aboutParagraphs[0]}
-                    </p>
+                    <p class="text-xl font-semibold text-primary-dark leading-relaxed" set:html={parseLinks(aboutParagraphs[0])} />
                   </div>
                 </div>
 
                 <!-- Remaining paragraphs: regular body text -->
                 <div class="md:col-span-3 flex flex-col gap-4">
                   {aboutParagraphs.slice(1).map((para) => (
-                    <p class="text-base text-gray-darker leading-relaxed">{para}</p>
+                    <p class="text-base text-gray-darker leading-relaxed" set:html={parseLinks(para)} />
                   ))}
                 </div>
               </div>
@@ -259,7 +264,7 @@ const lastName = name.split(" ").at(-1) ?? name;
             {keyAreas.map((area) => (
               <div class="rounded-lg border bg-white p-6 shadow-sm">
                 <h3 class="text-lg font-bold text-primary mb-3">{area.title}</h3>
-                <p class="text-sm text-gray-darker leading-relaxed">{area.description}</p>
+                <p class="text-sm text-gray-darker leading-relaxed" set:html={parseLinks(area.description)} />
               </div>
             ))}
           </div>
@@ -296,7 +301,7 @@ const lastName = name.split(" ").at(-1) ?? name;
                     {area.relevance && (
                       <p class="text-accent-darker font-extrabold text-xs uppercase tracking-widest mb-4">{area.relevance}</p>
                     )}
-                    <p class="text-gray-darker leading-relaxed">{area.body}</p>
+                    <p class="text-gray-darker leading-relaxed" set:html={parseLinks(area.body)} />
                   </div>
                 </div>
               ))}
