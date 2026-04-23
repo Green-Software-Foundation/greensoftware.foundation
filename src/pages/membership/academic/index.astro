@@ -762,10 +762,32 @@ const membershipBenefits = [
             <p class="shrink-0 text-xs font-bold uppercase tracking-widest text-white/50">Committee Members</p>
             <div class="h-px flex-1 bg-white/20"></div>
           </div>
+
+          <!-- Co-chairs: featured, larger cards -->
+          <div class="mb-3 grid gap-3 sm:grid-cols-2">
+            {committeeWithLogos.filter((m) => m.role === "Co-Chair").map((member) => (
+              <div class="flex flex-col items-center gap-3 rounded-xl bg-white p-5 text-center">
+                <div class="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl p-1">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-xl font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div>
+                  <span class="mb-1 inline-block rounded-full bg-accent px-2.5 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
+                  <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
+                  <p class="mt-0.5 text-xs text-gray-darker">{member.org}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Regular members: compact 2-col grid -->
           <div class="grid gap-3 sm:grid-cols-2">
-            {committeeWithLogos.map((member) => (
+            {committeeWithLogos.filter((m) => m.role !== "Co-Chair").map((member) => (
               <div class="flex items-center gap-3 rounded-xl bg-white p-4">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-accent-lightest-2 p-1.5">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg p-1">
                   {member.logo ? (
                     <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
                   ) : (
@@ -775,9 +797,6 @@ const membershipBenefits = [
                 <div class="min-w-0">
                   <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
                   <p class="mt-0.5 truncate text-xs text-gray-darker">{member.org}</p>
-                  {member.role === "Co-Chair" && (
-                    <span class="mt-1 inline-block rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
-                  )}
                 </div>
               </div>
             ))}
