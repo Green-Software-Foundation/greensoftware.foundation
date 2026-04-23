@@ -101,20 +101,43 @@ const institutionLogos = academicMemberLogos.length > 0 ? academicMemberLogos : 
         </div>
         <div class="grid gap-6 sm:grid-cols-2">
           {academics.map((academic) => {
-            const logoSrc = academic.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg";
+            const logos = academic.data.institutionLogos && academic.data.institutionLogos.length > 0
+              ? academic.data.institutionLogos
+              : [{ name: academic.data.institution, logo: academic.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg", url: academic.data.institutionUrl }];
             return (
               <div class="flex flex-col rounded-xl border bg-white shadow-sm overflow-hidden">
                 <!-- Institution header -->
-                <div class="bg-accent-lightest-2 px-6 py-5 flex flex-col items-center gap-3 border-b border-border">
-                  <div class="w-20 h-20 rounded-lg bg-white border border-border flex items-center justify-center overflow-hidden shadow-sm">
-                    <img
-                      src={logoSrc}
-                      alt={`${academic.data.institution} logo`}
-                      class="w-16 h-16 object-contain"
-                    />
+                <div class="bg-accent-lightest-2 px-6 py-5 flex flex-col items-center gap-4 border-b border-border">
+                  <div class={`flex items-center justify-center gap-4 ${logos.length > 1 ? "w-full" : ""}`}>
+                    {logos.map((inst) => (
+                      <a
+                        href={inst.url ?? academic.data.institutionUrl ?? "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex-1 flex items-center justify-center"
+                        title={inst.name}
+                      >
+                        <div class={`rounded-lg bg-white border border-border flex items-center justify-center overflow-hidden shadow-sm ${logos.length > 1 ? "w-full h-16 px-3 py-2" : "w-20 h-20 p-2"}`}>
+                          <img
+                            src={inst.logo ?? "/assets/academics/institution-placeholder.svg"}
+                            alt={`${inst.name} logo`}
+                            class="max-w-full max-h-full object-contain"
+                          />
+                        </div>
+                      </a>
+                    ))}
                   </div>
                   <p class="text-center text-sm font-semibold text-primary-dark leading-snug">
-                    {academic.data.institution}
+                    {logos.map((inst, i) => (
+                      <>
+                        <a
+                          href={inst.url ?? academic.data.institutionUrl ?? "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="hover:text-primary hover:underline transition-colors"
+                        >{inst.name}</a>{i < logos.length - 1 ? " & " : ""}
+                      </>
+                    ))}
                   </p>
                 </div>
                 <!-- Profile body -->
