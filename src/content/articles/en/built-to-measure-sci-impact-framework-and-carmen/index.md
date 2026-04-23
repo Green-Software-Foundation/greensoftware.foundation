@@ -93,7 +93,7 @@ But compliance is the floor, not the ceiling. These tools bring the biggest valu
 
 None of these tools requires you to be a software engineer. Sustainability professionals can read an IF manifest and understand what it calculates. The SCI formula is simple, and Carmen's outputs are designed to feed into the dashboards and reports that engineers already use.
 
-The bigger challenge is organizational: establishing SCI as a metric that matters to your team, building it into your reporting processes, and giving your developers context to make optimizations. SCI provides the standard. IF eases the application. Carmen gives you scale. 
+The bigger challenge is organizational: establishing SCI as a metric that matters to your team, building it into your reporting processes, and giving your developers context to make optimizations. SCI provides the standard. IF eases the application. Carmen gives you scale. Working together, they make software emissions measurable. 
 
 The GSF maintains all three as open-source projects. If you want to understand and reduce the environmental impact of your software, these tools are where to start.
 
