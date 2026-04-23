@@ -236,6 +236,8 @@ const crossCuttingAreas = [
     title: "Hardware–Software Interoperability for Data Centre Sustainability",
     description:
       "Sitting at the intersection of hardware efficiency standards and operational data centre practice, this assembly addresses a critical gap: hardware-level efficiency metrics and software-level workload decisions are currently optimised in isolation. The goal is a shared framework that enables data centre operators to align workload scheduling with real-time energy and cooling constraints.",
+    link: "/assemblies/hardware-software-interoperability-for-data-centre-sustainability/",
+    linkText: "Register your interest in the assembly",
   },
 ];
 
@@ -526,21 +528,9 @@ const membershipBenefits = [
           ))}
         </div>
 
-        <div class="mt-10 rounded-2xl bg-white p-6 shadow-sm md:p-8">
-          <div class="flex gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-              <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm font-bold text-primary-dark">A transparent, collective process</p>
-              <p class="mt-2 text-sm leading-relaxed text-gray-darker">
-                There is no guaranteed outcome from submission. Every substantive proposal receives a considered review — and decisions are made collectively by the Policy Working Group, not by a single point of contact. The process has genuine governance integrity.
-              </p>
-            </div>
-          </div>
-        </div>
+        <p class="mt-8 text-xs leading-relaxed text-gray-darker/70 italic">
+          There is no guaranteed outcome from submission. Every substantive proposal receives a considered review — decisions are made collectively by the Policy Working Group, not by a single point of contact. The process has genuine governance integrity.
+        </p>
       </div>
     </div>
   </section>
@@ -591,6 +581,15 @@ const membershipBenefits = [
       </div>
     </div>
   </section>
+
+  <!-- Full member logo marquee -->
+  <LogoMarquee
+    heading="GSF member organisations"
+    bgClass="bg-accent-lightest-2"
+    fadeBgClass="from-accent-lightest-2"
+    directoryHref="https://directory.greensoftware.foundation/members/"
+    directoryText="View all members"
+  />
 
   <Testimonial
     quote="If your institution is active in any of these areas, use the submission form below. Our members' problem statements evolve as the field develops. This list is not exhaustive, and we welcome suggestions."
@@ -657,10 +656,10 @@ const membershipBenefits = [
         </div>
       </div>
 
-      <!-- Cross-Cutting Research Areas -->
+      <!-- Future Research via GSF Assemblies -->
       <div class="mt-10">
         <div class="mb-6 flex items-center gap-4">
-          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Cross-Cutting Research Areas</h3>
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Future Research via GSF Assemblies Powered by the Harmony Tool</h3>
           <div class="h-px flex-1 bg-accent-lighter"></div>
         </div>
         <p class="mb-6 text-sm text-gray-darker">Active initiatives feeding into the standards pipeline — where academic collaboration is being actively sought.</p>
@@ -684,71 +683,70 @@ const membershipBenefits = [
   <!-- Green AI Committee full-width section -->
   <section class="bg-primary py-16 md:py-20">
     <div class="container">
-      <!-- Centred header -->
-      <div class="text-center">
-        <p class="mb-4 text-xs font-bold uppercase tracking-widest text-accent">GSF Committee</p>
+      <!-- Header -->
+      <div class="mb-10">
+        <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">GSF Committee</p>
         <h2 class="text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">Green AI Committee</h2>
       </div>
 
-      <!-- Two-column cards — one paragraph each, clearly labelled -->
-      <div class="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-2">
-        <div class="rounded-2xl bg-white/10 p-6 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Policy &amp; Standards</p>
-          <p class="text-base leading-relaxed text-white/90">
-            The Green AI Committee is GSF's dedicated policy and standards body responding to EU AI Act obligations — and was an active contributor to the SCI for AI ratification process. It coordinates GSF's collective technical response to AI environmental regulation across member organisations, translating industry deployment realities into policy positions that regulators can act on.
-          </p>
-        </div>
-        <div class="rounded-2xl bg-white/10 p-6 md:p-8">
-          <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">For Academic Researchers</p>
-          <p class="text-base leading-relaxed text-white/90">
-            For academic researchers working at the intersection of AI, environmental assessment, and regulatory compliance, the Green AI Committee is the point of engagement — connecting academic expertise directly to the policy and standards processes where it carries weight.
-          </p>
-        </div>
-      </div>
-
-      <!-- CTAs centred -->
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          href="/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
-          class="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent hover:text-primary-dark"
-        >
-          EU AI Act analysis →
-        </a>
-        <a
-          href="#submission-form"
-          class="inline-block rounded-lg border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
-        >
-          Express your interest →
-        </a>
-      </div>
-
-      <!-- Committee Members — unified grid -->
-      <div class="mx-auto mt-14 max-w-5xl">
-        <div class="mb-8 flex items-center gap-4">
-          <p class="shrink-0 text-xs font-bold uppercase tracking-widest text-white/50">Committee Members</p>
-          <div class="h-px flex-1 bg-white/20"></div>
+      <!-- Left-right layout: text left, members right -->
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <!-- Left: text boxes + CTAs -->
+        <div class="flex flex-col gap-5">
+          <div class="rounded-2xl bg-white/10 p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Policy &amp; Standards</p>
+            <p class="text-base leading-relaxed text-white/90">
+              The Green AI Committee is GSF's dedicated policy and standards body responding to EU AI Act obligations — and was an active contributor to the SCI for AI ratification process. It coordinates GSF's collective technical response to AI environmental regulation across member organisations, translating industry deployment realities into policy positions that regulators can act on.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">For Academic Researchers</p>
+            <p class="text-base leading-relaxed text-white/90">
+              For academic researchers working at the intersection of AI, environmental assessment, and regulatory compliance, the Green AI Committee is the point of engagement — connecting academic expertise directly to the policy and standards processes where it carries weight.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a
+              href="/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
+              class="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent hover:text-primary-dark"
+            >
+              EU AI Act analysis →
+            </a>
+            <a
+              href="#submission-form"
+              class="inline-block rounded-lg border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              Express your interest →
+            </a>
+          </div>
         </div>
 
-        <!-- All members in a single 4-column grid; co-chairs distinguished by badge -->
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {committeeWithLogos.map((member) => (
-            <div class="flex items-center gap-4 rounded-xl bg-white p-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-accent-lightest-2 p-2">
-                {member.logo ? (
-                  <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
-                ) : (
-                  <span class="text-lg font-extrabold text-primary">{member.initials}</span>
-                )}
+        <!-- Right: Committee members grid -->
+        <div>
+          <div class="mb-5 flex items-center gap-4">
+            <p class="shrink-0 text-xs font-bold uppercase tracking-widest text-white/50">Committee Members</p>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {committeeWithLogos.map((member) => (
+              <div class="flex items-center gap-3 rounded-xl bg-white p-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-accent-lightest-2 p-1.5">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-base font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div class="min-w-0">
+                  <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
+                  <p class="mt-0.5 truncate text-xs text-gray-darker">{member.org}</p>
+                  {member.role === "Co-Chair" && (
+                    <span class="mt-1 inline-block rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
+                  )}
+                </div>
               </div>
-              <div class="min-w-0">
-                <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
-                <p class="mt-0.5 truncate text-xs text-gray-darker">{member.org}</p>
-                {member.role === "Co-Chair" && (
-                  <span class="mt-1.5 inline-block rounded-full bg-accent px-2 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
-                )}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -757,7 +755,15 @@ const membershipBenefits = [
   <!-- Section 5b: Active GSF Policy Engagements -->
   <section class="bg-white py-16 md:py-20">
     <div class="container">
-      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Active GSF Policy Engagements</h2>
+      <div class="flex flex-wrap items-baseline gap-4">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Active GSF Policy Engagements</h2>
+        <a
+          href="https://greensoftware.foundation/policy/"
+          class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+        >
+          About our policy work →
+        </a>
+      </div>
       <p class="mt-4 max-w-2xl text-base text-primary-dark md:text-lg">
         GSF participates directly in regulatory consultations and policy formation. Academic researchers working in these areas can contribute formal expertise via GSF membership.
       </p>
