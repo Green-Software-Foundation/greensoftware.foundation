@@ -742,10 +742,11 @@ const membershipBenefits = [
             <div class="h-px flex-1 bg-white/20"></div>
           </div>
 
-          <!-- Co-chairs: featured, larger cards -->
+          <!-- Co-chairs: featured, horizontal layout (logo left, text right) -->
           <div class="mb-3 grid gap-3 sm:grid-cols-2">
             {committeeWithLogos.filter((m) => m.role === "Co-Chair").map((member) => (
-              <div class="flex flex-col items-center gap-3 rounded-xl bg-white p-5 text-center">
+              <div class="relative flex items-center gap-4 rounded-xl bg-white p-5">
+                <span class="absolute right-3 top-3 rounded-full bg-accent px-2.5 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
                 <div class="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl p-1">
                   {member.logo ? (
                     <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
@@ -753,8 +754,7 @@ const membershipBenefits = [
                     <span class="text-xl font-extrabold text-primary">{member.initials}</span>
                   )}
                 </div>
-                <div>
-                  <span class="mb-1 inline-block rounded-full bg-accent px-2.5 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
+                <div class="min-w-0 pr-14">
                   <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
                   <p class="mt-0.5 text-xs text-gray-darker">{member.org}</p>
                 </div>
