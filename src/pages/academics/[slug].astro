@@ -22,6 +22,7 @@ const {
   title,
   institution,
   institutionUrl,
+  institutionLogos = [],
   summary,
   researchMission,
   aboutParagraphs = [],
@@ -140,6 +141,30 @@ function parseLinks(text: string): string {
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
                 </a>
               ))}
+            </div>
+          )}
+
+          {institutionLogos.length > 0 && (
+            <div class="mt-8 pt-8 border-t border-white/15">
+              <p class="text-xs font-bold uppercase tracking-widest text-white/50 mb-4">Research Institutions</p>
+              <div class="flex flex-wrap gap-3">
+                {institutionLogos.map((inst) => (
+                  <a
+                    href={inst.url ?? "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/35 px-4 py-3 transition-all"
+                  >
+                    {inst.logo && (
+                      <div class="w-24 h-9 bg-white rounded-md flex items-center justify-center overflow-hidden shrink-0">
+                        <img src={inst.logo} alt={inst.name} class="w-full h-full object-contain p-1" />
+                      </div>
+                    )}
+                    <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors leading-tight max-w-[200px]">{inst.name}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-white/30 group-hover:text-white/60 transition-colors shrink-0"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
