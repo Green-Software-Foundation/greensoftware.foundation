@@ -505,33 +505,6 @@ const membershipBenefits = [
         </div>
       </div>
 
-      <div class="mx-auto mt-12 max-w-2xl">
-        <p class="text-center text-sm font-semibold uppercase tracking-wide text-primary">How engagement works</p>
-        <div class="mt-6 space-y-0">
-          {[
-            "Institutions submit an idea, proposal, or white paper using the form on this page.",
-            "The GSF Policy Working Group reviews all submissions and determines the appropriate form of engagement — which may include connection to a specific industry member, integration into an active Assembly or working group, or co-authorship on a GSF publication.",
-            "Where a strong match exists between a research submission and an active industry member challenge, GSF facilitates the introduction — subject to review and approval by the Policy Working Group.",
-            "Substantive collaborations may progress toward formal academic membership — available at no cost for qualifying institutions.",
-          ].map((step, i) => (
-            <div class="relative flex gap-5">
-              <div class="flex flex-col items-center">
-                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                  {i + 1}
-                </div>
-                {i < 3 && <div class="w-0.5 grow bg-primary-lighter my-1" />}
-              </div>
-              <div class={`${i < 3 ? "pb-6" : "pb-0"} pt-1.5`}>
-                <p class="text-base leading-relaxed text-primary-dark">{step}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p class="mt-8 text-xs leading-relaxed text-gray-darker/70 italic">
-          There is no guaranteed outcome from submission. Every substantive proposal receives a considered review — decisions are made collectively by the Policy Working Group, not by a single point of contact. The process has genuine governance integrity.
-        </p>
-      </div>
     </div>
   </section>
 
@@ -919,120 +892,153 @@ const membershipBenefits = [
     </div>
   </section>
 
-  <!-- Section 7: Submission Form -->
+  <!-- Section 7: Submission Form + How Engagement Works (two-column) -->
   <section id="submission-form" class="bg-white py-16 md:py-20">
     <div class="container">
-      <div class="mx-auto max-w-2xl">
-        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Submit a Proposal</h2>
-        <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
-          Submit your proposal, idea, or white paper using the form below. All submissions are reviewed by the GSF Policy Working Group, which determines next steps for engagement — including whether your research connects with an active challenge from a GSF member organisation.
-        </p>
+      <div class="grid gap-12 lg:grid-cols-[1fr_400px] lg:gap-16 xl:gap-20">
 
-        <div id="submission-form-wrap" class="mt-8">
-          <form id="academic-submission-form" class="space-y-5" novalidate>
-            <div>
-              <label for="full-name" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Full name <span class="text-primary">*</span>
-              </label>
-              <input
-                type="text"
-                id="full-name"
-                name="full-name"
-                required
-                class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-            </div>
-            <div>
-              <label for="job-title" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Job title <span class="text-primary">*</span>
-              </label>
-              <input
-                type="text"
-                id="job-title"
-                name="job-title"
-                required
-                class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-            </div>
-            <div>
-              <label for="institution" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Institution name <span class="text-primary">*</span>
-              </label>
-              <input
-                type="text"
-                id="institution"
-                name="institution"
-                required
-                class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-            </div>
-            <div>
-              <label for="email" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Email address <span class="text-primary">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-            </div>
-            <div>
-              <label for="research-area" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Brief description of your research area <span class="text-primary">*</span>
-              </label>
-              <textarea
-                id="research-area"
-                name="research-area"
-                required
-                rows={5}
-                class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              ></textarea>
-              <p class="mt-1 text-xs text-gray-darker">Max 300 words</p>
-            </div>
-            <div>
-              <label for="member-collab" class="mb-1 block text-sm font-semibold text-primary-dark">
-                Are you aware of any specific GSF member organisations you would like to explore
-                collaboration with?
-              </label>
-              <textarea
-                id="member-collab"
-                name="member-collab"
-                rows={3}
-                class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              ></textarea>
-              <p class="mt-1 text-xs text-gray-darker">Optional · Max 100 words</p>
-            </div>
-            <div class="pt-2">
-              <button
-                type="submit"
-                class="rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
-              >
-                Submit for Review
-              </button>
-            </div>
-            <p class="text-xs text-gray-darker">
-              By submitting this form you agree to GSF's{" "}
-              <a href="/privacy/" class="underline hover:text-primary-dark">privacy policy</a>.
-              Submissions are reviewed by the GSF Policy Working Group. We aim to acknowledge all
-              substantive submissions, though we do not publish a fixed response time.
-            </p>
-          </form>
+        <!-- Left: Submission Form -->
+        <div>
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Submit a Proposal</h2>
+          <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
+            Submit your proposal, idea, or white paper using the form below. All submissions are reviewed by the GSF Policy Working Group, which determines next steps for engagement — including whether your research connects with an active challenge from a GSF member organisation.
+          </p>
 
-          <div
-            id="submission-confirmation"
-            class="hidden rounded-xl border border-primary/30 bg-white px-6 py-10 text-center shadow-sm"
-          >
-            <p class="text-lg font-semibold text-primary-dark">
-              Thank you — your submission has been received.
-            </p>
-            <p class="mt-3 text-sm text-gray-darker">
-              The GSF Policy Working Group will review your proposal. We aim to acknowledge all
-              substantive submissions.
-            </p>
+          <div id="submission-form-wrap" class="mt-8">
+            <form id="academic-submission-form" class="space-y-5" novalidate>
+              <div>
+                <label for="full-name" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Full name <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="job-title" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Job title <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="job-title"
+                  name="job-title"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="institution" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Institution name <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="institution"
+                  name="institution"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="email" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Email address <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="research-area" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Brief description of your research area <span class="text-primary">*</span>
+                </label>
+                <textarea
+                  id="research-area"
+                  name="research-area"
+                  required
+                  rows={5}
+                  class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                ></textarea>
+                <p class="mt-1 text-xs text-gray-darker">Max 300 words</p>
+              </div>
+              <div>
+                <label for="member-collab" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Are you aware of any specific GSF member organisations you would like to explore
+                  collaboration with?
+                </label>
+                <textarea
+                  id="member-collab"
+                  name="member-collab"
+                  rows={3}
+                  class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                ></textarea>
+                <p class="mt-1 text-xs text-gray-darker">Optional · Max 100 words</p>
+              </div>
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+                >
+                  Submit for Review
+                </button>
+              </div>
+              <p class="text-xs text-gray-darker">
+                By submitting this form you agree to GSF's{" "}
+                <a href="/privacy/" class="underline hover:text-primary-dark">privacy policy</a>.
+                Submissions are reviewed by the GSF Policy Working Group. We aim to acknowledge all
+                substantive submissions, though we do not publish a fixed response time.
+              </p>
+            </form>
+
+            <div
+              id="submission-confirmation"
+              class="hidden rounded-xl border border-primary/30 bg-white px-6 py-10 text-center shadow-sm"
+            >
+              <p class="text-lg font-semibold text-primary-dark">
+                Thank you — your submission has been received.
+              </p>
+              <p class="mt-3 text-sm text-gray-darker">
+                The GSF Policy Working Group will review your proposal. We aim to acknowledge all
+                substantive submissions.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Right: How Engagement Works -->
+        <div class="rounded-2xl bg-accent-lightest-2 p-6 md:p-8 lg:sticky lg:top-8 lg:self-start">
+          <p class="text-xs font-bold uppercase tracking-widest text-primary">How Engagement Works</p>
+          <div class="mt-5 space-y-0">
+            {[
+              "Institutions submit an idea, proposal, or white paper using the form on this page.",
+              "The GSF Policy Working Group reviews all submissions and determines the appropriate form of engagement — which may include connection to a specific industry member, integration into an active Assembly or working group, or co-authorship on a GSF publication.",
+              "Where a strong match exists between a research submission and an active industry member challenge, GSF facilitates the introduction — subject to review and approval by the Policy Working Group.",
+              "Substantive collaborations may progress toward formal academic membership — available at no cost for qualifying institutions.",
+            ].map((step, i) => (
+              <div class="relative flex gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    {i + 1}
+                  </div>
+                  {i < 3 && <div class="w-0.5 grow bg-primary/20 my-1" />}
+                </div>
+                <div class={`${i < 3 ? "pb-5" : "pb-0"} pt-1`}>
+                  <p class="text-sm leading-relaxed text-primary-dark">{step}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="mt-6 text-xs leading-relaxed text-gray-darker/70 italic border-t border-accent-lighter pt-4">
+            There is no guaranteed outcome from submission. Every substantive proposal receives a considered review — decisions are made collectively by the Policy Working Group, not by a single point of contact. The process has genuine governance integrity.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
