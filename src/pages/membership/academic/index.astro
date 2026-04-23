@@ -522,7 +522,21 @@ const membershipBenefits = [
       <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark md:text-lg">
         GSF member organisations — spanning global banks, technology companies, infrastructure providers, and automotive manufacturers — regularly surface specific green software challenges that academic research is positioned to address.
       </p>
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    </div>
+  </section>
+
+  <!-- Full member logo marquee -->
+  <LogoMarquee
+    heading="GSF member organisations"
+    bgClass="bg-white"
+    fadeBgClass="from-white"
+    directoryHref="https://directory.greensoftware.foundation/members/"
+    directoryText="View all members"
+  />
+
+  <section class="bg-white pt-12 pb-16 md:pt-16 md:pb-20">
+    <div class="container">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {workingOnCards.map((card) => (
           card.cta ? (
             <div class="flex flex-col rounded-lg border-2 border-dashed border-primary bg-primary/5 p-5">
@@ -559,15 +573,6 @@ const membershipBenefits = [
       </div>
     </div>
   </section>
-
-  <!-- Full member logo marquee -->
-  <LogoMarquee
-    heading="GSF member organisations"
-    bgClass="bg-white"
-    fadeBgClass="from-white"
-    directoryHref="https://directory.greensoftware.foundation/members/"
-    directoryText="View all members"
-  />
 
   <Testimonial
     quote="If your institution is active in any of these areas, use the submission form below. Our members' problem statements evolve as the field develops. This list is not exhaustive, and we welcome suggestions."
