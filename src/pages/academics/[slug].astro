@@ -3,14 +3,10 @@ import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/showcase.astro";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
 import TextBlock from "@/components/text-block.astro";
-import TextWithImage from "@/components/text-with-image.astro";
-import CardGrid from "@/components/card-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import DraftBanner from "@/components/draft-banner.astro";
 import { navItems } from "@/lib/nav-items";
-import { Card } from "@/components/ui/card";
 
 export async function getStaticPaths() {
   const academics = await getCollection("academics");
@@ -26,6 +22,7 @@ const {
   name,
   title,
   institution,
+  institutionUrl,
   summary,
   researchMission,
   keyAreas = [],
@@ -33,8 +30,55 @@ const {
   affiliations = [],
   recognition = [],
   publications = {},
+  stats = [],
   links = [],
 } = academic.data;
+
+type LinkItem = { label: string; url?: string; group?: string };
+
+// Separate social/profile links for the hero strip
+const heroLinks = (links as LinkItem[]).filter(
+  (l) => l.group === "profile" && l.url && l.url !== "[to be added]"
+);
+
+// Group all links by category for the further reading section
+const groupOrder = ["profile", "research", "institutional", "books", "appearances", "other"];
+const groupLabels: Record<string, string> = {
+  profile: "Profile & CV",
+  research: "Research Output",
+  institutional: "Institutional Affiliations",
+  books: "2025 Books",
+  appearances: "Recent Appearances",
+  other: "Further Links",
+};
+
+const linkGroups = groupOrder
+  .map((g) => ({
+    id: g,
+    label: groupLabels[g],
+    items: (links as LinkItem[]).filter(
+      (l) => (l.group || "other") === g && l.url && l.url !== "[to be added]"
+    ),
+  }))
+  .filter((g) => g.items.length > 0);
+
+// Publication stats for the stats strip
+const displayStats =
+  stats.length > 0
+    ? stats
+    : [
+        publications.peerReviewed
+          ? { value: publications.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" }
+          : null,
+        publications.patents
+          ? { value: publications.patents.split("+")[0] + "+", label: "Patents" }
+          : null,
+        publications.citations
+          ? { value: publications.citations.split("+")[0] + "+", label: "Google Scholar citations" }
+          : null,
+      ].filter(Boolean);
+
+const lastName = name.split(" ").at(-1) ?? name;
 ---
 
 <Layout
@@ -54,268 +98,242 @@ const {
   {academic.data.published === false && <DraftBanner />}
 
   <div {...(academic.data.published !== false && { "data-pagefind-body": "" })}>
-    <!-- ── Breadcrumb ──────────────────────────────────────────────────────────── -->
-    <Breadcrumb
-      items={[
-        { label: "Home", href: "/" },
-        { label: "Academics", href: "/academics/" },
-        { label: name },
-      ]}
-    />
 
-    <!-- ── Hero Section ────────────────────────────────────────────────────────── -->
-    <section class="bg-primary-darker text-white py-16 md:py-20">
-      <div class="container">
+    <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+    <div class="bg-primary-darker text-white">
+      <div class="container pt-10 pb-16 md:pt-14 md:pb-20">
         <div class="max-w-4xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <!-- Profile Image -->
-            <div class="md:col-span-1">
-              <div class="aspect-square bg-gray-600 rounded-lg overflow-hidden flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="80"
-                  height="80"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  class="text-gray-400"
-                >
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-            </div>
+          <nav aria-label="Breadcrumb" class="mb-8">
+            <ol class="flex items-center gap-2 text-sm text-white/60">
+              <li>
+                <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  Home
+                </a>
+              </li>
+              <li class="text-white/30">/</li>
+              <li><a href="/academics/" class="hover:text-white transition-colors">Academics</a></li>
+              <li class="text-white/30">/</li>
+              <li class="text-white/80 truncate max-w-[300px]">{name}</li>
+            </ol>
+          </nav>
 
-            <!-- Profile Info -->
-            <div class="md:col-span-2">
-              <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">
-                Academic Member
-              </p>
-              <h1 class="font-extrabold text-4xl md:text-5xl leading-tight mb-4">
-                {name}
-              </h1>
-              <p class="text-lg text-white/90 mb-2 font-semibold">{title}</p>
-              <p class="text-white/80 mb-6">{institution}</p>
-              <p class="text-base text-white/75 leading-relaxed max-w-2xl">{summary}</p>
+          <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Academic Member</p>
+          <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">{name}</h1>
+          <p class="text-lg text-white/90 font-semibold mb-2">{title}</p>
+          <p class="text-white/60 mb-6">
+            {institutionUrl ? (
+              <a href={institutionUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline-offset-2 hover:underline">
+                {institution}
+              </a>
+            ) : institution}
+          </p>
+          <p class="text-base text-white/75 leading-relaxed max-w-3xl mb-8">{summary}</p>
+
+          {heroLinks.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {heroLinks.map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white border border-white/25 hover:border-white/60 rounded-full px-3 py-1 transition-colors"
+                >
+                  {link.label}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Stats strip ────────────────────────────────────────────────────────── -->
+    {displayStats.length > 0 && (
+      <div class="bg-accent-lightest-2 border-b border-border">
+        <div class="container py-16 md:py-20">
+          <div class="max-w-4xl mx-auto">
+            <div class={`grid gap-8 md:gap-12 items-start ${displayStats.length === 3 ? 'grid-cols-3 max-w-2xl mx-auto' : 'grid-cols-2 md:grid-cols-4'}`}>
+              {displayStats.map((stat) => (
+                <div class="text-center">
+                  <p class={`font-extrabold text-primary mb-2 leading-tight ${(stat as any).value.length > 5 ? 'text-3xl md:text-4xl' : 'text-4xl md:text-5xl'}`}>
+                    {(stat as any).value}
+                  </p>
+                  <p class="text-sm text-gray-darker leading-snug">{(stat as any).label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </section>
+    )}
 
-    <!-- ── Research Mission ────────────────────────────────────────────────────── -->
+    <!-- ── Research Mission ───────────────────────────────────────────────────── -->
     <TextBlock
       heading="*Research Mission*"
       body={researchMission}
       card
-      bgClass="bg-accent-lightest-2"
+      bgClass="bg-white"
     />
 
     <!-- ── Key Areas of Expertise ─────────────────────────────────────────────── -->
     {keyAreas.length > 0 && (
-      <section class="py-12 md:py-16 bg-white">
-        <div class="container">
-          <h2 class="font-extrabold text-3xl md:text-4xl mb-12">
-            Key Areas of <span class="text-primary">Expertise</span>
-          </h2>
+      <div class="bg-accent-lightest-2">
+        <div class="container py-16 md:py-20">
+          <div class="max-w-4xl mx-auto mb-10 text-center">
+            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+              Key Areas of <span class="font-bold text-primary">Expertise</span>
+            </h2>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {keyAreas.map((area) => (
-              <Card className="p-6 bg-accent-lightest-2 border-0 hover:shadow-lg transition-shadow">
-                <h3 class="font-extrabold text-xl mb-3 text-primary">{area.title}</h3>
-                <p class="text-gray-700 leading-relaxed">{area.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-    )}
-
-    <!-- ── Collaboration Areas ────────────────────────────────────────────────── -->
-    {collaborationAreas.length > 0 && (
-      <section class="py-12 md:py-16 bg-accent-lightest-2">
-        <div class="container">
-          <h2 class="font-extrabold text-3xl md:text-4xl mb-4">
-            Three Areas for *Collaboration*
-          </h2>
-          <p class="text-gray-700 mb-12 max-w-2xl">
-            How {name.split(" ")[name.split(" ").length - 1]}'s work directly connects to GSF initiatives
-          </p>
-
-          <div class="space-y-12">
-            {collaborationAreas.map((area, index) => (
-              <div class="bg-white rounded-lg p-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div class="md:col-span-2">
-                    <h3 class="font-extrabold text-2xl mb-3 text-primary">
-                      {area.title}
-                    </h3>
-                    {area.relevance && (
-                      <p class="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide">
-                        Focus: {area.relevance}
-                      </p>
-                    )}
-                    <p class="text-gray-700 leading-relaxed">{area.body}</p>
-                  </div>
-                  <div class="bg-primary-lighter/20 rounded-lg p-6 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="text-primary"
-                    >
-                      <path d="M12 2v20M2 12h20" />
-                    </svg>
-                  </div>
-                </div>
+              <div class="rounded-lg border bg-white p-6 shadow-sm">
+                <h3 class="text-lg font-bold text-primary mb-3">{area.title}</h3>
+                <p class="text-sm text-gray-darker leading-relaxed">{area.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    )}
+
+    <!-- ── Collaboration Areas ────────────────────────────────────────────────── -->
+    {collaborationAreas.length > 0 && (
+      <div class="bg-white">
+        <div class="container py-16 md:py-20">
+          <div class="max-w-3xl mx-auto">
+            <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Where This Work Connects</p>
+            <h2 class="font-extrabold text-3xl md:text-4xl text-primary leading-tight mb-4">
+              Three Areas for Collaboration
+            </h2>
+            <p class="text-gray-darker mb-16">
+              How {lastName}'s work directly connects to GSF initiatives
+            </p>
+
+            <div class="space-y-16">
+              {collaborationAreas.map((area, index) => (
+                <div class="relative flex gap-8">
+                  <div class="flex-none">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                      <span class="font-extrabold text-white text-sm">{index + 1}</span>
+                    </div>
+                    {index < collaborationAreas.length - 1 && (
+                      <div class="w-px bg-primary-lighter mx-auto mt-4" style="height: calc(100% + 4rem)"></div>
+                    )}
+                  </div>
+                  <div class="flex-1 pb-2">
+                    <h3 class="font-bold text-xl text-primary mb-2 leading-snug">{area.title}</h3>
+                    {area.relevance && (
+                      <p class="text-accent-darker font-extrabold text-xs uppercase tracking-widest mb-4">{area.relevance}</p>
+                    )}
+                    <p class="text-gray-darker leading-relaxed">{area.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     )}
 
     <!-- ── Affiliations & Recognition ────────────────────────────────────────── -->
-    <section class="py-12 md:py-16 bg-white">
-      <div class="container">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <!-- Affiliations -->
-          {affiliations.length > 0 && (
-            <div>
-              <h3 class="font-extrabold text-2xl mb-6">Affiliations & Leadership</h3>
-              <ul class="space-y-4">
-                {affiliations.map((affiliation) => (
-                  <li class="flex items-start gap-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="text-primary mt-1 flex-shrink-0"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="text-gray-700">{affiliation}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+    {(affiliations.length > 0 || recognition.length > 0) && (
+      <div class="bg-accent-lightest-2">
+        <div class="container py-16 md:py-20">
+          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
 
-          <!-- Recognition -->
-          {recognition.length > 0 && (
-            <div>
-              <h3 class="font-extrabold text-2xl mb-6">Experience & Recognition</h3>
-              <ul class="space-y-4">
-                {recognition.map((item) => (
-                  <li class="flex items-start gap-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="text-accent-dark mt-1 flex-shrink-0"
-                    >
-                      <circle cx="12" cy="12" r="1" />
-                      <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24" />
-                    </svg>
-                    <span class="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+            {affiliations.length > 0 && (
+              <div>
+                <p class="text-accent font-bold text-sm uppercase tracking-widest mb-6">Affiliations & Leadership</p>
+                <ul class="space-y-4">
+                  {affiliations.map((affiliation) => (
+                    <li class="flex items-start gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span class="text-gray-darker text-sm leading-relaxed">{affiliation}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-    <!-- ── Publications ────────────────────────────────────────────────────────── -->
-    {Object.keys(publications).length > 0 && (
-      <TextBlock
-        heading="Publications & Research Output"
-        body={`${publications.peerReviewed || ""} • ${publications.patents || ""} • ${publications.citations || ""}`}
-        card
-        bgClass="bg-accent-lightest-2"
-      />
-    )}
+            {recognition.length > 0 && (
+              <div>
+                <p class="text-accent font-bold text-sm uppercase tracking-widest mb-6">Experience & Background</p>
+                <ul class="space-y-4">
+                  {recognition.map((item) => (
+                    <li class="flex items-start gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+                      <span class="text-gray-darker text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-    <!-- ── Resources & Links ──────────────────────────────────────────────────── -->
-    {links.length > 0 && (
-      <section class="py-12 md:py-16 bg-white">
-        <div class="container">
-          <h2 class="font-extrabold text-3xl md:text-4xl mb-12">
-            Further Reading & <span class="text-primary">Resources</span>
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {links.map((link) => (
-              <Card className="p-6 bg-accent-lightest-2 border-0 hover:shadow-lg transition-shadow hover:bg-accent-lighter group cursor-pointer">
-                {link.url && link.url !== "[to be added]" ? (
-                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between group">
-                    <span class="font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                      {link.label}
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="text-primary group-hover:translate-x-1 transition-transform"
-                    >
-                      <path d="M7 7h10v10M7 17L17 7" />
-                    </svg>
-                  </a>
-                ) : (
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-gray-600">{link.label}</span>
-                    <span class="text-xs text-gray-400">Coming soon</span>
-                  </div>
-                )}
-              </Card>
-            ))}
           </div>
         </div>
-      </section>
+      </div>
     )}
 
-    <!-- ── Full Content ────────────────────────────────────────────────────────── -->
-    <section class="py-12 md:py-16 bg-accent-lightest-2">
-      <div class="container max-w-4xl">
-        <div class="prose prose-lg max-w-none">
+    <!-- ── Further Reading & Links ────────────────────────────────────────────── -->
+    {linkGroups.length > 0 && (
+      <div class="bg-white">
+        <div class="container py-16 md:py-20">
+          <div class="max-w-4xl mx-auto">
+            <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">Further Reading</p>
+            <h2 class="font-extrabold text-3xl md:text-4xl text-primary leading-tight mb-12">
+              Dr. {lastName}'s Work and Institutional Presence
+            </h2>
+
+            <div class="space-y-10">
+              {linkGroups.map((group) => (
+                <div>
+                  <h3 class="font-bold text-base uppercase tracking-wide text-gray-darker mb-4 pb-3 border-b border-border">
+                    {group.label}
+                  </h3>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {group.items.map((link) => (
+                      <li>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-center justify-between gap-3 rounded-lg p-3 hover:bg-accent-lightest-2 transition-colors group"
+                        >
+                          <span class="font-semibold text-sm text-primary-dark group-hover:text-primary transition-colors">
+                            {link.label}
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/40 group-hover:text-primary transition-colors shrink-0"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Full Markdown Content ──────────────────────────────────────────────── -->
+    <div class="bg-accent-lightest-2">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-3xl mx-auto prose prose-lg max-w-none">
           <Content />
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ── CTA Banner ──────────────────────────────────────────────────────────── -->
+    <!-- ── CTA Banner ─────────────────────────────────────────────────────────── -->
     <CTABanner
       heading="Interested in Collaboration?"
-      body="Get in touch with the Green Software Foundation to discuss potential partnerships and research opportunities."
-      ctas={[
-        {
-          text: "Contact Us",
-          href: "/contact/",
-          variant: "primary" as const,
-        },
-        {
-          text: "Learn More About GSF",
-          href: "/",
-          variant: "outline" as const,
-        },
-      ]}
+      body="Get in touch with the Green Software Foundation to explore research partnerships and opportunities."
+      ctaText="Contact GSF"
+      ctaHref="/contact/"
     />
+
   </div>
 
   <Footer />

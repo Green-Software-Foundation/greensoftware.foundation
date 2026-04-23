@@ -208,11 +208,20 @@ const academics = defineCollection({
         citations: z.string().optional(),
       })
       .optional(),
+    stats: z
+      .array(
+        z.object({
+          value: z.string(),
+          label: z.string(),
+        }),
+      )
+      .optional(),
     links: z
       .array(
         z.object({
           label: z.string(),
           url: z.string().optional(),
+          group: z.string().optional(),
         }),
       )
       .optional(),
