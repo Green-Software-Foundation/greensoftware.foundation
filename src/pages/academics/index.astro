@@ -8,12 +8,19 @@ import TextBlock from "@/components/text-block.astro";
 import LogoMarquee from "@/components/logo-marquee.astro";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/nav-items";
+import membersData from "@/data/members.json";
 
 const academics = (await getCollection("academics")).filter(
   (a) => a.data.published !== false
 );
 
-const institutionLogos = academics.flatMap((a) => {
+// Academic institution logos from the GSF member directory
+const academicMemberLogos = (membersData as any[])
+  .filter((m) => m.active && m.organisationType === "Academia" && m.logo && !m.hideLogo)
+  .map((m) => ({ name: m.companyName, logo: `/assets/${m.logo}`, website: m.companyWebsite || "https://greensoftware.foundation/" }));
+
+// Fall back to profile-sourced logos if no academic members exist in the directory (e.g. dev without NOTION_API_KEY)
+const profileLogos = academics.flatMap((a) => {
   const logos = a.data.institutionLogos;
   if (logos && logos.length > 0) {
     return logos.map((inst) => ({
@@ -28,6 +35,8 @@ const institutionLogos = academics.flatMap((a) => {
     website: a.data.institutionUrl ?? "https://greensoftware.foundation/",
   }];
 });
+
+const institutionLogos = academicMemberLogos.length > 0 ? academicMemberLogos : profileLogos;
 ---
 
 <Layout
