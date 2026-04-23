@@ -275,6 +275,10 @@ export const navItems = [
             label: "Projects",
             external: true,
           },
+          {
+            href: "/academics/",
+            label: "Academic Member Profiles",
+          },
         ],
       },
       {
