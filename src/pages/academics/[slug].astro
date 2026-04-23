@@ -235,11 +235,26 @@ const lastName = name.split(" ").at(-1) ?? name;
             {affiliations.length > 0 && (
               <div>
                 <p class="text-accent font-bold text-sm uppercase tracking-widest mb-6">Affiliations & Leadership</p>
-                <ul class="space-y-4">
+                <ul class="space-y-2">
                   {affiliations.map((affiliation) => (
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
-                      <span class="text-gray-darker text-sm leading-relaxed">{affiliation}</span>
+                    <li>
+                      {affiliation.url ? (
+                        <a
+                          href={affiliation.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-start gap-3 rounded-lg p-3 hover:bg-white hover:shadow-sm transition-all group"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span class="text-sm leading-relaxed text-gray-darker group-hover:text-primary transition-colors flex-1">{affiliation.label}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/30 group-hover:text-primary transition-colors shrink-0 mt-1"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      ) : (
+                        <div class="flex items-start gap-3 px-3 py-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span class="text-gray-darker text-sm leading-relaxed">{affiliation.label}</span>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -249,11 +264,26 @@ const lastName = name.split(" ").at(-1) ?? name;
             {recognition.length > 0 && (
               <div>
                 <p class="text-accent font-bold text-sm uppercase tracking-widest mb-6">Experience & Background</p>
-                <ul class="space-y-4">
+                <ul class="space-y-2">
                   {recognition.map((item) => (
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-                      <span class="text-gray-darker text-sm leading-relaxed">{item}</span>
+                    <li>
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-start gap-3 rounded-lg p-3 hover:bg-white hover:shadow-sm transition-all group"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+                          <span class="text-sm leading-relaxed text-gray-darker group-hover:text-primary transition-colors flex-1">{item.label}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/30 group-hover:text-primary transition-colors shrink-0 mt-1"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      ) : (
+                        <div class="flex items-start gap-3 px-3 py-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+                          <span class="text-gray-darker text-sm leading-relaxed">{item.label}</span>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>

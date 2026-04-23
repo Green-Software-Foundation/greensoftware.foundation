@@ -200,8 +200,22 @@ const academics = defineCollection({
         }),
       )
       .optional(),
-    affiliations: z.array(z.string()).optional(),
-    recognition: z.array(z.string()).optional(),
+    affiliations: z
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
+    recognition: z
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
     publications: z
       .object({
         peerReviewed: z.string().optional(),
