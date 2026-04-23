@@ -180,6 +180,15 @@ const academics = defineCollection({
     institution: z.string(),
     institutionUrl: z.string().optional(),
     institutionLogo: z.string().optional(),
+    institutionLogos: z
+      .array(
+        z.object({
+          name: z.string(),
+          logo: z.string().optional(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
     published: z.boolean().default(false),
     summary: z.string(),
     researchMission: z.string(),

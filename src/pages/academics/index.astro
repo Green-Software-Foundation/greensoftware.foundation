@@ -13,11 +13,21 @@ const academics = (await getCollection("academics")).filter(
   (a) => a.data.published !== false
 );
 
-const institutionLogos = academics.map((a) => ({
-  name: a.data.institution,
-  logo: a.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg",
-  website: a.data.institutionUrl ?? "https://greensoftware.foundation/",
-}));
+const institutionLogos = academics.flatMap((a) => {
+  const logos = a.data.institutionLogos;
+  if (logos && logos.length > 0) {
+    return logos.map((inst) => ({
+      name: inst.name,
+      logo: inst.logo ?? "/assets/academics/institution-placeholder.svg",
+      website: inst.url ?? a.data.institutionUrl ?? "https://greensoftware.foundation/",
+    }));
+  }
+  return [{
+    name: a.data.institution,
+    logo: a.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg",
+    website: a.data.institutionUrl ?? "https://greensoftware.foundation/",
+  }];
+});
 ---
 
 <Layout
