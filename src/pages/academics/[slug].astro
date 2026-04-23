@@ -203,25 +203,30 @@ function parseLinks(text: string): string {
     {(aboutParagraphs.length > 0 || sdgAlignment.length > 0) && (
       <div class="bg-accent-lightest-2">
         <div class="container py-16 md:py-20">
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-3xl mx-auto">
 
             <p class="text-accent font-bold text-sm uppercase tracking-widest mb-10">About</p>
 
             {aboutParagraphs.length > 0 && (
-              <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-14 mb-12">
-                <!-- First paragraph: large intro with left accent border -->
-                <div class="md:col-span-2">
-                  <div class="border-l-4 border-primary pl-6">
+              <div class="mb-14">
+                <!-- First paragraph: intro hook, large with left accent border -->
+                {aboutParagraphs[0] && (
+                  <div class="border-l-4 border-primary pl-6 py-1 mb-8">
                     <p class="text-xl font-semibold text-primary-dark leading-relaxed" set:html={parseLinks(aboutParagraphs[0])} />
                   </div>
-                </div>
+                )}
 
-                <!-- Remaining paragraphs: regular body text -->
-                <div class="md:col-span-3 flex flex-col gap-4">
-                  {aboutParagraphs.slice(1).map((para) => (
-                    <p class="text-base text-gray-darker leading-relaxed" set:html={parseLinks(para)} />
-                  ))}
-                </div>
+                <!-- Middle paragraphs (all but first and last): body text -->
+                {aboutParagraphs.slice(1, aboutParagraphs.length > 2 ? -1 : undefined).map((para) => (
+                  <p class="text-base text-gray-darker leading-relaxed mb-6" set:html={parseLinks(para)} />
+                ))}
+
+                <!-- Last paragraph (when 3+): mission callout card -->
+                {aboutParagraphs.length >= 3 && (
+                  <div class="bg-primary/5 border-l-4 border-primary rounded-r-xl px-6 py-5 mt-8">
+                    <p class="text-base text-primary-dark leading-relaxed" set:html={parseLinks(aboutParagraphs[aboutParagraphs.length - 1])} />
+                  </div>
+                )}
               </div>
             )}
 
