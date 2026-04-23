@@ -99,97 +99,99 @@ function parseLinks(text: string): string {
 
     <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
     <div class="bg-primary-darker text-white">
-      <div class="container pt-10 pb-10 md:pt-14 md:pb-14">
-        <div class="max-w-4xl mx-auto">
-          <nav aria-label="Breadcrumb" class="mb-6">
-            <ol class="flex items-center gap-2 text-sm text-white/60">
-              <li>
-                <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                  Home
+      <div class="container pt-10 pb-0 md:pt-14">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/academics/" class="hover:text-white transition-colors">Academics</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80 truncate max-w-[300px]">{name}</li>
+          </ol>
+        </nav>
+
+        <!-- Two-column: bio left, institution logos right -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 pb-10 md:pb-14">
+
+          <!-- Left: name, title, summary, links -->
+          <div class="lg:col-span-3">
+            <span class="inline-block bg-accent/20 text-accent font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5">Academic Member</span>
+            <h1 class="font-extrabold text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-tight mb-4">{name}</h1>
+            <p class="text-base md:text-lg text-white/85 font-semibold leading-snug mb-2">{title}</p>
+            <p class="text-white/55 mb-6 text-sm">
+              {institutionUrl ? (
+                <a href={institutionUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors hover:underline underline-offset-2">
+                  {institution}
                 </a>
-              </li>
-              <li class="text-white/30">/</li>
-              <li><a href="/academics/" class="hover:text-white transition-colors">Academics</a></li>
-              <li class="text-white/30">/</li>
-              <li class="text-white/80 truncate max-w-[300px]">{name}</li>
-            </ol>
-          </nav>
+              ) : institution}
+            </p>
+            <p class="text-sm md:text-base text-white/75 leading-relaxed mb-8 max-w-xl">{summary}</p>
 
-          <!-- Name, title, and summary -->
-          <div class="md:grid md:grid-cols-3 md:gap-12 md:items-start">
-            <div class="md:col-span-2">
-              <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">Academic Member</p>
-              <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">{name}</h1>
-              <p class="text-base text-white/90 font-semibold mb-1">{title}</p>
-              <p class="text-white/60 mb-5 text-sm">
-                {institutionUrl ? (
-                  <a href={institutionUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline-offset-2 hover:underline">
-                    {institution}
+            {heroLinks.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                {heroLinks.map((link) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/50 rounded-full px-4 py-1.5 transition-all"
+                  >
+                    {link.label}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
                   </a>
-                ) : institution}
-              </p>
-              <p class="text-sm text-white/75 leading-relaxed mb-6">{summary}</p>
-
-              {heroLinks.length > 0 && (
-                <div class="flex flex-wrap gap-2 mb-6">
-                  {heroLinks.map((link) => (
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white border border-white/25 hover:border-white/60 rounded-full px-3 py-1 transition-colors"
-                    >
-                      {link.label}
-                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <!-- Stats — right column on desktop, below on mobile -->
-            {displayStats.length > 0 && (
-              <div class="md:col-span-1 mt-6 md:mt-0">
-                <div class="grid grid-cols-2 gap-4">
-                  {displayStats.map((stat) => (
-                    <div class="bg-white/10 rounded-xl px-4 py-4 text-center">
-                      <p class={`font-extrabold text-accent leading-tight mb-1 ${stat.value.length > 5 ? 'text-2xl' : 'text-3xl'}`}>
-                        {stat.value}
-                      </p>
-                      <p class="text-xs text-white/60 leading-snug">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             )}
           </div>
 
-          <!-- Institution logos -->
+          <!-- Right: institution logos — prominent cards -->
           {institutionLogos.length > 0 && (
-            <div class="mt-8 pt-6 border-t border-white/15">
-              <p class="text-xs font-bold uppercase tracking-widest text-white/50 mb-3">Research Institutions</p>
-              <div class="flex flex-wrap gap-3">
-                {institutionLogos.map((inst) => (
-                  <a
-                    href={inst.url ?? "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/35 px-4 py-2.5 transition-all"
-                  >
-                    {inst.logo && (
-                      <div class="w-20 h-8 bg-white rounded-md flex items-center justify-center overflow-hidden shrink-0">
-                        <img src={inst.logo} alt={inst.name} class="w-full h-full object-contain p-1" />
-                      </div>
-                    )}
-                    <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors leading-tight max-w-[180px]">{inst.name}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-white/30 group-hover:text-white/60 transition-colors shrink-0"><path d="M7 7h10v10M7 17L17 7"/></svg>
-                  </a>
-                ))}
-              </div>
+            <div class="lg:col-span-2 flex flex-col justify-center gap-4">
+              <p class="text-xs font-bold uppercase tracking-widest text-white/40">Research Institutions</p>
+              {institutionLogos.map((inst) => (
+                <a
+                  href={inst.url ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex items-center gap-4 rounded-2xl bg-white/8 hover:bg-white/14 border border-white/12 hover:border-white/30 px-5 py-4 transition-all"
+                >
+                  {inst.logo && (
+                    <div class="w-24 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
+                      <img src={inst.logo} alt={inst.name} class="w-full h-full object-contain p-2" />
+                    </div>
+                  )}
+                  <div class="flex-1 min-w-0">
+                    <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors leading-snug block">{inst.name}</span>
+                    <span class="text-xs text-white/40 group-hover:text-white/60 transition-colors flex items-center gap-1 mt-0.5">
+                      Visit institution
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                    </span>
+                  </div>
+                </a>
+              ))}
             </div>
           )}
         </div>
+
+        <!-- Full-width stats bar -->
+        {displayStats.length > 0 && (
+          <div class="border-t border-white/15 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {displayStats.map((stat) => (
+              <div class="px-6 py-5 text-center">
+                <p class="font-extrabold text-accent text-3xl md:text-4xl leading-none mb-1">{stat.value}</p>
+                <p class="text-xs text-white/50 leading-snug">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
       </div>
     </div>
 
