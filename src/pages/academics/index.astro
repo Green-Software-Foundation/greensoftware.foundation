@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import TextBlock from "@/components/text-block.astro";
+import CardGrid from "@/components/card-grid.astro";
+import { navItems } from "@/lib/nav-items";
+
+const academics = (await getCollection("academics")).filter(
+  (a) => a.data.published !== false
+);
+
+const cards = academics.map((academic) => ({
+  heading: academic.data.name,
+  body: academic.data.summary,
+  href: `/academics/${academic.id}/`,
+  cta: "View Profile →",
+}));
+---
+
+<Layout
+  title="Academic Members — Green Software Foundation"
+  description="Distinguished academics advancing green software research and innovation in collaboration with the Green Software Foundation."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Academics" }]} />
+
+  <!-- Hero -->
+  <section class="bg-primary-darker text-white py-16 md:py-20">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4">
+          Academic Partnerships
+        </p>
+        <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Academic <span class="text-accent">Members</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
+          Distinguished academics advancing research in green software, energy-efficient AI, and sustainable computing. These researchers bring academic rigor and innovation to GSF's standards and initiatives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <TextBlock
+    heading="Building Bridges Between *Academia and Industry*"
+    body="The Green Software Foundation collaborates with leading academic institutions and researchers to advance the science of green software. Our academic partners contribute cutting-edge research, validation of our standards, and expertise in emerging areas like energy-efficient AI and neuromorphic computing."
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Academics Grid -->
+  {cards.length > 0 ? (
+    <CardGrid
+      heading="Meet Our *Academic Members*"
+      cards={cards}
+      bgClass="bg-white"
+      columns={1}
+    />
+  ) : (
+    <section class="py-12 md:py-16 bg-white">
+      <div class="container">
+        <div class="text-center py-12">
+          <p class="text-gray-600 text-lg">No published academic profiles yet.</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Footer />
+</Layout>

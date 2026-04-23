@@ -1,0 +1,328 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CardGrid from "@/components/card-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import DraftBanner from "@/components/draft-banner.astro";
+import { navItems } from "@/lib/nav-items";
+import { Card } from "@/components/ui/card";
+
+export async function getStaticPaths() {
+  const academics = await getCollection("academics");
+  return academics.map((academic) => ({
+    params: { slug: academic.id },
+    props: { academic },
+  }));
+}
+
+const { academic } = Astro.props;
+const { Content } = await render(academic);
+const {
+  name,
+  title,
+  institution,
+  summary,
+  researchMission,
+  keyAreas = [],
+  collaborationAreas = [],
+  affiliations = [],
+  recognition = [],
+  publications = {},
+  links = [],
+} = academic.data;
+---
+
+<Layout
+  title={`${name} — Academic Member | Green Software Foundation`}
+  description={summary}
+  noindex={academic.data.published === false}
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  {academic.data.published === false && <DraftBanner />}
+
+  <div {...(academic.data.published !== false && { "data-pagefind-body": "" })}>
+    <!-- ── Breadcrumb ──────────────────────────────────────────────────────────── -->
+    <Breadcrumb
+      items={[
+        { label: "Home", href: "/" },
+        { label: "Academics", href: "/academics/" },
+        { label: name },
+      ]}
+    />
+
+    <!-- ── Hero Section ────────────────────────────────────────────────────────── -->
+    <section class="bg-primary-darker text-white py-16 md:py-20">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Profile Image -->
+            <div class="md:col-span-1">
+              <div class="aspect-square bg-gray-600 rounded-lg overflow-hidden flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="text-gray-400"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="md:col-span-2">
+              <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">
+                Academic Member
+              </p>
+              <h1 class="font-extrabold text-4xl md:text-5xl leading-tight mb-4">
+                {name}
+              </h1>
+              <p class="text-lg text-white/90 mb-2 font-semibold">{title}</p>
+              <p class="text-white/80 mb-6">{institution}</p>
+              <p class="text-base text-white/75 leading-relaxed max-w-2xl">{summary}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Research Mission ────────────────────────────────────────────────────── -->
+    <TextBlock
+      heading="*Research Mission*"
+      body={researchMission}
+      card
+      bgClass="bg-accent-lightest-2"
+    />
+
+    <!-- ── Key Areas of Expertise ─────────────────────────────────────────────── -->
+    {keyAreas.length > 0 && (
+      <section class="py-12 md:py-16 bg-white">
+        <div class="container">
+          <h2 class="font-extrabold text-3xl md:text-4xl mb-12">
+            Key Areas of <span class="text-primary">Expertise</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {keyAreas.map((area) => (
+              <Card className="p-6 bg-accent-lightest-2 border-0 hover:shadow-lg transition-shadow">
+                <h3 class="font-extrabold text-xl mb-3 text-primary">{area.title}</h3>
+                <p class="text-gray-700 leading-relaxed">{area.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- ── Collaboration Areas ────────────────────────────────────────────────── -->
+    {collaborationAreas.length > 0 && (
+      <section class="py-12 md:py-16 bg-accent-lightest-2">
+        <div class="container">
+          <h2 class="font-extrabold text-3xl md:text-4xl mb-4">
+            Three Areas for *Collaboration*
+          </h2>
+          <p class="text-gray-700 mb-12 max-w-2xl">
+            How {name.split(" ")[name.split(" ").length - 1]}'s work directly connects to GSF initiatives
+          </p>
+
+          <div class="space-y-12">
+            {collaborationAreas.map((area, index) => (
+              <div class="bg-white rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="md:col-span-2">
+                    <h3 class="font-extrabold text-2xl mb-3 text-primary">
+                      {area.title}
+                    </h3>
+                    {area.relevance && (
+                      <p class="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide">
+                        Focus: {area.relevance}
+                      </p>
+                    )}
+                    <p class="text-gray-700 leading-relaxed">{area.body}</p>
+                  </div>
+                  <div class="bg-primary-lighter/20 rounded-lg p-6 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="text-primary"
+                    >
+                      <path d="M12 2v20M2 12h20" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- ── Affiliations & Recognition ────────────────────────────────────────── -->
+    <section class="py-12 md:py-16 bg-white">
+      <div class="container">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Affiliations -->
+          {affiliations.length > 0 && (
+            <div>
+              <h3 class="font-extrabold text-2xl mb-6">Affiliations & Leadership</h3>
+              <ul class="space-y-4">
+                {affiliations.map((affiliation) => (
+                  <li class="flex items-start gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="text-primary mt-1 flex-shrink-0"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span class="text-gray-700">{affiliation}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <!-- Recognition -->
+          {recognition.length > 0 && (
+            <div>
+              <h3 class="font-extrabold text-2xl mb-6">Experience & Recognition</h3>
+              <ul class="space-y-4">
+                {recognition.map((item) => (
+                  <li class="flex items-start gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="text-accent-dark mt-1 flex-shrink-0"
+                    >
+                      <circle cx="12" cy="12" r="1" />
+                      <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24" />
+                    </svg>
+                    <span class="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Publications ────────────────────────────────────────────────────────── -->
+    {Object.keys(publications).length > 0 && (
+      <TextBlock
+        heading="Publications & Research Output"
+        body={`${publications.peerReviewed || ""} • ${publications.patents || ""} • ${publications.citations || ""}`}
+        card
+        bgClass="bg-accent-lightest-2"
+      />
+    )}
+
+    <!-- ── Resources & Links ──────────────────────────────────────────────────── -->
+    {links.length > 0 && (
+      <section class="py-12 md:py-16 bg-white">
+        <div class="container">
+          <h2 class="font-extrabold text-3xl md:text-4xl mb-12">
+            Further Reading & <span class="text-primary">Resources</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {links.map((link) => (
+              <Card className="p-6 bg-accent-lightest-2 border-0 hover:shadow-lg transition-shadow hover:bg-accent-lighter group cursor-pointer">
+                {link.url && link.url !== "[to be added]" ? (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between group">
+                    <span class="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                      {link.label}
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="text-primary group-hover:translate-x-1 transition-transform"
+                    >
+                      <path d="M7 7h10v10M7 17L17 7" />
+                    </svg>
+                  </a>
+                ) : (
+                  <div class="flex items-center justify-between">
+                    <span class="font-semibold text-gray-600">{link.label}</span>
+                    <span class="text-xs text-gray-400">Coming soon</span>
+                  </div>
+                )}
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- ── Full Content ────────────────────────────────────────────────────────── -->
+    <section class="py-12 md:py-16 bg-accent-lightest-2">
+      <div class="container max-w-4xl">
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ──────────────────────────────────────────────────────────── -->
+    <CTABanner
+      heading="Interested in Collaboration?"
+      body="Get in touch with the Green Software Foundation to discuss potential partnerships and research opportunities."
+      ctas={[
+        {
+          text: "Contact Us",
+          href: "/contact/",
+          variant: "primary" as const,
+        },
+        {
+          text: "Learn More About GSF",
+          href: "/",
+          variant: "outline" as const,
+        },
+      ]}
+    />
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  :global(.prose a) {
+    @apply text-primary hover:text-primary-dark transition-colors;
+  }
+</style>

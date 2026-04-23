@@ -1,0 +1,91 @@
+---
+name: "Prof. Dr. Cristian Axenie"
+title: "Professor of Artificial Intelligence & Neuromorphic Computing Solutions Group Lead"
+institution: "Technische Hochschule Nürnberg Georg Simon Ohm & Fraunhofer IIS"
+institutionUrl: "https://www.th-nuernberg.de/"
+published: false
+summary: "Dr. Axenie's entire research programme is built around making AI systems radically more energy-efficient. He is one of the few academics in Europe whose technical output maps directly onto the problem that SCI for AI is trying to solve at the measurement and standards layer."
+researchMission: "Deploying algorithms on energy-efficient compute systems, from embedded devices to edge devices, with a specific focus on green, scalable, and sustainable learning and inference."
+keyAreas:
+  - title: "Energy-Efficient AI & TinyML"
+    description: "Research agenda explicitly targeting reducing AI inference to milliwatt-scale power consumption — moving the industry from GW to mW. Teaches TinyML every term to Computer Science undergraduates, with practical applications for embedded and edge AI deployment."
+  - title: "Neuromorphic Computing"
+    description: "Leading Fraunhofer IIS's Neuromorphic Computing Solutions Group, working on hardware for AI systems that consume orders of magnitude less energy than conventional deep learning implementations."
+  - title: "AI Policy & Standards"
+    description: "Steering Committee Member of the ITU/UN AI for Good Impact Initiative, operating at the policy altitude where GSF's Policy Working Group builds influence, combining deep technical credibility with active international standards engagement."
+collaborationAreas:
+  - title: "Green AI Measurement and the SCI for AI Specification"
+    body: "The SPICES Lab's research agenda explicitly targets reducing AI inference to milliwatt-scale power consumption — framed as moving the industry away from GW power consumption to mW. This is the hardware-software co-design evidence base that the SCI for AI standard needs: real measurement data from real deployments, not theoretical projections. Dr. Axenie teaches TinyML every term to Computer Science undergraduates, and his lab's TinyAI research is directly applicable to the efficient-AI-deployment question that GSF's EU AI Act and SCI for AI policy work is navigating."
+    relevance: "SCI for AI measurement, TinyML standards"
+  - title: "Neuromorphic Computing as a Practical Path to Energy-Efficient AI Infrastructure"
+    body: "His Fraunhofer IIS group is working on hardware for AI systems that consume orders of magnitude less energy than conventional deep learning implementations — directly relevant to members working on data centre efficiency, edge AI deployment, or infrastructure carbon reduction. The broader neuromorphic computing ecosystem in Bavaria is emerging as a significant regional cluster in this space, with Dr. Axenie playing a central coordinating role."
+    relevance: "Data centre efficiency, edge AI deployment"
+  - title: "Standards and Policy at the ITU/UN Level"
+    body: "As a Steering Committee Member of the ITU/UN AI for Good Impact Initiative — which develops strategic frameworks aligned with UN SDGs through to 2030 — Dr. Axenie operates at exactly the policy altitude where GSF's own Policy Working Group is building influence. For members navigating multilateral AI governance and sustainability reporting obligations, this is a rare combination: deep technical credibility plus active international standards engagement."
+    relevance: "AI governance, UN SDG alignment"
+affiliations:
+  - "High Tech Agenda Bayern Professorship of Artificial Intelligence at TH Nürnberg Georg Simon Ohm"
+  - "Group Leader, Neuromorphic Computing Solutions Group at Fraunhofer IIS (funded by Fraunhofer Attract Research Grant)"
+  - "Steering Committee Member, ITU/UN AI for Good Impact Initiative"
+  - "Guest Speaker, Alan Turing Institute"
+  - "Senior Member, IEEE"
+  - "Group Leader, Applied Antifragility Research Group"
+  - "Board Member, Neuromorphic Computing Labs of Northern Bavaria"
+recognition:
+  - "15+ years of academic research"
+  - "10+ years of industrial research"
+  - "6 years as Staff Research Engineer at Huawei's largest R&D centre outside China"
+  - "Principal Investigator at the Audi Konfuzius-Institut Ingolstadt Laboratory"
+publications:
+  peerReviewed: "50+ peer-reviewed publications"
+  patents: "10+ patents"
+  citations: "510+ citations across TinyAI, multisensory fusion, control theory, and neuromorphic systems"
+links:
+  - label: "Personal Research Profile"
+    url: "[to be added]"
+  - label: "SPICES Lab"
+    url: "[to be added]"
+  - label: "TH Nürnberg Faculty Page"
+    url: "[to be added]"
+  - label: "LinkedIn"
+    url: "[to be added]"
+  - label: "ResearchGate"
+    url: "[to be added]"
+  - label: "Google Scholar"
+    url: "[to be added]"
+  - label: "GitHub"
+    url: "[to be added]"
+  - label: "ITU/UN AI for Good"
+    url: "[to be added]"
+  - label: "Full CV"
+    url: "[to be added]"
+---
+
+## About
+
+Dr. Axenie is not arriving at green software from an adjacent field — his entire research programme is built around making AI systems radically more energy-efficient. He holds the High Tech Agenda Bayern Professorship of Artificial Intelligence at TH Nürnberg Georg Simon Ohm and simultaneously leads the Neuromorphic Computing Solutions Group at Fraunhofer IIS, funded by the competitive Fraunhofer Attract Research Grant.
+
+He is a Steering Committee Member of the ITU/UN AI for Good Impact Initiative, a Guest Speaker at the Alan Turing Institute, a Senior Member of IEEE, and serves as Group Leader of the Applied Antifragility Research Group and as a Board Member of Neuromorphic Computing Labs of Northern Bavaria. He holds 50+ peer-reviewed publications and 10+ patents, and brings 15+ years of academic research combined with 10+ years of industrial research — including six years as Staff Research Engineer at Huawei's largest R&D centre outside China, and as Principal Investigator at the Audi Konfuzius-Institut Ingolstadt Laboratory.
+
+## Research Focus: The SPICES Lab
+
+His SPICES Lab's stated mission — deploying algorithms on energy-efficient compute systems, from embedded devices to edge devices, with a specific focus on "green, scalable, and sustainable learning and inference" — places him squarely inside the territory GSF's Green AI Committee and SCI for AI Assembly are actively mapping.
+
+The research explicitly maps onto:
+- **SDG 9** (Industry and Infrastructure)
+- **SDG 11** (Sustainable Cities)
+- **SDG 13** (Climate Action)
+
+These align with GSF's own policy positioning on sustainability and AI governance.
+
+## Recent Publications & Books
+
+Both published by Springer Nature and foreworded by Nassim Taleb:
+- **Applied Antifragility in Technical Systems: From Principles to Applications** — traffic engineering, robotics, and control systems
+- **Applied Antifragility in Natural Systems: From Principles to Applications** — oncology, neuroscience, and ecology
+
+## Key Roles & Recognition
+
+- **Leadership roles** across academic institutions, research consortia, and international standards bodies
+- **Regional coordinator** for the TinyAI Bayern Initiative
+- **Recent speaker** at Beyond Silicon 2026 (April 2026, Fraunhofer IIS Nürnberg) on "Neuromorphic Technology for Industrial Streamlined Solutions"
