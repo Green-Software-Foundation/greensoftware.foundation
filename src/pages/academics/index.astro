@@ -5,19 +5,12 @@ import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import TextBlock from "@/components/text-block.astro";
-import CardGrid from "@/components/card-grid.astro";
+import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/nav-items";
 
 const academics = (await getCollection("academics")).filter(
   (a) => a.data.published !== false
 );
-
-const cards = academics.map((academic) => ({
-  title: academic.data.name,
-  description: academic.data.summary,
-  ctaHref: `/academics/${academic.id}/`,
-  ctaText: "View Profile →",
-}));
 ---
 
 <Layout
@@ -60,13 +53,54 @@ const cards = academics.map((academic) => ({
   />
 
   <!-- Academics Grid -->
-  {cards.length > 0 ? (
-    <CardGrid
-      heading="Meet Our *Academic Members*"
-      cards={cards}
-      bgClass="bg-white"
-      columns={2}
-    />
+  {academics.length > 0 ? (
+    <section class="py-12 md:py-16 lg:py-20 bg-white">
+      <div class="container">
+        <div class="mb-8 md:mb-10 text-center">
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+            Meet Our <span class="font-bold text-primary">Academic Members</span>
+          </h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          {academics.map((academic) => {
+            const logoSrc = academic.data.institutionLogo ?? "/assets/academics/institution-placeholder.svg";
+            return (
+              <div class="flex flex-col rounded-xl border bg-white shadow-sm overflow-hidden">
+                <!-- Institution header -->
+                <div class="bg-accent-lightest-2 px-6 py-5 flex flex-col items-center gap-3 border-b border-border">
+                  <div class="w-20 h-20 rounded-lg bg-white border border-border flex items-center justify-center overflow-hidden shadow-sm">
+                    <img
+                      src={logoSrc}
+                      alt={`${academic.data.institution} logo`}
+                      class="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <p class="text-center text-sm font-semibold text-primary-dark leading-snug">
+                    {academic.data.institution}
+                  </p>
+                </div>
+                <!-- Profile body -->
+                <div class="flex flex-col flex-grow p-6">
+                  <p class="text-xs font-bold uppercase tracking-widest text-accent mb-1">Academic Member</p>
+                  <h3 class="text-xl font-extrabold text-primary leading-snug mb-1">
+                    {academic.data.name}
+                  </h3>
+                  <p class="text-sm text-gray-darker mb-4 leading-snug">{academic.data.title}</p>
+                  <p class="text-sm text-gray-darker leading-relaxed flex-grow">
+                    {academic.data.summary}
+                  </p>
+                  <div class="mt-6">
+                    <a href={`/academics/${academic.id}/`}>
+                      <Button variant="primary" className="w-full">View Profile →</Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   ) : (
     <section class="py-12 md:py-16 bg-white">
       <div class="container">

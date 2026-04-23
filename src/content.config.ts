@@ -179,6 +179,7 @@ const academics = defineCollection({
     title: z.string(),
     institution: z.string(),
     institutionUrl: z.string().optional(),
+    institutionLogo: z.string().optional(),
     published: z.boolean().default(false),
     summary: z.string(),
     researchMission: z.string(),
