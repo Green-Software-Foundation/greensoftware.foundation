@@ -34,12 +34,17 @@ const {
   links = [],
 } = academic.data;
 
-type LinkItem = { label: string; url?: string; group?: string };
+type Stat = { value: string; label: string };
+type ResolvedLink = { label: string; url: string; group: string };
+
+const resolvedLinks: ResolvedLink[] = links
+  .filter((l): l is { label: string; url: string; group?: string } =>
+    typeof l.url === "string" && l.url !== "" && l.url !== "[to be added]"
+  )
+  .map((l) => ({ label: l.label, url: l.url, group: l.group ?? "other" }));
 
 // Separate social/profile links for the hero strip
-const heroLinks = (links as LinkItem[]).filter(
-  (l) => l.group === "profile" && l.url && l.url !== "[to be added]"
-);
+const heroLinks = resolvedLinks.filter((l) => l.group === "profile");
 
 // Group all links by category for the further reading section
 const groupOrder = ["profile", "research", "institutional", "books", "appearances", "other"];
@@ -55,28 +60,20 @@ const groupLabels: Record<string, string> = {
 const linkGroups = groupOrder
   .map((g) => ({
     id: g,
-    label: groupLabels[g],
-    items: (links as LinkItem[]).filter(
-      (l) => (l.group || "other") === g && l.url && l.url !== "[to be added]"
-    ),
+    label: groupLabels[g] ?? g,
+    items: resolvedLinks.filter((l) => l.group === g),
   }))
   .filter((g) => g.items.length > 0);
 
 // Publication stats for the stats strip
-const displayStats =
-  stats.length > 0
-    ? stats
-    : [
-        publications.peerReviewed
-          ? { value: publications.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" }
-          : null,
-        publications.patents
-          ? { value: publications.patents.split("+")[0] + "+", label: "Patents" }
-          : null,
-        publications.citations
-          ? { value: publications.citations.split("+")[0] + "+", label: "Google Scholar citations" }
-          : null,
-      ].filter(Boolean);
+function buildFallbackStats(pub: typeof publications): Stat[] {
+  const result: Stat[] = [];
+  if (pub.peerReviewed) result.push({ value: pub.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" });
+  if (pub.patents) result.push({ value: pub.patents.split("+")[0] + "+", label: "Patents" });
+  if (pub.citations) result.push({ value: pub.citations.split("+")[0] + "+", label: "Google Scholar citations" });
+  return result;
+}
+const displayStats: Stat[] = stats.length > 0 ? stats : buildFallbackStats(publications);
 
 const lastName = name.split(" ").at(-1) ?? name;
 ---
@@ -157,10 +154,10 @@ const lastName = name.split(" ").at(-1) ?? name;
             <div class={`grid gap-8 md:gap-12 items-start ${displayStats.length === 3 ? 'grid-cols-3 max-w-2xl mx-auto' : 'grid-cols-2 md:grid-cols-4'}`}>
               {displayStats.map((stat) => (
                 <div class="text-center">
-                  <p class={`font-extrabold text-primary mb-2 leading-tight ${(stat as any).value.length > 5 ? 'text-3xl md:text-4xl' : 'text-4xl md:text-5xl'}`}>
-                    {(stat as any).value}
+                  <p class={`font-extrabold text-primary mb-2 leading-tight ${stat.value.length > 5 ? 'text-3xl md:text-4xl' : 'text-4xl md:text-5xl'}`}>
+                    {stat.value}
                   </p>
-                  <p class="text-sm text-gray-darker leading-snug">{(stat as any).label}</p>
+                  <p class="text-sm text-gray-darker leading-snug">{stat.label}</p>
                 </div>
               ))}
             </div>

@@ -3,7 +3,7 @@ name: "Prof. Dr. Cristian Axenie"
 title: "Professor of Artificial Intelligence & Neuromorphic Computing Solutions Group Lead"
 institution: "Technische Hochschule Nürnberg Georg Simon Ohm & Fraunhofer IIS"
 institutionUrl: "https://www.th-nuernberg.de/en/person/axenie-cristian/"
-published: false
+published: true
 summary: "Dr. Axenie's entire research programme is built around making AI systems radically more energy-efficient. He is one of the few academics in Europe whose technical output maps directly onto the problem that SCI for AI is trying to solve at the measurement and standards layer."
 researchMission: "Deploying algorithms on energy-efficient compute systems, from embedded devices to edge devices, with a specific focus on green, scalable, and sustainable learning and inference."
 stats:
