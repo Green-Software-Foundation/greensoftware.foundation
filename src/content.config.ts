@@ -255,6 +255,7 @@ const academics = defineCollection({
           label: z.string(),
           url: z.string().optional(),
           group: z.string().optional(),
+          cover: z.string().optional(),
         }),
       )
       .optional(),
