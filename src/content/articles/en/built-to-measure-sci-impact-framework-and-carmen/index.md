@@ -63,7 +63,7 @@ IF also comes with practical tooling for the day-to-day work of carbon measureme
 
 The IF was designed to be flexible and general-purpose, but it doesn’t provide enterprise-scale visibility into which applications and which workloads have the biggest impact. 
 
-When Amadeus, a company that processes approximately three billion flight search requests every day, faced this challenge in 2022, measuring emissions across hundreds of applications wasn’t possible with existing solutions. To solve the problem, their engineering team built Carmen, a measurement engine that implements IF across cloud infrastructure and Kubernetes clusters. 
+When Amadeus, a company that processes approximately three billion flight search requests every day, faced this challenge in 2022, they couldn't measure emissions across hundreds of applications using existing solutions. To solve this problem, their engineering team built Carmen, a measurement engine that implements IF across cloud infrastructure and Kubernetes clusters. 
 
 > "Carmen is the enterprise version of the IF." —Florent Morel, Carmen Project Lead and Head of Green IT at Amadeus 
 
