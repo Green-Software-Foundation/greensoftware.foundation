@@ -37,11 +37,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     cta: "Read more →",
   }));
 
-// Change 8: Switch secondary CTA from webinar to community after April 22
-const webinarDate = new Date('2026-04-23T00:00:00Z');
-const secondaryCTA = new Date() < webinarDate
-  ? { text: "Register for Webinar", variant: "outline" as const, href: "https://zoom.us/webinar/register/WN_E2YV9ntmT7WdYQY70frx_Q#/registration" }
-  : { text: "Join the Carmen community", variant: "outline" as const, href: "https://grnsft.org/mov-plat-carmen" };
+const secondaryCTA = { text: "Watch the Webinar Recording", variant: "outline" as const, href: "https://grnsft.org/mov-plat-carmen-what" };
 ---
 
 <Layout
@@ -73,7 +69,7 @@ const secondaryCTA = new Date() < webinarDate
     subtitle="Most organisations can estimate their total carbon footprint, but can't answer the harder question: which applications are responsible? Without that visibility, you can't engage engineers on reduction or tell them where to focus. Carmen solves this."
     body="Most organisations can estimate their total carbon footprint, but can't answer a harder question: which applications are responsible? Carmen bridges that gap, deployable across your Kubernetes clusters and cloud services, delivering per-application SCI measurements that are transparent, auditable, and reproducible without requiring any custom implementation."
     ctas={[
-      { text: "Try Carmen", variant: "primary", href: "https://github.com/Green-Software-Foundation/if-carmen" },
+      { text: "Try Carmen", variant: "primary", href: "https://grnsft.org/carmen-github" },
       secondaryCTA,
     ]}
     imageSrc="/assets/tools/carmen/hero-illustration.svg"
@@ -199,14 +195,14 @@ const secondaryCTA = new Date() < webinarDate
         title: "Quickstart Guide",
         description: "Step-by-step instructions for integrating Carmen with Prometheus and Kube State Metrics in your cluster.",
         ctaText: "Follow the Quickstart",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
+        ctaHref: "https://grnsft.org/carmen-quick-start",
       },
       {
         icon: "/assets/tools/carmen/folders.svg",
         title: "GitHub Repository",
         description: "Carmen's source code, manifests, architecture documentation, and contribution guidelines.",
         ctaText: "View on GitHub",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen",
+        ctaHref: "https://grnsft.org/carmen-github",
       },
       {
         icon: "/assets/tools/carmen/icon-GSF.svg",
@@ -280,7 +276,7 @@ const secondaryCTA = new Date() < webinarDate
         title: "Try Carmen",
         description: "Deploy Carmen in your Kubernetes environment using the quickstart guide",
         ctaText: "Deploy Carmen",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen#quickstart",
+        ctaHref: "https://grnsft.org/carmen-quick-start",
       },
       {
         icon: "/assets/tools/carmen/speech-bubbles.svg",
@@ -294,14 +290,14 @@ const secondaryCTA = new Date() < webinarDate
         title: "Contribute",
         description: "Pick up a good first issue on GitHub and help improve Carmen for everyone",
         ctaText: "Browse Issues",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22",
+        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/issues",
       },
       {
         icon: "/assets/tools/carmen/human1.svg",
-        title: "21 Contributors and Growing",
-        description: "Carmen was built by a team of 21 engineers at Amadeus and is now open to organisations worldwide.",
-        ctaText: "View Contributors",
-        ctaHref: "https://github.com/Green-Software-Foundation/if-carmen/graphs/contributors",
+        title: "Join the Mailing List",
+        description: "Subscribe to the Carmen community mailing list to stay up to date with news, releases, and discussions.",
+        ctaText: "Join the Mailing List",
+        ctaHref: "https://groups.google.com/a/greensoftware.foundation/g/carmen-community",
       },
     ]}
     bgClass="bg-accent-lightest-2"
