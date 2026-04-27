@@ -1,6 +1,6 @@
 ---
-title: 'Built to Measure: SCI, Impact Framework, and Carmen'
-teaserText: How open-source tools are helping organizations measure and reduce their software carbon emissions.
+title: 'Built to Measure: How SCI, Impact Framework, and Carmen Make Software Measurable'
+teaserText: Three open source tools helping organizations measure and reduce their software carbon emissions.
 date: 2026-04-21
 published: true
 summary: Three GSF tools, SCI, Impact Framework, and Carmen, work together to make software carbon measurable, auditable, and actionable for organizations worldwide.
