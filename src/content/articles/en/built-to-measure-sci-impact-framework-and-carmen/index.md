@@ -25,11 +25,11 @@ In 2021, when GSF was founded, our goal was to make software emissions visible a
 
 While existing metrics work well for annual reporting, they are not accurate enough for real-time tracking and exposing information that helps organizations and practitioners make better optimization decisions, set reduction targets, and prepare for regulatory requirements. 
 
-The Software Carbon Intensity (SCI) specification, the Impact Framework (IF), and Carmen (Carbon Measurement Engine) are three complementary tools from the Green Software Foundation designed to address these gaps. 
+The Software Carbon Intensity (SCI) specification, the Impact Framework (IF), and Carmen (Carbon Measurement Engine) are three complementary tools from the Green Software Foundation designed to address this gap. 
 
 ## SCI: a Universal Yardstick for Software Carbon
 
-The SCI specification ([ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)) provides a standardized way to make the carbon cost of running software visible, helping users and developers make informed choices regarding tools, architectures, and services.  
+The SCI specification ([ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)) provides a standardized way to make the carbon cost of running software visible, helping users and developers make informed choices about their tools, architectures, and services.  
 
 The formula is deliberately simple:
 
@@ -93,7 +93,7 @@ But compliance is the floor, not the ceiling. These tools bring the biggest valu
 
 None of these tools requires you to be a software engineer. Sustainability professionals can read an IF manifest and understand what it calculates. The SCI formula is simple, and Carmen's outputs are designed to feed into the dashboards and reports that engineers already use.
 
-The bigger challenge is organizational: establishing SCI as a metric that matters to your team, building it into your reporting processes, and giving your developers context to make optimizations. SCI provides the standard. IF eases the application. Carmen gives you scale. Working together, they make software emissions measurable. 
+The bigger challenge is organizational: establishing SCI as a metric that matters to your team, building it into your reporting processes, and giving your developers context to make optimizations. SCI provides the standard. IF eases the application. Carmen gives you scale. Together, they make software emissions measurable and easier to manage.  
 
 The GSF maintains all three as open-source projects. If you want to understand and reduce the environmental impact of your software, these tools are where to start.
 
