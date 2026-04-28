@@ -301,6 +301,11 @@ export const navItems = [
             description: "Step-by-step guide to the enrolment process",
           },
           {
+            href: "/membership/academic/",
+            label: "Academic Membership",
+            description: "Collaborate with GSF Members",
+          },
+          {
             href: "https://wiki.greensoftware.foundation/getting-started",
             label: "Getting Started",
             /* icon: "book-open", */ external: true,
