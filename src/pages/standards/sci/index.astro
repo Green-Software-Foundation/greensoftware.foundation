@@ -67,7 +67,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     body="Every software application has a carbon footprint through the energy it consumes and the hardware it requires. The Software Carbon Intensity (SCI) specification provides the first ISO-accredited methodology to measure this impact as a score."
     ctas={[
       { text: "Read the Specification", variant: "primary", href: "https://grnsft.org/sci" },
-      { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/software-carbon-intensity-(sci)/" },
+      { text: "Take the Course", variant: "outline", href: "https://grnsft.org/sci-fundamentals-course" },
     ]}
     imageSrc="/assets/standards/sci/hero-illustration.svg"
     imageAlt="SCI illustration"
@@ -371,6 +371,16 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       },
     ]}
     bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Take the Course -->
+  <CTACard
+    heading="Learn to measure software's carbon footprint"
+    body="Take the SCI Fundamentals course to understand how to apply the methodology to your software systems."
+    ctaText="Take the course"
+    ctaHref="https://grnsft.org/sci-fundamentals-course"
+    imageSrc="/assets/ready.svg"
+    imageAlt="SCI course illustration"
   />
 
   <!-- Get Involved -->
