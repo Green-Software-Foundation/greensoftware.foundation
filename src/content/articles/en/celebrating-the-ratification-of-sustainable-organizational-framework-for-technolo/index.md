@@ -1,11 +1,16 @@
 ---
-title: "Celebrating the Ratification of the Sustainable Organizational Framework for Technology (SOFT)"
+title: Celebrating the Ratification of the Sustainable Organizational Framework for Technology (SOFT)
+teaserText: Guiding organizations in adopting, implementing, and transforming sustainable software practices across entire operations.
+date: 2025-11-13
 published: true
-date: "2025-11-13"
-summary: "We’re proud to announce the ratification of our Sustainable Organizational Framework for Technology, marking a key milestone in the adoption of green software across industries. "
-teaserText: "Guiding organizations in adopting, implementing, and transforming sustainable software practices across entire operations. "
-mainImage: "./main.png"
-tags: ["soft", "standards"]
+summary: We’re proud to announce the ratification of our Sustainable Organizational Framework for Technology, marking a key milestone in the adoption of green software across industries.
+mainImage: ./main.png
+mainImageAlt: ''
+tags:
+  - soft
+  - standards
+originBlogName: ''
+publishedOriginUrl: ''
 ---
 
 In 2021, we began building methods, tools, standards, and patterns to help practitioners embed green software practices. As these tools, including [the Software Carbon Intensity specification](https://sci.greensoftware.foundation/), [Impact Framework](https://if.greensoftware.foundation/), and [Carbon Aware SDK](https://carbon-aware-sdk.greensoftware.foundation/), matured within a wider landscape of sustainability frameworks and methodologies, a pattern surfaced: organizations had the tools, yet they struggled to use them systematically across their operations.
@@ -24,7 +29,7 @@ The framework recognizes that carbon emissions from software don't fall solely u
 
 It provides decision trees, capability assessments, and clear action steps, supported by templates, checklists, and maturity matrices. Addressing the needs of different personas, from CTOs to developers to sustainability leads, SOFT offers an actionable path forward.
 
-> *"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business."*
+> _"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business."—Pindy Bhullar, SOFT Project Lead_ 
 
 ## A Closer Look at SOFT
 
