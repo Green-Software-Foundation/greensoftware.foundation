@@ -21,7 +21,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-In 2021, when GSF was founded, our goal was to make software emissions visible at the industry level. Five years on, the problem has shifted. Software is now recognized as a significant carbon source, but knowing that software has an environmental impact isn't the same as being able to measure it. What we heard consistently from organizations was the need for a systematic way to quantify, track, and mitigate the carbon intensity of their software.
+In 2021, when GSF was founded, our goal was to make software emissions visible at the industry level. Five years on, the problem has shifted. Software is now recognized as a significant carbon source, but knowing that software has an environmental impact isn't the same as being able to measure it. What we heard consistently from organizations was a need for a systematic way to quantify, track, and mitigate the carbon intensity of their software.
 
 While existing metrics work well for annual reporting, they are not accurate enough for real-time tracking and exposing information that helps organizations and practitioners make better optimization decisions, set reduction targets, and prepare for regulatory requirements. 
 
