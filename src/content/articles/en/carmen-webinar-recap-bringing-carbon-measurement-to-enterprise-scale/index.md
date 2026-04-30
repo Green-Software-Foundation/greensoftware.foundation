@@ -3,7 +3,7 @@ title: 'Carmen Webinar Recap: Bringing Carbon Measurement to Enterprise Scale'
 teaserText: On the heels of Carmen's transfer to the GSF, we hosted its first public launch, a live session bringing together the tool's creators and the community now invited to build with it.
 date: 2026-04-30
 published: true
-summary: On Earth Day 2026, we hosted Carmen's first public webinar. Find out why the project was built inside Amadeus, how it works with the GSF measurement stack, and what features to expect next.
+summary: On Earth Day 2026, we hosted Carmen's first public webinar. Find out why the project was built inside Amadeus, how it shows which applications are driving emissions, and what features to expect next.
 mainImage: Carmen-webinar-recap.png
 mainImageAlt: Isometric illustration of Carmen (Carbon Measurement Engine) featuring a large green C logo surrounded by server stacks, a cloud icon, and a laptop displaying data, on a dark teal background. Green Software Foundation logo in the bottom left corner.
 featured: false
