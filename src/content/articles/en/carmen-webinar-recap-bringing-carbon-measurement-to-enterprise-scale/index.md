@@ -24,7 +24,7 @@ We were thrilled to see nearly 60 participants join the session, ask specific qu
 
 Florent Morel (Carmen Project Lead, Amadeus) set the stage by recalling Amadeus’s struggle to measure carbon emissions across over 250 cloud applications and hundreds of engineering teams. He shared how they tried using existing tools (Green Algorithms, internal models), but nothing worked at their scale. 
 
-Carmen was born out of the need to fill a gap, but the main problem was consistency, not measurement. With each team using different constants, different implementations, and no common baseline, the key question they were asking was: Application by application, are we getting more efficient? 
+Carmen was born out of the need to fill this gap, but the main problem was consistency, not measurement. With each team using different constants, different implementations, and no common baseline, the key question they were asking was: Application by application, are we getting more efficient? 
 
 ## Bringing Consistency to Carbon Measurement
 
@@ -70,7 +70,7 @@ Carmen is now open and available for anyone to explore and build on it. Joseph, 
 
 [Watch Carmen’s webinar](https://movement.greensoftware.foundation/spaces/22742081?utm_source=manual) on the Movement platform. 
 
-[Office hours](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup, come with your questions, and this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST.** 
+[Office hours](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup, come with your questions, and this is where they will get resolved. The first session will take place on \*\*Wednesday, May 13, at 10 am BST.\*\* 
 
 [GitHub Repository](https://github.com/Green-Software-Foundation/if-carmen): Explore Carmen’s source code, a Quick Start Guide, dummy data to test the tool, and the data factors used in calculations. 
 
