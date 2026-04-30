@@ -42,7 +42,7 @@ Building on that foundation, Joseph Cook (Head of R&D at GSF) highlighted how wi
 
 Carmen was never intended to provide absolute numbers. Florent emphasized that more than accuracy, what matters is the consistent measurement practice that eventually turns into a trend, and this is what Carmen enables. 
 
-Joseph reinforces this by underlining that a 20% reduction in the key component is a tangible engineering win, while a reduction in company-wide total is impossible to pinpoint and track to a single source.  
+Joseph reinforces this by underlining that a 20% reduction in the hottest component is a tangible engineering win, while a reduction in company-wide total is impossible to pinpoint and track to a single source.  
 
 When we're tracking emissions and unit costs, they don't always move in the same direction. To enable better optimization decisions that tackle both aspects, Amadeus introduced the Effective Carbon Rate (ECR), bringing sustainability and FinOps together. 
 
@@ -50,7 +50,7 @@ When we're tracking emissions and unit costs, they don't always move in the same
 
 Amadeus green-lighted open-sourcing Carmen in 2022, but the team decided to wait until the product was tangible and fully operational before making it available outside the organization, shared Florent. 
 
-They eventually open-sourced it in 2025, then transferred it to GSF in early 2026. Carmen is so closely coupled with the Impact Framework that they saw more benefits in GSF owning it than if it were to remain inside a single company. Joseph emphasized that the tool is now freely usable, freely modifiable, and managed by an active open source community under GSF governance, making it available to any organization worldwide to use and explore. 
+They eventually open-sourced it in 2025, [then transferred it to GSF in early 2026](https://greensoftware.foundation/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/). Carmen is so closely coupled with the Impact Framework that they saw more benefits in GSF owning it than if it were to remain inside a single company. Joseph emphasized that the tool is now freely usable, freely modifiable, and managed by an active open source community under GSF governance, making it available to any organization worldwide to use and explore. 
 
 > "Carmen represents exactly what we need more of in the green software ecosystem—practical tools built on solid measurement foundations that help teams act.”—Asim Hussain, former ED of GSF 
 
