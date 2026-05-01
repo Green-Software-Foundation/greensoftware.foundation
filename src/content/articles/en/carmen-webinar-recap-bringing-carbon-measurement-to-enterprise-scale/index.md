@@ -68,12 +68,16 @@ Joseph highlighted that using Carmen to capture AI emissions would be one of the
 
 Carmen is now open and available for anyone to explore and build on it. Joseph, Florent, and Robin reinforced the invitation for engineers, architects, and software practitioners to explore and contribute to the tool. Here is the list of useful resources: 
 
-[Watch Carmen’s webinar](https://movement.greensoftware.foundation/spaces/22742081?utm_source=manual) on the Movement platform. 
+[**Watch Carmen’s webinar**](https://movement.greensoftware.foundation/spaces/22742081?utm_source=manual) on the Movement platform. 
 
-[Office hours](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup, come with your questions, and this is where they will get resolved. The first session will take place on \*\*Wednesday, May 13, at 10 am BST.\*\* 
+[**Office hours**](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup and come with your questions; this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST**.
 
-[GitHub Repository](https://github.com/Green-Software-Foundation/if-carmen): Explore Carmen’s source code, a Quick Start Guide, dummy data to test the tool, and the data factors used in calculations. 
+[**Subscribe to the project mailing list**](https://grnsft.org/carmen-public-mailing-list): This is a low-traffic channel for project updates, release announcements, and community news, delivered directly to your inbox.
+
+[**GitHub Repository**](https://github.com/Green-Software-Foundation/if-carmen): Explore Carmen’s source code, a Quick Start Guide, dummy data to test the tool, and the data factors used in calculations. 
 
 Not sure where to start? Install Carmen and run it with the dummy data in the repository before committing any engineering time.
 
-A big thank you to Florent Morel and Robin Castellon, and the whole Amadeus team, for building Carmen and contributing it back to the community.
+If you're part of a GSF member organization, subscribing to the Carmen project means you'll be kept in the loop on governance, working group activity, and contribution opportunities. [**Subscribe here**](https://wiki.greensoftware.foundation/subscribe). 
+
+A big thank you to Florent Morel, Robin Castellon, and the whole Amadeus team for building Carmen and contributing it back to the community.
