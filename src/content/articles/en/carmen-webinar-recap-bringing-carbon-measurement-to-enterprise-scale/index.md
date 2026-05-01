@@ -18,7 +18,7 @@ lang: en
 
 The webinar was the first live event introducing Carmen (Carbon Measurement Engine) as a GSF project, presenting its journey from four years in the making at Amadeus to an open source tool that complements the full software measurement stack, along with the SCI standard and Impact Framework. It formally opened the door to community participation, providing practitioners with specific steps to get involved. 
 
-We were thrilled to see nearly 60 participants join the session, ask specific questions, and explore how Carmen fits into their own infrastructure, a strong signal that the community is ready to contribute and adopt the tool. 
+We were thrilled to see nearly 60 participants join the session, ask specific questions, and explore how Carmen fits into their own infrastructure—a strong signal that the community is ready to contribute and adopt the tool. 
 
 ## Starting Point: The Consistency Gap 
 
@@ -40,7 +40,7 @@ Building on that foundation, Joseph Cook (Head of R&D at GSF) highlighted how wi
 
 > “Our motto is data consistency over accuracy." —Florent Morel, Carmen Project Lead 
 
-Carmen was never intended to provide absolute numbers. Florent emphasized that more than accuracy, what matters is the consistent measurement practice that eventually turns into a trend, and this is what Carmen enables. 
+Carmen was never intended to provide absolute numbers. Florent emphasized that more than accuracy, what matters is the consistent measurement practice that eventually turns into a trend—and this is what Carmen enables. 
 
 Joseph reinforces this by underlining that a 20% reduction in the hottest component is a tangible engineering win, while a reduction in company-wide total is impossible to pinpoint and track to a single source.  
 
