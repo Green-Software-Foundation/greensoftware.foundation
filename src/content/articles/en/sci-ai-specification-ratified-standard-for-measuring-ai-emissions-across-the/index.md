@@ -49,7 +49,7 @@ This approach gives builders and operators control over the emissions they can i
 
 As our first ratified specification extending the SCI methodology, SCI for AI represents both the maturity of our standards process and the community's commitment to transparent, measurement-first approaches to emerging technical complexities.
 
-Developed through [an extensive collaborative process](https://greensoftware.foundation/articles/sci-for-ai-workshop-report) among AI experts from over 20 GSF member organizations, it addresses implementation challenges across open, proprietary, distributed, and cloud-hosted AI systems.
+Developed through an extensive collaborative process involving AI experts from over 20 GSF [member organizations](https://directory.greensoftware.foundation/members/) and documented in the [SCI for AI Workshop Report](https://greensoftware.foundation/articles/sci-for-ai-workshop-report), it addresses implementation challenges across open, proprietary, distributed, and cloud-hosted AI systems.
 
 As organizations increasingly rely on AI, the specification plays a central role in closing the gap between measurement capability and organizational action.
 
@@ -67,6 +67,8 @@ In 2026, we'll focus on supporting implementation through:
 
 **The SCI for AI specification is open for public review. We invite AI practitioners, sustainability professionals, and organizations to review the methodology, apply it to their systems, and share their implementation experience as they begin measuring AI carbon emissions.**
 
-Explore the SCI for AI specification and provide feedback: [https://sci-for-ai.greensoftware.foundation/](https://sci-for-ai.greensoftware.foundation/)
+Explore the [SCI for AI Specification](https://sci-for-ai.greensoftware.foundation/) and provide feedback. 
+
+Take the [SCI for AI Fundamentals course](https://lnkd.in/dYaM4Q-Q) and learn how to apply it to your AI workloads. 
 
 GSF projects are developed under the guidance of our Steering Members: Avanade, BCG X, Cisco, Google, Microsoft, NTT DATA Corporation, Siemens, and UBS. To join industry leaders shaping software measurement and to contribute to the standards defining how AI's environmental impact is measured and reduced, [consider becoming a member.](https://greensoftware.foundation/join-us)
