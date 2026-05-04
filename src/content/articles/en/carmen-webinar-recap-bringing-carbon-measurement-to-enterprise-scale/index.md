@@ -78,6 +78,6 @@ Carmen is now open and available for anyone to explore and build on it. Joseph, 
 
 Not sure where to start? Install Carmen and run it with the dummy data in the repository before committing any engineering time.
 
-If you're part of a GSF member organization, subscribing to the Carmen project means you'll be kept in the loop on governance, working group activity, and contribution opportunities. [**Subscribe here**](https://wiki.greensoftware.foundation/subscribe). 
+If you're part of a GSF member organization, subscribing to the Carmen project means you'll be kept in the loop on governance, working group activity, and contribution opportunities. [**Subscribe to the Carmen project mailing list**](https://wiki.greensoftware.foundation/subscribe).  
 
 A big thank you to Florent Morel, Robin Castellon, and the whole Amadeus team for building Carmen and contributing it back to the community.
