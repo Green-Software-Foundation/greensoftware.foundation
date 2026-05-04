@@ -69,6 +69,6 @@ In 2026, we'll focus on supporting implementation through:
 
 Explore the [SCI for AI Specification](https://sci-for-ai.greensoftware.foundation/) and provide feedback. 
 
-Take the [SCI for AI Fundamentals course](https://lnkd.in/dYaM4Q-Q) and learn how to apply it to your AI workloads. 
+Take the [SCI for AI course](https://lnkd.in/dYaM4Q-Q) on the Movement platform and learn how to apply it to your AI workloads. 
 
 GSF projects are developed under the guidance of our Steering Members: Avanade, BCG X, Cisco, Google, Microsoft, NTT DATA Corporation, Siemens, and UBS. To join industry leaders shaping software measurement and to contribute to the standards defining how AI's environmental impact is measured and reduced, [consider becoming a member.](https://greensoftware.foundation/join-us)
