@@ -1,6 +1,6 @@
 ---
 title: 'Green Software Foundation Announces New Leadership Appointment: Navveen Balani as Executive Director'
-teaserText: GSF founding member and SCI co-chair steps into the Executive Director role as the Foundation enters a new phase of growth
+teaserText: GSF founding member and SCI co-chair steps into the Executive Director role as the Foundation enters a new phase of growth.
 date: 2026-05-06
 published: true
 summary: The GSF is proud to announce a new leadership appointment. Navveen Balani, a founding member with over 25 years of experience at the intersection of technology and sustainability, steps into the role of Executive Director, succeeding Asim Hussain, who led the Foundation for nearly five years.
