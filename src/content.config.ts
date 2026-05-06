@@ -172,4 +172,95 @@ const stories = defineCollection({
   }),
 });
 
-export const collections = { articles, pages, research, stories };
+const academics = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/academics" }),
+  schema: z.object({
+    name: z.string(),
+    title: z.string(),
+    institution: z.string(),
+    institutionUrl: z.string().optional(),
+    institutionLogo: z.string().optional(),
+    institutionLogos: z
+      .array(
+        z.object({
+          name: z.string(),
+          logo: z.string().optional(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
+    published: z.boolean().default(false),
+    summary: z.string(),
+    researchMission: z.string(),
+    keyAreas: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      )
+      .optional(),
+    collaborationAreas: z
+      .array(
+        z.object({
+          title: z.string(),
+          body: z.string(),
+          relevance: z.string().optional(),
+        }),
+      )
+      .optional(),
+    affiliations: z
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
+    recognition: z
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
+    publications: z
+      .object({
+        peerReviewed: z.string().optional(),
+        patents: z.string().optional(),
+        citations: z.string().optional(),
+      })
+      .optional(),
+    aboutParagraphs: z.array(z.string()).optional(),
+    sdgAlignment: z
+      .array(
+        z.object({
+          number: z.string(),
+          title: z.string(),
+        }),
+      )
+      .optional(),
+    stats: z
+      .array(
+        z.object({
+          value: z.string(),
+          label: z.string(),
+        }),
+      )
+      .optional(),
+    links: z
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().optional(),
+          group: z.string().optional(),
+          cover: z.string().optional(),
+        }),
+      )
+      .optional(),
+    lang: z.string().default("en"),
+  }),
+});
+
+export const collections = { academics, articles, pages, research, stories };
