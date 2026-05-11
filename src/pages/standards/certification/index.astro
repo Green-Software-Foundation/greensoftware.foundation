@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
-import CTABanner from "@/components/cta-banner.astro";
+import CardGrid from "@/components/card-grid.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 ---
@@ -36,7 +36,7 @@ import Footer from "@/components/footer.astro";
     headingAccent="Programme"
     body="Your SCI score only matters if it’s verifiable. The GSF Self-Certification Programme is the only free path to a publicly disclosed, GSF-issued certificate of ISO/IEC 21031:2024 conformity — open to any organisation, typically 3–4 weeks from submission to certificate."
     ctas={[
-      { text: "Apply now", variant: "primary", href: "mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission" },
+      { text: "Explore the programme", variant: "primary", href: "https://github.com/Green-Software-Foundation/certification" },
       { text: "Learn about SCI", variant: "outline", href: "/standards/sci/" },
     ]}
     imageSrc="/assets/ready.svg"
@@ -98,10 +98,56 @@ import Footer from "@/components/footer.astro";
     heading="Open to"
     headingAccent="all"
     body="Already have an SCI score? You’re eligible. The programme is open to any organisation, regardless of size, sector, or GSF membership — no fees, no restrictions. Every organisation that joins gives the industry a more complete, verifiable picture of software’s carbon impact."
-    ctaText="Apply now →"
-    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
+    ctaText="Explore the programme →"
+    ctaHref="https://github.com/Green-Software-Foundation/certification"
     imageSrc="/assets/about-gsf-illustration.svg"
     imageAlt="Open programme illustration"
+  />
+
+  <!-- What your submission covers -->
+  <TextWithImage
+    badge="WHAT YOUR SUBMISSION COVERS"
+    heading="A 7-section"
+    headingAccent="questionnaire"
+    imageSrc="/assets/standards/sci/why-feat-2.svg"
+    imageAlt="Submission coverage illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/sci/dive-icon-1.svg",
+        description: '<span class="font-extrabold">About you and your software</span> — organisation, contact, software name, version, and a brief description',
+      },
+      {
+        icon: "/assets/standards/sci/co2-icon.svg",
+        description: '<span class="font-extrabold">SCI score</span> — your score with units (e.g. gCO2eq per 1,000 API requests) and the measurement period',
+      },
+      {
+        icon: "/assets/standards/sci/infra-icon.svg",
+        description: '<span class="font-extrabold">Software boundary</span> — included components, excluded components with rationale, and how shared infrastructure is handled',
+      },
+      {
+        icon: "/assets/standards/sci/grid-icon.svg",
+        description: '<span class="font-extrabold">Functional unit (R)</span> — the unit you chose, why it reflects how your software scales or delivers value, and how you counted it',
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-2.svg",
+        description: '<span class="font-extrabold">Energy and carbon intensity (E, I)</span> — total energy with PUE, per-component breakdown with data sources, and carbon intensity with location, approach, and source',
+      },
+      {
+        icon: "/assets/standards/sci/cost-icon.svg",
+        description: '<span class="font-extrabold">Embodied emissions (M)</span> — total M with unit (or a specific justification if M=0), plus per-component breakdown with sources if M>0',
+      },
+      {
+        icon: "/assets/standards/sci/dive-icon-3.svg",
+        description: '<span class="font-extrabold">Methodology and calculation</span> — approach (measurement, calculation, or hybrid), at least one specific assumption and limitation, and the full SCI calculation shown with your actual numbers',
+      },
+      {
+        icon: "/assets/standards/sci/check-icon.svg",
+        description: '<span class="font-extrabold">Attestation</span> — the 10-point attestation from the template, signed and dated',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
+    bgClass="bg-white"
   />
 
   <!-- How it works -->
@@ -139,12 +185,35 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- CTA -->
-  <CTABanner
-    heading="Ready to put your SCI score on the record?"
-    body="If you’ve calculated your SCI score, you’re ready to apply. Email us and we’ll send you the submission template — most applicants can prepare a complete submission in a few hours."
-    ctaText="Email us to apply"
-    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Whether you’re ready to apply, want to deepen your understanding of the SCI, or have a question, here’s where to start."
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "Explore the Programme",
+        description: "Find the questionnaire, submission guidance, and everything you need to apply on GitHub.",
+        ctaText: "Visit the repository",
+        ctaHref: "https://github.com/Green-Software-Foundation/certification",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Learn about the SCI",
+        description: "Take the free SCI Fundamentals course to understand the ISO/IEC 21031:2024 standard your certification will be based on.",
+        ctaText: "Take the course",
+        ctaHref: "https://grnsft.org/sci-fundamentals-course",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Ask us anything",
+        description: "Have a question about eligibility, the questionnaire, or the process? Get in touch with the certification team.",
+        ctaText: "Email the team",
+        ctaHref: "mailto:sci-certification@greensoftware.foundation",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
   />
 
   <Footer />
