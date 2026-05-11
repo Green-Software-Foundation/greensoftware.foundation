@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
-import CardGrid from "@/components/card-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 ---
@@ -36,11 +36,45 @@ import Footer from "@/components/footer.astro";
     headingAccent="Programme"
     body="A free programme for organisations to self-certify conformity with ISO/IEC 21031:2024 (Software Carbon Intensity). Submit your SCI methodology as a public disclosure — GSF reviews completeness, the community provides accountability."
     ctas={[
-      { text: "Explore the programme", variant: "primary", href: "https://github.com/Green-Software-Foundation/certification" },
+      { text: "Apply now", variant: "primary", href: "mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission" },
       { text: "Learn about SCI", variant: "outline", href: "/standards/sci/" },
     ]}
     imageSrc="/assets/ready.svg"
     imageAlt="SCI Certification illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Why it matters -->
+  <TextWithImage
+    badge="WHY IT MATTERS"
+    heading="Measuring emissions is only"
+    headingAccent="the beginning"
+    body="When ISO/IEC 21031:2024 was published, organisations gained a rigorous methodology for calculating software carbon intensity — but internal measurement work isn’t visible outside the organisation. With regulations like CSRD extending their scope to include software emissions, and procurement requirements emerging, the expectation for consistent and verifiable disclosures is growing. Calculating your SCI score is the foundation; publicly disclosing it is what turns that work into accountability."
+    imageSrc="/assets/sustainability.svg"
+    imageAlt="Sustainability illustration"
+    bgClass="bg-white"
+  />
+
+  <!-- Benefits -->
+  <FeatureGrid
+    heading="Benefits at *every level*"
+    body="Every disclosure contributes to the shared body of reference data the industry needs to make meaningful progress on software sustainability."
+    variant="bordered"
+    columns={3}
+    features={[
+      {
+        title: "For your organisation",
+        description: "Brings internal measurement work into a publicly recognised disclosure — giving procurement teams, auditors, and regulators a consistent reference point as transparency requirements grow.",
+      },
+      {
+        title: "For your stakeholders",
+        description: "Provides a transparent, structured record of your software’s carbon intensity that clients, partners, and supply chain reviewers can incorporate into their own reporting with confidence.",
+      },
+      {
+        title: "For the industry",
+        description: "Each approved disclosure joins a publicly accessible body of methodology and results that researchers, benchmarkers, and policymakers can build on — turning individual measurement work into collective infrastructure.",
+      },
+    ]}
     bgClass="bg-accent-lightest-2"
   />
 
@@ -63,57 +97,11 @@ import Footer from "@/components/footer.astro";
     badge="ELIGIBILITY"
     heading="Open to"
     headingAccent="all"
-    body="SCI Self Certification is available to any organisation that has calculated an SCI score according to ISO/IEC 21031:2024. There are no membership requirements, fees, or restrictions on organisation size, type, or domain. The more organisations measuring and disclosing their software carbon intensity, the stronger the standard becomes. The programme is free — if you've measured your SCI score, you're ready to apply."
-    ctaText="Explore the programme →"
-    ctaHref="https://github.com/Green-Software-Foundation/certification"
+    body="SCI Self Certification is available to any organisation that has calculated an SCI score according to ISO/IEC 21031:2024. There are no membership requirements, fees, or restrictions on organisation size, type, or domain. The more organisations measuring and disclosing their software carbon intensity, the stronger the standard becomes. The programme is free — if you’ve measured your SCI score, you’re ready to apply."
+    ctaText="Apply now →"
+    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
     imageSrc="/assets/about-gsf-illustration.svg"
     imageAlt="Open programme illustration"
-  />
-
-  <!-- What your submission covers -->
-  <TextWithImage
-    badge="WHAT YOUR SUBMISSION COVERS"
-    heading="A 7-section"
-    headingAccent="questionnaire"
-    imageSrc="/assets/standards/sci/why-feat-2.svg"
-    imageAlt="Submission coverage illustration"
-    reversed
-    iconFeatures={[
-      {
-        icon: "/assets/standards/sci/dive-icon-1.svg",
-        description: '<span class="font-extrabold">About you and your software</span> — organisation, contact, software name, version, and a brief description',
-      },
-      {
-        icon: "/assets/standards/sci/co2-icon.svg",
-        description: '<span class="font-extrabold">SCI score</span> — your score with units (e.g. gCO2eq per 1,000 API requests) and the measurement period',
-      },
-      {
-        icon: "/assets/standards/sci/infra-icon.svg",
-        description: '<span class="font-extrabold">Software boundary</span> — included components, excluded components with rationale, and how shared infrastructure is handled',
-      },
-      {
-        icon: "/assets/standards/sci/grid-icon.svg",
-        description: '<span class="font-extrabold">Functional unit (R)</span> — the unit you chose, why it reflects how your software scales or delivers value, and how you counted it',
-      },
-      {
-        icon: "/assets/standards/sci/transforming-icon-2.svg",
-        description: '<span class="font-extrabold">Energy and carbon intensity (E, I)</span> — total energy with PUE, per-component breakdown with data sources, and carbon intensity with location, approach, and source',
-      },
-      {
-        icon: "/assets/standards/sci/cost-icon.svg",
-        description: '<span class="font-extrabold">Embodied emissions (M)</span> — total M with unit (or a specific justification if M=0), plus per-component breakdown with sources if M>0',
-      },
-      {
-        icon: "/assets/standards/sci/dive-icon-3.svg",
-        description: '<span class="font-extrabold">Methodology and calculation</span> — approach (measurement, calculation, or hybrid), at least one specific assumption and limitation, and the full SCI calculation shown with your actual numbers',
-      },
-      {
-        icon: "/assets/standards/sci/check-icon.svg",
-        description: '<span class="font-extrabold">Attestation</span> — the 10-point attestation from the template, signed and dated',
-      },
-    ]}
-    iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
-    bgClass="bg-white"
   />
 
   <!-- How it works -->
@@ -151,35 +139,12 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Get Involved -->
-  <CardGrid
-    heading="Get Involved"
-    body="Whether you're ready to apply, want to deepen your understanding of the SCI, or have a question, here's where to start."
-    columns={3}
-    cards={[
-      {
-        icon: "/assets/standards/sci/shape-icon-1.svg",
-        title: "Explore the Programme",
-        description: "Find the questionnaire, submission guidance, and everything you need to apply on GitHub.",
-        ctaText: "Visit the repository",
-        ctaHref: "https://github.com/Green-Software-Foundation/certification",
-      },
-      {
-        icon: "/assets/standards/sci/shape-icon-2.svg",
-        title: "Learn about the SCI",
-        description: "Take the free SCI Fundamentals course to understand the ISO/IEC 21031:2024 standard your certification will be based on.",
-        ctaText: "Take the course",
-        ctaHref: "https://grnsft.org/sci-fundamentals-course",
-      },
-      {
-        icon: "/assets/standards/sci/shape-icon-3.svg",
-        title: "Ask us anything",
-        description: "Have a question about eligibility, the questionnaire, or the process? Get in touch with the certification team.",
-        ctaText: "Email the team",
-        ctaHref: "mailto:sci-certification@greensoftware.foundation",
-      },
-    ]}
-    bgClass="bg-accent-lightest-2"
+  <!-- CTA -->
+  <CTABanner
+    heading="Interested in SCI Self Certification?"
+    body="Get in touch to learn more about applying and what's required. The programme is free and open to all — we'll walk you through the process."
+    ctaText="Email us to apply"
+    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
   />
 
   <Footer />
