@@ -70,6 +70,52 @@ import Footer from "@/components/footer.astro";
     imageAlt="Open programme illustration"
   />
 
+  <!-- What your submission covers -->
+  <TextWithImage
+    badge="WHAT YOUR SUBMISSION COVERS"
+    heading="A 7-section"
+    headingAccent="questionnaire"
+    imageSrc="/assets/standards/sci/why-feat-2.svg"
+    imageAlt="Submission coverage illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/sci/dive-icon-1.svg",
+        description: '<span class="font-extrabold">About you and your software</span> — organisation, contact, software name, version, and a brief description',
+      },
+      {
+        icon: "/assets/standards/sci/co2-icon.svg",
+        description: '<span class="font-extrabold">SCI score</span> — your score with units (e.g. gCO2eq per 1,000 API requests) and the measurement period',
+      },
+      {
+        icon: "/assets/standards/sci/infra-icon.svg",
+        description: '<span class="font-extrabold">Software boundary</span> — included components, excluded components with rationale, and how shared infrastructure is handled',
+      },
+      {
+        icon: "/assets/standards/sci/grid-icon.svg",
+        description: '<span class="font-extrabold">Functional unit (R)</span> — the unit you chose, why it reflects how your software scales or delivers value, and how you counted it',
+      },
+      {
+        icon: "/assets/standards/sci/transforming-icon-2.svg",
+        description: '<span class="font-extrabold">Energy and carbon intensity (E, I)</span> — total energy with PUE, per-component breakdown with data sources, and carbon intensity with location, approach, and source',
+      },
+      {
+        icon: "/assets/standards/sci/cost-icon.svg",
+        description: '<span class="font-extrabold">Embodied emissions (M)</span> — total M with unit (or a specific justification if M=0), plus per-component breakdown with sources if M>0',
+      },
+      {
+        icon: "/assets/standards/sci/dive-icon-3.svg",
+        description: '<span class="font-extrabold">Methodology and calculation</span> — approach (measurement, calculation, or hybrid), at least one specific assumption and limitation, and the full SCI calculation shown with your actual numbers',
+      },
+      {
+        icon: "/assets/standards/sci/check-icon.svg",
+        description: '<span class="font-extrabold">Attestation</span> — the 10-point attestation from the template, signed and dated',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/sci/icon-bg.svg"
+    bgClass="bg-white"
+  />
+
   <!-- How it works -->
   <FeatureGrid
     heading="How *certification works*"
