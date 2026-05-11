@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import TextWithImage from "@/components/text-with-image.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
-import CTABanner from "@/components/cta-banner.astro";
+import CardGrid from "@/components/card-grid.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
 ---
@@ -105,12 +105,35 @@ import Footer from "@/components/footer.astro";
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- CTA -->
-  <CTABanner
-    heading="Interested in SCI Self Certification?"
-    body="Explore the programme on GitHub to find the questionnaire, submission guidance, and everything you need to get started. The programme is free and open to all."
-    ctaText="Explore on GitHub"
-    ctaHref="https://github.com/Green-Software-Foundation/certification"
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Whether you're ready to apply, want to deepen your understanding of the SCI, or have a question, here's where to start."
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "Explore the Programme",
+        description: "Find the questionnaire, submission guidance, and everything you need to apply on GitHub.",
+        ctaText: "Visit the repository",
+        ctaHref: "https://github.com/Green-Software-Foundation/certification",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Learn about the SCI",
+        description: "Take the free SCI Fundamentals course to understand the ISO/IEC 21031:2024 standard your certification will be based on.",
+        ctaText: "Take the course",
+        ctaHref: "https://grnsft.org/sci-fundamentals-course",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Ask us anything",
+        description: "Have a question about eligibility, the questionnaire, or the process? Get in touch with the certification team.",
+        ctaText: "Email the team",
+        ctaHref: "mailto:sci-certification@greensoftware.foundation",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
   />
 
   <Footer />
