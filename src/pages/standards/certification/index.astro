@@ -13,7 +13,7 @@ import Footer from "@/components/footer.astro";
 
 <Layout
   title="SCI Self Certification Programme — Green Software Foundation"
-  description="A free programme for product-level SCI disclosure. Any organisation can certify that their software product's carbon intensity has been measured and disclosed following ISO/IEC 21031:2024."
+  description="A free programme for organisations to self-certify conformity with ISO/IEC 21031:2024. Submit a public disclosure of your SCI calculation — GSF reviews completeness, the community provides accountability."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -34,9 +34,9 @@ import Footer from "@/components/footer.astro";
   <Hero
     heading="SCI Self Certification"
     headingAccent="Programme"
-    body="A free programme for product-level SCI disclosure. Any organisation can certify that their software product's carbon intensity has been measured and disclosed following ISO/IEC 21031:2024."
+    body="A free programme for organisations to self-certify conformity with ISO/IEC 21031:2024 (Software Carbon Intensity). Submit your SCI methodology as a public disclosure — GSF reviews completeness, the community provides accountability."
     ctas={[
-      { text: "Apply now", variant: "primary", href: "mailto:help@greensoftware.foundation?subject=SCI%20Self%20Certification%20Application" },
+      { text: "Apply now", variant: "primary", href: "mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission" },
       { text: "Learn about SCI", variant: "outline", href: "/standards/sci/" },
     ]}
     imageSrc="/assets/ready.svg"
@@ -65,7 +65,7 @@ import Footer from "@/components/footer.astro";
     headingAccent="all"
     body="SCI Self Certification is available to any organisation that has calculated an SCI score according to ISO/IEC 21031:2024. There are no membership requirements, fees, or restrictions on organisation size, type, or domain. The more organisations measuring and disclosing their software carbon intensity, the stronger the standard becomes. The programme is free — if you've measured your SCI score, you're ready to apply."
     ctaText="Apply now →"
-    ctaHref="mailto:help@greensoftware.foundation?subject=SCI%20Self%20Certification%20Application"
+    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
     imageSrc="/assets/about-gsf-illustration.svg"
     imageAlt="Open programme illustration"
   />
@@ -73,29 +73,29 @@ import Footer from "@/components/footer.astro";
   <!-- How it works -->
   <FeatureGrid
     heading="How *certification works*"
-    body="The programme is designed to be straightforward. Certificates are valid for one year, after which resubmission is required."
+    body="The programme is designed to be straightforward, with a typical turnaround of 3–4 weeks from submission to certificate."
     variant="bordered"
     columns={3}
     features={[
       {
         title: "1. Self-attestation questionnaire",
-        description: "The applicant completes a questionnaire confirming their SCI methodology, scope, and data sources. Liability for accuracy sits with the applicant.",
+        description: "The applicant completes a 7-section questionnaire covering their SCI methodology, boundary, functional unit, energy and carbon data, embodied emissions, and full calculation. A signed attestation is included. Liability for accuracy sits with the applicant.",
       },
       {
         title: "2. Completeness review",
-        description: "GSF staff check that the submission is complete. An AI-assisted filter may be used to speed up this step.",
+        description: "A reviewer assesses the submission against a 7-item checklist, asking whether each section is detailed enough for a practitioner to understand and evaluate the calculation. Review takes 10–15 business days. Incomplete submissions receive specific revision feedback — this is not a rejection.",
       },
       {
-        title: "3. Working group review",
-        description: "The Software Standards Working Group has the opportunity to review the submission and raise any objections.",
+        title: "3. SWG sign-off",
+        description: "The Software Standards Working Group has a 7-day objection period. Any member may raise a specific objection; in practice, most submissions proceed without one. This is a governance safeguard, not a full technical review.",
       },
       {
         title: "4. Sign-off",
-        description: "The GSF Executive Director or Chair reviews the outcome of the working group review and signs the certificate.",
+        description: "The GSF Executive Director or Chair reviews the outcome of the working group sign-off period and issues the certificate.",
       },
       {
         title: "5. Publication",
-        description: "The certificate is issued and published at the agreed disclosure level — covering at minimum the product name, organisation, date, and signatory.",
+        description: "The certificate is issued and the full submission is published publicly on GitHub. Your contact email is redacted; everything else is published as submitted. Public disclosure is what gives self-certification its credibility — anyone can read and assess your methodology.",
       },
       {
         title: "6. Annual renewal",
@@ -110,7 +110,7 @@ import Footer from "@/components/footer.astro";
     heading="Interested in SCI Self Certification?"
     body="Get in touch to learn more about applying and what's required. The programme is free and open to all — we'll walk you through the process."
     ctaText="Email us to apply"
-    ctaHref="mailto:help@greensoftware.foundation?subject=SCI%20Self%20Certification%20Application"
+    ctaHref="mailto:sci-certification@greensoftware.foundation?subject=SCI%20Self-Certification%20Submission"
   />
 
   <Footer />
