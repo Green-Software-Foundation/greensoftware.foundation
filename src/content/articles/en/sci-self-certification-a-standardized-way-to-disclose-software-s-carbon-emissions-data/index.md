@@ -75,13 +75,10 @@ We invite organizations worldwide to submit their SCI score, contributing to the
 
 **Calculate Your First SCI Score:** If your organization wants to measure its software emissions, these resources help you understand how to do it. 
 
-Take [the SCI Fundamentals course](https://movement.greensoftware.foundation/collections/3086009) to learn about the principles of the SCI specification and how to calculate your SCI score. 
-
-Explore the [SCI guide](https://sci-guide.greensoftware.foundation/) to understand available methodologies for calculating the core components of the SCI score. 
-
-Learn how [the Impact Framework](https://if.greensoftware.foundation/) turns observations about running systems, such as CPU utilization, page views, or number of installs, and converts them into carbon in an auditable, replicable, and verifiable way.
-
-Learn how to use [Carmen](https://github.com/Green-Software-Foundation/if-carmen) to implement the Impact Framework at scale to measure the carbon footprint of cloud-based software at both infrastructure and application levels. 
+- Take [the SCI Fundamentals course](https://movement.greensoftware.foundation/collections/3086009) to learn about the principles of the SCI specification and how to calculate your SCI score. 
+- Explore the [SCI guide](https://sci-guide.greensoftware.foundation/) to understand available methodologies for calculating the core components of the SCI score. 
+- Learn how [the Impact Framework](https://if.greensoftware.foundation/) turns observations about running systems, such as CPU utilization, page views, or number of installs, and converts them into carbon in an auditable, replicable, and verifiable way.
+- Learn how to use [Carmen](https://github.com/Green-Software-Foundation/if-carmen) to implement the Impact Framework at scale to measure the carbon footprint of cloud-based software at both infrastructure and application levels.
 
 Explore existing SCI case studies from [NTT Data](https://greensoftware.foundation/articles/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o/), [Accenture](https://greensoftware.foundation/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/), and [CAST Software](https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric/). 
 
