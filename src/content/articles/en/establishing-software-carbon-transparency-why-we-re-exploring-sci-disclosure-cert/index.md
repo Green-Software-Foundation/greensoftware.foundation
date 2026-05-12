@@ -1,11 +1,14 @@
 ---
-title: "Establishing Software Carbon Transparency: Why We’re Exploring SCI Disclosure Certification"
-published: true
-date: "2025-07-29"
-summary: "At GSF, we’re exploring a voluntary, structured approach to self-reported SCI disclosure, designed to build shared knowledge base needed for meaningful, measurable progress. Learn about its potential impact. "
-teaserText: "Building the data foundation for verifiable impact."
-mainImage: "./main.png"
-tags: ["sci", "standards"]
+title: 'Establishing Software Carbon Transparency: Why We’re Exploring SCI Disclosure Certification'
+teaserText: Building the data foundation for verifiable impact.
+date: 2025-07-29
+published: false
+summary: At GSF, we’re exploring a voluntary, structured approach to self-reported SCI disclosure, designed to build shared knowledge base needed for meaningful, measurable progress. Learn about its potential impact.
+mainImage: ./main.png
+mainImageAlt: ''
+tags:
+  - sci
+  - standards
 ---
 
 In recent years, we've seen [growing momentum across industries](https://stateof.greensoftware.foundation/en/insights/green-software-business-case/) to measure and reduce the carbon impact of software. Governments, companies, and researchers are increasingly aligned in their goal to drive meaningful sustainability outcomes. Yet a common barrier persists: software carbon data isn’t easily available, especially across the supply chain.
