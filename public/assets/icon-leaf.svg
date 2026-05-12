@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient);
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-3703.7" y1="6883.56" x2="-3703.7" y2="6833.56" gradientTransform="translate(-3678.7 6872.87) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cee098"/>
+      <stop offset=".13" stop-color="#c1d996"/>
+      <stop offset=".38" stop-color="#a0c692"/>
+      <stop offset=".7" stop-color="#6aa88c"/>
+      <stop offset="1" stop-color="#338a86"/>
+    </linearGradient>
+  </defs>
+  <path class="st0" d="M50,25c0,13.78-11.22,25-25,25S0,38.78,0,25,11.22,0,25,0s25,11.22,25,25Z"/>
+  <g>
+    <path class="st1" d="M35.73,25.33c.05,5.92-4.72,10.77-10.64,10.81-5.92.05-10.77-4.72-10.81-10.64-.05-5.92,10.6-16.01,10.6-16.01,0,0,10.81,9.91,10.86,15.83Z"/>
+    <line class="st1" x1="24.98" y1="22.65" x2="25.13" y2="40.5"/>
+  </g>
+</svg>
