@@ -243,7 +243,7 @@ async function fetchMembers() {
     const website = urlValue(p["Website"]);
     const logoUrl = fileUrl(p["Logo"]);
     const membershipLevel = selectName(p["Membership Level "]);
-    const organisationType = selectName(p["Organisation Type"]);
+    const organizationType = selectName(p["Organisation Type"]);
     const status = selectName(p["Status"]);
     const active = status === "Active";
     const hideLogo = p["Hide Logo"]?.checkbox === true;
@@ -289,7 +289,7 @@ async function fetchMembers() {
       logoWidth,
       logoHeight,
       logoFormat,
-      organisationType,
+      organizationType,
     });
   }
 
@@ -1058,7 +1058,7 @@ async function main() {
   console.log(`  Members: ${activeSteeringCount} steering active, ${activeGeneralCount} general active`);
   console.log(`  Active volunteers (stat): ${numberOfIndividuals}`);
 
-  // members.json — all members combined; consumers filter by membershipLevel / organisationType / active
+  // members.json — all members combined; consumers filter by membershipLevel / organizationType / active
   fs.writeFileSync(path.join(DATA_DIR, "members.json"), JSON.stringify(allMembers, null, 2));
 
   // --- Homepage: Stats ---
@@ -1137,7 +1137,7 @@ async function main() {
   }
 
   for (const person of orgLeads) {
-    addToTeam(person, "organisationalLeads");
+    addToTeam(person, "organizationalLeads");
   }
 
   // Convert to array and clean up internal fields

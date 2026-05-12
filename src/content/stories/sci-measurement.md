@@ -23,7 +23,7 @@ orgs:
 
 stats:
   - value: ISO
-    label: The SCI achieved ISO 21031:2024 status — an internationally recognised standard
+    label: The SCI achieved ISO 21031:2024 status — an internationally recognized standard
   - value: "7+"
     label: Independent implementations with published results across banking, consulting, and infrastructure
   - value: "15.1%"
@@ -50,7 +50,7 @@ timeline:
     body: >
       The Foundation released the alpha SCI specification, inviting the global software
       community to test it. The specification accounted for carbon awareness, energy
-      efficiency, and hardware efficiency, and required standardised, transparent reporting
+      efficiency, and hardware efficiency, and required standardized, transparent reporting
       of what went into the calculations. At this point, the co-chairs acknowledged
       the biggest barrier was "a dearth of case studies."
     source:
@@ -72,7 +72,7 @@ timeline:
   - date: "2023"
     heading: Enterprise implementations at scale
     body: >
-      Accenture became one of the first organisations to calculate an SCI score for a
+      Accenture became one of the first organizations to calculate an SCI score for a
       production application: 0.025 gCO₂ per API call across 890,000 monthly requests.
       At UBS, Pindy Bhullar's team applied the SCI to two on-premises banking applications
       — one in Investment Banking, one in Asset Management — documenting operational
@@ -87,7 +87,7 @@ timeline:
     heading: ISO standard status
     body: >
       From alpha release in December 2021 to ISO 21031:2024 in March 2024 — the SCI became
-      an internationally recognised standard in under three years. For context, ISO certification
+      an internationally recognized standard in under three years. For context, ISO certification
       for a software specification typically takes five to seven years. GSF's consensus-driven
       process, combining open community review with direct enterprise participation, compressed
       that timeline without compromising rigour. CAST demonstrated that fixing just ten green
@@ -193,9 +193,9 @@ cta:
   ctaHref: "/standards/sci/"
 ---
 
-Organisations had been reporting carbon totals annually for years, but those numbers lived in sustainability reports that engineering teams never saw. A CTO could quote the company's total Scope 2 emissions, but couldn't tell an individual developer whether the software they'd just shipped was better or worse for the climate than the version before.
+Organizations had been reporting carbon totals annually for years, but those numbers lived in sustainability reports that engineering teams never saw. A CTO could quote the company's total Scope 2 emissions, but couldn't tell an individual developer whether the software they'd just shipped was better or worse for the climate than the version before.
 
-The existing GHG Protocol gave compliance but not insight. The world of carbon measurement was, as Abhishek Gupta described it, "splintered in its methodologies and tooling with very few widely accepted standards, especially for computing systems." A developer could spend weeks optimising code for energy efficiency and see no change in the company's reported carbon total — the number was too aggregated, too annual, and too disconnected from the software itself.
+The existing GHG Protocol gave compliance but not insight. The world of carbon measurement was, as Abhishek Gupta described it, "splintered in its methodologies and tooling with very few widely accepted standards, especially for computing systems." A developer could spend weeks optimizing code for energy efficiency and see no change in the company's reported carbon total — the number was too aggregated, too annual, and too disconnected from the software itself.
 
 No single company could solve this alone. The problem required a standard that worked across industries — banking, travel, consulting, telecommunications — and across technology stacks: cloud, on-premises, serverless, desktop. It needed buy-in from competitors who would agree to measure the same way. That meant a coalition.
 

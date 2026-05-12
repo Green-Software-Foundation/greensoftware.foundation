@@ -38,7 +38,7 @@ This approach unlocks two valuable feedback loops:
 - **Supply Chain Accuracy**: As more software suppliers share their SCI data, their customers can replace estimates with real values. This helps create a more accurate and connected view of emissions across the ecosystem.
 - **Methodological Learning**: Public disclosures provide much-needed insights for academic researchers and peer organizations. Access to real-world data supports iterative improvements to the SCI framework and enables the development of tools and best practices.
 
-![SCI Certificate of Disclosure mockup showing key sections: SCI score, component breakdown, auditing organisation, and methodology](./image.png)
+![SCI Certificate of Disclosure mockup showing key sections: SCI score, component breakdown, auditing organization, and methodology](./image.png)
 
 ## Building on Our Values
 

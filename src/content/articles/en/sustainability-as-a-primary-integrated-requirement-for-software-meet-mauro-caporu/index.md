@@ -27,7 +27,7 @@ Concerning research, we continuously have new projects where we investigate and 
 
 - Developing a test bed with a solar-powered web server and solar-powered websites
 - Exploiting ML/AI for predicting the energy consumption of Java programs
-- Reducing the energy consumption of Behavioural Software Design Patterns
+- Reducing the energy consumption of Behavioral Software Design Patterns
 
 In education, we want to include green software concepts in our BSc/MSc courses, such as Software Engineering, Software Architecture, Programming, Algorithms, and Machine Learning. Beyond academia, by participating in the media and organizing special events such as workshops, lectures, and seminars, we plan on doing our part to ensure sustainability and green software feed into the non-academic communities.    
 
@@ -41,7 +41,7 @@ I have included green software engineering principles in two different courses, 
 
 ## Why join the GSF?
 
-We want to be part of the climate solution, and joining the Green Software Foundation is an important step towards that goal. I look forward to contributing to the Open Source Working Group and to Green Software Patterns. 
+We want to be part of the climate solution, and joining the Green Software Foundation is an important step toward that goal. I look forward to contributing to the Open Source Working Group and to Green Software Patterns. 
 
 ## There are some obvious challenges; how do we push past them?
 

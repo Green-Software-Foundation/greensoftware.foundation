@@ -45,7 +45,7 @@ To address the intersection of RAI's mission and sustainability, the Institute h
 
 ## How is responsible AI helping organizations navigate the changing regulatory landscape?
 
-A crucial step towards responsible AI is ensuring that AI systems are built right from the start, thereby avoiding the accumulation of technical debt and misuse early on. Introducing the "AI by Design" approach helps ensure AI systems align with current regulations. It makes it easier to finetune as the landscape evolves.
+A crucial step toward responsible AI is ensuring that AI systems are built right from the start, thereby avoiding the accumulation of technical debt and misuse early on. Introducing the "AI by Design" approach helps ensure AI systems align with current regulations. It makes it easier to finetune as the landscape evolves.
 
 To successfully introduce and operationalize AI-based solutions, organizations need a solid internal strategy to protect business and build trust with their customers. We identified industry best practices, which include:
 

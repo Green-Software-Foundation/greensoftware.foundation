@@ -24,7 +24,7 @@ authors:
 
 ## First, why do you find this project exciting? 
 
-I have a passion for creating innovative products and applying exponential technology and research to build high quality and optimised products. Sustainability is one of the core themes at Accenture. I have got a great opportunity to represent Accenture in the Green Software Foundation to look at this space holistically and drive standardisation and innovation.
+I have a passion for creating innovative products and applying exponential technology and research to build high quality and optimized products. Sustainability is one of the core themes at Accenture. I have got a great opportunity to represent Accenture in the Green Software Foundation to look at this space holistically and drive standardization and innovation.
 
 Technology itself has a carbon footprint. And in my view, the way we design, develop and deploy applications—be it in cloud, on-premises, or standalone software—need to include sustainability as one of the key outcomes. Our first focus should be on reducing the carbon footprint and creating energy efficient applications.
 
@@ -43,7 +43,7 @@ Once the common terminology and software boundary is defined, the scope can be e
 For example, assume the first version of SCI application uses three instances of the same hardware types for running the application. And after hardware optimization, the second version of SCI application now uses two instances of the same hardware type, without any changes to application and workload. This would be captured through the ontology model. When we compare these two versions, we can infer the reduction in hardware—without changing the application and workload—caused the reduction in SCI score, which reflects a positive improvement.
 
 ## Please elaborate different areas of the project. 
-The project is broken down into several milestones. In each milestone, we would accomplish a specific goal which would help realise the larger vision of the SCI Ontology Project. 
+The project is broken down into several milestones. In each milestone, we would accomplish a specific goal which would help realize the larger vision of the SCI Ontology Project. 
 
 The first milestone is creating the SCI Ontology, followed by creating the Software Development Kit (SDK) which can be used for instantiating the SCI ontology. Once the SDK is completed, we move on to advance topics around storage, reporting, versioning and even comparison of SCI enabled applications.
 
@@ -68,7 +68,7 @@ In this iteration, we would look at some of the advanced concepts like comparing
 ## What does a GSF member get from joining the Project? 
 Creating the software boundary is an important first step in calculating the SCI score. We are looking for architects, ontology and domain experts, software practitioners who would help design the generic SCI application ontology model based on their expertise and consensus. The reference applications would help SCI implementers with readymade ontology models to visualise and quickly start their SCI application journey. 
 
-The project provides an excellent collaboration and knowledge sharing opportunity to help shape and drive the unified SCI ontology model representation across organisations. Green software is a relatively new area and through this project, you can innovate, build community and contribute to the journey of this open source project.
+The project provides an excellent collaboration and knowledge sharing opportunity to help shape and drive the unified SCI ontology model representation across organizations. Green software is a relatively new area and through this project, you can innovate, build community and contribute to the journey of this open source project.
 
 ## How does your project work?
 

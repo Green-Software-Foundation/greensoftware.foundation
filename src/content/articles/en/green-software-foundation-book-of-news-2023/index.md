@@ -123,7 +123,7 @@ The Green Software Practitioner Course has become a beacon of change in the ICT 
 
 Numerous member organizations are taking action, incorporating the course as a mandatory component of their employees' learning journeys. A few forward-thinking organizations are migrating the course material into their internal green software training programs. Course participants reflect the sentiment:
 
-"I'm not particularly passionate about certifications, but when it comes to Green Software for Practitioners, I'm willing to make an exception. It may not be a magical solution, but this course is incredibly valuable and enjoyable, covering important aspects that we should all consider when developing, designing, and implementing software and infrastructure solutions. This certification is just the first step on a journey towards sustainable software practices." - Software Architect and Developer
+"I'm not particularly passionate about certifications, but when it comes to Green Software for Practitioners, I'm willing to make an exception. It may not be a magical solution, but this course is incredibly valuable and enjoyable, covering important aspects that we should all consider when developing, designing, and implementing software and infrastructure solutions. This certification is just the first step on a journey toward sustainable software practices." - Software Architect and Developer
 
 "Anyone involved in the process of building, deploying, or managing software can learn something from this. By knowing about some simple principles, any software developer can make decisions that have a meaningful impact on the carbon pollution of their applications." - Head of Security & Infrastructure
 

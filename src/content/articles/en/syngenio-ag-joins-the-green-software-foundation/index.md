@@ -30,7 +30,7 @@ In this interview with Jürgen Funke, a technology enthusiast and Board member a
 
 ## Tell us about yourself and your work at Syngenio 
 
-As a technology enthusiast, I always strive to make technology work in a meaningful way. I joined Syngenio nearly 14 years ago and today I am the board member responsible for marketing, corporate development and our start-up platform. At Syngenio, we optimise business processes of banks and other service providers with innovative IT solutions. The start-ups we co-founded give us access to specific technologies such as IT Security, Virtual Reality, Distributed Ledgers and applications for IoT. These technologies supplement our core offerings but are better off as separate companies.
+As a technology enthusiast, I always strive to make technology work in a meaningful way. I joined Syngenio nearly 14 years ago and today I am the board member responsible for marketing, corporate development and our start-up platform. At Syngenio, we optimize business processes of banks and other service providers with innovative IT solutions. The start-ups we co-founded give us access to specific technologies such as IT Security, Virtual Reality, Distributed Ledgers and applications for IoT. These technologies supplement our core offerings but are better off as separate companies.
 
 Personally I live with my family in the Cologne area and from time to time you will find me in the Provence, where other parts of my family reside. Starting with an apprenticeship as a radio-television technician, I studied electrical engineering with a focus on computer science and got to know and appreciate the diversity of the IT consulting industry. Finding the best solutions, implementing them and making them work are still my driving force today. I was allowed to experience this at large IT companies operating internationally. Seeing my own children grow up in Paris for a while was also an enrichment for the whole family.
 
@@ -53,9 +53,9 @@ We currently participate in three working groups: Standards, Policy and Communit
 
 ## Is Syngenio using principles of green software engineering and development in your work? 
 
-Yes. In early 2021, Syngenio established a dedicated team that explores *Green Software Design*, as we call it. We want to give development teams advice on how best to get started. Analysing existing frameworks, libraries and products plays an important role here because in many software development projects, the lines of code imported from such frameworks exceed the newly written code by far. But we also work on principles and process improvements that support *Green Software Design*. 
+Yes. In early 2021, Syngenio established a dedicated team that explores *Green Software Design*, as we call it. We want to give development teams advice on how best to get started. Analyzing existing frameworks, libraries and products plays an important role here because in many software development projects, the lines of code imported from such frameworks exceed the newly written code by far. But we also work on principles and process improvements that support *Green Software Design*. 
 
-## What obstacles do you see to using green software on a wider scale within your organisation and in general?
+## What obstacles do you see to using green software on a wider scale within your organization and in general?
 
 One major obstacle simply seems to be that you have to do it on top of everything else. There’s enough work to be done already, and now we want the teams to take green software aspects into account too. Small wonder they act reserved.
 

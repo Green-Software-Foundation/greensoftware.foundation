@@ -15,7 +15,7 @@ Almaviva is a leading Italian ICT Group. Through consultancy, process and servic
 
 The Group has a global network of 30 companies and 79 branches, 44 in Italy and 35 worldwide, and employs 45,000 people worldwide. 
 
-We are committed to improving people’s lives, putting the potential of technology at the service of the community, and driving the transformation responsibly towards a better future for all.
+We are committed to improving people’s lives, putting the potential of technology at the service of the community, and driving the transformation responsibly toward a better future for all.
 
 ## How does environmental sustainability fit into your organization?
 

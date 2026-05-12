@@ -83,7 +83,7 @@ The Act also offers exemptions for open-source AI systems, which could free them
 
 ## Federica Sarro, Professor of Software Engineering at University College London
 
-The EU AI Act is a necessary step towards regulating a rapidly evolving field with profound societal implications such as the AI field. It represents both a pioneering framework for ethical AI and a potential catalyst for more sustainable growth.
+The EU AI Act is a necessary step toward regulating a rapidly evolving field with profound societal implications such as the AI field. It represents both a pioneering framework for ethical AI and a potential catalyst for more sustainable growth.
 
 The Act primarily focuses on ensuring that AI systems are trustworthy, ethical, and that they respect fundamental rights. While environmental sustainability is not explicitly emphasized as a core objective of the Act, it is indirectly addressed through risk assessments, alignment with broader EU sustainability goals, and the promotion of responsible AI practices. The act mainly focuses on encouraging, rather than mandating, environmental sustainability in AI; it promotes collaboration between regulators, companies, and civil society to set standards for AI development. Therefore, stakeholders such as the Green Software Foundation, can play a significant part in advocating for incorporating environmental sustainability into these standards, ensuring that green principles become an integral part of AI compliance frameworks.
 

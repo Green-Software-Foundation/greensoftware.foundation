@@ -30,7 +30,7 @@ At first, CAST ran CAST Highlight to thoroughly analyze one of its enterprise ap
 
 Armed with this insight, CAST started a targeted optimization campaign. Leveraging the detailed recommendations provided by CAST Highlight, the team addressed its green deficiencies, focusing on modifications that would yield the most reduction in CO2 emissions. Following those adjustments, CAST compared the optimized version of the application against the original baseline to quantify the improvements achieved.
 
-## The Results: A Leap Towards Sustainability
+## The Results: A Leap Toward Sustainability
 
 Using CAST Highlight with the SCI specification resulted in an optimized version of the application, demonstrating a 5% improvement in execution duration compared to its original state. This enhancement, achieved with just four person-days of effort, proves the efficiency and effectiveness of targeted green optimizations.
 

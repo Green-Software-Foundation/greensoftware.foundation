@@ -23,7 +23,7 @@ The SDK is mature and stable, supported by an active community. It has successfu
 
 > *"Carbon aware software does more when energy is clean and less when it's dirty."*
 
-At first, the focus was creating command line tooling and a .NET library. Supporting companies in meeting their sustainability goals, the need for a centralized web API surfaced. We learned that companies wanted a fast-acting tool that could help them measure and adjust their behaviour to keep their software emissions low. This shift towards enterprise enablement set the SDK up for much broader adoption. 
+At first, the focus was creating command line tooling and a .NET library. Supporting companies in meeting their sustainability goals, the need for a centralized web API surfaced. We learned that companies wanted a fast-acting tool that could help them measure and adjust their behavior to keep their software emissions low. This shift toward enterprise enablement set the SDK up for much broader adoption. 
 
 Continued collaboration and knowledge-sharing offered significant insight into real-world scenarios and needs, contributing to a v1.0 release, a hosted API and client library available in 40 different programming languages.
 
@@ -33,7 +33,7 @@ Continued collaboration and knowledge-sharing offered significant insight into r
 
 Through emission reporting and hypothetical scenario analysis, adopters of the SDK were now assessing the potential impact of relocating large compute workloads to greener data centers or adjusting scheduling during times of cleaner energy. For example, the SDK enabled location shifting and time shifting of [Vesta’s](https://www.youtube.com/watch?v=4zKSSK8BdN8) compute power for their wind turbine simulation.
 
-We started seeing evidence of how easy it is for any company to take steps towards greener software, without changing a single line of code. As AI strengthens its grip on tech, this will only become more critical.
+We started seeing evidence of how easy it is for any company to take steps toward greener software, without changing a single line of code. As AI strengthens its grip on tech, this will only become more critical.
 
 It also became clear that industry-wide adoption of carbon-aware computing requires making all orchestrators–software that schedules and deploys large workloads–carbon aware. Once orchestrators are carbon aware, software can effectively minimize energy waste, optimize the use of green energy sources, and reduce curtailment. From batch schedulers to Kubernetes and cron jobs, the impact is substantial. It also facilitates the greening of legacy workloads, as the orchestrator deploying and running those workloads is analyzing and predicting the carbon intensity (how green or dirty the electricity is) of its application at any given time and in any given place and adjusting based on where and when green electricity is available and generating.
 
@@ -41,7 +41,7 @@ It also became clear that industry-wide adoption of carbon-aware computing requi
 
 Location carbon shifting, while aiming to reduce emissions, can have unintended mid-term consequences. Transferring large processes to greener locations may strain local energy supplies, leading to increased reliance on fossil fuels to meet additional demand.
 
-However, the longer-term consequences of geographical or temporal shifts towards clean energy will result in greening of the energy mix. As renewable energy becomes increasingly profitable, it drives the expansion of greener grids, diminishing the appeal of less sustainable alternatives. The journey toward widespread adoption of carbon-aware computing is nuanced; while this transformation unfolds gradually, it carries a lot of potential. 
+However, the longer-term consequences of geographical or temporal shifts toward clean energy will result in greening of the energy mix. As renewable energy becomes increasingly profitable, it drives the expansion of greener grids, diminishing the appeal of less sustainable alternatives. The journey toward widespread adoption of carbon-aware computing is nuanced; while this transformation unfolds gradually, it carries a lot of potential. 
 
 As a project, we’re looking to add geolocation support to the SDK, in a responsible and sustainable manner. We’re exploring tools such as calculators, throttling, and guidance to help developers achieve net reductions to the emissions associated with local and global electricity grids. Additionally, we're expanding our resources, including samples, templates, and tools, to simplify the adoption of the Carbon Aware SDK.
 

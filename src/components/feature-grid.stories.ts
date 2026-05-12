@@ -48,7 +48,7 @@ export const Cards2Col = {
 export const Bordered2Col = {
   args: {
     heading: "*Connect*",
-    body: "Join the platforms and programmes that connect practitioners.",
+    body: "Join the platforms and programs that connect practitioners.",
     features: sampleFeatures,
     columns: 2,
     variant: "bordered",

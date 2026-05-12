@@ -62,7 +62,7 @@ The Green AI Committee (GAIC) is formed of these members:
 ## 1. What Is Green AI?
 
 > [!IMPORTANT]
-> **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
+> **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
 
 In their approach to establishing the definition, the committee prioritized the following:
 

@@ -23,7 +23,7 @@ I have more than 25 years of experience in IT and travel. With Amadeus, I’ve h
 ## What is your main goal concerning sustainability within Amadeus?
 Our main aim is for every engineer within Amadeus to understand that sustainability is at the core of everything we do. That flows into their training right from the start, the toolchain they use, and the guidelines on how to design and deliver our software. The key is to give them the tools for measuring the impact of any of the decisions they make, specifically with regard to sustainability.
 
-This focus on sustainability is crucial for the future of the planet as well as that of the travel industry. Professionally, I think it's also an exciting intellectual challenge and provides purpose for our engineers. Changing our mindset is front and center to me: we have to move towards a technology that is more energy efficient.
+This focus on sustainability is crucial for the future of the planet as well as that of the travel industry. Professionally, I think it's also an exciting intellectual challenge and provides purpose for our engineers. Changing our mindset is front and center to me: we have to move toward a technology that is more energy efficient.
 
 ## Where does the urge for sustainability come from?
 Environmental sustainability and climate action have become crucial topics for the travel and tourism industry in recent years. As an important player in the industry, we acknowledge our responsibility to collaborate with others and contribute to creating a more sustainable future.
@@ -33,7 +33,7 @@ We have been reinforcing our environmental sustainability strategy, which is bas
 Creating a more sustainable industry is a challenge that all travel players face, only by collaborating and working together will we be able to reach the industry’s goal of being Net Zero 2050. We’re seeing increased interest from customers as well as employees. Customers are looking for low carbon solutions and employees often ask in job interviews what we are doing for the environment.
 
 ## What do you plan to achieve together with the GSF?
-By joining GSF, Amadeus can connect, collaborate and share experiences with other businesses, academic institutions, start-ups, and non-profit bodies leading in the domain of green IT.  Some of our engineers will join GSF workshops as early as next week to learn and contribute to building standardized sustainable engineering practices. This, in turn, will allow us to share sustainable coding practices across our organization more quickly. We will work together to find ways to minimise our impact on the environment.
+By joining GSF, Amadeus can connect, collaborate and share experiences with other businesses, academic institutions, start-ups, and non-profit bodies leading in the domain of green IT.  Some of our engineers will join GSF workshops as early as next week to learn and contribute to building standardized sustainable engineering practices. This, in turn, will allow us to share sustainable coding practices across our organization more quickly. We will work together to find ways to minimize our impact on the environment.
 
 Amadeus will also collaborate on open-source sustainability projects accessible to developers worldwide. We intend to propose open-source projects relevant to the scope of GSF to foster development. We see sustainability as an intrinsically collaborative process. We also want to contribute significantly to the standards workgroup and, personally I’ll join the community workgroup.
 
@@ -51,7 +51,7 @@ The travel industry is currently undergoing a renewal process. Travelers are loo
 
 However, in the challenge lies the opportunity. For Amadeus, that means the development of IT solutions that help to inform travelers about impact of their travel on sustainability as well as the availability to provide sustainable travel options and to help travel providers improve the environmental efficiency of their operations. These solutions can improve customer conversion, loyalty, and reputation.
 
-We must also evolve from the trend of ever-growing capabilities towards greater efficiency and customization. Artificial intelligence is a big part of that. It is an exciting challenge for our developers to build elegant and efficient code that can do more with fewer resources. The challenge will be to ensure education around this change in trend.
+We must also evolve from the trend of ever-growing capabilities toward greater efficiency and customization. Artificial intelligence is a big part of that. It is an exciting challenge for our developers to build elegant and efficient code that can do more with fewer resources. The challenge will be to ensure education around this change in trend.
 
 Along with the move of applications to the cloud, other areas such as FinOps can also support that mindset change. For instance, smartphone users will likely become thriftier about their use of data if they are actively informed about their usage and the emissions linked to it. The same applies to cars; live fuel consumption triggers changes in driving habits toward more fuel efficiency. FinOps will support this kind of evolution for software.
 

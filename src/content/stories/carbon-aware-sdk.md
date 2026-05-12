@@ -41,7 +41,7 @@ timeline:
   - date: 2021–2022
     heading: From library to enterprise API
     body: >
-      Early conversations revealed companies needed not just a library but a centralised
+      Early conversations revealed companies needed not just a library but a centralized
       web API. By mid-2022, the SDK had a hosted API and a client library available in
       40 different programming languages.
     source:
@@ -91,9 +91,9 @@ timeline:
       href: /articles/celebrating-the-graduation-of-the-carbon-aware-sdk/
 
   - date: October 2024
-    heading: Decentralised carbon-aware computing
+    heading: Decentralized carbon-aware computing
     body: >
-      Energy Web delivered the world's first decentralised computation nomination system
+      Energy Web delivered the world's first decentralized computation nomination system
       based on sustainability factors using the Carbon Aware SDK — extending carbon-aware
       computing into blockchain and Web3.
     source:
@@ -124,7 +124,7 @@ contributors:
   - name: Mani Hagh Sefat
     role: CTO and Board Member
     org: Energy Web
-    contribution: Delivered the world's first decentralised carbon-aware computation nomination system.
+    contribution: Delivered the world's first decentralized carbon-aware computation nomination system.
   - name: Elisabeth Brinton
     role: Corporate Vice President, Sustainability
     org: Microsoft
@@ -173,18 +173,18 @@ relatedSlugs:
 cta:
   heading: Be part of the next story
   body: >
-    The Carbon Aware SDK was built by organisations who came together through the Green
+    The Carbon Aware SDK was built by organizations who came together through the Green
     Software Foundation. Join us to collaborate on the standards, tools, and training
     that reduce software's environmental impact.
   ctaText: "Explore the Carbon Aware SDK"
   ctaHref: "https://carbon-aware-sdk.greensoftware.foundation"
 ---
 
-In 2021, organisations across the Green Software Foundation knew something frustrating: the electricity grid was cleaner at certain times and in certain places, but their software had no way to respond to that signal. Workloads ran on dirty power even when clean power was available hours later or in a neighbouring region.
+In 2021, organizations across the Green Software Foundation knew something frustrating: the electricity grid was cleaner at certain times and in certain places, but their software had no way to respond to that signal. Workloads ran on dirty power even when clean power was available hours later or in a neighbouring region.
 
-Every organisation faced the same fragmented landscape. Carbon data came from different providers — WattTime, Electricity Maps — in different formats, with different access methods. Building a carbon-aware application meant each company reinventing the same integration work.
+Every organization faced the same fragmented landscape. Carbon data came from different providers — WattTime, Electricity Maps — in different formats, with different access methods. Building a carbon-aware application meant each company reinventing the same integration work.
 
-The need was clear: a shared, open-source toolkit that could centralise the logic, provide a common interface to multiple carbon data sources, and make it easy for any developer to build software that does more when the electricity is clean and less when it is dirty.
+The need was clear: a shared, open-source toolkit that could centralize the logic, provide a common interface to multiple carbon data sources, and make it easy for any developer to build software that does more when the electricity is clean and less when it is dirty.
 
 > "Little awareness and slow adoption of greener software practices are the key obstacles that I see. It's human nature to take the path of least resistance, especially when it's hard to see and feel the immediate impact of your contributions."
 > — Kin Chiu, Executive Director and Sustainable Technology Lead, UBS

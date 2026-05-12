@@ -27,7 +27,7 @@ export const WithImage = {
     imageSrc: "/assets/world-map.svg",
     imageAlt: "Global reach",
     stats: [
-      { value: "80+", label: "Member organisations" },
+      { value: "80+", label: "Member organizations" },
       { value: "195", label: "Articles published" },
       { value: "3", label: "ISO-accredited standards" },
     ],

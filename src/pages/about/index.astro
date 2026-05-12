@@ -17,8 +17,8 @@ import members from "@/data/members.json";
 
 const academicGovTypes = ["Academia", "Government"];
 const activeSteeringMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "Steering");
-const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organisationType));
-const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organisationType));
+const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organizationType));
+const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organizationType));
 const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
 ---
 
@@ -75,7 +75,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
   <!-- Section 3: What is Green Software? -->
   <TextBlock
     heading="What is *green software*?"
-    body="Green software is software built to minimise its environmental impact — not just carbon emissions, but energy consumption, water usage, and hardware lifecycle too. As the digital landscape evolves to encompass cloud infrastructure, data centres, AI systems, and edge computing, our definition has broadened from software alone to the entire digital ecosystem. Our focus remains reduction at source, not offsetting: the most preferable outcome is to never have caused the harm in the first place."
+    body="Green software is software built to minimize its environmental impact — not just carbon emissions, but energy consumption, water usage, and hardware lifecycle too. As the digital landscape evolves to encompass cloud infrastructure, data centers, AI systems, and edge computing, our definition has broadened from software alone to the entire digital ecosystem. Our focus remains reduction at source, not offsetting: the most preferable outcome is to never have caused the harm in the first place."
     compact
   />
 
@@ -84,7 +84,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
     badge="OUR STORY"
     heading="Founded in"
     headingAccent="2021"
-    body="The Green Software Foundation was born out of a mutual desire and need to collaborate across the software industry. In May 2021, Accenture, GitHub, Microsoft, and ThoughtWorks came together under the Linux Foundation to launch a nonprofit dedicated to reducing the carbon emissions of software. What started as four founding organisations has grown into a global coalition of over 60 member organisations — from tech giants to financial institutions, consultancies to academic institutions — all united by the same goal."
+    body="The Green Software Foundation was born out of a mutual desire and need to collaborate across the software industry. In May 2021, Accenture, GitHub, Microsoft, and ThoughtWorks came together under the Linux Foundation to launch a nonprofit dedicated to reducing the carbon emissions of software. What started as four founding organizations has grown into a global coalition of over 60 member organizations — from tech giants to financial institutions, consultancies to academic institutions — all united by the same goal."
     imageSrc="/assets/hero-illustration.svg"
     imageAlt="Foundation story illustration"
     ctaText="See our governance & leadership →"
@@ -104,15 +104,15 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
       </div>
 
       <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-        <!-- Maximise Trust -->
+        <!-- Maximize Trust -->
         <div class="flex gap-5 rounded-xl border border-border bg-accent-lightest-2 p-6">
           <div class="hidden shrink-0 sm:block">
-            <img src="/assets/values-maximise-trust.svg" alt="" class="h-16 w-16" />
+            <img src="/assets/values-maximize-trust.svg" alt="" class="h-16 w-16" />
           </div>
           <div>
-            <h3 class="text-lg font-bold text-primary-dark">Maximise Trust</h3>
+            <h3 class="text-lg font-bold text-primary-dark">Maximize Trust</h3>
             <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
-              If there is no trust in the Foundation's output, it won't have the influence needed to achieve its mission. We maintain a diverse mix of organisations and keep all processes open and transparent.
+              If there is no trust in the Foundation's output, it won't have the influence needed to achieve its mission. We maintain a diverse mix of organizations and keep all processes open and transparent.
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
           <div>
             <h3 class="text-lg font-bold text-primary-dark">Be Inclusive and Open to All</h3>
             <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
-              We act with fairness and include diverse perspectives. Our working groups operate via consensus — each member organisation has one vote, regardless of size.
+              We act with fairness and include diverse perspectives. Our working groups operate via consensus — each member organization has one vote, regardless of size.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
           <div>
             <h3 class="text-lg font-bold text-primary-dark">Hold Ourselves Accountable</h3>
             <p class="mt-2 text-sm leading-relaxed text-primary-dark/80">
-              Accountability builds trust. We assume our colleagues are operating with the best intentions and working towards our shared mission, while ensuring safety, professionalism, and inclusion.
+              Accountability builds trust. We assume our colleagues are operating with the best intentions and working toward our shared mission, while ensuring safety, professionalism, and inclusion.
             </p>
           </div>
         </div>
@@ -183,7 +183,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
     features={[
       { icon: "/assets/standardized-icon.svg", title: "Standards", description: "Our members develop vendor-neutral specifications — from SCI to SOFT — through an AI-facilitated consensus process that's achieved ISO certification in record time.", linkText: "Explore our standards →", linkHref: "/standards/" },
       { icon: "/assets/co2-icon.svg", title: "Policy & Research", description: "Translating technical reality into regulatory language. Position papers, the State of Green Software report, and a policy radar tracking emerging legislation — giving members the evidence and the voice.", linkText: "See our policy work →", linkHref: "/policy/" },
-      { icon: "/assets/renewable-icon.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programmes — turning commitments into competence.", linkText: "Start learning →", linkHref: "/education/" },
+      { icon: "/assets/renewable-icon.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programs — turning commitments into competence.", linkText: "Start learning →", linkHref: "/education/" },
       { icon: "/assets/realtime-icon.svg", title: "Community", description: "Champions, meetups, podcasts, and events — a global network of practitioners driving sustainable software forward. The movement that turns individual effort into industry change.", linkText: "Join the community →", linkHref: "/community/" },
     ]}
   />
@@ -196,12 +196,12 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
           By the <span class="text-primary">numbers</span>
         </h2>
         <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary-dark">
-          A global community of practitioners, leaders, and organisations driving sustainable software forward.
+          A global community of practitioners, leaders, and organizations driving sustainable software forward.
         </p>
       </div>
       <div class="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-8 text-center md:grid-cols-3">
         {[
-          { value: `${totalMembers}+`, label: "Member organisations" },
+          { value: `${totalMembers}+`, label: "Member organizations" },
           { value: "130,000+", label: "Green Software Practitioner course completions" },
           { value: "450,000", label: "Podcast downloads" },
           { value: "12,000", label: "Global meetup community members" },
@@ -219,8 +219,8 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
 
   <!-- Section 9: Logo Marquee -->
   <LogoMarquee
-    heading="Trusted by 60+ organisations including"
-    greyscale={false}
+    heading="Trusted by 60+ organizations including"
+    grayscale={false}
     bgClass="bg-white"
     fadeBgClass="from-white"
   />
@@ -228,7 +228,7 @@ const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length 
   <!-- Section 10: CTA -->
   <CTABanner
     heading="Want to shape the future of green software?"
-    body="Join 60+ organisations building the standards, strategies, and tools for sustainable software."
+    body="Join 60+ organizations building the standards, strategies, and tools for sustainable software."
     ctaText="Explore membership"
     ctaHref="/membership/"
   />

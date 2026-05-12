@@ -16,8 +16,8 @@ interface Props {
   bgClass?: string;
   /** Background class for the gradient fade edges */
   fadeBgClass?: string;
-  /** Whether logos should be greyscale by default */
-  greyscale?: boolean;
+  /** Whether logos should be grayscale by default */
+  grayscale?: boolean;
   /** Link to the full member directory */
   directoryHref?: string;
   /** Text for the directory link */
@@ -29,7 +29,7 @@ const {
   logos: propLogos,
   bgClass = "bg-white",
   fadeBgClass,
-  greyscale = false,
+  grayscale = false,
   directoryHref = "https://directory.greensoftware.foundation/members/",
   directoryText = "View all members",
 } = Astro.props;
@@ -55,7 +55,7 @@ const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-a
   style={`--marquee-duration: ${marqueeDuration}s`}
   role="region"
   aria-roledescription="carousel"
-  aria-label="Member organisations"
+  aria-label="Member organizations"
 >
   <div class="relative container overflow-hidden">
     <!-- Heading row with controls — pause button in DOM before scrolling content for keyboard order -->
@@ -94,7 +94,7 @@ const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-a
       <div class={`absolute top-0 right-0 bottom-0 z-10 w-20 bg-gradient-to-l ${fadeFrom} to-transparent`}></div>
 
       <!-- Primary logo set -->
-      <div class="flex shrink-0 animate-marquee items-center gap-12" role="group" aria-label="Member organisation logos">
+      <div class="flex shrink-0 animate-marquee items-center gap-12" role="group" aria-label="Member organization logos">
         {logos.map((logo) => (
           <a
             href={`//${logo.website.replace(/^https?:\/\//, '').replace(/^www\./, '')}`}
@@ -102,7 +102,7 @@ const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-a
             rel="noopener noreferrer"
             class:list={[
               "mx-6 flex h-10 w-32 shrink-0 cursor-pointer items-center justify-center overflow-hidden md:h-12 md:w-40",
-              greyscale && "grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100",
+              grayscale && "grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100",
             ]}
             aria-label={logo.name}
           >
@@ -129,7 +129,7 @@ const fadeFrom = fadeBgClass || (bgClass.includes("accent-lightest-2") ? "from-a
             tabindex="-1"
             class:list={[
               "mx-6 flex h-10 w-32 shrink-0 cursor-pointer items-center justify-center overflow-hidden md:h-12 md:w-40",
-              greyscale && "grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100",
+              grayscale && "grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100",
             ]}
           >
             <Image

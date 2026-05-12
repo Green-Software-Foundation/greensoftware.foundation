@@ -23,7 +23,7 @@ Sustainability is foundational to being a modern digital business and we develop
 
 **How does Thoughtworks see the future of green software?**
 
- For the technology industry to do its part in helping curb climate change, everyone involved in the design, development and delivery of software needs to be involved. There needs to be a cultural shift towards shared action and accountability for making our software more sustainable. We imagine a not-too-distant future where carbon footprint is a central consideration in how software is built—similar to the considerations of performance, cost, quality and accessibility today.  
+ For the technology industry to do its part in helping curb climate change, everyone involved in the design, development and delivery of software needs to be involved. There needs to be a cultural shift toward shared action and accountability for making our software more sustainable. We imagine a not-too-distant future where carbon footprint is a central consideration in how software is built—similar to the considerations of performance, cost, quality and accessibility today.  
 
  **What challenges can get in the way of progress?**
 

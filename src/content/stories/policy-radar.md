@@ -7,7 +7,7 @@ summary: >
   Working Group as the connective tissue between technical expertise and policy action.
 
 mainImage: /assets/stories/policy-radar.png
-problemHeading: By the time organisations heard about a new regulation, the consultation period was often over
+problemHeading: By the time organizations heard about a new regulation, the consultation period was often over
 journeyHeading: From independent policy tracking to a shared radar and formal GHG Protocol engagement
 
 orgs:
@@ -45,7 +45,7 @@ timeline:
   - date: March 2024
     heading: GSF endorses the AI Environmental Impacts Act
     body: >
-      The Policy Working Group's first formal policy endorsement. The Act recognised that AI
+      The Policy Working Group's first formal policy endorsement. The Act recognized that AI
       computational operations were doubling every 10 months, that generating a single AI image
       consumes 1.35 kWh of energy, and that AI energy use could reach 85–134 terawatt hours
       annually by 2027 — as much as the Netherlands consumes. GSF's endorsement called for
@@ -97,7 +97,7 @@ timeline:
 featuredQuote:
   text: >
     One of the biggest challenges is the fragmentation of the policy landscape. There's no
-    centralised authority setting energy standards for software, and existing regulatory
+    centralized authority setting energy standards for software, and existing regulatory
     frameworks often lag far behind the pace of digital innovation. But that's also where
     the opportunity lies: to influence upstream decisions — procurement, design,
     infrastructure — that shape emissions before they ever occur.
@@ -119,7 +119,7 @@ contributors:
       experience from the U.S. House of Representatives and applied expertise in
       measuring emissions across digital supply chains.
   - name: Sean McIlroy
-    role: Programme Director
+    role: Program Director
     org: Green Software Foundation
     contribution: >
       Standards expert who has been driving policy engagement through the foundation
@@ -158,7 +158,7 @@ relatedSlugs:
 cta:
   heading: Track what legislation is coming
   body: >
-    Visit the Policy Radar to see what legislation could affect your organisation.
+    Visit the Policy Radar to see what legislation could affect your organization.
     GSF members can submit new policies and participate in the Policy Working Group's
     consultation responses — ensuring your voice reaches policymakers before regulations
     are finalised.
@@ -166,8 +166,8 @@ cta:
   ctaHref: https://policy-radar.greensoftware.foundation
 ---
 
-In 2024, many technology and sustainability professionals across GSF's membership were facing the same challenge: they couldn't keep up with new environmental legislation. While guidance on existing regulations was available, there was far less visibility into *developing* legislation — the bills being drafted, the consultations being opened, the deadlines approaching. By the time organisations heard about a new regulation, the consultation period was often over.
+In 2024, many technology and sustainability professionals across GSF's membership were facing the same challenge: they couldn't keep up with new environmental legislation. While guidance on existing regulations was available, there was far less visibility into *developing* legislation — the bills being drafted, the consultations being opened, the deadlines approaching. By the time organizations heard about a new regulation, the consultation period was often over.
 
-The problem was compounded by fragmentation. As Aya Saed put it: "There is still a critical gap between recognizing the challenges related to the physical impact of technologies and having practical solutions that balance economic growth with efficiency and sustainability." Member organisations were each trying to track policy developments independently, duplicating effort and missing critical windows for engagement.
+The problem was compounded by fragmentation. As Aya Saed put it: "There is still a critical gap between recognizing the challenges related to the physical impact of technologies and having practical solutions that balance economic growth with efficiency and sustainability." Member organizations were each trying to track policy developments independently, duplicating effort and missing critical windows for engagement.
 
 The Policy Working Group's approach was deliberately nonpartisan: not lobbying, not advocacy, but convening, clarifying, and educating — making the technical expertise of the green software community available to the policymakers who needed it most.

@@ -7,7 +7,7 @@ export default {
 export const Default = {
   args: {
     heading: "Member *Stories*",
-    body: "See how organisations are putting green software into practice.",
+    body: "See how organizations are putting green software into practice.",
     stories: [
       {
         title: "Measuring Cloud Carbon at Scale",
@@ -20,8 +20,8 @@ export const Default = {
         href: "#",
       },
       {
-        title: "AI-Powered Carbon Optimisation",
-        description: "Using machine learning to optimise workload scheduling based on grid carbon intensity.",
+        title: "AI-Powered Carbon Optimization",
+        description: "Using machine learning to optimize workload scheduling based on grid carbon intensity.",
         href: "#",
       },
     ],

@@ -17,7 +17,7 @@ Energy Web (EWF) is a non-profit organization dedicated to designing, developing
 
 ## How does green software fit into the Web3 Technology ecosystem?
 
-Decentralized technologies, like blockchain, consume considerable energy, and green software plays a key role in addressing their environmental footprint. At Energy Web, we work towards blockchain and enterprise software solutions that are both decentralized and sustainable. 
+Decentralized technologies, like blockchain, consume considerable energy, and green software plays a key role in addressing their environmental footprint. At Energy Web, we work toward blockchain and enterprise software solutions that are both decentralized and sustainable. 
 
 Green software provides the framework to minimize the carbon footprint of these systems by allowing us to verify sustainability claims with data-driven and transparent methods. Incorporating green software into Web3 ensures that the computational processes driving decentralization are as eco-friendly as possible, moving from theoretical sustainability to verifiable impact.
 

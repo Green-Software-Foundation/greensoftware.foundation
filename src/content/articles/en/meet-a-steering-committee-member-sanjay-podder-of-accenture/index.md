@@ -28,7 +28,7 @@ I am the Global lead for Sustainable Technology at [Accenture](https://www.accen
 I have spent close to 20 years in Accenture delivering complex DevOps projects for clients and half of which in leading Innovation in Software DevOps and AI space. My deep understanding of software engineering led the way for me to become the Global Software Engineering R&D lead for Accenture. I have also bagged more than 50 patents in Software Engineering over the years. I strongly believe that software can accelerate the attainment of Sustainable Development Goals (SDG). That is why I founded the[ Tech4Good](https://www.accenture.com/sg-en/insights/technology/techforgood) program at Accenture. In recognition of the transformational projects I have led under the Tech4Good program, I was selected as an[ Eisenhower Fellow](https://www.accenture.com/us-en/blogs/blogs-bringing-tech4good-initiatives-mainstream) in 2017. As an Eisenhower Fellow, I embarked on a six-week program in the U.S. where I conducted research related to scaling the impact of how technology can be used to solve complex social problems together with other 20 fellows named in 2017.
 
 ## Tell us about your journey to the Green Software Foundation
-The rising greenhouse gas (GHG) emissions from ICT has been an area of concern for me. And I have been spearheading the Green Software culture and program at Accenture in my current role as the Tech Sustainability Innovation lead. This brought me closer to like-minded people from organisations like Microsoft who have a shared commitment to green software.
+The rising greenhouse gas (GHG) emissions from ICT has been an area of concern for me. And I have been spearheading the Green Software culture and program at Accenture in my current role as the Tech Sustainability Innovation lead. This brought me closer to like-minded people from organizations like Microsoft who have a shared commitment to green software.
 
 As an innovator, I am very passionate about bringing digital technologies to develop innovative solutions to achieve SDGs. Decarbonizing digital technologies is my current area of innovation.
 
@@ -39,9 +39,9 @@ Early in 2021, as I was researching the green software development space, I came
 ## What do you, as an individual, expect to achieve by working with the GSF and in green software in general?
 On its own, software doesn’t consume energy or emit any harmful discharge. The problem lies in the way software is developed for use, and then in the way it is used. Software runs on hardware, and as the former continues to grow, so does its reliance on the machines to make it run. This in turn impacts the carbon footprint.
 
-This is why organisations should make software an integral part of their sustainability efforts. They need to take the carbon footprint of software into account in the way it is designed, developed, and deployed.
+This is why organizations should make software an integral part of their sustainability efforts. They need to take the carbon footprint of software into account in the way it is designed, developed, and deployed.
 
-One critical challenge in developing green software is that there are no commonly agreed standards, practices, metrics and tools to measure and minimise software related carbon emissions. We will need new skills, new tools and new standards as well as a collaborative effort from business, academia, regulators, and nonprofits.
+One critical challenge in developing green software is that there are no commonly agreed standards, practices, metrics and tools to measure and minimize software related carbon emissions. We will need new skills, new tools and new standards as well as a collaborative effort from business, academia, regulators, and nonprofits.
 
 I would like to see the building of a vibrant, inclusive, trusted ecosystem of people where we share industry-wide recognized standards, innovation, tooling, and best practices for green software engineering.
 
@@ -56,7 +56,7 @@ Many have focused on hardware in the past and it is now time to focus on softwar
 
  
 
-**Another challenge is the lack of standards and tools.** As I said earlier, this is a very new area. We are the pioneers in this space. There are no commonly agreed standards, practices, metrics and tools to measure and minimise software related carbon emissions. We will need new skills, new tools and new standards and we will need a collaborative effort from all stakeholders.
+**Another challenge is the lack of standards and tools.** As I said earlier, this is a very new area. We are the pioneers in this space. There are no commonly agreed standards, practices, metrics and tools to measure and minimize software related carbon emissions. We will need new skills, new tools and new standards and we will need a collaborative effort from all stakeholders.
 
 An industry consortium like the Green Software Foundation is crucial in setting industry standards and creating innovative tools like the Carbon Aware SDK. In this aspect, Accenture has also developed patent pending assets and tools which helps our clients in achieving their environmental social and governance (ESG) goals. We also participate actively in the GSF Innovation Working Group which will create more innovative and useful tools for the industry and our partners.
 

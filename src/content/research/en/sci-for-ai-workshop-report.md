@@ -7,7 +7,7 @@ status: published
 type: report
 version: "1.0"
 summary: >
-  In early 2025, AI experts from GSF member organisations participated in workshops to define the GSF approach to AI measurement and evaluate existing metrics. This report shares the outcomes that laid the groundwork for the SCI for AI specification.
+  In early 2025, AI experts from GSF member organizations participated in workshops to define the GSF approach to AI measurement and evaluate existing metrics. This report shares the outcomes that laid the groundwork for the SCI for AI specification.
 workingGroup: software-wg
 tags: ["sci-ai", "standards"]
 authors:
@@ -278,7 +278,7 @@ Does it aim to complement or extend these standards, or is it designed as a new 
 
 A key distinction between the SCI philosophy and other metrics is that it is, first and foremost, designed to incentivize behaviors, and only the behaviors we want. We believe that if you focus on developing a metric without paying attention to what that metric incentivizes, you will end up promoting the wrong behaviors, or your incentivization of the right behaviors will be accidental rather than intentional.
 
-Every measurement standard implicitly shapes behavior. By defining what is measured and how a standard establishes the boundaries of what is optimized. For example, some existing frameworks *incentivise* the purchase of carbon offsets, inadvertently shifting focus away from direct reductions within the value chain. Others may *disincentivize* potentially beneficial practices, such as time- or location-shifting of compute workloads, to align with low-carbon energy availability.
+Every measurement standard implicitly shapes behavior. By defining what is measured and how a standard establishes the boundaries of what is optimized. For example, some existing frameworks *incentivize* the purchase of carbon offsets, inadvertently shifting focus away from direct reductions within the value chain. Others may *disincentivize* potentially beneficial practices, such as time- or location-shifting of compute workloads, to align with low-carbon energy availability.
 
 As outlined in the scope section, the SCI specification focuses on incentivizing measurable engineering improvements that directly reduce the carbon footprint of software.
 

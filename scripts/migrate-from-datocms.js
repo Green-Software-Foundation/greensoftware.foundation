@@ -936,7 +936,7 @@ async function migrateTeam() {
     const groups = [];
     if (m.isSteeringCommitteeMember) groups.push("steeringCommittee");
     if (m.isAdministrativeTeamMember) groups.push("administrativeTeam");
-    if (m.isGeneralMember) groups.push("organisationalLeads");
+    if (m.isGeneralMember) groups.push("organizationalLeads");
 
     const entry = {
       fullName: m.fullName,

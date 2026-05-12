@@ -35,13 +35,13 @@ tags:
 
 The European Union's Artificial Intelligence Act (Regulation 2024/1689), which entered into force on August 1, 2024, establishes the world's first comprehensive regulatory framework for artificial intelligence. Among its provisions are requirements for environmental documentation, particularly for General-Purpose AI (GPAI) models, but these requirements fall short of what's needed to address AI's rapidly growing environmental footprint.
 
-The EU AI Act requires GPAI providers to document energy consumption but does not mandate measurement of actual carbon emissions, ignores embodied emissions from hardware manufacturing, restricts disclosure to regulatory authorities rather than the public, and provides no standardized methodology for measurement or comparison. Most environmental provisions rely on voluntary codes of conduct and future harmonised standards that may not materialize until 2028 or later.
+The EU AI Act requires GPAI providers to document energy consumption but does not mandate measurement of actual carbon emissions, ignores embodied emissions from hardware manufacturing, restricts disclosure to regulatory authorities rather than the public, and provides no standardized methodology for measurement or comparison. Most environmental provisions rely on voluntary codes of conduct and future harmonized standards that may not materialize until 2028 or later.
 
 **Software Carbon Intensity for AI (SCI for AI)** offers a more comprehensive solution. Built on the ISO/IEC 21031:2024 standard, SCI for AI provides a methodology that converts energy to carbon emissions using location-specific grid intensity factors, includes hardware lifecycle (embodied) emissions, defines standardized functional units enabling meaningful comparison across AI systems, and excludes carbon offsets. Only genuine emission reductions improve scores.
 
 Organizations that adopt SCI for AI today will not only exceed current EU AI Act requirements but will be prepared for the more stringent standards the Commission is mandated to develop. For AI providers subject to Annex XI documentation requirements, SCI for AI provides the measurement methodology the regulation lacks. For deployers developing voluntary codes of conduct under Article 95, SCI for AI offers the "clear objectives and key performance indicators" the Act demands.
 
-**The recommendation**: organizations seeking to demonstrate sustainability leadership should consider adopting SCI for AI, while recognizing that implementation requires meaningful investment and that future EU harmonised standards may take different approaches.
+**The recommendation**: organizations seeking to demonstrate sustainability leadership should consider adopting SCI for AI, while recognizing that implementation requires meaningful investment and that future EU harmonized standards may take different approaches.
 
 ---
 
@@ -56,7 +56,7 @@ The EU AI Act (Regulation 2024/1689) represents the first attempt by any major j
 | August 1, 2024 | Regulation enters into force |
 | August 2, 2025 | GPAI model obligations begin |
 | August 2, 2027 | Compliance deadline for models pre-dating August 2025 |
-| August 2, 2028 | Commission progress report on harmonised standards due |
+| August 2, 2028 | Commission progress report on harmonized standards due |
 
 This phased approach creates an important window: organizations can establish robust environmental measurement practices now, positioning themselves ahead of evolving requirements.
 
@@ -87,9 +87,9 @@ Key characteristics of this requirement:
 
 **Source**: [Annex XI](https://artificialintelligenceact.eu/annex/11/)
 
-#### Article 40 — Harmonised Standards
+#### Article 40 — Harmonized Standards
 
-Article 40 mandates the Commission to request development of harmonised standards addressing:
+Article 40 mandates the Commission to request development of harmonized standards addressing:
 
 "Improving resource performance, including energy efficiency, and reducing the consumption of energy and of other resources of AI systems throughout their entire lifecycle."
 
@@ -302,7 +302,7 @@ SCI for AI provides methodological support for EU AI Act environmental requireme
 | EU AI Act Requirement | SCI for AI Capability | Fit Assessment |
 | :---- | :---- | :---- |
 | **Annex XI energy documentation** | E component captures energy; provides a structured approach to measurement | Strong |
-| **Article 40 resource performance standards** | SCI methodology could inform harmonised standards; ISO foundation provides credibility | Speculative |
+| **Article 40 resource performance standards** | SCI methodology could inform harmonized standards; ISO foundation provides credibility | Speculative |
 | **Article 95 voluntary codes KPIs** | Functional units enable normalized metrics that could serve as KPIs | Partial |
 | **Systemic risk assessment** | Enables comparative benchmarking across models | Indirect—systemic risk is based on compute (FLOPs), not SCI scores |
 
@@ -324,7 +324,7 @@ SCI for AI's I component captures this crucial distinction.
 
 #### 2\. Embodied Emissions
 
-Hardware lifecycle emissions can be substantial. Estimates of embodied emissions as a share of total data center lifecycle emissions vary widely — from around 10% to over 60% depending on hardware type, utilisation patterns, operational lifespan, and accounting methodology — and are projected to grow as grids decarbonise (Aslan et al., 2025; Meta, 2024).
+Hardware lifecycle emissions can be substantial. Estimates of embodied emissions as a share of total data center lifecycle emissions vary widely — from around 10% to over 60% depending on hardware type, utilization patterns, operational lifespan, and accounting methodology — and are projected to grow as grids decarbonize (Aslan et al., 2025; Meta, 2024).
 
 For AI-specific hardware like GPUs with shorter replacement cycles, the proportion may be higher. The EU AI Act does not address these emissions; SCI for AI's M component captures them.
 
@@ -381,15 +381,15 @@ While this paper advocates for SCI for AI adoption, intellectual honesty require
 
 4. **Still evolving**: SCI for AI is a relatively new extension to the base SCI specification. Functional unit definitions and boundary guidance may change, creating uncertainty for early adopters.  
 
-5. **Dual burden**: Organizations adopting SCI for AI alongside EU AI Act compliance face dual reporting obligations. Some may reasonably prefer waiting for official Article 40 harmonised standards rather than investing in a methodology that might differ from eventual requirements.
+5. **Dual burden**: Organizations adopting SCI for AI alongside EU AI Act compliance face dual reporting obligations. Some may reasonably prefer waiting for official Article 40 harmonized standards rather than investing in a methodology that might differ from eventual requirements.
 
 #### No Guarantee of Regulatory Alignment
 
-This paper suggests SCI for AI positions organizations for future standards, but this is **speculative**. The Commission's Article 40 harmonised standards may adopt different approaches, metrics, or functional units.
+This paper suggests SCI for AI positions organizations for future standards, but this is **speculative**. The Commission's Article 40 harmonized standards may adopt different approaches, metrics, or functional units.
 
 ### 3.4 Future-Proofing
 
-Article 40 mandates the Commission to develop harmonised standards and report on progress by August 2, 2028\. That report may include "legally binding corrective measures" if voluntary approaches prove insufficient.
+Article 40 mandates the Commission to develop harmonized standards and report on progress by August 2, 2028\. That report may include "legally binding corrective measures" if voluntary approaches prove insufficient.
 
 Organizations using SCI for AI position themselves to:
 
@@ -459,7 +459,7 @@ Organizations deploying AI systems should:
 
 ### 4.3 For Standards Bodies and Policymakers
 
-Organizations developing Article 40 harmonised standards may consider:
+Organizations developing Article 40 harmonized standards may consider:
 
 1. **Consider SCI for AI as a candidate methodology**  
 
@@ -512,7 +512,7 @@ The question is not whether more stringent AI environmental requirements will co
 
 **The call to action**: for organizations with the resources and commitment to lead on AI sustainability, SCI for AI offers a rigorous, ISO-aligned methodology that exceeds current requirements. Implementation is not trivial—it requires investment in data collection, methodology expertise, and ongoing measurement infrastructure. But for those who believe environmental accountability will become increasingly important to customers, investors, and regulators, early adoption represents a strategic opportunity.
 
-Organizations should weigh this against legitimate alternatives: waiting for official Article 40 harmonised standards, or focusing on energy efficiency (which the EU AI Act does require) as a simpler near-term goal. There is no single right answer—but informed decision-making requires understanding both the opportunities SCI for AI presents and the limitations it carries.
+Organizations should weigh this against legitimate alternatives: waiting for official Article 40 harmonized standards, or focusing on energy efficiency (which the EU AI Act does require) as a simpler near-term goal. There is no single right answer—but informed decision-making requires understanding both the opportunities SCI for AI presents and the limitations it carries.
 
 ---
 

@@ -79,7 +79,7 @@ Tuning techniques like asynchronous callback, caching and explicit garbage colle
 ### After Tuning
 
 
-![Graph showing CPU and memory utilisation percentages over time after performance tuning](./image.png)
+![Graph showing CPU and memory utilization percentages over time after performance tuning](./image.png)
 
 This is an example of a Carbon efficient application.
 

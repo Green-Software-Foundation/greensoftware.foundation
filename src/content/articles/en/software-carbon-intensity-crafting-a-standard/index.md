@@ -47,13 +47,13 @@ Our approach with the SCI seeks to address the above limitations through the fol
 
 In particular, we realized that the current approaches sometimes don’t reward genuine actions on the part of designers, developers, and deployers in achieving greener outcomes from their software systems. This creates a negative feedback loop discouraging green actions that reduce the carbon impact of software systems. Keeping that in mind, we have included carbon awareness, energy efficiency, and hardware efficiency as core tenets of the SCI with a specific view to reward actions that move the needle on making a software system greener.
 
-#### Towards optimizing the carbon impact of software systems
+#### Toward optimizing the carbon impact of software systems
 
-In developing the SCI, we have made an effort to nudge towards global optimization in terms of the carbon impact of the software system rather than a hyperfocus on local optimizations that can cause negative downstream consequences. The SCI has also been designed to ease the burden of calculation for users, in order to boost adoption. It encourages the use of data that leads to more actionable insights rather than just measuring and reporting for the sake of doing it.  
+In developing the SCI, we have made an effort to nudge toward global optimization in terms of the carbon impact of the software system rather than a hyperfocus on local optimizations that can cause negative downstream consequences. The SCI has also been designed to ease the burden of calculation for users, in order to boost adoption. It encourages the use of data that leads to more actionable insights rather than just measuring and reporting for the sake of doing it.  
 
 #### Firm guidance on standardization and transparency in reporting
 
-Finally, and perhaps most importantly, with firm guidance on standardization and transparency in reporting, we want stakeholders to “show their work”. Then, those who are consuming the SCI values to make decisions can better understand how they got the values and what went into making that calculation. This also encourages the entire ecosystem towards increasingly higher standards of transparency, ultimately boosting the amount of public information available on the carbon impacts of software systems. This will have the knock-on effect of permitting us to not only glean patterns and best practices but also make better decisions in terms of what and how to report SCI values.  
+Finally, and perhaps most importantly, with firm guidance on standardization and transparency in reporting, we want stakeholders to “show their work”. Then, those who are consuming the SCI values to make decisions can better understand how they got the values and what went into making that calculation. This also encourages the entire ecosystem toward increasingly higher standards of transparency, ultimately boosting the amount of public information available on the carbon impacts of software systems. This will have the knock-on effect of permitting us to not only glean patterns and best practices but also make better decisions in terms of what and how to report SCI values.  
 
 #### We adopt a consequentialist approach
 
@@ -67,11 +67,11 @@ We should all care!
 
 It is estimated that the impact of cloud computing rivals that of the entire airline industry. Software is only now becoming more pervasive across every industry. The key difference that we seek to make through the SCI is to empower consumers of software systems to make informed decisions. Once established, SCI will equip consumers with sufficient standardized and comparable information across various types of software systems, no matter their industry. Consumers would then be able to choose the greenest possible solution from among those that satisfy their other functional and business needs.
 
-We hope that through better information, we can nudge the entire ecosystem towards normalizing environmental considerations as a core facet in the design, development, and deployment of software systems.
+We hope that through better information, we can nudge the entire ecosystem toward normalizing environmental considerations as a core facet in the design, development, and deployment of software systems.
 
 ## What are the risks?
 
-Any attempt at creating new standards is rife with risks, especially those of excluding things that might be relevant and including things that might not be relevant. Yet, we take on this responsibility with the acknowledgment that we must take the first steps towards a standardized, actionable, and interoperable approach to measuring the carbon footprint of software systems.
+Any attempt at creating new standards is rife with risks, especially those of excluding things that might be relevant and including things that might not be relevant. Yet, we take on this responsibility with the acknowledgment that we must take the first steps toward a standardized, actionable, and interoperable approach to measuring the carbon footprint of software systems.
 
 Specific risks that we are aware of include:
 

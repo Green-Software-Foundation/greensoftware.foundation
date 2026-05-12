@@ -17,7 +17,7 @@ authors:
 
 Throughout my career in systems, after 10 years programming in .Net and other 5 years leading technical teams to help them meet their objectives, I went through many projects in various industries such as cinema, civil aviation industry, software industry, food, human resources, etc. Each one of them had their challenges. 
 
-Nowadays I’ve found the greatest challenge of all: that is how to help the planet, changing the mentality I used to work with  and to go through a new course towards sustainability technology and discovering the exciting universe of Green IT. I imagine myself in the very near future being able to contribute within Globant and with the whole world what I am learning and discovering along with the GSF.
+Nowadays I’ve found the greatest challenge of all: that is how to help the planet, changing the mentality I used to work with  and to go through a new course toward sustainability technology and discovering the exciting universe of Green IT. I imagine myself in the very near future being able to contribute within Globant and with the whole world what I am learning and discovering along with the GSF.
 
 ## What do you, as an individual, expect to achieve by working with the GSF and in green software in general? 
 

@@ -34,7 +34,7 @@ Our goals are to create inclusive, global experiences for Green Software Foundat
 
 ## What progress have you made so far?
 
-**Jenny:** Planning is underway and we are thrilled to see the global and organisational representation! There are eight host organisations and over 30 regional summits currently being planned for the June Summit. 
+**Jenny:** Planning is underway and we are thrilled to see the global and organizational representation! There are eight host organizations and over 30 regional summits currently being planned for the June Summit. 
 
 The GSF Global Summit will be hosted both virtually and in-person over June 6 to June 17th. Regional hosts can pick the specific date and time they would like to offer the workshop, sessions, and networking opportunities to their attendees. We will then bring the entire globe together in a virtual closing ceremony on June 17, 2022 to bring us all together. 
 
@@ -44,13 +44,13 @@ Responsibilities and projects within the Global Summit include event logistics, 
 
 ## Why is this project important?
 
-**Jenny:** The Green Software Foundation is driving the narrative around sustainable development. The messaging is publicly available and now is the time to bring together those who are interested in learning more and meeting others. Live events allow attendees to ask questions, gain knowledge in real time, meet others in the industry, gain valuable memories, and adopt behavioural change. 
+**Jenny:** The Green Software Foundation is driving the narrative around sustainable development. The messaging is publicly available and now is the time to bring together those who are interested in learning more and meeting others. Live events allow attendees to ask questions, gain knowledge in real time, meet others in the industry, gain valuable memories, and adopt behavioral change. 
 
 **Tammy:** This project has such a large potential to impact software development with regards to determining the impact of CO2e that software has. The project can help spread the message on how we can reduce that impact and continue to measure and benchmark and share that information globally.
 
 ## How does Events & Experiences project work?
 
-The core planning team meets on a bi-weekly basis and regional leads meet on their own to produce their localised experience.
+The core planning team meets on a bi-weekly basis and regional leads meet on their own to produce their localized experience.
 
 ## How can someone get involved?
 

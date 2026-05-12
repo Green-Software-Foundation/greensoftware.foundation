@@ -12,7 +12,7 @@ interface Feature {
 }
 
 interface Props {
-  /** Heading text. Wrap words in *asterisks* for accent colour */
+  /** Heading text. Wrap words in *asterisks* for accent color */
   heading?: string;
   /** Body text under heading */
   body?: string;
@@ -22,7 +22,7 @@ interface Props {
   features?: Feature[];
   /** Number of columns (2, 3, 4, or 5) */
   columns?: 2 | 3 | 4 | 5;
-  /** Display variant: "cards" (default), "bordered" (centred card with bordered grid), or "plain" (left-aligned with vertical dividers) */
+  /** Display variant: "cards" (default), "bordered" (centered card with bordered grid), or "plain" (left-aligned with vertical dividers) */
   variant?: "cards" | "bordered" | "plain";
   /** Reduce vertical padding (useful when used as a section heading) */
   compact?: boolean;

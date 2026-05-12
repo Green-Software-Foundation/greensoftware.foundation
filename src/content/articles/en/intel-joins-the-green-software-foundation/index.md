@@ -35,7 +35,7 @@ That's not wrong. Intel's primary business is processors, as well as data center
 
 ## What is your mission in the sustainability and green software context, and why did you join GSF?
 
-We plan to make a big difference in the world, nothing short of that. More specifically, we want to help the industry progress towards green software development. We want to do that open in the sense of a collaborative effort together with industry partners—one of the main reasons for joining GSF.
+We plan to make a big difference in the world, nothing short of that. More specifically, we want to help the industry progress toward green software development. We want to do that open in the sense of a collaborative effort together with industry partners—one of the main reasons for joining GSF.
 
 Our strategy at its core is to operate through open source. That implies a couple of things. One, it helps us align our partners with our goals to a certain degree. We view the Green Software Foundation as one of the main hubs where people are talking about the capabilities of green software. Being on board also means streamlining our own goals with the other industry partners, which brings enormous benefits to all participating organizations.
 
@@ -43,7 +43,7 @@ The other thing with open source is that it accelerates what you can accomplish.
 
 ## With the general increase in software usage and the immense growth in user numbers today, it certainly sounds like you can set the stage for tremendous energy savings down the road. I am also intrigued by how you value the collaborative aspect, where results are achieved by working together.
 
-A tangible impact can only be achieved with all the industry partners at the table. To get results, you have to do it at scale. Like an individual device doesn't use much power. But if you effect change across the world’s data centers, you are looking at a substantial impact. If you save energy across the world’s PCs, if it happens across the IoT devices of the world, that’s how we will make a significant contribution towards net zero.
+A tangible impact can only be achieved with all the industry partners at the table. To get results, you have to do it at scale. Like an individual device doesn't use much power. But if you effect change across the world’s data centers, you are looking at a substantial impact. If you save energy across the world’s PCs, if it happens across the IoT devices of the world, that’s how we will make a significant contribution toward net zero.
 
 And the only way to get there is by meeting developers from various sectors, be it the cloud providers, PC makers, etc. That's where Intel is in a fantastic position in the marketplace. We foster excellent business relationships with all these groups and organizations.
 

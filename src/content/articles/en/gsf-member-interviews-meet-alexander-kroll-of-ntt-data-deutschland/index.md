@@ -38,7 +38,7 @@ Within NTT DATA I held the position as Head of Extended Reality Solutions for a 
 
 I like learning and networking with interesting people and I hope to experience both within the Green Software Foundation. I like community work and I hope to find like minded people while engaging in community work. I think that this kind of community contribution is very important to society. 
 
-From a personal responsibility perspective, I try to make the world a little bit cleaner. I feel that I could have an influence to reach our climate goals with a contribution to this Foundation. I hope with the participation in the GSF and my range within the NTT DATA DACH organisation as guild leader, as a lecturer at the university for subjects around microservices and cloud computing and development, as meetup contributor within the cloud development scene (AWS, Microsoft), I could have wide impact on many people and could raise awareness for that topic.
+From a personal responsibility perspective, I try to make the world a little bit cleaner. I feel that I could have an influence to reach our climate goals with a contribution to this Foundation. I hope with the participation in the GSF and my range within the NTT DATA DACH organization as guild leader, as a lecturer at the university for subjects around microservices and cloud computing and development, as meetup contributor within the cloud development scene (AWS, Microsoft), I could have wide impact on many people and could raise awareness for that topic.
 
 ## What GSF working groups and projects are you involved in, and what role you have played or are playing?
 
@@ -64,4 +64,4 @@ I think good, comprehensive speaker decks with appropriate guidance could unlock
 
 ## Any other matters you would like to share with us about green software and sustainability? 
 
-I think that NTT DATA as a global organisation will play an important role when it comes to mindset shaping for green software and sustainability as they are high-ranked goals within our company.
+I think that NTT DATA as a global organization will play an important role when it comes to mindset shaping for green software and sustainability as they are high-ranked goals within our company.

@@ -116,18 +116,18 @@ This is how I visualise the different ways you might run a single computing job 
 I hope it shows that some ideas from other domains can help us think differently about digital infrastructure. Because once you start thinking of it like an essential utility our society is built on, you can bring to bear all kinds of other ideas.
 
 ## What this has to do with a greener digital sector
-Getting back to the subject of compute powered by green energy, if we know we are able to think independently about the kind of computing job we want to run, and where or how we want to run it, it allows for re-thinking what a datacentre *should* look like, or where we want to build reliability into any system we use.
+Getting back to the subject of compute powered by green energy, if we know we are able to think independently about the kind of computing job we want to run, and where or how we want to run it, it allows for re-thinking what a data center *should* look like, or where we want to build reliability into any system we use.
 
 #### An interesting example
 
-![A top down view of the inside of a wind turbine with an Examesh datacentre inside](./a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png)
+![A top down view of the inside of a wind turbine with an Examesh data center inside](./a-top-down-view-of-the-inside-of-a-wind-turbine-with-an-examesh-datacentre-inside.png)
 
-One interesting example here would be the German company, [Examesh](https://examesh.de/). They build datacentres into the base of wind turbines, to take advantage of power that would otherwise be wasted, or to use the energy jargon, *curtailed*.
+One interesting example here would be the German company, [Examesh](https://examesh.de/). They build data centers into the base of wind turbines, to take advantage of power that would otherwise be wasted, or to use the energy jargon, *curtailed*.
 
 We say energy is curtailed when it can’t be fed into the grid, and put to productive use. This often happens because there is no way to move the power to where a workload needs to be run, due to a local oversupply of power on the grid causing ‘congestion’ on the power lines.
 
-But *if you can move the workload to where the power is instead*, you can change the economics, and the clean, variable power that would be wasted can be put to productive use instead. Better yet, if we’re able to make use of existing physical infrastructure like this, we can avoid building *another* purpose-built datacentre building just to service those workloads.
+But *if you can move the workload to where the power is instead*, you can change the economics, and the clean, variable power that would be wasted can be put to productive use instead. Better yet, if we’re able to make use of existing physical infrastructure like this, we can avoid building *another* purpose-built data center building just to service those workloads.
 
-This is a different model to the more common approach of building massive datacentres which stand apart from the rest of the built environment. And it’s partly made possible by us thinking about compute workloads as things we can run on different kinds of fungible sources of computing power–and realising that by matching them to different sources, we can optimise for cost, for carbon emissions, speed, and so on.
+This is a different model to the more common approach of building massive data centers which stand apart from the rest of the built environment. And it’s partly made possible by us thinking about compute workloads as things we can run on different kinds of fungible sources of computing power–and realizing that by matching them to different sources, we can optimize for cost, for carbon emissions, speed, and so on.
 
 This isn’t the only idea from the power sector that can help us think differently about digital infrastructure, but I do think it is a useful one. We will explore some more of these ideas in future posts.

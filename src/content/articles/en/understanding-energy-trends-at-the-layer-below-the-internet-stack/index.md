@@ -30,7 +30,7 @@ Over the last 20 years, a fossil free internet has become just desirable, not ju
 
 ## The stack below the internet
 
-Very (very) generally speaking, when we turn on a light switch we get electricity from an organisation that operates a grid (our grid operator). That grid operator typically buys electricity from organisations that generate electricity to sell into a grid (our generators).
+Very (very) generally speaking, when we turn on a light switch we get electricity from an organization that operates a grid (our grid operator). That grid operator typically buys electricity from organizations that generate electricity to sell into a grid (our generators).
 
 ## Terms to help us think about the grid
 
@@ -48,7 +48,7 @@ Second is the **cost of electricity**, usually measured in terms of the cost per
 
 As demand for power on a grid increases, so does the cost people are prepared to pay to use electricity. We might refer to this increasing cost of each extra unit of electricity we produce to meet demand as the marginal cost of electricity.
 
-Most of the time, we don’t see these price fluctuations in our everyday use, because electricity markets are regulated, and these changes happen on a wholesale market that only certain players have access to. These players might be the energy retailers most of us buy our electricity from for our homes, or large users of energy in the commercial and industrial sectors, like hospitals, data-centre operators, factories and so on.
+Most of the time, we don’t see these price fluctuations in our everyday use, because electricity markets are regulated, and these changes happen on a wholesale market that only certain players have access to. These players might be the energy retailers most of us buy our electricity from for our homes, or large users of energy in the commercial and industrial sectors, like hospitals, data-center operators, factories and so on.
 
 ### Capacity factor
 

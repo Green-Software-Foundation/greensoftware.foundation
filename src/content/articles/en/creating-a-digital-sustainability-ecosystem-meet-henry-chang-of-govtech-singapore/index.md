@@ -2,8 +2,8 @@
 title: "Creating a Digital Sustainability Ecosystem - Meet Henry Chang of GovTech Singapore"
 published: true
 date: "2023-09-19"
-summary: "GovTech, Singapore’s primary government agency for driving digital transformation across the public sector, plays a pivotal role in ensuring that the move towards a Smart Nation is environmentally sustainable."
-teaserText: "Taking small steps towards a smart and sustainable city, GovTech Singapore aims to achieve greener outcomes for Singapore’s digitalization efforts."
+summary: "GovTech, Singapore’s primary government agency for driving digital transformation across the public sector, plays a pivotal role in ensuring that the move toward a Smart Nation is environmentally sustainable."
+teaserText: "Taking small steps toward a smart and sustainable city, GovTech Singapore aims to achieve greener outcomes for Singapore’s digitalization efforts."
 mainImage: "./main.png"
 ---
 
@@ -22,7 +22,7 @@ GovTech drives Singapore’s public sector digital transformation by harnessing 
 
 In my role, I oversee the work for Services, Governance, and Cybersecurity. As chair of GovTech’s Sustainability Committee, I help provide leadership and strategic direction to cross-functional sustainability initiatives aligned with Singapore’s Sustainability Movement (Green Plan 2030) and net-zero goals.
 
-GovTech also leads the ICT and smart systems practice for Singapore’s public sector. There is growing appreciation amongst our board and senior leadership members that driving sustainable digitalization practices and outcomes for the Singapore government will necessarily be an important area of focus for GovTech moving forward.
+GovTech also leads the ICT and smart systems practice for Singapore’s public sector. There is growing appreciation among our board and senior leadership members that driving sustainable digitalization practices and outcomes for the Singapore government will necessarily be an important area of focus for GovTech moving forward.
 
 ## *What are some of GovTech’s priorities in the area of sustainability?*
 We are taking a three-pronged strategy:
@@ -66,7 +66,7 @@ The third challenge lies in the lack of standards and data for quantifying the e
 ## *How does GovTech see the future of green software, and what is GovTech’s view on creating the right ecosystem to support this area of work?*
 I am observing a solid push to advance and acquire green software capabilities globally, predominantly within the technology industry. With mounting pressures for organizations to be more efficient and sustainable in their operations, I am hopeful green software will become mainstream across organizations in the near future. My colleagues and I are already seeing such mindset shift in our public sector agencies.
 
-The right ecosystem will consist of strong internal and external partnerships. At GovTech, we are actively working towards fostering a culture of sustainability where every aspect of our work integrates sustainability considerations. We strongly believe that regardless of their designations at work, all GovTech employees play an essential role in enabling our sustainability goals.
+The right ecosystem will consist of strong internal and external partnerships. At GovTech, we are actively working toward fostering a culture of sustainability where every aspect of our work integrates sustainability considerations. We strongly believe that regardless of their designations at work, all GovTech employees play an essential role in enabling our sustainability goals.
 
 Externally, we are working to build partnerships with governments, NGOs, industry players, academia, and other stakeholders to drive innovation and collaboration in the development of green software. Through our membership with the GSF, we hope to meet like-minded practitioners and explore tools and methods that will contribute to lowering the software carbon intensity of our products and services.
 

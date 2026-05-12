@@ -49,7 +49,7 @@ timeline:
       The firm hosted a GSF summit in their London office and made green software education
       a key focus, building a community of like-minded engineers and sponsors with strong
       support from leadership. Sarah also chaired the project to revise and extend the
-      Principles of Green Software Engineering to reflect what the field had learnt since 2019.
+      Principles of Green Software Engineering to reflect what the field had learned since 2019.
     source:
       text: Meet Sarah Hsu of Goldman Sachs
       href: /articles/meet-gsf-org-leads-sarah-hsu-of-goldman-sachs/
@@ -74,7 +74,7 @@ timeline:
       At Decarbonize Software 2023, Asim Hussain reported that the course had successfully
       trained over 50,000 participants in less than a year — a figure that would more than
       double in the following year. At HCLTech, Sunil Aggarwal had stood up a Sustainability
-      Centre of Excellence with over 100 engineers trained in green engineering guidelines
+      Center of Excellence with over 100 engineers trained in green engineering guidelines
       and a Green Software Engineering Lab in Redmond, Washington. At EPAM, Chris Howard
       noted that clients were "far more engaged in understanding the level of engineers who
       have completed the GSP training" — pointing to a growing revenue stream for certified teams.
@@ -154,11 +154,11 @@ cta:
   ctaHref: "https://movement.greensoftware.foundation"
 ---
 
-Organisations had sustainability mandates from the board, net-zero commitments in their annual reports, and growing regulatory pressure from directives like CSRD. But when engineering teams sat down at their keyboards, they had no specialised training in how software choices affect carbon emissions. Engineers couldn't distinguish genuine emissions reduction from well-intentioned guesswork.
+Organizations had sustainability mandates from the board, net-zero commitments in their annual reports, and growing regulatory pressure from directives like CSRD. But when engineering teams sat down at their keyboards, they had no specialized training in how software choices affect carbon emissions. Engineers couldn't distinguish genuine emissions reduction from well-intentioned guesswork.
 
 At Avanade, Chris Lloyd-Jones wanted to deliver all client projects using green software engineering practices — but with 60,000 employees, where do you begin? At HCLTech, Sunil Aggarwal identified three fundamental barriers: lack of awareness and understanding of green software, lack of standards and metrics, and lack of tools and frameworks. At Goldman Sachs, Sarah Hsu saw the opportunity clearly: "Sustainability and reliability are different concepts but are closely related and should go hand in hand with one another. We can think of sustainability as reliability over time." But there was no curriculum to teach this.
 
-The problem wasn't motivation. The younger generation of engineers, as Sarah Hsu observed, cared deeply about sustainability and it affected their decision-making. The problem was that no shared language, no common curriculum, and no recognised certification existed for green software engineering. Every company was starting from zero, independently.
+The problem wasn't motivation. The younger generation of engineers, as Sarah Hsu observed, cared deeply about sustainability and it affected their decision-making. The problem was that no shared language, no common curriculum, and no recognized certification existed for green software engineering. Every company was starting from zero, independently.
 
 > "We see developing green software as vital for achieving net-zero targets. The software developers of tomorrow, who are being trained today, must acquire the knowledge, skill, and expertise to develop energy and carbon-efficient software applications."
 > — Dr. Michael Bane & Dr. Ernest Edifor, Manchester Metropolitan University

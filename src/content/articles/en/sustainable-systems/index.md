@@ -20,7 +20,7 @@ authors:
 
 In the [first post](https://greensoftware.foundation/articles/sustainable-systems-mastering-the-tradeoff-between-high-server-utilization-and-ha) of the Sustainable Systems series, we covered how to lower your SCI score by managing tradeoffs between high server utilization and energy consumption.
 
-In this second post, we cover another trade off to consider around NOT aiming for “aggressive” performance response times and throughput for the applications we build. In an attempt to meet stiff response time targets, we have seen that considerable development cycles are spent towards tuning the code for performance.  This increases the overall carbon emissions of the software. The intent of this post is to provide readers with considerations that can help business and technical teams to attempt to reach a middle ground and negotiate on acceptable response time numbers. 
+In this second post, we cover another trade off to consider around NOT aiming for “aggressive” performance response times and throughput for the applications we build. In an attempt to meet stiff response time targets, we have seen that considerable development cycles are spent toward tuning the code for performance.  This increases the overall carbon emissions of the software. The intent of this post is to provide readers with considerations that can help business and technical teams to attempt to reach a middle ground and negotiate on acceptable response time numbers. 
 
 **Key measures of software performance**
 

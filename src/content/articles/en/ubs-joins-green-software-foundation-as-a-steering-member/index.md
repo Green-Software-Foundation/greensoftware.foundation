@@ -21,7 +21,7 @@ UBS is the world’s largest, truly global wealth manager and as part of this ha
 
 UBS approaches sustainability as a constant expression of our purpose as a company. We have been at the forefront of sustainable finance for more than two decades and we are one of the financial industry’s leading forces for driving positive, long-term change. As part of our ongoing commitment, we want to ensure that the technology enabling UBS all over the world is as sustainable as possible too. 
 
-The work we plan to undertake with the Green Software Foundation (GSF) is about adopting a new paradigm for software development—one that shifts towards greener outcomes and lower carbon emissions from our digital ecosystem. Through this relationship we want to find ways to shift culture, behaviours and create new approaches and models for creating and managing apps, platforms and services that consume less energy and are more thoughtful in their use and consumption of power.
+The work we plan to undertake with the Green Software Foundation (GSF) is about adopting a new paradigm for software development—one that shifts toward greener outcomes and lower carbon emissions from our digital ecosystem. Through this relationship we want to find ways to shift culture, behaviors and create new approaches and models for creating and managing apps, platforms and services that consume less energy and are more thoughtful in their use and consumption of power.
 
 As early adopters of the cloud within the financial services industry, we have also made progress in our ability to calculate our carbon emissions as we systematically move from on-premise solutions into the cloud. We hope to share some of these learnings and best practices with other members within our industry and with GSF members overall in hopes to evolve learnings and scale these practices.
 
@@ -37,7 +37,7 @@ The commitment that UBS has to sustainability will play a huge role in driving t
 
 ## What challenges do you see ahead and how to overcome them?
 
-Changing behaviours and mindset will always be a challenge when it comes to introducing new ways of doing things. And this is as true for software as it is for anything else. Additionally, scaling new development practices is something we see as a short term challenge. Together with the GSF community, we hope to bring in different perspectives and approaches to how we can scale greener software across such a large organisation.
+Changing behaviors and mindset will always be a challenge when it comes to introducing new ways of doing things. And this is as true for software as it is for anything else. Additionally, scaling new development practices is something we see as a short term challenge. Together with the GSF community, we hope to bring in different perspectives and approaches to how we can scale greener software across such a large organization.
 
 Education will always play a major role in helping people develop new skills. We will tackle this by enabling learning on green software and clean coding available through our learning platforms.
 

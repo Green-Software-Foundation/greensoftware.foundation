@@ -55,7 +55,7 @@ Our project is currently only open for GSF members, but we are interested in con
 
 ## What does a GSF member get from becoming involved in the Writers project?
 
-Getting involved in the Writer’s project is a great way to connect with people from other member organisations and expand your network. Writing, translating and reviewing content also gives you a chance to expand your knowledge of green software and share your learnings. You will be a part of spreading the knowledge of green software and the GSF to a wider audience.  
+Getting involved in the Writer’s project is a great way to connect with people from other member organizations and expand your network. Writing, translating and reviewing content also gives you a chance to expand your knowledge of green software and share your learnings. You will be a part of spreading the knowledge of green software and the GSF to a wider audience.  
 
 ## What challenges do you see for the project and how do you plan to overcome them?
 

@@ -37,8 +37,8 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 ---
 
 <Layout
-  title="SOFT — Sustainable Organisational Framework for Technology | Green Software Foundation"
-  description="The comprehensive framework that guides organisations through adopting, implementing, and transforming sustainable software practices."
+  title="SOFT — Sustainable Organizational Framework for Technology | Green Software Foundation"
+  description="The comprehensive framework that guides organizations through adopting, implementing, and transforming sustainable software practices."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -61,9 +61,9 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
       ...(softProject?.lifecycle ? [{ text: softProject.lifecycle, variant: "dark" as const }] : []),
     ]}
-    heading="Transform Your Organisation for"
+    heading="Transform Your Organization for"
     headingAccent="Sustainable Software"
-    body="SOFT is the comprehensive framework that guides organisations through adopting, implementing, and transforming sustainable software practices across their entire operations."
+    body="SOFT is the comprehensive framework that guides organizations through adopting, implementing, and transforming sustainable software practices across their entire operations."
     ctas={[
       { text: "Take the course", variant: "primary", href: "http://grnsft.org/mov-plat-soft-essentials" },
       { text: "Explore the Framework", variant: "outline", href: "https://github.com/Green-Software-Foundation/SOFT" },
@@ -76,13 +76,13 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="Developed with consensus from GSF member organisations"
+    heading="Developed with consensus from GSF member organizations"
   />
 
   <!-- What is SOFT? -->
   <CTACard
     heading="What is SOFT?"
-    body="The Sustainable Organisational Framework for Technology (SOFT) is your organisation's complete transformation guide for sustainable software practices. Developed by the Green Software Foundation and ratified by leading technology organisations, SOFT provides the bridge between knowing sustainability matters and actually achieving it through your technology operations."
+    body="The Sustainable Organizational Framework for Technology (SOFT) is your organization's complete transformation guide for sustainable software practices. Developed by the Green Software Foundation and ratified by leading technology organizations, SOFT provides the bridge between knowing sustainability matters and actually achieving it through your technology operations."
     imageSrc="/assets/standards/soft/cta.svg"
     imageAlt="What is SOFT illustration"
   />
@@ -107,7 +107,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       {
         icon: "/assets/standards/soft/operational.svg",
         title: "Operational",
-        description: "Streamlined processes and optimised workflows for maximum efficiency.",
+        description: "Streamlined processes and optimized workflows for maximum efficiency.",
       },
       {
         icon: "/assets/standards/soft/compliance.svg",
@@ -149,7 +149,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <TextWithImage
     heading="Industry"
     headingAccent="Impact"
-    body="SOFT transforms how organisations approach software sustainability by providing the first comprehensive, actionable framework that bridges the gap between green software tools and organisational implementation. By standardising approaches across strategy, implementation, operations, and compliance, SOFT accelerates the technology sector's contribution to global net-zero targets. This isn't about point solutions anymore — it's about systematic transformation that creates industry-wide consistency in measuring and reducing software carbon emissions."
+    body="SOFT transforms how organizations approach software sustainability by providing the first comprehensive, actionable framework that bridges the gap between green software tools and organizational implementation. By standardizing approaches across strategy, implementation, operations, and compliance, SOFT accelerates the technology sector's contribution to global net-zero targets. This isn't about point solutions anymore — it's about systematic transformation that creates industry-wide consistency in measuring and reducing software carbon emissions."
     imageSrc="/assets/standards/soft/why-soft-feat-1.svg"
     imageAlt="Industry impact illustration"
     bgClass="bg-accent-lightest-2"
@@ -169,11 +169,11 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       },
       {
         icon: "/assets/standards/soft/drive.svg",
-        description: "Drive operational excellence with standardised practices that reduce technical debt and boost developer productivity",
+        description: "Drive operational excellence with standardized practices that reduce technical debt and boost developer productivity",
       },
       {
         icon: "/assets/standards/soft/gain.svg",
-        description: "Gain competitive advantage as a recognised sustainability leader, attracting top talent and environmentally conscious clients",
+        description: "Gain competitive advantage as a recognized sustainability leader, attracting top talent and environmentally conscious clients",
       },
       {
         icon: "/assets/standards/soft/mitigate.svg",
@@ -192,7 +192,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <TextWithImage
     heading="Environmental"
     headingAccent="Impact"
-    body="SOFT directly reduces software-related carbon emissions by embedding sustainability into every phase of the software lifecycle. Organisations implementing SOFT can expect measurable reductions in energy consumption through optimised operations and carbon-aware practices. The framework's comprehensive approach ensures environmental considerations influence decisions from strategic planning through operational execution, creating compound benefits that accelerate your journey to net-zero."
+    body="SOFT directly reduces software-related carbon emissions by embedding sustainability into every phase of the software lifecycle. Organizations implementing SOFT can expect measurable reductions in energy consumption through optimized operations and carbon-aware practices. The framework's comprehensive approach ensures environmental considerations influence decisions from strategic planning through operational execution, creating compound benefits that accelerate your journey to net-zero."
     imageSrc="/assets/standards/soft/why-soft-feat-3.svg"
     imageAlt="Environmental impact illustration"
     bgClass="bg-accent-lightest-2"
@@ -201,7 +201,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Take the Course -->
   <CTACard
     heading="Learn the SOFT framework"
-    body="Take the SOFT Essentials course on the Movement Platform to understand how to assess and improve your organisation's technology sustainability."
+    body="Take the SOFT Essentials course on the Movement Platform to understand how to assess and improve your organization's technology sustainability."
     ctaText="Take the course"
     ctaHref="https://movement.greensoftware.foundation/spaces/21190216/content"
     imageSrc="/assets/standards/soft/ready.svg"

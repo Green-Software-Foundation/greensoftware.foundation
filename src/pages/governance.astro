@@ -70,8 +70,8 @@ const chairsWithLabels = chairsFiltered
   })
   .sort((a, b) => a.fullName.localeCompare(b.fullName));
 
-// Organisation Leads (from organisationalLeads group, populated by fetch script)
-const orgLeadsRaw = teamData.filter(p => p.groups.includes("organisationalLeads"));
+// Organization Leads (from organizationalLeads group, populated by fetch script)
+const orgLeadsRaw = teamData.filter(p => p.groups.includes("organizationalLeads"));
 const orgLeadsList = orgLeadsRaw.map(p => ({
   name: p.fullName,
   company: p.company || "",
@@ -106,7 +106,7 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
   <!-- Section 1b: Governance Structure Intro -->
   <TextBlock
     heading="How we're *structured*"
-    body="The Steering Committee provides strategic direction and fiduciary oversight, while our working groups and committees drive the standards and initiatives that move the industry towards a sustainable future."
+    body="The Steering Committee provides strategic direction and fiduciary oversight, while our working groups and committees drive the standards and initiatives that move the industry toward a sustainable future."
     compact
   />
 
@@ -116,7 +116,7 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
   <!-- Section 2: Steering Committee -->
   <TeamGrid
     heading="*Steering Committee*"
-    body="The Steering Committee is the primary governing body of the Green Software Foundation. Members are selected by Steering Member organisations and are responsible for strategic direction, fiduciary oversight, budget approval, and ratification of working group deliverables."
+    body="The Steering Committee is the primary governing body of the Green Software Foundation. Members are selected by Steering Member organizations and are responsible for strategic direction, fiduciary oversight, budget approval, and ratification of working group deliverables."
     highlighted={highlightedSteering}
     members={remainingSteering}
     columns={3}
@@ -134,20 +134,20 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
   <!-- Section 4: Chairs & Project Leads -->
   <TeamGrid
     heading="Chairs & *Project Leads*"
-    body="These are the people driving the initiatives at the Green Software Foundation — chairing working groups, committees, and projects, and moving the industry forward towards a sustainable future."
+    body="These are the people driving the initiatives at the Green Software Foundation — chairing working groups, committees, and projects, and moving the industry forward toward a sustainable future."
     members={chairsWithLabels}
     columns={4}
   />
 
-  <!-- Section 5: Organisation Leads -->
+  <!-- Section 5: Organization Leads -->
   <section class="bg-white py-12 md:py-16">
     <div class="container">
       <div class="mx-auto max-w-3xl text-center">
         <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
-          <span class="font-bold text-primary">Organisation</span> Leads
+          <span class="font-bold text-primary">Organization</span> Leads
         </h2>
         <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
-          Every member organisation has a primary Organisation Lead — the point of contact for people from that organisation who want to get involved with the foundation.
+          Every member organization has a primary Organization Lead — the point of contact for people from that organization who want to get involved with the foundation.
         </p>
       </div>
 
@@ -156,7 +156,7 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
           <thead>
             <tr class="border-b border-border bg-accent-lightest-2">
               <th class="w-16 px-4 py-3 md:w-20"></th>
-              <th class="px-6 py-3 text-sm font-bold text-primary-dark">Organisation</th>
+              <th class="px-6 py-3 text-sm font-bold text-primary-dark">Organization</th>
               <th class="px-6 py-3 text-sm font-bold text-primary-dark">Lead</th>
               <th class="hidden px-6 py-3 text-sm font-bold text-primary-dark md:table-cell">Title</th>
               <th class="px-6 py-3 text-sm font-bold text-primary-dark w-12"></th>
@@ -242,7 +242,7 @@ const orgLeadsList = orgLeadsRaw.map(p => ({
   <!-- Section 7: CTA -->
   <CTABanner
     heading="Want to shape the future of green software?"
-    body="Join 60+ organisations building the standards, strategies, and tools for sustainable software."
+    body="Join 60+ organizations building the standards, strategies, and tools for sustainable software."
     ctaText="Explore membership"
     ctaHref="/membership/"
   />

@@ -15,7 +15,7 @@ Upon reflection, I was reminded of some of my earliest childhood memories of my 
 
 ## In the past five years, have you seen a specific initiative or project significantly driving the green transition in software?
 
-I believe it's grassroots initiatives driven by passionate individuals who dig deep, question, and strive to enhance sustainability through more efficient technology use. While there isn't a single standout project, the migration of applications to cloud infrastructure has undeniably marked a significant stride towards efficiency and the utilization of greener energy sources.
+I believe it's grassroots initiatives driven by passionate individuals who dig deep, question, and strive to enhance sustainability through more efficient technology use. While there isn't a single standout project, the migration of applications to cloud infrastructure has undeniably marked a significant stride toward efficiency and the utilization of greener energy sources.
 
 ## What advice would you give to software engineers who are passionate about building green software?
 

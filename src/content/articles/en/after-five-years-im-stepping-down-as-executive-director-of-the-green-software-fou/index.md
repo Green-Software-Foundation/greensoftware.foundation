@@ -100,7 +100,7 @@ And to the broader community: thank you for being supportive in a complicated sp
 
 ## What's Next for the Foundation
 
-The new leader will be announced once they've worked through the processes on their side. As you'd expect for a senior position, there's a lot to sort out before they can go public. But trust me, it's worth the wait. I'm very, very excited to leave the Foundation in their capable hands. You need different types of people for different phases of an organisation. I was needed to help birth and grow this. They're the right person to scale its impact into the future.
+The new leader will be announced once they've worked through the processes on their side. As you'd expect for a senior position, there's a lot to sort out before they can go public. But trust me, it's worth the wait. I'm very, very excited to leave the Foundation in their capable hands. You need different types of people for different phases of an organization. I was needed to help birth and grow this. They're the right person to scale its impact into the future.
 
 In the meantime, Todd Moore (SVP Community Operations at the Linux Foundation) will act as interim ED. The team is fully capable and running everything. Gadhu and John remain as chairs. The roadmap is set. Nothing else changes.
 

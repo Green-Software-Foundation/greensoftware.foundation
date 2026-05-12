@@ -52,4 +52,4 @@ I don’t see it as something that needs popularising as much as a core element 
 
 It’s important to understand that green software is a young and evolving area of software development and delivery. That means that the path will be fuzzy, and many solutions and products will come and go over the coming years. 
 
-The ability to unify our efforts through an organisation like GSF is not just a means to expedite our journey to get to that future state, but also to avoid loss of time and investment along the way. The broader the cooperation across industry and standardisation of practices and tools, the more productive and effective we all can be.
+The ability to unify our efforts through an organization like GSF is not just a means to expedite our journey to get to that future state, but also to avoid loss of time and investment along the way. The broader the cooperation across industry and standardization of practices and tools, the more productive and effective we all can be.
