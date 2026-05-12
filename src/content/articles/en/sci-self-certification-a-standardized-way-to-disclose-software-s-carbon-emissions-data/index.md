@@ -4,7 +4,7 @@ teaserText: Supporting transparent carbon accounting by enabling organizations t
 date: 2026-05-12
 published: true
 summary: We're launching the SCI Self-Certification program, enabling organizations to bring internal measurement into a publicly recognized disclosure, marking an important step toward industry-wide carbon transparency.
-mainImage: ../../sci-self-certification-a-standardized-way-to-disclose-software-s-carbon-emissions-data/SCI-Self-Certification.png
+mainImage: SCI-Self-Certification.png
 mainImageAlt: Isometric illustration showing the SCI Self-Certification badge from the Green Software Foundation, surrounded by a document, a server, a megaphone, and a transparency icon, set against a green gradient background.
 featured: false
 tags:
