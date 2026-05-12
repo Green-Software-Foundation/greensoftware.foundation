@@ -61,7 +61,7 @@ We expect an Alpha version to be ready within a few short weeks.
 
 Cloud providers hold a crucial position in sustainability, but we've been missing real-time carbon metrics up until now. As integral components of the information technology supply chain, cloud providers must now provide real-time carbon metrics that they can consolidate based on workloads, allocate, and distribute throughout the supply chain. This action is essential to comply with the regulations currently enforced in Europe and California and those emerging in other regions.
 
-Our latest project, part of the [Standards Working Group](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group), has a clear mission: establishing a benchmark for measuring carbon emissions. This initiative marks a significant shift from the traditional practice of monthly reporting to the adoption of minute-by-minute metrics for all cloud providers. It's a pioneering step towards greater transparency and sustainability in the cloud computing industry.
+Our latest project, part of the [Standards Working Group](https://greensoftwarefoundation.atlassian.net/wiki/spaces/~612dd45e45cd76006a84071a/pages/819277/Standards+Working+Group), has a clear mission: establishing a benchmark for measuring carbon emissions. This initiative marks a significant shift from the traditional practice of monthly reporting to the adoption of minute-by-minute metrics for all cloud providers. It's a pioneering step toward greater transparency and sustainability in the cloud computing industry.
 
 [Find out how to contribute.](https://github.com/orgs/Green-Software-Foundation/discussions/34)
 

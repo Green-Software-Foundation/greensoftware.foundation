@@ -7,7 +7,7 @@ teaserText: "Green software is yet to reach the tipping point—that magic momen
 mainImage: "./main.png"
 ---
 
-In my first article, I talked about [spreading the message of green software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software) within organisations. I addressed grassroots change and the importance of organisational support for change. In the second article, I talked about [success factors, measurements and metrics](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour) to ensure your organisation is fully supportive of greening software.
+In my first article, I talked about [spreading the message of green software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software) within organizations. I addressed grassroots change and the importance of organizational support for change. In the second article, I talked about [success factors, measurements and metrics](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour) to ensure your organization is fully supportive of greening software.
 
 After having identified the business benefits of adopting green software—as well as the broader societal reasons for this adoption!—and gained early buy-in for this change, you'll eventually hit your next challenge: who drives this change? 
 
@@ -54,7 +54,7 @@ For the rest of this article, I'm going to focus on a Center of Excellence, the 
 
 ## Centers of Excellence: Getting started 
 
-By this point, I'm assuming you have an understanding of who your business sponsor is for this initiative, and the success factors you're driving towards. If not, you might want to refer back to articles one and two, [spreading the message of Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software),[ and measuring success](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour), respectively. 
+By this point, I'm assuming you have an understanding of who your business sponsor is for this initiative, and the success factors you're driving toward. If not, you might want to refer back to articles one and two, [spreading the message of Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software),[ and measuring success](https://greensoftware.foundation/articles/cta-success-factors-measurements-and-driving-the-right-behaviour), respectively. 
 
 ### First steps 
 

@@ -50,7 +50,7 @@ In the next articles in this series, we will discuss the four areas covered by t
 
 In summary, the paper recommends the following steps for enterprises that operate in the cloud:
 
-- **Select or transition to hosting providers with a** [**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)**to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress towards it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
+- **Select or transition to hosting providers with a** [**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)**to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress toward it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
 - **Host in regions that provide excellent options for sustainable electricity provision.** Cloud providers should indicate which are their preferred regions for sustainable expansion.
 - **Assess the hosting efficiency of cloud providers.** You can do so by asking whether the current strategy for machine utilization is good enough. Use high density managed services where possible.
 - **Turn off unnecessary, unused workloads, introduce autoscaling, and rightsize machines.**

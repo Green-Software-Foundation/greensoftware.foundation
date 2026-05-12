@@ -343,7 +343,7 @@ Please note that on the Sites, Google Analytics code is supplemented by "gat._an
 
 ***Internet Advertising Bureau***
 
-A guide to behavioural advertising and online privacy that has been produced by the internet advertising industry can be found at [http://www.youronlinechoices.eu/ ](http://www.youronlinechoices.eu/).
+A guide to behavioral advertising and online privacy that has been produced by the internet advertising industry can be found at [http://www.youronlinechoices.eu/ ](http://www.youronlinechoices.eu/).
 
 ***International Chamber of Commerce United Kingdom***
 

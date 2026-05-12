@@ -22,7 +22,7 @@ authors:
 
 > There's a growing understanding of the need for organizations to be green or consider sustainability. But what metrics can we use to measure success?
 
-In the [first article in the Call to Action on Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software), I talked about spreading the message of green software within organisations. Spreading this message will be the basis for change, and help us to drive the adoption of green software engineering practices. That said, how do we know if spreading this message is creating change and moving us closer to success? What is success in this context anyway?
+In the [first article in the Call to Action on Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software), I talked about spreading the message of green software within organizations. Spreading this message will be the basis for change, and help us to drive the adoption of green software engineering practices. That said, how do we know if spreading this message is creating change and moving us closer to success? What is success in this context anyway?
 
 To answer these questions, and to ensure we're moving in the right direction, we need to define success and the measurements which demonstrate success.
 
@@ -40,13 +40,13 @@ There are many frameworks and models we could draw upon to identify our success 
 
 - [UN Sustainable Development Goals](https://sdgs.un.org/goals) (SDGs) - The United Nations has identified 17 goals, each with their own targets and indicators. [Target 13 relates specifically to climate action.](https://sdgs.un.org/goals/goal13)
 - [Doughnut Economics](https://www.kateraworth.com/doughnut/) - In 2017, Kate Raworth talked about the "doughnut of social and planetary boundaries" the idea that there is a ceiling of resources, and if we exceed them (e.g. air pollution) then we drive unacceptable environmental degradation; and there are twelve social foundations, which we need to have as a minimum base, for the world to be socially just.
-- [Global Reporting Initiative (GRI) Standards](https://www.globalreporting.org/standards/media/2458/gri_standards_brochure.pdf) - The GRI is an international and independent standards organisation that provides a common language for reporting on economic, environmental, and social impacts.
+- [Global Reporting Initiative (GRI) Standards](https://www.globalreporting.org/standards/media/2458/gri_standards_brochure.pdf) - The GRI is an international and independent standards organization that provides a common language for reporting on economic, environmental, and social impacts.
 
 The problem with these frameworks is that data points being measured are often beyond the ability of individuals to make a difference. Either the level of focus is on the macro-scale, at the level of governments and nation-states (and don’t get me wrong, this is still important) - or at the enterprise level. Even GRI standards that drill down to business units, or delve deeper into corporate processes and value chains, still have an impact limited to smaller groups of individuals. But, in terms of software, if we want individuals to be able to have a meaningful impact, we need to identify what is within the software engineering span of control.
 
 Let us bring in [the Principles of Green Software Engineering](https://greensoftware.foundation/projects/principles-of-green-software-engineering). Looking at each Principle, we can see the aim is to reduce the carbon emissions of the applications we create and use.
 
-So, our success factor here is [our carbon intensity](https://www.linkedin.com/pulse/green-software-foundation-releases-alpha-version-/). That is a rate of carbon emissions for software, rather than an absolute measurement of emissions - allowing us to monitor the impact that small changes can have on the sustainability of our software. This means we need processes that allow for effective, and ongoing optimisation of our software. Working backwards then, our measurements need to be related to those processes.
+So, our success factor here is [our carbon intensity](https://www.linkedin.com/pulse/green-software-foundation-releases-alpha-version-/). That is a rate of carbon emissions for software, rather than an absolute measurement of emissions - allowing us to monitor the impact that small changes can have on the sustainability of our software. This means we need processes that allow for effective, and ongoing optimization of our software. Working backwards then, our measurements need to be related to those processes.
 
 ## What is the business case for green?
 Why, ultimately, are we doing this? What's the business case to support green software? 

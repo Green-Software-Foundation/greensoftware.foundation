@@ -30,7 +30,7 @@ I am based in Munich and have several responsibilities within NTT DATA DACH. I a
 
 I studied computer science and finished my diploma 15 years ago at the University of Applied Science in Rosenheim in Germany. I started as a software developer, then worked as an architect/cloud architect and technical project lead. 
 
-I joined [NTT DATA ](https://www.nttdata.com/)in 2013 and have since worked on several projects for various customers. I was always a big fan of efficient solutions. Around four years ago, I initiated some innovation projects within NTT DATA around virtual collaboration using innovative technologies like AR/VR to reduce travelling costs and to reduce travelling time to a bare minimum of what was necessary to follow basic sustainability principles. 
+I joined [NTT DATA ](https://www.nttdata.com/)in 2013 and have since worked on several projects for various customers. I was always a big fan of efficient solutions. Around four years ago, I initiated some innovation projects within NTT DATA around virtual collaboration using innovative technologies like AR/VR to reduce traveling costs and to reduce traveling time to a bare minimum of what was necessary to follow basic sustainability principles. 
 
 Within NTT DATA I held the position as Head of Extended Reality Solutions for a few years, and around a year ago I took on the role as Head of Cloud Native & Backend Development/ Tech Guild Lead. Throughout these engagements the sustainability aspect was always a motivating factor to me.
 
@@ -52,7 +52,7 @@ I try to follow the best practices of building green software solutions and brin
 
 ## What obstacles do you see to using green software on a wider scale within your company and in general? 
 
-At work, I see more opportunities than obstacles as our company has a strong focus on the [sustainability goals of the United Nations](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organisation NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
+At work, I see more opportunities than obstacles as our company has a strong focus on the [sustainability goals of the United Nations](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organization NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
 
 ## How can companies get more young software engineers onboard the green software movement?
 

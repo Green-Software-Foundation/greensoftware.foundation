@@ -716,7 +716,7 @@ Prepared by: \[Name, Title\] Date: \[Date\]
 
 2. **Recital 27** — Environmental sustainability principle [https://artificialintelligenceact.eu/recital/27/](https://artificialintelligenceact.eu/recital/27/)  
 
-3. **Article 40** — Harmonised standards and standardisation deliverables [https://artificialintelligenceact.eu/article/40/](https://artificialintelligenceact.eu/article/40/)  
+3. **Article 40** — Harmonized standards and standardisation deliverables [https://artificialintelligenceact.eu/article/40/](https://artificialintelligenceact.eu/article/40/)  
 
 4. **Article 95** — Codes of conduct for voluntary application [https://artificialintelligenceact.eu/article/95/](https://artificialintelligenceact.eu/article/95/)  
 

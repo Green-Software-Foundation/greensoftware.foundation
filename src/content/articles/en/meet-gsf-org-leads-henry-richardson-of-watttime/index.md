@@ -52,7 +52,7 @@ The GSF has taken a strong position on these efforts by [creating the SCI specif
 
 A general lack of awareness around the emissions impacts linked to software is definitely a problem at this stage. Making that connection clear to developers through GSF’s work is an important step to correct that. We need developers to understand which decisions they can make to reduce the emissions intensity of their software and give them the tools to do something about it.
 
-Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [Greenhouse Gas Protocol](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organisations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
+Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [Greenhouse Gas Protocol](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organizations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
 
 Developers need to look beyond their organizations alone to become more aware of the many global impacts their software may have. The new SCI specification makes this so much easier than it has been before. 
 

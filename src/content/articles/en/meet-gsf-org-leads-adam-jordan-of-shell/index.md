@@ -24,7 +24,7 @@ authors:
 
 ## Most of us know Shell as an energy company. How does software come into the picture?
 
-[Shell](http://www.shell.com/) is both a leader in the energy industry and a leader of the energy transformation, moving towards clean and renewable energy sources by implementing Shell’s [Powering Progress strategy](https://www.shell.com/powering-progress.html). 
+[Shell](http://www.shell.com/) is both a leader in the energy industry and a leader of the energy transformation, moving toward clean and renewable energy sources by implementing Shell’s [Powering Progress strategy](https://www.shell.com/powering-progress.html). 
 
 As a leader in the energy industry, it’s very important that we’re not only building solutions to meet the needs of the future energy business, but that we’re also understanding the impact of the solutions themselves. The ability to build solutions that are aware of their energy and carbon impact allows us to build solutions with a complete picture of what our impact is and how we can continue to improve it. That makes Green Software a key element of all future software solutions at Shell. Partnering with the Green Software Foundation allows us to make sure we’re bringing the latest standards, practices, and guidance into our team, and contribute back our learnings and input as a company looking to implement at a large scale.
 

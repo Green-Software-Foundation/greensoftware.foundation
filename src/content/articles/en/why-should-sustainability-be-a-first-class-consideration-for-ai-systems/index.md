@@ -39,7 +39,7 @@ Such large systems also hinder democratization of AI; they require huge computat
 
 #### Centered on business and functional requirements ignoring environmental costs
 
-Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers towards their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [MLCommons](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
+Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers toward their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [MLCommons](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
 
 ## What is sustainable AI?
 

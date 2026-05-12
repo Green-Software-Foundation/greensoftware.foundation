@@ -15,7 +15,7 @@ Let's look at the core components of the conversation and what they mean for the
 
 Sustainability is now perceived as more than just an environmental aim; it's a crucial measure of business success. According to the recent [Green Ops Survey](https://climateaction.tech/blog/sustainability-kpi-greenops-survey-results) results, for most IT professionals, sustainability emerged as a higher priority than cost.
 
-The survey signals a significant mindset shift in the industry towards minimizing emissions associated with running software. Respondents of the [2023 State of Green Software](https://stateof.greensoftware.foundation/survey/) survey also chose security, reliability, and sustainability over cost, in that order, underscoring this trend.
+The survey signals a significant mindset shift in the industry toward minimizing emissions associated with running software. Respondents of the [2023 State of Green Software](https://stateof.greensoftware.foundation/survey/) survey also chose security, reliability, and sustainability over cost, in that order, underscoring this trend.
 
 While we're experiencing a shift in individual priorities toward sustainability, this often diverges from official expectations or perceived norms. We still need to find a formal way to recognize sustainability as a strategic advantage alongside security and resilience efforts, which could optimize costs and resources.
 
@@ -45,6 +45,6 @@ While the tech industry is now more conscious of AI's high energy consumption, i
 
 At the GSF, we're working toward a future where data centers operate synergistically with green energy sources in regions abundant in energy and low in demand, thereby alleviating resource competition. Tools like Impact Framework offer a means to measure, verify, and openly disclose software emissions and other environmental impacts like water usage and air quality.
 
-**We're asking organizations to use tools like the** [**SCI Specification**](https://greensoftware.foundation/articles/software-carbon-intensity-sci-specification-project) **and** [**Impact Framework**](https://if.greensoftware.foundation/) **to examine their software emissions more closely and improve our trajectory towards a net zero future.**
+**We're asking organizations to use tools like the** [**SCI Specification**](https://greensoftware.foundation/articles/software-carbon-intensity-sci-specification-project) **and** [**Impact Framework**](https://if.greensoftware.foundation/) **to examine their software emissions more closely and improve our trajectory toward a net zero future.**
 
 **You can** [**hear the full episode**](https://podcasts.bcast.fm/e/xnykm67n-ai-legislation) **on Environment Variables.**

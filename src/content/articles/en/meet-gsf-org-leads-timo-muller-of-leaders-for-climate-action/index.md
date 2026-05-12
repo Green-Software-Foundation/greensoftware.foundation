@@ -26,13 +26,13 @@ In this second interview in the GSF Org Leads series, Timo Muller of Leaders for
 
 ## Tell us about LFCA and what your organization expects to achieve from the association with the Green Software Foundation.
 
-[Leaders for Climate Action](https://lfca.earth/) is a community of entrepreneurs and their companies uniting to drive impactful climate action in their organisations and beyond. Today we are more than 1500 companies and are operating on a global scale. Our members commit to ambitious climate goals and we provide them with everything they need to achieve these goals. 
+[Leaders for Climate Action](https://lfca.earth/) is a community of entrepreneurs and their companies uniting to drive impactful climate action in their organizations and beyond. Today we are more than 1500 companies and are operating on a global scale. Our members commit to ambitious climate goals and we provide them with everything they need to achieve these goals. 
 
 We look at climate action through a community lense. We don't provide individual consulting to companies. Instead, we split our community into sectors, provide these with concrete action items on our platform and help them through the implementation phase by building small mastermind groups with peers. Additionally we drive [campaigns](https://lfca.earth/tfca-impact/) and speak up on a political level as representatives of a forward thinking industry. 
 
 We work with a lot of companies from the digital sector and are therefore very aware of the specific challenges that we are facing as an industry. The high demand and corresponding growth of digital services is causing an ever-increasing footprint of our economy.     
 
-By cooperating with the Green Software Foundation we hope to accelerate the transition towards a digital economy that runs entirely on renewable energy. As a player between the private and public sector, we can help to increase adaption of new technology in the field and are already working on a few [interesting initiatives in this space.](https://lfca.earth/the-future-of-sustainable-digital-infrastructure/) While we see the challenges, we also see our industry as a potential frontrunner and enabler of the much needed broad transition of our economies. 
+By cooperating with the Green Software Foundation we hope to accelerate the transition toward a digital economy that runs entirely on renewable energy. As a player between the private and public sector, we can help to increase adaption of new technology in the field and are already working on a few [interesting initiatives in this space.](https://lfca.earth/the-future-of-sustainable-digital-infrastructure/) While we see the challenges, we also see our industry as a potential frontrunner and enabler of the much needed broad transition of our economies. 
 
 ## Tell us about your career path, interest in green software and your journey to GSF. 
 

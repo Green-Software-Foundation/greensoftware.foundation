@@ -72,7 +72,7 @@ A framework for building carbon aware user interfaces.
 
 Carbon aware server less computing
 
-**Most Insightful** - [Carbon Optimised Process Scheduler](https://youtu.be/pF-g7VJ1h94)
+**Most Insightful** - [Carbon Optimized Process Scheduler](https://youtu.be/pF-g7VJ1h94)
 
 A tool for time/space shifting multiple processes. 
 

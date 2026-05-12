@@ -27,11 +27,11 @@ translators:
         link: "https://www.linkedin.com/in/taichi-imura-960292230/"
 ---
 
-Climate crisis is upon us, and it is worsening. Urgent and sustained actions are needed to address this defining story of our times which affects everyone of us and our future generations. Nevertheless, the actions we take now to reduce emissions of carbon dioxide (CO2) and other greenhouse gases would limit climate change and positively impact the future climate, as the recent  the UN Intergovernmental Panel on Climate Change report, [*Climate Change 2021: the Physical Science Basis*](https://www.ipcc.ch/2021/08/09/ar6-wg1-20210809-pr/), emphasises. 
+Climate crisis is upon us, and it is worsening. Urgent and sustained actions are needed to address this defining story of our times which affects everyone of us and our future generations. Nevertheless, the actions we take now to reduce emissions of carbon dioxide (CO2) and other greenhouse gases would limit climate change and positively impact the future climate, as the recent  the UN Intergovernmental Panel on Climate Change report, [*Climate Change 2021: the Physical Science Basis*](https://www.ipcc.ch/2021/08/09/ar6-wg1-20210809-pr/), emphasizes. 
 
 Information technology (IT) sector—including hardware, software, firmware and communications—holds huge potential to help reduce overall global emissions . In fact, a [report](https://smarter2030.gesi.org/downloads/Full_report.pdf) by the [Global e-Sustainability Initiative](https://gesi.org/) estimates that IT solutions, which we call ‘greening *by* IT,’  can help cut nearly 10 times more CO2 than they emit. Nevertheless, it is imperative to reduce IT ‘s own carbon emission and footprint, which is  known as ‘greening *of* IT’.   
 
-As we now broadly recognise, green means efficient and environmentally sustainable. In my recent [Cutter Consortium](https://www.cutter.com/) report, [*Greening IT: Need and Opportunities*](https://www.cutter.com/offer/greening-it-need-opportunities), which you can [access for free](https://www.cutter.com/offer/greening-it-need-opportunities), I broadly discussed several aspects of Green IT.  
+As we now broadly recognize, green means efficient and environmentally sustainable. In my recent [Cutter Consortium](https://www.cutter.com/) report, [*Greening IT: Need and Opportunities*](https://www.cutter.com/offer/greening-it-need-opportunities), which you can [access for free](https://www.cutter.com/offer/greening-it-need-opportunities), I broadly discussed several aspects of Green IT.  
 
 ## Green IT, an umbrella term
 
