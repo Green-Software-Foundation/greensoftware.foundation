@@ -28,7 +28,7 @@ By 2030, we aim to achieve net-zero emissions across our operations and value ch
 But we also know that we can’t rely on existing energy sources, mainly wind and solar, alone to get to net zero. That’s why we’re working to commercialize next-generation technologies, like geothermal, that are ‘always-on’ and can fill critical gaps in powering the grid with clean energy around the clock. And in our day-to-day operations, carbon-intelligent computing is helping us reduce emissions by shifting moveable compute tasks across different data centers and to other times based on regional hourly carbon-free energy availability.
 
 # Where do you stand with regard to green software?
-As we work towards reaching our Net Zero goal by 2030, it's imperative to weave sustainability right into the fabric of how we design our software and infrastructure.  Energy-efficient software has always been a priority for Google, and with our leadership in AI, we have focused on driving an optimized stack for growing compute demands. A few examples to show how we have invested in sustainable software and infrastructure are:
+As we work toward reaching our Net Zero goal by 2030, it's imperative to weave sustainability right into the fabric of how we design our software and infrastructure.  Energy-efficient software has always been a priority for Google, and with our leadership in AI, we have focused on driving an optimized stack for growing compute demands. A few examples to show how we have invested in sustainable software and infrastructure are:
 
 - To support the next generation of fundamental advances in AI, the purpose-built TPU (Tensor Processing Unit) reduced our physical infrastructure footprint in 2016 with its industry leading efficiency. And we are continuing to improve - for example, TPUv4 is twice as efficient as TPUv3. 
 - Cloud Carbon Footprint launched in 2021 to show customers their carbon emissions across Google Cloud assets, including an assistant to guide the customers on reducing their carbon footprint.
@@ -54,7 +54,7 @@ Due to business pressure on companies to have more efficient and lower-cost infr
 
 A secondary challenge is technical debt in the customer landscape. Making an impact will therefore take time. Suppose customers move from an infrastructure mindset to a platform mindset. In that case, they no longer need to manage the underlying aspects, and the hyper-scalers can focus on making their platforms more sustainable.
 
-Another challenge is that even once companies are made aware of the emissions through carbon reporting tools, there’s a lack of consistency amongst methodologies and metrics. This makes comparing alternative solutions for selecting the least carbon-intensive options difficult. 
+Another challenge is that even once companies are made aware of the emissions through carbon reporting tools, there’s a lack of consistency among methodologies and metrics. This makes comparing alternative solutions for selecting the least carbon-intensive options difficult. 
 
 # Is Google working on any other sustainability initiatives?
 Some other data and software climate solutions we are working on include:

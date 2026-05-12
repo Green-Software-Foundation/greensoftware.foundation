@@ -27,7 +27,7 @@ In the first article, we outlined the four main approaches to tech sustainabilit
 - Operational efficiency, that is, [improving how software is run](https://greensoftware.foundation/articles/sustainable-systems-operational-choices-in-sustainable-architecture) was covered in the last post. 
 - Architecting for minimal carbon is about improving how software is designed.
 - Hardware efficiency, in particular, improving how end user devices are managed.
-- Energy efficiency, in terms of minimising CPU/GPU and network use. 
+- Energy efficiency, in terms of minimizing CPU/GPU and network use. 
 
 In this post we will focus on the second, how to improve the way your software is designed.
 
@@ -54,8 +54,8 @@ The techniques involved are often referred to as demand shifting or demand shapi
 
 - **Genuinely time critical, on demand, tasks** that will draw on high carbon electricity are designed efficiently so as to use as little of it as possible.
 - **Jobs are not run at higher urgency than they need**, so that if they can wait for cleaner electricity they will.
-- **Where possible, calculations are pushed to the client and the edge or data is cached in Content Delivery Networks (CDNs)** to minimise network traffic, reduce the need to run on demand processes in data centres, and take full advantage of the energy stored in client batteries (which as time goes on is increasingly likely to be renewably sourced). Patrick Ferris of OCamlLabs says, “p2p, offline-first applications have a role to play in this space. Both aspects work together to remove the need for a centralised service with a high percentage uptime.”
-- **Data storage policies are frugal.** Databases are optimised; that is data stored is minimised and queries are tuned. Data is compressed before storage, especially when it is for long term storage, and data isn’t stored unless absolutely necessary. 
+- **Where possible, calculations are pushed to the client and the edge or data is cached in Content Delivery Networks (CDNs)** to minimize network traffic, reduce the need to run on demand processes in data centers, and take full advantage of the energy stored in client batteries (which as time goes on is increasingly likely to be renewably sourced). Patrick Ferris of OCamlLabs says, “p2p, offline-first applications have a role to play in this space. Both aspects work together to remove the need for a centralized service with a high percentage uptime.”
+- **Data storage policies are frugal.** Databases are optimized; that is data stored is minimized and queries are tuned. Data is compressed before storage, especially when it is for long term storage, and data isn’t stored unless absolutely necessary. 
 
 The above often relies on a microservice or a distributed systems architecture.
 
@@ -63,9 +63,9 @@ The above often relies on a microservice or a distributed systems architecture.
 
 ### Use Managed Services
 
-There is a real efficiency advantage in high compute density via managed cloud services. Such services, which can share resources between thousands or millions of users, achieve extremely high utilisation. 
+There is a real efficiency advantage in high compute density via managed cloud services. Such services, which can share resources between thousands or millions of users, achieve extremely high utilization. 
 
-Serverless services like Lambda functions or Azure functions are particularly helpful in minimising the hardware footprint needed upfront and helping directly in capabilities like autoscaling, rightsizing, and pay as you go.
+Serverless services like Lambda functions or Azure functions are particularly helpful in minimizing the hardware footprint needed upfront and helping directly in capabilities like autoscaling, rightsizing, and pay as you go.
 
 Enterprises may sometimes fear data security in these shared environments. However, since these are likely to play a major role in the future of sustainable software, cloud providers need to address these fears. 
 

@@ -32,7 +32,7 @@ With this in mind, green software engineering sets out to reduce the emissions t
 ## Challenges to overcome
 While this may all sound straightforward, the reality is that reducing software’s carbon impact involves overcoming some entrenched challenges. For example, the continuing exponential rise of processing power under ‘Moore’s Law” means there’s been little incentive to optimize software for efficiency. The result? Software has become progressively bigger and more bloated – driving up its energy usage.
 
-A further challenge is that, to date, “carbon accounting” has tended to be applied within strictly-defined boundaries, usually focused on hardware. To capture the full benefits of green software, carbon accounting needs to be extended across the entire stack and accompanied by greater carbon awareness on the part of software developers and organisations running systems. 
+A further challenge is that, to date, “carbon accounting” has tended to be applied within strictly-defined boundaries, usually focused on hardware. To capture the full benefits of green software, carbon accounting needs to be extended across the entire stack and accompanied by greater carbon awareness on the part of software developers and organizations running systems. 
 
 ## Driving positive change: the Green Software Foundation…
 Green software engineering sets out to tackle these challenges for the future wellbeing of the planet and mankind. And it was the mutual desire to collaborate across the software industry to enable a lower-carbon future that spurred the creation of the Green Software Foundation (GSF) in May 2021. 

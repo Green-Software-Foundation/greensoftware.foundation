@@ -19,7 +19,7 @@ We need to find a new stability and status quo in our use of resources - steward
 
 ## Which recent developments were catalytic in advancing a green transition in software?
 
-Over the past few years, many initiatives have focused on a green transition in software - the shift towards measuring the performance of open source solutions and energy-efficient coding practices has been significant. However, sustainability was not the primary objective for many individuals initially. We saw efficiency as a byproduct of memory safety in languages like Rust, a drive to reduce load times in interpreted serverless deployments of Python, and memory-constrained IoT devices drove the need for resource-efficient solutions. In effect, we stumbled upon sustainability while seeking efficiency. 
+Over the past few years, many initiatives have focused on a green transition in software - the shift toward measuring the performance of open source solutions and energy-efficient coding practices has been significant. However, sustainability was not the primary objective for many individuals initially. We saw efficiency as a byproduct of memory safety in languages like Rust, a drive to reduce load times in interpreted serverless deployments of Python, and memory-constrained IoT devices drove the need for resource-efficient solutions. In effect, we stumbled upon sustainability while seeking efficiency. 
 
 Now, seeing the rise of sustainably powered cloud computing from hyper-scalers and regional players, sustainability as a measurement is here to stay and is no longer a serendipitous byproduct of other priorities.
 
@@ -45,6 +45,6 @@ Right now, we need more collaboration - I hope the GSF will become a hub for pa
 
 ## What lies ahead for you?
 
-In the next two years, at least with the Green Software Foundation, my emphasis will shift towards fostering community connections that extend the GSF's presence beyond major metropolitan areas like London. The aim is to broaden the reach of sustainability practices.
+In the next two years, at least with the Green Software Foundation, my emphasis will shift toward fostering community connections that extend the GSF's presence beyond major metropolitan areas like London. The aim is to broaden the reach of sustainability practices.
 
 I would love for us to work and collaborate with other open source foundations to accelerate the adoption of the Carbon Aware SDK and receive the same level of recognition as other tools like Docker or Kubernetesand. I'm also passionate about working with university and apprenticeship partners to instill green software consciousness in the next generation of developers right from the start. On a more personal note, I’m constantly pursuing opportunities where I can work with interesting people, build new things, and make an impact!

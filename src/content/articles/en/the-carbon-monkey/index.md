@@ -59,7 +59,7 @@ As a result, we won’t have a carbon impact exact measurement, but only a diffe
 
 ### Call for more “Carbon Monkeys”
 
-I’d like to see developer communities creating one or more “carbon monkeys” that can introduce energy-impacting events into applications, to foster resiliency towards sustainability. 
+I’d like to see developer communities creating one or more “carbon monkeys” that can introduce energy-impacting events into applications, to foster resiliency toward sustainability. 
 
 The main trigger is defining a set of incorrect assumptions about energy usage that can prevent our application from performing “green”. These would include assumptions such as the highest energy cost/carbon use/region, the shortest/longest queries, the shortest/longest network paths, the highest compute and memory usage among other things. 
 

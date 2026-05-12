@@ -2,7 +2,7 @@
 title: "Standards move too slowly for our regulatory timeline"
 published: true
 summary: >
-  How GSF used an AI-assisted assembly process to bring 14 experts from 15 organisations
+  How GSF used an AI-assisted assembly process to bring 14 experts from 15 organizations
   to consensus in ten weeks — a process that previously took years — proving a new model
   for accelerating green software standards development as regulations tighten.
 
@@ -26,7 +26,7 @@ stats:
   - value: "10 weeks"
     label: From blank page to consensus design document — compared to multi-year traditional standards timelines
   - value: "14"
-    label: Expert participants from 15 organisations reaching consensus through the AI-assisted process
+    label: Expert participants from 15 organizations reaching consensus through the AI-assisted process
   - value: "2"
     label: Standards developed using AI-facilitated consensus — SCI for AI and SCI for Web
 
@@ -35,7 +35,7 @@ timeline:
     heading: ISO standard proves consensus is possible — but slow
     body: >
       When the SCI Specification achieved ISO 21031:2024 status, it validated that a
-      multi-stakeholder, consensus-driven process could produce a globally recognised
+      multi-stakeholder, consensus-driven process could produce a globally recognized
       standard. But even this celebrated achievement had taken over three years from
       inception. The question became: how do you keep the rigour of consensus while
       compressing the timeline? GSF had 17 active projects. If each required 3+ years
@@ -48,9 +48,9 @@ timeline:
     heading: SCI for AI proves the concept
     body: >
       The AI industry was moving so fast that GSF needed to reach consensus on
-      standardising AI emissions measurement quickly. Rather than follow the traditional
+      standardizing AI emissions measurement quickly. Rather than follow the traditional
       multi-year process, the team experimented with a rudimentary version of AI-facilitated
-      consensus — structured workshops where expert responses were synthesised and refined
+      consensus — structured workshops where expert responses were synthesized and refined
       collaboratively. The SCI for AI specification was ratified in late 2025, and the
       experience revealed that AI-facilitated consensus was a vibrant area with significant
       potential to compress standards timelines further.
@@ -79,7 +79,7 @@ timeline:
       (Globant), Florent Morel (Amadeus), Francesco Fullone (GrUSP), Mathias Uhlitzsch (Evosoft),
       Nisha Ramachandra (Accenture), Raghava Rao Battina (HSBC), Riccardo Pomato (Microsoft),
       Ryan Sholin (Electricity Maps), and Thiago Falcao Silva (NTT DATA). Participants answered
-      structured questions about measurement accuracy and adoption complexity. An LLM synthesised
+      structured questions about measurement accuracy and adoption complexity. An LLM synthesized
       their responses into draft content. The group reviewed and refined through multiple rounds.
       In contentious areas, participants revised until all objections were resolved.
     source:
@@ -171,6 +171,6 @@ cta:
 
 Traditional standards development takes years. The SCI specification — widely celebrated as moving at unprecedented speed — still took over three years from inception to ISO certification. By the time specifications reach final form, regulations have evolved, technology has shifted, and the window for influence has narrowed. The bottleneck is not technical complexity. It is the challenge of coordinating dozens of stakeholders with competing priorities, different terminologies, and divergent views on scope, accuracy, and implementation.
 
-The problem was becoming urgent. The EU Green Digital Coalition, the NY Corporate Climate Accountability Act, and evolving GHG Protocol guidance were all creating pressure for organisations to report on digital sustainability. A standard that arrived two years too late would be a standard nobody adopted.
+The problem was becoming urgent. The EU Green Digital Coalition, the NY Corporate Climate Accountability Act, and evolving GHG Protocol guidance were all creating pressure for organizations to report on digital sustainability. A standard that arrived two years too late would be a standard nobody adopted.
 
 The human-in-the-loop approach made objections visible and resolvable — a deliberate decision gate rather than the traditional model of circulating documents and hoping for feedback. What had been an opaque social process became an explicit technical one.

@@ -34,7 +34,7 @@ At IIITH, we strongly believe that sustainability cannot be an afterthought. By 
 
 GSF’s approach aligns with this vision. By creating a much-needed platform connecting policymakers, business leaders, developers, educators, and scientists, it engineers change from both top-down and bottom-up. We need to unite both to make a significant impact. 
 
-Joining the foundation is also a key step towards developing green software standards and best practices that everyone can adopt. The work that GSF is doing here is significant. 
+Joining the foundation is also a key step toward developing green software standards and best practices that everyone can adopt. The work that GSF is doing here is significant. 
 
 Similar to what the Linux Foundation did for Linux, GSF creates a community that can pioneer and disseminate knowledge about clean and green software, while addressing the growing challenges of power consumption. Our aim is to actively contribute to building this community. 
 

@@ -139,7 +139,7 @@ You may opt out or revoke your consent to receive marketing emails from us by us
 
 **Retention of Your Personal Data**
 
-We apply a general rule of keeping personal data only for as long as required to fulfil the purposes for which it was collected. However, in some circumstances, we may retain personal data for other periods of time, for instance where we are required to do so in accordance with legal, tax and accounting requirements, or if required to do so by a legal process, legal authority, or other governmental entity having authority to make the request, for so long as required. In specific circumstances, we may also retain your personal data for longer periods of time corresponding to a statute of limitation, so that we have an accurate record of your dealings with us in the event of any complaints or challenges.
+We apply a general rule of keeping personal data only for as long as required to fulfill the purposes for which it was collected. However, in some circumstances, we may retain personal data for other periods of time, for instance where we are required to do so in accordance with legal, tax and accounting requirements, or if required to do so by a legal process, legal authority, or other governmental entity having authority to make the request, for so long as required. In specific circumstances, we may also retain your personal data for longer periods of time corresponding to a statute of limitation, so that we have an accurate record of your dealings with us in the event of any complaints or challenges.
 
 **International Transfers**
 
@@ -307,7 +307,7 @@ Please note that on the Sites, Google Analytics code is supplemented by "gat._an
 
 ***Internet Advertising Bureau***
 
-A guide to behavioural advertising and online privacy that has been produced by the internet advertising industry can be found at [http://www.youronlinechoices.eu/](http://www.youronlinechoices.eu/).
+A guide to behavioral advertising and online privacy that has been produced by the internet advertising industry can be found at [http://www.youronlinechoices.eu/](http://www.youronlinechoices.eu/).
 
 ***International Chamber of Commerce United Kingdom***
 

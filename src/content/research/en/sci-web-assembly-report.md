@@ -46,7 +46,7 @@ authors:
 
 ## Executive Summary
 
-This document was created in Autumn 2025 using and AI orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesised and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair. There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actuial specification will be created in Q1 2026 according to this design document.
+This document was created in Autumn 2025 using and AI orchestrated assembly process. Participants answered an initial set of questions by email, all of which were synthesized and used by an LLM to generate candidate content for each of the numbered sections in this document. The candidate content was then reviewed by the participants. After each round of review, a new candidate entry was generated, leading to a final round of review where participants ENDORSED, CONSENTED or OBJECTED to merging the proposed content into the draft. When there were no objections, the content was merged by the project chair. There were 14 participants in total, but the maximum number of active participants per round was 7. This document details the requirements for the SCI for Web specification. The actuial specification will be created in Q1 2026 according to this design document.
 
 The following 14 GSF members participated in the assembly:
 
@@ -633,4 +633,4 @@ The following matrices evaluate each approach against evaluation criteria from S
 > [!NOTE]
 > **SWDM-based tool scoring**: CO2.js, Website Carbon Calculator, and Ecograder share underlying SWDM methodology and therefore have similar accuracy, functional unit, and gaming prevention characteristics. Differences in other criteria reflect application-level distinctions (UI, additional features, documentation).
 
-SCI for Web should aim to maximise its average score on the above matrix, and ensure the average score exceeds any existing entry.
+SCI for Web should aim to maximize its average score on the above matrix, and ensure the average score exceeds any existing entry.

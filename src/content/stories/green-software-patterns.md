@@ -2,8 +2,8 @@
 title: "Engineers know the theory but not what to change in code"
 published: true
 summary: >
-  How NTT DATA, Goldman Sachs, Accenture, AVEVA, and contributors from 11 organisations
-  built the Green Software Patterns catalogue — a peer-reviewed library of actionable
+  How NTT DATA, Goldman Sachs, Accenture, AVEVA, and contributors from 11 organizations
+  built the Green Software Patterns catalog — a peer-reviewed library of actionable
   techniques for reducing software emissions, with measurable before-and-after impact.
 
 mainImage: /assets/stories/green-software-patterns.png
@@ -24,26 +24,26 @@ orgs:
 
 stats:
   - value: "50"
-    label: Patterns published in the initial catalogue covering AI, Cloud, and Web
+    label: Patterns published in the initial catalog covering AI, Cloud, and Web
   - value: "~4%"
     label: Carbon reduction demonstrated from a single pattern in a controlled test
   - value: "11"
-    label: Companies in the Design Thinking workshop shaping the catalogue's roadmap
+    label: Companies in the Design Thinking workshop shaping the catalog's roadmap
   - value: "2030"
     label: Target year for green-by-default development environments
 
 timeline:
   - date: "2022"
-    heading: Green Software Patterns catalogue launched
+    heading: Green Software Patterns catalog launched
     body: >
-      The Green Software Foundation launched the Green Software Patterns catalogue with
+      The Green Software Foundation launched the Green Software Patterns catalog with
       50 patterns covering AI, Cloud, and Web — each a concrete, actionable technique
       for reducing software emissions. Every pattern went through a review and consensus
       process to ensure relevance and applicability across diverse industries and use cases.
       It was the answer to the question trained engineers kept asking: what do I actually
       change in my code?
     source:
-      text: Browse the Green Software Patterns catalogue
+      text: Browse the Green Software Patterns catalog
       href: https://patterns.greensoftware.foundation
 
   - date: "2023"
@@ -63,25 +63,25 @@ timeline:
     heading: Design Thinking workshop with 11 companies
     body: >
       Representatives from NTT DATA, AVEVA, Mastercard, Goldman Sachs, Microsoft, Shell,
-      Accenture, Siemens, Globant, CAST, and re:cinq gathered to shape the catalogue's
+      Accenture, Siemens, Globant, CAST, and re:cinq gathered to shape the catalog's
       evolution. Facilitated by Peter Wadsworth, the workshop surfaced user-specific
       "jobs to be done" across roles from CTO to architect to developer, revealing that
-      each role needed the catalogue differently. Four key insights emerged: the developer
+      each role needed the catalog differently. Four key insights emerged: the developer
       experience needs to be green by default; patterns must enable informed decision-making;
       measurement must be continuous; and AI is both a key enabler and a domain requiring
       its own carbon accountability.
     source:
-      text: Read about the patterns catalogue next chapter
+      text: Read about the patterns catalog next chapter
       href: /articles/green-software-patterns-catalog-the-next-chapter/
 
   - date: Ongoing
     heading: Green Software Patterns v2 in development
     body: >
       Led by Franziska Warncke (NTT DATA) and Liya Mathew (Goldman Sachs), v2 will extend
-      the catalogue with persona-based and behavioural patterns. The 2030 vision defined
+      the catalog with persona-based and behavioral patterns. The 2030 vision defined
       by the workshop: Green Software Patterns integrated into all major tool environments,
       with automated default application and real-time impact measurement — and AI-driven
-      analysis, forecasting, and optimisation throughout the software lifecycle.
+      analysis, forecasting, and optimization throughout the software lifecycle.
     source:
       text: Green Software Patterns on GitHub
       href: https://github.com/Green-Software-Foundation/patterns
@@ -95,13 +95,13 @@ contributors:
     role: Principal Software Engineering Manager
     org: Microsoft
     contribution: >
-      Core contributor to the Green Software Patterns catalogue, bringing Microsoft's
+      Core contributor to the Green Software Patterns catalog, bringing Microsoft's
       engineering perspective to pattern development and review.
   - name: Franziska Warncke
     role: Project Co-Lead, Green Software Patterns
     org: NTT DATA
     contribution: >
-      Drove the Patterns catalogue development and led the serverless SCI measurement
+      Drove the Patterns catalog development and led the serverless SCI measurement
       methodology alongside Denis Angeletta. Now co-leads v2 with Liya Mathew.
   - name: Liya Mathew
     role: Project Co-Lead, Green Software Patterns v2
@@ -114,37 +114,37 @@ contributors:
     org: Accenture
     contribution: >
       Core contributor and working group chair, bringing Accenture's sustainability
-      expertise to the patterns catalogue development and review process.
+      expertise to the patterns catalog development and review process.
   - name: Daniel Lazaro
     role: Senior Technical Program Manager
     org: AVEVA
     contribution: >
-      Contributed to the design thinking workshop and the catalogue's strategic evolution,
+      Contributed to the design thinking workshop and the catalog's strategic evolution,
       representing AVEVA's perspective on patterns for industrial software.
   - name: Sarah Hsu
     role: Site Reliability Engineer
     org: Goldman Sachs
     contribution: >
-      Core contributor to the patterns catalogue, bringing site reliability and
+      Core contributor to the patterns catalog, bringing site reliability and
       operational sustainability expertise from Goldman Sachs.
   - name: Markus Seidl
     role: Core Contributor
     org: Green Software Foundation
     contribution: >
-      Core contributor to the Green Software Patterns catalogue development and
+      Core contributor to the Green Software Patterns catalog development and
       review process.
   - name: Yassine El Ghali
     role: Core Contributor
     org: Green Software Foundation
     contribution: >
-      Core contributor to the Green Software Patterns catalogue development and
+      Core contributor to the Green Software Patterns catalog development and
       review process.
 
 quotes:
   - text: >
       If we are to succeed in significantly reducing software's carbon emissions, we need
       a knowledge base of trusted guidelines.
-    author: Green Software Patterns Catalogue
+    author: Green Software Patterns Catalog
     role: The Next Chapter
   - text: >
       While this may seem small, it adds up significantly at scale. With 1 million requests,
@@ -154,7 +154,7 @@ quotes:
   - text: >
       One of the biggest challenges was finding resources, which were scattered across
       various publications, articles, and videos.
-    author: Green Software Patterns Catalogue
+    author: Green Software Patterns Catalog
     role: The Next Chapter
 
 relatedSlugs:
@@ -165,18 +165,18 @@ relatedSlugs:
 cta:
   heading: Find the patterns that fit your stack
   body: >
-    The Green Software Patterns catalogue is peer-reviewed, open, and growing. Browse
+    The Green Software Patterns catalog is peer-reviewed, open, and growing. Browse
     the existing patterns, test them against your own applications, and contribute
     patterns from your own experience through the GSF.
-  ctaText: "Browse the Patterns catalogue"
+  ctaText: "Browse the Patterns catalog"
   ctaHref: "https://patterns.greensoftware.foundation"
 ---
 
 By 2022, the Green Software Foundation had trained tens of thousands of engineers through the Green Software Practitioner course. These engineers understood the principles: energy efficiency, carbon awareness, hardware efficiency, measurement. But a consistent question emerged from newly trained practitioners: "OK, I understand the principles — but what do I actually change in my code?"
 
-The gap was real and specific. Early members like AVEVA and Mastercard recognised that "if we are to succeed in significantly reducing software's carbon emissions, we need a knowledge base of trusted guidelines." But when they audited what was available, one of the biggest challenges was finding resources — scattered across publications, articles, and videos — with no single trusted, peer-reviewed source of actionable patterns developers could apply to their codebases.
+The gap was real and specific. Early members like AVEVA and Mastercard recognized that "if we are to succeed in significantly reducing software's carbon emissions, we need a knowledge base of trusted guidelines." But when they audited what was available, one of the biggest challenges was finding resources — scattered across publications, articles, and videos — with no single trusted, peer-reviewed source of actionable patterns developers could apply to their codebases.
 
-Measurement and theory were necessary but not sufficient. An engineer could calculate an SCI score but had no catalogue of proven interventions to improve it. The knowledge existed in fragments — individual blog posts, conference talks, internal wikis — but had never been consolidated, validated, and organised for practical use.
+Measurement and theory were necessary but not sufficient. An engineer could calculate an SCI score but had no catalog of proven interventions to improve it. The knowledge existed in fragments — individual blog posts, conference talks, internal wikis — but had never been consolidated, validated, and organized for practical use.
 
-> "As a CTO, every time I want to understand how to make my existing software applications greener, I need clear guidance on which applications to decarbonise and the priority patterns to implement — but lack of knowledge about how patterns apply to my applications gets in the way, and that means we end up making poor choices or we do nothing."
+> "As a CTO, every time I want to understand how to make my existing software applications greener, I need clear guidance on which applications to decarbonize and the priority patterns to implement — but lack of knowledge about how patterns apply to my applications gets in the way, and that means we end up making poor choices or we do nothing."
 > — User persona from the Design Thinking workshop

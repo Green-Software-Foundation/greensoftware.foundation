@@ -18,7 +18,7 @@ Software teams are navigating substantial challenges and requirements when it co
 
 **Geographic Variability:** Software projects often traverse multiple geographic regions, each with distinct energy sources and emissions profiles. Without data encompassing all (or most) implicated regions, carbon accounting remains inherently inaccurate.
 
-**Changing Energy Grids:** Energy grids evolve over time, and the energy-mix of the grid can change as more move towards increased renewable energy. Keeping emissions data up-to-date to reflect these changes requires drawing comparisons between historical data and present-day data.
+**Changing Energy Grids:** Energy grids evolve over time, and the energy-mix of the grid can change as more move toward increased renewable energy. Keeping emissions data up-to-date to reflect these changes requires drawing comparisons between historical data and present-day data.
 
 **Regulatory Compliance:** According to the [2023 State of Green Software](https://stateof.greensoftware.foundation/insights/software-legislation-has-quadrupled-in-the-last-decade/) report, there has been a 4X increase in software-focused legislation in the last decade, with 40% of countries introducing some form of regulation with greater focus on scope 2 emissions, which requires reporting on emissions associated with the generation of electricity, heat, or steam purchased and consumed. 
 
@@ -45,6 +45,6 @@ In a world increasingly attuned to environmental concerns, harnessing open-sourc
 
 5. As the world transitions toward a low-carbon economy, applying state-of-the-art reporting tools on scope 2 emissions puts us in a leader position.
 
-Open-source resources like the Electricity Maps Data Portal gives the industry greater momentum towards informed, sustainable, and environmentally responsible energy consumption. The way we look at it, making use of resources like this one does more than solve challenges in carbon accounting; it's about the industry embracing the opportunity to shape a greener, more sustainable future to keep our planet bright in green and blue! 
+Open-source resources like the Electricity Maps Data Portal gives the industry greater momentum toward informed, sustainable, and environmentally responsible energy consumption. The way we look at it, making use of resources like this one does more than solve challenges in carbon accounting; it's about the industry embracing the opportunity to shape a greener, more sustainable future to keep our planet bright in green and blue! 
 
 [**Access the historical data available now.**](https://www.electricitymaps.com/data-portal)

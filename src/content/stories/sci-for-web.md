@@ -27,7 +27,7 @@ stats:
   - value: "10 weeks"
     label: From blank page to consensus design document through AI-assisted assembly
   - value: "14"
-    label: Assembly members from 15 organisations — tech giants, data providers, academics, and practitioners
+    label: Assembly members from 15 organizations — tech giants, data providers, academics, and practitioners
   - value: W3C
     label: Formal collaboration with the world's web standards body — bridging two communities for the first time
 
@@ -35,13 +35,13 @@ timeline:
   - date: 2024–2025
     heading: The web measurement gap becomes visible
     body: >
-      As the SCI specification matured into ISO/IEC 21031:2024, GSF members recognised that
+      As the SCI specification matured into ISO/IEC 21031:2024, GSF members recognized that
       a domain-specific, SCI-aligned approach was needed for web applications. The parent SCI
       standard was powerful but general. Web applications had unique characteristics — browser
       rendering, third-party dependencies, content delivery networks, user device diversity —
       that required specific guidance on boundaries and functional units. Tools like CO2.js
       and the Sustainable Web Design Model had made web emissions visible, but results weren't
-      comparable and organisations couldn't validate reduction claims.
+      comparable and organizations couldn't validate reduction claims.
     source:
       text: Beyond single-dimensional metrics for digital sustainability
       href: /articles/beyond-single-dimensional-metrics-for-digital-sustainability/
@@ -64,7 +64,7 @@ timeline:
     body: >
       Fourteen GSF members piloted an AI-assisted assembly process. Participants answered
       structured questions about measurement accuracy and adoption complexity. An LLM
-      synthesised responses into draft content. The group reviewed and refined through
+      synthesized responses into draft content. The group reviewed and refined through
       multiple rounds. In contentious areas, participants revised until all objections were
       resolved. In ten weeks, the assembly moved from a blank page to a consensus design
       document — resolving the core tension: "A specification that is technically accurate
@@ -99,7 +99,7 @@ timeline:
 
 featuredQuote:
   text: >
-    Sustainable digital transformation is fundamentally about behavioural change, not just
+    Sustainable digital transformation is fundamentally about behavioral change, not just
     technical solutions. When colleagues understand that unused content with heavy PDFs and
     videos has a real environmental impact, they make more thoughtful decisions about what
     they create and maintain.
@@ -214,7 +214,7 @@ quotes:
   - text: >
       Tools exist to measure a website's carbon footprint, but every tool uses different
       boundaries, different assumptions, and gets different results. SCI for Web builds
-      industry consensus on how to measure — so organisations can finally compare, validate,
+      industry consensus on how to measure — so organizations can finally compare, validate,
       and act on the numbers with confidence.
     author: Asim Hussain
     role: Executive Director, Green Software Foundation
@@ -232,6 +232,6 @@ cta:
   ctaHref: "/standards/sci-web/"
 ---
 
-Almost everyone uses the web daily. Yet no standard existed for measuring a website's carbon intensity. Tools like the Sustainable Web Design Model, CO2.js, and the W3C Web Sustainability Guidelines had made web emissions visible and established foundational methodologies that thousands of practitioners used. But as organisations moved from awareness to accountability, they needed something more rigorous: a measurement approach with clear boundaries, carbon per functional unit rather than totals, and disclosed methodology so results were comparable and defensible.
+Almost everyone uses the web daily. Yet no standard existed for measuring a website's carbon intensity. Tools like the Sustainable Web Design Model, CO2.js, and the W3C Web Sustainability Guidelines had made web emissions visible and established foundational methodologies that thousands of practitioners used. But as organizations moved from awareness to accountability, they needed something more rigorous: a measurement approach with clear boundaries, carbon per functional unit rather than totals, and disclosed methodology so results were comparable and defensible.
 
-The fragmentation ran deep. Modern web applications depend extensively on third-party services — analytics, advertising, CDNs, authentication — which consume energy on both servers and client devices. Without a standard that defined what to include and how to attribute emissions across this chain, any measurement was partial. Organisations could not compare results, validate reduction claims, or make informed decisions about where to invest optimisation effort.
+The fragmentation ran deep. Modern web applications depend extensively on third-party services — analytics, advertising, CDNs, authentication — which consume energy on both servers and client devices. Without a standard that defined what to include and how to attribute emissions across this chain, any measurement was partial. Organizations could not compare results, validate reduction claims, or make informed decisions about where to invest optimization effort.

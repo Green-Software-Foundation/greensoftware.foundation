@@ -33,7 +33,7 @@ Finally, we partnered on the [SE4GD (Software Engineers for Green Deal)](https:/
 
 Through my work on Software Engineering for Sustainability as a primary research topic for the past fifteen years, we've been deeply involved in green software. As this involvement evolves, joining the GSF was a natural step.
 
-This commitment extends institution-wide—our research aligns with GSF's mission through groups like Sustainable Built Environments and the Centre for Sustainable Urban Futures, as well as industry partnerships with Volvo, ABB, and Vattenfall that ensure real-world impact.
+This commitment extends institution-wide—our research aligns with GSF's mission through groups like Sustainable Built Environments and the Center for Sustainable Urban Futures, as well as industry partnerships with Volvo, ABB, and Vattenfall that ensure real-world impact.
 
 With initiatives such as SE4GD,  we strive to educate a new generation of software engineers who will emphasize the sustainability of software as well as the sustainability effects of software on society. Joining the GSF helps us advance this mission. 
 

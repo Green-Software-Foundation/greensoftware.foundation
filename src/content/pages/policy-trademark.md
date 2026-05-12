@@ -14,7 +14,7 @@ These guidelines cover the ways individuals and companies should talk about the 
 
 The Green Software Foundation exists to push for the reduction of carbon emissions that result from software.
 
-These emissions might be from the generation of electricity used to power data centres and user devices or from the manufacturing of the hardware the software runs on.
+These emissions might be from the generation of electricity used to power data centers and user devices or from the manufacturing of the hardware the software runs on.
 
 The Green Software Foundation aims to do this by uncovering, sharing, and promoting best practices for developing and operating green, climate-friendly applications and services.
 
@@ -26,7 +26,7 @@ When using the trademark or talking about your membership of The Green Software 
 
 ## Do’s:
 
-- Do use your membership to highlight that you care about green software and are working towards it.
+- Do use your membership to highlight that you care about green software and are working toward it.
 - Do use a clearly visible notice to provide attribution, such as: “The Green Software Foundation Mark is a trademark of The Linux Foundation in the US and other countries.”
 - Do follow the requirements in the Branding Guide when using The Green Software Foundation Mark.
 - Do point to third party assessed numbers when you talk about your own efforts if at all possible. Are they independently verified? Provide references. Linking to stuff is the point of the web!

@@ -3,7 +3,7 @@ title: "Looking Back at the GSF Global Summit 2024! "
 published: true
 date: "2024-12-10"
 summary: "Our second global summit brought together leaders and practitioners across eight countries, driven by a shared commitment to minimizing software's environmental impact. "
-teaserText: "In October, we concluded the second GSF Global Summit. Today, we reflect on the learnings and connections driving this global movement towards greener software. "
+teaserText: "In October, we concluded the second GSF Global Summit. Today, we reflect on the learnings and connections driving this global movement toward greener software. "
 mainImage: "./main.png"
 tags: ["community", "events"]
 ---
@@ -20,7 +20,7 @@ With industries paying increasingly more attention to AI’s environmental impac
 
 The belief that sustainability cannot be an afterthought when pursuing technological advancements shined through. As one of the hosts, Dr. Ong Chen Hui, Assistant Chief Executive of BizTech Group, IMDA, put it: 
 
-> "Driving Singapore's digital sustainability, we want to ensure emerging technologies such as AI are sustainable by design. IMDA believes that innovation and sustainability can be complementary. Working with global partners such as GSF underscores our commitment to co-develop green compute solutions and deliver the impact towards sustainability goals."
+> "Driving Singapore's digital sustainability, we want to ensure emerging technologies such as AI are sustainable by design. IMDA believes that innovation and sustainability can be complementary. Working with global partners such as GSF underscores our commitment to co-develop green compute solutions and deliver the impact toward sustainability goals."
 
 We looked ahead and considered necessary steps to shape the next generation of green software and green software engineers, but there seems to be a shared recognition that the pivotal moment to drive sustainability is now. With reducing carbon footprint a leading consideration for most companies, measuring and reporting emissions has become a vital standard that must guide every aspect of software design, development, and deployment.
 

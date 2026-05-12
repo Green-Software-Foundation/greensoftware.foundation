@@ -129,7 +129,7 @@ For PDFs hosted elsewhere (not on Google Drive), use `::pdf`. This embeds the br
 
 ## Buttons (CTAs)
 
-Use `::button` to add a centred call-to-action button anywhere in an article. Two variants are available: `primary` (filled) and `outline`.
+Use `::button` to add a centered call-to-action button anywhere in an article. Two variants are available: `primary` (filled) and `outline`.
 
 ::button{href="https://greensoftware.foundation/membership/" label="Become a Member" variant="primary"}
 
@@ -322,7 +322,7 @@ The SCI formula: $SCI = ((E \times I) + M)$ per functional unit $R$.
 ::pdf{src="https://example.com/paper.pdf" title="Paper Title"}
 ```
 
-**Buttons:** Centre-aligned call-to-action.
+**Buttons:** Center-aligned call-to-action.
 
 ```
 ::button{href="/path/" label="Click Me"}

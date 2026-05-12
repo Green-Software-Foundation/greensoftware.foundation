@@ -21,7 +21,7 @@ Instead of picking a side in the long-running debate between dedicated sustainab
 
 One participant put it this way:
 
-> "I think initially dedicated teams within organisations are required to kickstart the sustainability efforts. This team can gather and spread information and workflows to help others outside the team understand the potential impacts. (...) Eventually, this would lead to a deprecation of this team as it is not required anymore."
+> "I think initially dedicated teams within organizations are required to kickstart the sustainability efforts. This team can gather and spread information and workflows to help others outside the team understand the potential impacts. (...) Eventually, this would lead to a deprecation of this team as it is not required anymore."
 
 This outcome didn't come from a single voice or the questions we asked. Practitioners from different organizations, roles, and countries arrived at the same solution through two rounds of structured debate. The binary question dissolved when they added a time dimension: both positions are right, depending on organizational maturity.
 
@@ -33,7 +33,7 @@ As one participant explained:
 
 > "People generally want to do the right thing. They are simply under pressure to ship, to hit deadlines, and to keep up with demand."
 
-The barriers are baked into how organisations work.  First, most don’t have visibility into energy consumption at the level where engineering decisions happen. Second, delivery pressure leaves no room for sustainability work. And third, the people who report on emissions are disconnected from those who could reduce them.
+The barriers are baked into how organizations work.  First, most don’t have visibility into energy consumption at the level where engineering decisions happen. Second, delivery pressure leaves no room for sustainability work. And third, the people who report on emissions are disconnected from those who could reduce them.
 
 ## Research Validation
 
@@ -111,7 +111,7 @@ Alongside the phased framework, four themes emerged with strong practitioner con
 
 > "When I think about the environmental impact of software, I do not picture a single owner. I think of the people whose decisions shape how systems behave once they are in production."
 
-**Standardised measurement frameworks are prerequisites, not nice-to-haves.** Without common standards, every organization reinvents measurement in isolation. Comparison becomes difficult, knowledge can't spread, and tools get built multiple times for the same purpose.
+**Standardized measurement frameworks are prerequisites, not nice-to-haves.** Without common standards, every organization reinvents measurement in isolation. Comparison becomes difficult, knowledge can't spread, and tools get built multiple times for the same purpose.
 
 > "An open framework for a standardized way to measure and report sustainability is a key part in my opinion for broad adaptation of these practices... generalised standards and tools could really help in this regard."
 
@@ -121,7 +121,7 @@ GSF is already applying this principle: [the Software Carbon Intensity (SCI) for
 
 **The top-down vs. bottom-up debate is a false choice**: Some practitioners emphasized executive accountability through KPIs and regulatory pressure. Others focused on team-level cultural shifts through code reviews and design decisions. Both camps agreed that both levels matter, but they disagreed on sequencing. The Assembly outcomes suggest running them in parallel: use early team wins as evidence to build executive commitment, and use leadership support to protect team-level experimentation from being deprioritized.
 
-> "Some kind of mindset change is required for management to make sustainability among the highest priorities of the organisation... This should be incentivised by law."
+> "Some kind of mindset change is required for management to make sustainability among the highest priorities of the organization... This should be incentivized by law."
 
 **Leadership commitment is the structural enabler.** The deeper theme across every response was about what organizations measure and prioritize. Better algorithms and more efficient infrastructure are important, but to succeed, they need changes to power structures and incentive systems. What leadership treats as strategic determines what changes.
 
@@ -135,7 +135,7 @@ Consensus is how GSF develops standards. Getting dozens of organizations, from h
 
 [The Green IO Paris Assembly](https://greensoftware.foundation/articles/the-accountability-gap-who-should-own-software-s-environmental-impact) was the first time we tested this approach outside of GSF membership.
 
-This three-day Assembly generated 87 distinct practitioner positions across two rounds of structured debate, synthesised with full representation tracking; traditional standards processes take months to surface that kind of structured convergence.
+This three-day Assembly generated 87 distinct practitioner positions across two rounds of structured debate, synthesized with full representation tracking; traditional standards processes take months to surface that kind of structured convergence.
 
 ### What we did: Four-stage process
 
@@ -181,14 +181,14 @@ Don't wait for that proposal to get approved. Start where you have agency: bring
 
 ### For organizations
 
-Every participant in this Assembly said the same thing: without shared standards, distributed responsibility doesn't work. Organisations reinventing measurement on their own waste resources and can't learn from each other.
+Every participant in this Assembly said the same thing: without shared standards, distributed responsibility doesn't work. Organizations reinventing measurement on their own waste resources and can't learn from each other.
 
-The phased framework offers an actionable path forward, but it depends on something that no single organisation can build alone: common measurement standards, shared tools, and collaboration on problems we all face.
+The phased framework offers an actionable path forward, but it depends on something that no single organization can build alone: common measurement standards, shared tools, and collaboration on problems we all face.
 
 ## Join the Conversation
 
 Our work is built through consensus; GSF members who compete in the market collaborate on shared measurement challenges. That’s how we built an [ISO-approved SCI standard](https://www.iso.org/standard/86612.html) and trained over 130,000 practitioners.
 
-The findings in this report highlight a need for shared frameworks and cross-organisational learning. GSF offers direct participation in standards development and the consensus process that produces industry-wide agreements.
+The findings in this report highlight a need for shared frameworks and cross-organizational learning. GSF offers direct participation in standards development and the consensus process that produces industry-wide agreements.
 
 [Become a member to join](https://greensoftware.foundation/join-us) the next Assembly and help shape how we build and use software and hardware across the industry.

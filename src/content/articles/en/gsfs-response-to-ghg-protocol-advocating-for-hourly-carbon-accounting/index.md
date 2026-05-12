@@ -28,7 +28,7 @@ In [our December article](https://greensoftware.foundation/articles/why-the-gsf-
 
 ## What We Advocate For
 
-At its core, our submission prioritises location-based measurement, which represents the physical reality of the grid at the time of consumption, over a market-based approach that reflects what’s been purchased on paper.
+At its core, our submission prioritizes location-based measurement, which represents the physical reality of the grid at the time of consumption, over a market-based approach that reflects what’s been purchased on paper.
 
 It presents three positions. All support a central principle: carbon accounting should enable practitioners to take action that reduces emissions.
 
@@ -64,7 +64,7 @@ Practitioners and companies are already using these tools. Hourly granularity as
 
 ## What’s next
 
-The consultation closed on January 31, 2026. Over the coming year, the GHG secretariat will analyse submissions. The second public consultation on Scope 2 will follow in 2026, with final publication of the new standard expected in 2027.
+The consultation closed on January 31, 2026. Over the coming year, the GHG secretariat will analyze submissions. The second public consultation on Scope 2 will follow in 2026, with final publication of the new standard expected in 2027.
 
 The last revision to the Scope 2 guidance was ten years ago. We don't know when the next one will come, which makes the standard finalized through this process all the more consequential—it will shape corporate carbon accounting and the investment decisions tied to it for years to come.
 
@@ -75,7 +75,7 @@ The last revision to the Scope 2 guidance was ten years ago. We don't know when 
 - Carbon-aware software architectures, where applications shift workloads based on grid conditions, serve as a competitive advantage.
 - Real-time carbon intensity data becomes essential infrastructure, making it more widely available.
 
-We also advocate for the development of an impact metric outside the Scope 2 inventory that captures the emissions reduction from carbon-aware actions, such as shifting workloads to match real-time clean energy availability. A metric like this would recognise the emissions reductions that come from running software differently.
+We also advocate for the development of an impact metric outside the Scope 2 inventory that captures the emissions reduction from carbon-aware actions, such as shifting workloads to match real-time clean energy availability. A metric like this would recognize the emissions reductions that come from running software differently.
 
 Thank you to all the members who contributed their time and technical expertise throughout this process.
 

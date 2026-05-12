@@ -21,13 +21,13 @@ tags: ["sci-ai", "standards"]
 
 Data scientists, machine learning engineers, and other technical stakeholders involved in the AI lifecycle are very familiar with business and functional considerations to guide the design, development, and deployment of AI systems. But, should sustainability be made an equal first-class citizen in that list of considerations?
 
-Yes! Particularly because it has implications towards both the environment and societal implications of AI systems.
+Yes! Particularly because it has implications toward both the environment and societal implications of AI systems.
 
 Incorporating sustainability in AI can allow us to (1) achieve social justice when we utilize this approach, and (2) especially so when these systems operate in an inherently socio-technical context. Indeed, a [harmonized approach accounting for both societal and environmental considerations](https://arxiv.org/abs/2006.06217) in the design, development, and deployment of AI systems can lead us to gains that support the triple bottom line: profits, people, and planet.
 
 ### Challenges with the current paradigm
 
-The current paradigm of AI systems that are heavily skewed towards having larger model sizes in the pursuit of state-of-the-art (SOTA) performance necessitate exploitative data practices, centralization of power and homogeneity, and intertwined societal and environmental impacts.
+The current paradigm of AI systems that are heavily skewed toward having larger model sizes in the pursuit of state-of-the-art (SOTA) performance necessitate exploitative data practices, centralization of power and homogeneity, and intertwined societal and environmental impacts.
 
 #### Exploitative data practices
 
@@ -39,7 +39,7 @@ Such large systems also hinder democratization of AI; they require huge computat
 
 #### Centered on business and functional requirements ignoring environmental costs
 
-Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers towards their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [MLCommons](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
+Finally, such a paradigm that is strongly centered on business and functional requirements over any other considerations encourages an ecosystem of manufacturers who can blindly pursue performance gains in luring consumers toward their hardware and software solutions in AI without paying any heed to the environmental costs of such systems. In a recently released performance benchmark from [MLCommons](https://mlcommons.org/en/), it was discovered that the number of submissions reporting energy consumption had dwindled by about 50% compared to the previous iteration of the benchmark while performance was emphasized even more by the manufacturers participating in the benchmark.  
 
 ## What is sustainable AI?
 
@@ -49,9 +49,9 @@ It should take a lifecycle approach to [accounting for the carbon impacts](https
 
 This includes:
 
-- elevating smaller models as a viable pathway towards achieving product goals,
+- elevating smaller models as a viable pathway toward achieving product goals,
 - utilizing appropriate hardware and software distribution models that can be greener such as federated learning, and
-- building the AI systems to be carbon aware and carbon efficient. A carbon-aware application adjusts its behaviour based on the carbon intensity of the grid from which it consumes energy. A carbon-efficient application is designed to consume less energy while delivering the same or almost the same functionality.
+- building the AI systems to be carbon aware and carbon efficient. A carbon-aware application adjusts its behavior based on the carbon intensity of the grid from which it consumes energy. A carbon-efficient application is designed to consume less energy while delivering the same or almost the same functionality.
 
 ## What can you do next?
 

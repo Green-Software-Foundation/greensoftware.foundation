@@ -31,7 +31,7 @@ So, why have both of the biggest public cloud providers now come out with guides
 
 The first hint that the big three hypercloud providers couldn’t achieve CZero without change from their users came in June 2021 in a [paper about achieving carbon zero](https://arxiv.org/pdf/2106.11750.pdf) on the Google Cloud. To my reading, Google implied they weren’t currently attempting to achieve their goals in their public cloud because it was too tricky—customer workloads were too opaque to them.
 
-However, whilst Google Cloud Platform (GCP) can clearly focus on their own private workloads first, AWS and Azure don’t have that luxury. Customer workloads are their business, particularly for AWS. They need to find a way to steer their users towards the green services and practices that will enable Amazon and Microsoft to run their data centers on, primarily, renewable power.
+However, while Google Cloud Platform (GCP) can clearly focus on their own private workloads first, AWS and Azure don’t have that luxury. Customer workloads are their business, particularly for AWS. They need to find a way to steer their users toward the green services and practices that will enable Amazon and Microsoft to run their data centers on, primarily, renewable power.
 
 However, running highly available products and services on top of variably available (i.e. wind and solar) power requires new, clever flexibility and targeted efficiency. Not just from them. From their users too.
 
@@ -50,9 +50,9 @@ In the next articles in this series, we will discuss the four areas covered by t
 
 In summary, the paper recommends the following steps for enterprises that operate in the cloud:
 
-- **Select or transition to hosting providers with a** [**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)**to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress towards it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
+- **Select or transition to hosting providers with a** [**solid commitment**](https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M/edit?usp=sharing)**to sustainable hosting.** This means those that have a committed date for 100% sustainable power and are making clear progress toward it. And push them to move faster. Often the easiest way to do this is to state a strong interest in sustainability to whichever host you choose.
 - **Host in regions that provide excellent options for sustainable electricity provision.** Cloud providers should indicate which are their preferred regions for sustainable expansion.
-- **Assess the hosting efficiency of cloud providers.** You can do so by asking whether the current strategy for machine utilisation is good enough. Use high density managed services where possible.
+- **Assess the hosting efficiency of cloud providers.** You can do so by asking whether the current strategy for machine utilization is good enough. Use high density managed services where possible.
 - **Turn off unnecessary, unused workloads, introduce autoscaling, and rightsize machines.**
 - **Review architecture for expensive tasks** that are on demand or always on but do not need to be.  These are tasks that are expensive in terms of processing, but this often corresponds to $$$. Separate them out and use spot (AWS/Azure) or preemptible (GCP) instances to run them or flexible (e.g. burstable) instance types wherever possible.
 - **Reduce the carbon impact of costly tasks that must be executed on demand.** For example this can be achieved by using more lightweight languages, frameworks or services or by moving more work to the client or edge.  

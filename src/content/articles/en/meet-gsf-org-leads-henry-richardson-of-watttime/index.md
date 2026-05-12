@@ -3,7 +3,7 @@ title: "Meet GSF Org Leads: Henry Richardson of WattTime"
 published: true
 date: "2022-02-11"
 summary: "Henry is an Environmental Impact Analyst at WattTime. He believes that making the connection between emissions and software clear to developers through GSF’s work is important to overcome obstacles to green software."
-teaserText: "Developers need to look beyond their organisations to become more aware of the global impact their software may have, says Henry and that the new SCI specification makes this so much easier than it has been before. Henry also announces some job openings!"
+teaserText: "Developers need to look beyond their organizations to become more aware of the global impact their software may have, says Henry and that the new SCI specification makes this so much easier than it has been before. Henry also announces some job openings!"
 mainImage: "./main.png"
 authors:
   - fullName: "Nilooka Dissanayake"
@@ -28,7 +28,7 @@ authors:
 
 ## Tell us about your career path, your interest in green software and your journey to GSF. 
 
-I was trained as an architect and always had a strong interest in sustainable construction. I helped design green buildings for many years, looking for ways to reduce their carbon impact. But I eventually realised I was focusing on the wrong culprit, and that the makeup of the electric grid was really what was driving much of the carbon emissions produced by buildings.    
+I was trained as an architect and always had a strong interest in sustainable construction. I helped design green buildings for many years, looking for ways to reduce their carbon impact. But I eventually realized I was focusing on the wrong culprit, and that the makeup of the electric grid was really what was driving much of the carbon emissions produced by buildings.    
 
 Working at WattTime, I’m now supporting real change for the grid. We’re focused on giving tools to individuals, corporations, governments, and everyone in between to make a difference on climate.
 
@@ -44,7 +44,7 @@ The Green Software Foundation has identified three key insights about software t
 - Hardware efficiency: It is possible to use less hardware to achieve the service goal of the software, and requiring less hardware means fewer emissions because less hardware needs to be produced to operate these tools. 
 - Energy efficiency: There is an opportunity to use more efficient hardware that uses less energy to operate—another clear way to reduce associated emissions.
 
-In our work with the GSF, WattTime is primarily focused on making software smarter by changing the time and location of its operation to optimise for emissions reductions. In addition, we hope to help identify new opportunities for software to reduce global emissions, create tools to help developers have a more positive climate impact, and make the emissions impact of software a key consideration in the development process.
+In our work with the GSF, WattTime is primarily focused on making software smarter by changing the time and location of its operation to optimize for emissions reductions. In addition, we hope to help identify new opportunities for software to reduce global emissions, create tools to help developers have a more positive climate impact, and make the emissions impact of software a key consideration in the development process.
 
 The GSF has taken a strong position on these efforts by [creating the SCI specification](https://greensoftware.foundation/articles/the-green-software-foundation-releases-alpha-version-of-software-carbon-intensity) and associated tools. This new forum creates a solid foundation to usher in the change we hope to see. 
 
@@ -52,9 +52,9 @@ The GSF has taken a strong position on these efforts by [creating the SCI specif
 
 A general lack of awareness around the emissions impacts linked to software is definitely a problem at this stage. Making that connection clear to developers through GSF’s work is an important step to correct that. We need developers to understand which decisions they can make to reduce the emissions intensity of their software and give them the tools to do something about it.
 
-Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [Greenhouse Gas Protocol](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organisations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
+Another obstacle we, at WattTime, see is related to the current carbon accounting standards. These standards, including the [Greenhouse Gas Protocol](https://ghgprotocol.org/), are not well designed for measuring the emissions impact of software. The GHG Protocol is focused on emissions created by individual organizations, but software development and use often cuts across multiple companies. For example, one company may write the software for another company, which then runs on the hardware of a third company. 
 
-Developers need to look beyond their organisations alone to become more aware of the many global impacts their software may have. The new SCI specification makes this so much easier than it has been before. 
+Developers need to look beyond their organizations alone to become more aware of the many global impacts their software may have. The new SCI specification makes this so much easier than it has been before. 
 
 ## Any other matters you would like to share with us? 
 

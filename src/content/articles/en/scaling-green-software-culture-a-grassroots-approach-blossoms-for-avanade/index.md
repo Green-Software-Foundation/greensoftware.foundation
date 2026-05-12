@@ -20,7 +20,7 @@ Chris wrote two articles for the GSF during that time. Both highlight how to fos
 
 [Spreading the Message of Green Software](https://greensoftware.foundation/articles/call-to-action-spreading-the-message-of-green-software)
 
-[Establishing a Centre of Excellence](https://greensoftware.foundation/articles/call-to-action-on-green-software-establishing-a-centre-of-excellence)
+[Establishing a Center of Excellence](https://greensoftware.foundation/articles/call-to-action-on-green-software-establishing-a-centre-of-excellence)
 
 # Planting the green software seeds
 

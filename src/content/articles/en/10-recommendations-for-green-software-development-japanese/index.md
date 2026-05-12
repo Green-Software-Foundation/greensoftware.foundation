@@ -27,11 +27,11 @@ translators:
         link: "https://www.linkedin.com/in/taichi-imura-960292230/"
 ---
 
-Climate crisis is upon us, and it is worsening. Urgent and sustained actions are needed to address this defining story of our times which affects everyone of us and our future generations. Nevertheless, the actions we take now to reduce emissions of carbon dioxide (CO2) and other greenhouse gases would limit climate change and positively impact the future climate, as the recent  the UN Intergovernmental Panel on Climate Change report, [*Climate Change 2021: the Physical Science Basis*](https://www.ipcc.ch/2021/08/09/ar6-wg1-20210809-pr/), emphasises. 
+Climate crisis is upon us, and it is worsening. Urgent and sustained actions are needed to address this defining story of our times which affects everyone of us and our future generations. Nevertheless, the actions we take now to reduce emissions of carbon dioxide (CO2) and other greenhouse gases would limit climate change and positively impact the future climate, as the recent  the UN Intergovernmental Panel on Climate Change report, [*Climate Change 2021: the Physical Science Basis*](https://www.ipcc.ch/2021/08/09/ar6-wg1-20210809-pr/), emphasizes. 
 
 Information technology (IT) sector—including hardware, software, firmware and communications—holds huge potential to help reduce overall global emissions . In fact, a [report](https://smarter2030.gesi.org/downloads/Full_report.pdf) by the [Global e-Sustainability Initiative](https://gesi.org/) estimates that IT solutions, which we call ‘greening *by* IT,’  can help cut nearly 10 times more CO2 than they emit. Nevertheless, it is imperative to reduce IT ‘s own carbon emission and footprint, which is  known as ‘greening *of* IT’.   
 
-As we now broadly recognise, green means efficient and environmentally sustainable. In my recent [Cutter Consortium](https://www.cutter.com/) report, [*Greening IT: Need and Opportunities*](https://www.cutter.com/offer/greening-it-need-opportunities), which you can [access for free](https://www.cutter.com/offer/greening-it-need-opportunities), I broadly discussed several aspects of Green IT.  
+As we now broadly recognize, green means efficient and environmentally sustainable. In my recent [Cutter Consortium](https://www.cutter.com/) report, [*Greening IT: Need and Opportunities*](https://www.cutter.com/offer/greening-it-need-opportunities), which you can [access for free](https://www.cutter.com/offer/greening-it-need-opportunities), I broadly discussed several aspects of Green IT.  
 
 ## Green IT, an umbrella term
 
@@ -41,7 +41,7 @@ Green IT is an umbrella term referring to environmentally sound IT hardware, sof
 - **Greening by IT** means using IT as an enabler to create a sustainable environment. This outward looking approach  focuses on offering innovative solutions to key sectors such as manufacturing, energy, business, agriculture, healthcare, and buildings—homes, offices and other buildings—to decrease their emissions and resource consumption, while allowing for growth.
 - **Promoting Green Awareness.** Many people are not yet aware of the serious impacts of the climate crisis and are not taking action to address it. IT has the ability and the duty to motivate them, help them be better informed and get them more engaged in the fight against climate change. Thereby IT can help promote ‘green’ initiatives and desired behavioral changes.
 
-Over the years, much emphasis and progress has been made towards making IT hardware efficient and environmentally friendly. But, to realize the fuller benefits, we need to take our green initiatives down to the software. Hence the newfound interest in making software greener. 
+Over the years, much emphasis and progress has been made toward making IT hardware efficient and environmentally friendly. But, to realize the fuller benefits, we need to take our green initiatives down to the software. Hence the newfound interest in making software greener. 
 
 In this article, we emphasize the need for greening software and examine how we can make our software greener to reduce carbon emission resulting from software development and use. 
 
@@ -72,7 +72,7 @@ Developers should think about and act on how to minimize environmental impacts o
 
 (01) [Focus on and control](https://greensoftware.foundation/articles/how-to-measure-the-energy-consumption-of-your-backend-service) features with higher power consumption and common usage scenarios.
 
-(02) Reduce data usage. Adopt efficient cache policy, minimise data  exchange, and manage the lifecycle of stored data - compress and aggregate data and use smaller sizes for media and image when possible. 
+(02) Reduce data usage. Adopt efficient cache policy, minimize data  exchange, and manage the lifecycle of stored data - compress and aggregate data and use smaller sizes for media and image when possible. 
 
 (03) Remove or refactor unused features. This improves energy efficiency and makes software easier to maintain. 
 

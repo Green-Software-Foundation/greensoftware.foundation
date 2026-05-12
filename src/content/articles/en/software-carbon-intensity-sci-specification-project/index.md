@@ -38,7 +38,7 @@ The roadmap for v1 of the SCI is to have a stable of use cases that show the SCI
 
 ## Why is this project important?
 
-The SCI is central to all the activities at the Green Software Foundation (GSF). It is the cornerstone upon which the GSF is seeking to make an impact in helping individuals and organisations make contributions towards achieving their sustainability goals. Given that it is action-oriented, it is a testament to all the other activities at the GSF as well, which are centred on empowering individuals and organisations to not just “talk the talk” but actually “walk it.”
+The SCI is central to all the activities at the Green Software Foundation (GSF). It is the cornerstone upon which the GSF is seeking to make an impact in helping individuals and organizations make contributions toward achieving their sustainability goals. Given that it is action-oriented, it is a testament to all the other activities at the GSF as well, which are centered on empowering individuals and organizations to not just “talk the talk” but actually “walk it.”
 
 ## What progress have you made so far? 
 
@@ -50,11 +50,11 @@ The alpha version of the SCI, [released for public comment](https://greensoftwar
 - The SCI takes a systems-footprint view
 - The SCI is easy to implement
 - The SCI encourages the use of granular data
-- The SCI requires the use of a standardised and transparent reporting mechanism of what goes into the calculations. 
+- The SCI requires the use of a standardized and transparent reporting mechanism of what goes into the calculations. 
 
 ## What are the main areas of the project?
 
-The main areas of the project are development of the SCI itself which involves weekly deliberations with members of the Standards Working Group towards each of the items that we have on the roadmap. The reporting standards and use cases are the supplemental areas of work related to the SCI which are being led by various individuals within the Standards Working Group. 
+The main areas of the project are development of the SCI itself which involves weekly deliberations with members of the Standards Working Group toward each of the items that we have on the roadmap. The reporting standards and use cases are the supplemental areas of work related to the SCI which are being led by various individuals within the Standards Working Group. 
 
 ## How does the SCI Specification project operate?
 
@@ -68,7 +68,7 @@ Since all of our work, meeting notes, and agenda items are publicly visible on t
 
 ## What does an individual GSF member get from becoming involved in your project? 
 
-GSF members participating in this project have the opportunity to engage with peers who are experts in the domain of green software engineering. And they have the potential to contribute to a standard that will shape software engineering practises across the industry for decades to come. It is a way for anyone to distinguish their own software practices and help to make a real impact in the world rather than just talking about it. 
+GSF members participating in this project have the opportunity to engage with peers who are experts in the domain of green software engineering. And they have the potential to contribute to a standard that will shape software engineering practices across the industry for decades to come. It is a way for anyone to distinguish their own software practices and help to make a real impact in the world rather than just talking about it. 
 
 GSF members who are interested in joining the project should email the Co-Chairs or contact them via GSF Slack. 
 

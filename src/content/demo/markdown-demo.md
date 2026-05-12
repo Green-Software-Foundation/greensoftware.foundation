@@ -61,7 +61,7 @@ An [internal link](/standards/sci/) and an [external link](https://github.com/Gr
 1. Measure your software's carbon intensity
 2. Identify the largest contributors
 3. Apply green software patterns
-   1. Optimise energy efficiency
+   1. Optimize energy efficiency
    2. Shift workloads to low-carbon regions
    3. Reduce embodied carbon
 4. Re-measure and track progress
@@ -70,7 +70,7 @@ An [internal link](/standards/sci/) and an [external link](https://github.com/Gr
 1. Measure your software's carbon intensity
 2. Identify the largest contributors
 3. Apply green software patterns
-   1. Optimise energy efficiency
+   1. Optimize energy efficiency
    2. Shift workloads to low-carbon regions
    3. Reduce embodied carbon
 4. Re-measure and track progress
@@ -355,10 +355,10 @@ The SCI formula measures carbon per functional unit — for example, grams of CO
 By measuring carbon *per search query*, teams could:
 
 1. Set meaningful targets (e.g. "reduce SCI by 30%")
-2. See the impact of specific optimisations
+2. See the impact of specific optimizations
 3. Compare different implementations objectively
 
-| Optimisation | SCI Impact | Effort |
+| Optimization | SCI Impact | Effort |
 | --- | --- | --- |
 | Query caching | -22% | Low |
 | Region-aware routing | -15% | Medium |

@@ -38,7 +38,7 @@ Joining the foundation reflects our commitment to advancing sustainable software
 
 We have several initiatives focused on environmental impact and circularity. For instance: 
 
-- In 2024, we launched the [Hirekin Sustainable Industrial Innovation and Enterprise Centre](https://www.mondragon.edu/en/faculty-of-engineering/technological-entrepreneurship/hirekin), a collaborative hub focused on prototyping solutions for decarbonization, digitalization, and sustainability in industrial sectors.
+- In 2024, we launched the [Hirekin Sustainable Industrial Innovation and Enterprise Center](https://www.mondragon.edu/en/faculty-of-engineering/technological-entrepreneurship/hirekin), a collaborative hub focused on prototyping solutions for decarbonization, digitalization, and sustainability in industrial sectors.
 - Our campuses have implemented measures aimed at becoming zero-emission, including efforts around renewable energy, waste reduction, responsible purchasing, and sustainable transportation.
 - Recently, we opened a new university building that is heated by residual heat from a smelting company located next to the university as part of an innovative project. 
 - We promote a culture of sustainability through initiatives like car-sharing and awareness campaigns that engage students and staff.

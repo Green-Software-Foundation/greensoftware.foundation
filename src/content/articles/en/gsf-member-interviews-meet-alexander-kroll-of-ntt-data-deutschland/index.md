@@ -30,7 +30,7 @@ I am based in Munich and have several responsibilities within NTT DATA DACH. I a
 
 I studied computer science and finished my diploma 15 years ago at the University of Applied Science in Rosenheim in Germany. I started as a software developer, then worked as an architect/cloud architect and technical project lead. 
 
-I joined [NTT DATA ](https://www.nttdata.com/)in 2013 and have since worked on several projects for various customers. I was always a big fan of efficient solutions. Around four years ago, I initiated some innovation projects within NTT DATA around virtual collaboration using innovative technologies like AR/VR to reduce travelling costs and to reduce travelling time to a bare minimum of what was necessary to follow basic sustainability principles. 
+I joined [NTT DATA ](https://www.nttdata.com/)in 2013 and have since worked on several projects for various customers. I was always a big fan of efficient solutions. Around four years ago, I initiated some innovation projects within NTT DATA around virtual collaboration using innovative technologies like AR/VR to reduce traveling costs and to reduce traveling time to a bare minimum of what was necessary to follow basic sustainability principles. 
 
 Within NTT DATA I held the position as Head of Extended Reality Solutions for a few years, and around a year ago I took on the role as Head of Cloud Native & Backend Development/ Tech Guild Lead. Throughout these engagements the sustainability aspect was always a motivating factor to me.
 
@@ -38,7 +38,7 @@ Within NTT DATA I held the position as Head of Extended Reality Solutions for a 
 
 I like learning and networking with interesting people and I hope to experience both within the Green Software Foundation. I like community work and I hope to find like minded people while engaging in community work. I think that this kind of community contribution is very important to society. 
 
-From a personal responsibility perspective, I try to make the world a little bit cleaner. I feel that I could have an influence to reach our climate goals with a contribution to this Foundation. I hope with the participation in the GSF and my range within the NTT DATA DACH organisation as guild leader, as a lecturer at the university for subjects around microservices and cloud computing and development, as meetup contributor within the cloud development scene (AWS, Microsoft), I could have wide impact on many people and could raise awareness for that topic.
+From a personal responsibility perspective, I try to make the world a little bit cleaner. I feel that I could have an influence to reach our climate goals with a contribution to this Foundation. I hope with the participation in the GSF and my range within the NTT DATA DACH organization as guild leader, as a lecturer at the university for subjects around microservices and cloud computing and development, as meetup contributor within the cloud development scene (AWS, Microsoft), I could have wide impact on many people and could raise awareness for that topic.
 
 ## What GSF working groups and projects are you involved in, and what role you have played or are playing?
 
@@ -52,7 +52,7 @@ I try to follow the best practices of building green software solutions and brin
 
 ## What obstacles do you see to using green software on a wider scale within your company and in general? 
 
-At work, I see more opportunities than obstacles as our company has a strong focus on the [sustainability goals of the United Nations](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organisation NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
+At work, I see more opportunities than obstacles as our company has a strong focus on the [sustainability goals of the United Nations](https://sdgs.un.org/goals). I would expect some minor obstacles in the concrete operative aspects but not under an organization NTT DATA view. NTT DATA is a global systems integrator and innovator and we will definitely have the option to provide sustainable/green solutions on a wider scale.
 
 ## How can companies get more young software engineers onboard the green software movement?
 
@@ -64,4 +64,4 @@ I think good, comprehensive speaker decks with appropriate guidance could unlock
 
 ## Any other matters you would like to share with us about green software and sustainability? 
 
-I think that NTT DATA as a global organisation will play an important role when it comes to mindset shaping for green software and sustainability as they are high-ranked goals within our company.
+I think that NTT DATA as a global organization will play an important role when it comes to mindset shaping for green software and sustainability as they are high-ranked goals within our company.

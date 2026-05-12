@@ -13,9 +13,9 @@ Singapore’s Infocomm Media Development Authority (IMDA) develops and regulates
 
 As the Assistant Chief Executive for the BizTech Group at IMDA, I am responsible for industry development of emerging technologies. I create conditions for the business to engage with technology and engage the research communities to perform research in strategic areas of interest to Singapore. We help build and enhance capabilities in emerging tech domains in Artificial Intelligence (AI), communications and connectivity, and trust technologies via research and translation.
 
-We create and curate programs designed to support industry in their emerging technologies innovation. Our 5G Innovation Programme supports the industry in leveraging 5G for their businesses.   
+We create and curate programs designed to support industry in their emerging technologies innovation. Our 5G Innovation Program supports the industry in leveraging 5G for their businesses.   
 
-We launched the Future Communications Programme in 2021 and the Digital Trust Center in 2022. The former invests in mobile communications R&D and the latter looks into technologies that help provide confidence to businesses and individuals as they transact digitally. This includes privacy-enhancing technology to protect privacy while analyzing data and verifying if the technologies perform what they claim to do.
+We launched the Future Communications Program in 2021 and the Digital Trust Center in 2022. The former invests in mobile communications R&D and the latter looks into technologies that help provide confidence to businesses and individuals as they transact digitally. This includes privacy-enhancing technology to protect privacy while analyzing data and verifying if the technologies perform what they claim to do.
 
 Last but not least, we develop tech products and toolkits to improve efficiency and sustainability practices. For example, in 2022, we developed the world’s first AI governance toolkit – AI Verify – and in 2023, we will launch the AI Verify Foundation to harness collective power and contributions of the global open source community to develop AI testing tools for the responsible use of AI.
 

@@ -42,6 +42,6 @@ Our view is that there are only three actions that reduce the carbon emissions o
 - Using less energy
 - Using energy more intelligently
 
-Using energy more intelligently means either consuming lower-carbon sources of energy or consuming electricity in a way that helps accelerate the energy transition towards a low carbon future.
+Using energy more intelligently means either consuming lower-carbon sources of energy or consuming electricity in a way that helps accelerate the energy transition toward a low carbon future.
 
 Everything that you can do that reduces the carbon emissions of software falls into one or more of the above categories. The Foundation's mission is to encourage more of these actions to be taken across the software industry.

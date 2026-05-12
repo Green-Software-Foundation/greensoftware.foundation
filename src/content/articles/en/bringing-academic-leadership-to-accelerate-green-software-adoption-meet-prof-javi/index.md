@@ -16,7 +16,7 @@ Javier is a full professor at the School of Computer Engineering. He is a foundi
 
 Founded in 1971 by merging classical Spanish Engineering and Architecture Schools, some dating back to the eighteenth century, UPM excels in international rankings. We rank 55th worldwide in Engineering and Technology according to QS rankings, leading Spanish universities in this field.
 
-UPM has four campuses with 18 Schools and 21 research centres, which serve over 4,000 staff members and 35,000 students. 
+UPM has four campuses with 18 Schools and 21 research centers, which serve over 4,000 staff members and 35,000 students. 
 
 ## How does sustainability manifest in your organization?  
 
@@ -28,7 +28,7 @@ Our climate strategy, coordinated by the Ecological Transition Commission since 
 
 ## Are there any other sustainability initiatives that you can share?
 
-Our Artificial Intelligence Research Center leads multiple green software and green AI initiatives. We're collaborating with Accenture, a founding GSF member, on Spain's National Green Algorithms Programme. This includes developing standards for measuring algorithm energy consumption and creating a Green Tech quality label.
+Our Artificial Intelligence Research Center leads multiple green software and green AI initiatives. We're collaborating with Accenture, a founding GSF member, on Spain's National Green Algorithms Program. This includes developing standards for measuring algorithm energy consumption and creating a Green Tech quality label.
 
 We've worked with the Spanish Association for Standardisation (UNE) to develop the UNE 0086 Specification for measuring AI systems' energy consumption, carbon footprint, and water consumption, currently in final voting. We're also members of [the Coalition for Sustainable AI](https://www.sustainableaicoalition.org/) and recently participated in ISO's consultation on resource-efficient software. 
 

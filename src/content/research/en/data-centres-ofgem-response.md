@@ -1,12 +1,12 @@
 ---
-title: "Data Centres as Flexible Grid Participants"
+title: "Data Centers as Flexible Grid Participants"
 subtitle: "Software, Storage, and System Design for Great Britain's Demand Connections Reform"
 date: 2026-03-10
 published: true
 status: published
 type: response
 summary: >
-  GSF response to Ofgem's Demand Connections Reform call for input, examining how software-controlled flexibility in data centres can help address Great Britain's connections crisis.
+  GSF response to Ofgem's Demand Connections Reform call for input, examining how software-controlled flexibility in data centers can help address Great Britain's connections crisis.
 jurisdiction: GB
 framework: Ofgem Demand Connections Reform
 version: "1.0"
@@ -36,13 +36,13 @@ tags:
 
 ## Abstract
 
-Data centers consumed approximately 415 TWh of electricity globally in 2024, around 1.5% of world electricity consumption, and the International Energy Agency projects this will more than double to 945 TWh by 2030, driven primarily by artificial intelligence workloads ([IEA, 2025](https://www.iea.org/reports/energy-and-ai/executive-summary)). In Great Britain, total contracted offers in the demand connections queue rose from **41 GW** in November 2024 to **125 GW** by June 2025 — nearly three times GB's peak electricity demand of 45 GW. NESO's Call for Information identified approximately **140 data centres (50 GW)** in the queue, making data centre demand the single largest driver of the connections crisis ([Ofgem, 2026, para 2.5–2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
+Data centers consumed approximately 415 TWh of electricity globally in 2024, around 1.5% of world electricity consumption, and the International Energy Agency projects this will more than double to 945 TWh by 2030, driven primarily by artificial intelligence workloads ([IEA, 2025](https://www.iea.org/reports/energy-and-ai/executive-summary)). In Great Britain, total contracted offers in the demand connections queue rose from **41 GW** in November 2024 to **125 GW** by June 2025 — nearly three times GB's peak electricity demand of 45 GW. NESO's Call for Information identified approximately **140 data centers (50 GW)** in the queue, making data center demand the single largest driver of the connections crisis ([Ofgem, 2026, para 2.5–2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
 
-Data centers possess latent flexibility assets — software-controlled workloads, battery storage, thermal inertia, and hardware power management — that can transform them from passive consumers into active grid participants. Software is the key that unlocks these assets. The evidence base is promising: pilot programmes report 10–40% load modulation capability ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)), GPU-intensive AI facilities may offer twice the flexibility at half the cost ([Zhou et al., 2024](https://arxiv.org/abs/2410.17435)), and integrated optimisation models suggest 10% operational cost reductions ([Takci, Day & Qadrdan, 2025](https://arxiv.org/abs/2511.07159)). A UK-first demonstration at Nebius's London AI Factory in March 2026, conducted by Emerald AI with National Grid, EPRI, and NVIDIA, showed that high-performance AI infrastructure can operate as a grid-responsive asset without disrupting mission-critical workloads ([NGP/Emerald AI, 2026](https://www.ngpartners.com/stories/emerald-ai-whitepaper)).
+Data centers possess latent flexibility assets — software-controlled workloads, battery storage, thermal inertia, and hardware power management — that can transform them from passive consumers into active grid participants. Software is the key that unlocks these assets. The evidence base is promising: pilot programs report 10–40% load modulation capability ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)), GPU-intensive AI facilities may offer twice the flexibility at half the cost ([Zhou et al., 2024](https://arxiv.org/abs/2410.17435)), and integrated optimization models suggest 10% operational cost reductions ([Takci, Day & Qadrdan, 2025](https://arxiv.org/abs/2511.07159)). A UK-first demonstration at Nebius's London AI Factory in March 2026, conducted by Emerald AI with National Grid, EPRI, and NVIDIA, showed that high-performance AI infrastructure can operate as a grid-responsive asset without disrupting mission-critical workloads ([NGP/Emerald AI, 2026](https://www.ngpartners.com/stories/emerald-ai-whitepaper)).
 
 However, flexibility is not a silver bullet. Knittel, Senga, and Wang ([2025](https://www.nber.org/papers/w34065)) demonstrate that in regions with carbon-intensive baseload generation, shifting loads to off-peak hours can *increase* emissions even as it reduces costs. Operator willingness remains the fundamental barrier: flexibility revenue is trivial compared to compute revenue, and any service disruption threatens customer relationships worth orders of magnitude more.
 
-We frame our analysis around the sources of flexibility available from the grid's perspective and examine how software systems (workload orchestrators, carbon-aware schedulers, optimisation engines, and grid-signal integrators) enable data centers to deliver these services. We argue that Ofgem's February 2026 **Demand Connections Reform** programme, with its **Curate, Plan, Connect** framework, represents a significant opportunity to move data center flexibility from pilot to practice — but only if the incentive framework is carefully designed.
+We frame our analysis around the sources of flexibility available from the grid's perspective and examine how software systems (workload orchestrators, carbon-aware schedulers, optimization engines, and grid-signal integrators) enable data centers to deliver these services. We argue that Ofgem's February 2026 **Demand Connections Reform** program, with its **Curate, Plan, Connect** framework, represents a significant opportunity to move data center flexibility from pilot to practice — but only if the incentive framework is carefully designed.
 
 ---
 
@@ -62,7 +62,7 @@ Three forces are driving the specific crisis in GB. First, **scale**: global dat
 
 ### 2.1 Scale and the Queue
 
-In GB, total contracted offers in the demand queue rose from **41 GW** to **125 GW** between November 2024 and June 2025, against peak demand of just **45 GW** ([Ofgem, 2026, para 2.5](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). NESO identified approximately **140 data centres (50 GW)** in the queue, of which only **71 (~20 GW)** reported achieving Final Investment Decision ([Ofgem, 2026, para 2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). A significant number are expected to be non-viable, potentially blocking strategically important projects — including those required for [AI Growth Zones](https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan).
+In GB, total contracted offers in the demand queue rose from **41 GW** to **125 GW** between November 2024 and June 2025, against peak demand of just **45 GW** ([Ofgem, 2026, para 2.5](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). NESO identified approximately **140 data centers (50 GW)** in the queue, of which only **71 (~20 GW)** reported achieving Final Investment Decision ([Ofgem, 2026, para 2.7](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). A significant number are expected to be non-viable, potentially blocking strategically important projects — including those required for [AI Growth Zones](https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan).
 
 The UK currently has approximately **2 GW** of operational data center capacity. Even if only the FID projects proceed, the queue implies a roughly **tenfold increase** within five years — a rate of growth that merits careful consideration alongside the UK's climate commitments and grid capacity constraints.
 
@@ -82,7 +82,7 @@ From the grid's perspective, data center flexibility falls into three categories
 
 ### 3.1 Demand Response
 
-Rather than building new generation to meet data centre loads, demand response uses computational workload flexibility to balance supply and demand. A 2025 Duke University study estimates that curtailment of only 0.25–1% of annual consumption during critical hours could enable the grid to absorb up to 100 GW of new load without major upgrades.
+Rather than building new generation to meet data center loads, demand response uses computational workload flexibility to balance supply and demand. A 2025 Duke University study estimates that curtailment of only 0.25–1% of annual consumption during critical hours could enable the grid to absorb up to 100 GW of new load without major upgrades.
 
 #### 3.1.1 Temporal Workload Shifting
 
@@ -103,7 +103,7 @@ Flexible and ramped connection arrangements are most viable for facilities with 
 
 #### 3.1.2 Spatial Workload Migration
 
-Many computations can be performed anywhere with suitable infrastructure. Wan, Fang, and Li ([2025](https://arxiv.org/abs/2511.08759)) find that strategically relocating loads to solar-rich regions can reduce curtailment by up to 61%, though benefits plateau at 20–30% transferability. "Compute peering" arrangements — where operators accept spillover compute from partners during grid stress — could create shared flexible capacity without overbuilding. For GB, spatial flexibility complements NESO's strategic spatial planning and the AI Growth Zones programme ([Ofgem, 2026, para 5.33–5.34](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
+Many computations can be performed anywhere with suitable infrastructure. Wan, Fang, and Li ([2025](https://arxiv.org/abs/2511.08759)) find that strategically relocating loads to solar-rich regions can reduce curtailment by up to 61%, though benefits plateau at 20–30% transferability. "Compute peering" arrangements — where operators accept spillover compute from partners during grid stress — could create shared flexible capacity without overbuilding. For GB, spatial flexibility complements NESO's strategic spatial planning and the AI Growth Zones program ([Ofgem, 2026, para 5.33–5.34](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
 
 #### 3.1.3 Thermal Energy Storage and Hardware Power Management
 
@@ -111,17 +111,17 @@ Thermal storage (ice banks, chilled water tanks) shifts 20–40% of cooling load
 
 #### 3.1.4 Off-Site Demand Response
 
-Off-site approaches extend flexibility beyond the data centre. The Rewiring America "Homegrown Energy" analysis proposes that hyperscalers fund household energy upgrades to create grid capacity faster than building power plants — heat pumps alone could create 30 GW of capacity. This creates *structural* grid capacity through efficiency gains, complementing *dispatchable* on-site demand response.
+Off-site approaches extend flexibility beyond the data center. The Rewiring America "Homegrown Energy" analysis proposes that hyperscalers fund household energy upgrades to create grid capacity faster than building power plants — heat pumps alone could create 30 GW of capacity. This creates *structural* grid capacity through efficiency gains, complementing *dispatchable* on-site demand response.
 
-#### 3.1.5 Integrated Multi-Asset Optimisation
+#### 3.1.5 Integrated Multi-Asset Optimization
 
 Takci, Day, and Qadrdan ([2025b](https://arxiv.org/abs/2511.07159)) develop an integrated model coordinating workload scheduling, UPS operation, and cooling dynamics, yielding ~10% cost reductions. Their framework reveals an important asymmetry: upward flexibility (load reduction) is dominated by workload deferral, while downward flexibility (load increase) relies on cooling and UPS charging. Data centers are better suited to load-shedding than load-addition services.
 
 ### 3.2 Electrons (Battery Storage)
 
-Every enterprise and hyperscale data center contains UPS battery storage that could provide grid services. Key demonstrations include the **Microsoft/Eaton pilot in Dublin** (Fast Frequency Response through EirGrid's DS3 programme, requiring no workload changes) and the **NREL/Verrus Vulcan project** (70 MW grid-interactive data centre with 35 MW BESS dispatch in under 5 seconds, maintaining all customer SLAs).
+Every enterprise and hyperscale data center contains UPS battery storage that could provide grid services. Key demonstrations include the **Microsoft/Eaton pilot in Dublin** (Fast Frequency Response through EirGrid's DS3 program, requiring no workload changes) and the **NREL/Verrus Vulcan project** (70 MW grid-interactive data center with 35 MW BESS dispatch in under 5 seconds, maintaining all customer SLAs).
 
-Lithium-ion BESS costs fell 40% in 2024, reaching ~$125/kWh at utility scale. Emerging iron-air technology promises 100-hour duration below $20/kWh. BESS supports carbon-aware operation by charging during high renewable availability and dispatching during peak demand. Zhang et al. ([2025](https://www.sciencedirect.com/science/article/pii/S0360544225001537)) find economic benefits of $1.6 million (1.29× total investment) from co-optimised battery and cold storage systems.
+Lithium-ion BESS costs fell 40% in 2024, reaching ~$125/kWh at utility scale. Emerging iron-air technology promises 100-hour duration below $20/kWh. BESS supports carbon-aware operation by charging during high renewable availability and dispatching during peak demand. Zhang et al. ([2025](https://www.sciencedirect.com/science/article/pii/S0360544225001537)) find economic benefits of $1.6 million (1.29× total investment) from co-optimized battery and cold storage systems.
 
 Counter-arguments — battery degradation, UPS warranty exclusions, operational resistance — are real but eroding. The Vulcan project demonstrated BESS as primary backup, not just UPS bridge.
 
@@ -133,7 +133,7 @@ Where backup or peaking capacity is required beyond demand response and batterie
 - **Biogas/RNG**: can achieve carbon-negative profiles from landfill methane capture.
 - **Green hydrogen fuel cells**: zero operational emissions.
 
-A climate-aligned hierarchy should incentivise these in order: demand response, electrons, non-fossil molecules, with fossil generation as a last resort carrying mandatory transition timelines.
+A climate-aligned hierarchy should incentivize these in order: demand response, electrons, non-fossil molecules, with fossil generation as a last resort carrying mandatory transition timelines.
 
 ---
 
@@ -147,7 +147,7 @@ Carbon-aware scheduling shifts computation to times and locations with lower gri
 
 **Emerald AI Conductor** connects grid signals to workload management, classifying jobs into flexibility tiers (Flex 0–3) allowing 0–50% throughput reduction over 3–6 hours, with 15-minute graceful ramps. In the EPRI DCFlex pilot at Oracle's Arizona facility, it achieved 25% reduction in AI cluster power during peak demand while maintaining performance ([Emerald AI](https://emeraldai.co); [ACEEE, 2025](https://www.aceee.org/blog-post/2025/10/data-center-efficiency-and-load-flexibility-can-reduce-power-grid-strain-and)).
 
-**EPRI DCFlex**, launched October 2024, has expanded from 14 to 45 participants including Google, Meta, Microsoft, NVIDIA, and Oracle ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)). Major cloud providers already operate sophisticated schedulers (Google's [Borg](https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/), Kubernetes), but extending these to incorporate grid signals is organisationally challenging: compute teams are measured on utilisation, not carbon.
+**EPRI DCFlex**, launched October 2024, has expanded from 14 to 45 participants including Google, Meta, Microsoft, NVIDIA, and Oracle ([Tilton, 2025](https://spectrum.ieee.org/dcflex-data-center-flexibility)). Major cloud providers already operate sophisticated schedulers (Google's [Borg](https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/), Kubernetes), but extending these to incorporate grid signals is organizationally challenging: compute teams are measured on utilization, not carbon.
 
 ### 4.3 Grid Signal Integration and Measurement
 
@@ -155,7 +155,7 @@ In GB, relevant signals include the Balancing Mechanism, frequency response prod
 
 Flexibility that cannot be measured has no market value. The Green Software Foundation's SCI specification ([ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)) decomposes software emissions as `SCI = ((E × I) + M) / R` — energy consumption, grid carbon intensity, embodied emissions, and a functional unit of work. It mandates location-based accounting and excludes market-based instruments, measuring what a workload *actually causes* on the grid. The SCI for AI specification (ratified December 2025) provides dual Provider/Consumer scoring mapping directly to flexibility potential ([SCI for AI](https://sci-for-ai.greensoftware.foundation/)).
 
-A critical distinction: **software-based demand response does not degrade over time**. Residential thermostat programmes lose ~25% effectiveness per hour, delivering roughly 36% of expected reduction by hour four. Data centre software continuously readjusts to maintain the target throughout, making it a substantially more reliable system resource.
+A critical distinction: **software-based demand response does not degrade over time**. Residential thermostat programs lose ~25% effectiveness per hour, delivering roughly 36% of expected reduction by hour four. Data center software continuously readjusts to maintain the target throughout, making it a substantially more reliable system resource.
 
 ---
 
@@ -171,7 +171,7 @@ In a UK-first, Emerald AI, National Grid, EPRI, Nebius, and NVIDIA demonstrated 
 
 ### 5.3 Critical Assessment
 
-The evidence has significant limitations. Most results come from pilots less than two years old, not sustained commercial operation. Publication bias likely inflates reported capability. Pilot programmes test the most deferrable workloads, so 10–40% modulation likely reflects best-case scenarios. Most demonstrations cover hours or days, not the sustained periods grid operators need ([Crozier & Liska, 2025](https://link.springer.com/article/10.1007/s40518-025-00258-9)). If flexibility commitments are to be conditions of connection, the evidence base must be strengthened.
+The evidence has significant limitations. Most results come from pilots less than two years old, not sustained commercial operation. Publication bias likely inflates reported capability. Pilot programs test the most deferrable workloads, so 10–40% modulation likely reflects best-case scenarios. Most demonstrations cover hours or days, not the sustained periods grid operators need ([Crozier & Liska, 2025](https://link.springer.com/article/10.1007/s40518-025-00258-9)). If flexibility commitments are to be conditions of connection, the evidence base must be strengthened.
 
 ---
 
@@ -195,11 +195,11 @@ Ofgem is considering "participation in sustainability initiatives" as a readines
 
 ### 7.1 The Path Dependency Problem
 
-Gas-fired generation and backup infrastructure have asset lives of 20–30 years. A data centre connecting today on gas-backed power commits to that infrastructure for at least a decade, during which UK carbon budgets will tighten materially. Assets compliant today may require expensive retrofit or stranding. At the system level, if 20–30 GW of data centre load were gas-supplied, this would create new demand for gas infrastructure with its own lock-in logic — each unit harder to retire when decarbonisation requires it.
+Gas-fired generation and backup infrastructure have asset lives of 20–30 years. A data center connecting today on gas-backed power commits to that infrastructure for at least a decade, during which UK carbon budgets will tighten materially. Assets compliant today may require expensive retrofit or stranding. At the system level, if 20–30 GW of data center load were gas-supplied, this would create new demand for gas infrastructure with its own lock-in logic — each unit harder to retire when decarbonisation requires it.
 
 ### 7.2 Gas Supply: Volatility and Lifecycle Uncertainty
 
-European gas spot prices rose ~50% from recent geopolitical disruption, following the 2021–2023 shocks. Lifecycle emissions vary substantially by source: Norwegian pipeline gas carries low upstream emissions; US shale-derived LNG carries substantially more due to liquefaction, shipping, and methane leakage (methane's 20-year warming potential is ~80× CO₂). A data centre cannot reliably predict the lifecycle emissions of gas it will consume over its operational lifetime.
+European gas spot prices rose ~50% from recent geopolitical disruption, following the 2021–2023 shocks. Lifecycle emissions vary substantially by source: Norwegian pipeline gas carries low upstream emissions; US shale-derived LNG carries substantially more due to liquefaction, shipping, and methane leakage (methane's 20-year warming potential is ~80× CO₂). A data center cannot reliably predict the lifecycle emissions of gas it will consume over its operational lifetime.
 
 By contrast, demand flexibility, batteries, and renewables are predominantly capital-cost technologies with minimal, predictable marginal costs — making climate-aligned investment also more economically resilient.
 
@@ -213,9 +213,9 @@ We are not arguing against expansion. But a tenfold increase in national data ce
 
 The Software Carbon Intensity specification (ISO/IEC 21031), developed by the Green Software Foundation, defines a rate-based carbon score per unit of useful work. It rewards time-shifting, geographic shifting, and efficiency improvements, and is being incorporated into enterprise procurement, supply chain reporting, and regulatory disclosure internationally. Microsoft, Google, Accenture, and others already require SCI-aligned reporting from their supply chains.
 
-The UK has structural advantages for low-SCI compute: a relatively clean grid, ambitious renewables targets, mature financial and legal systems. A data centre demonstrating grid-connected renewable trajectory, real-time carbon-aware flexibility, and non-fossil backup is positioned to offer genuinely low-SCI compute — an increasingly valuable proposition as enterprise buyers factor carbon intensity into procurement. A fossil-gas-dependent data centre, by contrast, cannot offer this certainty, creating incentives for customers to locate workloads elsewhere.
+The UK has structural advantages for low-SCI compute: a relatively clean grid, ambitious renewables targets, mature financial and legal systems. A data center demonstrating grid-connected renewable trajectory, real-time carbon-aware flexibility, and non-fossil backup is positioned to offer genuinely low-SCI compute — an increasingly valuable proposition as enterprise buyers factor carbon intensity into procurement. A fossil-gas-dependent data center, by contrast, cannot offer this certainty, creating incentives for customers to locate workloads elsewhere.
 
-Connection arrangements should be assessed not only for queue clearance and system security, but for their effect on the UK's ability to compete for high-value, low-carbon digital investment. The UK has an opportunity to be the first major jurisdiction integrating internationally recognised software carbon standards into connections policy.
+Connection arrangements should be assessed not only for queue clearance and system security, but for their effect on the UK's ability to compete for high-value, low-carbon digital investment. The UK has an opportunity to be the first major jurisdiction integrating internationally recognized software carbon standards into connections policy.
 
 ---
 
@@ -227,11 +227,11 @@ Connection arrangements should be assessed not only for queue clearance and syst
 
 ### 9.2 Regulatory and Market Barriers
 
-Key GB barriers include: uncertainty on whether demand projects can connect at high voltages under the Electricity Act 1989 ([Ofgem, 2026, para 5.42–5.44](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)); technical codes (SQSS, Grid Code) designed for centralised generation and passive demand, with new requirements still in development ([Ofgem, 2026, para 5.52–5.53](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)); and firm connection terms with non-firm and ramped frameworks not yet developed. The deferrable workload fraction may be shrinking as real-time inference grows, UPS dual-use remains largely unvalidated, and there is no standardised flexibility metric comparable to PUE.
+Key GB barriers include: uncertainty on whether demand projects can connect at high voltages under the Electricity Act 1989 ([Ofgem, 2026, para 5.42–5.44](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)); technical codes (SQSS, Grid Code) designed for centralized generation and passive demand, with new requirements still in development ([Ofgem, 2026, para 5.52–5.53](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)); and firm connection terms with non-firm and ramped frameworks not yet developed. The deferrable workload fraction may be shrinking as real-time inference grows, UPS dual-use remains largely unvalidated, and there is no standardized flexibility metric comparable to PUE.
 
-### 9.3 Social Licence
+### 9.3 Social License
 
-Data centres share grid infrastructure with residential and commercial consumers. A flexibility programme capturing financial benefit from high-price load reduction without corresponding benefit to local users during genuine constraint does not have a sound social licence. A programme responding to genuine system stress — including local distribution constraints — with equitably shared financial benefits represents a genuine social good and is more likely to sustain planning consent. The Connect pillar should include local constraint management as an eligible flexibility service, with revenue sharing designed for community benefit.
+Data centers share grid infrastructure with residential and commercial consumers. A flexibility program capturing financial benefit from high-price load reduction without corresponding benefit to local users during genuine constraint does not have a sound social license. A program responding to genuine system stress — including local distribution constraints — with equitably shared financial benefits represents a genuine social good and is more likely to sustain planning consent. The Connect pillar should include local constraint management as an eligible flexibility service, with revenue sharing designed for community benefit.
 
 ---
 
@@ -257,7 +257,7 @@ Software flexibility supports the Plan pillar ([Ofgem, 2026, para 5.30–5.32](h
 
 **Non-firm connections**: software orchestration defers or migrates workloads within curtailed envelopes, enabling earlier connection dates. **Ramped connections**: software manages scheduling within time-varying power budgets. **Consumer-led flexibility**: Ofgem is considering whether flexibility should be a condition of connection ([Ofgem, 2026, para 5.59](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)).
 
-**Graduated incentives**: greater demonstrated flexibility should receive materially better terms. **Revenue sharing**: if data centres commit to flexibility at scale, NESO's reinforcement requirements could be materially lower — a public benefit ultimately reducing costs for all consumers. Ofgem should explore mechanisms (Balancing Mechanism access, capacity market rights, constraint management payments) allowing data centres to capture a share of savings. **Compute peering and geographic load shifting** should be recognised as eligible flexibility mechanisms.
+**Graduated incentives**: greater demonstrated flexibility should receive materially better terms. **Revenue sharing**: if data centers commit to flexibility at scale, NESO's reinforcement requirements could be materially lower — a public benefit ultimately reducing costs for all consumers. Ofgem should explore mechanisms (Balancing Mechanism access, capacity market rights, constraint management payments) allowing data centers to capture a share of savings. **Compute peering and geographic load shifting** should be recognized as eligible flexibility mechanisms.
 
 ### 10.4 A Climate-Aligned Hierarchy
 
@@ -268,7 +268,7 @@ Software flexibility supports the Plan pillar ([Ofgem, 2026, para 5.30–5.32](h
 
 ### 10.5 Measurement and Verification
 
-We recommend: **standardised flexibility metrics** (magnitude, duration, reliability, response time); **M&V protocols** for flexible connections using the SCI framework; **transparency requirements** for flexibility disclosure in readiness assessments; and **SCI adoption** ([ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)) to ensure flexibility delivers genuine emissions reductions.
+We recommend: **standardized flexibility metrics** (magnitude, duration, reliability, response time); **M&V protocols** for flexible connections using the SCI framework; **transparency requirements** for flexibility disclosure in readiness assessments; and **SCI adoption** ([ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)) to ensure flexibility delivers genuine emissions reductions.
 
 ---
 
@@ -276,7 +276,7 @@ We recommend: **standardised flexibility metrics** (magnitude, duration, reliabi
 
 Software is the key enabler of data center grid flexibility, but it is not a silver bullet.
 
-**The capability is real.** Workload shifting, geographic migration, UPS management, cooling adjustment, and hardware power scaling — coordinated by software platforms into measurable grid services — can transform data centers from passive loads into active grid participants. Evidence from pilots is encouraging: 10–40% load modulation, 25% peak demand reduction sustained for hours, 10% cost savings from integrated optimisation, 2× greater flexibility from GPU facilities, and now a UK-first demonstration at the London AI Factory showing high-performance AI infrastructure operating as a grid-responsive asset.
+**The capability is real.** Workload shifting, geographic migration, UPS management, cooling adjustment, and hardware power scaling — coordinated by software platforms into measurable grid services — can transform data centers from passive loads into active grid participants. Evidence from pilots is encouraging: 10–40% load modulation, 25% peak demand reduction sustained for hours, 10% cost savings from integrated optimization, 2× greater flexibility from GPU facilities, and now a UK-first demonstration at the London AI Factory showing high-performance AI infrastructure operating as a grid-responsive asset.
 
 **But the limitations are equally real.** The evidence base is early-stage. The cost-emissions tradeoff demands carbon-aware, not merely price-aware, scheduling. Operator incentives remain the largest barrier. The deferrable workload fraction may be smaller than optimistic estimates and is shrinking as real-time inference grows. Flexibility cannot compensate for unconstrained growth: a tenfold expansion of capacity, even if individually flexible, changes the system-level equation. And flexibility without grid decarbonisation is just cost arbitrage that may increase emissions.
 
@@ -288,9 +288,9 @@ Software is the key enabler of data center grid flexibility, but it is not a sil
 - **Plan**: Spatial workload migration and ramped profiles integrated into strategic planning for AI Growth Zones, with climate performance alongside economic contribution in prioritisation criteria.
 - **Connect**: Non-firm, ramped, and flexible arrangements with graduated incentives linked to demonstrated capability, revenue sharing for verified flexibility, and a climate-aligned hierarchy from demand response through electrons to molecules.
 
-The Planning and Infrastructure Act 2025 gives Ofgem powers to implement these reforms at pace ([Ofgem, 2026, para 4.16–4.17](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). The question is whether flexibility requirements will be designed with sufficient technical sophistication — rewarding genuine, carbon-aware, verifiable capability — or default to blunt instruments that ignore the heterogeneity of data centre workloads, the realities of the grid, and the UK's opportunity to lead in low-carbon digital infrastructure.
+The Planning and Infrastructure Act 2025 gives Ofgem powers to implement these reforms at pace ([Ofgem, 2026, para 4.16–4.17](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). The question is whether flexibility requirements will be designed with sufficient technical sophistication — rewarding genuine, carbon-aware, verifiable capability — or default to blunt instruments that ignore the heterogeneity of data center workloads, the realities of the grid, and the UK's opportunity to lead in low-carbon digital infrastructure.
 
-The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled flexibility is not the complete answer, but it is a necessary part of any solution that connects data centres at scale while maintaining a secure, reliable, affordable, and decarbonising electricity system for all consumers. The software exists. The evidence is building. The UK needs the regulatory framework to match.
+The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled flexibility is not the complete answer, but it is a necessary part of any solution that connects data centers at scale while maintaining a secure, reliable, affordable, and decarbonising electricity system for all consumers. The software exists. The evidence is building. The UK needs the regulatory framework to match.
 
 ---
 
@@ -298,13 +298,13 @@ The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled f
 
 ### Peer-Reviewed Papers
 
-- Cioara, T., Anghel, I., Salomie, I., Antal, M., Pop, C., Bertoncini, M., Arnone, D. & Pop, F. (2019). "Exploiting data centres energy flexibility in smart cities: Business scenarios." *Information Sciences*, 476, 392–412. [Link](https://www.sciencedirect.com/science/article/abs/pii/S0020025518305243)
+- Cioara, T., Anghel, I., Salomie, I., Antal, M., Pop, C., Bertoncini, M., Arnone, D. & Pop, F. (2019). "Exploiting data centers energy flexibility in smart cities: Business scenarios." *Information Sciences*, 476, 392–412. [Link](https://www.sciencedirect.com/science/article/abs/pii/S0020025518305243)
 
 - Crozier, C. & Liska, R. (2025). "The Potential of Data Center Energy Demand To Provide Grid Flexibility." *Current Sustainable/Renewable Energy Reports*, 12, 12. [Link](https://link.springer.com/article/10.1007/s40518-025-00258-9)
 
 - Radovanovic, A. et al. (2023). "Carbon-Aware Computing for Datacenters." *IEEE Transactions on Power Systems*, 38(2), 1270–1280. [Link](https://ieeexplore.ieee.org/document/9770383)
 
-- Takci, M.T., Qadrdan, M., Summers, J. & Gustafsson, J. (2025a). "Data centres as a source of flexibility for power systems." *Energy Reports*, 13, 3661–3671. [Link](https://www.sciencedirect.com/science/article/pii/S2352484725001623)
+- Takci, M.T., Qadrdan, M., Summers, J. & Gustafsson, J. (2025a). "Data centers as a source of flexibility for power systems." *Energy Reports*, 13, 3661–3671. [Link](https://www.sciencedirect.com/science/article/pii/S2352484725001623)
 
 - Zhang, Y., Tang, H. & Li, H. (2025). "Unlocking the flexibilities of data centers for smart grid services." *Energy*, 316, 134511. [Link](https://www.sciencedirect.com/science/article/pii/S0360544225001537)
 
@@ -314,7 +314,7 @@ The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled f
 
 - Ren, P., Sun, W., Wang, Y. & Harrison, G. (2025). "Grid Frequency Stability Support Potential of Data Center." arXiv:2510.01050. [Link](https://arxiv.org/abs/2510.01050)
 
-- Takci, M.T., Day, J. & Qadrdan, M. (2025b). "Characterisation and Quantification of Data Centre Flexibility for Power System Support." arXiv:2511.07159. [Link](https://arxiv.org/abs/2511.07159)
+- Takci, M.T., Day, J. & Qadrdan, M. (2025b). "Characterization and Quantification of Data Center Flexibility for Power System Support." arXiv:2511.07159. [Link](https://arxiv.org/abs/2511.07159)
 
 - Wan, H., Fang, L. & Li, X. (2025). "Grid Operational Benefit Analysis of Data Center Spatial Flexibility." arXiv:2511.08759. [Link](https://arxiv.org/abs/2511.08759)
 

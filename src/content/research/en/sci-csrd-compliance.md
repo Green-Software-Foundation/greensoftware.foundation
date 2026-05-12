@@ -36,7 +36,7 @@ tags:
 
 The Corporate Sustainability Reporting Directive (CSRD) represents the most comprehensive sustainability reporting mandate in European history, requiring approximately 10,000 companies to disclose detailed environmental, social, and governance (ESG) information. At the heart of CSRD lies the European Sustainability Reporting Standards (ESRS), with ESRS E1 (Climate Change) emerging as one of the most technically demanding requirements.
 
-For organisations that develop, deploy, or procure software, a critical challenge exists: traditional carbon accounting methodologies often lack the granularity needed to measure and reduce software-specific emissions effectively. This white paper demonstrates how the Software Carbon Intensity (SCI) standard, developed by the Green Software Foundation and formalised as ISO/IEC 21031:2024, provides a complementary framework that can help organisations to:
+For organizations that develop, deploy, or procure software, a critical challenge exists: traditional carbon accounting methodologies often lack the granularity needed to measure and reduce software-specific emissions effectively. This white paper demonstrates how the Software Carbon Intensity (SCI) standard, developed by the Green Software Foundation and formalised as ISO/IEC 21031:2024, provides a complementary framework that can help organizations to:
 
 - **Accurately quantify** software carbon emissions at a granular level
 - **Support CSRD compliance** efforts, particularly for ESRS E1-6 (GHG emissions reporting)
@@ -402,9 +402,9 @@ This foundational alignment ensures that SCI-based calculations maintain integri
 
 \*\*ESRS E1 Requirement (paragraph 45):\*\* "The undertaking shall calculate its Scope 1, Scope 2 and Scope 3 emissions in accordance with the Greenhouse Gas Protocol."
 
-The GHG Protocol uses an attributional approach: allocating a share of actual emissions to the reporting organisation using average emission factors. SCI's specification also requires average location-based carbon intensity for the I term, making its output compatible with attributional accounting. However, SCI's design philosophy — elimination-only, sensitive to action — is consequential in spirit: it is built to drive operational decisions, not to allocate shares of global emissions.
+The GHG Protocol uses an attributional approach: allocating a share of actual emissions to the reporting organization using average emission factors. SCI's specification also requires average location-based carbon intensity for the I term, making its output compatible with attributional accounting. However, SCI's design philosophy — elimination-only, sensitive to action — is consequential in spirit: it is built to drive operational decisions, not to allocate shares of global emissions.
 
-This distinction matters in practice. Some carbon-aware scheduling tools use marginal emission factors to guide real-time decisions. If marginal intensity data feeds SCI calculations that are then aggregated into a GHG inventory, this mixes a consequential metric into an attributional framework - something auditors could rightly challenge. SCI calculations feeding CSRD disclosures must use average location-based emission factors. Marginal data remains valuable for operational decisions but should not enter the reporting pipeline. Similarly, ESRS E1-6 requires Scope 2 reported using both location-based and market-based methods. SCI provides only location-based figures. Organisations must therefore maintain a separate market-based calculation alongside SCI-derived figures. SCI cannot be the sole source for Scope 2 disclosure because of the explicit rejection of market based emissions.
+This distinction matters in practice. Some carbon-aware scheduling tools use marginal emission factors to guide real-time decisions. If marginal intensity data feeds SCI calculations that are then aggregated into a GHG inventory, this mixes a consequential metric into an attributional framework - something auditors could rightly challenge. SCI calculations feeding CSRD disclosures must use average location-based emission factors. Marginal data remains valuable for operational decisions but should not enter the reporting pipeline. Similarly, ESRS E1-6 requires Scope 2 reported using both location-based and market-based methods. SCI provides only location-based figures. Organizations must therefore maintain a separate market-based calculation alongside SCI-derived figures. SCI cannot be the sole source for Scope 2 disclosure because of the explicit rejection of market based emissions.
   **Integration Workflow:**
 
 1. Calculate component-level SCI scores using average location-based grid carbon intensity
@@ -858,7 +858,7 @@ $$50{,}000{,}000 \times 0.988 = 49{,}400{,}000 \text{ gCO}_2\text{e} = 49.4 \tex
 > **Calculation methodology:**
 > We calculated emissions from customer usage of our payment processing API using the Software Carbon Intensity (SCI) methodology (ISO/IEC 21031:2024). The SCI score of $0.988$ gCO₂e per transaction includes:
 > >
-> - **Operational emissions:** Based on energy consumption measured via AWS CloudWatch metrics and modelled using Cloud Carbon Footprint methodology, with carbon intensity data from Electricity Maps for the eu-west-1 region (380 gCO₂e/kWh).
+> - **Operational emissions:** Based on energy consumption measured via AWS CloudWatch metrics and modeled using Cloud Carbon Footprint methodology, with carbon intensity data from Electricity Maps for the eu-west-1 region (380 gCO₂e/kWh).
 > - **Embodied emissions:** Allocated hardware manufacturing emissions based on industry-standard lifecycle assessment data for comparable server hardware, with time-share and resource-share allocation reflecting actual usage patterns.
 > >
 > The functional unit (per transaction) was selected to align with our revenue model and enable year-over-year intensity tracking independent of business growth.
@@ -891,7 +891,7 @@ Now PaymentCo can see that:
 
   **Action plan:**
 
-- Database optimisation (2024): −7%
+- Database optimization (2024): −7%
 - Upgrade to ARM-based Graviton instances (2025): −15%
 - Implement carbon-aware scheduling (2026): −8%
 
@@ -914,12 +914,12 @@ This intensity target demonstrates efficiency improvement even as transaction vo
 
 [](https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Leveraging%20the%20SCI%20Standard%20for%20CSRD%20Compliance.md#sci-adds)
 
-1. **Component-level granularity** — identifies which service is the optimisation target
+1. **Component-level granularity** — identifies which service is the optimization target
 2. **Rate-based metric** enabling intensity targets independent of business growth
 3. **Documented methodology** with audit trail from telemetry to disclosure
 4. **Actionable engineering insight** that corporate totals cannot provide
 5. **ESRS E1-4**: Enables intensity-based target setting (0.988 → 0.690)
-6. **ESRS E1-1**: Identifies specific decarbonisation levers (database optimisation, hardware upgrade)
+6. **ESRS E1-1**: Identifies specific decarbonisation levers (database optimization, hardware upgrade)
 
 #### Realistic Limitations:
 
@@ -927,7 +927,7 @@ This intensity target demonstrates efficiency improvement even as transaction vo
 
 1. **Data quality**: 35% based on models/estimates (embodied emissions)
 2. **Uncertainty**: AWS doesn't provide exact workload-level energy data
-3. **Assumptions**: Server hardware proxy, average utilisation patterns
+3. **Assumptions**: Server hardware proxy, average utilization patterns
 4. **SCI alone is not sufficient for CSRD compliance**: Market-based Scope 2, scope classification, and reporting boundaries require conventional GHG accounting
 5. **Documentation burden**: Requires detailed methodology disclosure
 

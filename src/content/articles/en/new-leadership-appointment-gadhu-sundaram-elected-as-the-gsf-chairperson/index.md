@@ -11,7 +11,7 @@ The Green Software Foundation is proud to announce a new leadership position wit
 
 As we welcome Gadhu into his new role, we want to thank Sanjay for his unwavering dedication and leadership. Sanjay will continue working with the GSF as a member of the Green AI Committee.
 
-“I have been proud to watch the Green Software Foundation hit several important milestones in the past year, including ISO standards for Software Carbon Intensity measurement and establishing a committee to focus on Green AI standards and practices. We’ve made real progress towards a more sustainable future, while recognizing there is much remaining to be done. Accenture will continue working with GSF with a focus on Sustainable Generative AI, a critical priority for our future,” said Sanjay. “Appointing Gadhu to this role will help GSF continue to pioneer innovations in sustainable software and technologies that are vitally important to the future of our planet.”
+“I have been proud to watch the Green Software Foundation hit several important milestones in the past year, including ISO standards for Software Carbon Intensity measurement and establishing a committee to focus on Green AI standards and practices. We’ve made real progress toward a more sustainable future, while recognizing there is much remaining to be done. Accenture will continue working with GSF with a focus on Sustainable Generative AI, a critical priority for our future,” said Sanjay. “Appointing Gadhu to this role will help GSF continue to pioneer innovations in sustainable software and technologies that are vitally important to the future of our planet.”
 
 ## Introducing the New GSF Chair 
 

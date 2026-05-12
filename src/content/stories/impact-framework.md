@@ -49,7 +49,7 @@ timeline:
     body: >
       Recognising that measurement needed to be democratised, the GSF developed the
       Impact Framework (IF) — an open-source tool that converts observable data from
-      running systems (CPU utilisation, page views, number of installs) into environmental
+      running systems (CPU utilization, page views, number of installs) into environmental
       impacts (carbon, water, energy, air quality) in an auditable, replicable, and
       transparent manner. Its plugin architecture meant anyone could contribute modules
       handling specific cloud provider metrics, embodied carbon calculations, or
@@ -61,7 +61,7 @@ timeline:
   - date: December 2023
     heading: Carbon Hack 24 announced
     body: >
-      The Foundation announced a second hackathon, this time centred squarely on the
+      The Foundation announced a second hackathon, this time centered squarely on the
       Impact Framework. The framing was explicit: solving the biggest pain point facing
       the industry — measuring software for sustainability. The IF was the tool to make
       measurement scalable.
@@ -101,7 +101,7 @@ timeline:
       Amadeus donated Carmen — their production carbon measurement engine — to the GSF.
       Carmen was explicitly built on the Impact Framework and delivered transparent,
       reproducible carbon calculations at scale across hundreds of applications serving
-      1.9 billion travellers. It was the ultimate validation: a major enterprise had chosen
+      1.9 billion travelers. It was the ultimate validation: a major enterprise had chosen
       IF as the backbone of their measurement infrastructure.
     source:
       text: Read the Carmen announcement
@@ -116,7 +116,7 @@ contributors:
     role: Executive Director
     org: Green Software Foundation
     contribution: >
-      Championed the Impact Framework as the tool to "decentralise impact measurement and
+      Championed the Impact Framework as the tool to "decentralize impact measurement and
       democratise data" — framing it as open source for the sustainability measurement world.
   - name: Navveen Balani
     role: Managing Director and Chief Technologist
@@ -182,18 +182,18 @@ relatedSlugs:
 cta:
   heading: Help build the measurement ecosystem
   body: >
-    The Impact Framework was built by organisations who came together through the Green
+    The Impact Framework was built by organizations who came together through the Green
     Software Foundation. If your teams are struggling to measure software emissions,
     or you've built something that solves a measurement gap, join us.
   ctaText: "Explore the Impact Framework"
   ctaHref: "https://if.greensoftware.foundation"
 ---
 
-By 2023, the SCI specification had given the world a standard way to express software carbon intensity. But having a formula and being able to use it were two different things. Calculating an SCI score required gathering CPU utilisation data, mapping it to energy curves, finding the right carbon intensity factors for the location, estimating embodied emissions from hardware specifications, and choosing an appropriate functional unit. Each step involved specialist knowledge — energy engineering, hardware lifecycle analysis, regional grid data — that most software teams simply didn't have.
+By 2023, the SCI specification had given the world a standard way to express software carbon intensity. But having a formula and being able to use it were two different things. Calculating an SCI score required gathering CPU utilization data, mapping it to energy curves, finding the right carbon intensity factors for the location, estimating embodied emissions from hardware specifications, and choosing an appropriate functional unit. Each step involved specialist knowledge — energy engineering, hardware lifecycle analysis, regional grid data — that most software teams simply didn't have.
 
 Clients were coming to companies like Accenture, NTT DATA, and BCG X asking for help measuring their software emissions, but even those consulting firms found that the challenges were in "assessing what tools they should use and the methodologies and data used by these tools." As Eleonore Gueit of Amadeus put it at Carbon Hack 24: "The one question we get all the time is, 'How do we measure?' Everyone is craving measurement."
 
-The result was a growing gap between ambition and execution. Organisations wanted to measure. Regulations like the CSRD and EU AI Act were beginning to require it. But the expertise barrier meant that only a handful of well-resourced companies could actually calculate their software's carbon footprint. The measurement revolution promised by the SCI standard was stuck behind a wall of complexity.
+The result was a growing gap between ambition and execution. Organizations wanted to measure. Regulations like the CSRD and EU AI Act were beginning to require it. But the expertise barrier meant that only a handful of well-resourced companies could actually calculate their software's carbon footprint. The measurement revolution promised by the SCI standard was stuck behind a wall of complexity.
 
 > While we all know the importance of lowering our carbon footprint, software usually feels cleaner than it is. Furthermore, one cannot improve without measuring.
 > — Toru Shimogaki, NTT DATA

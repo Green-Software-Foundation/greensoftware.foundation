@@ -36,7 +36,7 @@ Some of us have ‘sustainability’ in our job titles, but for all of us, our i
 
 ## How do you view working with the GSF and in green software in general?  
 
-Sustainability and green software are big problems that no one company can solve, so we need this space where lots of contributors can get together and exchange ideas on really hard problems. I really value the community of engineers who care deeply about sustainability. It is an enormous opportunity to learn from people who have expertise in all sorts of areas, all of us working together towards a common goal.  
+Sustainability and green software are big problems that no one company can solve, so we need this space where lots of contributors can get together and exchange ideas on really hard problems. I really value the community of engineers who care deeply about sustainability. It is an enormous opportunity to learn from people who have expertise in all sorts of areas, all of us working together toward a common goal.  
 
 ## What obstacles do you see to wider use of green software? How do you think we can overcome them? 
 

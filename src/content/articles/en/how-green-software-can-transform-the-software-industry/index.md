@@ -33,7 +33,7 @@ How can we fully tap into the potential of green energy, reduce our reliance on 
 
 One solution that emerges is “demand response”; it involves balancing the demand on grids by incentivizing users to time the most energy-heavy operations to coincide with the availability of renewable energy. 
 
-Judging by the current trends, we can anticipate further developments in cloud computing, such as dynamic pricing models, which reflect the real-time cost of power. These innovations encourage companies to adjust their data usage accordingly and promote a shift towards a low-carbon energy use model.
+Judging by the current trends, we can anticipate further developments in cloud computing, such as dynamic pricing models, which reflect the real-time cost of power. These innovations encourage companies to adjust their data usage accordingly and promote a shift toward a low-carbon energy use model.
 
 **New technologies can help us make a strategic and informed transition. However, this is not without challenges. Hyperscalers and smaller providers should integrate renewables into their strategy and development and adopt systems at scale to respond to variable energy sources. **
 

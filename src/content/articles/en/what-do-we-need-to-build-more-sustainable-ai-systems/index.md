@@ -41,7 +41,7 @@ Finally, data published by cloud computing providers, as of yet, doesn’t have 
 
 And all of this is exacerbated by the fact that different measurement methodologies propose different metrics and ways of measuring the carbon impact, along with different proxies when direct data is not available to assess the carbon impact of compute loads. Such discrepancies make comparisons difficult, befuddling the consumer on which solutions are actually greener.  
 
-Most of all, we need to consider how all of the data that is gathered and utilized will meaningfully shift practitioners’ behaviours. We can gather the most detailed datasets in the world and provide complex analyses, but if that doesn’t cause practitioners to change how they design, develop, and deploy AI systems, all of that is for nothing!
+Most of all, we need to consider how all of the data that is gathered and utilized will meaningfully shift practitioners’ behaviors. We can gather the most detailed datasets in the world and provide complex analyses, but if that doesn’t cause practitioners to change how they design, develop, and deploy AI systems, all of that is for nothing!
 
 ### Practice issues
 
@@ -73,7 +73,7 @@ Designing tools that provide actionable insights to practitioners and help them 
 
 ### Practice
 
-All the tools and data in the world won’t mean much if we don’t know that they exist. A strong degree of evangelism is required to normalize this practice of carbon accounting to build more sustainable AI systems. We can do so by incorporating this into AI curricula in universities and talking about it in popular media articles to raise awareness. We already have the latter taking place. But, making that more widespread and accessible will aid the non-technical stakeholders in the AI lifecycle understand the importance of this and consequently garner support and resources to implement more sustainable AI systems in their organisations.
+All the tools and data in the world won’t mean much if we don’t know that they exist. A strong degree of evangelism is required to normalize this practice of carbon accounting to build more sustainable AI systems. We can do so by incorporating this into AI curricula in universities and talking about it in popular media articles to raise awareness. We already have the latter taking place. But, making that more widespread and accessible will aid the non-technical stakeholders in the AI lifecycle understand the importance of this and consequently garner support and resources to implement more sustainable AI systems in their organizations.
 
 AI conferences like [NeurIPS](https://nips.cc/), [ICML](https://icml.cc/), [ICLR](https://iclr.cc/), [ICCV](https://iccv2021.thecvf.com/home), [ACL](https://www.aclweb.org/portal/category/topics/machine-learning), [AAAI](https://www.aaai.org/), and others are also great venues where top-tier research is published, often involving extensive experimentation and research in the pursuit of achieving SOTA which can have significant environmental impacts. Mandating an environmental statement, perhaps included in the [broader impact statements](https://medium.com/@GovAI/a-guide-to-writing-the-neurips-impact-statement-4293b723f832), can be a way of raising awareness and promoting more environmentally-conscious AI practices.
 

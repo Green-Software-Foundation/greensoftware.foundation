@@ -24,9 +24,9 @@ orgs:
 
 stats:
   - value: "5"
-    label: Founding organisations — Microsoft, Accenture, GitHub, Thoughtworks, and Goldman Sachs
+    label: Founding organizations — Microsoft, Accenture, GitHub, Thoughtworks, and Goldman Sachs
   - value: "70+"
-    label: Member organisations spanning technology, consulting, financial services, and academia
+    label: Member organizations spanning technology, consulting, financial services, and academia
   - value: "130,000+"
     label: Practitioners trained through the Green Software Practitioner course
   - value: "17"
@@ -41,7 +41,7 @@ timeline:
       comprehensive training on the topic. Accenture's Sanjay Podder published "How Green is
       Your Software?" in the Harvard Business Review. Thoughtworks, GitHub, and Goldman Sachs
       were exploring the same space. None of them knew the others were working on the same
-      problem. As Jeff Sandquist recalled: "It turned out that a number of other organisations
+      problem. As Jeff Sandquist recalled: "It turned out that a number of other organizations
       were also looking at the same space. First off Accenture reached out, then Thoughtworks,
       then our partners at GitHub. We were all talking about the same space."
     source:
@@ -51,10 +51,10 @@ timeline:
   - date: May 2021
     heading: The Green Software Foundation is founded
     body: >
-      The five founding organisations — Microsoft, Accenture, Thoughtworks, GitHub, and
+      The five founding organizations — Microsoft, Accenture, Thoughtworks, GitHub, and
       Goldman Sachs — established GSF as a non-profit under the Linux Foundation. The
       structure was deliberately egalitarian. As Jeff Sandquist explained: "Whether you're
-      a nonprofit with ten people or an organisation the size of Microsoft with 100,000
+      a nonprofit with ten people or an organization the size of Microsoft with 100,000
       people, we all carry an equal voice." Three working groups were established: Standards
       (what do we measure?), Community (who builds and adopts?), and Innovation/Tooling
       (how do we make it easy?).
@@ -65,7 +65,7 @@ timeline:
   - date: September 2021
     heading: NTT DATA joins as steering member
     body: >
-      NTT DATA became the first organisation to join the steering committee beyond the
+      NTT DATA became the first organization to join the steering committee beyond the
       five founders, bringing global technology services expertise and a commitment to
       sustainable IT delivery.
     source:
@@ -78,7 +78,7 @@ timeline:
       The SCI specification development began. The Carbon Aware SDK was conceived. The
       Green Software Practitioner course was built. CarbonHack22 attracted 395 participants
       and demonstrated measurable carbon reductions. By the end of 2022, GSF had grown to
-      38 member organisations.
+      38 member organizations.
     source:
       text: Green Software Foundation Q1 2022 Report
       href: /articles/green-software-foundation-q1-2022-report/
@@ -154,7 +154,7 @@ timeline:
       are knowledgeable in the subject." By 2025, 130,000+ engineers had completed the
       Green Software Practitioner course. HCLTech had reached around 100,000 employees with
       sustainability training. Avanade had certified ~1,000 practitioners in a 60,000-person
-      organisation. GSF now had 17 active projects, 10,000+ community members across 36
+      organization. GSF now had 17 active projects, 10,000+ community members across 36
       meetup groups in 19 countries, and formal collaborations with W3C and the GHG Protocol.
     source:
       text: Introducing the GSF 2025 Annual Report
@@ -163,9 +163,9 @@ timeline:
 featuredQuote:
   text: >
     As large as Microsoft was, we can't do it alone. We need to collaborate with every
-    other organisation out there. That includes our partners, our competitors, our customers,
+    other organization out there. That includes our partners, our competitors, our customers,
     everybody. We all need to get together and work together because this isn't about one
-    organisation reducing its emissions. This is about the whole world reducing its emissions.
+    organization reducing its emissions. This is about the whole world reducing its emissions.
   author: Jeff Sandquist, Corporate Vice President, Developer Relations, Microsoft
 
 contributors:
@@ -222,7 +222,7 @@ contributors:
     org: NTT DATA
     contribution: >
       Steering committee member who championed the insight that software used by hardware
-      and data centres has great power to contribute to climate change issues.
+      and data centers has great power to contribute to climate change issues.
   - name: Kin Chiu
     role: Executive Director and Sustainable Technology Lead
     org: UBS
@@ -272,7 +272,7 @@ contributors:
     contribution: >
       Cisco steering committee member and Hardware Standards Working Group Chair, joining
       when the SSIA merged with the GSF in March 2025.
-  # ── Former steering members from organisations that have moved on ──
+  # ── Former steering members from organizations that have moved on ──
   - name: Santiago Fontanarrosa
     role: VP of Technology, Sustainable Business Studio
     org: Globant
@@ -297,7 +297,7 @@ quotes:
   - text: >
       Early in 2021, as I was researching the green software development space, I came
       across some work from Jeff Sandquist and his team at Microsoft. We connected and
-      quickly realised that we were both asking the same question; trying to solve the
+      quickly realized that we were both asking the same question; trying to solve the
       same problems. We knew we wanted to collaborate.
     author: Sanjay Podder
     role: Managing Director, Accenture
@@ -324,7 +324,7 @@ quotes:
     author: Yusuke Kobayashi
     role: Manager, Green Innovation Office, NTT DATA
   - text: >
-      As the father of two young children, and someone who works in a technology organisation
+      As the father of two young children, and someone who works in a technology organization
       that enables and creates software, I feel a responsibility to ensure that this digital
       world isn't delivered at the expense of the natural world.
     author: Kin Chiu
@@ -332,7 +332,7 @@ quotes:
   - text: >
       Google joined GSF to contribute to and learn from the broader ecosystem of green
       software. We have worked hard to make our software products green — through
-      energy-efficient data centres paired with clean energy procurement and through
+      energy-efficient data centers paired with clean energy procurement and through
       providing tools to our consumers for reducing their digital footprint.
     author: Savannah Goodman
     role: Data and Software Climate Solutions Lead, Google
@@ -387,9 +387,9 @@ relatedSlugs:
 
 ---
 
-In 2020, multiple organisations were independently trying to figure out how to reduce software's environmental impact. None of them knew the others were working on the same problem. At Microsoft, Jeff Sandquist's team had discovered "a deep lack of knowledge specifically regarding software and sustainability." At Accenture, Sanjay Podder had published in the Harvard Business Review. At GitHub, Erica Brescia wanted every developer to be "green by default." At Thoughtworks, the view was that "issues like climate change can only be resolved through global solidarity."
+In 2020, multiple organizations were independently trying to figure out how to reduce software's environmental impact. None of them knew the others were working on the same problem. At Microsoft, Jeff Sandquist's team had discovered "a deep lack of knowledge specifically regarding software and sustainability." At Accenture, Sanjay Podder had published in the Harvard Business Review. At GitHub, Erica Brescia wanted every developer to be "green by default." At Thoughtworks, the view was that "issues like climate change can only be resolved through global solidarity."
 
-The common thread was clear: no commonly agreed standards, practices, metrics, or tools existed to measure and minimise software-related carbon emissions. Each company was building its own approach in isolation. The problem couldn't be solved by any one of them alone — and the moment they found each other, it became obvious they needed a coalition.
+The common thread was clear: no commonly agreed standards, practices, metrics, or tools existed to measure and minimize software-related carbon emissions. Each company was building its own approach in isolation. The problem couldn't be solved by any one of them alone — and the moment they found each other, it became obvious they needed a coalition.
 
-> "Whether you're a nonprofit with ten people or an organisation the size of Microsoft with 100,000 people, we all carry an equal voice. That is really important to us."
+> "Whether you're a nonprofit with ten people or an organization the size of Microsoft with 100,000 people, we all carry an equal voice. That is really important to us."
 > — Jeff Sandquist, Corporate Vice President, Developer Relations, Microsoft

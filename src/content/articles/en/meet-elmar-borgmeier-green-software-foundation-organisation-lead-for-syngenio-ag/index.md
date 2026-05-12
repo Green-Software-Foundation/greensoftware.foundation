@@ -1,9 +1,9 @@
 ---
-title: "Meet Elmar Borgmeier, Green Software Foundation Organisation Lead for SYNGENIO AG"
+title: "Meet Elmar Borgmeier, Green Software Foundation Organization Lead for SYNGENIO AG"
 published: true
 date: "2022-05-05"
 summary: "In this interview Elmar Borgmeier, a co-founder of Syngenio, talks about the company’s green software development initiatives and the future of green software."
-teaserText: "Elmar Borgmeier co-founded Syngenio more than 20 years ago and today leads the company’s innovation teams. In this interview we asked Elmar about Syngenio’s growth and its journey towards green software and the Green Software Foundation."
+teaserText: "Elmar Borgmeier co-founded Syngenio more than 20 years ago and today leads the company’s innovation teams. In this interview we asked Elmar about Syngenio’s growth and its journey toward green software and the Green Software Foundation."
 mainImage: "./main.png"
 authors:
   - fullName: "Nilooka Dissanayake"
@@ -58,7 +58,7 @@ We currently participate in three working groups: Standards, Policy and Communit
 
 When we formed the *Green Software Design* team, the first task was to identify levers you can pull to reduce the carbon footprint induced by software. Well, that still is a task to work on. More measurements from practical applications are needed. Very soon we noticed that even basic measurements were missing. Like, in which cases is it better to use node.js instead of spring? So, we collected information and started our own measurements. These became the foundation for the technology rating we currently use.
 
-## What obstacles do you see to using green software on a wider scale within your organisation and in general?
+## What obstacles do you see to using green software on a wider scale within your organization and in general?
 
 Software engineers often act reserved when they hear about green software, simply because at first, they don’t understand the implications: “Does this mean I have to code differently?” Software engineers relax when they understand that they already know many of the things that need to be done. For example, performance testing plays a major role in green software. And this is not a new technique as such, it is just applied in a more thorough way.
 

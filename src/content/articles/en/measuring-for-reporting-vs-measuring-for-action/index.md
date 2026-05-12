@@ -31,7 +31,7 @@ At the GSF, this second purpose became our focus. Not because reporting doesn't 
 
 Reporting metrics need to be comparable across organizations. They need to be auditable. They need to be consistent over time so you can track trends. They need to withstand scrutiny from regulators and third-party auditors.
 
-All of this pushes you towards totals. Total organizational emissions. Total product lifecycle emissions. Standardized boundaries and methodologies so that Company A's number means roughly the same thing as Company B's number.
+All of this pushes you toward totals. Total organizational emissions. Total product lifecycle emissions. Standardized boundaries and methodologies so that Company A's number means roughly the same thing as Company B's number.
 
 This is genuinely valuable work. Without it, there's no accountability at scale, and there's no way for regulators to set meaningful thresholds or for consumers to make informed choices. Reporting creates the baseline of transparency that everything else builds on.
 
@@ -57,7 +57,7 @@ This isn't a flaw in either approach. It's a fundamental difference in what they
 
 Through our work at the GSF, we kept coming back to two conditions that need to be true for a metric to actually change behavior.
 
-It needs to give a clear signal for action. The measurement has to tell someone something they can act on. Granular energy data showing that process A consumes ten times more electricity than process B is a signal. An engineer looks at that and knows where to invest their time. When they make an improvement, they can see the impact. The metric is doing a job: pointing towards the next useful thing to do.
+It needs to give a clear signal for action. The measurement has to tell someone something they can act on. Granular energy data showing that process A consumes ten times more electricity than process B is a signal. An engineer looks at that and knows where to invest their time. When they make an improvement, they can see the impact. The metric is doing a job: pointing toward the next useful thing to do.
 
 It needs to be within the team's agency to change. If the number moves up or down independent of anything the team does, it's not a useful action metric for them. It might be a perfectly valid reporting metric. But it won't drive the behavior you're looking for.
 

@@ -22,7 +22,7 @@ In this virtual event, AI Sustainability and Ethics leaders will share their exp
 
 **The current State of Green Software:** Where are we in green software, and what do the challenges and opportunities in the field signal for greener AI?
 
-**Purposeful design:** Do certain languages and processes favour decarbonization?  
+**Purposeful design:** Do certain languages and processes favor decarbonization?  
 
 **Measuring what matters:** Are there existing tools and metrics to accurately assess the carbon emissions and energy consumption of AI systems and their components accurately?
 

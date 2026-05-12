@@ -62,7 +62,7 @@ The Green AI Committee (GAIC) is formed of these members:
 ## 1. What Is Green AI?
 
 > [!IMPORTANT]
-> **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasises the standardisation of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
+> **Definition:** Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.
 
 In their approach to establishing the definition, the committee prioritized the following:
 
@@ -149,7 +149,7 @@ The end-of-life stage refers to decommissioning a no longer maintained AI system
 
 ## 5. Why Is Green AI Important?
 
-In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [water usage](https://arxiv.org/pdf/2304.03271), and [energy consumption](https://arxiv.org/pdf/2301.11047). Some predictions expect data centre emissions [to rise from 180 Mt to 300 Mt in the Base Case by 2035](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions.
+In the last decade, AI has seen accelerated progress in a range of capacities, yet this advancement has increased its environmental impact and put a strain on energy systems. The development and deployment of AI models are responsible for adverse environmental impacts, including growing carbon emissions, [water usage](https://arxiv.org/pdf/2304.03271), and [energy consumption](https://arxiv.org/pdf/2301.11047). Some predictions expect data center emissions [to rise from 180 Mt to 300 Mt in the Base Case by 2035](https://iea.blob.core.windows.net/assets/dd7c2387-2f60-4b60-8c5f-6563b6aa1e4c/EnergyandAI.pdf), making them one of the fastest-growing sources of emissions.
 
 The rapid and divergent nature of AI development has led to [growing concerns and controversies](https://unctad.org/publication/digital-economy-report-2024) around balancing its potential benefits and negative environmental consequences.
 

@@ -38,7 +38,7 @@ timeline:
       understood both sides of the problem. Cloud providers had the data but lacked a
       standard format for sharing it. Customers needed that data to comply with emerging
       regulations and make informed decisions about where to run workloads. His framing:
-      the goal was not perfect data but standardised, comparable data that would make the
+      the goal was not perfect data but standardized, comparable data that would make the
       carbon emissions model for cloud workloads "less wrong and more useful."
     source:
       text: Read Adrian's original proposal on Medium
@@ -85,7 +85,7 @@ timeline:
     heading: Real Time Cloud standard ratified
     body: >
       RTC was ratified — 21 months from launch. The standard defines a Cloud Region Metadata
-      Table covering how efficiently data centres use power (PUE — Power Usage Effectiveness)
+      Table covering how efficiently data centers use power (PUE — Power Usage Effectiveness)
       and water (WUE — Water Usage Effectiveness), the percentage of energy from carbon-free
       sources (CFE), renewable energy breakdowns including Power Purchase Agreements (PPAs)
       and Guarantees of Origin, and carbon intensity measured three ways: location-based
@@ -102,11 +102,11 @@ timeline:
     heading: V1.1 and ISO trajectory
     body: >
       The specification was reformatted to ISO formatting requirements in January 2026,
-      signalling its trajectory towards formal international recognition. V1.1 was approved
+      signalling its trajectory toward formal international recognition. V1.1 was approved
       by the working group in February 2026, incorporating feedback from the FinOps Foundation
       — expanding the standard's reach beyond sustainability teams into financial operations.
       Adrian published the first-ever cross-provider PUE comparison in The New Stack using
-      RTC's standardised dataset.
+      RTC's standardized dataset.
     source:
       text: Real Time Cloud on GitHub
       href: https://github.com/Green-Software-Foundation/real-time-cloud
@@ -131,7 +131,7 @@ contributors:
     org: UBS
     contribution: >
       Co-chair who brought the enterprise consumer perspective, connecting RTC to the
-      broader organisational sustainability transformation. Also co-leads the SOFT framework.
+      broader organizational sustainability transformation. Also co-leads the SOFT framework.
 
 quotes:
   - text: >
@@ -142,7 +142,7 @@ quotes:
     author: Adrian Cockcroft
     role: Proposal for a Realtime Carbon Footprint Standard
   - text: >
-      Collaboration is essential at every level: within teams, across organisations, and
+      Collaboration is essential at every level: within teams, across organizations, and
       even between institutions. Time is of the essence; we can't afford to wait for years
       to change the tech culture. The change needs to begin now.
     author: Pindy Bhullar
@@ -159,15 +159,15 @@ cta:
   heading: Use the RTC cloud region dataset today
   body: >
     All RTC data is openly available on the project's GitHub repository. If your
-    organisation runs workloads across multiple cloud providers and struggles with
+    organization runs workloads across multiple cloud providers and struggles with
     inconsistent carbon reporting, the Cloud Region Metadata Table gives you comparable,
-    standardised data now.
+    standardized data now.
   ctaText: "View the RTC Dataset"
   ctaHref: "https://github.com/Green-Software-Foundation/real-time-cloud"
 ---
 
-Organisations measuring the carbon footprint of their cloud workloads have faced the same foundational problem: data from cloud providers is late, incomplete, and incomparable across platforms. Cloud providers release carbon data on a monthly basis, with delays of several months. If you run workloads across AWS, Azure, and GCP, you receive three different reports using three different methodologies on three different timescales. There is no common format, no common definitions, no way to compare. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure.
+Organizations measuring the carbon footprint of their cloud workloads have faced the same foundational problem: data from cloud providers is late, incomplete, and incomparable across platforms. Cloud providers release carbon data on a monthly basis, with delays of several months. If you run workloads across AWS, Azure, and GCP, you receive three different reports using three different methodologies on three different timescales. There is no common format, no common definitions, no way to compare. RTC eliminates this fragmentation by establishing the first cross-provider standard for energy and carbon disclosure.
 
-The consequences ripple through the entire green software ecosystem. Customers reporting Scope 3 emissions are forced to produce estimates using incomplete public information that excludes the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organisations that have invested heavily in clean cloud infrastructure are penalised by the data gap.
+The consequences ripple through the entire green software ecosystem. Customers reporting Scope 3 emissions are forced to produce estimates using incomplete public information that excludes the cloud providers' own renewable energy purchases — systematically inflating emissions estimates. Organizations that have invested heavily in clean cloud infrastructure are penalised by the data gap.
 
 This is not an academic concern. The Corporate Sustainability Reporting Directive in Europe and California's emerging requirements now mandate supply-chain-level carbon disclosure. The GSF's own SCI specification needs accurate grid carbon intensity as an input. Every measurement tool in the ecosystem is only as good as the data the cloud providers choose to share.

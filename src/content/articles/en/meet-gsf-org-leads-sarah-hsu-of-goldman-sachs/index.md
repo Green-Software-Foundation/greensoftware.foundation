@@ -1,5 +1,5 @@
 ---
-title: "Meet GSF Organisational Leads: Sarah Hsu of Goldman Sachs"
+title: "Meet GSF Organizational Leads: Sarah Hsu of Goldman Sachs"
 published: true
 date: "2022-03-15"
 summary: "Sarah Hsu is an Associate at Goldman Sachs and works on Site Reliability Engineering. She is very passionate about the Green Software Foundation's educational component, which includes raising awareness, encouraging discussions and amplifying voices."
@@ -43,6 +43,6 @@ Younger software engineers will appreciate the opportunity to contribute to an 
 ## Any other matters you would like to share with us on green software and sustainability?
 We care deeply about climate change, sustainability and diversity at Goldman Sachs. Our CEO David Solomon highlighted the following in the ‘[Accelerating Transition 2021](https://www.goldmansachs.com/accelerating-transition/index.html)’ report, “As a financial institution, we believe we can achieve the greatest impact in advancing the climate transition by partnering with our clients across our business.”
 
-We were very fortunate to join the Green Software Foundation as a founding member and are excited to be at the forefront of the green software movement. We look forward to creating a trusted ecosystem of innovation and collaboration with other member organisations across industries so our efforts are cohesive and accelerated.
+We were very fortunate to join the Green Software Foundation as a founding member and are excited to be at the forefront of the green software movement. We look forward to creating a trusted ecosystem of innovation and collaboration with other member organizations across industries so our efforts are cohesive and accelerated.
 
 I would personally like to invite those who are interested in working on the new updated and extended version of Principles of Green Software Engineering to join our Project. We look forward to your engagement.
