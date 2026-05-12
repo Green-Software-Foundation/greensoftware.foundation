@@ -7,7 +7,7 @@ export default {
 export const Default = {
   args: {
     heading: "What is *Green Software?*",
-    body: "Green software is software that is responsible for its own carbon emissions and minimizes them.",
+    body: "Green software is software that is responsible for its own carbon emissions and minimises them.",
   },
 };
 

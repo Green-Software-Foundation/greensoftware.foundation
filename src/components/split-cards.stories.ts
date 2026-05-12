@@ -13,7 +13,7 @@ export const Default = {
     attribution: {
       name: "Engineering Lead",
       role: "VP Engineering",
-      company: "Member Organization",
+      company: "Member Organisation",
     },
   },
 };

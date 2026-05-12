@@ -28,7 +28,7 @@ const articles = defineCollection({
       published: z.boolean().default(false),
       summary: z.string(),
       teaserText: z.string().optional(),
-      // Co-located image — Astro processes it for optimization
+      // Co-located image — Astro processes it for optimisation
       mainImage: img().optional(),
       mainImageAlt: z.string().optional(),
       description: z.string().optional(),

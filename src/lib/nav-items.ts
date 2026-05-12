@@ -47,7 +47,7 @@ export const navItems = [
             href: "/standards/soft/",
             label: "SOFT",
             description:
-              "Framework for organizational transformation" /* iconSrc: pi("soft"), icon: "workflow" */,
+              "Framework for organisational transformation" /* iconSrc: pi("soft"), icon: "workflow" */,
           },
           {
             href: "/standards/rtc/",
@@ -70,13 +70,13 @@ export const navItems = [
             href: "/standards/wdpc/",
             label: "WDPC",
             description:
-              "Data center power and cooling efficiency" /* iconSrc: pi("wdpc"), icon: "cloud" */,
+              "Data centre power and cooling efficiency" /* iconSrc: pi("wdpc"), icon: "cloud" */,
           },
           {
             href: "/standards/open19/",
             label: "Open19",
             description:
-              "Open standard for data center rack hardware" /* iconSrc: pi("open19"), icon: "server" */,
+              "Open standard for data centre rack hardware" /* iconSrc: pi("open19"), icon: "server" */,
           },
         ],
       },
@@ -106,7 +106,7 @@ export const navItems = [
         title: "Education",
         headerLink: {
           href: "/education/",
-          label: "About our education program →",
+          label: "About our education programme →",
         },
         links: [
           {
@@ -121,7 +121,7 @@ export const navItems = [
           },
           {
             href: "https://github.com/Green-Software-Foundation/awesome-green-software",
-            label: "Resource Catalog",
+            label: "Resource Catalogue",
             /* iconSrc: pi("awesome-gs"), icon: "trophy", */ external: true,
           },
         ],
@@ -181,7 +181,7 @@ export const navItems = [
     label: "Community",
     footerLink: {
       href: "/community/",
-      label: "About our community program →",
+      label: "About our community programme →",
     },
     sections: [
       {
@@ -220,7 +220,7 @@ export const navItems = [
           },
           {
             href: "https://champions.greensoftware.foundation",
-            label: "Champions Program",
+            label: "Champions Programme",
             /* iconSrc: pi("green-software-champions"), icon: "trophy", */ external: true,
           },
         ],
@@ -246,7 +246,7 @@ export const navItems = [
     label: "About",
     sections: [
       {
-        title: "Organization",
+        title: "Organisation",
         links: [
           { href: "/about/", label: "About" /* icon: "building-2" */ },
           {

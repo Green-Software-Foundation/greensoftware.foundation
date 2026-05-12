@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import Image from "@/components/image.astro";
 
 interface ProjectOrg {
-  /** Organization name */
+  /** Organisation name */
   name: string;
-  /** Path to organization logo */
+  /** Path to organisation logo */
   logoSrc: string;
 }
 
@@ -14,7 +14,7 @@ interface Project {
   title: string;
   /** Short description of the solution */
   description: string;
-  /** Organizations involved */
+  /** Organisations involved */
   orgs?: ProjectOrg[];
   /** Link to the full story */
   href?: string;
@@ -23,7 +23,7 @@ interface Project {
 }
 
 interface Props {
-  /** Heading text. Wrap words in *asterisks* for accent color */
+  /** Heading text. Wrap words in *asterisks* for accent colour */
   heading?: string;
   /** Body text under heading */
   body?: string;

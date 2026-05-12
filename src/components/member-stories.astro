@@ -2,9 +2,9 @@
 import { Button } from "@/components/ui/button";
 
 interface StoryOrg {
-  /** Organization name */
+  /** Organisation name */
   name: string;
-  /** Organization logo (if present, replaces text) */
+  /** Organisation logo (if present, replaces text) */
   logoSrc?: string;
 }
 
@@ -13,7 +13,7 @@ interface Story {
   title: string;
   /** Short summary */
   description: string;
-  /** Organizations involved */
+  /** Organisations involved */
   organizations?: StoryOrg[];
   /** Story thumbnail/hero image */
   imageSrc?: string;
@@ -24,7 +24,7 @@ interface Story {
 }
 
 interface Props {
-  /** Heading text. Wrap words in *asterisks* for accent color */
+  /** Heading text. Wrap words in *asterisks* for accent colour */
   heading?: string;
   /** Body text under heading */
   body?: string;

@@ -40,7 +40,7 @@ type Props = {
   ctaText?: string;
   /** CTA link href */
   ctaHref?: string;
-  /** Contributing organizations shown as a scrolling logo strip */
+  /** Contributing organisations shown as a scrolling logo strip */
   orgs?: Org[];
   /** Flip layout so image appears on the left and tabs on the right */
   reversed?: boolean;

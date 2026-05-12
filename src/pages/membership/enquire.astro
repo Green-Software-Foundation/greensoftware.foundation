@@ -9,7 +9,7 @@ import Footer from "@/components/footer.astro";
 
 <Layout
   title="Membership Enquiry — Green Software Foundation"
-  description="Get in touch to discuss GSF membership. Tell us about your organization and what interests you in joining."
+  description="Get in touch to discuss GSF membership. Tell us about your organisation and what interests you in joining."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -88,8 +88,8 @@ import Footer from "@/components/footer.astro";
               </div>
 
               <div>
-                <label for="organization" class="mb-1 block text-sm font-semibold text-primary-dark">Organization <span class="text-red-500">*</span></label>
-                <input type="text" id="organization" name="organization" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                <label for="organisation" class="mb-1 block text-sm font-semibold text-primary-dark">Organisation <span class="text-red-500">*</span></label>
+                <input type="text" id="organisation" name="organisation" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
               </div>
 
               <div>
@@ -159,7 +159,7 @@ import Footer from "@/components/footer.astro";
           document.getElementById("form-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
           if ((window as any).gtag) {
             (window as any).gtag("event", "membership_enquiry", {
-              organization: (formData.get("organization") as string) || "",
+              organisation: (formData.get("organisation") as string) || "",
             });
           }
         } else {

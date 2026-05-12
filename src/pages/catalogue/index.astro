@@ -24,7 +24,7 @@ import StatsGrid from "@/components/stats-grid.astro";
 import CommunityReach from "@/components/community-reach.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 
-// Catalog-only components (hardcoded content from microsites)
+// Catalogue-only components (hardcoded content from microsites)
 import Logo from "@/components/_catalogue/logo.astro";
 import WhatSCI from "@/components/_catalogue/what-sci.astro";
 import WhatWDPC from "@/components/_catalogue/what-wdpc.astro";
@@ -35,10 +35,10 @@ import SuccessStories from "@/components/_catalogue/success-stories.astro";
 import Research from "@/components/_catalogue/research.astro";
 import AudienceBenefits from "@/components/_catalogue/audience-benefits.astro";
 import Resources from "@/components/_catalogue/resources.astro";
-import CatalogTimeline from "@/components/_catalogue/timeline.astro";
+import CatalogueTimeline from "@/components/_catalogue/timeline.astro";
 import Team from "@/components/_catalogue/team.astro";
 import AboutGSF from "@/components/_catalogue/about-gsf.astro";
-import CatalogCTABanner from "@/components/_catalogue/cta.astro";
+import CatalogueCTABanner from "@/components/_catalogue/cta.astro";
 import AudienceCards from "@/components/_catalogue/audience-cards.astro";
 import Features from "@/components/_catalogue/features.astro";
 import MissionCard from "@/components/_catalogue/mission-card.astro";
@@ -69,14 +69,14 @@ const featureGridCardsFeatures = [
 
 const featureGridBorderedFeatures = [
   { icon: "/assets/standards/sci-ai/transforming-1.svg", title: "Specification", description: "Read the technical specification for measuring carbon intensity." },
-  { icon: "/assets/standards/sci-ai/transforming-2.svg", title: "Case Studies", description: "See how organizations are implementing the methodology." },
+  { icon: "/assets/standards/sci-ai/transforming-2.svg", title: "Case Studies", description: "See how organisations are implementing the methodology." },
   { icon: "/assets/standards/sci-ai/transforming-3.svg", title: "Tools", description: "Open-source tools for measuring your software's carbon footprint." },
   { icon: "/assets/standards/sci-ai/transforming-4.svg", title: "Community", description: "Join the community and contribute to the standard." },
 ];
 
 const featureGridPlainFeatures = [
   { icon: "/assets/standards/sci-ai/lifecycle-1.svg", title: "Inception & Design", description: "Carbon costs of planning, designing architectures, and selecting approaches." },
-  { icon: "/assets/standards/sci-ai/lifecycle-2.svg", title: "Data for Development", description: "Energy used in data collection, cleaning, labeling, and storage." },
+  { icon: "/assets/standards/sci-ai/lifecycle-2.svg", title: "Data for Development", description: "Energy used in data collection, cleaning, labelling, and storage." },
   { icon: "/assets/standards/sci-ai/lifecycle-3.svg", title: "Experimentation", description: "Resources consumed during model development, hyperparameter tuning, and testing." },
   { icon: "/assets/standards/sci-ai/lifecycle-4.svg", title: "Training", description: "The most energy-intensive phase — full model training, distributed computing, and GPU usage." },
   { icon: "/assets/standards/sci-ai/lifecycle-5.svg", title: "Deployment", description: "Ongoing inference costs, model serving, monitoring, and retraining cycles." },
@@ -88,14 +88,14 @@ const tabbedSectionTabs = [
   { value: "model", heading: "Model Layer", description: "Evaluates architectural choices, model size, efficiency techniques, and their impact on carbon emissions." },
 ];
 
-const cardGridCenterCards = [
+const cardGridCentreCards = [
   { icon: "/assets/standards/sci-ai/shape-1.svg", title: "Join Working Group", description: "Participate in developing and refining the specification.", ctaText: "Join Now", ctaHref: "#", featured: true },
-  { icon: "/assets/standards/sci-ai/shape-2.svg", title: "Implement SCI", description: "Apply the methodology to your organization's software.", ctaText: "Get Started", ctaHref: "#" },
+  { icon: "/assets/standards/sci-ai/shape-2.svg", title: "Implement SCI", description: "Apply the methodology to your organisation's software.", ctaText: "Get Started", ctaHref: "#" },
   { icon: "/assets/standards/sci-ai/shape-3.svg", title: "Share Feedback", description: "Help improve the standard with your real-world experience.", ctaText: "Contribute", ctaHref: "#" },
 ];
 
 const cardGridLeftCards = [
-  { icon: "/assets/standards/sci-ai/explore-1.svg", title: "Green Software Patterns for AI", description: "A curated catalog of actionable patterns for reducing the carbon footprint of AI systems.", ctaText: "Explore Patterns", ctaHref: "#" },
+  { icon: "/assets/standards/sci-ai/explore-1.svg", title: "Green Software Patterns for AI", description: "A curated catalogue of actionable patterns for reducing the carbon footprint of AI systems.", ctaText: "Explore Patterns", ctaHref: "#" },
   { icon: "/assets/standards/sci-ai/explore-2.svg", title: "AI Carbon Measurement Tools", description: "Open-source tools and frameworks for implementing SCI for AI measurements.", ctaText: "View Tools", ctaHref: "#" },
   { icon: "/assets/standards/sci-ai/explore-3.svg", title: "Research & Case Studies", description: "Academic papers and industry implementations validating the SCI for AI approach.", ctaText: "Read Research", ctaHref: "#" },
 ];
@@ -106,22 +106,22 @@ const cardGridImageCards = [
 ];
 
 const iconFeaturesDemo = [
-  { icon: "/assets/standards/sci-ai/icon-cost.svg", description: '<span class="font-extrabold">Cost Optimization</span> - Identify and eliminate wasteful computational overhead in AI workflows.' },
+  { icon: "/assets/standards/sci-ai/icon-cost.svg", description: '<span class="font-extrabold">Cost Optimisation</span> - Identify and eliminate wasteful computational overhead in AI workflows.' },
   { icon: "/assets/standards/sci-ai/icon-compliance.svg", description: '<span class="font-extrabold">Regulatory Compliance</span> - Stay ahead of emerging AI sustainability regulations and reporting requirements.' },
 ];
 
-const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", company: "Organization" };
+const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", company: "Organisation" };
 ---
 
 <Layout
-  title="Component Catalog — Green Software Foundation"
-  description="Internal component catalog for the Green Software Foundation website."
+  title="Component Catalogue — Green Software Foundation"
+  description="Internal component catalogue for the Green Software Foundation website."
 >
   <!-- TABLE OF CONTENTS -->
   <nav class="sticky top-0 z-[100] bg-primary-darkest-2 text-white py-4 shadow-lg">
     <div class="container">
       <div class="flex items-center gap-4 flex-wrap">
-        <span class="font-bold text-lg whitespace-nowrap">GSF Component Catalog</span>
+        <span class="font-bold text-lg whitespace-nowrap">GSF Component Catalogue</span>
         <span class="text-accent">|</span>
         <div class="flex gap-3 flex-wrap text-sm">
           <a href="#navbar" class="hover:text-accent transition-colors">Navbar</a>
@@ -163,7 +163,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
   <section class="bg-white py-16 md:py-24">
     <div class="container max-w-4xl text-center">
       <h1 class="text-4xl font-bold text-primary-darker md:text-5xl mb-4">
-        GSF Component Catalog
+        GSF Component Catalogue
       </h1>
       <p class="text-lg text-primary-dark mb-6">
         Every reusable component from the GSF website and microsites (SCI, WDPC, SOFT, SCI for AI), displayed with live examples.
@@ -240,7 +240,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
         <strong>File:</strong> <code>src/components/logo-marquee.astro</code>
       </p>
       <p class="mt-2">Two rows of member logos scrolling horizontally in opposite directions (infinite marquee animation). Logos fetched from Notion at build time.</p>
-      <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code>, <code>grayscale</code>, <code>bgClass</code></p>
+      <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code>, <code>greyscale</code>, <code>bgClass</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT, SCI for AI, Homepage</p>
     </div>
   </div>
@@ -255,16 +255,16 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/text-block.astro</code>
       </p>
-      <p class="mt-2">Centered heading and body text. Supports <code>*accent*</code> syntax in headings for green-highlighted words. Optional image and card wrapping. Good for section introductions.</p>
+      <p class="mt-2">Centred heading and body text. Supports <code>*accent*</code> syntax in headings for green-highlighted words. Optional image and card wrapping. Good for section introductions.</p>
       <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code> (supports <code>*accent*</code>), <code>body</code>, <code>imageSrc</code>, <code>card</code>, <code>compact</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT, SCI for AI, Homepage</p>
     </div>
   </div>
 
-  <!-- Variant A: Centered Text + Scrolling Ticker -->
+  <!-- Variant A: Centred Text + Scrolling Ticker -->
   <div class="scroll-mt-20">
     <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
-      <h3 class="text-lg font-bold text-blue-900">Variant A: Centered Text + Ticker (legacy)</h3>
+      <h3 class="text-lg font-bold text-blue-900">Variant A: Centred Text + Ticker (legacy)</h3>
       <p class="text-sm text-blue-800 mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/what-sci.astro</code>
       </p>
@@ -272,10 +272,10 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
   </div>
   <WhatSCI />
 
-  <!-- Variant B: Centered Text + 2x2 Feature Grid -->
+  <!-- Variant B: Centred Text + 2x2 Feature Grid -->
   <div class="scroll-mt-20">
     <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
-      <h3 class="text-lg font-bold text-blue-900">Variant B: Centered Text + Feature Grid (legacy)</h3>
+      <h3 class="text-lg font-bold text-blue-900">Variant B: Centred Text + Feature Grid (legacy)</h3>
       <p class="text-sm text-blue-800 mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/what-wdpc.astro</code>
       </p>
@@ -333,7 +333,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
     badge="MEASUREMENT"
     heading="Industry"
     headingAccent="Impact"
-    body="The Software Carbon Intensity specification provides a consistent methodology for quantifying software's carbon emissions, enabling organizations to make data-driven decisions."
+    body="The Software Carbon Intensity specification provides a consistent methodology for quantifying software's carbon emissions, enabling organisations to make data-driven decisions."
     imageSrc="/assets/standards/sci-ai/why-industry-impact.svg"
   />
 
@@ -386,7 +386,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/how-it-works.astro</code>
       </p>
-      <p class="mt-2">Centered section with heading, explanatory text, then a large styled equation display (e.g., "SCI = (E x I + M) per R"). Great for any formula, methodology, or key concept that needs visual emphasis.</p>
+      <p class="mt-2">Centred section with heading, explanatory text, then a large styled equation display (e.g., "SCI = (E x I + M) per R"). Great for any formula, methodology, or key concept that needs visual emphasis.</p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI only. Unique and reusable for any formula/concept display.</p>
     </div>
   </div>
@@ -401,7 +401,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/feature-grid.astro</code>
       </p>
-      <p class="mt-2">Grid of feature items with three variants: <code>cards</code> (rounded card grid), <code>bordered</code> (centered card with bordered grid), and <code>plain</code> (left-aligned heading with vertical dividers). Supports 2-5 columns and <code>*accent*</code> headings.</p>
+      <p class="mt-2">Grid of feature items with three variants: <code>cards</code> (rounded card grid), <code>bordered</code> (centred card with bordered grid), and <code>plain</code> (left-aligned heading with vertical dividers). Supports 2-5 columns and <code>*accent*</code> headings.</p>
       <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code> (supports <code>*accent*</code>), <code>body</code>, <code>bodyHtml</code>, <code>features[]</code> (icon, title, description, linkText, linkHref), <code>columns</code> (2|3|4|5), <code>variant</code> ("cards"|"bordered"|"plain"), <code>compact</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT, SCI for AI, Homepage</p>
     </div>
@@ -425,7 +425,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
   <div class="scroll-mt-20">
     <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
       <h3 class="text-lg font-bold text-blue-900">Variant B: Bordered</h3>
-      <p class="text-sm text-blue-800 mt-1">Centered content inside a bordered rounded card with grid dividers.</p>
+      <p class="text-sm text-blue-800 mt-1">Centred content inside a bordered rounded card with grid dividers.</p>
     </div>
   </div>
   <FeatureGrid
@@ -468,7 +468,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/success-stories.astro</code> + <code>src/components/_catalogue/react/success-stories-carousel.tsx</code>
       </p>
-      <p class="mt-2">Interactive horizontal Embla carousel of case study cards. Each card: organization badge, H3 title, summary, "Read Case Study" link. Arrow buttons for navigation.</p>
+      <p class="mt-2">Interactive horizontal Embla carousel of case study cards. Each card: organisation badge, H3 title, summary, "Read Case Study" link. Arrow buttons for navigation.</p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI only. Reusable for any card carousel.</p>
     </div>
   </div>
@@ -566,23 +566,23 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/card-grid.astro</code>
       </p>
-      <p class="mt-2">Versatile card grid supporting icons, images, featured (dark) cards, CTA buttons, and decorative SVG overlays. Cards auto-layout: icon-only cards show icon &rarr; HR &rarr; title &rarr; text &rarr; button; icon+image cards show image at top with inline icon+title. Supports left or center alignment.</p>
+      <p class="mt-2">Versatile card grid supporting icons, images, featured (dark) cards, CTA buttons, and decorative SVG overlays. Cards auto-layout: icon-only cards show icon &rarr; HR &rarr; title &rarr; text &rarr; button; icon+image cards show image at top with inline icon+title. Supports left or centre alignment.</p>
       <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code> (supports <code>*accent*</code>), <code>headingAccent</code>, <code>body</code>, <code>cards[]</code> (icon, imageSrc, title, description, bodyHtml, featured, ctaText, ctaHref), <code>columns</code> (2|3|4), <code>align</code> ("center"|"left"), <code>decorSrc</code>, <code>bgClass</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI for AI (Explore Further, Shape the Future), SOFT, WDPC, Homepage</p>
     </div>
   </div>
 
-  <!-- Center-aligned (default) -->
+  <!-- Centre-aligned (default) -->
   <div class="scroll-mt-20">
     <div class="bg-blue-50 border-l-4 border-blue-400 py-3 px-6 mx-8 my-4 rounded-r-lg">
-      <h3 class="text-lg font-bold text-blue-900">Variant A: Center-aligned (default)</h3>
+      <h3 class="text-lg font-bold text-blue-900">Variant A: Centre-aligned (default)</h3>
     </div>
   </div>
   <CardGrid
     heading="Get *Involved*"
     body="Multiple ways to participate in the green software movement."
     columns={4}
-    cards={cardGridCenterCards}
+    cards={cardGridCentreCards}
   />
 
   <!-- Left-aligned with decor -->
@@ -663,7 +663,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/mission-card.astro</code>
       </p>
-      <p class="mt-2">Centered card with decorative border, top ornament, H1 title, and italic body text. Great for mission statements or key quotes that need visual emphasis.</p>
+      <p class="mt-2">Centred card with decorative border, top ornament, H1 title, and italic body text. Great for mission statements or key quotes that need visual emphasis.</p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> WDPC, SOFT, SCI for AI</p>
     </div>
   </div>
@@ -700,7 +700,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/cta-banner.astro</code>
       </p>
-      <p class="mt-2">Full-width dark green section with centered heading, body text, CTA button, and optional note text. Closing call-to-action before the footer.</p>
+      <p class="mt-2">Full-width dark green section with centred heading, body text, CTA button, and optional note text. Closing call-to-action before the footer.</p>
       <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code>, <code>body</code>, <code>ctaText</code>, <code>ctaHref</code>, <code>note</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> All pages</p>
     </div>
@@ -736,7 +736,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/_catalogue/ready-to-implement.astro</code>
       </p>
-      <p class="mt-2">Compact mid-page call-to-action. Rounded card with accent background color. Illustration on left, heading + body text + CTA button on right.</p>
+      <p class="mt-2">Compact mid-page call-to-action. Rounded card with accent background colour. Illustration on left, heading + body text + CTA button on right.</p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SOFT ("Ready to Explore?")</p>
     </div>
   </div>
@@ -771,7 +771,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT, SCI for AI</p>
     </div>
   </div>
-  <CatalogTimeline />
+  <CatalogueTimeline />
 
   <!-- ============================================================ -->
   <!-- 25. TEAM SECTION -->
@@ -782,7 +782,7 @@ const splitCardsAttribution = { name: "Sample Attribution", role: "Role Title", 
       <p class="text-sm text-primary-dark mt-1">
         <strong>File:</strong> <code>src/components/team-grid.astro</code>
       </p>
-      <p class="mt-2">Team member grid with circular photos, names, roles, company, and social links. Auto-constrains width for small teams (max-w-2xl for 1-2 members, max-w-4xl for 3). Supports custom background color.</p>
+      <p class="mt-2">Team member grid with circular photos, names, roles, company, and social links. Auto-constrains width for small teams (max-w-2xl for 1-2 members, max-w-4xl for 3). Supports custom background colour.</p>
       <p class="mt-1 text-sm"><strong>Props:</strong> <code>heading</code>, <code>body</code>, <code>members[]</code> (name, role, company, photo, socialMedia[]), <code>columns</code> (2|3|4), <code>bgClass</code></p>
       <p class="mt-1 text-sm"><strong>Used on:</strong> SCI, WDPC, SOFT, SCI for AI</p>
     </div>

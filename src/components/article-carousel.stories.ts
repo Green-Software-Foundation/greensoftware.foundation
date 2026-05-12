@@ -29,7 +29,7 @@ export const Default = {
       },
       {
         title: "Building a Global Meetup Network",
-        description: "How the GSF meetup program grew to 37 groups across 17 countries.",
+        description: "How the GSF meetup programme grew to 37 groups across 17 countries.",
         href: "#",
         cta: "Read the article →",
       },
