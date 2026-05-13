@@ -51,13 +51,13 @@ All approved disclosures are shared publicly on GitHub, for the wider community 
 
 The certification comes with a shareable badge, demonstrating the organization’s commitment to a transparent, measurable approach to reducing software emissions.
 
-> _“The SCI Self-Certification program is a major step toward making software sustainability measurable, transparent, and actionable at scale. By enabling organizations to disclose software emissions in a consistent and credible way, it helps drive accountability, shared learning, and collective progress across the global software ecosystem. We invite organizations worldwide to participate and help build a more transparent and sustainable future for software and AI.”_—_Navveen Balani, Executive Director of Green Software Foundation_ 
+> _“The SCI Self-Certification program is a major step toward making software sustainability measurable, transparent, and actionable at scale. By enabling organizations to disclose software emissions in a consistent and credible way, it helps drive accountability, shared learning, and collective progress across the global software ecosystem. We invite organizations worldwide to participate and help build a more transparent and sustainable future for software and AI.”_—_Navveen Balani, Executive Director, GSF  
 
 ## Building on our values 
 
 From the beginning, our work has been grounded in a strong belief that measuring software emissions accurately and transparently is the foundation for meaningful reductions. Over the years, that belief has shaped the standards and tools we've built, from the SCI specification, the Impact Framework, and the Carbon Aware SDK, each designed to make measurement part of everyday practice. 
 
-> _“At the Green Software Foundation, two of our core values are to 'Maximize Trust' and 'Hold Ourselves Accountable'.That's why we're proud to introduce the SCI Self-Certification program—a meaningful step toward greater transparency, and the accountability and trust that follow from it." —Gadhu Sundaram, Chairperson at Green Software Foundation_ 
+> _“At the Green Software Foundation, two of our core values are to 'Maximize Trust' and 'Hold Ourselves Accountable'.That's why we're proud to introduce the SCI Self-Certification program—a meaningful step toward greater transparency, and the accountability and trust that follow from it." —Gadhu Sundaram, Chair, GSF_ 
 
 The SCI Self-Certification program is the natural next step, building on this work. By making those measurement results visible, transparent, and open to public review, it helps move the industry from measurement toward greater accountability. 
 
