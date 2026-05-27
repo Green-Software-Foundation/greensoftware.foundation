@@ -11,10 +11,11 @@ The Policy Working Group's work: leadership, Policy Radar, policy engagement res
 
 ### Leadership photos
 
-Two leaders are hardcoded by name and looked up in `src/data/people.json`:
+Three leaders are hardcoded by name and looked up in `src/data/people.json`:
 
 - **Chris Adams** — Chair, Policy Working Group
-- **Joseph Cook** — Head of Research
+- **Ryan Sholin** — Co-Chair, Policy Working Group (Electricity Maps)
+- **Sean Mcilroy** — Programme Director, Green Software Foundation
 
 Photos and other metadata resolve from `people.json`. See [people component doc](../components/people.md).
 
