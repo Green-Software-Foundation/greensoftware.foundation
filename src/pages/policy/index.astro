@@ -18,7 +18,8 @@ import { articleUrl } from "@/lib/utils";
 
 // ----- Leadership photos from team.json -----
 const chrisAdams = teamData.find((p: any) => p.fullName === "Chris Adams");
-const josephCook = teamData.find((p: any) => p.fullName === "Joseph Cook");
+const ryanSholin = teamData.find((p: any) => p.fullName === "Ryan Sholin");
+const seanMcilroy = teamData.find((p: any) => p.fullName === "Sean Mcilroy");
 
 // ----- Articles tagged "policy" or "research" for the carousel -----
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
@@ -80,14 +81,15 @@ const policyArticles = allArticles
           <span class="font-bold text-primary">Leadership</span>
         </h2>
         <p class="mt-4 text-lg leading-relaxed text-primary-dark/80">
-          The Policy Working Group is chaired by Chris Adams. Research is led by Joseph Cook.
+          The Policy Working Group is chaired by Chris Adams and co-chaired by Ryan Sholin.
         </p>
       </div>
 
-      <div class="mx-auto mt-10 grid max-w-3xl gap-8 md:grid-cols-2">
+      <div class="mx-auto mt-10 grid max-w-5xl gap-8 md:grid-cols-3">
         {[
           { person: chrisAdams, name: "Chris Adams", role: "Chair, Policy Working Group", org: "Green Web Foundation", title: "Director of Technology and Policy" },
-          { person: josephCook, name: "Joseph Cook", role: "Head of Research", org: "Green Software Foundation", title: "Head of Research" },
+          { person: ryanSholin, name: "Ryan Sholin", role: "Co-Chair, Policy Working Group", org: "Electricity Maps", title: "Advocacy Lead" },
+          { person: seanMcilroy, name: "Sean Mcilroy", role: "Programme Director", org: "Green Software Foundation", title: "Programme Director" },
         ].map(({ person, name, role, org, title }) => (
           <div class="flex flex-col items-center text-center">
             <div class="h-28 w-28 overflow-hidden rounded-full border-2 border-primary-lighter bg-accent-lightest-2">
