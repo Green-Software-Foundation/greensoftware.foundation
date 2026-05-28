@@ -90,10 +90,10 @@ As practitioner adoption increases and feedback comes in from the community, ref
 
 If your team is working on software carbon measurement and would benefit from a worked example to anchor your own implementation, here’s where to start: 
 
-- **Try the reference implementation.** The README has a quick-start that runs against a committed fixture without requiring any API key.
+- **Try the reference implementation.** The [README](https://github.com/Green-Software-Foundation/reference-implementations/blob/main/README.md) has a quick-start that runs against a committed fixture without requiring any API key.
 - **Read the methodology.** The [SCI for AI specification](https://sci-for-ai.greensoftware.foundation/) defines the standard; the reference implementation's methodology document shows how the standard maps to one specific type of workload, with the choices made along the way.
 - **Share feedback on the repository's issue tracker.** We welcome questions about scope, methodology, alternative measurement approaches, or applicability to your workload.  
-- **Contribute a reference implementation.** If your team has implemented a GSF specification, built a developer tool that encodes a green-software approach, or assembled a working example of a sustainability pattern, the repository's README describes the process for contributing it. 
+- **Contribute a reference implementation.** If your team has implemented [a GSF specification](https://directory.greensoftware.foundation/projects/), built a developer tool that encodes a green-software approach, or assembled a working example of a sustainability pattern, the repository's README describes the process for contributing it. 
 
 Reference implementations are most valuable when they reflect the diversity of how practitioners work. The methodology provides the standard; the implementations are where the community builds on it. 
 
