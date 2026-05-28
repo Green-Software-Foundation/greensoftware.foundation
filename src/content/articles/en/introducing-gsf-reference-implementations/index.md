@@ -4,7 +4,7 @@ teaserText: A community space for educational, working examples of how to apply 
 date: 2026-05-28
 published: true
 summary: The new GSF Reference Implementations repository is a community space for working examples showing how to apply green software specifications in practice. It starts with SCI for AI applied to LLM inference and invites contributions across tools, patterns, and workloads.
-mainImage: ../../introducing-gsf-reference-implementations/GSF-Reference-Implementations-3.png
+mainImage: GSF-Reference-Implementations-3.png
 mainImageAlt: Isometric illustration showing a system of interconnected components — a document, code panel, energy tower, location pin, and chip — with three human figures interacting with the system, representing the community-driven nature of the GSF Reference Implementations repository.
 featured: false
 tags:
