@@ -1,6 +1,6 @@
 ---
 title: Introducing GSF Reference Implementations
-teaserText: A community space for educational, working examples of how to apply GSF specifications and green-software tools — starting with an implementation of SCI for AI for LLM inference.
+teaserText: A community space for educational, working examples of how to apply GSF specifications and green-software tools—starting with an implementation of SCI for AI for LLM inference.
 date: 2026-05-28
 published: true
 summary: The new GSF Reference Implementations repository is a community space for working examples showing how to apply green software specifications in practice. It starts with SCI for AI applied to LLM inference and invites contributions across tools, patterns, and workloads.
@@ -38,7 +38,7 @@ A reference implementation answers that question by walking through a specific e
 
 Different teams and deployment environments will naturally lead to different choices about tooling, measurement providers, and implementation details. Each project documents those choices so practitioners can evaluate them in context.
 
-_“Standards define the methodology. Reference implementations show what applying that methodology looks like in practice — with the assumptions and trade-offs made transparent. If your team has implemented a GSF specification, we invite you to contribute a reference implementation for the community to build on.” — Navveen Balani, Executive Director, Green Software Foundation_
+> _“Standards define the methodology. Reference implementations show what applying that methodology looks like in practice — with the assumptions and trade-offs made transparent. If your team has implemented a GSF specification, we invite you to contribute a reference implementation for the community to build on.” — Navveen Balani, Executive Director, Green Software Foundation_
 
 # **Starting with a Baseline** 
 
