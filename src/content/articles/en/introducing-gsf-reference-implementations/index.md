@@ -26,7 +26,7 @@ Reference implementations in this collection can take many forms. Some might ill
 
 **These reference implementations are intended for educational purposes — demonstrating how to apply a specification in practice. They are not production-ready applications, and practitioners adopting them should evaluate each against their own tooling and methodology requirements.**
 
-# **What Reference Implementations Are For**
+## **What Reference Implementations Are For**
 
 Specifications and tools are deliberately abstract. A single methodology needs to apply across cloud providers, hardware generations, model architectures, programming languages, and workload patterns that don’t yet exist. That level of abstraction helps the guidance stay useful as technologies evolve, but it also creates a challenge: how to apply it in practice?
 
@@ -40,7 +40,7 @@ Different teams and deployment environments will naturally lead to different cho
 
 > _“Standards define the methodology. Reference implementations show what applying that methodology looks like in practice — with the assumptions and trade-offs made transparent. If your team has implemented a GSF specification, we invite you to contribute a reference implementation for the community to build on.” — Navveen Balani, Executive Director, Green Software Foundation_
 
-# **Starting with a Baseline** 
+## **Starting with a Baseline** 
 
 The aim of a reference implementation is not to produce the definitive measurement. The actual numbers will depend on the measurement provider used, the assumptions baked into its model, and the operational context in which the workload runs. Measurement methodologies and tooling will continue to evolve.
 
@@ -48,7 +48,7 @@ The reference implementations help teams establish a baseline for carbon, energy
 
 Waiting for the perfect measurement before starting leaves teams without a starting point at all. 
 
-# **The First Reference Implementation: SCI for AI on LLM Inference**
+## **The First Reference Implementation: SCI for AI on LLM Inference**
 
 The [SCI for AI specification](https://sci-for-ai.greensoftware.foundation/) extends ISO/IEC 21031:2024 with the AI-specific considerations that show up in machine learning and generative workloads. Applying it to LLM inference — a workload class many teams have in production, including chatbots, retrieval-augmented generation systems, and report writers — is a natural starting point for the collection.
 
@@ -62,7 +62,7 @@ The sci-for-ai reference implementation demonstrates:
 
 Recorded fixtures from real LLM runs are committed to the repository, so the implementation can be tried locally without an API key. The methodology document explains what the measurements do and don’t include, and where the choices made in this implementation diverge from other equally valid approaches.
 
-# **What is in the Repository**
+## **What is in the Repository**
 
 The first reference implementation ships:
 
@@ -74,7 +74,7 @@ The first reference implementation ships:
 
 The code is MIT-licensed, matching the convention of other GSF code repositories.
 
-# **What Comes Next**
+## **What Comes Next**
 
 This first reference implementation focuses on a measurement specification (SCI for AI) applied to LLM inference. The repository is designed for a much broader range of contributions over time, including:
 
@@ -86,7 +86,7 @@ We invite practitioners who have worked through any of these to submit their imp
 
 As practitioner adoption increases and feedback comes in from the community, reference implementations themselves will also evolve. 
 
-# **Get Involved**
+## **Get Involved**
 
 If your team is working on software carbon measurement and would benefit from a worked example to anchor your own implementation, here’s where to start: 
 
