@@ -71,8 +71,6 @@ In January 2026, [Amadeus transferred ownership of Carmen to the GSF](https://gr
 
 For sustainability professionals in large organizations, Carmen solves a critical bottleneck. You no longer need to go team by team, spreadsheet by spreadsheet, asking engineers to estimate their resource consumption. Carmen pulls the data from the infrastructure layer, applies a consistent methodology via IF, and delivers results that can be aggregated, compared, and tracked over time. 
 
-See 
-
 ## The Opportunity: Beyond Compliance 
 
 The regulatory landscape is shifting. The EU's Corporate Sustainability Reporting Directive (CSRD) requires qualifying companies to report gross Scope 1, 2, and 3 greenhouse gas emissions under the European Sustainability Reporting Standards (ESRS E1). Software-related emissions, whether from your own data centers (Scope 2) or cloud services you consume (Scope 3), fall within that scope. 
