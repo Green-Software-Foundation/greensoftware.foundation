@@ -1,0 +1,247 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import CTACard from "@/components/cta-card.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import CardGrid from "@/components/card-grid.astro";
+import TeamGrid from "@/components/team-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+
+import ArticleCarousel from "@/components/article-carousel.astro";
+
+import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+const sweProject = projects.find(p => p.slug === "swe");
+const parentWg = projects.find(p => p.name === sweProject?.parent);
+
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("swe"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+  }));
+---
+
+<Layout
+  title="SWE — Software Water Efficiency | Green Software Foundation"
+  description="A new specification to measure and reduce the water footprint of software. Building on the SCI approach, SWE gives software teams a consistent, comparable way to understand their water impact."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SWE" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(sweProject?.lifecycle ? [{ text: sweProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Measure the Water Footprint of"
+    headingAccent="Your Software"
+    body="Software feels weightless, but it isn't. Every API call, video stream, and AI query runs on physical infrastructure — and that infrastructure has a water footprint. The Software Water Efficiency (SWE) specification will give software teams a consistent, comparable way to measure, report, and reduce that impact."
+    ctas={[
+      { text: "Get Involved", variant: "primary", href: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/" },
+      { text: "Learn About Our Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/swe/hero-illustration.png"
+    imageAlt="Data centre server rack with water flowing from it, visualising software's water footprint"
+    imageClass="max-w-lg"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- What is SWE? -->
+  <CTACard
+    heading="What is SWE?"
+    body="The Software Water Efficiency (SWE) specification is a new standard being developed by the Green Software Foundation to measure the water footprint of software systems. Modelled on the proven SCI approach — a rate relative to the useful work performed — SWE will give developers and organisations a clear, comparable number that captures how much water their software consumes. Reducing an SWE score will only be possible through actions that genuinely reduce water consumption."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
+    imageAlt="What is SWE illustration"
+  />
+
+  <!-- The Problem -->
+  <section class="py-8 md:py-10 bg-accent-lightest-2">
+    <div class="container">
+      <div class="mx-auto max-w-5xl text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Software's <span class="font-bold text-primary">Hidden Water Footprint</span>
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed md:text-xl">
+          Data centres contribute to water consumption in multiple ways: directly through evaporative cooling systems that wick heat off servers by turning water to vapour, indirectly through the electricity they draw — since power generation itself often consumes water — and through the semiconductor fabrication process used to manufacture compute hardware. As AI workloads grow and data centres expand, sometimes into regions already facing water scarcity, software's water footprint has become a material environmental impact. Yet the software industry has had no consistent, shared way to measure it — until now.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Water Matters -->
+  <TextWithImage
+    heading="Why Water"
+    headingAccent="Matters Now"
+    headingStyle="light"
+    body="Think back to where carbon was just a few years ago. When the Green Software Foundation began work on the Software Carbon Intensity (SCI) specification, software's carbon footprint was barely on the radar — poorly understood, inconsistently measured, and rarely discussed in engineering teams. Today SCI is ratified as ISO/IEC 21031:2024 and used across the industry to make carbon comparable, reportable, and improvable. For software, water is at a similar stage — material in impact, but fragmented in measurement. Regulations and disclosure requirements around water are tightening across many regions. As data centre operators begin publishing water data, the industry needs a standardised way to make sense of it. The teams that help shape SWE now will help decide what the standard looks like."
+    imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
+    imageAlt="Why water matters illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Three sources of water impact -->
+  <FeatureGrid
+    heading="Three Sources of *Water Impact*"
+    body="A software system's water footprint comes from three distinct sources, each requiring different measurement approaches."
+    columns={3}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/sci/shape-icon-1.svg",
+        title: "Direct Cooling",
+        description: "Many data centres use evaporative cooling systems that consume water directly — wicking heat off servers by turning water to vapour.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-2.svg",
+        title: "Electricity Generation",
+        description: "The electricity that powers data centres is itself often water-intensive to generate — from hydropower to thermal cooling at power stations.",
+      },
+      {
+        icon: "/assets/standards/sci/shape-icon-3.svg",
+        title: "Hardware Manufacture",
+        description: "Semiconductor fabrication — the process used to make compute hardware — can be highly water-intensive, representing an embodied water footprint.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Our Approach -->
+  <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
+          Our Approach
+        </h2>
+        <p class="text-lg md:text-xl">
+          SWE is being developed within the GSF Standards Working Group, building on the approach that made SCI successful. The specification will be modelled on the SCI family of standards — a high-level specification applying to all software, with domain-specific extensions to follow for areas like AI and hardware where water consumption behaves differently.
+        </p>
+
+        <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
+          <p class="text-2xl font-bold text-primary md:text-3xl">
+            Water consumption relative to useful work performed
+          </p>
+          <p class="mt-4 text-gray-darker md:text-lg">
+            Like SCI, SWE will adopt an interpretable, rate-based form — making water comparable across systems, regions, and workloads.
+          </p>
+        </div>
+
+        <p class="text-lg md:text-xl">
+          The substantive design decisions — such as how to account for electricity-related water and how to factor in regional water stress — are open questions for the working group to decide together. That's by design. The best standards are built collectively, with broad input, not settled in advance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission quote -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-medium text-primary-dark italic md:text-xl">
+            "Sustainable software means understanding its full environmental impact. You can't manage what you can't measure — the foundation proved that with carbon through SCI, we're now extending it to energy with SEE, and water is the natural next frontier. The opportunity is to build this standard openly and early, so the whole industry can act on it."
+          </p>
+          <p class="mt-6 font-semibold text-primary">— Green Software Foundation</p>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/sci/up.svg" class="h-12 w-16 md:h-14 md:w-24 rotate-180" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team (driven from projects.json once SWE is added) -->
+  {sweProject?.leads && sweProject.leads.length > 0 && (
+    <TeamGrid
+      heading="Project *Leadership*"
+      body={parentWg ? `Part of the ${parentWg.name}` : ""}
+      columns={sweProject.leads.length === 2 ? 2 : 3}
+      highlighted={[]}
+      members={sweProject.leads.map(lead => ({
+        fullName: lead.fullName,
+        role: lead.roleLabel,
+      }))}
+      bgClass="bg-white"
+    />
+  )}
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="Help Shape Software Water Efficiency"
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/sci/resource-discuss-icon.svg",
+        title: "Join the Standards Working Group",
+        description: "Collaborate with industry experts to shape the SWE specification (members only)",
+        ctaText: "Join the WG",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
+        featured: true,
+      },
+      {
+        icon: "/assets/standards/sci/resource-spec-icon.svg",
+        title: "Learn About Our Standards",
+        description: "Explore how the Green Software Foundation develops open, rigorous specifications",
+        ctaText: "View standards",
+        ctaHref: "/standards/",
+      },
+      {
+        icon: "/assets/standards/soft/join-gsf-icon.svg",
+        title: "Become a GSF Member",
+        description: "Join the foundation to participate in standards development",
+        ctaText: "Get in touch",
+        ctaHref: "/membership/",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the Software Water Efficiency standard."
+      articles={carouselArticles}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Shape the standards that define sustainable software"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable software worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>
