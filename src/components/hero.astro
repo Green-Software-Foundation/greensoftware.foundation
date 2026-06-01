@@ -28,6 +28,8 @@ interface Props {
   bgClass?: string;
   /** Section ID for anchor linking */
   id?: string;
+  /** Extra classes applied to the image element (e.g. to override max-width) */
+  imageClass?: string;
   /** Small label shown above the heading (e.g. working group name) */
   badge?: string;
   /** Multiple badges shown above the heading */
@@ -47,6 +49,7 @@ const {
   id = "overview",
   badge,
   badges = [],
+  imageClass,
 } = Astro.props;
 ---
 
@@ -105,7 +108,7 @@ const {
         <img
           src={imageSrc}
           alt={imageAlt}
-          class="shrink-0 object-cover w-full max-w-md"
+          class:list={["shrink-0 object-cover w-full", imageClass ?? "max-w-md"]}
           loading="eager"
           fetchpriority="high"
           decoding="async"
