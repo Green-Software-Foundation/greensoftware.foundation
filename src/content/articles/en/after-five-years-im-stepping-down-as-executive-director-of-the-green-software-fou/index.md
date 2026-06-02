@@ -46,7 +46,7 @@ I'm proud that the working groups never lost sight of that. And I'm proud of the
 
 ## What We Built
 
-From the SCI, we grew: [SCI for AI](https://sci-for-ai.greensoftware.foundation/), [SCI for Web](https://directory.greensoftware.foundation/projects/software-carbon-intensity-for-web-(sci-for-web)/), certification programs, tooling like [the Impact Framework](https://if.greensoftware.foundation/), and now [Carmen](https://directory.greensoftware.foundation/projects/carbon-measurement-engine-(carmen)/).
+From the SCI, we grew: [SCI for AI](https://sci-for-ai.greensoftware.foundation/), [SCI for Web](https://directory.greensoftware.foundation/projects/sci-web/), certification programs, tooling like [the Impact Framework](https://if.greensoftware.foundation/), and now [Carmen](https://directory.greensoftware.foundation/projects/carmen/).
 
 I remember our first hackathon. Everyone was nervous. We pulled it off, and it was a huge success. It showed us the impact we were having externally.
 
@@ -62,9 +62,9 @@ Our [global meetup program](https://www.meetup.com/pro/gsf/) now has over 12,000
 
 That's how I started in this space myself, meeting other people at meetups around London to talk about digital sustainability. I connected with like-minded people who cared about the same things, and that changed everything for me. I wanted to help other people find that same connection. It all starts by finding your people.
 
-The [merger with The Sustainable and Scalable Infrastructure Alliance (SSIA)](https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat) and the formation of the [Hardware Standards Working Group](https://directory.greensoftware.foundation/working-groups/hardware-standards-working-group/) broadened our horizons. Software is the driver, but you can't think about software's environmental impact without thinking about hardware. They're synergistic. The [Workload Dynamic Power and Cooling (WDPC)](https://wdpc.greensoftware.foundation/) project came out of that group immediately, action-oriented, problem-focused. Exactly what we're about.
+The [merger with The Sustainable and Scalable Infrastructure Alliance (SSIA)](https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat) and the formation of the [Hardware Standards Working Group](https://directory.greensoftware.foundation/working-groups/hardware-wg/) broadened our horizons. Software is the driver, but you can't think about software's environmental impact without thinking about hardware. They're synergistic. The [Workload Dynamic Power and Cooling (WDPC)](https://wdpc.greensoftware.foundation/) project came out of that group immediately, action-oriented, problem-focused. Exactly what we're about.
 
-The [Policy Working Group](https://directory.greensoftware.foundation/working-groups/policy-working-group/) has been quietly doing essential work, building a clear mandate and engaging with policymakers. Standards matter, but for standards to be adopted at scale, you need policy engagement. That's exactly what this group has been driving.
+The [Policy Working Group](https://directory.greensoftware.foundation/working-groups/policy-wg/) has been quietly doing essential work, building a clear mandate and engaging with policymakers. Standards matter, but for standards to be adopted at scale, you need policy engagement. That's exactly what this group has been driving.
 
 And recently, the explorations into AI-facilitated consensus building. I know that might raise alarm bells. But it's not AI making decisions. It's AI helping people listen to each other. Surfacing where the agreements and disagreements are. Bringing people on a journey faster. We piloted it with SCI for AI, used it properly with SCI for Web, and it's now rolling out across all our specs. That might be one of the most important things we've done.
 
