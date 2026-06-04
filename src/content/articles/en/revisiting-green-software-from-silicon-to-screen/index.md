@@ -4,7 +4,7 @@ teaserText: The Foundation expands its vision to cover the full environmental fo
 date: 2026-06-04
 published: true
 summary: The Green Software Foundation expands its vision to cover the full environmental footprint of modern software, across carbon, energy, water, and waste. Learn what this evolution means for the practitioners, organizations, and decision-makers shaping green software.
-mainImage: ../../revisiting-green-software-from-silicon-to-screen/GS-Vision-cover.png
+mainImage: GS-Vision-cover.png
 mainImageAlt: Isometric illustration showing two people building a layered technology stack, with a magnifying glass, cloud infrastructure, power lines, trees, and a server rack in the background, rendered in green tones. Green Software Foundation logo in the bottom left corner.
 featured: false
 tags:
@@ -56,7 +56,7 @@ There is another reason why we need to consider all of these dimensions: cost. E
 
 Taking green software seriously end-to-end requires looking at the stack as a single architecture, not as isolated concerns. There are six layers where decisions are made, each with its own levers, measurement challenges, and opportunities.
 
-![Isometric diagram showing the Green Software Foundation's technology stack in six layers from bottom to top: Hardware & Devices, Infrastructure & Cloud, Platforms & Runtimes, Foundations – Data, AI & ML, Applications & Experience, and Governance & Observability. Three pillars — Standards, Best Practices, and Patterns — run vertically through all layers. Green Software Foundation logo in the bottom right corner.](../../revisiting-green-software-from-silicon-to-screen/GS-Vision-stack2.png)
+![Isometric diagram showing the Green Software Foundation's technology stack in six layers from bottom to top: Hardware & Devices, Infrastructure & Cloud, Platforms & Runtimes, Foundations – Data, AI & ML, Applications & Experience, and Governance & Observability. Three pillars — Standards, Best Practices, and Patterns — run vertically through all layers. Green Software Foundation logo in the bottom right corner.](GS-Vision-stack2.png)
 
 ### 1. Hardware and devices
 
