@@ -4,7 +4,7 @@ teaserText: A note from the Executive Director
 date: 2026-06-09
 published: true
 summary: Navveen Balani (ED of GSF) shares why agentic AI has become the next big efficiency problem in software and what measuring its environmental impact across energy, carbon, and water, requires from every layer of the technology stack.
-mainImage: ../../tokens-and-greens-measuring-the-impacts-of-agentic-ai/Tokens-and-Greens-2.png
+mainImage: Tokens-and-Greens-2.png
 mainImageAlt: A developer sits cross-legged on a large open hand, working on a laptop. Three glowing circular icons float above, connected by circuit-like lines, representing energy (lightning bolt), carbon (hexagon), and water (droplet). A dark background with teal grid patterns frames the illustration. Green Software Foundation logo in the bottom left corner.
 featured: false
 tags:
