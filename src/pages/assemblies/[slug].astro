@@ -57,13 +57,11 @@ function formatDate(d: string | null): string {
 const meta: { label: string; value: string; href?: string }[] = [];
 if (assembly.deliverable) meta.push({ label: "Deliverable", value: assembly.deliverable });
 if (assembly.purpose) meta.push({ label: "Purpose", value: assembly.purpose });
-if (assembly.stage) meta.push({ label: "Stage", value: assembly.stage });
 if (assembly.facilitator) meta.push({ label: "Facilitator", value: assembly.facilitator });
 if (assembly.startDate) meta.push({ label: "Start Date", value: formatDate(assembly.startDate) });
-if (assembly.endDate) meta.push({ label: "End Date", value: formatDate(assembly.endDate) });
 if (assembly.applicationsOpen) meta.push({ label: "Applications Open", value: formatDate(assembly.applicationsOpen) });
 if (assembly.applicationDeadline) meta.push({ label: "Application Deadline", value: formatDate(assembly.applicationDeadline) });
-if (assembly.seats) meta.push({ label: "Seats", value: String(assembly.seats) });
+if (assembly.endDate) meta.push({ label: "End Date", value: formatDate(assembly.endDate) });
 if (assembly.averageAttendees) meta.push({ label: "Participants", value: String(assembly.averageAttendees) });
 
 // CTAs
