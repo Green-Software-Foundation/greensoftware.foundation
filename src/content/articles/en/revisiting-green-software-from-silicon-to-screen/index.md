@@ -24,7 +24,7 @@ The pace of change makes this unavoidable. Generative AI has put unprecedented p
 
 The Foundation exists to make that footprint measurable and to provide the industry with the standards and practices to reduce it.
 
-## A working definition
+## A Working Definition
 
 Reflecting this evolution, the Foundation's working definition of green software in 2026 is:
 
@@ -42,7 +42,7 @@ Three elements of that sentence are worth looking at. 
 
 In 2021, our earliest conversations in green software focused, rightly, on carbon. Carbon is the impact most directly tied to the climate crisis, and it is the metric regulators have built reporting frameworks around. The [Software Carbon Intensity specification](https://sci.greensoftware.foundation/), SCI, became the world's first ISO-aligned standard for measuring the carbon impact of software, and it remains the foundation for everything we have built since. 
 
-But carbon alone is no longer enough to capture the full environmental impact of modern software. 
+Carbon is no longer enough to capture the full environmental impact of modern software. 
 
 A workload that is optimized for carbon may still consume considerable water for cooling. A workload that is energy-efficient may still drive premature hardware turnover that creates significant embodied emissions. An AI inference pipeline may have a small per-request carbon cost but trigger water consumption upstream at the data center scale that no application-level metric captures. As these dimensions interact, each of them, on its own, represents an incomplete picture of a system's environmental impact.
 
@@ -58,29 +58,29 @@ Taking green software seriously end-to-end requires looking at the stack as a si
 
 ![Isometric diagram showing the Green Software Foundation's technology stack in six layers from bottom to top: Hardware & Devices, Infrastructure & Cloud, Platforms & Runtimes, Foundations – Data, AI & ML, Applications & Experience, and Governance & Observability. Three pillars — Standards, Best Practices, and Patterns — run vertically through all layers. Green Software Foundation logo in the bottom right corner.](GS-Vision-stack2.png)
 
-### 1. Hardware and devices
+### 1. Hardware and Devices
 
 The foundation. Servers, accelerators, network gear, storage, end-user devices. This is where embodied carbon lives, where water is consumed in manufacturing, and where the hardware waste that accumulates across the lifecycle is created. Decisions made here are about hardware lifecycle, sustainable manufacturing, how often hardware is upgraded, and end-of-life recovery. The Foundation's [Hardware Standards Working Group](https://directory.greensoftware.foundation/working-groups/hardware-standards-working-group/) and the work going into hardware-aware standards is the space for this conversation.
 
-### 2. Infrastructure and cloud
+### 2. Infrastructure and Cloud
 
 Where workloads physically run. Data center design, regional carbon and water intensity, cooling efficiency, and power sourcing. For developers, this is the layer of choices around region selection, instance sizing, and capacity planning. For executives, this is procurement, vendor selection, and increasingly disclosure. The Software Water Efficiency (SWE) standard, now underway at the Foundation, sits at this layer alongside the established carbon standards. 
 
-### 3. Platforms and runtimes
+### 3. Platforms and Runtimes
 
 Operating systems, container runtimes, virtualization, orchestration, and language runtimes. Often overlooked, this layer determines how efficiently the hardware below gets used. Idle waste, over-provisioning, inefficient scheduling, and runtime choice all add up to a significant environmental impact at scale.
 
-### 4. Foundations, data, AI, and ML
+### 4. Foundations, Data, AI, and ML
 
 The data platforms, training pipelines, inference systems, and AI infrastructure that increasingly define modern applications. This layer has shifted from peripheral to central in the last two years. [SCI for AI, ratified at the end of 2025](https://greensoftware.foundation/articles/sci-ai-specification-ratified-standard-for-measuring-ai-emissions-across-the/), gives the industry the first consensus-based standard for measuring the carbon footprint of AI systems, built on the ISO-certified SCI methodology. The work here is only beginning, and it is one of the fastest-moving areas for the next decade of green software.
 
 > _"To understand AI's carbon footprint, we first need a consistent way to measure it. SCI for AI gives the industry that foundation — built on the ISO-certified SCI methodology, designed for the full lifecycle of AI systems from training to inference, and open for any organization to adopt."_—Jonathan Turnbull, Vice Chair, Green Software Foundation, Environment & AI lead, Google
 
-### 5. Applications and experience
+### 5. Applications and Experience
 
 Where software meets the user. Application architecture, frontend efficiency, mobile and edge delivery, network traffic, and the design patterns that govern how features are built and how they perform. The [Green Software Patterns](https://directory.greensoftware.foundation/projects/green-software-patterns/) project, alongside initiatives like the [Web Sustainability Guidelines (WSG)](https://www.w3.org/TR/web-sustainability-guidelines/) from W3C, supports decisions developers make daily in this layer. 
 
-### **6. Governance and observability**
+### **6. Governance and Observability**
 
 The connective tissue. Measurement, telemetry, reporting, disclosure, and procurement standards. SCI as a measurement framework, SCI for AI as its AI-specific counterpart, and the disclosure standards that connect engineering practice to corporate sustainability reporting and regulatory frameworks like the [Corporate Sustainability Reporting Directive (CSRD)](https://greensoftware.foundation/articles/the-sci-standard-providing-the-software-emissions-data-csrd-needs/), the [EU AI Act](https://greensoftware.foundation/policy/research/sci-ai-eu-ai-act/), and emerging legislation in California and beyond. Without this layer, the other five are unverified claims.
 
@@ -106,7 +106,7 @@ The disclosure environment is moving fast. CSRD in Europe is now in force for la
 
 Working with global organizations, we see expectations shifting, too. Practitioners want to work on systems that account for their impact. Customers, particularly enterprise customers and governments, increasingly ask for evidence of this impact. The engineering capability to build green software at scale is becoming a differentiator, not a cost.
 
-## Where the Foundation is heading
+## Where the Foundation is Heading
 
 The Foundation's role is to be the venue where the standards, the patterns, and the practitioner skills behind this vision get defined, ratified, and put into practice, in the open, under Linux Foundation governance, with the global community of members and contributors that has shaped where we are today. Governments, regulators, and standards bodies, such as the [Department for Environment, Food and Rural Affairs (Defra)](https://greensoftware.foundation/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/) and [GovTech Singapore](https://greensoftware.foundation/articles/creating-a-digital-sustainability-ecosystem-meet-henry-chang-of-govtech-singapore/), increasingly engage with the Foundation to ground their own frameworks—disclosure regimes, procurement standards, sustainability clauses—in open, ISO-aligned standards and practices.
 
@@ -134,7 +134,7 @@ Visit[ greensoftware.foundation](https://greensoftware.foundation) to learn more
 
 ***
 
-## A note from the Executive Director
+## A Note from the Executive Director
 
 Green software, from silicon to screen, is where the industry is heading. The standards, the patterns, and the practitioner community to support that shift are being built in the open at the Foundation, and the door is open for any organization serious about this work to participate in shaping it.
 
