@@ -57,13 +57,11 @@ function formatDate(d: string | null): string {
 const meta: { label: string; value: string; href?: string }[] = [];
 if (assembly.deliverable) meta.push({ label: "Deliverable", value: assembly.deliverable });
 if (assembly.purpose) meta.push({ label: "Purpose", value: assembly.purpose });
-if (assembly.stage) meta.push({ label: "Stage", value: assembly.stage });
 if (assembly.facilitator) meta.push({ label: "Facilitator", value: assembly.facilitator });
 if (assembly.startDate) meta.push({ label: "Start Date", value: formatDate(assembly.startDate) });
-if (assembly.endDate) meta.push({ label: "End Date", value: formatDate(assembly.endDate) });
 if (assembly.applicationsOpen) meta.push({ label: "Applications Open", value: formatDate(assembly.applicationsOpen) });
 if (assembly.applicationDeadline) meta.push({ label: "Application Deadline", value: formatDate(assembly.applicationDeadline) });
-if (assembly.seats) meta.push({ label: "Seats", value: String(assembly.seats) });
+if (assembly.endDate) meta.push({ label: "End Date", value: formatDate(assembly.endDate) });
 if (assembly.averageAttendees) meta.push({ label: "Participants", value: String(assembly.averageAttendees) });
 
 // CTAs
@@ -200,7 +198,7 @@ const vis = visibilityStyle(assembly.visibility);
       <section class="bg-white py-6 md:py-8">
         <div class="container">
           <div class="mx-auto max-w-3xl">
-            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {meta.map((item) => (
                 <div class="rounded-lg border px-3 py-2.5">
                   <dt class="text-[10px] font-medium uppercase tracking-wider text-gray-darker">{item.label}</dt>
@@ -295,9 +293,8 @@ const vis = visibilityStyle(assembly.visibility);
                           <input type="text" id="your-name" name="your-name" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
                         </div>
                         <div>
-                          <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Work email <span class="text-red-500">*</span></label>
+                          <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Email address <span class="text-red-500">*</span></label>
                           <input type="email" id="work-email" name="work-email" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                          <p class="mt-1 text-xs text-gray-darker">We'll use this to contact you about your application.</p>
                         </div>
                       </div>
 
@@ -312,53 +309,6 @@ const vis = visibilityStyle(assembly.visibility);
                         </div>
                       </div>
 
-                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div>
-                          <label for="linkedin-url" class="mb-1 block text-sm font-semibold text-primary-dark">LinkedIn profile URL</label>
-                          <input type="url" id="linkedin-url" name="linkedin-url" placeholder="https://linkedin.com/in/..." class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                        </div>
-                        <div>
-                          <label for="github-username" class="mb-1 block text-sm font-semibold text-primary-dark">GitHub username</label>
-                          <input type="text" id="github-username" name="github-username" placeholder="e.g. octocat" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                          <p class="mt-1 text-xs text-gray-darker">Assemblies often work through GitHub, so we need this to collaborate.</p>
-                        </div>
-                      </div>
-
-                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        <div>
-                          <label for="sector-industry" class="mb-1 block text-sm font-semibold text-primary-dark">Sector / Industry</label>
-                          <select id="sector-industry" name="sector-industry" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-                            <option value="">Select…</option>
-                            <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
-                            <option value="AI & Machine Learning">AI & Machine Learning</option>
-                            <option value="Financial Services">Financial Services</option>
-                            <option value="Energy & Utilities">Energy & Utilities</option>
-                            <option value="Government & Public Sector">Government & Public Sector</option>
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Manufacturing">Manufacturing</option>
-                            <option value="Telecommunications">Telecommunications</option>
-                            <option value="Consulting">Consulting</option>
-                            <option value="Academia & Research">Academia & Research</option>
-                            <option value="Non-profit / NGO">Non-profit / NGO</option>
-                            <option value="Other">Other</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label for="timezone" class="mb-1 block text-sm font-semibold text-primary-dark">Timezone</label>
-                          <input type="text" id="timezone" name="timezone" placeholder="e.g. GMT+1, EST" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                        </div>
-                        <div>
-                          <label for="years-of-experience" class="mb-1 block text-sm font-semibold text-primary-dark">Years of experience</label>
-                          <select id="years-of-experience" name="years-of-experience" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-                            <option value="">Select…</option>
-                            <option value="0-2">0–2 years</option>
-                            <option value="3-5">3–5 years</option>
-                            <option value="5-10">5–10 years</option>
-                            <option value="10-15">10–15 years</option>
-                            <option value="15+">15+ years</option>
-                          </select>
-                        </div>
-                      </div>
                     </div>
                   </fieldset>
 
@@ -377,11 +327,6 @@ const vis = visibilityStyle(assembly.visibility);
                       </div>
 
                       <div>
-                        <label for="previous-gsf-involvement" class="mb-1 block text-sm font-semibold text-primary-dark">Previous GSF involvement</label>
-                        <textarea id="previous-gsf-involvement" name="previous-gsf-involvement" rows={2} placeholder="Have you participated in any GSF working groups, projects, or events before?" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
-                      </div>
-
-                      <div>
                         <label for="how-did-you-hear" class="mb-1 block text-sm font-semibold text-primary-dark">How did you hear about this assembly?</label>
                         <input type="text" id="how-did-you-hear" name="how-did-you-hear" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
                       </div>
@@ -392,13 +337,6 @@ const vis = visibilityStyle(assembly.visibility);
                   <fieldset>
                     <legend class="mb-4 text-sm font-bold uppercase tracking-wider text-primary">Confirmations</legend>
                     <div class="space-y-3">
-                      <label class="flex items-start gap-3">
-                        <input type="checkbox" name="confirmation" value="true" required class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
-                        <span class="text-sm text-primary-dark">
-                          I am able to represent my organisation in the assembly and I am able to commit to attending the majority of assembly sessions. I confirm the above is true. <span class="text-red-500">*</span>
-                        </span>
-                      </label>
-
                       <label class="flex items-start gap-3">
                         <input type="checkbox" name="stay-informed" value="true" class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
                         <span class="text-sm text-primary-dark">
