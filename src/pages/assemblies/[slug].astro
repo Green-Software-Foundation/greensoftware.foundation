@@ -295,9 +295,8 @@ const vis = visibilityStyle(assembly.visibility);
                           <input type="text" id="your-name" name="your-name" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
                         </div>
                         <div>
-                          <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Work email <span class="text-red-500">*</span></label>
+                          <label for="work-email" class="mb-1 block text-sm font-semibold text-primary-dark">Email address <span class="text-red-500">*</span></label>
                           <input type="email" id="work-email" name="work-email" required class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                          <p class="mt-1 text-xs text-gray-darker">We'll use this to contact you about your application.</p>
                         </div>
                       </div>
 
@@ -320,45 +319,10 @@ const vis = visibilityStyle(assembly.visibility);
                         <div>
                           <label for="github-username" class="mb-1 block text-sm font-semibold text-primary-dark">GitHub username</label>
                           <input type="text" id="github-username" name="github-username" placeholder="e.g. octocat" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                          <p class="mt-1 text-xs text-gray-darker">Assemblies often work through GitHub, so we need this to collaborate.</p>
+                          <p class="mt-1 text-xs text-gray-darker">Assemblies often work through GitHub, so this helps us collaborate.</p>
                         </div>
                       </div>
 
-                      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        <div>
-                          <label for="sector-industry" class="mb-1 block text-sm font-semibold text-primary-dark">Sector / Industry</label>
-                          <select id="sector-industry" name="sector-industry" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-                            <option value="">Select…</option>
-                            <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
-                            <option value="AI & Machine Learning">AI & Machine Learning</option>
-                            <option value="Financial Services">Financial Services</option>
-                            <option value="Energy & Utilities">Energy & Utilities</option>
-                            <option value="Government & Public Sector">Government & Public Sector</option>
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Manufacturing">Manufacturing</option>
-                            <option value="Telecommunications">Telecommunications</option>
-                            <option value="Consulting">Consulting</option>
-                            <option value="Academia & Research">Academia & Research</option>
-                            <option value="Non-profit / NGO">Non-profit / NGO</option>
-                            <option value="Other">Other</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label for="timezone" class="mb-1 block text-sm font-semibold text-primary-dark">Timezone</label>
-                          <input type="text" id="timezone" name="timezone" placeholder="e.g. GMT+1, EST" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-                        </div>
-                        <div>
-                          <label for="years-of-experience" class="mb-1 block text-sm font-semibold text-primary-dark">Years of experience</label>
-                          <select id="years-of-experience" name="years-of-experience" class="w-full rounded-lg border border-gray px-4 py-2.5 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-                            <option value="">Select…</option>
-                            <option value="0-2">0–2 years</option>
-                            <option value="3-5">3–5 years</option>
-                            <option value="5-10">5–10 years</option>
-                            <option value="10-15">10–15 years</option>
-                            <option value="15+">15+ years</option>
-                          </select>
-                        </div>
-                      </div>
                     </div>
                   </fieldset>
 
@@ -392,13 +356,6 @@ const vis = visibilityStyle(assembly.visibility);
                   <fieldset>
                     <legend class="mb-4 text-sm font-bold uppercase tracking-wider text-primary">Confirmations</legend>
                     <div class="space-y-3">
-                      <label class="flex items-start gap-3">
-                        <input type="checkbox" name="confirmation" value="true" required class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
-                        <span class="text-sm text-primary-dark">
-                          I am able to represent my organisation in the assembly and I am able to commit to attending the majority of assembly sessions. I confirm the above is true. <span class="text-red-500">*</span>
-                        </span>
-                      </label>
-
                       <label class="flex items-start gap-3">
                         <input type="checkbox" name="stay-informed" value="true" class="mt-1 h-4 w-4 rounded border-gray text-primary focus:ring-primary" />
                         <span class="text-sm text-primary-dark">
