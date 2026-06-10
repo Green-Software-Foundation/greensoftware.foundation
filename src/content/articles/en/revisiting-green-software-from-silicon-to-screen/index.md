@@ -64,7 +64,7 @@ The foundation. Servers, accelerators, network gear, storage, end-user devices. 
 
 ### 2. Infrastructure and Cloud
 
-Where workloads physically run. Data center design, regional carbon and water intensity, cooling efficiency, and power sourcing. For developers, this is the layer of choices around region selection, instance sizing, and capacity planning. For executives, this is procurement, vendor selection, and increasingly disclosure. The Software Water Efficiency (SWE) standard, now underway at the Foundation, sits at this layer alongside the established carbon standards. 
+Where workloads physically run. Data center design, regional carbon and water intensity, cooling efficiency, and power sourcing. For developers, this is the layer of choices around region selection, instance sizing, and capacity planning. For executives, this is procurement, vendor selection, and increasingly disclosure. The Software Water Intensity (SWI) standard, now underway at the Foundation, sits at this layer alongside the established carbon standards. 
 
 ### 3. Platforms and Runtimes
 
