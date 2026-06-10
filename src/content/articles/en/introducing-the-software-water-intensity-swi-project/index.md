@@ -4,7 +4,7 @@ teaserText: Led by the Software Standards Working Group, the Software Water Inte
 date: 2026-06-10
 published: true
 summary: Led by the Software Standards Working Group, the Software Water Intensity (SWI) project aims to develop a consistent way to measure and reduce software's water footprint.
-mainImage: ../../introducing-the-software-water-intensity-swi-project/SWE-Announcement-cover.png
+mainImage: SWE-Announcement-cover.png
 mainImageAlt: Isometric illustration showing a data center stack at the centre, with water flowing from its base into a dark blue pool below. Small figures interact with the infrastructure — one examining a document, another observing the environment. Trees and natural elements surround the scene, rendered in green tones. Green Software Foundation logo in the bottom left corner.
 featured: false
 tags:
