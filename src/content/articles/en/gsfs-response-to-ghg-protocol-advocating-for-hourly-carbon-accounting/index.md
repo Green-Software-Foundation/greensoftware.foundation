@@ -58,7 +58,7 @@ Several GSF projects directly support the shift to hourly carbon accounting:
 
 - [The Software Carbon Intensity (SCI) specification](https://sci.greensoftware.foundation/) is designed to work with changes in grid carbon intensity across time and locations, allowing practitioners to use hourly carbon intensity factors when calculating software emissions.
 - [The Carbon Aware SDK](https://carbon-aware-sdk.greensoftware.foundation/) enables applications to consume real-time carbon data and shift operations accordingly.
-- [The Real Time Energy & Carbon Standard](https://directory.greensoftware.foundation/projects/real-time-energy-and-carbon-standard-for-cloud-providers-(rtc)/) provides requirements for cloud providers to publish minute-by-minute metrics, creating the data infrastructure that carbon-aware operations depend on.
+- [The Real Time Energy & Carbon Standard](https://directory.greensoftware.foundation/projects/real-time-cloud/) provides requirements for cloud providers to publish minute-by-minute metrics, creating the data infrastructure that carbon-aware operations depend on.
 
 Practitioners and companies are already using these tools. Hourly granularity as a Scope 2 quality standard would ensure that the reductions they achieve are accurately reflected in carbon reporting.
 
@@ -85,7 +85,7 @@ We’ll continue engaging with the GHG Protocol in the second consultation and c
 
 ### If you’re a GSF member
 
-[Join the Policy Working Group](https://directory.greensoftware.foundation/working-groups/policy-working-group/): Contribute technical expertise to standards affecting software measurement.
+[Join the Policy Working Group](https://directory.greensoftware.foundation/working-groups/policy-wg/): Contribute technical expertise to standards affecting software measurement.
 
 ### Not a member yet
 
