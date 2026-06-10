@@ -34,8 +34,8 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 ---
 
 <Layout
-  title="SWE — Software Water Efficiency | Green Software Foundation"
-  description="A new specification to measure and reduce the water footprint of software. Building on the SCI approach, SWE gives software teams a consistent, comparable way to understand their water impact."
+  title="SWI — Software Water Intensity | Green Software Foundation"
+  description="A new specification to measure and reduce the water footprint of software. Building on the SCI approach, SWI gives software teams a consistent, comparable way to understand their water impact."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -49,7 +49,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <Breadcrumb items={[
     { label: "Home", href: "/" },
     { label: "Standards", href: "/standards/" },
-    { label: "SWE" },
+    { label: "SWI" },
   ]} />
 
   <!-- Hero -->
@@ -60,7 +60,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     ]}
     heading="Measure the Water Footprint of"
     headingAccent="Your Software"
-    body="Software feels weightless, but it isn't. Every API call, video stream, and AI query runs on physical infrastructure — and that infrastructure has a water footprint. The Software Water Efficiency (SWE) specification will give software teams a consistent, comparable way to measure, report, and reduce that impact."
+    body="Software feels weightless, but it isn't. Every API call, video stream, and AI query runs on physical infrastructure — and that infrastructure has a water footprint. The Software Water Intensity (SWI) specification will give software teams a consistent, comparable way to measure, report, and reduce that impact."
     ctas={[
       { text: "Get Involved", variant: "primary", href: "https://greensoftware.foundation/membership/enquire/" },
       { text: "Learn About Our Standards", variant: "outline", href: "/standards/" },
@@ -72,12 +72,12 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     id="overview"
   />
 
-  <!-- What is SWE? -->
+  <!-- What is SWI? -->
   <CTACard
-    heading="What is SWE?"
-    body="The Software Water Efficiency (SWE) specification is a new standard being developed by the Green Software Foundation to measure the water footprint of software systems. Modelled on the proven SCI approach — a rate relative to the useful work performed — SWE will give developers and organisations a clear, comparable number that captures how much water their software consumes. Reducing an SWE score will only be possible through actions that genuinely reduce water consumption."
+    heading="What is SWI?"
+    body="The Software Water Intensity (SWI) specification is a new standard being developed by the Green Software Foundation to measure the water footprint of software systems. Modelled on the proven SCI approach — a rate relative to the useful work performed — SWI will give developers and organisations a clear, comparable number that captures how much water their software consumes. Reducing an SWI score will only be possible through actions that genuinely reduce water consumption."
     imageSrc="/assets/standards/sci/why-wdpc-feat-1.svg"
-    imageAlt="What is SWE illustration"
+    imageAlt="What is SWI illustration"
   />
 
   <!-- The Problem -->
@@ -99,7 +99,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     heading="Why Water"
     headingAccent="Matters Now"
     headingStyle="light"
-    body="Think back to where carbon was just a few years ago. When the Green Software Foundation began work on the Software Carbon Intensity (SCI) specification, software's carbon footprint was barely on the radar — poorly understood, inconsistently measured, and rarely discussed in engineering teams. Today SCI is ratified as ISO/IEC 21031:2024 and used across the industry to make carbon comparable, reportable, and improvable. For software, water is at a similar stage — material in impact, but fragmented in measurement. Regulations and disclosure requirements around water are tightening across many regions. As data centre operators begin publishing water data, the industry needs a standardised way to make sense of it. The teams that help shape SWE now will help decide what the standard looks like."
+    body="Think back to where carbon was just a few years ago. When the Green Software Foundation began work on the Software Carbon Intensity (SCI) specification, software's carbon footprint was barely on the radar — poorly understood, inconsistently measured, and rarely discussed in engineering teams. Today SCI is ratified as ISO/IEC 21031:2024 and used across the industry to make carbon comparable, reportable, and improvable. For software, water is at a similar stage — material in impact, but fragmented in measurement. Regulations and disclosure requirements around water are tightening across many regions. As data centre operators begin publishing water data, the industry needs a standardised way to make sense of it. The teams that help shape SWI now will help decide what the standard looks like."
     imageSrc="/assets/standards/sci/why-wdpc-feat-2.svg"
     imageAlt="Why water matters illustration"
     bgClass="bg-accent-lightest-2"
@@ -139,7 +139,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
           Our Approach
         </h2>
         <p class="text-lg md:text-xl">
-          SWE is being developed within the GSF Standards Working Group, building on the approach that made SCI successful. The specification will be modelled on the SCI family of standards — a high-level specification applying to all software, with domain-specific extensions to follow for areas like AI and hardware where water consumption behaves differently.
+          SWI is being developed within the GSF Standards Working Group, building on the approach that made SCI successful. The specification will be modelled on the SCI family of standards — a high-level specification applying to all software, with domain-specific extensions to follow for areas like AI and hardware where water consumption behaves differently.
         </p>
 
         <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
@@ -147,7 +147,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
             Water consumption relative to useful work performed
           </p>
           <p class="mt-4 text-gray-darker md:text-lg">
-            Like SCI, SWE will adopt an interpretable, rate-based form — making water comparable across systems, regions, and workloads.
+            Like SCI, SWI will adopt an interpretable, rate-based form — making water comparable across systems, regions, and workloads.
           </p>
         </div>
 
@@ -178,7 +178,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     </div>
   </section>
 
-  <!-- Team (driven from projects.json once SWE is added) -->
+  <!-- Team (driven from projects.json once SWI is added) -->
   {sweProject?.leads && sweProject.leads.length > 0 && (
     <TeamGrid
       heading="Project *Leadership*"
@@ -196,13 +196,13 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
-    body="Help Shape Software Water Efficiency"
+    body="Help Shape Software Water Intensity"
     columns={3}
     cards={[
       {
         icon: "/assets/standards/sci/resource-discuss-icon.svg",
         title: "Join the Standards Working Group",
-        description: "Collaborate with industry experts to shape the SWE specification (members only)",
+        description: "Collaborate with industry experts to shape the SWI specification (members only)",
         ctaText: "Join the WG",
         ctaHref: "https://directory.greensoftware.foundation/working-groups/software-standards-working-group/",
         featured: true,
@@ -228,7 +228,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
-      body="News, insights, and updates about the Software Water Efficiency standard."
+      body="News, insights, and updates about the Software Water Intensity standard."
       articles={carouselArticles}
       ctaText="View all articles →"
       ctaHref="/articles/"

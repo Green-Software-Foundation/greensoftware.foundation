@@ -63,9 +63,9 @@ export const navItems = [
           },
           {
             href: "/standards/swe/",
-            label: "SWE",
+            label: "SWI",
             description:
-              "Software Water Efficiency" /* iconSrc: pi("swe"), icon: "droplets" */,
+              "Software Water Intensity" /* iconSrc: pi("swi"), icon: "droplets" */,
           },
         ],
       },
