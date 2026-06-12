@@ -118,6 +118,7 @@ Where our work is heading:
 - Green Software Patterns across every layer of the stack, so the practitioner community has concrete, vendor-neutral guidance to draw on.
 - Industry Points of View co-authored with members, translating the standards into sector-specific practice.
 - Deeper integration with other Linux Foundation projects, including Cloud Native Computing Foundation (CNCF), the FinOps Foundation, and LF Energy, so the cross-cutting concerns of green software meet the communities that share them.
+- Open source software, [Reference Implementations](https://greensoftware.foundation/articles/introducing-gsf-reference-implementations/), tooling, and agent-ready Green Software Skills that turn the standards and patterns into working code, so practitioners and agents can measure, reduce, and contribute directly across the stack.
 - Continued policy engagement with governments and standards bodies, making sure the standards developed here connect cleanly to the disclosure and procurement frameworks emerging worldwide.
 
 This is a vision shaped by an evolving ecosystem—open, collaborative, and one that can only be realized through the participation of technology leaders and practitioners working together.
