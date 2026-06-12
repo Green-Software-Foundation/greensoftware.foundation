@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient);
+      }
+
+      .st4 {
+        stroke-width: 2px;
+      }
+
+      .st4, .st5 {
+        fill: none;
+        stroke: #003834;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .st5 {
+        stroke-width: 3px;
+      }
+
+      .st6 {
+        fill: #003834;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="35.9" y1="467.2" x2="35.9" y2="456.1" gradientTransform="translate(74.9 473.5) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".1" stop-color="#409187"/>
+      <stop offset=".4" stop-color="#64a58b"/>
+      <stop offset=".7" stop-color="#9ec592"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="64" x2="64" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="25" y1="43.8" x2="25" y2="29" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006d68"/>
+      <stop offset="1" stop-color="#003834"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient3" x1="4.3" y1="46.9" x2="45.7" y2="46.9" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+  </defs>
+  <line class="st4" x1="9.9" y1="18.5" x2="40.1" y2="18.5"/>
+  <path class="st3" d="M39.1,17.3c5.6,0,10.2-5,10.2-11.1h-20.5c0,6.1,4.6,11.1,10.2,11.1Z"/>
+  <path class="st1" d="M10.9,17.3c5.6,0,10.2-5,10.2-11.1H.7c0,6.1,4.6,11.1,10.2,11.1Z"/>
+  <line class="st5" x1="25" y1="18.4" x2="25" y2="41.7"/>
+  <path class="st0" d="M28.7,34.6v-1.9c0-2-1.6-3.7-3.7-3.7h0c-2,0-3.7,1.6-3.7,3.7v1.9c0,1.8-1.5,3.3-3.3,3.3h-4.5c-1.8,0-3.3,1.5-3.3,3.3v2.7h29.4v-2.7c0-1.8-1.5-3.3-3.3-3.3h-4.5c-1.8,0-3.3-1.5-3.3-3.3Z"/>
+  <rect class="st2" x="4.3" y="43.8" width="41.4" height="6.2" rx="3" ry="3"/>
+  <circle class="st6" cx="25" cy="18.9" r="3.2"/>
+</svg>
