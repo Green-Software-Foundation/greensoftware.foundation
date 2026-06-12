@@ -15,7 +15,7 @@ I first started thinking about technology's environmental impact during the lock
 
 ## What’s the underlying philosophy?
 
-We need to find a new stability and status quo in our use of resources - stewarding the limited resources we have to support environmental sustainability - making technology circular, deciding when it's best **not** to create something new, or focussing on renewal and repair. It's about creating a new norm where we carefully consider our resource consumption, energy efficiency, and carbon emissions without compromising technological advancements. Establishing this new balance meshes with my passion for driving societal change.
+We need to find a new stability and status quo in our use of resources - stewarding the limited resources we have to support environmental sustainability - making technology circular, deciding when it's best **not** to create something new, or focusing on renewal and repair. It's about creating a new norm where we carefully consider our resource consumption, energy efficiency, and carbon emissions without compromising technological advancements. Establishing this new balance meshes with my passion for driving societal change.
 
 ## Which recent developments were catalytic in advancing a green transition in software?
 

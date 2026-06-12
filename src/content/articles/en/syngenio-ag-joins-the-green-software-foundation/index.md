@@ -22,7 +22,7 @@ authors:
         link: "https://diyunuwablog.com/"
 ---
 
-New Green Software Foundation member [Syngenio AG](http://www.syngenio.de) is an IT consulting and software development house based in Germany with subsidiaries in seven cities. Since 2001, Syngenio has focused on bringing IT and business departments together, specialising in digital payments, next generation banking, the Internet of Things (IoT) and green software. Syngenio continuously improves its climate impact since 2019 and is climate neutral since 2021.
+New Green Software Foundation member [Syngenio AG](http://www.syngenio.de) is an IT consulting and software development house based in Germany with subsidiaries in seven cities. Since 2001, Syngenio has focused on bringing IT and business departments together, specializing in digital payments, next generation banking, the Internet of Things (IoT) and green software. Syngenio continuously improves its climate impact since 2019 and is climate neutral since 2021.
 
 In this interview with Jürgen Funke, a technology enthusiast and Board member at Syngenio, we discuss Syngenio’s plans with the Green Software Foundation and why green software is a key consideration for the company and its people. 
 

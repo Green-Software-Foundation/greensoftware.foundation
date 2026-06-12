@@ -5,7 +5,7 @@ date: 2026-06-10
 published: true
 summary: Led by the Software Standards Working Group, the Software Water Intensity (SWI) project aims to develop a consistent way to measure and reduce software's water footprint.
 mainImage: SWE-Announcement-cover.png
-mainImageAlt: Isometric illustration showing a data center stack at the centre, with water flowing from its base into a dark blue pool below. Small figures interact with the infrastructure — one examining a document, another observing the environment. Trees and natural elements surround the scene, rendered in green tones. Green Software Foundation logo in the bottom left corner.
+mainImageAlt: Isometric illustration showing a data center stack at the center, with water flowing from its base into a dark blue pool below. Small figures interact with the infrastructure — one examining a document, another observing the environment. Trees and natural elements surround the scene, rendered in green tones. Green Software Foundation logo in the bottom left corner.
 featured: false
 tags:
   - standards
@@ -22,7 +22,7 @@ Software's environmental impact has long been understood through a single lens: 
 
 Measuring water impacts requires accounting for both direct and indirect sources. Data centers [contribute to water consumption in three main ways](https://www.eesi.org/articles/view/data-centers-and-water-consumption): cooling, electricity generation, and semiconductor manufacturing. Many facilities use evaporative cooling systems that remove heat from servers through water evaporation, and beyond the facility, power generation itself is water-intensive. Earlier in the supply chain, the production process of semiconductors used for compute hardware also requires water. 
 
-As a result, large data centers can have a substantial water footprint, in some cases reaching [millions of litres per day](https://arxiv.org/abs/2506.22773), depending on cooling design, location, and workload mix.
+As a result, large data centers can have a substantial water footprint, in some cases reaching [millions of liters per day](https://arxiv.org/abs/2506.22773), depending on cooling design, location, and workload mix.
 
 Yet the industry has no shared, reliable way to measure software's contribution to water consumption.
 

@@ -104,7 +104,7 @@ One approach you can use is recipe cards or small activities that you can promot
 
 This is the start of your journey by pulling together a like minded team. Whether that's informally as a Community of Practice, a formal Center of Excellence, or some other vehicle which works for your organization, you now have a direction and the start of a plan.
 
-In future articles, I'll be focussing on more detailed activities and approaches that your teams can adopt, including observability, instrumentation, devops practices as well as incentives for change and the use of nudge theory. The team you pull together will be key to adopting these techniques. 
+In future articles, I'll be focusing on more detailed activities and approaches that your teams can adopt, including observability, instrumentation, devops practices as well as incentives for change and the use of nudge theory. The team you pull together will be key to adopting these techniques. 
 
  As your community comes together, please remember that we, at the Green Software Foundation, need your help. Your community will be well placed to support our open-source projects including: 
 
