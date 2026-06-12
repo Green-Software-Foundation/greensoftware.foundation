@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="28" y1="23.5" x2="21.6" y2="1.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".1" stop-color="#3c8f87"/>
+      <stop offset=".3" stop-color="#579e8a"/>
+      <stop offset=".6" stop-color="#82b58f"/>
+      <stop offset=".9" stop-color="#bdd696"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="23.8" y1="24.5" x2="25.4" y2="12.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003834"/>
+      <stop offset="1" stop-color="#006d68"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="5.3" y1="39.3" x2="22.4" y2="22.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset="0" stop-color="#409187"/>
+      <stop offset=".2" stop-color="#6ba98c"/>
+      <stop offset=".4" stop-color="#8fbd90"/>
+      <stop offset=".5" stop-color="#aacc93"/>
+      <stop offset=".7" stop-color="#bed796"/>
+      <stop offset=".8" stop-color="#cadd97"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient3" x1="19.2" y1="37" x2="19.2" y2="18.2" xlink:href="#linear-gradient1"/>
+    <linearGradient id="linear-gradient4" x1="-1073.5" y1="45.5" x2="-1103.1" y2="16" gradientTransform="translate(-1052.8262) scale(-1 1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".4" stop-color="#76af8d"/>
+      <stop offset=".8" stop-color="#b5d295"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient5" x1="-1085.7" y1="32.3" x2="-1080.1" y2="22.9" gradientTransform="translate(-1052.8262) scale(-1 1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006d68"/>
+      <stop offset="1" stop-color="#003834"/>
+    </linearGradient>
+  </defs>
+  <polygon class="st5" points="24.6 24.5 3 12 24.6 .5 46.3 12 24.6 24.5"/>
+  <polygon class="st1" points="24.6 24.6 13.8 18.4 24.6 12.6 35.5 18.4 24.6 24.6"/>
+  <polygon class="st0" points="24.6 24.5 3 12 3 37 24.6 49.5 24.6 24.5"/>
+  <polygon class="st2" points="24.6 24.5 13.8 18.2 13.8 30.7 24.6 37 24.6 24.5"/>
+  <polygon class="st4" points="24.6 24.5 46.3 12 46.3 37 24.6 49.5 24.6 24.5"/>
+  <polygon class="st3" points="24.6 24.5 35.5 18.2 35.5 30.7 24.6 37 24.6 24.5"/>
+</svg>
