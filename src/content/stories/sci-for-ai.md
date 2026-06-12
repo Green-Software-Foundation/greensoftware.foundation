@@ -217,10 +217,10 @@ cta:
   ctaHref: "/standards/sci-ai/"
 ---
 
-AI workloads were exploding across the software industry, but nobody had a standardized way to measure their carbon footprint. Training GPT-3 alone produced approximately 500 tonnes of CO₂ emissions — equivalent to a petrol car driving roughly 2 million kilometres — and close to 1,300 megawatt hours of electricity. And that was just one model from 2020.
+AI workloads were exploding across the software industry, but nobody had a standardized way to measure their carbon footprint. Training GPT-3 alone produced approximately 500 tonnes of CO₂ emissions — equivalent to a petrol car driving roughly 2 million kilometers — and close to 1,300 megawatt hours of electricity. And that was just one model from 2020.
 
 The problem was not that organizations were unaware. Many GSF member organizations had sustainability commitments. But multi-million pound infrastructure decisions were being made without understanding relative carbon efficiency. Existing measurement approaches each captured only a slice of the picture: some covered only inference, others only training, and none addressed the full AI lifecycle.
 
-The fragmentation was paralysing. Multiple metrics existed — the Green AI Index, EcoLogits, EnergyScore — but none were consensus-built, none had a pathway to policy or certification, and none incentivized the full range of engineering optimizations that could actually reduce emissions. The question was whether the industry could agree on a consistent, trustworthy way to measure that footprint so they could systematically reduce it.
+The fragmentation was paralyzing. Multiple metrics existed — the Green AI Index, EcoLogits, EnergyScore — but none were consensus-built, none had a pathway to policy or certification, and none incentivized the full range of engineering optimizations that could actually reduce emissions. The question was whether the industry could agree on a consistent, trustworthy way to measure that footprint so they could systematically reduce it.
 
 > "While efforts can make AI more environmentally responsible, they will still leave a footprint behind." — Chris McClean, Global Lead for Digital Ethics, Avanade

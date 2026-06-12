@@ -114,7 +114,7 @@ Despite the simplifications, EFRAG has reaffirmed that certain elements remain m
 | **E1-9** | Financial Effects | Quantifying how future carbon pricing affects the operational cost of software |
 
 > [!NOTE]
-> While these core requirements (E1-1 through E1-9) remain in effect, the 2025 Omnibus I updates have simplified the specific metrics required under each, prioritising 'gross' reporting and financial control boundaries over previous, more complex additive approaches.
+> While these core requirements (E1-1 through E1-9) remain in effect, the 2025 Omnibus I updates have simplified the specific metrics required under each, prioritizing 'gross' reporting and financial control boundaries over previous, more complex additive approaches.
 
 ### 1.3 The Software Dimension
 

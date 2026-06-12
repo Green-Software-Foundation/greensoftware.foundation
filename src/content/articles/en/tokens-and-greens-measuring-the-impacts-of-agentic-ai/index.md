@@ -38,7 +38,7 @@ Read those numbers again. The same business outcome that used to cost one LLM ca
 
 This is what we call the agentic multiplier. Planning loops, tool calls, reflection, retries, multi-agent debate, context that compounds with every turn—each is defensible on its own. When stacked together, they turn a 2,000-token interaction into a 2,000,000-token workflow.
 
-Every one of those tokens requires GPU time. Every GPU-second is energy drawn from a grid, carbon emitted somewhere along the way, and water consumed to cool the silicon that produced it. **The token is the unit we bill on. The kilowatt-hour, the gram of CO₂e, and the litre of water are the units that cost the planet.** 
+Every one of those tokens requires GPU time. Every GPU-second is energy drawn from a grid, carbon emitted somewhere along the way, and water consumed to cool the silicon that produced it. **The token is the unit we bill on. The kilowatt-hour, the gram of CO₂e, and the liter of water are the units that cost the planet.** 
 
 ## **Why Energy, Carbon, and Water All Matter**
 
@@ -52,7 +52,7 @@ These three resource dimensions are connected, but distinct, and treating any of
 
 **Carbon is the climate consequence.** A kilowatt-hour from a solar-heavy grid at midday carries a fraction of the carbon of one drawn from coal at night. Where and when an agent runs matters as much as how much energy it consumes. Embodied carbon, the emissions baked into the hardware, is rising rapidly as the industry expands AI data centre capacity.
 
-**Water is the local impact, and its use by AI is increasingly drawing community attention.** Agentic workloads, with their long execution times and sustained GPU utilization, generate heat that needs cooling. In response, many data centers rely on evaporative cooling, which can consume millions of litres of freshwater per facility per day. Water impact is also place-specific—a litre consumed in a stressed watershed is not interchangeable with a litre elsewhere. The available alternatives are more energy-intensive and increase the carbon cost instead.
+**Water is the local impact, and its use by AI is increasingly drawing community attention.** Agentic workloads, with their long execution times and sustained GPU utilization, generate heat that needs cooling. In response, many data centers rely on evaporative cooling, which can consume millions of liters of freshwater per facility per day. Water impact is also place-specific—a liter consumed in a stressed watershed is not interchangeable with a liter elsewhere. The available alternatives are more energy-intensive and increase the carbon cost instead.
 
 You cannot optimize for one resource and assume the other two will follow. A carbon-aware schedule that shifts workloads to a renewable-heavy region in a drought zone can lower emissions while worsening water stress. An efficiency gain that reduces tokens but routes inference to newer hardware with high embodied emissions can lower energy and raise total lifecycle carbon. **Green software practice has to hold all three in view.**
 
