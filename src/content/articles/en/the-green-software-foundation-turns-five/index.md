@@ -75,11 +75,11 @@ Explore the milestones that shaped GSF into the global consortium of nearly 70 o
 - Contributed to the [Green Software for Business guide published by IMDA ](https://www.imda.gov.sg/-/media/imda/files/infocomm-media-landscape/emerging-technologies-and-research/green-computing/imda-practical-green-software-guide-for-enterprises.pdf)(Singapore).
 - [Amadeus transfers Carmen (Carbon Measurement Engine) to the GSF](https://greensoftware.foundation/articles/welcoming-carmen-carbon-measurement-engine-as-a-gsf-project/). 
 - Launched SCI for AI Bootcamp with four member organizations working together to implement the specification. 
-- [Asim Hussain steps down](https://greensoftware.foundation/articles/after-five-years-im-stepping-down-as-executive-director-of-the-green-software-fou/) after almost five years leading the Foundation as Chair, and then the Executive Director. 
+- [Asim Hussain steps down](https://greensoftware.foundation/articles/after-five-years-im-stepping-down-as-executive-director-of-the-green-software-fou/) after almost five years leading the Foundation as Chair and then as Executive Director. 
 - [Navveen Balani joins as a new Executive Director.](https://greensoftware.foundation/articles/green-software-foundation-announces-new-leadership-appointment-navveen-balani-as-executive-director/) 
 - [Taiwan Institute of Economic Research](https://english.tier.org.tw/) signed up as a member.
 - The [Green Software Movement platform](http://green-foundation-software.mn.co) reached nearly 5,000 members. 
-- G7 French Presidency [featured SCI for AI](https://lnkd.in/dqEMCr2Yhttps://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) on a list of  approaches aimed at enhancing the measurement, monitoring, and reporting on the energy and resource requirements of AI models
+- G7 French Presidency [featured SCI for AI](https://lnkd.in/dqEMCr2Yhttps://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) on a list of  approaches aimed at enhancing the measurement, monitoring, and reporting on the energy and resource requirements of AI models. 
 - Launched [SWI (Software Water Intensity)](https://greensoftware.foundation/articles/introducing-the-software-water-intensity-swi-project/) specification under the leadership of Yi Ding (Purdue University). 
 - We released a [new vision for green software](https://greensoftware.foundation/articles/revisiting-green-software-from-silicon-to-screen/) that covers water, energy, and waste, beyond carbon.
 
