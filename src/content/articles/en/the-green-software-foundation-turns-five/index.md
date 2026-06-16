@@ -4,10 +4,12 @@ teaserText: Cheers to another five years of standards, tools, and people buildin
 date: 2026-06-16
 published: true
 summary: As we celebrate the fifth anniversary of the GSF, here's a look at the milestones that shaped GSF into a global consortium of nearly 70 organizations.
-mainImage: ../../the-green-software-foundation-turns-five/GSF-HB-5-cover.png
-mainImageAlt: ''
+mainImage: GSF-HB-5-cover.png
+mainImageAlt: Two illustrated frog characters represent 2021 and 2026, connected by a journey through green software milestones, with the Green Software Foundation logo at t…Two illustrated frog characters represent 2021 and 2026, connected by a journey through green software milestones, with the Green Software Foundation logo at the center.
 featured: false
-tags: []
+tags:
+  - standards
+  - community
 authors: []
 translators: []
 originBlogName: ''
