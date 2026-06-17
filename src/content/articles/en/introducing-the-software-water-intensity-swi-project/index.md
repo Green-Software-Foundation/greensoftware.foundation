@@ -52,9 +52,13 @@ The SWI project is designed for cloud and infrastructure providers, hardware and
 
 The Software Water Intensity project is under the guidance of the Standards Working Group and currently in incubation, open to contributions from member organizations.
 
-If you want to help shape this standard and future measurement standards, including those focused on software security and circularity, we invite you to [join us.](https://greensoftware.foundation/join-us/) 
+### **Already a member?**
 
-If you’d like to learn more about the project, contact the working group at: [standards-wg@greensoftware.foundation](mailto:standards-wg@greensoftware.foundation) 
+Join the Standards Working Group to help shape the project.  
+
+### **Not a member yet?**
+
+The SWI specification is one of several standards in development, including future work on software security and circularity. [Join the Green Software Foundation](https://greensoftware.foundation/join-us/) to help build the next generation of software sustainability standards.
 
 #### **Project lead**
 
