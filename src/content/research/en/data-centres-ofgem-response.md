@@ -70,7 +70,7 @@ A queue of 125 GW against 45 GW peak demand is not merely congested — it repre
 
 ### 2.2 The Flexibility Gap
 
-Despite these pressures, most data centers operate as passive, inflexible loads. Crozier and Liska ([2025](https://link.springer.com/article/10.1007/s40518-025-00258-9)) frame this as the central challenge: the potential is theorised but "poorly understood" in practice, and "operators are unwilling" to participate without clear incentives. Yet compared to industrial loads, data centers are already more flexible: their workloads are information processing, which can be rescheduled through software without physical damage.
+Despite these pressures, most data centers operate as passive, inflexible loads. Crozier and Liska ([2025](https://link.springer.com/article/10.1007/s40518-025-00258-9)) frame this as the central challenge: the potential is theorized but "poorly understood" in practice, and "operators are unwilling" to participate without clear incentives. Yet compared to industrial loads, data centers are already more flexible: their workloads are information processing, which can be rescheduled through software without physical damage.
 
 Ofgem is exploring whether flexible, non-firm, and ramped connection arrangements should be conditions of connection, and NESO's CFI responses show clear developer appetite for phased connections in return for expedited dates ([Ofgem, 2026, para 5.6](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). Software-enabled flexibility is the mechanism that makes these arrangements operationally viable.
 
@@ -183,7 +183,7 @@ Knittel, Senga, and Wang ([2025](https://www.nber.org/papers/w34065)) present th
 
 Three principles follow:
 
-1. **Flexibility is necessary but not sufficient.** Without grid decarbonisation, flexibility is just cost arbitrage that may increase emissions.
+1. **Flexibility is necessary but not sufficient.** Without grid decarbonization, flexibility is just cost arbitrage that may increase emissions.
 2. **Carbon-aware scheduling is more valuable than price-aware scheduling.**
 3. **Time-of-use and location-of-use carbon accounting is essential** for real environmental benefit.
 
@@ -195,7 +195,7 @@ Ofgem is considering "participation in sustainability initiatives" as a readines
 
 ### 7.1 The Path Dependency Problem
 
-Gas-fired generation and backup infrastructure have asset lives of 20–30 years. A data center connecting today on gas-backed power commits to that infrastructure for at least a decade, during which UK carbon budgets will tighten materially. Assets compliant today may require expensive retrofit or stranding. At the system level, if 20–30 GW of data center load were gas-supplied, this would create new demand for gas infrastructure with its own lock-in logic — each unit harder to retire when decarbonisation requires it.
+Gas-fired generation and backup infrastructure have asset lives of 20–30 years. A data center connecting today on gas-backed power commits to that infrastructure for at least a decade, during which UK carbon budgets will tighten materially. Assets compliant today may require expensive retrofit or stranding. At the system level, if 20–30 GW of data center load were gas-supplied, this would create new demand for gas infrastructure with its own lock-in logic — each unit harder to retire when decarbonization requires it.
 
 ### 7.2 Gas Supply: Volatility and Lifecycle Uncertainty
 
@@ -251,7 +251,7 @@ Projects demonstrating flexibility and accepting non-firm or ramped connections 
 
 ### 10.2 Plan: Flexibility and Strategic Planning
 
-Software flexibility supports the Plan pillar ([Ofgem, 2026, para 5.30–5.32](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)) in three ways: **spatial planning** (workload migration complementing grid capacity); **sequencing** (software managing workloads within ramped power envelopes); and **AI Growth Zones** (flexibility as a condition of designation). Strategic prioritisation should include climate performance and SCI capability alongside economic contribution, stress-tested against the Sixth Carbon Budget pathway.
+Software flexibility supports the Plan pillar ([Ofgem, 2026, para 5.30–5.32](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)) in three ways: **spatial planning** (workload migration complementing grid capacity); **sequencing** (software managing workloads within ramped power envelopes); and **AI Growth Zones** (flexibility as a condition of designation). Strategic prioritization should include climate performance and SCI capability alongside economic contribution, stress-tested against the Sixth Carbon Budget pathway.
 
 ### 10.3 Connect: Flexibility Enabling New Arrangements
 
@@ -290,7 +290,7 @@ Software is the key enabler of data center grid flexibility, but it is not a sil
 
 The Planning and Infrastructure Act 2025 gives Ofgem powers to implement these reforms at pace ([Ofgem, 2026, para 4.16–4.17](https://www.ofgem.gov.uk/sites/default/files/2026-02/2026-02-12-Demand-Connections-Call-for-Input.pdf)). The question is whether flexibility requirements will be designed with sufficient technical sophistication — rewarding genuine, carbon-aware, verifiable capability — or default to blunt instruments that ignore the heterogeneity of data center workloads, the realities of the grid, and the UK's opportunity to lead in low-carbon digital infrastructure.
 
-The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled flexibility is not the complete answer, but it is a necessary part of any solution that connects data centers at scale while maintaining a secure, reliable, affordable, and decarbonising electricity system for all consumers. The software exists. The evidence is building. The UK needs the regulatory framework to match.
+The 125 GW queue against 45 GW peak demand makes this urgent. Software-enabled flexibility is not the complete answer, but it is a necessary part of any solution that connects data centers at scale while maintaining a secure, reliable, affordable, and decarbonizing electricity system for all consumers. The software exists. The evidence is building. The UK needs the regulatory framework to match.
 
 ---
 

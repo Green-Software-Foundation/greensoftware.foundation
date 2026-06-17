@@ -115,7 +115,7 @@ Thanks to .NET 8, the new Carbon Aware SDK v1.4.0 includes a carbon metrics expo
 
 This feature facilitates integration with monitoring solutions like [Prometheus](https://prometheus.io/) and visualization tools like [Grafana](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/), unlocking geomap-style visualizations that show metrics at specified locations on a map. By enabling the exporter and configuring Grafana, carbon intensities can be exported from Carbon Aware SDK to a geomap. This becomes part of a dashboard to monitor carbon emissions for software systems.
 
-![World map showing carbon intensity values by region in gCO2eq/kWh, visualised via Grafana](./image.png)
+![World map showing carbon intensity values by region in gCO2eq/kWh, visualized via Grafana](./image.png)
 
 ### Green Dashboard for Kubernetes
 
@@ -125,7 +125,7 @@ In practice, each container’s energy consumption is evaluated through [Kepler]
 
 Emission data from the power grid can be accessed through the Prometheus exporter with Carbon Aware SDK (starting v1.4.0), and visualized with Grafana dashboard. The power consumption, energy consumption, carbon emission, and SCI (Software Carbon Intensity) can be seen at a glance!
 
-![World map showing carbon intensity values by region in gCO2eq/kWh, visualised via Grafana](./image.png)
+![World map showing carbon intensity values by region in gCO2eq/kWh, visualized via Grafana](./image.png)
 
 ### Elevating Carbon Aware Computing
 

@@ -3,7 +3,7 @@ title: "Measurement is too hard for non-specialists"
 published: true
 summary: >
   How Accenture, Microsoft, Amadeus, NTT DATA, and partners built the Impact Framework —
-  an open-source tool that democratises software carbon measurement — and validated it
+  an open-source tool that democratizes software carbon measurement — and validated it
   through two global hackathons that together drew 900+ participants.
 
 mainImage: /assets/stories/impact-framework.jpg
@@ -47,7 +47,7 @@ timeline:
   - date: "2023"
     heading: Impact Framework development
     body: >
-      Recognising that measurement needed to be democratised, the GSF developed the
+      Recognizing that measurement needed to be democratized, the GSF developed the
       Impact Framework (IF) — an open-source tool that converts observable data from
       running systems (CPU utilization, page views, number of installs) into environmental
       impacts (carbon, water, energy, air quality) in an auditable, replicable, and
@@ -117,7 +117,7 @@ contributors:
     org: Green Software Foundation
     contribution: >
       Championed the Impact Framework as the tool to "decentralize impact measurement and
-      democratise data" — framing it as open source for the sustainability measurement world.
+      democratize data" — framing it as open source for the sustainability measurement world.
   - name: Navveen Balani
     role: Managing Director and Chief Technologist
     org: Accenture

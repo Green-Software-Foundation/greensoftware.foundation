@@ -29,7 +29,7 @@ In the [first article in this series](https://greensoftware.foundation/articles/
 1. Operational efficiency: improving how software is run.
 2. Architecting for minimal carbon: improving how software is designed.
 3. Hardware efficiency, in particular, improving how end user devices are managed.
-4. Energy efficiency, the minimisation of CPU/GPU and network use. 
+4. Energy efficiency, the minimization of CPU/GPU and network use. 
 
 In this post we will focus on the third of these. How do we make sure our software doesn’t waste the carbon that went into the production of the hardware it is running on..
 
