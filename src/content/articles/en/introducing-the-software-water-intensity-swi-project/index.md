@@ -54,7 +54,7 @@ The Software Water Intensity project is under the guidance of the Standards Work
 
 ### **Already a member?**
 
-Join the Standards Working Group to help shape the project.  
+[Subscribe to the Software Standards Working Group](https://wiki.greensoftware.foundation/register) to receive updates and meeting invites. 
 
 ### **Not a member yet?**
 
