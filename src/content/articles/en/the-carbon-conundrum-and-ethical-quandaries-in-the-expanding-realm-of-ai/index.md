@@ -22,7 +22,7 @@ These challenges are compounded by the fact that the models are widely accessibl
 
 Gupta outlines three core challenges embodied in today’s AI paradigm:
 
-![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](./image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralization of power, and massive energy footprint](./image.png)
 
 **1. Exploitative Data Practice**
 
@@ -46,7 +46,7 @@ Sustainable AI offers an approach that harmonizes these issues and presents a po
 
 [Sustainable AI](https://greensoftware.foundation/articles/what-do-we-need-to-build-more-sustainable-ai-systems) aims to guide AI system development, focusing on [ecological integrity and social justice](https://arxiv.org/abs/2006.06217) throughout the AI lifecycle to form a cohesive framework. Gupta suggests incorporating carbon accounting into AI development, gathering relevant data through instrumentation and telemetry, and making carbon impacts a fundamental consideration alongside functional and business requirements. This holistic approach can support the triple bottom line, emphasizing profits, people, and the planet, and contribute to more environmentally and socially responsible AI practices.
 
-![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](./image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralization of power, and massive energy footprint](./image.png)
 
 ## Approaches to solving the challenges of the existing paradigm
 
@@ -72,7 +72,7 @@ Energy grid disparities, with up to a 30x difference in carbon intensity, highli
 
 Moving in the right direction largely depends on the efforts of the software developer community and its willingness to adopt sustainable AI practices.
 
-![Diagram showing three AI challenges: exploitative data practices, centralisation of power, and massive energy footprint](./image.png)
+![Diagram showing three AI challenges: exploitative data practices, centralization of power, and massive energy footprint](./image.png)
 
 Our first step should be to share the idea of sustainable AI within our research and practice communities. We can make it a standard practice to measure and report the carbon impact of AI systems, encouraging the adoption of "Green AI." Industry leaders can support these efforts, enabling experimentation and fostering a more sustainable AI approach.
 

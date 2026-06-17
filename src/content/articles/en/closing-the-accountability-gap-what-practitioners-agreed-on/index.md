@@ -143,7 +143,7 @@ Over three days, we ran a consensus-building session with 12 participants at the
 
 **Round 1** posed three open-ended questions: who should be responsible for software's environmental impact, who currently makes those decisions, and what gets in the way. Participants responded with comprehensive answers ranging from 7,286 to 12,381 characters.
 
-AI synthesis then processed every response equally. The model extracted 42 distinct positions across 14 thematic areas, categorising each as a core position, implementation detail, nuance, or dissenting view. It mapped where participants agreed, where they diverged, and, critically, where tensions sat that hadn't been addressed.
+AI synthesis then processed every response equally. The model extracted 42 distinct positions across 14 thematic areas, categorizing each as a core position, implementation detail, nuance, or dissenting view. It mapped where participants agreed, where they diverged, and, critically, where tensions sat that hadn't been addressed.
 
 **Round 2** shared the synthesis back to participants and drilled into the sharpest tension: dedicated sustainability teams vs. distributed responsibility. Six participants responded, generating 45 additional positions across 11 themes.
 

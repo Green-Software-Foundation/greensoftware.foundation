@@ -36,7 +36,7 @@ tags:
 
 The Corporate Sustainability Reporting Directive (CSRD) represents the most comprehensive sustainability reporting mandate in European history, requiring approximately 10,000 companies to disclose detailed environmental, social, and governance (ESG) information. At the heart of CSRD lies the European Sustainability Reporting Standards (ESRS), with ESRS E1 (Climate Change) emerging as one of the most technically demanding requirements.
 
-For organizations that develop, deploy, or procure software, a critical challenge exists: traditional carbon accounting methodologies often lack the granularity needed to measure and reduce software-specific emissions effectively. This white paper demonstrates how the Software Carbon Intensity (SCI) standard, developed by the Green Software Foundation and formalised as ISO/IEC 21031:2024, provides a complementary framework that can help organizations to:
+For organizations that develop, deploy, or procure software, a critical challenge exists: traditional carbon accounting methodologies often lack the granularity needed to measure and reduce software-specific emissions effectively. This white paper demonstrates how the Software Carbon Intensity (SCI) standard, developed by the Green Software Foundation and formalized as ISO/IEC 21031:2024, provides a complementary framework that can help organizations to:
 
 - **Accurately quantify** software carbon emissions at a granular level
 - **Support CSRD compliance** efforts, particularly for ESRS E1-6 (GHG emissions reporting)

@@ -111,7 +111,7 @@ If you only have a single, minute-long compute job to run at midnight, you proba
 ## Visualising a demand curve for compute
 ![Having more options lets you match workloads to an appropriate kind of compute](./graph-of-degree-of-abstraction-vs-cost-per-unit-of-compute-for-choosing-the-right-kind-of-compute-for-the-need.png)
 
-This is how I visualise the different ways you might run a single computing job these days: I picture a demand curve just like how we might picture one in the energy sector, and the myriad ways to generate electricity.
+This is how I visualize the different ways you might run a single computing job these days: I picture a demand curve just like how we might picture one in the energy sector, and the myriad ways to generate electricity.
 
 I hope it shows that some ideas from other domains can help us think differently about digital infrastructure. Because once you start thinking of it like an essential utility our society is built on, you can bring to bear all kinds of other ideas.
 

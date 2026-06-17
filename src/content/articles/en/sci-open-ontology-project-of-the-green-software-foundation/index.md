@@ -66,7 +66,7 @@ In the third iteration, we will extend the SDK to generate reports based on the 
 In this iteration, we would look at some of the advanced concepts like comparing two versions of SCI ontology models. This maps to the version example I have given earlier in explaining why this project is important.
 
 ## What does a GSF member get from joining the Project? 
-Creating the software boundary is an important first step in calculating the SCI score. We are looking for architects, ontology and domain experts, software practitioners who would help design the generic SCI application ontology model based on their expertise and consensus. The reference applications would help SCI implementers with readymade ontology models to visualise and quickly start their SCI application journey. 
+Creating the software boundary is an important first step in calculating the SCI score. We are looking for architects, ontology and domain experts, software practitioners who would help design the generic SCI application ontology model based on their expertise and consensus. The reference applications would help SCI implementers with readymade ontology models to visualize and quickly start their SCI application journey. 
 
 The project provides an excellent collaboration and knowledge sharing opportunity to help shape and drive the unified SCI ontology model representation across organizations. Green software is a relatively new area and through this project, you can innovate, build community and contribute to the journey of this open source project.
 

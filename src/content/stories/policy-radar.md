@@ -161,7 +161,7 @@ cta:
     Visit the Policy Radar to see what legislation could affect your organization.
     GSF members can submit new policies and participate in the Policy Working Group's
     consultation responses — ensuring your voice reaches policymakers before regulations
-    are finalised.
+    are finalized.
   ctaText: Visit the Policy Radar
   ctaHref: https://policy-radar.greensoftware.foundation
 ---

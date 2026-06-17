@@ -95,7 +95,7 @@ This might seem insurmountable. This might seem like a lot. Your organization mi
 
 Grassroots advocacy within organizations and with external meetup groups can be another way to identify like-minded individuals or create the impetus to change.
 
-A grassroots model means creating ad-hoc interest groups or after-work discussions in which like minded people can socialise and begin to share information about green software. 
+A grassroots model means creating ad-hoc interest groups or after-work discussions in which like minded people can socialize and begin to share information about green software. 
 
 We're all human. As software engineers, we learn from role models, change our attitudes based upon the behaviors we see our peers undertake, and we grow through new experiences.
 
@@ -107,7 +107,7 @@ Change starts from within. Here are actions you could take, to start driving gra
 
 - Consider starting an internal conversational group to discuss your current software development practices and propose improvements. Every session, for example, [you could discuss a different item in the Awesome Green Software repository](https://github.com/Green-Software-Foundation/awesome-green-software).
 - Mention green software at a sprint retrospective or in a benefits realization session. It raises the topic, as something you could improve in future sprints, or on future projects.
-- In an Agile team, consider proposing software optimisations as a topic for your "[definition of done](https://www.scrum.org/resources/blog/done-understanding-definition-done)." It may not get adopted immediately, but the cost benefits over time, or improved performance benefits could add up. Most importantly, it starts the conversation.
+- In an Agile team, consider proposing software optimizations as a topic for your "[definition of done](https://www.scrum.org/resources/blog/done-understanding-definition-done)." It may not get adopted immediately, but the cost benefits over time, or improved performance benefits could add up. Most importantly, it starts the conversation.
 - Reach out to the Green Software Foundation. [Consider putting yourself forward as a speaker yourself](https://greensoftware.foundation/projects/speakers), to talk about your experiences of driving Green Software at your organization.
 
 Feel free to reach out on [Twitter](https://twitter.com/gsfcommunity), [LinkedIn](https://www.linkedin.com/pulse/call-action-spreading-message-green-software-), [Medium ](https://medium.com/green-software-foundation)or our Forum on Discourse when it is set up, and share with me other topics you'd like me to cover, for practical actions you can take to spread the message of green software.
