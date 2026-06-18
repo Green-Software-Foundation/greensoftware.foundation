@@ -54,7 +54,7 @@ The Software Water Intensity project is under the guidance of the Standards Work
 
 ### **Already a member?**
 
-[Subscribe to the Software Standards Working Group](https://wiki.greensoftware.foundation/register) to receive updates and meeting invites. 
+[Subscribe to the Software Water Intensity (SWI) project](https://wiki.greensoftware.foundation/subscribe-swi) to get added to the mailing list,  receive SWI meeting invites, and get updates on the project progress. 
 
 ### **Not a member yet?**
 
