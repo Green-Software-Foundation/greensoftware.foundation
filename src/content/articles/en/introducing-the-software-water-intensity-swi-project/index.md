@@ -18,6 +18,18 @@ publishedOriginUrl: ''
 lang: en
 ---
 
+:::card
+
+### Get involved
+
+The SWI project is open to contributions from member organizations.
+
+::button{href="https://wiki.greensoftware.foundation/subscribe-swi" label="Subscribe to the SWI project" variant="primary"}
+
+::button{href="https://greensoftware.foundation/join-us/" label="Join the Green Software Foundation" variant="outline"}
+
+:::
+
 Software's environmental impact has long been understood through a single lens: carbon. The [tools, standards, and practices the industry](https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) has built over the past few years reflect that focus. As data centers expand and AI workloads grow, the gap between the resources software consumes and what the industry can measure is widening, and water usage is a significant part of it. 
 
 Measuring water impacts requires accounting for both direct and indirect sources. Data centers [contribute to water consumption in three main ways](https://www.eesi.org/articles/view/data-centers-and-water-consumption): cooling, electricity generation, and semiconductor manufacturing. Many facilities use evaporative cooling systems that remove heat from servers through water evaporation, and beyond the facility, power generation itself is water-intensive. Earlier in the supply chain, the production process of semiconductors used for compute hardware also requires water. 
