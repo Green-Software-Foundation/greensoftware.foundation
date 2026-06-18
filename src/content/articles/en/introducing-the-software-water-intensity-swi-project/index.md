@@ -20,10 +20,6 @@ lang: en
 
 :::card
 
-### Get involved
-
-The SWI project is open to contributions from member organizations.
-
 ::button{href="https://wiki.greensoftware.foundation/subscribe-swi" label="Subscribe to the SWI project" variant="primary"}
 
 ::button{href="https://greensoftware.foundation/join-us/" label="Join the Green Software Foundation" variant="outline"}
