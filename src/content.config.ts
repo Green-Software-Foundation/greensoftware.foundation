@@ -39,6 +39,14 @@ const articles = defineCollection({
       lang: z.string().default("en"),
       featured: z.boolean().optional(),
       tags: z.array(z.string()).optional(),
+      cta: z
+        .object({
+          primaryText: z.string(),
+          primaryHref: z.string(),
+          secondaryText: z.string().optional(),
+          secondaryHref: z.string().optional(),
+        })
+        .optional(),
     }),
 });
 

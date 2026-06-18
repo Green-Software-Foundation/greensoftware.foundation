@@ -7,6 +7,7 @@ import Footer from "@/components/footer.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import NewsletterSignup from "@/components/newsletter-signup.astro";
 import DraftBanner from "@/components/draft-banner.astro";
+import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/nav-items";
 
 export async function getStaticPaths() {
@@ -160,6 +161,20 @@ const isEnglish = article.data.lang === "en";
           <p class="text-xl text-primary-dark leading-relaxed max-w-3xl">
             {article.data.teaserText}
           </p>
+        )}
+
+        <!-- Header CTA buttons -->
+        {article.data.cta && (
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href={article.data.cta.primaryHref}>
+              <Button variant="primary">{article.data.cta.primaryText}</Button>
+            </a>
+            {article.data.cta.secondaryText && article.data.cta.secondaryHref && (
+              <a href={article.data.cta.secondaryHref}>
+                <Button variant="outline-primary">{article.data.cta.secondaryText}</Button>
+              </a>
+            )}
+          </div>
         )}
 
         <!-- Date + origin -->

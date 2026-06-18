@@ -16,6 +16,11 @@ translators: []
 originBlogName: ''
 publishedOriginUrl: ''
 lang: en
+cta:
+  primaryText: Subscribe to the SWI project
+  primaryHref: https://wiki.greensoftware.foundation/subscribe-swi
+  secondaryText: Join the Green Software Foundation
+  secondaryHref: https://greensoftware.foundation/join-us/
 ---
 
 Software's environmental impact has long been understood through a single lens: carbon. The [tools, standards, and practices the industry](https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) has built over the past few years reflect that focus. As data centers expand and AI workloads grow, the gap between the resources software consumes and what the industry can measure is widening, and water usage is a significant part of it. 
