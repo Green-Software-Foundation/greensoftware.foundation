@@ -16,6 +16,11 @@ translators: []
 originBlogName: ''
 publishedOriginUrl: ''
 lang: en
+cta:
+  primaryText: Subscribe to the SWI project
+  primaryHref: https://wiki.greensoftware.foundation/subscribe-swi
+  secondaryText: Join the Green Software Foundation
+  secondaryHref: https://greensoftware.foundation/join-us/
 ---
 
 Software's environmental impact has long been understood through a single lens: carbon. The [tools, standards, and practices the industry](https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) has built over the past few years reflect that focus. As data centers expand and AI workloads grow, the gap between the resources software consumes and what the industry can measure is widening, and water usage is a significant part of it. 
@@ -52,13 +57,25 @@ The SWI project is designed for cloud and infrastructure providers, hardware and
 
 The Software Water Intensity project is under the guidance of the Standards Working Group and currently in incubation, open to contributions from member organizations.
 
-### **Already a member?**
+:::card
 
-[Subscribe to the Software Water Intensity (SWI) project](https://wiki.greensoftware.foundation/subscribe-swi) to get added to the mailing list,  receive SWI meeting invites, and get updates on the project progress. 
+### Already a member?
 
-### **Not a member yet?**
+Subscribe to the Software Water Intensity (SWI) project to get added to the mailing list, receive SWI meeting invites, and get updates on the project progress.
 
-The SWI specification is one of several standards in development, including future work on software security and circularity. [Join the Green Software Foundation](https://greensoftware.foundation/join-us/) to help build the next generation of software sustainability standards.
+::button{href="https://wiki.greensoftware.foundation/subscribe-swi" label="Subscribe to the SWI project" variant="primary"}
+
+:::
+
+:::card
+
+### Not a member yet?
+
+The SWI specification is one of several standards in development, including future work on software security and circularity. Join the Green Software Foundation to help build the next generation of software sustainability standards.
+
+::button{href="https://greensoftware.foundation/join-us/" label="Join the Green Software Foundation" variant="outline"}
+
+:::
 
 #### **Project lead**
 
