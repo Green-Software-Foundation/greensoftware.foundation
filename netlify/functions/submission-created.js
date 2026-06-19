@@ -90,14 +90,9 @@ async function handleAssemblyApplication(notion, data) {
     "Job Title": {
       rich_text: [{ text: { content: data["job-title"] || "" } }],
     },
-    "LinkedIn URL": { url: data["linkedin-url"] || null },
-    "GitHub Username": {
-      rich_text: [{ text: { content: data["github-username"] || "" } }],
-    },
     "Sector / Industry": data["sector-industry"]
       ? { select: { name: data["sector-industry"] } }
       : undefined,
-    Timezone: { rich_text: [{ text: { content: data["timezone"] || "" } }] },
     "Years of Experience": data["years-of-experience"]
       ? { select: { name: data["years-of-experience"] } }
       : undefined,
@@ -105,16 +100,11 @@ async function handleAssemblyApplication(notion, data) {
     Motivation: {
       rich_text: [{ text: { content: data["motivation"] || "" } }],
     },
-    "Previous GSF Involvement": {
-      rich_text: [
-        { text: { content: data["previous-gsf-involvement"] || "" } },
-      ],
-    },
     "How Did You Hear About This?": {
       rich_text: [{ text: { content: data["how-did-you-hear"] || "" } }],
     },
     "Stay Informed": { checkbox: data["stay-informed"] === "true" },
-    Confirmation: { checkbox: data["confirmation"] === "true" },
+    Confirmation: { checkbox: data["privacy-consent"] === "true" },
   };
 
   // Remove undefined values (e.g. empty select fields)
