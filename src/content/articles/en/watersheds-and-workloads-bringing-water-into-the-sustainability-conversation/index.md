@@ -4,7 +4,7 @@ teaserText: For years, the environmental conversation around AI focused on carbo
 date: 2026-06-23
 published: true
 summary: Navveen Balani, GSF Executive Director, explores the unique challenges of water measurement and what they mean for decision-makers ahead of emerging disclosure requirements.
-mainImage: ../../watersheds-and-workloads-bringing-water-into-the-sustainability-conversation/Watersheds-and-Workloads.png
+mainImage: Watersheds-and-Workloads.png
 mainImageAlt: ''
 featured: false
 tags:
