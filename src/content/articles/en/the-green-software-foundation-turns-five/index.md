@@ -66,6 +66,7 @@ Explore the milestones that shaped GSF into the global consortium of nearly 70 o
 - [SSIA merged into the GSF](https://greensoftware.foundation/articles/sustainable-and-scalable-infrastructure-alliance-joins-the-green-software-foundat), and[ we launched the Hardware Standards Working Group](https://directory.greensoftware.foundation/working-groups/hardware-wg/). 
 - Launched the [Green Software Movement Platform](http://green-foundation-software.mn.co), a home for our learning and community content. 
 - Formed strategic partnerships with [W3C](https://greensoftware.foundation/articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/), [GDSA](https://greensoftware.foundation/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/), and [IASA](https://greensoftware.foundation/articles/the-green-software-foundation-gsf-and-sustainablearchitectures-org-partner-to-adv/).  
+- Jonathan Turnbull (Google) elected as Vice Chair 
 - The [SCI for Web Assembly](https://greensoftware.foundation/policy/research/sci-web-assembly-report/) launched, led by Chris Adams (Green Web Foundation) and Adam Newman (ClimateAction.tech) 
 - The [Green Software Practitioner course](https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual) hit 130,000+ completions.
 - Our membership base reached 68 organizations.
