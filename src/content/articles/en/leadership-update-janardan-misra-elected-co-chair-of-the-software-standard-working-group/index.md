@@ -3,7 +3,7 @@ title: 'Leadership Update: Janardan Misra elected Co-Chair of the Software Stand
 teaserText: Helping shape ideas into consensus-based specifications.
 date: 2026-07-01
 published: true
-summary: In our latest Q&A, Janardan Misra, Innovation Research Principal Director at Accenture and new Co-Chair of the Software Standards Working Group, shares more his plans and priorities.
+summary: In our latest Q&A, Janardan Misra, Innovation Research Principal Director at Accenture and new Co-Chair of the GSF's Software Standards Working Group, shares his plans and priorities.
 mainImage: Co-Chair-SSWG.png
 mainImageAlt: "Quote card featuring a headshot of Janardan Misra, Innovation Research Principal Director at Accenture and Co-Chair of GSF's Software Standards Working Group. Quote reads: 'Green software standards are most valuable when they help organizations translate sustainability ambition into measurable engineering and operational decisions.' Dark green background with wave patterns, GSF and Software Standards Working Group logos at bottom."
 featured: false
