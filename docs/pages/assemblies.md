@@ -29,7 +29,7 @@ The index page has these sections in order:
 
 All assembly data comes from `src/data/assemblies.json`, fetched from the Notion Assemblies database. See [Notion doc](../notion.md) for database properties.
 
-The fetch script also extracts the Notion page body content: anything below a "Details" heading is converted to HTML and stored in the `detailsHtml` field.
+The fetch script also extracts the Notion page body content: anything below a "Details" heading is converted to HTML and stored in the `detailsHtml` field. Supported block types are paragraphs, headings, bulleted/numbered lists, to-dos, dividers, and images. Images embedded in the page body are downloaded and rehosted to `public/assets/assembly-images/` (Notion's own file URLs expire after about an hour, so they can't be linked to directly) — see [Notion doc](../notion.md) for details. Unsupported block types (video, embed, callout, table, etc.) are silently dropped.
 
 ## Status Values and Visibility
 

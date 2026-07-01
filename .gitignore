@@ -27,6 +27,7 @@ public/pagefind/
 public/assets/logos/
 public/assets/project-icons/
 public/assets/team/
+public/assets/assembly-images/
 src/data/
 # @netlify/plugin-gatsby ignores start
 netlify/functions/gatsby

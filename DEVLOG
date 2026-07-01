@@ -762,3 +762,22 @@ The photo bug was more subtle. After re-fetching with fresh data, team photos we
 ### Reflections
 
 This session was a satisfying data-plumbing session. The Notion roll-up photo limitation was an excellent example of why you need to test with real data, not just check that the code looks right — the API response structure was correct but deliberately incomplete. The `logos.json` cleanup was a good reminder that derived files add maintenance surface: when the source changes, the derived file silently becomes stale.
+
+## 2026-07-01 - Assembly Page Images Fix
+
+**Objective**: Fix a bug report — images placed in an Assembly's Notion page body (e.g. the SCI for Open Telemetry assembly) weren't showing on the live detail page.
+
+### What We Found
+
+`blockToHtml()` in `scripts/fetch-notion-data.cjs`, which converts an Assembly's Notion page body into the `detailsHtml` field, only handled `paragraph`, `heading_1/2/3`, list items, `to_do`, and `divider` block types. Any `image` block fell through to the `default` case and was dropped before it ever reached `assemblies.json` — not an expired-URL or rendering bug, the image was simply never captured.
+
+### What We Built
+
+- **`image` case in `blockToHtml()`** — resolves the block's external or Notion-hosted file URL, downloads it via the existing `downloadFile()` helper (same pattern as member logos/team photos/project icons) to a new `ASSEMBLY_IMAGES_DIR`, and emits an `<img>` (wrapped in `<figure>`/`<figcaption>` when the block has a caption).
+- **`blockToHtml()` made async** — needed since the download is asynchronous; the call site now does `await Promise.all(blocks.map(blockToHtml))` instead of a plain `.map()`.
+- **`public/assets/assembly-images/`** — new gitignored output directory, created alongside the other Notion-fetched asset directories in `main()`.
+- Updated `docs/notion.md` and `docs/pages/assemblies.md` to document image support and note which block types remain unsupported (video, embed, callout, table, etc. still silently drop).
+
+### Next Steps
+
+- Re-run `npm run fetch-notion` (or `build:full`) to backfill `detailsHtml` for existing assemblies, including SCI for Open Telemetry.

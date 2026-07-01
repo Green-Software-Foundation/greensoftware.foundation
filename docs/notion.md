@@ -32,8 +32,9 @@ All dynamic site data is fetched from Notion via `scripts/fetch-notion-data.cjs`
 | Member logos | `public/assets/logos/` | Members DB `Logo` field |
 | Team/volunteer photos | `public/assets/team/` | Volunteers DB `Photo` field |
 | Project icons | `public/assets/project-icons/` | PWCIs DB icon/image fields |
+| Assembly page-body images | `public/assets/assembly-images/` | Assemblies DB page body `image` blocks |
 
-All three asset directories are gitignored — assets are fetched fresh from Notion at build time. This ensures that updates made in Notion (e.g. a new logo or updated project icon) are always picked up on the next build rather than being masked by stale files in Git.
+All asset directories are gitignored — assets are fetched fresh from Notion at build time. This ensures that updates made in Notion (e.g. a new logo or updated project icon) are always picked up on the next build rather than being masked by stale files in Git.
 
 ## How to Refresh Data
 
@@ -121,7 +122,7 @@ Person data for subscription-based people (name, title, LinkedIn, member org) is
 - `Start Date`, `End Date`, `Applications Open`, `Application Deadline` (date)
 - `Seats`, `Average Attendees` (number)
 - `Project` (relation), `Working Group` (relation) — links to PWCIs
-- Page body: content below a "Details" heading is extracted as rich HTML
+- Page body: content below a "Details" heading is extracted as rich HTML (paragraphs, headings, lists, to-dos, dividers, and images — images are downloaded to `public/assets/assembly-images/` since Notion's file URLs expire)
 
 ### Press Mentions DB
 
