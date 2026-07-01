@@ -74,6 +74,7 @@ const DATA_DIR = path.join(ROOT_DIR, "src", "data");
 const LOGOS_DIR = path.join(ROOT_DIR, "public", "assets", "logos");
 const PHOTOS_DIR = path.join(ROOT_DIR, "public", "assets", "team");
 const PROJECT_ICONS_DIR = path.join(ROOT_DIR, "public", "assets", "project-icons");
+const ASSEMBLY_IMAGES_DIR = path.join(ROOT_DIR, "public", "assets", "assembly-images");
 
 // Pass --force to re-download all images even if they already exist on disk
 const FORCE_DOWNLOAD = process.argv.includes("--force");
@@ -829,9 +830,10 @@ async function fetchProjects() {
 
 /**
  * Convert a Notion block to simple HTML.
- * Supports paragraph, headings, bulleted/numbered lists, and to_do blocks.
+ * Supports paragraph, headings, bulleted/numbered lists, to_do, divider, and image blocks.
+ * Images are downloaded and rehosted to ASSEMBLY_IMAGES_DIR since Notion-hosted file URLs expire.
  */
-function blockToHtml(block) {
+async function blockToHtml(block) {
   const richTextToHtml = (rt) => {
     if (!rt || !Array.isArray(rt)) return "";
     return rt.map((t) => {
@@ -863,6 +865,18 @@ function blockToHtml(block) {
       return `<li>${richTextToHtml(block.to_do?.rich_text)}</li>`;
     case "divider":
       return "<hr />";
+    case "image": {
+      const image = block.image;
+      const url = image?.type === "external" ? image.external?.url : image?.file?.url;
+      if (!url) return "";
+      const savedName = await downloadFile(url, ASSEMBLY_IMAGES_DIR, block.id);
+      if (!savedName) return "";
+      const alt = (image.caption || []).map((t) => t.plain_text).join("")
+        .replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+      const img = `<img src="/assets/assembly-images/${savedName}" alt="${alt}" loading="lazy" />`;
+      const caption = richTextToHtml(image.caption);
+      return caption ? `<figure>${img}<figcaption>${caption}</figcaption></figure>` : img;
+    }
     default:
       return "";
   }
@@ -969,7 +983,7 @@ async function fetchAssemblies() {
         cursor = resp.has_more ? resp.next_cursor : undefined;
       } while (cursor);
 
-      const htmlParts = blocks.map(blockToHtml);
+      const htmlParts = await Promise.all(blocks.map(blockToHtml));
       const html = wrapListItems(htmlParts, blocks);
       if (html.trim()) detailsHtml = html;
     } catch (err) {
@@ -1039,6 +1053,7 @@ async function main() {
   fs.mkdirSync(LOGOS_DIR, { recursive: true });
   fs.mkdirSync(PHOTOS_DIR, { recursive: true });
   fs.mkdirSync(PROJECT_ICONS_DIR, { recursive: true });
+  fs.mkdirSync(ASSEMBLY_IMAGES_DIR, { recursive: true });
 
   // --- Members + Volunteers (parallel) ---
   // Two independent DB fetches run concurrently:
