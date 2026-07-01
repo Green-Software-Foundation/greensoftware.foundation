@@ -29,7 +29,7 @@ GSF’s work is shaping how the industry moves from sustainability intent to mea
 
 ## **How will your experience, especially around Green AI, shape your approach to this position?**
 
-My experience at Accenture gives me a strong appreciation for the adoption side of standards. Much of my work has focused on connecting measurement, software carbon approaches, AI optimization, governance, and enterprise implementation. That perspective will shape my approach by keeping the Working Group grounded in real-world constraints: how teams measure impact, how they implement guidance in software and AI delivery lifecycles, and how standards can support both innovation and practical decarbonization at scale.
+My experience at Accenture gives me a strong appreciation for the adoption side of standards. Much of my work has focused on connecting measurement, software carbon approaches, AI optimization, governance, and enterprise implementation. That perspective will shape my approach by keeping the Working Group grounded in real-world constraints: how teams measure impact, how they implement guidance in software and AI delivery lifecycles, and how standards can support both innovation and practical decarbonization at scale. 
 
 This experience aligns closely with GSF’s mission to build shared standards, practices, and an ecosystem for green software.
 
