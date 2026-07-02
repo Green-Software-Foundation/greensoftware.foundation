@@ -17,7 +17,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-We’re excited to announce a new leadership position within the Green Software Foundation: Janardan Misra, Innovation Research Principal Director at Accenture, has been elected co-chair of our Software Standard Working Group (SSWG) and joins our Steering Committee. Succeeding Navveen Balani as co-chair, Janardan joins Henry Richardson, Senior Analyst at WattTime, to advance our mission of developing baseline specifications for green software and ensuring they can be applied consistently across the computing platforms organizations rely on worldwide. 
+We’re excited to announce a new leadership position within the Green Software Foundation: Janardan Misra, Innovation Research Principal Director at Accenture, has been elected co-chair of our Software Standards Working Group (SSWG) and joins our Steering Committee. Succeeding Navveen Balani as co-chair, Janardan joins Henry Richardson, Senior Analyst at WattTime, to advance our mission of developing baseline specifications for green software and ensuring they can be applied consistently across the computing platforms organizations rely on worldwide. 
 
 ## **Can you tell us more about your current role?** 
 
