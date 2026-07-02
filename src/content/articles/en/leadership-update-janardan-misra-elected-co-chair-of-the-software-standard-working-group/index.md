@@ -1,5 +1,5 @@
 ---
-title: 'Leadership Update: Janardan Misra elected Co-Chair of the Software Standard Working Group'
+title: 'Leadership Update: Janardan Misra elected Co-Chair of the Software Standards Working Group'
 teaserText: Helping shape ideas into consensus-based specifications.
 date: 2026-07-01
 published: true
