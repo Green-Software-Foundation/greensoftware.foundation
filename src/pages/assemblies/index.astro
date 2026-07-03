@@ -47,7 +47,9 @@ const visible = assemblies.filter(a => a.status && a.status !== "Backlog");
 
 // Split into active (open/upcoming/in-progress/waitlist) and completed
 const activeStatuses = ["Apply now", "Register interest", "Upcoming", "In Progress", "Pending"];
-const active = visible.filter(a => activeStatuses.includes(a.status));
+const active = visible
+  .filter(a => activeStatuses.includes(a.status))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 // Completed: most recent first (by endDate, then startDate)
 const completed = visible
@@ -193,7 +195,6 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
                             : `Apply by ${new Date(a.applicationDeadline + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`}
                         </span>
                       )}
-                      {a.seats && <span>{a.seats} seats</span>}
                     </div>
                   </div>
                   <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">

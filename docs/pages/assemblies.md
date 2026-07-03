@@ -52,8 +52,9 @@ The fetch script sorts assemblies by status priority: Apply now (0) → Register
 ### Index page filtering
 
 - **Visible:** all assemblies except `Backlog`
-- **Active section:** statuses `Apply now`, `Register interest`, `Upcoming`, `In Progress`, `Pending`
+- **Active section:** statuses `Apply now`, `Register interest`, `Upcoming`, `In Progress`, `Pending`, sorted alphabetically by name (overriding the status-priority order in `assemblies.json`)
 - **Completed section:** status `Done`, sorted by end date (most recent first)
+- Seat counts are not shown on the index cards (only on the detail page's metadata grid)
 
 ### Detail page routing
 
