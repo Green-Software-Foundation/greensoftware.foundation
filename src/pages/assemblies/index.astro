@@ -42,12 +42,14 @@ type Assembly = {
 
 const assemblies = assembliesData as Assembly[];
 
-// Visible statuses: exclude Backlog and Pending
-const visible = assemblies.filter(a => a.status && a.status !== "Backlog" && a.status !== "Pending");
+// Visible statuses: exclude Backlog
+const visible = assemblies.filter(a => a.status && a.status !== "Backlog");
 
-// Split into active (open/upcoming/in-progress) and completed
-const activeStatuses = ["Apply now", "Register interest", "Upcoming", "In Progress"];
-const active = visible.filter(a => activeStatuses.includes(a.status));
+// Split into active (open/upcoming/in-progress/waitlist) and completed
+const activeStatuses = ["Apply now", "Register interest", "Upcoming", "In Progress", "Pending"];
+const active = visible
+  .filter(a => activeStatuses.includes(a.status))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 // Completed: most recent first (by endDate, then startDate)
 const completed = visible
@@ -79,9 +81,14 @@ function ctaForStatus(status: string): string {
     case "Register interest": return "Register interest →";
     case "In Progress": return "Learn more →";
     case "Upcoming": return "Learn more →";
+    case "Pending": return "Join the waitlist →";
     case "Done": return "View outcomes →";
     default: return "Learn more →";
   }
+}
+
+function badgeLabel(status: string): string {
+  return status === "Pending" ? "Waitlist" : status;
 }
 
 function badgeColor(status: string): string {
@@ -90,6 +97,7 @@ function badgeColor(status: string): string {
     case "Register interest": return "bg-accent text-primary-darkest";
     case "In Progress": return "bg-primary-light text-primary-darkest";
     case "Upcoming": return "bg-accent-lighter text-primary-dark";
+    case "Pending": return "bg-gray text-gray-darker";
     case "Done": return "bg-gray text-gray-darker";
     default: return "bg-gray-light text-gray-darker";
   }
@@ -160,7 +168,7 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
                         </span>
                       )}
                       <span class={`inline-block rounded-full px-3 py-0.5 text-xs font-bold ${badgeColor(a.status)}`}>
-                        {a.status}
+                        {badgeLabel(a.status)}
                       </span>
                       {a.purpose && (
                         <span class="inline-block rounded-full bg-accent-lighter px-3 py-0.5 text-xs font-medium text-primary-dark">
@@ -182,10 +190,11 @@ function governingBody(a: Assembly): { name: string; slug: string | null } | nul
                       {a.applicationDeadline && (
                         <span class="inline-flex items-center gap-1">
                           <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                          Apply by {new Date(a.applicationDeadline + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                          {a.status === "Pending"
+                            ? `Applications closed ${new Date(a.applicationDeadline + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`
+                            : `Apply by ${new Date(a.applicationDeadline + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`}
                         </span>
                       )}
-                      {a.seats && <span>{a.seats} seats</span>}
                     </div>
                   </div>
                   <span class="mt-4 inline-flex items-center text-sm font-bold text-primary group-hover:underline">
