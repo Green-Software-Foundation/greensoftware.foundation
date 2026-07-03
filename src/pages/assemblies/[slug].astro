@@ -37,7 +37,7 @@ type Assembly = {
 };
 
 export function getStaticPaths() {
-  const all = (assembliesData as Assembly[]).filter(a => a.status && a.status !== "Backlog" && a.status !== "Pending");
+  const all = (assembliesData as Assembly[]).filter(a => a.status && a.status !== "Backlog");
   return all.map((assembly) => ({
     params: { slug: assembly.slug },
     props: { assembly },
@@ -46,7 +46,8 @@ export function getStaticPaths() {
 
 const { assembly } = Astro.props as { assembly: Assembly };
 const isCompleted = assembly.status === "Done";
-const showApplicationForm = ["Apply now", "Register interest", "Upcoming"].includes(assembly.status);
+const isWaitlist = assembly.status === "Pending";
+const showApplicationForm = ["Apply now", "Register interest", "Upcoming", "Pending"].includes(assembly.status);
 
 function formatDate(d: string | null): string {
   if (!d) return "—";
@@ -71,6 +72,9 @@ if (assembly.status === "Apply now") {
 }
 if (assembly.status === "Register interest") {
   ctas.push({ text: "Register interest", href: "#apply", variant: "primary" });
+}
+if (isWaitlist) {
+  ctas.push({ text: "Join the waitlist", href: "#apply", variant: "primary" });
 }
 if (isCompleted && assembly.reportUrl) {
   ctas.push({ text: "Read the report", href: assembly.reportUrl, variant: "primary" });
@@ -145,9 +149,10 @@ const vis = visibilityStyle(assembly.visibility);
                 assembly.status === "Apply now" ? "bg-accent text-primary-darkest" :
                 assembly.status === "Register interest" ? "bg-accent text-primary-darkest" :
                 assembly.status === "In Progress" ? "bg-primary-light text-primary-darkest" :
+                isWaitlist ? "bg-white/15 text-white/90" :
                 "bg-accent-lighter text-primary-dark"
               }`}>
-                {assembly.status}
+                {isWaitlist ? "Waitlist" : assembly.status}
               </span>
             )}
 
@@ -241,12 +246,14 @@ const vis = visibilityStyle(assembly.visibility);
                   </svg>
                 </div>
                 <h2 class="text-2xl font-extrabold md:text-3xl">
-                  {assembly.status === "Apply now" ? "Application submitted" : "Interest registered"}
+                  {isWaitlist ? "You're on the waitlist" : assembly.status === "Apply now" ? "Application submitted" : "Interest registered"}
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-gray-darker">
-                  {assembly.status === "Apply now"
-                    ? "Thank you for applying. We'll review your application and be in touch at the email address you provided."
-                    : "Thank you for registering your interest. We'll notify you when applications open."}
+                  {isWaitlist
+                    ? "Thank you for your interest. Applications for this assembly have closed, but we've added you to the waitlist and will be in touch if a spot opens up."
+                    : assembly.status === "Apply now"
+                      ? "Thank you for applying. We'll review your application and be in touch at the email address you provided."
+                      : "Thank you for registering your interest. We'll notify you when applications open."}
                 </p>
                 <a href="/assemblies/" class="mt-6 inline-flex items-center text-sm font-bold text-primary hover:underline">
                   ← Back to all assemblies
@@ -261,12 +268,14 @@ const vis = visibilityStyle(assembly.visibility);
               {/* Form */}
               <div id="form-wrapper">
                 <h2 class="text-2xl font-extrabold md:text-3xl">
-                  {assembly.status === "Apply now" ? "Apply to this assembly" : "Register your interest"}
+                  {isWaitlist ? "Join the waitlist" : assembly.status === "Apply now" ? "Apply to this assembly" : "Register your interest"}
                 </h2>
                 <p class="mt-2 text-sm leading-relaxed text-gray-darker">
-                  {assembly.status === "Apply now"
-                    ? "Complete the form below to apply. Applications are reviewed to ensure diverse, qualified representation."
-                    : "Register your interest and we'll notify you when applications open."}
+                  {isWaitlist
+                    ? "Applications for this assembly have closed, but you can still join the waitlist. We'll be in touch if a spot opens up or when we run this assembly again."
+                    : assembly.status === "Apply now"
+                      ? "Complete the form below to apply. Applications are reviewed to ensure diverse, qualified representation."
+                      : "Register your interest and we'll notify you when applications open."}
                 </p>
 
                 <form
@@ -358,7 +367,7 @@ const vis = visibilityStyle(assembly.visibility);
                     id="submit-btn"
                     class="w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 sm:w-auto"
                   >
-                    {assembly.status === "Apply now" ? "Submit application" : "Register interest"}
+                    {isWaitlist ? "Join the waitlist" : assembly.status === "Apply now" ? "Submit application" : "Register interest"}
                   </button>
                 </form>
               </div>

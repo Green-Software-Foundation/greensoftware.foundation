@@ -41,8 +41,8 @@ Assembly status is a Notion "status" type property (not "select"). The exact val
 | `Register interest` | Yes | "Upcoming assemblies" | Yes — interest registration form |
 | `Upcoming` | Yes | "Upcoming assemblies" | Yes — interest registration form |
 | `In Progress` | Yes | "Upcoming assemblies" | No |
+| `Pending` | Yes | "Upcoming assemblies", badged "Waitlist" | Yes — framed as joining a waitlist (used once the application deadline has passed but the assembly still wants to capture interest) |
 | `Done` | Yes | "Completed assemblies" | No — shows report link if available |
-| `Pending` | **Hidden** | Not shown | — |
 | `Backlog` | **Hidden** | Not shown | — |
 
 ### Sort order (in assemblies.json)
@@ -51,13 +51,13 @@ The fetch script sorts assemblies by status priority: Apply now (0) → Register
 
 ### Index page filtering
 
-- **Visible:** all assemblies except `Backlog` and `Pending`
-- **Active section:** statuses `Apply now`, `Register interest`, `Upcoming`, `In Progress`
+- **Visible:** all assemblies except `Backlog`
+- **Active section:** statuses `Apply now`, `Register interest`, `Upcoming`, `In Progress`, `Pending`
 - **Completed section:** status `Done`, sorted by end date (most recent first)
 
 ### Detail page routing
 
-Only visible assemblies (not `Backlog` or `Pending`) generate detail pages.
+Only visible assemblies (not `Backlog`) generate detail pages.
 
 ## Visibility Badges
 
@@ -79,7 +79,17 @@ Inline `<section>` using native `<details>`/`<summary>` HTML for zero-JS accordi
 
 ## Application Form
 
-The form appears on **detail pages** (not the index) when `status` is `Apply now`, `Register interest`, or `Upcoming`.
+The form appears on **detail pages** (not the index) when `status` is `Apply now`, `Register interest`, `Upcoming`, or `Pending`.
+
+### Waitlist framing (`Pending` status)
+
+When `status` is `Pending`, the same form is shown but reframed as joining a waitlist rather than applying — used when an assembly's application deadline has passed but it's still worth capturing interest (e.g. for a future run, or in case a seat opens up):
+
+- Status badge reads "Waitlist" instead of the raw "Pending" value
+- Hero CTA and submit button read "Join the waitlist"
+- Form heading/copy explain that applications have closed but people can still join the waitlist
+- Success state reads "You're on the waitlist"
+- On the index page, the "Apply by" deadline line reads "Applications closed [date]" instead
 
 ### Form fields
 
