@@ -105,7 +105,7 @@ A Green AI patterns catalog for financial services—a curated, openly accessibl
 
 Standards anchor the measurement, levers move the numbers, and patterns make both repeatable. The Green Software Foundation brings standards, tooling, and a cross-sector community together at scale. For financial services specifically, that means more banks bringing their own patterns and practice into the shared space.
 
-## **Summary**
+## **What's Next** 
 
 As agentic AI introduces a new class of assets whose costs are measured not only in capital, but also in compute, carbon, and water, the discipline that financial services already practices extends naturally to these new dimensions. 
 
