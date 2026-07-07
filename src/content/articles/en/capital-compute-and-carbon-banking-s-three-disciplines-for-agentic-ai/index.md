@@ -4,7 +4,7 @@ teaserText: What banking's existing governance disciplines tell us about managin
 date: 2026-07-07
 published: true
 summary: In our article, Navveen Balani, GSF Executive Director, examines how banking's existing governance disciplines extend to agentic AI and how they could benefit from shared measurement standards.
-mainImage: ../../capital-compute-and-carbon-banking-s-three-disciplines-for-agentic-ai/01-Capital,-Compute,-and-Carbon.png
+mainImage: 01-Capital,-Compute,-and-Carbon.png
 mainImageAlt: "Illustration of a bank building with three figures standing in front, each connected to different data visuals — a document and text list, a candlestick stock chart with clocks, and a pie chart with a dollar sign — representing the three governance disciplines of model risk, disclosure, and cost.  Shorter version (if there's a character limit): Illustration of a bank with three figures linked to data visuals representing model risk, disclosure, and cost — the three governance disciplines discussed in the article.  Let me know if the CMS has a specific character cap and I'll tighten further."
 featured: false
 tags:
