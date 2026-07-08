@@ -3,7 +3,7 @@ title: 'SCI for AI: A Framework for EU AI Act Environmental Compliance'
 teaserText: How SCI for AI supports the EU AI Act’s energy requirements and helps measure and reduce AI’s emissions.
 date: 2026-07-08
 published: true
-summary: In a recent whitepaper published by GSF's Policy Working Group, we map the ratified SCI for AI specification to the EU AI Act, showing how it helps fulfill the regulation's energy measurement requirements and goes further by converting energy into carbon emissions and accounting for embodied hardware emissions.
+summary: In a recent whitepaper published by GSF's Software Standards Working Group, we map the ratified SCI for AI specification to the EU AI Act, showing how it helps fulfill the regulation's energy measurement requirements and goes further by converting energy into carbon emissions and accounting for embodied hardware emissions.
 mainImage: SCI-for-AI-EU-AI-Act.png
 mainImageAlt: illustration in Green Software Foundation brand colors (dark teal grid background) featuring power transmission towers, stacked servers, an EU flag icon with stars, lightning bolt energy icons, a target/measurement icon, and a compass-like icon, symbolizing energy grids, data centers, and EU regulation tied to SCI (Software Carbon Intensity) measurement. The Green Software Foundation logo appears in the bottom left.
 featured: false
@@ -21,7 +21,7 @@ Over the last few years, the environmental impact of software and AI has entered
 
 At the same time, reporting AI carbon emissions remains a challenge. While most physical products have standardized methodologies and the tools needed to produce reliable, actionable data, software has been left behind. As a result, the gap between regulatory expectations and organizations' ability to meet them is widening. 
 
-In our recent whitepaper, published by GSF’s Policy Working Group, we map the ratified [Software Carbon Intensity for Artificial Intelligence (SCI for AI) specification](https://greensoftware.foundation/standards/sci-ai/) to the EU AI Act, outlining how the specification helps fulfill regulation’s energy measurement requirements.  
+In our recent whitepaper, published by GSF’s Software Standards Working Group, we map the ratified [Software Carbon Intensity for Artificial Intelligence (SCI for AI) specification](https://greensoftware.foundation/standards/sci-ai/) to the EU AI Act, outlining how the specification helps fulfill regulation’s energy measurement requirements.  
 
 SCI for AI goes a step further in two specific ways: it converts energy consumption into carbon emissions using location-specific grid data, and it accounts for the emissions produced during manufacturing, transporting, and disposing of the hardware that AI systems run on; neither of which the Act currently addresses. 
 
