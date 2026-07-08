@@ -51,15 +51,14 @@ const lifecycleLabel = sciOtelProject?.lifecycle
       ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
       ...(lifecycleLabel ? [{ text: lifecycleLabel, variant: "dark" as const }] : []),
     ]}
-    heading="SCI for"
-    headingAccent="OpenTelemetry"
-    subtitle="Bringing Software Carbon Intensity into OpenTelemetry's semantic conventions, so carbon becomes a signal every observability stack can emit and consume consistently."
-    body="There are currently no shared semantic conventions for representing SCI-related measurements in OpenTelemetry. Without them, teams measuring software carbon intensity use inconsistent attribute names and metric definitions, and tools like Kepler can't be composed into a coherent pipeline without bespoke integration work. The GSF, in collaboration with Sarah Hsu, is convening a new project to fix that."
+    heading="Speak the Same Carbon Language:"
+    headingAccent="SCI for OpenTelemetry"
+    body="Software Carbon Intensity (SCI) measurements have no shared semantic conventions in OpenTelemetry today. This project is developing a draft set of conventions covering energy consumption, carbon intensity, embodied carbon, and the functional unit — so every observability stack can emit and consume carbon data consistently."
     ctas={[
       { text: "Apply to Join the Project", variant: "primary", href: assemblyUrl },
       { text: "Read the SCI Specification", variant: "outline", href: "https://sci.greensoftware.foundation/" },
     ]}
-    imageSrc="/assets/hero-illustration.svg"
+    imageSrc="/assets/standards/sci/hero-illustration.svg"
     imageAlt="SCI for OpenTelemetry"
     bgClass="bg-accent-lightest-2"
     id="overview"
@@ -90,31 +89,39 @@ const lifecycleLabel = sciOtelProject?.lifecycle
   />
 
   <!-- What We're Standardizing -->
-  <CardGrid
-    heading="What We're *Standardizing*"
-    body="SCI = ((E × I) + M) per R — a draft baseline set of semantic conventions covering each component of the formula, plus the composite score itself"
-    columns={4}
-    align="center"
-    cards={[
-      {
-        title: "Operational Energy (E)",
-        description: "Energy consumed by the software system while it runs.",
-      },
-      {
-        title: "Carbon Intensity (I)",
-        description: "Carbon intensity of the electricity that energy is drawn from.",
-      },
-      {
-        title: "Embodied Carbon (M)",
-        description: "Embodied carbon of the hardware the software runs on.",
-      },
-      {
-        title: "Functional Unit (R)",
-        description: "The unit of work the score is normalised against.",
-      },
-    ]}
-    bgClass="bg-white"
-  />
+  <section class="py-12 md:py-16 lg:py-20 bg-white">
+    <div class="relative container">
+      <div class="mb-8 md:mb-10 text-center">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
+          What We're <span class="font-bold text-primary">Standardizing</span>
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base text-primary-dark">
+          SCI = ((E × I) + M) per R — a draft baseline set of semantic conventions covering each component of the formula, plus the composite score itself
+        </p>
+      </div>
+      <div class="mx-auto mb-10 max-w-4xl overflow-hidden rounded-2xl md:mb-12">
+        <img
+          src="/assets/tools/sci-for-opentelemetry/sci-formula-diagram.svg"
+          alt="The SCI formula, SCI equals E times I plus M per R, where E is energy consumed by software in kWh, I is carbon emitted per kWh of energy in gCO2 per kWh, M is carbon emitted through the hardware the software runs on, and R is the functional unit describing how software scales, for example per user or per device"
+          class="w-full"
+        />
+      </div>
+      <div class="relative z-10 grid gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { title: "Operational Energy (E)", description: "Energy consumed by the software system while it runs." },
+          { title: "Carbon Intensity (I)", description: "Carbon intensity of the electricity that energy is drawn from." },
+          { title: "Embodied Carbon (M)", description: "Embodied carbon of the hardware the software runs on." },
+          { title: "Functional Unit (R)", description: "The unit of work the score is normalised against." },
+        ].map((card) => (
+          <div class="flex flex-col rounded-xl border bg-white p-6 shadow-sm">
+            <hr class="mb-4 border-border" />
+            <h3 class="text-lg font-bold">{card.title}</h3>
+            <p class="mt-2 text-sm text-gray-darker">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Who We're Looking For -->
   <CardGrid
