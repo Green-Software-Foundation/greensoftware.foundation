@@ -6,7 +6,7 @@ Project page for SCI for OpenTelemetry at `/tools/sci-for-opentelemetry/`.
 
 ## What the Page Shows
 
-A short landing page for the SCI for OpenTelemetry project — a new GSF project (convened with Sarah Hsu) developing draft OpenTelemetry semantic conventions for the Software Carbon Intensity (SCI) specification. The project hasn't started yet, so the page is deliberately brief: the problem it addresses, the SCI formula components it will standardise, and who's being recruited to work on it.
+A short landing page for the SCI for OpenTelemetry project — a new GSF project (convened with Sarah Hsu) bringing Software Carbon Intensity (SCI) to OpenTelemetry. The project's scope is bigger than just drafting semantic conventions: it starts with a draft set of semantic conventions (the Assembly's deliverable), then builds the instrumentation that puts them into practice. The page copy reflects both phases — don't reduce it back to "drafting semantic conventions" only. The project hasn't started yet, so the page is deliberately brief: the problem it addresses, the SCI formula components it will standardise, and who's being recruited to work on it.
 
 ## Dynamic Elements
 
@@ -28,7 +28,7 @@ Everything else is hardcoded in the page file (in page order):
 - Hero — heading/body copy written in the same format as `/standards/sci/`'s hero (statement heading + accent phrase + single body paragraph, no separate subtitle), reuses the SCI page's illustration (`/assets/standards/sci/hero-illustration.svg`), CTAs to the Assembly application page and the SCI specification
 - "Starting with an Assembly" TextWithImage — explains why the project begins with a GSF Assembly (broad OTel + Green Software community input toward an initial semconv draft) rather than a closed drafting group, with a CTA to `/assemblies/` (reuses the same illustration and framing as the "What is an Assembly" section on `/assemblies/`)
 - "Carbon Has No Shared Vocabulary in OpenTelemetry" TextBlock — the problem statement
-- "What We're Standardizing" — hand-rolled section (not the `CardGrid` component, since it needed an image between the intro text and the cards): heading/body, then the SCI formula diagram (`/assets/tools/sci-for-opentelemetry/sci-formula-diagram.svg`), then a 4-card grid for E/I/M/R using the same markup/classes as `CardGrid`. The diagram is a hand-built SVG (not a photo/screenshot) recreating a GSF formula-explainer graphic in site brand colours — update it by editing the SVG directly if the callout copy changes
+- "What We're Standardizing" — hand-rolled section (not the `CardGrid` component): heading/body, then the SCI formula diagram (`/assets/tools/sci-for-opentelemetry/sci-formula-diagram.svg`). The E/I/M/R card grid that used to sit below the diagram was removed as redundant once the diagram covered the same ground — if this section grows new content later, it doesn't need to be `CardGrid`-shaped again. The diagram is a hand-built SVG (not a photo/screenshot) recreating a GSF formula-explainer graphic in site brand colours — update it by editing the SVG directly if the callout copy changes
 - "Who We're Looking For" CardGrid — the four participant profiles being recruited
 - "Ways to Get Involved" ResourceCards — mirrors the canonical steps from the project's Notion page body (GSF registration → project subscription → Assembly application)
 - CTABanner — links back to the Assembly page to apply, with named contacts (Russ Trow, Jamie Cowan, Sarah Hsu)

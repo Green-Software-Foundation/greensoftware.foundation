@@ -29,7 +29,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
 
 <Layout
   title="SCI for OpenTelemetry | Green Software Foundation"
-  description="A new GSF project developing draft OpenTelemetry semantic conventions for the Software Carbon Intensity (SCI) specification. Applications to join are open now."
+  description="A new GSF project bringing Software Carbon Intensity (SCI) to OpenTelemetry — starting with draft semantic conventions, then building the instrumentation to put them into practice. Applications to join are open now."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -53,7 +53,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
     ]}
     heading="Speak the Same Carbon Language:"
     headingAccent="SCI for OpenTelemetry"
-    body="Software Carbon Intensity (SCI) measurements have no shared semantic conventions in OpenTelemetry today. This project is developing a draft set of conventions covering energy consumption, carbon intensity, embodied carbon, and the functional unit — so every observability stack can emit and consume carbon data consistently."
+    body="Software Carbon Intensity (SCI) measurements have no shared semantic conventions in OpenTelemetry today. This project starts by drafting conventions covering energy consumption, carbon intensity, embodied carbon, and the functional unit, then builds the instrumentation that puts them into practice — so every observability stack can emit and consume carbon data consistently."
     ctas={[
       { text: "Apply to Join the Project", variant: "primary", href: assemblyUrl },
       { text: "Read the SCI Specification", variant: "outline", href: "https://sci.greensoftware.foundation/" },
@@ -83,7 +83,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
     heading="Carbon Has No *Shared Vocabulary* in OpenTelemetry"
     body="The Software Carbon Intensity (SCI) specification (ISO/IEC 21031:2022) defines a standardised method for measuring the carbon intensity of a software system. Its components — energy consumption, hardware utilisation, and a functional unit — map directly onto concepts that observability practitioners already instrument. But OpenTelemetry has no agreed attribute names or metric definitions for any of them."
     bodyExtra={[
-      "A previous attempt to address this stalled in 2023 when the primary driver changed roles. This project picks that work back up, with the goal of bringing a draft set of conventions to the OpenTelemetry Semantic Conventions SIG for review.",
+      "A previous attempt to address this stalled in 2023 when the primary driver changed roles. This project picks that work back up: starting with a draft set of semantic conventions for the OpenTelemetry Semantic Conventions SIG to review, then building the instrumentation that puts them into practice.",
     ]}
     bgClass="bg-accent-lightest-2"
   />
@@ -99,26 +99,12 @@ const lifecycleLabel = sciOtelProject?.lifecycle
           SCI = ((E × I) + M) per R — a draft baseline set of semantic conventions covering each component of the formula, plus the composite score itself
         </p>
       </div>
-      <div class="mx-auto mb-10 max-w-4xl overflow-hidden rounded-2xl md:mb-12">
+      <div class="mx-auto max-w-4xl overflow-hidden rounded-2xl">
         <img
           src="/assets/tools/sci-for-opentelemetry/sci-formula-diagram.svg"
           alt="The SCI formula, SCI equals E times I plus M per R, where E is energy consumed by software in kWh, I is carbon emitted per kWh of energy in gCO2 per kWh, M is carbon emitted through the hardware the software runs on, and R is the functional unit describing how software scales, for example per user or per device"
           class="w-full"
         />
-      </div>
-      <div class="relative z-10 grid gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          { title: "Operational Energy (E)", description: "Energy consumed by the software system while it runs." },
-          { title: "Carbon Intensity (I)", description: "Carbon intensity of the electricity that energy is drawn from." },
-          { title: "Embodied Carbon (M)", description: "Embodied carbon of the hardware the software runs on." },
-          { title: "Functional Unit (R)", description: "The unit of work the score is normalised against." },
-        ].map((card) => (
-          <div class="flex flex-col rounded-xl border bg-white p-6 shadow-sm">
-            <hr class="mb-4 border-border" />
-            <h3 class="text-lg font-bold">{card.title}</h3>
-            <p class="mt-2 text-sm text-gray-darker">{card.description}</p>
-          </div>
-        ))}
       </div>
     </div>
   </section>

@@ -182,7 +182,7 @@ export const navItems = [
           {
             href: "/tools/sci-for-opentelemetry/",
             label: "SCI for OpenTelemetry",
-            description: "Draft OpenTelemetry semantic conventions for SCI",
+            description: "Semantic conventions and instrumentation for SCI in OpenTelemetry",
             /* iconSrc: pi("sci-for-opentelemetry"), icon: "activity", */
           },
         ],
