@@ -4,7 +4,7 @@ teaserText: How SCI for AI supports the EU AI Act’s energy requirements and he
 date: 2026-07-08
 published: true
 summary: In a recent whitepaper published by GSF's Policy Working Group, we map the ratified SCI for AI specification to the EU AI Act, showing how it helps fulfill the regulation's energy measurement requirements and goes further by converting energy into carbon emissions and accounting for embodied hardware emissions.
-mainImage: SCI-for-AI-EU-AI-Act-01.png
+mainImage: SCI-for-AI-EU-AI-Act.png
 mainImageAlt: illustration in Green Software Foundation brand colors (dark teal grid background) featuring power transmission towers, stacked servers, an EU flag icon with stars, lightning bolt energy icons, a target/measurement icon, and a compass-like icon, symbolizing energy grids, data centers, and EU regulation tied to SCI (Software Carbon Intensity) measurement. The Green Software Foundation logo appears in the bottom left.
 featured: false
 tags:
@@ -43,7 +43,7 @@ The EU AI Act requires companies to report the amount of electricity (kWh) their
 
 For example, running the same AI model in Sweden produces much fewer emissions than in Poland, simply because the energy mix is cleaner in Sweden. Roughly, the difference can be up to 35 times more carbon emissions for the same amount of energy used.
 
-![Map of Europe highlighting Sweden and Poland, illustrating a 35x difference in carbon emissions for the same electricity use between the two countries due to their different energy grid mixes. Sweden is marked with a single hexagon icon, Poland with the label 'x35' and a hexagon icon, both connected to their respective countries by a line. Map uses Green Software Foundation's teal-and-green color palette.](../../sci-for-ai-a-framework-for-eu-ai-act-environmental-compliance/SCI-for-AI-EU-AI-Act-01.png)
+![Map of Europe highlighting Sweden and Poland, illustrating a 35x difference in carbon emissions for the same electricity use between the two countries due to their different energy grid mixes. Sweden is marked with a single hexagon icon, Poland with the label 'x35' and a hexagon icon, both connected to their respective countries by a line. Map uses Green Software Foundation's teal-and-green color palette.](SCI-for-AI-EU-AI-Act-01.png)
 
 For a company only reporting energy use, it’s impossible to understand how much carbon they emit from energy usage. 
 
