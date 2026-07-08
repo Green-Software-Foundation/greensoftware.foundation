@@ -5,6 +5,7 @@ import { navItems } from "@/lib/nav-items";
 import Navbar from "@/components/navbar.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Hero from "@/components/hero.astro";
+import TextWithImage from "@/components/text-with-image.astro";
 import TextBlock from "@/components/text-block.astro";
 import CardGrid from "@/components/card-grid.astro";
 import ResourceCards from "@/components/resource-cards.astro";
@@ -64,6 +65,20 @@ const lifecycleLabel = sciOtelProject?.lifecycle
     id="overview"
   />
 
+  <!-- Starting with an Assembly -->
+  <TextWithImage
+    badge="HOW THIS PROJECT WORKS"
+    heading="Starting with an"
+    headingAccent="Assembly"
+    headingStyle="light"
+    body="Rather than a small group drafting semantic conventions on its own, this project begins with a GSF Assembly — a structured, time-boxed process for bringing a group of experts to consensus on a hard question. The SCI for OpenTelemetry Assembly is how the OpenTelemetry and Green Software communities work through the SCI formula together and arrive at an initial draft of the semantic conventions, before it goes to the OpenTelemetry Semantic Conventions SIG for review."
+    imageSrc="/assets/assemblies-process-illustration.webp"
+    imageAlt="The Assembly process illustration"
+    ctaText="How Assemblies Work"
+    ctaHref="/assemblies/"
+    bgClass="bg-white"
+  />
+
   <!-- The Problem -->
   <TextBlock
     heading="Carbon Has No *Shared Vocabulary* in OpenTelemetry"
@@ -71,7 +86,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
     bodyExtra={[
       "A previous attempt to address this stalled in 2023 when the primary driver changed roles. This project picks that work back up, with the goal of bringing a draft set of conventions to the OpenTelemetry Semantic Conventions SIG for review.",
     ]}
-    bgClass="bg-white"
+    bgClass="bg-accent-lightest-2"
   />
 
   <!-- What We're Standardizing -->
@@ -98,7 +113,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
         description: "The unit of work the score is normalised against.",
       },
     ]}
-    bgClass="bg-accent-lightest-2"
+    bgClass="bg-white"
   />
 
   <!-- Who We're Looking For -->
@@ -125,7 +140,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
         description: "Interest from observability backend vendors, to ensure standardised carbon signals are consumable across the ecosystem.",
       },
     ]}
-    bgClass="bg-white"
+    bgClass="bg-accent-lightest-2"
   />
 
   <!-- Get Involved -->
@@ -152,7 +167,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
         ctaHref: assemblyUrl,
       },
     ]}
-    bgClass="bg-accent-lightest-2"
+    bgClass="bg-white"
   />
 
   <CTABanner

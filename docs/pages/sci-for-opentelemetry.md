@@ -26,6 +26,7 @@ See [Notion doc](../notion.md) for how `projects.json` is populated from the PWC
 Everything else is hardcoded in the page file (in page order):
 
 - Hero — "SCI for OpenTelemetry" heading, subtitle/body copy, CTAs to the Assembly application page and the SCI specification
+- "Starting with an Assembly" TextWithImage — explains why the project begins with a GSF Assembly (broad OTel + Green Software community input toward an initial semconv draft) rather than a closed drafting group, with a CTA to `/assemblies/` (reuses the same illustration and framing as the "What is an Assembly" section on `/assemblies/`)
 - "Carbon Has No Shared Vocabulary in OpenTelemetry" TextBlock — the problem statement
 - "What We're Standardizing" CardGrid — the four SCI formula components (E, I, M, R)
 - "Who We're Looking For" CardGrid — the four participant profiles being recruited
