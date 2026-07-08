@@ -1,0 +1,124 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import CardGrid from "@/components/card-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+const assemblyUrl = "/assemblies/sci-for-open-telemetry/";
+---
+
+<Layout
+  title="SCI for OpenTelemetry | Green Software Foundation"
+  description="A new GSF project developing draft OpenTelemetry semantic conventions for the Software Carbon Intensity (SCI) specification. Applications to join are open now."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "SCI for OpenTelemetry" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[{ text: "New Project — Recruiting Participants", variant: "dark" }]}
+    heading="SCI for"
+    headingAccent="OpenTelemetry"
+    subtitle="Bringing Software Carbon Intensity into OpenTelemetry's semantic conventions, so carbon becomes a signal every observability stack can emit and consume consistently."
+    body="There are currently no shared semantic conventions for representing SCI-related measurements in OpenTelemetry. Without them, teams measuring software carbon intensity use inconsistent attribute names and metric definitions, and tools like Kepler can't be composed into a coherent pipeline without bespoke integration work. The GSF, in collaboration with Sarah Hsu, is convening a new project to fix that."
+    ctas={[
+      { text: "Apply to Join the Project", variant: "primary", href: assemblyUrl },
+      { text: "Read the SCI Specification", variant: "outline", href: "https://sci.greensoftware.foundation/" },
+    ]}
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="SCI for OpenTelemetry"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- The Problem -->
+  <TextBlock
+    heading="Carbon Has No *Shared Vocabulary* in OpenTelemetry"
+    body="The Software Carbon Intensity (SCI) specification (ISO/IEC 21031:2022) defines a standardised method for measuring the carbon intensity of a software system. Its components — energy consumption, hardware utilisation, and a functional unit — map directly onto concepts that observability practitioners already instrument. But OpenTelemetry has no agreed attribute names or metric definitions for any of them."
+    bodyExtra={[
+      "A previous attempt to address this stalled in 2023 when the primary driver changed roles. This project picks that work back up, with the goal of bringing a draft set of conventions to the OpenTelemetry Semantic Conventions SIG for review.",
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- What We're Standardizing -->
+  <CardGrid
+    heading="What We're *Standardizing*"
+    body="SCI = ((E × I) + M) per R — a draft baseline set of semantic conventions covering each component of the formula, plus the composite score itself"
+    columns={4}
+    align="center"
+    cards={[
+      {
+        title: "Operational Energy (E)",
+        description: "Energy consumed by the software system while it runs.",
+      },
+      {
+        title: "Carbon Intensity (I)",
+        description: "Carbon intensity of the electricity that energy is drawn from.",
+      },
+      {
+        title: "Embodied Carbon (M)",
+        description: "Embodied carbon of the hardware the software runs on.",
+      },
+      {
+        title: "Functional Unit (R)",
+        description: "The unit of work the score is normalised against.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Who We're Looking For -->
+  <CardGrid
+    heading="Who We're *Looking For*"
+    body="Applications are open to anyone with relevant expertise, or who knows someone who has it"
+    columns={4}
+    align="center"
+    cards={[
+      {
+        title: "Semantic Conventions Experience",
+        description: "OpenTelemetry semantic conventions experience, to ensure the output maps cleanly into OTel from the start.",
+      },
+      {
+        title: "Carbon Measurement Expertise",
+        description: "Green software / carbon measurement expertise: SCI, Kepler, carbon intensity data sources.",
+      },
+      {
+        title: "Instrumentation Experience",
+        description: "Instrumentation experience, to inform how conventions would be implemented in practice.",
+      },
+      {
+        title: "Observability Backend Vendors",
+        description: "Interest from observability backend vendors, to ensure standardised carbon signals are consumable across the ecosystem.",
+      },
+    ]}
+    bgClass="bg-white"
+  />
+
+  <!-- Get Involved -->
+  <CTABanner
+    heading="Help Make Carbon a First-Class Signal"
+    body="Applications to join the SCI for OpenTelemetry project are open now. If you'd like to get involved or have questions, reach out to Russ Trow (russell@greensoftware.foundation), Jamie Cowan (jamie@greensoftware.foundation), or Sarah Hsu (@greenhsu123)."
+    ctaText="Apply to Join the Project"
+    ctaHref={assemblyUrl}
+  />
+
+  <Footer />
+</Layout>
