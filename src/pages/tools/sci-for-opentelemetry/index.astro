@@ -7,10 +7,23 @@ import Breadcrumb from "@/components/breadcrumb.astro";
 import Hero from "@/components/hero.astro";
 import TextBlock from "@/components/text-block.astro";
 import CardGrid from "@/components/card-grid.astro";
+import ResourceCards from "@/components/resource-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
+import projects from "@/data/projects.json";
+
 const assemblyUrl = "/assemblies/sci-for-open-telemetry/";
+
+const sciOtelProject = projects.find((p: any) => p.slug === "sci-otel");
+const parentWg = projects.find((p: any) => p.name === sciOtelProject?.parent);
+
+// Notion's lifecycle stage casing doesn't always match the canonical stage
+// names used on /standards/ (e.g. "Pre-draft" vs "Pre-Draft") — normalise for display.
+const lifecycleLabel = sciOtelProject?.lifecycle
+  ?.split("-")
+  .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join("-");
 ---
 
 <Layout
@@ -33,7 +46,10 @@ const assemblyUrl = "/assemblies/sci-for-open-telemetry/";
 
   <!-- Hero -->
   <Hero
-    badges={[{ text: "New Project — Recruiting Participants", variant: "dark" }]}
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
+      ...(lifecycleLabel ? [{ text: lifecycleLabel, variant: "dark" as const }] : []),
+    ]}
     heading="SCI for"
     headingAccent="OpenTelemetry"
     subtitle="Bringing Software Carbon Intensity into OpenTelemetry's semantic conventions, so carbon becomes a signal every observability stack can emit and consume consistently."
@@ -113,9 +129,35 @@ const assemblyUrl = "/assemblies/sci-for-open-telemetry/";
   />
 
   <!-- Get Involved -->
+  <ResourceCards
+    heading="Ways to *Get Involved*"
+    columns={3}
+    cards={[
+      {
+        title: "Register with GSF",
+        description: "Complete GSF registration — required before you can subscribe to any project.",
+        ctaText: "Register",
+        ctaHref: "https://wiki.greensoftware.foundation/register",
+      },
+      {
+        title: "Subscribe to the Project",
+        description: "Join the mailing list and meetings for Software Carbon Intensity for OpenTelemetry.",
+        ctaText: "Subscribe",
+        ctaHref: "https://wiki.greensoftware.foundation/subscribe",
+      },
+      {
+        title: "Apply to the Assembly",
+        description: "The project's initial development work runs through an Assembly — apply to take part.",
+        ctaText: "Apply Now",
+        ctaHref: assemblyUrl,
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
   <CTABanner
     heading="Help Make Carbon a First-Class Signal"
-    body="Applications to join the SCI for OpenTelemetry project are open now. If you'd like to get involved or have questions, reach out to Russ Trow (russell@greensoftware.foundation), Jamie Cowan (jamie@greensoftware.foundation), or Sarah Hsu (@greenhsu123)."
+    body="If you'd like to get involved or have questions, reach out to Russ Trow (russell@greensoftware.foundation), Jamie Cowan (jamie@greensoftware.foundation), or Sarah Hsu (@greenhsu123)."
     ctaText="Apply to Join the Project"
     ctaHref={assemblyUrl}
   />

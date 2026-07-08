@@ -10,17 +10,29 @@ A short landing page for the SCI for OpenTelemetry project — a new GSF project
 
 ## Dynamic Elements
 
-None. Unlike `carmen.md`, this page does not import from `projects.json` — the project isn't yet in the Notion PWCIs database, so there's no lead/lifecycle data to pull. All content is hardcoded directly in the Astro file.
+### Project data (from Notion)
+
+The project is in the Notion PWCIs database with slug `"sci-otel"` (not `"sci-for-opentelemetry"` — that's just this page's URL). Following the Carmen page's pattern:
+
+- **Parent working group badge** — resolved from `projects.json` to show "A Software Standards Working Group Project" in the hero
+- **Lifecycle stage badge** — read from `projects.json` (currently `"Pre-draft"`), then title-cased per hyphen segment (`"Pre-draft"` → `"Pre-Draft"`) to match the canonical stage names used on `/standards/` (`src/pages/standards/index.astro`) — Notion's casing on this field doesn't always match
+
+If either lookup misses (e.g. `projects.json` hasn't been fetched, or the slug changes in Notion), the badge is simply omitted — there's no hardcoded fallback, matching Carmen's convention once real Notion data exists.
+
+See [Notion doc](../notion.md) for how `projects.json` is populated from the PWCIs database.
 
 ## Static Elements
 
-All content is hardcoded in the page file (in page order):
+Everything else is hardcoded in the page file (in page order):
 
-- Hero — "SCI for OpenTelemetry" heading, "New Project — Recruiting Participants" badge, CTAs to the Assembly application page and the SCI specification
+- Hero — "SCI for OpenTelemetry" heading, subtitle/body copy, CTAs to the Assembly application page and the SCI specification
 - "Carbon Has No Shared Vocabulary in OpenTelemetry" TextBlock — the problem statement
 - "What We're Standardizing" CardGrid — the four SCI formula components (E, I, M, R)
 - "Who We're Looking For" CardGrid — the four participant profiles being recruited
+- "Ways to Get Involved" ResourceCards — mirrors the canonical steps from the project's Notion page body (GSF registration → project subscription → Assembly application)
 - CTABanner — links back to the Assembly page to apply, with named contacts (Russ Trow, Jamie Cowan, Sarah Hsu)
+
+The project's GitHub repo (`Green-Software-Foundation/sci-otel`) is currently private per Notion, so it isn't linked from this page. Once it's made public, add it as a resource card/CTA.
 
 ## Relationship to the Assembly
 
@@ -30,7 +42,8 @@ If the Assembly's slug ever changes in Notion, update the `assemblyUrl` constant
 
 ## How to Update
 
+- **Change lifecycle stage or parent working group** — edit in Notion PWCIs DB (slug `"sci-otel"`), run `npm run fetch-notion`
+- **Add a TeamGrid once named leads exist** — leads are populated from Subscriptions records with role "Project Lead"/"Project Co-Lead" against this PWCI, not from the "Responsible PM" field. Once at least one exists, add a `TeamGrid` fed by `sciOtelProject?.leads`, matching Carmen's pattern
 - **Edit page copy** — modify `src/pages/tools/sci-for-opentelemetry/index.astro` directly
-- **Once the project has leads/lifecycle data in Notion** — add it to the PWCIs database with a matching slug, then follow the Carmen page's pattern (`docs/pages/carmen.md`) to pull `projects.json` data dynamically (lifecycle badge, TeamGrid, parent working group)
 - **Navigation** — the entry in `src/lib/nav-items.ts` (Adoption → Tools section) points to `/tools/sci-for-opentelemetry/`
 - **Assembly status changes** — handled entirely on the Assembly page; no changes needed here unless the slug changes
