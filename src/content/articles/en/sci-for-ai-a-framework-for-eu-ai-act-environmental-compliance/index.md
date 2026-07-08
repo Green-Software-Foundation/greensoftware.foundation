@@ -4,7 +4,7 @@ teaserText: How SCI for AI supports the EU AI Act’s energy requirements and he
 date: 2026-07-08
 published: true
 summary: In a recent whitepaper published by GSF's Policy Working Group, we map the ratified SCI for AI specification to the EU AI Act, showing how it helps fulfill the regulation's energy measurement requirements and goes further by converting energy into carbon emissions and accounting for embodied hardware emissions.
-mainImage: ../../sci-for-ai-a-framework-for-eu-ai-act-environmental-compliance/SCI-for-AI-EU-AI-Act.png
+mainImage: SCI-for-AI-EU-AI-Act-01.png
 mainImageAlt: illustration in Green Software Foundation brand colors (dark teal grid background) featuring power transmission towers, stacked servers, an EU flag icon with stars, lightning bolt energy icons, a target/measurement icon, and a compass-like icon, symbolizing energy grids, data centers, and EU regulation tied to SCI (Software Carbon Intensity) measurement. The Green Software Foundation logo appears in the bottom left.
 featured: false
 tags:
