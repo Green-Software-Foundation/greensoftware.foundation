@@ -19,7 +19,7 @@ lang: en
 
 Over the last few years, the environmental impact of software and AI has entered the regulatory spotlight. As new frameworks and reporting requirements emerge, our member organizations regularly report growing pressure to quantify and manage the footprint of their digital systems.
 
-At the same time, AI carbon emissions reporting remains a challenge. While most physical products have standardized methodologies and the tools needed to produce reliable, actionable data, software has been left behind. As a result, the gap between regulatory expectations and organizations' ability to meet them is widening. 
+At the same time, reporting AI carbon emissions remains a challenge. While most physical products have standardized methodologies and the tools needed to produce reliable, actionable data, software has been left behind. As a result, the gap between regulatory expectations and organizations' ability to meet them is widening. 
 
 In our recent whitepaper, published by GSF’s Policy Working Group, we map the ratified [Software Carbon Intensity for Artificial Intelligence (SCI for AI) specification](https://greensoftware.foundation/standards/sci-ai/) to the EU AI Act, outlining how the specification helps fulfill regulation’s energy measurement requirements.  
 
@@ -45,7 +45,7 @@ For example, running the same AI model in Sweden produces much fewer emissions t
 
 ![Map of Europe highlighting Sweden and Poland, illustrating a 35x difference in carbon emissions for the same electricity use between the two countries due to their different energy grid mixes. Sweden is marked with a single hexagon icon, Poland with the label 'x35' and a hexagon icon, both connected to their respective countries by a line. Map uses Green Software Foundation's teal-and-green color palette.](SCI-for-AI-EU-AI-Act-01.png)
 
-For a company only reporting energy use, it’s impossible to understand how much carbon they emit from energy usage. 
+For a company only reporting energy use, it’s hard to understand how much carbon they emit from energy usage. 
 
 ### Embodied Emissions 
 
