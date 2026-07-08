@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="sci-formula-title">
+  <title id="sci-formula-title">SCI = ((E * I) + M) per R — E is energy consumed by software in kWh, I is carbon emitted per kWh of energy, M is carbon emitted through the hardware the software runs on, R is the functional unit describing how software scales</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f5952"/>
+      <stop offset="100%" stop-color="#04302c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <g fill="none" stroke="#aecc53" stroke-width="4" stroke-linecap="round">
+    <!-- I callout (top-left) -->
+    <rect x="250" y="190" width="620" height="185" rx="92.5"/>
+    <path d="M 700 375 Q 720 420 795 460 Q 800 500 800 540" stroke-linejoin="round"/>
+
+    <!-- M callout (top-right) -->
+    <rect x="965" y="160" width="655" height="230" rx="115"/>
+    <path d="M 1120 390 Q 1105 425 1090 460 Q 1090 500 1090 540" stroke-linejoin="round"/>
+
+    <!-- E callout (bottom-left) -->
+    <rect x="245" y="690" width="590" height="180" rx="90"/>
+    <path d="M 610 690 Q 650 650 705 620 Q 705 605 705 590" stroke-linejoin="round"/>
+
+    <!-- R callout (bottom-right) -->
+    <rect x="1085" y="690" width="705" height="200" rx="100"/>
+    <path d="M 1480 690 Q 1495 650 1500 620 Q 1500 605 1500 590" stroke-linejoin="round"/>
+  </g>
+
+  <g font-family="'Nunito Sans', Arial, sans-serif" font-weight="700" fill="#aecc53" text-anchor="middle">
+    <text x="560" y="270" font-size="46">Carbon emitted per kWh</text>
+    <text x="560" y="330" font-size="46">of energy, gCO2/kWh</text>
+
+    <text x="1292" y="228" font-size="46">Carbon emitted through</text>
+    <text x="1292" y="288" font-size="46">the hardware that the</text>
+    <text x="1292" y="348" font-size="46">software is running on</text>
+
+    <text x="540" y="765" font-size="46">Energy consumed by</text>
+    <text x="540" y="825" font-size="46">software in kWh</text>
+
+    <text x="1437" y="745" font-size="46">Functional Unit; this is how</text>
+    <text x="1437" y="805" font-size="46">software scales, for example</text>
+    <text x="1437" y="865" font-size="46">per user or per device</text>
+  </g>
+
+  <text x="960" y="595" font-family="'Nunito Sans', Arial, sans-serif" font-weight="800" font-size="105" fill="#ffffff" text-anchor="middle">SCI = ((E * I) + M) per R</text>
+</svg>

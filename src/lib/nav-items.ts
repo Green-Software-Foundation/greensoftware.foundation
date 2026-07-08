@@ -179,6 +179,12 @@ export const navItems = [
             description: "Measure the carbon footprint of your software",
             /* iconSrc: pi("if"), icon: "workflow", */ external: true,
           },
+          {
+            href: "/tools/sci-for-opentelemetry/",
+            label: "SCI for OpenTelemetry",
+            description: "Semantic conventions and instrumentation for SCI in OpenTelemetry",
+            /* iconSrc: pi("sci-for-opentelemetry"), icon: "activity", */
+          },
         ],
       },
     ],
