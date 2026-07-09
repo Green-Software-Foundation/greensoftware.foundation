@@ -17,6 +17,8 @@ publishedOriginUrl: ''
 lang: en
 ---
 
+Yi Ding is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University, where she leads the STYLE (Sustainable and Trustworthy computing sYstems and LEarning) Lab. She is also the Project Lead for GSF's Software Water Intensity (SWI) project. 
+
 ## **What inspired you to focus on the intersection of AI, water, and environmental sustainability?**
 
 I'm a computer scientist by training, and for many years my research focused on building more energy-efficient AI and computing systems. Energy has always been a central sustainability metric in computing, so naturally that's where most of my work began.
