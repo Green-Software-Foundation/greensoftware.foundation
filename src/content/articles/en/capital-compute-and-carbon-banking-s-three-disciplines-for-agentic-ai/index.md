@@ -69,7 +69,7 @@ Banking is the industry that taught the world to care about basis points. Agenti
 
 The patterns that bring this under control are familiar to anyone who has run a technology cost practice. Tier the workloads—let small models do classification and routing, and reserve larger general-purpose models for the steps that genuinely need them. Bound the reflection and retry budget. Cache stable questions to avoid recomputing them. Treat token consumption as a metered resource with budgets and alerts.
 
-None of this is new to a treasury function or a technology cost-management office. The novelty is that the meter measures takens and model calls rather than instance-hours.
+None of this is new to a treasury function or a technology cost-management office. The novelty is that the meter measures tokens and model calls rather than instance-hours.
 
 ## **Bringing the Three Together**
 
