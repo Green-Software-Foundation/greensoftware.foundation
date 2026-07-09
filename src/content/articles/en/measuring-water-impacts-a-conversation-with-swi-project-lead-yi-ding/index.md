@@ -1,5 +1,5 @@
 ---
-title: 'Measuring Water Impacts: A Conversation with SWI Project Lead Yi Ding'
+title: "Measuring Software's Water Footprint: A Conversation with SWI Project Lead Yi Ding"
 teaserText: Yi Ding explains what her research shows about AI's water footprint and why the industry needs a shared standard that addresses the unique challenges of water measurement.
 date: 2026-07-09
 published: true
