@@ -3,7 +3,7 @@ title: 'Measuring Water Impacts: A Conversation with SWI Project Lead Yi Ding'
 teaserText: Yi Ding explains what her research shows about AI's water footprint and why the industry needs a shared standard that addresses the unique challenges of water measurement.
 date: 2026-07-09
 published: true
-summary: In our Q&A, Yi Ding shares what makes measuring software's water footprint challenging and how that has shaped her approach to the project.
+summary: In our Q&A, Yi Ding shares how the SWI project is building a practical standard for measuring software's water footprint to support more informed engineering and business decisions.
 mainImage: Yi-Ding-Q&A.png
 mainImageAlt: "Quote card: Yi Ding, Assistant Professor at Purdue University and SWI Project Lead at GSF, says she'd like software teams to think about Software Water Intensity (SWI) as naturally as they think about energy efficiency or SCI five years from now."
 featured: false
