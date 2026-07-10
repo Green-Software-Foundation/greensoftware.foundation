@@ -36,6 +36,7 @@ Chrome elements (navbar, footer, CTA banner, newsletter signup) have `data-pagef
 - **Multi-word queries** default to phrase search (wrapped in quotes); falls back to OR search if no phrase results
 - **Single-word queries** use standard search
 - Results show title, content type badge, and highlighted excerpt
+- Content type badges: `article` (articles), `story` (member stories), `research` (policy & research papers), `page` (everything else)
 
 ## Testing Locally
 
