@@ -56,7 +56,7 @@ export const navItems = [
               "Real-time energy and carbon for cloud providers" /* iconSrc: pi("real-time-cloud"), icon: "bar-chart" */,
           },
           {
-            href: "/standards/see/",
+            href: "/standards/sei/",
             label: "SEI",
             description:
               "Software Energy Intensity" /* iconSrc: pi("see"), icon: "zap" */,
