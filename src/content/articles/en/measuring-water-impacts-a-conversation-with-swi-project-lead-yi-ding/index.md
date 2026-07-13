@@ -59,7 +59,11 @@ One of the biggest challenges in developing a standard is deciding what to inclu
 
 One important discussion is whether SWI should account for water consumption only, or both water consumption and water withdrawal. Most existing assessment frameworks focus on water consumption because it represents water that is no longer available to the local watershed. However, water withdrawal tells a different story; it reflects the total amount of water taken from the environment, even if much of it is later returned. Some cooling technologies have high withdrawal but relatively low consumption, while others have the opposite pattern. Looking at only one metric may overlook important tradeoffs. The challenge is that these two metrics answer different questions, so we need to carefully evaluate whether SWI should report one, both, or guide on when each is appropriate.
 
-Another challenge is how to account for where water is used. A liter of water consumed in a water-abundant region does not have the same environmental burden as a liter consumed in a water-scarce region. There are several well-established water stress indicators, such as AWARE and the WRI Baseline Water Stress Index, but they were developed for different purposes and represent different aspects of water scarcity. We are carefully evaluating which approach best aligns with SWI's goals and how water stress should be incorporated into the metric, particularly if SWI ultimately considers both consumption and withdrawal. 
+Another challenge is how to account for where water is used. 
+
+> A liter of water consumed in a water-abundant region does not have the same environmental burden as a liter consumed in a water-scarce region. 
+
+There are several well-established water stress indicators, such as AWARE and the WRI Baseline Water Stress Index, but they were developed for different purposes and represent different aspects of water scarcity. We are carefully evaluating which approach best aligns with SWI's goals and how water stress should be incorporated into the metric, particularly if SWI ultimately considers both consumption and withdrawal. 
 
 ## **How do you see collaboration and partnerships shaping SWI, and how can anyone get involved?** 
 
