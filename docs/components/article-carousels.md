@@ -32,7 +32,7 @@ const filtered = allArticles
 | `sci-web` | SCI for Web | `/standards/sci-web/` |
 | `sci-ai` | SCI for AI | `/standards/sci-ai/` |
 | `rtc` | Real-Time Cloud | `/standards/rtc/` |
-| `see` | Software Emissions Estimator | `/standards/see/` |
+| `see` | SEI (Software Energy Intensity) | `/standards/sei/` |
 | `soft` | SCI Open Footprint | `/standards/soft/` |
 | `wdpc` | Web & Digital Product Carbon | `/standards/wdpc/` |
 | `policy` | Policy & Research | `/policy/` |

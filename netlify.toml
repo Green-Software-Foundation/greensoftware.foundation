@@ -54,6 +54,11 @@ from = "/manifesto"
 to = "/about/"
 status = 301
 
+[[redirects]]
+from = "/standards/see/"
+to = "/standards/sei/"
+status = 301
+
 # -- Translated manifestos → about page --
 
 [[redirects]]
