@@ -34,7 +34,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 ---
 
 <Layout
-  title="SEE — Software Energy Efficiency | Green Software Foundation"
+  title="SEI — Software Energy Intensity | Green Software Foundation"
   description="A methodology for calculating the energy consumption rate of software systems. Lower numbers are better — and reaching zero is impossible."
 >
   <Navbar
@@ -49,7 +49,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <Breadcrumb items={[
     { label: "Home", href: "/" },
     { label: "Standards", href: "/standards/" },
-    { label: "SEE" },
+    { label: "SEI" },
   ]} />
 
   <!-- Hero -->
@@ -58,55 +58,55 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
       ...(seeProject?.lifecycle ? [{ text: seeProject.lifecycle, variant: "dark" as const }] : []),
     ]}
-    heading="Measure the Energy Efficiency of"
+    heading="Measure the Energy Intensity of"
     headingAccent="Your Software"
-    body="Every software system consumes energy through the hardware it runs on. The Software Energy Efficiency (SEE) specification provides a methodology for calculating the energy consumption rate of a software system — a score where lower is better and reaching zero is impossible."
+    body="Every software system consumes energy through the hardware it runs on. The Software Energy Intensity (SEI) specification provides a methodology for calculating the energy consumption rate of a software system — a score where lower is better and reaching zero is impossible."
     ctas={[
       { text: "View the Project", variant: "primary", href: "https://directory.greensoftware.foundation/projects/see/" },
       { text: "Get Involved", variant: "outline", href: "https://directory.greensoftware.foundation/projects/see/" },
     ]}
     imageSrc="/assets/SEE-hero.svg"
-    imageAlt="SEE illustration"
+    imageAlt="SEI illustration"
     bgClass="bg-accent-lightest-2"
     id="overview"
   />
 
-  <!-- What is SEE? -->
+  <!-- What is SEI? -->
   <CTACard
-    heading="What is SEE?"
-    body="SEE is a rate — energy consumption (kWh) per one functional unit of work. It gives developers and organisations a clear, comparable number that captures how efficiently their software uses energy. Reducing an SEE score is only possible through actions that genuinely reduce energy consumption: modifying software to use less hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure."
+    heading="What is SEI?"
+    body="SEI is a rate — energy consumption (kWh) per one functional unit of work. It gives developers and organisations a clear, comparable number that captures how efficiently their software uses energy. Reducing an SEI score is only possible through actions that genuinely reduce energy consumption: modifying software to use less hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure."
     imageSrc="/assets/SEE-what.svg"
-    imageAlt="What is SEE illustration"
+    imageAlt="What is SEI illustration"
   />
 
-  <!-- Why SEE Matters -->
+  <!-- Why SEI Matters -->
   <section class="py-8 md:py-10 bg-accent-lightest-2">
     <div class="container">
       <div class="mx-auto max-w-5xl text-center">
         <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">
-          Why <span class="font-bold text-primary">Energy Efficiency</span> Matters
+          Why <span class="font-bold text-primary">Energy Intensity</span> Matters
         </h2>
         <p class="mt-6 text-lg leading-relaxed md:text-xl">
-          The <a href="/standards/sci/" class="text-primary underline hover:no-underline">SCI specification</a> measures carbon intensity — combining energy, grid carbon intensity, and embodied emissions. By focusing solely on energy, SEE isolates the signal to just energy consumption without the variability of grid carbon intensity in the mix. This is what's needed to truly focus on energy efficiency rather than carbon efficiency — giving teams a clear, undiluted measure of how much electricity their software consumes.
+          The <a href="/standards/sci/" class="text-primary underline hover:no-underline">SCI specification</a> measures carbon intensity — combining energy, grid carbon intensity, and embodied emissions. By focusing solely on energy, SEI isolates the signal to just energy consumption without the variability of grid carbon intensity in the mix. This is what's needed to truly focus on energy efficiency rather than carbon efficiency — giving teams a clear, undiluted measure of how much electricity their software consumes.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- The SEE Formula -->
+  <!-- The SEI Formula -->
   <section class="py-12 md:py-16 lg:py-20 bg-accent-lighter/30">
     <div class="container">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl">
-          The SEE Formula
+          The SEI Formula
         </h2>
         <p class="text-lg md:text-xl">
-          SEE calculates energy consumption per functional unit. The formula accounts for facility overhead through PUE (Power Usage Effectiveness), ensuring that cooling, power conversion, and other infrastructure costs are captured.
+          SEI calculates energy consumption per functional unit. The formula accounts for facility overhead through PUE (Power Usage Effectiveness), ensuring that cooling, power conversion, and other infrastructure costs are captured.
         </p>
 
         <div class="my-10 rounded-xl bg-white p-8 shadow-sm md:my-12">
           <p class="text-3xl font-bold text-primary md:text-4xl lg:text-5xl font-mono">
-            SEE = E per R
+            SEI = E per R
           </p>
         </div>
 
@@ -127,7 +127,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Software Boundary -->
   <FeatureGrid
     heading="The Software *Boundary*"
-    body="The first step in generating an SEE score is deciding what to include in the measurement. The boundary should include all components that significantly contribute to the software's energy consumption."
+    body="The first step in generating an SEI score is deciding what to include in the measurement. The boundary should include all components that significantly contribute to the software's energy consumption."
     columns={3}
     variant="bordered"
     features={[
@@ -155,7 +155,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
     heading="Software Sustainability"
     headingAccent="Actions"
     headingStyle="light"
-    body="All actions that reduce an SEE score fit into two categories: energy efficiency (making software use less electricity for the same function) and hardware efficiency (making software use fewer physical resources for the same function). The specification is designed to encourage more of these actions during the design, development, and maintenance of software."
+    body="All actions that reduce an SEI score fit into two categories: energy efficiency (making software use less electricity for the same function) and hardware efficiency (making software use fewer physical resources for the same function). The specification is designed to encourage more of these actions during the design, development, and maintenance of software."
     imageSrc="/assets/SEE-actions.svg"
     imageAlt="Sustainability actions illustration"
     reversed
@@ -182,7 +182,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       {
         icon: "/assets/standards/sci/grid-icon.svg",
         title: "Coefficients",
-        description: "Published energy values such as cloud provider data per instance type, industry-standard coefficients for hardware, or third-party SEE scores for subcomponents.",
+        description: "Published energy values such as cloud provider data per instance type, industry-standard coefficients for hardware, or third-party SEI scores for subcomponents.",
       },
     ]}
     bgClass="bg-accent-lightest-2"
@@ -197,7 +197,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
         </div>
         <div class="text-center">
           <p class="text-lg font-medium text-primary-dark italic md:text-xl">
-            Reducing an SEE score is only possible through actions that reduce energy consumption. This can be achieved by modifying a software system to use less physical hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure.
+            Reducing an SEI score is only possible through actions that reduce energy consumption. This can be achieved by modifying a software system to use less physical hardware, use hardware more efficiently, or shift computation to more energy-efficient infrastructure.
           </p>
         </div>
         <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
@@ -223,13 +223,13 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
-    body="Help Shape Software Energy Efficiency"
+    body="Help Shape Software Energy Intensity"
     columns={3}
     cards={[
       {
         icon: "/assets/standards/sci/resource-spec-icon.svg",
         title: "View the Project",
-        description: "Learn about the SEE specification and connect with the project team",
+        description: "Learn about the SEI specification and connect with the project team",
         ctaText: "Visit Directory",
         ctaHref: "https://directory.greensoftware.foundation/projects/see/",
         featured: true,
@@ -255,7 +255,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   {carouselArticles.length >= 3 && (
     <ArticleCarousel
       heading="Related Articles"
-      body="News, insights, and updates about the Software Energy Efficiency standard."
+      body="News, insights, and updates about the Software Energy Intensity standard."
       articles={carouselArticles}
       ctaText="View all articles →"
       ctaHref="/articles/"

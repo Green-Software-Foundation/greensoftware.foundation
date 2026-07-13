@@ -57,9 +57,9 @@ export const navItems = [
           },
           {
             href: "/standards/see/",
-            label: "SEE",
+            label: "SEI",
             description:
-              "Software Energy Efficiency" /* iconSrc: pi("see"), icon: "zap" */,
+              "Software Energy Intensity" /* iconSrc: pi("see"), icon: "zap" */,
           },
           {
             href: "/standards/swi/",
