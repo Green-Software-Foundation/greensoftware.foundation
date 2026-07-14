@@ -325,9 +325,9 @@ The EU AI Act requires energy reporting but doesn't address one important reason
 | Germany | \~350 | 350 tonnes CO2eq |
 | Poland | \~700 | 700 tonnes CO2eq |
 
-SCI for AI's I component captures this crucial distinction.
+![Map of Europe highlighting Sweden and Poland, each labeled with a hexagon icon indicating a comparative value: Sweden shows a single hexagon, while Poland shows a hexagon marked 'x 35,' illustrating a 35-fold difference between the two countries on the measured metric.](/assets/uploads/SCI-for-AI-EU-AI-Act-01%20(1).png)
 
-![Map of Europe highlighting Sweden and Poland, each labeled with a hexagon icon indicating a comparative value: Sweden shows a single hexagon, while Poland shows a hexagon marked 'x 35,' illustrating a 35-fold difference between the two countries on the measured metric.](/assets/uploads/SCI-for-AI-EU-AI-Act-01%20%281%29.png)
+SCI for AI's I component captures this crucial distinction.
 
 #### 2. Embodied Emissions
 
