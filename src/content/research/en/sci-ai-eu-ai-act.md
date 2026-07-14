@@ -1,27 +1,28 @@
 ---
-title: "Software Carbon Intensity for AI and EU AI Act Environmental Compliance"
-subtitle: "A Framework for Measuring and Reducing AI's Climate Impact"
+title: Software Carbon Intensity for AI and EU AI Act Environmental Compliance
+subtitle: A Framework for Measuring and Reducing AI's Climate Impact
 date: 2026-02-15
 published: true
 status: published
 type: paper
-summary: >
-  How SCI for AI provides a comprehensive methodology for measuring and reducing AI's climate impact, exceeding current EU AI Act environmental documentation requirements.
+summary: How SCI for AI provides a comprehensive methodology for measuring and reducing AI's climate impact, exceeding current EU AI Act environmental documentation requirements.
 jurisdiction: EU
 framework: EU AI Act
-version: "1.0"
 workingGroup: software-wg
+version: '1.0'
+sourceUrl: https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/SCI%20and%20the%20EU%20AI%20Act.md
 authors:
   - name: Software Standards Working Group
     org: Green Software Foundation
-sourceUrl: "https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/SCI%20and%20the%20EU%20AI%20Act.md"
+doi: ''
+pdfUrl: ''
 tags:
   - sci
   - sci-ai
   - policy
 ---
 
-## Table of Contents
+Table of Contents
 
 1. [The EU AI Act: Environmental Provisions](#1-the-eu-ai-act-environmental-provisions)
 2. [Software Carbon Intensity for AI (SCI for AI)](#2-software-carbon-intensity-for-ai-sci-for-ai)
@@ -29,7 +30,7 @@ tags:
 4. [Implementation Recommendations](#4-implementation-recommendations)
 5. [Conclusion](#5-conclusion)
 
----
+***
 
 ## Executive Summary
 
@@ -43,16 +44,16 @@ Organizations that adopt SCI for AI today will not only exceed current EU AI Act
 
 **The recommendation**: organizations seeking to demonstrate sustainability leadership should consider adopting SCI for AI, while recognizing that implementation requires meaningful investment and that future EU harmonized standards may take different approaches.
 
----
+***
 
-## 1\. The EU AI Act: Environmental Provisions
+## 1. The EU AI Act: Environmental Provisions
 
 ### 1.1 Overview and Timeline
 
 The EU AI Act (Regulation 2024/1689) represents the first attempt by any major jurisdiction to regulate AI systems comprehensively. The regulation entered into force on August 1, 2024, with a phased implementation schedule:
 
 | Date | Milestone |
-| :---- | :---- |
+| --- | --- |
 | August 1, 2024 | Regulation enters into force |
 | August 2, 2025 | GPAI model obligations begin |
 | August 2, 2027 | Compliance deadline for models pre-dating August 2025 |
@@ -145,7 +146,7 @@ However, the Code includes a significant exemption: providers may claim exemptio
 Analysis reveals significant shortcomings in the EU AI Act's environmental provisions:
 
 | Gap | Implication |
-| :---- | :---- |
+| --- | --- |
 | **Energy focus, not carbon** | kWh consumed in e.g. France (clean grid) treated equivalently to kWh in e.g. Poland (coal-heavy) |
 | **No embodied emissions** | Hardware manufacturing, transport, and disposal emissions entirely omitted |
 | **Restricted disclosure** | Documentation available only to authorities (Articles 21(3), 53(7), 78(1))—no public transparency |
@@ -158,15 +159,15 @@ Analysis reveals significant shortcomings in the EU AI Act's environmental provi
 
 - [White & Case Analysis](https://www.whitecase.com/insight-alert/energy-efficiency-requirements-under-eu-ai-act)
 
----
+***
 
-## 2\. Software Carbon Intensity for AI (SCI for AI)
+## 2. Software Carbon Intensity for AI (SCI for AI)
 
 ### 2.1 Foundation: ISO/IEC 21031:2024
 
-The Software Carbon Intensity (SCI) specification originated with the Green Software Foundation and achieved international recognition through ISO standardization in March 2024\.
+The Software Carbon Intensity (SCI) specification originated with the Green Software Foundation and achieved international recognition through ISO standardization in March 2024.
 
-**ISO/IEC 21031:2024** — *Information technology — Software Carbon Intensity (SCI) specification*
+**ISO/IEC 21031:2024** — _Information technology — Software Carbon Intensity (SCI) specification_
 
 This standard provides:
 
@@ -187,9 +188,9 @@ Where $O = E \times I$ represents operational emissions.
 #### Component Breakdown
 
 | Component | Description | Unit | Definition |
-| :---- | :---- | :---- | :---- |
+| --- | --- | --- | --- |
 | **E** | Energy consumed | kWh | Energy consumed by the software system for a functional unit of work, including all reserved/provisioned hardware |
-| **I** | Carbon intensity | gCO2eq/kWh | Region-specific carbon emissions per kWh of grid electricity   |
+| **I** | Carbon intensity | gCO2eq/kWh | Region-specific carbon emissions per kWh of grid electricity |
 | **M** | Embodied emissions | gCO2eq | Emissions from hardware manufacturing, transport, and end-of-life |
 | **O** | Operational emissions | gCO2eq | Calculated as E × I |
 | **R** | Functional unit | varies | The denominator expressing emissions as a rate |
@@ -202,7 +203,7 @@ $$M = TE \times \frac{TiR}{EL} \times \frac{RR}{ToR}$$
 Where:
 
 | Variable | Description |
-| :---- | :---- |
+| --- | --- |
 | **TE** | Total embodied emissions of hardware |
 | **TiR** | Time reserved (duration of use) |
 | **EL** | Expected lifespan of hardware |
@@ -216,6 +217,8 @@ This formula allocates a proportional share of hardware lifecycle emissions base
 ### 2.3 SCI for AI Extension
 
 SCI for AI extends the base specification to address AI-specific measurement challenges through two persona-based boundaries.
+
+![Venn diagram illustrating the AI lifecycle shared between Provider and Consumer roles. The Provider's circle includes Scoping, Training, Benchmarking, Optimization, and Integration. The Consumer's circle includes Inference, UX, Storage, Monitoring, and Connectors. The two circles overlap in the center, representing shared responsibility across the AI lifecycle.](/assets/uploads/SCI-for-AI-EU-AI-Act-03.png)
 
 #### Consumer Boundary
 
@@ -251,7 +254,7 @@ SCI for AI defines standardized functional units enabling meaningful comparison 
 #### Consumer Functional Units
 
 | AI System Type | Functional Unit | Example |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | Large Language Models | per token | gCO2eq/token processed |
 | Image Generation | per image | gCO2eq/image generated |
 | Video Generation | per second | gCO2eq/second of video |
@@ -266,7 +269,7 @@ SCI for AI defines standardized functional units enabling meaningful comparison 
 Providers select from three metrics emphasizing different efficiency dimensions:
 
 | Functional Unit | Optimization Focus |
-| :---- | :---- |
+| --- | --- |
 | **per FLOP** | Algorithmic and hardware efficiency |
 | **per training token** | Data quality and curation efficiency |
 | **per parameter** | Model architecture compactness |
@@ -278,8 +281,10 @@ Providers should distinguish between:
 
 ### 2.5 Key Differentiators from EU AI Act Requirements
 
+![Illustration of a balance scale weighing two sides. The left side holds a folder with the EU stars logo, topped by icons for energy, an X mark, and a question mark — representing regulation, uncertainty, and unresolved questions. The right side holds a window displaying a target/measurement icon, topped by icons for a hexagon, a location pin, and 'ISO' — representing standards, localization, and certification.](/assets/uploads/SCI-for-AI-EU-AI-Act-02.png)
+
 | Dimension | EU AI Act | SCI for AI |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | **Metric** | Energy (kWh) | Carbon intensity (gCO2eq/R) |
 | **Embodied emissions** | Not addressed | Included via M component |
 | **Grid carbon intensity** | Not considered | Location-specific I factor |
@@ -291,16 +296,16 @@ Providers should distinguish between:
 
 The key distinction: SCI for AI measures carbon intensity directly, while the EU AI Act uses energy as a proxy. Whether carbon or energy is the "right" metric depends on one's goals—carbon captures climate impact more precisely, while energy is simpler to measure and compare across jurisdictions.
 
----
+***
 
-## 3\. Mapping SCI for AI to EU AI Act Compliance
+## 3. Mapping SCI for AI to EU AI Act Compliance
 
 ### 3.1 Direct Compliance Support
 
 SCI for AI provides methodological support for EU AI Act environmental requirements, though the alignment is not perfect:
 
 | EU AI Act Requirement | SCI for AI Capability | Fit Assessment |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | **Annex XI energy documentation** | E component captures energy; provides a structured approach to measurement | Strong |
 | **Article 40 resource performance standards** | SCI methodology could inform harmonized standards; ISO foundation provides credibility | Speculative |
 | **Article 95 voluntary codes KPIs** | Functional units enable normalized metrics that could serve as KPIs | Partial |
@@ -310,19 +315,21 @@ SCI for AI provides methodological support for EU AI Act environmental requireme
 
 Organizations adopting SCI for AI gain capabilities beyond current requirements:
 
-#### 1\. Energy-to-Carbon Conversion
+#### 1. Energy-to-Carbon Conversion
 
 The EU AI Act requires energy reporting but doesn't address one important reason energy matters: climate impact. The same training run produces vastly different emissions depending on grid carbon intensity:
 
 | Location | Grid Intensity (gCO2eq/kWh) | 1000 MWh Training Impact |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | Sweden | \~20 | 20 tonnes CO2eq |
 | Germany | \~350 | 350 tonnes CO2eq |
 | Poland | \~700 | 700 tonnes CO2eq |
 
 SCI for AI's I component captures this crucial distinction.
 
-#### 2\. Embodied Emissions
+![Map of Europe highlighting Sweden and Poland, each labeled with a hexagon icon indicating a comparative value: Sweden shows a single hexagon, while Poland shows a hexagon marked 'x 35,' illustrating a 35-fold difference between the two countries on the measured metric.](/assets/uploads/SCI-for-AI-EU-AI-Act-01%20%281%29.png)
+
+#### 2. Embodied Emissions
 
 Hardware lifecycle emissions can be substantial. Estimates of embodied emissions as a share of total data center lifecycle emissions vary widely — from around 10% to over 60% depending on hardware type, utilization patterns, operational lifespan, and accounting methodology — and are projected to grow as grids decarbonize (Aslan et al., 2025; Meta, 2024).
 
@@ -330,7 +337,7 @@ For AI-specific hardware like GPUs with shorter replacement cycles, the proporti
 
 **Caveat**: Obtaining accurate embodied emissions data remains very challenging. Many hardware manufacturers do not publish lifecycle assessment (LCA) data, and estimates vary widely.
 
-#### 3\. Public Transparency
+#### 3. Public Transparency
 
 EU AI Act documentation is restricted to regulatory authorities. SCI for AI encourages public disclosure, enabling:
 
@@ -339,7 +346,7 @@ EU AI Act documentation is restricted to regulatory authorities. SCI for AI enco
 - Stakeholder accountability  
 - Research community access
 
-#### 4\. Continuous Monitoring
+#### 4. Continuous Monitoring
 
 The EU AI Act implies one-time documentation. SCI for AI methodology supports ongoing operational measurement, enabling:
 
@@ -348,7 +355,7 @@ The EU AI Act implies one-time documentation. SCI for AI methodology supports on
 - Operational optimization  
 - Real-time carbon-aware computing
 
-#### 5\. Standardized Comparison
+#### 5. Standardized Comparison
 
 Without standardized functional units, comparing "1000 kWh for model training" across different models is meaningless. SCI for AI enables:
 
@@ -364,23 +371,16 @@ While this paper advocates for SCI for AI adoption, intellectual honesty require
 #### Why the EU AI Act's Energy-Only Approach May Be Reasonable
 
 1. **Simplicity and verifiability**: Energy consumption (kWh) is straightforward to measure and verify. Carbon intensity calculations introduce methodological complexity and potential for dispute.  
-
 2. **Jurisdictional neutrality**: Energy metrics are comparable across jurisdictions regardless of local grid composition. Carbon intensity varies by location, time of day, and methodology (marginal vs. average), complicating cross-border comparisons.  
-
 3. **Energy efficiency as an independent goal**: Reducing energy consumption is valuable regardless of carbon intensity—it reduces costs, infrastructure requirements, and grid strain.  
-
 4. **Regulatory pragmatism**: Requiring carbon calculations would necessitate specifying approved carbon intensity databases, update frequencies, and methodologies—adding significant regulatory complexity.
 
 #### Limitations of SCI for AI
 
 1. **Data availability**: Embodied emissions data (the M component) is often unavailable. Hardware manufacturers rarely publish lifecycle assessment data, and estimates vary widely. This limits practical applicability.  
-
 2. **Methodological debates**: The choice between marginal and average carbon intensity factors significantly affects results.  
-
 3. **No verification framework**: Unlike regulated standards with audit mechanisms, SCI scores are self-reported with no independent verification requirement. This creates potential for inconsistent or misleading claims.  
-
 4. **Still evolving**: SCI for AI is a relatively new extension to the base SCI specification. Functional unit definitions and boundary guidance may change, creating uncertainty for early adopters.  
-
 5. **Dual burden**: Organizations adopting SCI for AI alongside EU AI Act compliance face dual reporting obligations. Some may reasonably prefer waiting for official Article 40 harmonized standards rather than investing in a methodology that might differ from eventual requirements.
 
 #### No Guarantee of Regulatory Alignment
@@ -389,7 +389,7 @@ This paper suggests SCI for AI positions organizations for future standards, but
 
 ### 3.4 Future-Proofing
 
-Article 40 mandates the Commission to develop harmonized standards and report on progress by August 2, 2028\. That report may include "legally binding corrective measures" if voluntary approaches prove insufficient.
+Article 40 mandates the Commission to develop harmonized standards and report on progress by August 2, 2028. That report may include "legally binding corrective measures" if voluntary approaches prove insufficient.
 
 Organizations using SCI for AI position themselves to:
 
@@ -400,9 +400,9 @@ Organizations using SCI for AI position themselves to:
 
 The Commission has indicated interest in "a potential AI energy and emissions label"—a concept that could potentially align with SCI for AI's functional unit approach, though no specific methodology preference has been signaled.
 
----
+***
 
-## 4\. Implementation Recommendations
+## 4. Implementation Recommendations
 
 ### 4.1 For GPAI Providers
 
@@ -410,27 +410,27 @@ Organizations providing general-purpose AI models subject to Annex XI could:
 
 1. **Adopt SCI for AI methodology** for technical documentation  
 
-   - Measure energy (E) using actual consumption data where available  
-   - Apply location-specific carbon intensity (I) to calculate operational emissions  
-   - Track embodied emissions (M) for hardware infrastructure
+- Measure energy (E) using actual consumption data where available  
+- Apply location-specific carbon intensity (I) to calculate operational emissions  
+- Track embodied emissions (M) for hardware infrastructure
 
 2. **Select appropriate provider functional units**  
 
-   - per FLOP for algorithm/hardware optimization focus  
-   - per training token for data efficiency focus  
-   - per parameter for architecture efficiency focus
+- per FLOP for algorithm/hardware optimization focus  
+- per training token for data efficiency focus  
+- per parameter for architecture efficiency focus
 
 3. **Report comprehensively**  
 
-   - Include both energy (E) and calculated carbon (O \= E × I)  
-   - Document assumptions and data sources  
-   - Distinguish gross from effective values
+- Include both energy (E) and calculated carbon (O = E × I)  
+- Document assumptions and data sources  
+- Distinguish gross from effective values
 
 4. **Establish continuous measurement**  
 
-   - Monitor inference emissions in production  
-   - Track efficiency trends over model versions  
-   - Prepare for future continuous monitoring requirements
+- Monitor inference emissions in production  
+- Track efficiency trends over model versions  
+- Prepare for future continuous monitoring requirements
 
 ### 4.2 For AI Deployers
 
@@ -438,24 +438,24 @@ Organizations deploying AI systems should:
 
 1. **Use consumer-boundary metrics** for operational reporting  
 
-   - Select functional units matching use case (per token, per image, etc.)  
-   - Include monitoring and orchestration infrastructure
+- Select functional units matching use case (per token, per image, etc.)  
+- Include monitoring and orchestration infrastructure
 
 2. **Request SCI scores from upstream providers**  
 
-   - Make carbon efficiency a procurement criterion  
-   - Push market toward transparency
+- Make carbon efficiency a procurement criterion  
+- Push market toward transparency
 
 3. **Prepare for Article 95 voluntary codes**  
 
-   - Establish SCI-based KPIs now  
-   - Document efficiency improvement initiatives  
-   - Build measurement infrastructure
+- Establish SCI-based KPIs now  
+- Document efficiency improvement initiatives  
+- Build measurement infrastructure
 
 4. **Consider location-based optimization**  
 
-   - Evaluate grid carbon intensity when selecting cloud regions  
-   - Implement carbon-aware scheduling where feasible
+- Evaluate grid carbon intensity when selecting cloud regions  
+- Implement carbon-aware scheduling where feasible
 
 ### 4.3 For Standards Bodies and Policymakers
 
@@ -463,25 +463,25 @@ Organizations developing Article 40 harmonized standards may consider:
 
 1. **Consider SCI for AI as a candidate methodology**  
 
-   - ISO/IEC 21031:2024 foundation provides credibility  
-   - Existing adoption demonstrates feasibility  
-   - Functional units enable comparison
+- ISO/IEC 21031:2024 foundation provides credibility  
+- Existing adoption demonstrates feasibility  
+- Functional units enable comparison
 
 2. **Extend to address EU AI Act gaps**  
 
-   - Water usage (cooling for data centers)  
-   - Electronic waste (hardware disposal)  
-   - Supply chain emissions
+- Water usage (cooling for data centers)  
+- Electronic waste (hardware disposal)  
+- Supply chain emissions
 
 3. **Establish mandatory disclosure requirements**  
 
-   - Public reporting, not just regulatory access  
-   - Standardized formats for comparison  
-   - Verification mechanisms
+- Public reporting, not just regulatory access  
+- Standardized formats for comparison  
+- Verification mechanisms
 
----
+***
 
-## 5\. Conclusion
+## 5. Conclusion
 
 The EU AI Act establishes minimum environmental disclosure requirements for general-purpose AI models, but these requirements are insufficient to address AI's growing climate impact. The Act:
 
@@ -514,7 +514,7 @@ The question is not whether more stringent AI environmental requirements will co
 
 Organizations should weigh this against legitimate alternatives: waiting for official Article 40 harmonized standards, or focusing on energy efficiency (which the EU AI Act does require) as a simpler near-term goal. There is no single right answer—but informed decision-making requires understanding both the opportunities SCI for AI presents and the limitations it carries.
 
----
+***
 
 ## Appendix: Technical Details
 
@@ -539,7 +539,7 @@ Where:
 $$M = TE \times \frac{TiR}{EL} \times \frac{RR}{ToR}$$
 
 | Variable | Description | Example |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | **TE** | Total embodied emissions | 1,000 kgCO2eq for server |
 | **TiR** | Time reserved | 720 hours (1 month) |
 | **EL** | Expected lifespan | 35,040 hours (4 years) |
@@ -553,7 +553,7 @@ $$M = 1{,}000 \times \frac{720}{35{,}040} \times \frac{8}{8} = 1{,}000 \times 0.
 **Scenario**: Training a large language model over 30 days using 8 servers, each with 8 A100 GPUs (64 GPUs total), in a European data center.
 
 | Component | Value | Source |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | Energy (E) | 150,000 kWh | Metered consumption |
 | Carbon intensity (I) | 400 gCO2eq/kWh | Grid average for region |
 | Server embodied emissions | 2,500 kgCO2eq per server | Manufacturer LCA data (estimated) |
@@ -588,7 +588,7 @@ $$SCI = \frac{60{,}411}{2 \times 10^{12}} = 0.0000302 \text{ gCO}_2\text{eq/toke
 **Scenario**: Operating an LLM inference service processing 10 million requests per day.
 
 | Component | Value | Source |
-| :---- | :---- | :---- |
+| --- | --- | --- |
 | Daily energy (E) | 2,400 kWh | Metered consumption |
 | Carbon intensity (I) | 250 gCO2eq/kWh | Data center region |
 | Server embodied emissions | 1,500 kgCO2eq | Manufacturer data |
@@ -615,7 +615,7 @@ $$SCI = \frac{600 + 4.1}{500{,}000{,}000} = 1.21 \text{ mgCO}_2\text{eq/token}$$
 #### Crosswalk Table
 
 | EU AI Act Provision | Requirement | SCI Component | Coverage |
-| :---- | :---- | :---- | :---- |
+| --- | --- | --- | --- |
 | Recital 27 | Sustainable development principle | All | Full alignment |
 | Annex XI 1(e) | Energy consumption documentation | E | Direct match |
 | Article 40 | Resource performance standards | E, I, M, R | Exceeds requirement |
@@ -625,8 +625,8 @@ $$SCI = \frac{600 + 4.1}{500{,}000{,}000} = 1.21 \text{ mgCO}_2\text{eq/token}$$
 #### Gap Analysis: SCI Coverage Beyond EU AI Act
 
 | SCI Capability | EU AI Act Requirement | Gap Filled | Practical Limitation |
-| :---- | :---- | :---- | :---- |
-| **Carbon intensity (I)** | Not required | Converts energy to climate impact | Requires carbon intensity data sources and disclosure of methodology used.  |
+| --- | --- | --- | --- |
+| **Carbon intensity (I)** | Not required | Converts energy to climate impact | Requires carbon intensity data sources and disclosure of methodology used. |
 | **Embodied emissions (M)** | Not required | Captures hardware lifecycle | Hardware LCA data often unavailable from manufacturers |
 | **Location-specific factors** | Not required | Enables carbon-aware decisions | Adds complexity; data quality varies by region |
 | **Standardized functional units** | Not specified | Enables meaningful comparison | Different architectures may not be directly comparable |
@@ -638,102 +638,94 @@ $$SCI = \frac{600 + 4.1}{500{,}000{,}000} = 1.21 \text{ mgCO}_2\text{eq/token}$$
 
 The following template combines EU AI Act Annex XI requirements with SCI for AI metrics.
 
----
+***
 
 #### AI Model Environmental Documentation
 
 **Model Identification**
 
-- Model name: \[Name\]  
-- Version: \[Version\]  
-- Provider: \[Organization\]  
-- Documentation date: \[Date\]  
-- Reporting period: \[Start\] to \[End\]
+- Model name: [Name]  
+- Version: [Version]  
+- Provider: [Organization]  
+- Documentation date: [Date]  
+- Reporting period: [Start] to [End]
 
 **EU AI Act Annex XI 1(e) Compliance**
 
 | Metric | Value | Data Source |
-| :---- | :---- | :---- |
-| Training energy consumption | \[X\] kWh | \[Metered/Estimated\] |
-| Inference energy consumption (if applicable) | \[X\] kWh/day | \[Metered/Estimated\] |
-| Estimation methodology (if applicable) | \[Description\] | — |
+| --- | --- | --- |
+| Training energy consumption | [X] kWh | [Metered/Estimated] |
+| Inference energy consumption (if applicable) | [X] kWh/day | [Metered/Estimated] |
+| Estimation methodology (if applicable) | [Description] | — |
 
 **SCI for AI Extended Metrics**
 
-*Training Phase (Provider Boundary)*
+_Training Phase (Provider Boundary)_
 
 | Component | Value | Unit | Source |
-| :---- | :---- | :---- | :---- |
-| Energy (E) | \[X\] | kWh | \[Source\] |
-| Carbon intensity (I) | \[X\] | gCO2eq/kWh | \[Grid data source\] |
-| Operational emissions (O) | \[X\] | kgCO2eq | Calculated (E × I) |
-| Embodied emissions (M) | \[X\] | kgCO2eq | \[LCA source\] |
-| **Total emissions** | \[X\] | kgCO2eq | O \+ M |
+| --- | --- | --- | --- |
+| Energy (E) | [X] | kWh | [Source] |
+| Carbon intensity (I) | [X] | gCO2eq/kWh | [Grid data source] |
+| Operational emissions (O) | [X] | kgCO2eq | Calculated (E × I) |
+| Embodied emissions (M) | [X] | kgCO2eq | [LCA source] |
+| **Total emissions** | [X] | kgCO2eq | O + M |
 
-*Training Functional Units*
+_Training Functional Units_
 
 | Metric | Value | Unit |
-| :---- | :---- | :---- |
-| SCI per FLOP | \[X\] | gCO2eq/FLOP |
-| SCI per training token | \[X\] | gCO2eq/token |
-| SCI per parameter | \[X\] | gCO2eq/parameter |
+| --- | --- | --- |
+| SCI per FLOP | [X] | gCO2eq/FLOP |
+| SCI per training token | [X] | gCO2eq/token |
+| SCI per parameter | [X] | gCO2eq/parameter |
 
-*Inference Phase (Consumer Boundary, if applicable)*
+_Inference Phase (Consumer Boundary, if applicable)_
 
 | Component | Value | Unit | Measurement Period |
-| :---- | :---- | :---- | :---- |
-| Energy (E) | \[X\] | kWh/day | \[Period\] |
-| Carbon intensity (I) | \[X\] | gCO2eq/kWh | \[Region\] |
-| Operational emissions (O) | \[X\] | kgCO2eq/day | Calculated |
-| Embodied emissions (M) | \[X\] | kgCO2eq/day | Allocated |
+| --- | --- | --- | --- |
+| Energy (E) | [X] | kWh/day | [Period] |
+| Carbon intensity (I) | [X] | gCO2eq/kWh | [Region] |
+| Operational emissions (O) | [X] | kgCO2eq/day | Calculated |
+| Embodied emissions (M) | [X] | kgCO2eq/day | Allocated |
 
-*Inference Functional Unit*
+_Inference Functional Unit_
 
 | AI Type | Functional Unit | SCI Value |
-| :---- | :---- | :---- |
-| \[LLM/Image/etc.\] | per \[token/image/etc.\] | \[X\] gCO2eq/unit |
+| --- | --- | --- |
+| [LLM/Image/etc.] | per [token/image/etc.] | [X] gCO2eq/unit |
 
 **Methodology Notes**
 
-- Gross vs. effective values: \[Specify\]  
-- Key assumptions: \[List\]  
-- Data limitations: \[List\]  
-- Verification: \[Self-assessed/Third-party verified\]
+- Gross vs. effective values: [Specify]  
+- Key assumptions: [List]  
+- Data limitations: [List]  
+- Verification: [Self-assessed/Third-party verified]
 
 **Attestation**
 
 This documentation is prepared in accordance with EU AI Act Annex XI requirements and extended using the SCI for AI methodology (based on ISO/IEC 21031:2024).
 
-Prepared by: \[Name, Title\] Date: \[Date\]
+Prepared by: [Name, Title] Date: [Date]
 
----
+***
 
 ## References
 
 ### EU AI Act Sources
 
 1. **EU AI Act Full Text** Regulation (EU) 2024/1689 [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)  
-
 2. **Recital 27** — Environmental sustainability principle [https://artificialintelligenceact.eu/recital/27/](https://artificialintelligenceact.eu/recital/27/)  
-
 3. **Article 40** — Harmonized standards and standardisation deliverables [https://artificialintelligenceact.eu/article/40/](https://artificialintelligenceact.eu/article/40/)  
-
 4. **Article 95** — Codes of conduct for voluntary application [https://artificialintelligenceact.eu/article/95/](https://artificialintelligenceact.eu/article/95/)  
-
 5. **Annex XI** — Technical documentation for GPAI model providers [https://artificialintelligenceact.eu/annex/11/](https://artificialintelligenceact.eu/annex/11/)  
-
 6. **GPAI Code of Practice Overview** [https://artificialintelligenceact.eu/code-of-practice-overview/](https://artificialintelligenceact.eu/code-of-practice-overview/)
 
 ### SCI and Green Software Foundation Sources
 
 1. **ISO/IEC 21031:2024** — Software Carbon Intensity specification [https://www.iso.org/standard/86612.html](https://www.iso.org/standard/86612.html)  
-
 2. **SCI Specification** — Green Software Foundation [https://sci.greensoftware.foundation/](https://sci.greensoftware.foundation/)  
-
 3. **SCI for AI Specification** [https://github.com/Green-Software-Foundation/sci-ai/blob/main/SPEC.md](https://github.com/Green-Software-Foundation/sci-ai/blob/main/SPEC.md)
 
 ### Analysis and Commentary
 
 1. **White & Case** — Energy Efficiency Requirements Under the EU AI Act [https://www.whitecase.com/insight-alert/energy-efficiency-requirements-under-eu-ai-act](https://www.whitecase.com/insight-alert/energy-efficiency-requirements-under-eu-ai-act)  
-
 2. **Heinrich Böll Foundation** — EU AI Act: A Missed Opportunity for Environmental Sustainability [https://eu.boell.org/en/2024/04/08/eu-ai-act-missed-opportunity](https://eu.boell.org/en/2024/04/08/eu-ai-act-missed-opportunity)
