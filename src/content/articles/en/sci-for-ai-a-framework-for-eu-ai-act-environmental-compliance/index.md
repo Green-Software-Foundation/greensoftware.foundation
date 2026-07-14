@@ -55,7 +55,7 @@ Since AI systems rely on powerful GPUs and specialized chips that are replaced m
 
 This data is hard to track precisely. Many manufacturers don’t publish full lifecycle data, so practitioners and organizations who want to understand their impacts need to work with estimates most of the time. 
 
-### Standardized methodology
+### Standardized Methodology
 
 Companies reporting environmental data in line with the EU AI Act are allowed to use their own methods. While flexible, this approach makes the results difficult to compare. 
 
