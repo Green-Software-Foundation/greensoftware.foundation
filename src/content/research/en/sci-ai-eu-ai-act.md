@@ -218,7 +218,7 @@ This formula allocates a proportional share of hardware lifecycle emissions base
 
 SCI for AI extends the base specification to address AI-specific measurement challenges through two persona-based boundaries. 
 
-![Venn diagram illustrating the AI lifecycle shared between Provider and Consumer roles. The Provider's circle includes Scoping, Training, Benchmarking, Optimization, and Integration. The Consumer's circle includes Inference, UX, Storage, Monitoring, and Connectors. The two circles overlap in the center, representing shared responsibility across the AI lifecycle.](/assets/uploads/SCI-for-AI-EU-AI-Act-03.png)
+![Diagram titled 'AI lifecycle' showing two overlapping circles between icons for a Provider (left) and a Consumer (right). The Provider-side circle lists Scoping, Training, Optimization, Benchmarking, and Integration. The Consumer-side circle lists Inference, UX, Storage, Monitoring, and Connectors. Abstract 3D geometric shapes (cubes, pyramids, rings) fill both circles, representing the stages of building and running AI systems across the provider-consumer relationship.](/assets/uploads/SCI-for-AI-EU-AI-Act-03.png)
 
 #### Consumer Boundary
 
