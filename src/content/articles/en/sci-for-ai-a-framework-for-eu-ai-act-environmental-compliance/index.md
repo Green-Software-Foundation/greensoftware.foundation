@@ -1,6 +1,6 @@
 ---
 title: 'SCI for AI: A Framework for EU AI Act Environmental Compliance'
-teaserText: How SCI for AI supports the EU AI Act’s energy requirements and helps measure and reduce AI’s emissions.
+teaserText: How SCI for AI supports the EU AI Act’s energy requirements and helps organizations measure and reduce AI’s emissions.
 date: 2026-07-08
 published: true
 summary: In a recent whitepaper published by GSF's Software Standards Working Group, we map the ratified SCI for AI specification to the EU AI Act, showing how it helps fulfill the regulation's energy measurement requirements and goes further by converting energy into carbon emissions and accounting for embodied hardware emissions.
