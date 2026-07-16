@@ -1,0 +1,439 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import TextWithImage from "@/components/text-with-image.astro";
+import TabbedSection from "@/components/tabbed-section.astro";
+import CardGrid from "@/components/card-grid.astro";
+import Timeline from "@/components/timeline.astro";
+import CTACard from "@/components/cta-card.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Footer from "@/components/footer.astro";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+import ArticleCarousel from "@/components/article-carousel.astro";
+
+import projects from "@/data/projects.json";
+import { getCollection } from "astro:content";
+import { articleUrl } from "@/lib/utils";
+
+const siloProject = projects.find(p => p.slug === "silo");
+const parentWg = projects.find(p => p.name === siloProject?.parent);
+
+const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("silo"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map(a => ({
+    title: a.data.title,
+    description: a.data.summary || a.data.teaserText || "",
+    imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
+    href: articleUrl(a.id),
+    cta: "Read more →",
+  }));
+
+const GSF_SILO_REPO = "https://github.com/Green-Software-Foundation/silo";
+const HARDWARE_WG = "https://github.com/Green-Software-Foundation/hardware-standards-wg";
+const MEMBERSHIP_CTA = "/membership/";
+---
+
+<Layout
+  title="SILO — Sustainability Interoperability Layer for Operations | Green Software Foundation"
+  description="A standardised, vendor-neutral interoperability layer connecting data centre infrastructure and software platforms for real-time sustainability optimisation."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "Standards", href: "/standards/" },
+    { label: "SILO" },
+  ]} />
+
+  <!-- Hero -->
+  <Hero
+    badges={[
+      ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : [{ text: "A Hardware Standards Project" }]),
+      ...(siloProject?.lifecycle ? [{ text: siloProject.lifecycle, variant: "dark" as const }] : []),
+    ]}
+    heading="Sustainability Interoperability Layer"
+    headingAccent="for Operations (SILO)"
+    subtitle="A standardised, vendor-neutral interoperability layer between data centre infrastructure and software platforms."
+    body="Building on the Green Software Foundation's WDPC standard, SILO defines a common framework for collecting, normalising, and exchanging operational metrics across compute, power, cooling, networking, storage, and facility systems — enabling real-time sustainability optimisation across traditionally siloed domains."
+    ctas={[
+      { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/silo/" },
+      { text: "Back to Standards", variant: "outline", href: "/standards/" },
+    ]}
+    imageSrc="/assets/standards/wdpc/hero-illustration.svg"
+    imageAlt="SILO illustration"
+    bgClass="bg-accent-lightest-2"
+    id="overview"
+  />
+
+  <!-- Logo Marquee -->
+  <LogoMarquee
+    heading="Developed with consensus from GSF member organisations"
+  />
+
+  <!-- What is SILO? (bordered feature grid) -->
+  <FeatureGrid
+    heading="What is *SILO*?"
+    body="SILO establishes a common framework for collecting, normalising, and exchanging operational metrics across compute, power, cooling, networking, storage, and facility systems — providing a vendor-neutral foundation for real-time sustainability optimisation."
+    columns={2}
+    variant="bordered"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/standardized-icon.svg",
+        title: "Semantic Models",
+        description: "A vendor-neutral data model defining the meaning, relationships, and context of operational metrics — with common taxonomies, metadata, and engineering units for consistent interpretation.",
+      },
+      {
+        icon: "/assets/standards/wdpc/realtime-icon.svg",
+        title: "APIs",
+        description: "Standardised interfaces for discovering, querying, and streaming operational data — supporting real-time and historical access while decoupling consumers from vendor implementations.",
+      },
+      {
+        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
+        title: "Interoperability Framework",
+        description: "Normalises and translates data from diverse protocols and vendor systems into a common semantic format, validating incoming data for schema compliance, quality, and consistency.",
+      },
+      {
+        icon: "/assets/standards/wdpc/renewable-icon.svg",
+        title: "Governance",
+        description: "Defines the processes for maintaining semantic models, approving new metrics, and managing specification evolution — with versioning aligned to WDPC governance.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Why SILO Matters (heading) -->
+  <TextBlock
+    heading="Why *SILO* Matters"
+    body="Standardised access to workload, power, thermal, fluid, environmental, and facility metrics supports use cases such as adaptive cooling, dynamic workload placement, energy efficiency optimisation, predictive maintenance, heat reuse optimisation, and automated sustainability reporting — enabling coordinated decision-making across traditionally siloed domains."
+    compact
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Industry Impact -->
+  <TextWithImage
+    heading="Industry"
+    headingAccent="Impact"
+    body="By providing standardised data models, interfaces, and semantic definitions, SILO enables consistent visibility into the real-time state of both IT workloads and physical infrastructure. It serves as a vendor-neutral foundation for integrating telemetry from diverse hardware and software environments — letting data centre operators, management platforms, and optimisation engines consume and share information through a common interface."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-1.svg"
+    imageAlt="Industry impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Business Benefits -->
+  <TextWithImage
+    heading="Business"
+    headingAccent="Benefits"
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-2.svg"
+    imageAlt="Business benefits illustration"
+    reversed
+    iconFeatures={[
+      {
+        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
+        description: '<span class="font-extrabold">Adaptive Cooling</span> coordinates thermal response to real-time workload and environmental signals',
+      },
+      {
+        icon: "/assets/standards/wdpc/realtime-icon.svg",
+        description: '<span class="font-extrabold">Dynamic Workload Placement</span> routes compute to where power, cooling, and carbon conditions are most favourable',
+      },
+      {
+        icon: "/assets/standards/wdpc/infra-icon.svg",
+        description: '<span class="font-extrabold">Predictive Maintenance</span> surfaces early warning signals across facility and IT systems',
+      },
+      {
+        icon: "/assets/standards/wdpc/heat-icon.svg",
+        description: '<span class="font-extrabold">Heat Reuse Optimisation</span> coordinates waste heat delivery to district heating and other reuse pathways',
+      },
+      {
+        icon: "/assets/standards/wdpc/co2-icon.svg",
+        description: '<span class="font-extrabold">Automated Sustainability Reporting</span> standardises PUE, WUE, CUE, and emissions reporting across vendors',
+      },
+    ]}
+    iconFeaturesBgIcon="/assets/standards/wdpc/icon-bg.svg"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Environmental Impact -->
+  <TextWithImage
+    heading="Environmental"
+    headingAccent="Impact"
+    body="SILO supports standardised measurement and reporting of sustainability metrics including Power Usage Effectiveness (PUE), Water Usage Effectiveness (WUE), Carbon Usage Effectiveness (CUE), energy consumption, water consumption, and associated carbon emissions. Success is evaluated based on the availability, consistency, and interoperability of these metrics across participating systems — enabling organisations to quantify operational improvements and sustainability outcomes over time."
+    imageSrc="/assets/standards/wdpc/why-wdpc-feat-3.svg"
+    imageAlt="Environmental impact illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Complementing WDPC (Mission Card) -->
+  <section class="py-8 md:py-12 lg:py-16">
+    <div class="container">
+      <div class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 transform rounded-full bg-accent-lightest-2">
+          <img src="/assets/standards/wdpc/mission-card-up-decor.svg" class="h-12 w-16 md:h-14 md:w-24" />
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">Complementing, Not Replacing, WDPC</h3>
+          <p class="mt-3 text-lg font-medium text-primary-dark italic md:mt-4 md:text-xl">
+            Rather than replacing existing management protocols or telemetry systems, SILO plugs into the existing WDPC Data Bus and defines a common semantic layer — providing semantic models, APIs, governance, and interoperability as a foundation for future interoperability across the data centre ecosystem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture (tabbed section) -->
+  <TabbedSection
+    heading="A New Architecture for Sustainability Data"
+    tabs={[
+      {
+        value: "semantic-models",
+        heading: "Semantic Models",
+        description: "A vendor-neutral ontology and metadata framework establishing common meaning, relationships, and context for operational metrics across IT and facility domains — including canonical semantic models, cross-domain relationship definitions, normalisation rules for vendor-specific telemetry, and metadata/schema governance mechanisms.",
+        image: { src: "/assets/standards/wdpc/tabs-workloads.svg" },
+      },
+      {
+        value: "apis-interoperability",
+        heading: "APIs & Interoperability",
+        description: "Standardised interfaces for discovering, querying, and streaming operational data across heterogeneous infrastructure, decoupling consumers from vendor-specific implementations. The interoperability framework normalises and translates data from diverse protocols into a common semantic format, validating it for schema compliance, quality, and consistency.",
+        image: { src: "/assets/standards/wdpc/tabs-powergrid.svg" },
+      },
+      {
+        value: "governance",
+        heading: "Governance",
+        description: "Canonical semantic models are maintained by a SILO Technical Steering Committee composed of data centre, sustainability, and software domain experts. New metric types are introduced through a formal review and approval process, with versioning aligned to WDPC releases to ensure compatibility and coordinated ecosystem evolution.",
+        image: { src: "/assets/standards/wdpc/tabs-datacenters.svg" },
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Real-World Use Cases -->
+  <FeatureGrid
+    heading="Real-World *Use Cases*"
+    body="Standardised, real-time access to operational data unlocks coordinated decision-making across compute, power, cooling, and facility systems."
+    columns={4}
+    variant="cards"
+    features={[
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-1.svg",
+        title: "Adaptive Cooling",
+        description: "Coordinate thermal response in real time based on workload, environmental, and facility signals.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-2.svg",
+        title: "Dynamic Workload Placement",
+        description: "Route compute to locations and times where power, cooling, and carbon conditions are most favourable.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-3.svg",
+        title: "Predictive Maintenance",
+        description: "Surface early warning signals by correlating operational data across facility and IT systems.",
+      },
+      {
+        icon: "/assets/standards/wdpc/transforming-icon-4.svg",
+        title: "Automated Sustainability Reporting",
+        description: "Standardise PUE, WUE, CUE, and emissions reporting across vendors and infrastructure environments.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- SILO Audience (blog cards) -->
+  <CardGrid
+    heading="*SILO* Audience"
+    columns={3}
+    cards={[
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-1.svg",
+        icon: "/assets/standards/wdpc/blog-developers-icon.svg",
+        title: "Data Centre Operators",
+        description: "",
+        bodyHtml: "SILO gives you standardised, real-time visibility across compute, power, cooling, and facility systems — enabling adaptive cooling, dynamic workload placement, and predictive maintenance without bespoke integrations per vendor.<br/><br/>Consistent metrics mean comparable data across your fleet.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-2.svg",
+        icon: "/assets/standards/wdpc/blog-business-icon.svg",
+        title: "Software & Platform Vendors",
+        description: "",
+        bodyHtml: "SILO's standardised APIs and semantic models let you build optimisation engines and management platforms that work across heterogeneous infrastructure — without writing custom integrations for every vendor's telemetry format.<br/><br/>Build once against a common interface, deploy anywhere.",
+      },
+      {
+        imageSrc: "/assets/standards/wdpc/blog-illustration-3.svg",
+        icon: "/assets/standards/wdpc/blog-sustainability-icon.svg",
+        title: "Sustainability Teams",
+        description: "",
+        bodyHtml: "SILO standardises how PUE, WUE, CUE, energy, water, and carbon data flows through your infrastructure — giving you consistent, auditable metrics to track sustainability outcomes over time.<br/><br/>Reliable, comparable data is the foundation for credible reporting.",
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Leading the Charge -->
+  <section class="pb-12 md:pb-16 lg:pb-20">
+    <div class="container">
+      <div class="grid auto-cols-fr grid-cols-1 justify-between gap-5 lg:grid-cols-2 lg:gap-6">
+        <div class="relative flex flex-col justify-between rounded-2xl border p-6 md:p-8">
+          <img src="/assets/standards/wdpc/leading-decor.svg" class="absolute top-0 right-0 select-none pointer-events-none" />
+          <div>
+            <img src="/assets/standards/wdpc/leading-icon.svg" alt="" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Leading The Charge</h2>
+            <p class="mt-2 text-xl">Project Leadership</p>
+            <Badge className="mt-2">Actively recruiting contributors</Badge>
+            <p class="mt-4">
+              We're building this standard with input from data centre operators, infrastructure and platform vendors, and sustainability experts worldwide. Your expertise can help shape how the industry standardises real-time sustainability data for decades to come.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+              <a href="https://directory.greensoftware.foundation/projects/silo/" target="_blank" rel="noopener noreferrer">
+                <Button>Visit the Directory</Button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src="/assets/standards/wdpc/leading-illustration.svg" class="rounded-2xl object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <Timeline
+    heading="Journey to *Transformation*"
+    body="Current focus: SILO is in the proposal stage — experts, operators, and sustainability practitioners are invited to help shape its scope and requirements."
+    items={[
+      { date: "Proposal", description: "Requirements gathering from diverse stakeholders, defining scope and objectives, validating requirements.", current: true },
+      { date: "Pre-Draft", description: "Research and analysis, composing a preliminary technical specification draft." },
+      { date: "Draft", description: "Full specification with structured sections: introduction, scope, objectives, requirements, design, metrics, and compliance." },
+      { date: "Consistency Review", description: "Peer reviews, stakeholder feedback, and iterative refinement of the document." },
+      { date: "WG Approval", description: "Working group review, broader feedback incorporation, and formal sign-off." },
+      { date: "SC Ratification", description: "The Steering Committee officially approves the specification for public release." },
+      { date: "Published", description: "Public release, ongoing feedback, and maintenance. The standard is available for adoption." },
+    ]}
+  />
+
+  <!-- Dive Deeper (resources) -->
+  <section id="resources" class="py-12 md:py-18 lg:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Dive Deeper</h2>
+      <div class="mt-8 grid grid-cols-1 items-center justify-center gap-12 md:mt-10 lg:grid-cols-2 lg:gap-x-20">
+        <div class="order-2 flex w-full items-center justify-center md:order-1 lg:justify-start">
+          <img src="/assets/standards/wdpc/dive-illustration.svg" class="object-cover" />
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="grid grid-cols-1">
+            {[
+              {
+                icon: "/assets/standards/wdpc/dive-icon-1.svg",
+                title: "Contribute to the Project",
+                description: "Work on the SILO codebase — open issues, submit PRs, and collaborate on the specification.",
+                buttonLink: GSF_SILO_REPO,
+                buttonText: "View Repository",
+                badge: "GSF Members Only",
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-2.svg",
+                title: "Shape the Specification",
+                description: "Review the SILO proposal and data models; propose changes and provide technical feedback.",
+                buttonLink: GSF_SILO_REPO,
+                buttonText: "Read Specification",
+                badge: "GSF Members Only",
+              },
+              {
+                icon: "/assets/standards/wdpc/dive-icon-4.svg",
+                title: "Hardware Standards WG",
+                description: "Join the working group overseeing SILO, WDPC, and other hardware sustainability standards.",
+                buttonLink: HARDWARE_WG,
+                buttonText: "Join Working Group",
+                badge: "GSF Members Only",
+              },
+            ].map((feature) => (
+              <div class="flex flex-col items-start justify-start border-b border-primary-light/50 py-4 last:border-b-0">
+                <div class="flex w-full items-center justify-start">
+                  <div class="flex w-full items-center justify-center gap-3">
+                    <img src={feature.icon} alt="" class="h-8 w-auto" />
+                    <div class="flex w-full flex-wrap items-center justify-between gap-1">
+                      <h3 class="text-xl font-bold text-primary">{feature.title}</h3>
+                      {feature.badge && <Badge>{feature.badge}</Badge>}
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-2">{feature.description}</p>
+                <a href={feature.buttonLink} target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4">
+                  {feature.buttonText} →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <CardGrid
+    heading="Get Involved"
+    body="SILO is a path toward standardised, real-time sustainability data. We need diverse perspectives to ensure this standard serves the entire ecosystem."
+    columns={3}
+    cards={[
+      {
+        icon: "/assets/standards/wdpc/shape-icon-1.svg",
+        title: "Join the Hardware Standards Working Group (GSF Members Only)",
+        description: "Collaborate with industry leaders shaping this standard",
+        ctaText: "Subscribe",
+        ctaHref: "https://directory.greensoftware.foundation/working-groups",
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-2.svg",
+        title: "Review the Specification (GSF Members Only)",
+        description: "Review the current proposal and share your insights on GitHub",
+        ctaText: "View the Specification",
+        ctaHref: GSF_SILO_REPO,
+      },
+      {
+        icon: "/assets/standards/wdpc/shape-icon-3.svg",
+        title: "Enquire about becoming a GSF member",
+        description: "Reach out directly to the GSF team",
+        ctaText: "Get in Touch",
+        ctaHref: MEMBERSHIP_CTA,
+      },
+    ]}
+    bgClass="bg-accent-lightest-2"
+  />
+
+  {carouselArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Related Articles"
+      body="News, insights, and updates about the SILO standard."
+      articles={carouselArticles}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Shape the standards that connect sustainable software and hardware"
+    body="Our standards are developed by members working together. Join the Green Software Foundation to contribute to specifications, vote on decisions, and help set the direction for sustainable infrastructure worldwide."
+    ctaText="Get a seat at the table"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>

@@ -62,12 +62,13 @@ Most page content is hardcoded in each page's Astro file:
 
 ## Hardware Standards Pages
 
-Currently two hardware standards have dedicated pages:
+Currently three hardware standards have dedicated pages:
 
+- **SILO** — `src/pages/standards/silo/index.astro` at `/standards/silo/`
 - **WDPC** — `src/pages/standards/wdpc/index.astro` at `/standards/wdpc/`
 - **Open19** — `src/pages/standards/open19/index.astro` at `/standards/open19/`
 
-Both appear under the Hardware section in the nav (`src/lib/nav-items.ts`) and in the standards index (`src/pages/standards/index.astro`). Open19 uses WDPC's icon assets as placeholders — dedicated Open19 SVGs should be added to `public/assets/standards/open19/` once available. Articles tagged `"open19"` will automatically appear in the page carousel.
+All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 and SILO both reuse WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` and `public/assets/standards/silo/` once available. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
 
 ## Lifecycle Stages
 
