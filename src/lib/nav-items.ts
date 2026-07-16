@@ -73,6 +73,12 @@ export const navItems = [
         title: "Hardware",
         links: [
           {
+            href: "/standards/silo/",
+            label: "SILO",
+            description:
+              "Real-time interoperability layer for data centre sustainability" /* iconSrc: pi("silo"), icon: "layers" */,
+          },
+          {
             href: "/standards/wdpc/",
             label: "WDPC",
             description:
