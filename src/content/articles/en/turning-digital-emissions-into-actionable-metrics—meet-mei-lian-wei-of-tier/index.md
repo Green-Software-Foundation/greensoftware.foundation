@@ -1,6 +1,6 @@
 ---
 title: Turning Digital Emissions into Actionable Metrics—Meet Mei-Lian Wei of TIER
-teaserText: Advancing Green AI and Digital Decarbonization Across Taiwan
+teaserText: Advancing green AI and digital decarbonization across Taiwan
 date: 2026-07-16
 published: true
 summary: A new GSF member shares how they're bringing frontline green software practices to Taiwan's digital industries, from SCI pilots to carbon calculation tools.
