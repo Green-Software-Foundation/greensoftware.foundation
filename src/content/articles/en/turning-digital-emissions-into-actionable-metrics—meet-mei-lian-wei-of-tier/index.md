@@ -3,7 +3,7 @@ title: Turning Digital Emissions into Actionable Metrics—Meet Mei-Lian Wei of 
 teaserText: Advancing green AI and digital decarbonization across Taiwan.
 date: 2026-07-16
 published: true
-summary: A new GSF member shares how they're bringing frontline green software practices to Taiwan's digital industries, from SCI pilots to carbon calculation tools.
+summary: New GSF member, Mei-Lian Wei, shares how TIER brings frontline green software practices to Taiwan's digital industries, from SCI pilots to carbon calculation tools.
 mainImage: TIER-Member-Q&A.png
 mainImageAlt: 'Quote from Mei-Lian Wei (Emma), Assistant Research Fellow at the Taiwan Institute of Economic Research (TIER): "For TIER, green software is the key to translating invisible digital emissions into actionable metrics, enabling us to pioneer green digital transformation in Taiwan." GSF and TIER logos shown below.'
 featured: false
