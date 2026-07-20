@@ -21,11 +21,11 @@ Mei-Lian Wei (Emma) is an Assistant Research Fellow in the First Research Divisi
 
 ## **Can you tell us about TIER?** 
 
-[Taiwan Institute of Economic Research](https://english.tier.org.tw/eng_about/div1_vice_yu.aspx) (TIER) is Taiwan's premier independent economic and industrial think tank, founded in 1976. We deliver vital industrial research and strategic insights to government, enterprise, and academia to foster robust economic growth. TIER also serves as secretariat for the APEC Business Advisory Council (ABAC) and the Pacific Economic Cooperation Council (PECC). Our diverse research portfolio encompasses the digital economy, sustainability, finance, and ICT manufacturing, among other key sectors. 
+[Taiwan Institute of Economic Research](https://english.tier.org.tw/) (TIER) is Taiwan's premier independent economic and industrial think tank, founded in 1976. We deliver vital industrial research and strategic insights to government, enterprise, and academia to foster robust economic growth. TIER also serves as secretariat for the APEC Business Advisory Council (ABAC) and the Pacific Economic Cooperation Council (PECC). Our diverse research portfolio encompasses the digital economy, sustainability, finance, and ICT manufacturing, among other key sectors. 
 
 ## **How does environmental sustainability fit into TIER's research agenda?**
 
-In Taiwan, the government and private sector are actively pursuing a balanced path where economic growth and environmental sustainability advance hand in hand. As a trusted strategic advisor to both policymakers and industry leaders, TIER naturally integrates global and domestic sustainability frameworks into our core research. Environmental sustainability is not an isolated topic for us, but a foundational lens through which we shape future industrial policies and digital transformation. Our First Research Division, for instance, has led projects in offshore wind deployment, smart transportation systems, and EV infrastructure. 
+In Taiwan, the government and private sector are actively pursuing a balanced path where economic growth and environmental sustainability advance hand in hand. As a trusted strategic advisor to both policymakers and industry leaders, TIER naturally integrates global and domestic sustainability frameworks into our core research. Environmental sustainability is not an isolated topic for us, but a foundational lens through which we shape future industrial policies and digital transformation. Our [First Research Division](https://english.tier.org.tw/eng_about/intro_div1.aspx), for instance, has led projects in offshore wind deployment, smart transportation systems, and EV infrastructure. 
 
 ## **What does green software mean to your organisation?**
 
