@@ -353,7 +353,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
-    body="Your expertise and experience can help refine this transformative standard"
+    body="The Software Standards Working Group meets every Thursday at 15:00 UTC. We welcome all GSF members to join the call, share their perspectives, and help shape our standards together."
     columns={4}
     align="left"
     decorSrc="/assets/standards/sci-ai/shape-decor.svg"
@@ -386,6 +386,13 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
         description: "Reach out directly to the GSF team",
         ctaText: "Get in touch",
         ctaHref: "https://greensoftware.foundation/join-us",
+      },
+      {
+        icon: "/assets/standards/sci/resource-guide-icon.svg",
+        title: "Explore Related Standards",
+        description: "See all the Software standards developed by the Working Group, including SCI, SCI for AI, SEI, and SWI",
+        ctaText: "View all Software standards",
+        ctaHref: "/standards/",
       },
     ]}
     bgClass="bg-accent-lightest-2"
