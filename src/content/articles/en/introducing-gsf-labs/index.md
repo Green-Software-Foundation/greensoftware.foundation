@@ -4,8 +4,8 @@ teaserText: A shared space where the GSF prototypes tools, skills, and methodolo
 date: 2026-07-21
 published: true
 summary: GSF Labs gives the green software community a shared place to prototype, test, and contribute to emerging solutions across carbon, energy, water, and waste impact areas.
-mainImage: ../../introducing-gsf-labs/Introducing-GSF-Labs.png
-mainImageAlt: ''
+mainImage: Introducing-GSF-Labs.png
+mainImageAlt: Illustration of two scientists at a lab bench experimenting with a GSF Labs browser window, alongside icons representing servers, security, data storage, and cloud computing, symbolizing prototyping and testing in green software research.
 featured: false
 tags:
   - standards
