@@ -56,7 +56,7 @@ Our strategic direction, [From Silicon to Screen](https://greensoftware.foundati
 
 To deliver on this vision, we focus on three core areas: standards, policy, and practical implementations—delivered through Labs. 
 
-Labs is home to many implementations that build on GSF specifications, including [SCI](https://sci.greensoftware.foundation/) (ISO/IEC 21031:2024) and the SCI for AI specification. Through the reference implementations repository, we demonstrate what applying these standards looks like in practice. 
+Labs is home to many implementations that build on GSF specifications, including [SCI](https://sci.greensoftware.foundation/) (ISO/IEC 21031:2024) and the SCI for AI specification. Through the Reference Implementations repository, we demonstrate what applying these standards looks like in practice. 
 
 > “Everything we do at the GSF—standards, education, practitioner enablement, and policy—starts with understanding what practitioners need to put sustainable IT into practice. GSF Labs closes the gap between idea and adoption, letting our community experiment with emerging tools and methodologies before bringing proven approaches into their own organisations.”—Gadhu Sundaram, Chair, Green Software Foundation
 
