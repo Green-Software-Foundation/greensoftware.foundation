@@ -305,8 +305,12 @@ const resolveOrgs = (names: string[]) =>
                   <td class="px-6 py-4 font-semibold">General (&lt; 100 employees)</td>
                   <td class="px-6 py-4 text-right font-bold text-primary">$5,000</td>
                 </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General Non-Profits & Government</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
+                </tr>
                 <tr>
-                  <td class="px-6 py-4 font-semibold">Non-Profits, Academic & Government</td>
+                  <td class="px-6 py-4 font-semibold">Contributor - Universities</td>
                   <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
                 </tr>
               </tbody>
@@ -321,7 +325,8 @@ const resolveOrgs = (names: string[]) =>
               { type: "General (< 5,000 employees)", fee: "$20,000" },
               { type: "General (< 500 employees)", fee: "$10,000" },
               { type: "General (< 100 employees)", fee: "$5,000" },
-              { type: "Non-Profits, Academic & Government", fee: "Free" },
+              { type: "General Non-Profits & Government", fee: "Free" },
+              { type: "Contributor - Universities", fee: "Free" },
             ].map((item) => (
               <div class="flex items-center justify-between rounded-lg border bg-white px-5 py-4 shadow-sm">
                 <span class="font-semibold text-primary-dark text-sm">{item.type}</span>
@@ -378,8 +383,14 @@ const resolveOrgs = (names: string[]) =>
                   <td class="px-6 py-4 text-right">$5,000</td>
                   <td class="px-6 py-4 text-right font-bold text-primary">$10,000</td>
                 </tr>
+                <tr class="border-b bg-accent-lightest-1/50">
+                  <td class="px-6 py-4 font-semibold">General Non-Profits & Government</td>
+                  <td class="px-6 py-4 text-right">$0</td>
+                  <td class="px-6 py-4 text-right">$0</td>
+                  <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
+                </tr>
                 <tr>
-                  <td class="px-6 py-4 font-semibold">Non-Profits, Academic & Government</td>
+                  <td class="px-6 py-4 font-semibold">Contributor - Universities</td>
                   <td class="px-6 py-4 text-right">$0</td>
                   <td class="px-6 py-4 text-right">$0</td>
                   <td class="px-6 py-4 text-right font-bold text-primary">Free</td>
@@ -396,7 +407,8 @@ const resolveOrgs = (names: string[]) =>
               { type: "General (< 5,000)", gsf: "$20,000", lf: "$15,000", total: "$35,000" },
               { type: "General (< 500)", gsf: "$10,000", lf: "$10,000", total: "$20,000" },
               { type: "General (< 100)", gsf: "$5,000", lf: "$5,000", total: "$10,000" },
-              { type: "Non-Profits, Academic & Gov", gsf: "$0", lf: "$0", total: "Free" },
+              { type: "General Non-Profits & Government", gsf: "$0", lf: "$0", total: "Free" },
+              { type: "Contributor - Universities", gsf: "$0", lf: "$0", total: "Free" },
             ].map((item) => (
               <div class="rounded-lg border bg-white px-5 py-4 shadow-sm">
                 <p class="font-semibold text-primary-dark text-sm">{item.type}</p>
