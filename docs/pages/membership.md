@@ -53,7 +53,7 @@ Clicks on membership enquiry mailto links fire a `membership_enquiry` GA4 event 
 - **Member stories** — ProjectCards with 4 hardcoded stories (Practitioner course, SOFT, Carbon Aware SDK, SCI). Each story has hardcoded org names resolved to logos
 - **General membership benefits** — FeatureGrid (6 items)
 - **How It Works** — FeatureGrid (8-step process from first conversation to monthly reports)
-- **Fee tables** — two tables (already an LF member vs. not yet), with desktop and mobile layouts. Fees range from Free (academic/government) to $100,000 (steering)
+- **Fee tables** — two tables (already an LF member vs. not yet), with desktop and mobile layouts. Fees range from Free (general non-profits/government, and university contributors) to $100,000 (steering)
 - **CTA banner**
 
 ## How to Update
