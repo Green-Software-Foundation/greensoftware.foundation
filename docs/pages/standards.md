@@ -70,14 +70,14 @@ Currently three hardware standards have dedicated pages:
 
 All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 and SILO both reuse WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` and `public/assets/standards/silo/` once available. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
 
-### SILO's "Dive Deeper" resource links
+### SILO hero CTAs — White Paper and Companion Technical Note
 
-The SILO page's "Dive Deeper" section (`id="resources"`) is a hardcoded array of external resource links (repo, specification, working group), plus:
+The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) includes two links alongside "Visit the Directory" / "Back to Standards":
 
-- **Read the White Paper** — links out to the SILO white paper on GitHub (`SILO_WHITEPAPER` const in the page frontmatter).
+- **White Paper** — links out to the SILO white paper on GitHub (`SILO_WHITEPAPER` const at the top of the page frontmatter).
 - **Companion Technical Note** — links to the internal companion note detailing the internal interoperability layer, published as a [research collection entry](research.md) at `/policy/research/silo-companion-technical-note/` (`SILO_COMPANION_NOTE` const).
 
-To update either link, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro`. Entries default to opening external links in a new tab (`target="_blank"`); set `external: false` on an entry to link internally in the same tab, as the companion note entry does.
+To update either link, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro` and its entry in the `ctas` array passed to `<Hero />`.
 
 ## Lifecycle Stages
 

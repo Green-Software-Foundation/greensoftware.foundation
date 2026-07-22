@@ -77,6 +77,8 @@ const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
     ctas={[
       { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/silo/" },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
+      { text: "White Paper", variant: "outline", href: SILO_WHITEPAPER },
+      { text: "Companion Technical Note", variant: "outline", href: SILO_COMPANION_NOTE },
     ]}
     imageSrc="/assets/standards/wdpc/hero-illustration.svg"
     imageAlt="SILO illustration"
@@ -365,22 +367,6 @@ const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
                 buttonText: "Join Working Group",
                 badge: "GSF Members Only",
               },
-              {
-                icon: "/assets/standards/wdpc/dive-icon-1.svg",
-                title: "Read the White Paper",
-                description: "Bridging the Sustainability Gap — the SILO white paper describing the external interface between data centres and the grid.",
-                buttonLink: SILO_WHITEPAPER,
-                buttonText: "Read the White Paper",
-                external: true,
-              },
-              {
-                icon: "/assets/standards/wdpc/dive-icon-2.svg",
-                title: "Companion Technical Note",
-                description: "Completing the Architecture — a companion note detailing the internal interoperability layer that complements the white paper's external interface.",
-                buttonLink: SILO_COMPANION_NOTE,
-                buttonText: "Read the Companion Note",
-                external: false,
-              },
             ].map((feature) => (
               <div class="flex flex-col items-start justify-start border-b border-primary-light/50 py-4 last:border-b-0">
                 <div class="flex w-full items-center justify-start">
@@ -393,12 +379,7 @@ const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
                   </div>
                 </div>
                 <p class="mt-2">{feature.description}</p>
-                <a
-                  href={feature.buttonLink}
-                  target={feature.external === false ? undefined : "_blank"}
-                  rel={feature.external === false ? undefined : "noopener noreferrer"}
-                  class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4"
-                >
+                <a href={feature.buttonLink} target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4">
                   {feature.buttonText} →
                 </a>
               </div>
