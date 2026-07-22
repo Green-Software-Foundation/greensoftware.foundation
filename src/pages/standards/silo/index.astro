@@ -41,6 +41,8 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
 const GSF_SILO_REPO = "https://github.com/Green-Software-Foundation/silo";
 const HARDWARE_WG = "https://github.com/Green-Software-Foundation/hardware-standards-wg";
 const MEMBERSHIP_CTA = "/membership/";
+const SILO_WHITEPAPER = "https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Interoperability%20Layer%20for%20Real-Time%20Data%20Centre%20Sustainability%20Optimisation.md";
+const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
 ---
 
 <Layout
@@ -75,6 +77,8 @@ const MEMBERSHIP_CTA = "/membership/";
     ctas={[
       { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/silo/" },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
+      { text: "White Paper", variant: "outline", href: SILO_WHITEPAPER },
+      { text: "Companion Technical Note", variant: "outline", href: SILO_COMPANION_NOTE },
     ]}
     imageSrc="/assets/standards/wdpc/hero-illustration.svg"
     imageAlt="SILO illustration"

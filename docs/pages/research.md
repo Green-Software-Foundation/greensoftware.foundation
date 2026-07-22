@@ -83,3 +83,7 @@ Same as articles — setting `published: false` hides from listings, shows a dra
 ## Also appears on
 
 Research papers are also shown on the [Policy & Research page](policy.md) in hardcoded cards (4 publications) — those are separate from this content collection and require a code change to update.
+
+## Cross-links from standards pages
+
+A standards page can link to a research entry as a supporting resource. For example, the [SILO standards page](standards.md#silo-hero-ctas--white-paper-and-companion-technical-note) links to `silo-companion-technical-note.md` (`/policy/research/silo-companion-technical-note/`) as a companion to the external SILO white paper, from its hero CTA row. There is no automatic cross-link in either direction beyond the `workingGroup` slug — the standards page must link to the research entry's URL explicitly.
