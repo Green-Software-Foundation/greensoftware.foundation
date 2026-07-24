@@ -17,7 +17,7 @@ lang: en
 
 Most enterprises running agentic AI are having two parallel conversations about it. Finance asks: what is this costing us, and what are we getting back? Sustainability asks: what is this costing the environment, and how will we report it?
 
-In conventional software, they often stay separate. In agentic AI, they are increasingly becoming one conversation. 
+In conventional software, these conversations often stay separate. In agentic AI, they are increasingly becoming one conversation. 
 
 The waste behind an unexpectedly high cloud bill—overly broad prompts, oversized models for simple steps, unbounded retry loops, and sprawling memory contexts—is the same waste that increases energy use and carbon emissions. In water-stressed regions, it also shows up in the cooling water disclosures. That convergence gives organizations a rare opportunity: the same decisions can reduce cost, emissions, and reporting complexity.
 
