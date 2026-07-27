@@ -3,7 +3,7 @@ title: The Economics of Green and Efficient Agentic AI
 teaserText: Notes from the Executive Director, Green Software Foundation
 date: 2026-07-23
 published: true
-summary: Navveen Balani, Executive Director of the GSF, explores how, in agentic AI, the same choices that control cost can also reduce emissions and make environmental impact more transparent, turning green AI into a shared discipline rather than a separate sustainability agenda.
+summary: Navveen Balani, Executive Director of the GSF, explores how the same choices that control costs can also reduce AI emissions and improve transparency., turning green AI into a shared discipline rather than a separate sustainability agenda.
 mainImage: The-Economics-of-Green-and-Efficient-Agentic-AI.png
 mainImageAlt: Illustration on a dark background split into green and teal halves, connected by a coin-shaped disc with a leaf on one face. On the green side, a person holds a tablet surrounded by leaf, water droplet, and circuit icons, with a glowing leaf emblem behind them. On the teal side, a person holds a tablet surrounded by chart, pie graph, and upward-trend icons, with a glowing dollar-sign emblem behind them. The Green Software Foundation logo appears in the bottom left.
 featured: false
@@ -63,7 +63,7 @@ SCI is designed to encourage genuine reductions rather than reliance on offsets.
 
 In practical terms, that means the next time a board asks how a major AI workload is performing on cost and on emissions, the answer can be drawn from the same measurement framework and traced to specific design choices. That is what credible disclosure looks like in practice—not a separate sustainability exercise, but a single, defensible view of how the workload is running.
 
-The Foundation is extending this work to other resources that matter for AI at scale: the [Software Energy Intensity specification](https://greensoftware.foundation/standards/sei/) is under active development, and a water-usage effectiveness standard is next in the pipeline. 
+The Foundation is extending this work to other resources that matter for AI at scale: the [Software Energy Intensity specification](https://greensoftware.foundation/standards/sei/) is under active development, and a [water-usage effectiveness standard](https://greensoftware.foundation/standards/swi/) is next in the pipeline. 
 
 ## **Why This Is a Leadership Issue**
 
