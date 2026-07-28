@@ -1,0 +1,470 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/showcase.astro";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import DraftBanner from "@/components/draft-banner.astro";
+import { navItems } from "@/lib/nav-items";
+
+export async function getStaticPaths() {
+  const academics = await getCollection("academics");
+  return academics.map((academic) => ({
+    params: { slug: academic.id },
+    props: { academic },
+  }));
+}
+
+const { academic } = Astro.props;
+const {
+  name,
+  title,
+  institution,
+  institutionUrl,
+  institutionLogos = [],
+  summary,
+  researchMission,
+  aboutParagraphs = [],
+  sdgAlignment = [],
+  keyAreas = [],
+  collaborationAreas = [],
+  affiliations = [],
+  recognition = [],
+  publications = {},
+  stats = [],
+  links = [],
+} = academic.data;
+
+const resolvedLinks = links
+  .filter(l => !!l.url && l.url !== "" && l.url !== "[to be added]")
+  .map(l => ({ label: l.label, url: l.url as string, group: l.group ?? "other" }));
+
+// Separate social/profile links for the hero strip
+const heroLinks = resolvedLinks.filter(l => l.group === "profile");
+
+// Group all links by category for the further reading section
+const groupOrder = ["profile", "research", "institutional", "books", "appearances", "other"];
+const groupLabels: Record<string, string> = {
+  profile: "Profile & CV",
+  research: "Research Output",
+  institutional: "Institutional Affiliations",
+  books: "2025 Books",
+  appearances: "Recent Appearances",
+  other: "Further Links",
+};
+
+const linkGroups = groupOrder
+  .map(g => ({
+    id: g,
+    label: groupLabels[g] ?? g,
+    items: resolvedLinks.filter(l => l.group === g),
+  }))
+  .filter(g => g.items.length > 0);
+
+// Publication stats for the stats strip
+const fallbackStats: { value: string; label: string }[] = [];
+if (publications.peerReviewed) fallbackStats.push({ value: publications.peerReviewed.split("+")[0] + "+", label: "Peer-reviewed publications" });
+if (publications.patents) fallbackStats.push({ value: publications.patents.split("+")[0] + "+", label: "Patents" });
+if (publications.citations) fallbackStats.push({ value: publications.citations.split("+")[0] + "+", label: "Google Scholar citations" });
+const displayStats = stats.length > 0 ? stats : fallbackStats;
+
+const lastName = name.split(" ").at(-1) ?? name;
+const bookLinks = links.filter(l => l.group === "books" && l.url);
+
+function parseLinks(text: string): string {
+  return text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-primary transition-colors">$1</a>'
+  );
+}
+---
+
+<Layout
+  title={`${name} — Academic Member | Green Software Foundation`}
+  description={summary}
+  noindex={academic.data.published === false}
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  {academic.data.published === false && <DraftBanner />}
+
+  <div {...(academic.data.published !== false && { "data-pagefind-body": "" })}>
+
+    <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+    <div class="bg-primary-darker text-white">
+      <div class="container pt-10 pb-0 md:pt-14">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-white/60">
+            <li>
+              <a href="/" class="hover:text-white transition-colors flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="text-white/30">/</li>
+            <li><a href="/academics/" class="hover:text-white transition-colors">Academics</a></li>
+            <li class="text-white/30">/</li>
+            <li class="text-white/80 truncate max-w-[300px]">{name}</li>
+          </ol>
+        </nav>
+
+        <!-- Two-column: bio left, institution logos right -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 pb-10 md:pb-14">
+
+          <!-- Left: name, title, summary, links -->
+          <div class="lg:col-span-3">
+            <span class="inline-block bg-accent/20 text-accent font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5">Academic Member</span>
+            <h1 class="font-extrabold text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-tight mb-4">{name}</h1>
+            <p class="text-base md:text-lg text-white/85 font-semibold leading-snug mb-2">{title}</p>
+            <p class="text-white/55 mb-6 text-sm">
+              {institutionUrl ? (
+                <a href={institutionUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors hover:underline underline-offset-2">
+                  {institution}
+                </a>
+              ) : institution}
+            </p>
+            <p class="text-sm md:text-base text-white/75 leading-relaxed mb-8 max-w-xl">{summary}</p>
+
+            {heroLinks.length > 0 && (
+              <div class="flex flex-wrap gap-2">
+                {heroLinks.map((link) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/50 rounded-full px-4 py-1.5 transition-all"
+                  >
+                    {link.label}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- Right: institution logos — prominent cards -->
+          {institutionLogos.length > 0 && (
+            <div class="lg:col-span-2 flex flex-col justify-center gap-4">
+              <p class="text-xs font-bold uppercase tracking-widest text-white/40">Research Institutions</p>
+              {institutionLogos.map((inst) => (
+                <a
+                  href={inst.url ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex items-center gap-4 rounded-2xl bg-white/8 hover:bg-white/14 border border-white/12 hover:border-white/30 px-5 py-4 transition-all"
+                >
+                  {inst.logo && (
+                    <div class="w-24 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
+                      <img src={inst.logo} alt={inst.name} class="w-full h-full object-contain p-2" />
+                    </div>
+                  )}
+                  <div class="flex-1 min-w-0">
+                    <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors leading-snug block">{inst.name}</span>
+                    <span class="text-xs text-white/40 group-hover:text-white/60 transition-colors flex items-center gap-1 mt-0.5">
+                      Visit institution
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <!-- Full-width stats bar -->
+        {displayStats.length > 0 && (
+          <div class="border-t border-white/15 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {displayStats.map((stat) => (
+              <div class="px-6 py-5 text-center">
+                <p class="font-extrabold text-accent text-3xl md:text-4xl leading-none mb-1">{stat.value}</p>
+                <p class="text-xs text-white/50 leading-snug">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+      </div>
+    </div>
+
+    <!-- ── Research Mission + About (with Books in left column) ─────────────── -->
+    {(researchMission || aboutParagraphs.length > 0) && (
+      <div class="bg-white">
+        <div class="container py-14 md:py-20">
+          <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+
+            <!-- Left: Research Mission + SDG + Books -->
+            <div>
+              {researchMission && (
+                <div class="mb-8">
+                  <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">Research Mission</p>
+                  <div class="bg-primary/5 border-l-4 border-primary rounded-r-xl px-6 py-5">
+                    <p class="text-base text-primary-dark leading-relaxed italic">{researchMission}</p>
+                  </div>
+                </div>
+              )}
+
+              {sdgAlignment.length > 0 && (
+                <div class="mb-8">
+                  <p class="text-accent font-bold text-xs uppercase tracking-widest mb-3">SDG Alignment</p>
+                  <div class="flex flex-wrap gap-2">
+                    {sdgAlignment.map((sdg) => (
+                      <span class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs">
+                        <span class="font-bold text-primary">SDG {sdg.number}</span>
+                        <span class="text-gray-darker">{sdg.title}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {bookLinks.length > 0 && (
+                <div>
+                  <div class="flex flex-wrap items-baseline gap-2 mb-3">
+                    <p class="text-accent font-bold text-xs uppercase tracking-widest">2025 Books</p>
+                    <span class="text-xs text-gray-darker">Springer Nature · Foreword by <strong class="font-semibold text-primary">Nassim Taleb</strong></span>
+                  </div>
+                  <div class="space-y-3">
+                    {bookLinks.map((book) => (
+                      <a
+                        href={book.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex gap-3 rounded-xl bg-accent-lightest-2 border border-border p-3.5 hover:border-primary/40 hover:shadow-sm transition-all"
+                      >
+                        <div class="flex-none w-14 rounded-md overflow-hidden shadow-sm border border-border shrink-0">
+                          {book.cover ? (
+                            <img src={book.cover} alt={book.label} class="w-full h-auto object-cover block" />
+                          ) : (
+                            <div class="w-14 h-20 bg-primary/10 flex items-center justify-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            </div>
+                          )}
+                        </div>
+                        <div class="flex-1 min-w-0 flex flex-col justify-between">
+                          <p class="font-bold text-sm text-primary-dark group-hover:text-primary transition-colors leading-snug mb-1.5">{book.label}</p>
+                          <p class="text-xs text-gray-darker">Foreword by <span class="font-semibold text-primary">Nassim Taleb</span></p>
+                          <p class="text-xs text-primary flex items-center gap-1 mt-2 font-medium">
+                            springer.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                          </p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <!-- Right: About paragraphs -->
+            <div>
+              <p class="text-accent font-bold text-xs uppercase tracking-widest mb-4">About</p>
+              {aboutParagraphs.length > 0 && (
+                <div class="space-y-5">
+                  {aboutParagraphs[0] && (
+                    <p class="text-base md:text-lg font-semibold text-primary-dark leading-relaxed border-l-4 border-primary pl-4" set:html={parseLinks(aboutParagraphs[0])} />
+                  )}
+                  {aboutParagraphs.slice(1, aboutParagraphs.length > 2 ? -1 : undefined).map((para) => (
+                    <p class="text-sm md:text-base text-gray-darker leading-relaxed" set:html={parseLinks(para)} />
+                  ))}
+                  {aboutParagraphs.length >= 3 && (
+                    <div class="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4">
+                      <p class="text-sm md:text-base text-primary-dark leading-relaxed" set:html={parseLinks(aboutParagraphs[aboutParagraphs.length - 1])} />
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Key Areas of Expertise ─────────────────────────────────────────────── -->
+    {keyAreas.length > 0 && (
+      <div class="bg-accent-lightest-2">
+        <div class="container py-10 md:py-14">
+          <div class="flex items-baseline gap-4 mb-6">
+            <p class="text-accent font-bold text-xs uppercase tracking-widest">Key Areas of</p>
+            <h2 class="text-xl font-extrabold text-primary">Expertise</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {keyAreas.map((area) => (
+              <div class="rounded-lg border bg-white p-5 shadow-sm">
+                <h3 class="text-base font-bold text-primary mb-2">{area.title}</h3>
+                <p class="text-sm text-gray-darker leading-relaxed" set:html={parseLinks(area.description)} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Collaboration Areas ────────────────────────────────────────────────── -->
+    {collaborationAreas.length > 0 && (
+      <div class="bg-white">
+        <div class="container py-10 md:py-14">
+          <div class="max-w-4xl mx-auto">
+            <div class="flex items-baseline gap-4 mb-2">
+              <p class="text-accent font-bold text-xs uppercase tracking-widest">Where This Work Connects</p>
+            </div>
+            <h2 class="font-extrabold text-2xl md:text-3xl text-primary leading-tight mb-1">
+              Areas for Collaboration
+            </h2>
+            <p class="text-sm text-gray-darker mb-8">
+              How {lastName}'s work directly connects to GSF initiatives
+            </p>
+
+            <div class="space-y-4">
+              {collaborationAreas.map((area, index) => (
+                <div class="flex gap-4 rounded-xl bg-accent-lightest-2 border border-border p-5">
+                  <div class="flex-none w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="font-extrabold text-white text-xs">{index + 1}</span>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-bold text-base text-primary mb-1 leading-snug">{area.title}</h3>
+                    {area.relevance && (
+                      <p class="text-accent-darker font-extrabold text-xs uppercase tracking-widest mb-2">{area.relevance}</p>
+                    )}
+                    <p class="text-sm text-gray-darker leading-relaxed" set:html={parseLinks(area.body)} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Affiliations & Recognition ────────────────────────────────────────── -->
+    {(affiliations.length > 0 || recognition.length > 0) && (
+      <div class="bg-accent-lightest-2">
+        <div class="container py-10 md:py-14">
+          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+            {affiliations.length > 0 && (
+              <div>
+                <p class="text-accent font-bold text-xs uppercase tracking-widest mb-4">Affiliations & Leadership</p>
+                <ul class="space-y-1">
+                  {affiliations.map((affiliation) => (
+                    <li>
+                      {affiliation.url ? (
+                        <a
+                          href={affiliation.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-start gap-3 rounded-lg p-2.5 hover:bg-white hover:shadow-sm transition-all group"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span class="text-sm leading-relaxed text-gray-darker group-hover:text-primary transition-colors flex-1">{affiliation.label}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/30 group-hover:text-primary transition-colors shrink-0 mt-1"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      ) : (
+                        <div class="flex items-start gap-3 px-2.5 py-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary mt-0.5 flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                          <span class="text-gray-darker text-sm leading-relaxed">{affiliation.label}</span>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {recognition.length > 0 && (
+              <div>
+                <p class="text-accent font-bold text-xs uppercase tracking-widest mb-4">Experience & Background</p>
+                <ul class="space-y-1">
+                  {recognition.map((item) => (
+                    <li>
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-start gap-3 rounded-lg p-2.5 hover:bg-white hover:shadow-sm transition-all group"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+                          <span class="text-sm leading-relaxed text-gray-darker group-hover:text-primary transition-colors flex-1">{item.label}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/30 group-hover:text-primary transition-colors shrink-0 mt-1"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      ) : (
+                        <div class="flex items-start gap-3 px-2.5 py-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-accent-dark mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+                          <span class="text-gray-darker text-sm leading-relaxed">{item.label}</span>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── Further Reading & Links ────────────────────────────────────────────── -->
+    {linkGroups.length > 0 && (
+      <div class="bg-white">
+        <div class="container py-10 md:py-14">
+          <div class="max-w-4xl mx-auto">
+            <div class="flex items-baseline gap-4 mb-6">
+              <p class="text-accent font-bold text-xs uppercase tracking-widest">Further Reading</p>
+              <h2 class="text-xl font-extrabold text-primary leading-tight">
+                Dr. {lastName}'s Work and Institutional Presence
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {linkGroups.map((group) => (
+                <div>
+                  <h3 class="font-bold text-xs uppercase tracking-wide text-gray-darker mb-3 pb-2 border-b border-border">
+                    {group.label}
+                  </h3>
+                  <ul class="space-y-1">
+                    {group.items.map((link) => (
+                      <li>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-center justify-between gap-2 rounded-md px-2 py-1.5 hover:bg-accent-lightest-2 transition-colors group"
+                        >
+                          <span class="font-medium text-sm text-primary-dark group-hover:text-primary transition-colors">
+                            {link.label}
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary/40 group-hover:text-primary transition-colors shrink-0"><path d="M7 7h10v10M7 17L17 7"/></svg>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- ── CTA Banner ─────────────────────────────────────────────────────────── -->
+    <CTABanner
+      heading="Interested in Collaboration?"
+      body="Get in touch with the Green Software Foundation to explore research partnerships and opportunities."
+      ctaText="Contact GSF"
+      ctaHref="/contact/"
+    />
+
+  </div>
+
+  <Footer />
+</Layout>
