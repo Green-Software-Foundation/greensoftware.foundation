@@ -21,6 +21,13 @@ import { articleUrl } from "@/lib/utils";
 const sweProject = projects.find(p => p.slug === "swe");
 const parentWg = projects.find(p => p.name === sweProject?.parent);
 
+// Chair before Vice Chair before other lead roles, regardless of Notion query order
+function leadRoleRank(roleLabel: string): number {
+  if (/chair/i.test(roleLabel) && !/vice/i.test(roleLabel)) return 0;
+  if (/vice.?chair/i.test(roleLabel)) return 1;
+  return 2;
+}
+
 const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
   .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("swe"))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
@@ -184,10 +191,12 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
       body={parentWg ? `Part of the ${parentWg.name}` : ""}
       columns={sweProject.leads.length === 2 ? 2 : 3}
       highlighted={[]}
-      members={sweProject.leads.map(lead => ({
-        fullName: lead.fullName,
-        role: lead.roleLabel,
-      }))}
+      members={[...sweProject.leads]
+        .sort((a, b) => leadRoleRank(a.roleLabel) - leadRoleRank(b.roleLabel))
+        .map(lead => ({
+          fullName: lead.fullName,
+          role: lead.roleLabel,
+        }))}
       bgClass="bg-white"
     />
   )}
