@@ -106,10 +106,14 @@ Person data for subscription-based people (name, title, LinkedIn, member org) is
 | `Project Co-Lead` | Co-Lead |
 | `Chair` | Project Lead (Chair) |
 | `Vice Chair` | Vice Chair |
+| `Project Chair` | Project Lead (Chair) |
+| `Project Vice Chair` | Vice Chair |
 | `Committee Chair` | Chair |
 | `Committee Vice-Chair` | Vice-Chair |
 
-When a project has multiple "Project Lead" subscriptions and needs to distinguish a Chair from a Vice Chair (as opposed to two equal leads), set one person's `Role for Subscription` to `Chair` and the other's to `Vice Chair` rather than leaving both as `Project Lead`.
+When a project has multiple "Project Lead" subscriptions and needs to distinguish a Chair from a Vice Chair (as opposed to two equal leads), set one person's `Role for Subscription` to `Project Chair` and the other's to `Project Vice Chair` rather than leaving both as `Project Lead`.
+
+**Careful when picking a value in Notion's select field:** typing a value that isn't an exact match for an existing option silently creates a *new* option instead of reusing one — this is how `Chair`/`Vice Chair`/`Project Chair`/`Project Vice Chair` all ended up coexisting as separate, easily-confused options. Always pick from the existing dropdown list rather than retyping the text. `Project Chair` and `Project Vice Chair` are the canonical values to use going forward; `Chair` and `Vice Chair` are kept mapped for compatibility but are unused stray options that could be deleted from the Notion schema.
 
 ### Volunteers DB
 
