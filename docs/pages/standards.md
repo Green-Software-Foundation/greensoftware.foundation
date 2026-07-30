@@ -15,7 +15,7 @@ Each standards page is a long-form landing page for a specific GSF standard/proj
 - **Project metadata** — imported from `src/data/projects.json`. Each page looks up its project by slug (e.g. `projects.find(p => p.slug === "sci")`)
 - **Lifecycle stage** — displayed as a badge in the hero, read from `projects.json`
 - **Parent working group** — resolved from `projects.json` to show "A [WG Name] Project"
-- **Project leads** — the `leads` array from `projects.json` provides `fullName` and `roleLabel`
+- **Project leads** — the `leads` array from `projects.json` provides `fullName` and `roleLabel`. Notion's query order isn't guaranteed, so pages that need a deterministic display order (e.g. Chair before Vice Chair) should sort the array by `roleLabel` in the page itself rather than relying on array order — see the `leadRoleRank()` helper in `src/pages/standards/swi/index.astro`
 
 See [Notion doc](../notion.md) for how `projects.json` is populated from the PWCIs database.
 
