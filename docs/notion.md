@@ -95,6 +95,22 @@ Person data for subscription-based people (name, title, LinkedIn, member org) is
 - `Subscription Status` (select) — must be "Active"
 - Roll-up fields: `First Name`, `Surname`, `Title`, `LinkedIn`, `Member`, `Volunteer Status`
 
+#### Distinguishing leadership on a standards page (e.g. Chair vs Vice Chair)
+
+`fetchChairsAndLeads()` in `scripts/fetch-notion-data.cjs` maps `Role for Subscription` values to the `roleLabel` shown next to a project lead's name in `projects.json` (consumed by `TeamGrid` on standards pages):
+
+| Role for Subscription | roleLabel shown on site |
+|---|---|
+| `Working Group Chair` | Chair |
+| `Project Lead` | Lead |
+| `Project Co-Lead` | Co-Lead |
+| `Chair` | Project Lead (Chair) |
+| `Vice Chair` | Vice Chair |
+| `Committee Chair` | Chair |
+| `Committee Vice-Chair` | Vice-Chair |
+
+When a project has multiple "Project Lead" subscriptions and needs to distinguish a Chair from a Vice Chair (as opposed to two equal leads), set one person's `Role for Subscription` to `Chair` and the other's to `Vice Chair` rather than leaving both as `Project Lead`.
+
 ### Volunteers DB
 
 - `First Name`, `Last Name` (rich text)
