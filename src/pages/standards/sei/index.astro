@@ -18,11 +18,11 @@ import ArticleCarousel from "@/components/article-carousel.astro";
 import projects from "@/data/projects.json";
 import { getCollection } from "astro:content";
 import { articleUrl } from "@/lib/utils";
-const seeProject = projects.find(p => p.slug === "see");
-const parentWg = projects.find(p => p.name === seeProject?.parent);
+const seiProject = projects.find(p => p.slug === "sei");
+const parentWg = projects.find(p => p.name === seiProject?.parent);
 
 const carouselArticles = (await getCollection("articles", (a) => a.data.published !== false))
-  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("see"))
+  .filter(a => (a.data.tags || []).map((t: string) => t.toLowerCase()).includes("sei"))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
   .map(a => ({
     title: a.data.title,
@@ -56,7 +56,7 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <Hero
     badges={[
       ...(parentWg ? [{ text: `A ${parentWg.name} Project` }] : []),
-      ...(seeProject?.lifecycle ? [{ text: seeProject.lifecycle, variant: "dark" as const }] : []),
+      ...(seiProject?.lifecycle ? [{ text: seiProject.lifecycle, variant: "dark" as const }] : []),
     ]}
     heading="Measure the Energy Intensity of"
     headingAccent="Your Software"
@@ -211,9 +211,9 @@ const carouselArticles = (await getCollection("articles", (a) => a.data.publishe
   <TeamGrid
     heading="Project *Leadership*"
     body={parentWg ? `Part of the ${parentWg.name}` : ""}
-    columns={seeProject?.leads?.length === 2 ? 2 : 3}
+    columns={seiProject?.leads?.length === 2 ? 2 : 3}
     highlighted={[]}
-    members={(seeProject?.leads ?? []).map(lead => ({
+    members={(seiProject?.leads ?? []).map(lead => ({
       fullName: lead.fullName,
       role: lead.roleLabel,
     }))}
