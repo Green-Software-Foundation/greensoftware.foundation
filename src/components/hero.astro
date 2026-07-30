@@ -34,6 +34,14 @@ interface Props {
   badge?: string;
   /** Multiple badges shown above the heading */
   badges?: { text: string; variant?: "default" | "dark" }[];
+  /** Short bridging line between the body and the CTAs (e.g. "Making that real takes four things.") */
+  ctaLeadIn?: string;
+  /**
+   * CTA layout. "wrap" (default) is a flex-wrap row — right for one or two CTAs.
+   * "grid" lays them out 2×2, going 4-across at xl, so a set of four never
+   * orphans a single button on its own row.
+   */
+  ctaLayout?: "wrap" | "grid";
 }
 
 const {
@@ -50,6 +58,8 @@ const {
   badge,
   badges = [],
   imageClass,
+  ctaLeadIn,
+  ctaLayout = "wrap",
 } = Astro.props;
 ---
 
@@ -94,11 +104,26 @@ const {
         )}
         <p class="mt-5 text-lg font-normal md:mt-6 md:text-xl lg:text-2xl" set:html={body}>
         </p>
+        {ctaLeadIn && (
+          <p class="mt-5 text-lg font-semibold md:mt-6 md:text-xl">
+            {ctaLeadIn}
+          </p>
+        )}
         {ctas.length > 0 && (
-          <div class="mt-6 flex flex-wrap gap-4 md:mt-8">
+          <div class:list={[
+            ctaLeadIn ? "mt-4 md:mt-5" : "mt-6 md:mt-8",
+            ctaLayout === "grid"
+              ? "grid grid-cols-2 gap-4 xl:grid-cols-4"
+              : "flex flex-wrap gap-4",
+          ]}>
             {ctas.map((cta) => (
-              <a href={cta.href || "#"}>
-                <Button variant={cta.variant || "default"}>{cta.text}</Button>
+              <a href={cta.href || "#"} class={ctaLayout === "grid" ? "w-full" : undefined}>
+                <Button
+                  variant={cta.variant || "default"}
+                  className={ctaLayout === "grid" ? "w-full" : undefined}
+                >
+                  {cta.text}
+                </Button>
               </a>
             ))}
           </div>

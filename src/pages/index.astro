@@ -9,6 +9,7 @@ import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
 import LogoMarquee from "@/components/logo-marquee.astro";
 import SplitCards from "@/components/split-cards.astro";
+import TextWithImage from "@/components/text-with-image.astro";
 
 import TabbedSection from "@/components/tabbed-section.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
@@ -65,16 +66,33 @@ const featuredArticles = allArticles
   />
 
   <Hero
+    heading="Sustainable technology, from"
+    headingAccent="silicon to screen"
+    body="Software, and the hardware it runs on, designed, built, and operated to minimize its carbon emissions, energy consumption, water usage, and waste across every layer of the technology stack, from silicon to screen"
+    ctaLeadIn="Making that real takes four things."
+    ctaLayout="grid"
+    ctas={[
+      { text: "Standards", variant: "outline", href: "/standards/" },
+      { text: "Policy", variant: "outline", href: "/policy/" },
+      { text: "Education", variant: "outline", href: "/education/" },
+      { text: "Community", variant: "outline", href: "/community/" },
+    ]}
+    imageSrc="/assets/silicon-to-screen.webp"
+    imageAlt="The technology stack from silicon to screen, shown as layered planes from chip-level hardware up to the user interface"
+    bgClass="bg-accent-lightest-2"
+    id="hero"
+  />
+
+  <!-- Peer collaboration — the membership proposition (was the hero until the silicon-to-screen reorder) -->
+  <TextWithImage
     heading="The sustainability challenges you're solving alone?"
     headingAccent="Your peers are solving together"
     body="The GSF is where member organizations, from tech giants to financial institutions, collaborate on the standards, strategies, and solutions that none of them could build alone"
-    ctas={[
-      { text: "Discuss your challenges with us", variant: "primary", href: "/membership/" },
-    ]}
+    ctaText="Discuss your challenges with us"
+    ctaHref="/membership/"
     imageSrc="/assets/hero-illustration-new.svg"
     imageAlt="Hero illustration"
-    bgClass="bg-accent-lightest-2"
-    id="hero"
+    reversed
   />
 
   <!-- Section 2: Logo Marquee -->

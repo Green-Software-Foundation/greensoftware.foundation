@@ -51,6 +51,7 @@ The site has three layers of documentation: **system docs** (how the data pipeli
 
 ### Pages
 
+- [Homepage](docs/pages/homepage.md) — section order, featured articles, org logo resolution
 - [Articles](docs/pages/articles.md) — article listing, detail pages, frontmatter, translations, draft mode
 - [Research & White Papers](docs/pages/research.md) — whitepapers, consultation responses, working groups
 - [Standards](docs/pages/standards.md) — individual standard pages (SCI, RTC, etc.)
