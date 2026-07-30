@@ -1,5 +1,58 @@
 # Development Log — GSF Website
 
+## 2026-07-30 - Homepage: "From Silicon to Screen" Becomes the Lead Message
+
+**Objective**: Bring the "from silicon to screen" tagline and the green software definition onto the homepage from a prototype mockup, and promote it to the lead message ahead of the peer-collaboration pitch.
+
+### What We Built
+
+- **New hero** — "Sustainable technology, from *silicon to screen*" is now the page `<h1>`, with the green software definition as its body and four CTAs for the GSF's four functions: Standards (filled, `/standards/`), Policy & Research (`/policy/`), Education & Certification (`/education/`), Community & Ecosystem (`/community/`). Uses the existing `Hero` component, so it gets the `text-3xl md:text-4xl lg:text-5xl` heading and `loading="eager"` image treatment. Final copy: "Software, and the hardware it runs on, designed, built, and operated to minimize its carbon emissions, energy consumption, water usage, and waste across every layer of the technology stack, from silicon to screen" — the tagline repeats at the end of the body by design.
+- **Membership pitch demoted to section 2** — "The sustainability challenges you're solving alone? / Your peers are solving together" moved below the hero as a `reversed` `TextWithImage`, keeping its illustration and its `/membership/` CTA. It had to change component: `Hero` renders `<h1>`, and two of those on one page is an SEO and screen-reader problem.
+- **Two new optional `Hero` props** — `ctaLeadIn` renders a short bridging line between the body and the CTAs; `ctaLayout` switches the CTA container from the default `flex flex-wrap` to `grid grid-cols-2 ... xl:grid-cols-4`. Both default to today's behaviour, so the other 11 pages passing `ctas` to `Hero` are byte-identical apart from class ordering (verified across `/standards/`, `/education/`, `/community/`, `/brand/`, `/about/`, `/tools/*`, `/membership/apply/` and four standard pages).
+- **`TextWithImage` heading size fixed site-wide** — the component's `h2` was `text-2xl leading-tight md:text-3xl`, missing the `lg:text-4xl` step that all 14 other section components (card-grid, feature-grid, split-cards, text-block, team-grid, timeline, cta-card, cta-banner, resource-cards, stats-grid, project-cards, member-stories, community-reach, vertical-pipeline) already had. At ≥1024px it rendered one step smaller than every sibling section on the same page. Added the missing step; affects all 20 TextWithImage usages, at `lg` only.
+- **Illustration** — `public/assets/silicon-to-screen.webp` (411×403, transparent), the isometric layered-stack illustration. Checked against `GS-Vision-stack2.png` in the "Revisiting Green Software: From Silicon to Screen" article first — different images (that one is the labelled six-layer diagram), so no duplication.
+- **Homepage documentation** — created `docs/pages/homepage.md`. The homepage had no page doc at all despite being the most-edited page on the site; the new doc covers section order, the featured-article conditional, `resolveOrgs()` logo resolution, and an update table. Added to the README docs index.
+
+### The Journey
+
+The mockup this came from used a different design language entirely — DM Serif Display headings, a `#0d9488` teal, JetBrains Mono labels, and collapsible accordions of standard badges. None of that is the GSF design system, so only the content was taken across; the section is rendered with the existing `TextWithImage` component and existing design tokens, so it reads as part of the site rather than as an imported prototype.
+
+The section landed below the existing hero first, as a `TextWithImage`. On review it needed to lead the page instead, which turned a content addition into a restructure of the most important block on the site: promote silicon-to-screen to the `<h1>` and demote the peer-collaboration message.
+
+An intermediate version carried the mockup's four resources — Carbon, Energy, Water, Waste — as a `FeatureGrid` row under the hero, with deep links to `/standards/sci/`, `/standards/sei/` and `/standards/swi/`. It was cut on review: the four resources are already named in the hero body, and the row restated them without adding anything. The revised body copy folds the tagline into the sentence instead ("...across every layer of the technology stack, from silicon to screen"), which carries the same idea in one place.
+
+Worth recording for whenever the resources row comes back: the mockup's status pills read "SCI · ISO 21031", "SEI · Pre-Draft", "SWI · Pre-Proposal" — all lifecycle stages that live in the Notion PWCIs database, the same values `/standards/` reads from `projects.json` as `project.lifecycle`. Hardcoding them drifts the moment a stage changes in Notion. There are also no water or waste icons in `public/assets/`.
+
+The mockup also carried headline figures that conflict with the live page — "70+ member organisations", "11 standards & specs", "20+ university members" against the current CommunityReach stats. Flagged rather than applied; changing published numbers is a content decision, not a layout one.
+
+The demoted membership pitch then read visibly small next to the new hero. The instinct was to special-case the homepage, but comparing heading classes across all 24 components showed `TextWithImage` was simply the odd one out — it had never been given the `lg:text-4xl` step. Fixing the component rather than the page brought 20 pages into line with the design system instead of adding a prop to paper over the gap. The longest TextWithImage heading anywhere on the site is 51 characters ("The sustainability challenges you're solving alone?"), well within a comfortable wrap at `text-4xl` in a half-width column.
+
+The hero CTAs went through four shapes: a single "Explore our standards", then a pair adding "Read our vision" pointing at the "Revisiting Green Software: From Silicon to Screen" article, then the four functions with long labels and Standards filled, and finally four short-label outline buttons on a grid.
+
+That last round came from reviewing a screenshot, and all three problems it surfaced were about register rather than content. First, the paragraph defines what green software *is* and the buttons are *routes* — with nothing between them the visitor has no signal that the register changed, so `ctaLeadIn` now carries "Making that real takes four things" Second, the four buttons wrapped 3+1, orphaning "Community & Ecosystem" on its own row and making a deliberate set look like an afterthought; `ctaLayout="grid"` makes it 2×2 below `xl` and 4-across above, which is deterministic at every width instead of depending on label length. Third, and most subtly: Standards was filled green among three outlines, which reads as a *selected* state and promises a tab interface where clicking swaps content below. These are plain links to four pages, so all four are now `outline`. Labels were trimmed to Standards / Policy / Education / Community to fit one row — worth knowing that the "What we do" grid still uses the longer names.
+
+The vision article is no longer linked from the homepage at all — it is `featured: false`, so it does not appear in the article carousel either. And the four CTAs duplicate the destinations of the "What we do" FeatureGrid further down; intentional as top-of-page quick nav, but the two lists have to be kept in sync.
+
+### Found Along The Way
+
+`footer.astro` renders its four column labels — "Our Work", "About", "Join", "Contact" — as `<h1 class="text-xs font-bold text-accent">`. That puts four extra `<h1>` elements on **every page of the site**, styled at 12px. Not touched as part of this work, but it should become `<h2>` or a plain `<div>`; the homepage now has exactly one `<h1>` in its content and five in its markup because of it.
+
+### Technical Achievements
+
+- Zero new components and zero component modifications — `Hero` and `TextWithImage` used through existing props; net change to the page is two components and no new markup
+- Zero styling changes — `headingAccent` and the `*asterisks*` pattern supply the `text-primary` accents, no new CSS
+- Exactly one `<h1>` in page content, verified in the rendered output
+- Section comments left unrenumbered; new sections are labelled by name, matching how SplitCards was already handled
+
+### Key Learnings
+
+- **Prototype mockups are content sources, not design sources.** The useful output of an external mockup is its copy and its information hierarchy. Its fonts, colours, and bespoke components are exactly what the design system exists to override.
+- **"Add a status badge" is often a Notion question.** Lifecycle stages, member logos, and project metadata all look like markup but live in Notion. The check is always whether the value can change without a code deploy.
+- **Reordering sections is not always a reorder.** Promoting a section past the hero means changing its component, because `Hero` owns the `<h1>`. Section order and heading hierarchy are coupled on this site.
+- **A filled button among outlines is a state, not an emphasis.** It reads as "selected" and implies the surrounding controls are tabs. Use it for one primary action, never for one item in a peer set of links.
+- **`flex-wrap` is the wrong tool for a fixed set of four.** It hands the row break to whatever the label lengths happen to be, which is how a deliberate four-up ends up as an orphaned 3+1. A grid states the intended shape.
+- **The most-edited page had no page doc.** Worth auditing `docs/pages/` against `src/pages/` for other gaps.
+
 ## 2026-03-07 (cont.) - Data Layer: Schema Consolidation, Notion Roll-ups, and Smart Lookups
 
 **Objective**: Lay the foundation for a centralised data layer — consolidate fragmented JSON files, eliminate slow N+1 Notion API calls, embed project leads into `projects.json`, and make components smarter about resolving people by name.
