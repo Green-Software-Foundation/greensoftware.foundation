@@ -12,14 +12,10 @@
       }
 
       .st2 {
-        fill: #fff;
+        fill: #003834;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="30.2" y1="47.9" x2="30.2" y2="2.1" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#003834"/>
-      <stop offset="1" stop-color="#006d68"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient1" x1="19.8" y1="47.9" x2="19.8" y2="2.1" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="25" y1="50" x2="25" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#cee098"/>
       <stop offset="0" stop-color="#bdd696"/>
       <stop offset=".4" stop-color="#82b58f"/>
@@ -27,8 +23,9 @@
       <stop offset=".9" stop-color="#3c8f87"/>
       <stop offset="1" stop-color="#338a86"/>
     </linearGradient>
+    <linearGradient id="linear-gradient1" x1="25" y1="42.5" x2="25" y2="7.5" xlink:href="#linear-gradient"/>
   </defs>
-  <polygon class="st1" points="30.1 47.9 10.3 36.4 10.3 13.6 30.1 2.1 30.2 2.1 50 13.6 50 36.4 30.2 47.9 30.1 47.9"/>
-  <polygon class="st0" points="39.6 36.4 39.6 13.6 19.8 2.1 0 13.6 0 36.4 19.8 47.9 39.6 36.4"/>
-  <polygon class="st2" points="29.8 30.8 29.8 19.2 19.8 13.5 9.8 19.2 9.8 30.8 19.8 36.5 29.8 30.8"/>
+  <path class="st1" d="M36.3,43.1l-11.3,6.9-11.3-6.9C6,38.3,1.4,30.4,1.4,21.9V7L14,0C19,1.6,31,1.6,36,0l12.5,7v14.9c0,8.5-4.6,16.5-12.3,21.2Z"/>
+  <path class="st2" d="M36.3,43.1l-11.3,6.9-11.3-6.9C6,38.3,1.4,30.4,1.4,21.9V7L14,0C19,1.6,31,1.6,36,0l12.5,7v14.9c0,8.5-4.6,16.5-12.3,21.2Z"/>
+  <path class="st0" d="M32.9,37.6l-7.9,4.9-7.9-4.9c-5.4-3.3-8.6-8.9-8.6-14.8v-10.4l8.8-4.9c3.6,1.1,11.9,1.1,15.5,0l8.8,4.9v10.4c0,6-3.2,11.5-8.6,14.8Z"/>
 </svg>
