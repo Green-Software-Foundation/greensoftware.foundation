@@ -70,14 +70,15 @@ Currently three hardware standards have dedicated pages:
 
 All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 and SILO both reuse WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` and `public/assets/standards/silo/` once available. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
 
-### SILO hero CTAs — White Paper and Companion Technical Note
+### SILO hero CTAs — White Paper, Companion Technical Note, and Project Q&A
 
-The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) includes two links alongside "Visit the Directory" / "Back to Standards":
+The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) includes three links alongside "Visit the Directory" / "Back to Standards":
 
 - **White Paper** — links out to the SILO white paper on GitHub (`SILO_WHITEPAPER` const at the top of the page frontmatter).
 - **Companion Technical Note** — links to the internal companion note detailing the internal interoperability layer, published as a [research collection entry](research.md) at `/policy/research/silo-companion-technical-note/` (`SILO_COMPANION_NOTE` const).
+- **Project Q&A** — links to a Q&A covering the problem SILO solves, its audience, roadmap, and how to get involved, published as a [research collection entry](research.md) at `/policy/research/silo-project-qa/` (`SILO_PROJECT_QA` const).
 
-To update either link, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro` and its entry in the `ctas` array passed to `<Hero />`.
+To update any of these links, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro` and its entry in the `ctas` array passed to `<Hero />`.
 
 ## Lifecycle Stages
 
