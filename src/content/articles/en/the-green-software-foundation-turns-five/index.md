@@ -1,5 +1,5 @@
 ---
-title: The Green Software Foundation Turns Five
+title: The Green Software Foundation Turns Five!
 teaserText: Cheers to another five years of standards, tools, and people building greener software.
 date: 2026-06-16
 published: true
