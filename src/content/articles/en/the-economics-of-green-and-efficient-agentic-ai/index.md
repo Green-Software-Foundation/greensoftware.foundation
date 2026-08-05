@@ -1,7 +1,7 @@
 ---
 title: The Economics of Green and Efficient Agentic AI
 teaserText: Notes from the Executive Director, Green Software Foundation
-date: 2026-07-23
+date: 2026-07-21
 published: true
 summary: Navveen Balani, Executive Director of the GSF, explores how the same choices that control costs can also reduce AI emissions and improve transparency., turning green AI into a shared discipline rather than a separate sustainability agenda.
 mainImage: The-Economics-of-Green-and-Efficient-Agentic-AI.png
