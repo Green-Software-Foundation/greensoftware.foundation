@@ -4,7 +4,7 @@ teaserText: Notes from the Executive Director, Green Software Foundation
 date: 2026-08-04
 published: true
 summary: Drawing on his CleanEnviro Summit Catalyst 2026 keynote, Navveen Balani argues that cost efficiency and environmental efficiency in AI are converging into a single measurable signal.
-mainImage: ../../one-ledger-when-sustainability-and-business-value-become-the-same-conversation/One Ledger.png
+mainImage: One Ledger.png
 mainImageAlt: An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view.
 featured: false
 tags: []
@@ -65,7 +65,7 @@ The shift to a single ledger is less a strategic pivot than a measurement upgrad
 
 1. Bringing efficiency metrics into a single operational view rather than scattering them across compliance, finance, and engineering systems. At the workload level, teams should be able to compare useful output with energy, water, cost, embodied carbon, and hardware utilization. Standards such as SCI provide a shared vocabulary for doing this consistently.
 
-![Screenshot of the 'One Ledger' Unified AI Workload Dashboard, showing sustainability and cost metrics — total carbon emissions, cost, energy, water use, and hardware utilization — across 12 AI applications, broken down by application and by model type (LLM vs. SLM).](../../one-ledger-when-sustainability-and-business-value-become-the-same-conversation/unnamed%20%284%29.jpg "An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view.")_An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view._
+![Screenshot of the 'One Ledger' Unified AI Workload Dashboard, showing sustainability and cost metrics — total carbon emissions, cost, energy, water use, and hardware utilization — across 12 AI applications, broken down by application and by model type (LLM vs. SLM).](unnamed%20(4).jpg "An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view.")_An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view._
 
 2. Bringing efficiency into design reviews and architecture decisions from the start. Right-sizing models, evaluating whether a task requires generative reasoning or whether retrieval is sufficient, designing for graceful degradation, and monitoring idle or abandoned workloads can produce compounding benefits. These choices are easier to make at design time than to retrofit later. 
 3. Treating sustainability data as a first-class operational signal, not merely as input to an annual report. Environmental metrics should be managed with the same operational rigor as latency, availability, and cost.
