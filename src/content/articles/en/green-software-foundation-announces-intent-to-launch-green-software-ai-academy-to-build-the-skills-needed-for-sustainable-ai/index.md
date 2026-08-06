@@ -4,7 +4,7 @@ teaserText: GSF is bringing together member organizations to develop a vendor-ne
 date: 2026-08-06
 published: true
 summary: The GSF invites organizations to help build vendor-neutral training and credentials for sustainable AI, shaping the skills the industry needs.
-mainImage: ../../green-software-foundation-announces-intent-to-launch-green-software-ai-academy-to-build-the-skills-needed-for-sustainable-ai/GSF-Academy-v2.png
+mainImage: GSF-Academy-v2.png
 mainImageAlt: Isometric illustration of the GSF Academy, showing people building and assembling a structure with data servers, books, and tools — representing the Green Software Foundation's initiative to build sustainable AI skills and training.
 featured: false
 tags:
