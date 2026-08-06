@@ -22,7 +22,7 @@ lang: en
 
 During the pilot phase, participating members will help shape the Foundation’s first professional training and credentialing program to reflect real hiring and workforce development needs. 
 
-> _"Every AI system carries two ledgers: its environmental footprint and its operating cost. The engineering choices behind an AI system shape both. The Academy will equip professionals to measure those impacts through open standards and improve environmental and operational performance,” **said Navveen Balani, Executive Director of the Green Software Foundation.**_
+> _"Every AI system carries two costs: an environmental one and an operating one. The engineering choices behind an AI system shape both. The Academy will equip professionals to measure those impacts through open standards and improve environmental and operational performance,” **said Navveen Balani, Executive Director of the Green Software Foundation.**_
 
 ## The Need for a Common Approach
 
