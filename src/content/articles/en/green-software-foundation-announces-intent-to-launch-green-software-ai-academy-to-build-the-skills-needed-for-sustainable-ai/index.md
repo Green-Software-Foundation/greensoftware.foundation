@@ -48,9 +48,9 @@ The Academy will roll out in phases, with the pilot beginning in early October. 
 
 **To** [**join the Foundation**](https://greensoftware.foundation/membership/) **and participate in the Academy's pilot,** **contact the team directly:**
 
-**Navveen Balani, Executive Director at:** [navveen@greensoftware.foundation](navveen@greensoftware.foundation)
+**Navveen Balani, Executive Director at:** navveen@greensoftware.foundation  
 
-**Jamie Cowan, Head of Global Partnerships at:** [jamie@greensoftware.foundation](jamie@greensoftware.foundation)
+**Jamie Cowan, Head of Global Partnerships at:** jamie@greensoftware.foundation
 
 **Supporting quotes**
 
