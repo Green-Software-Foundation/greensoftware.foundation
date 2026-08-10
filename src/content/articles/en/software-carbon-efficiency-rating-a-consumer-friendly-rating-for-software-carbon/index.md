@@ -9,6 +9,9 @@ mainImage: "./main.jpg"
 
 The GSF Standards Working Group has initiated a project  to close this gap, providing a tool for informing procurement decisions and potentially shaping regulations. 
 
+> [!IMPORTANT]
+> This project is no longer active and has been archived.
+
 # How will consumers benefit from a carbon efficiency rating?
 
 A rating system helps both consumers and organizations. For consumers concerned about their carbon footprint, the Software Carbon Efficiency Rating (SCER) will be an invaluable tool, allowing them to make informed decisions about their digital products. It will help them understand the environmental impact of the applications and empower them to make sustainable choices.
