@@ -10,8 +10,11 @@ featured: true
 tags:
   - sci-ai
   - standards
+authors: []
+translators: []
 originBlogName: ''
 publishedOriginUrl: ''
+lang: en
 ---
 
 Since the publication of the [Software Carbon Intensity (SCI) specification](https://sci.greensoftware.foundation/), practitioners and organizations worldwide have consistently used it to measure and report emissions across their systems. But as AI entered mainstream software development, one question has remained unanswered: How do we reliably measure its carbon footprint?
@@ -20,7 +23,7 @@ Without consistent measurement, organizations couldn't compare different AI impl
 
 We’re thrilled to announce the ratification of [the Software Carbon Intensity for Artificial Intelligence (SCI for AI) specification](https://sci-for-ai.greensoftware.foundation/), the standardized methodology that captures AI's complete environmental impact across its entire lifecycle. Developed under the leadership of Navveen Balani (Accenture) and Henry Richardson (WattTime), this specification is the first consensus-based standard that makes the carbon footprint of AI systems transparent, comparable, and actionable.
 
-## Why The SCI for AI Matters Now
+## Why SCI for AI Matters Now
 
 As AI becomes infrastructure, reliable measurement becomes essential. Organizations need standardized methods to track net-zero progress, prepare for carbon pricing, and reduce operational costs through improved efficiency. Practitioners need consistent metrics to validate improvements and make informed architecture choices. Regulatory frameworks increasingly require environmental disclosure. The SCI for AI responds by providing the foundation for accurate, consistent measurement and credible reporting.
 
