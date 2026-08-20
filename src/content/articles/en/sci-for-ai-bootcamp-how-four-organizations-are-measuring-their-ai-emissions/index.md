@@ -5,11 +5,12 @@ date: 2026-08-20
 published: true
 summary: This summer, Amadeus, AVEVA, Schneider Electric, and Siemens have joined GSF's first SCI for AI Bootcamp cohort to apply the SCI for AI methodology to their AI systems. We share what we've learned so far and what comes next.
 mainImage: SCI-for-AI-Bootcamp.png
-mainImageAlt: Isometric illustration for Green Software Foundation showing a person sitting cross-legged with a laptop, surrounded by a stack of servers, an electricity pylon, two browser/document windows, and a megaphone — with the GSF energy icon (a two-tone circle with a lightning bolt) at the center, representing green software and sustainable computing communication.
+mainImageAlt: 'Green Software Foundation illustration: several people conversing near buildings, power lines, and a bar chart, with a large mechanical hand holding a compass beneath a glowing target/location icon — representing measurement, direction, and collaboration in sustainable software.'
 featured: false
 tags:
   - standards
   - SCI for AI
+  - community
 authors: []
 translators: []
 originBlogName: ''
