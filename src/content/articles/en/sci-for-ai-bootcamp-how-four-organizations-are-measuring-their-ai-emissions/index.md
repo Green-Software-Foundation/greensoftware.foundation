@@ -4,7 +4,7 @@ teaserText: Amadeus, AVEVA, Schneider Electric, and Siemens joined our first coh
 date: 2026-08-20
 published: true
 summary: This summer, Amadeus, AVEVA, Schneider Electric, and Siemens have joined GSF's first SCI for AI Bootcamp cohort to apply the SCI for AI methodology to their AI systems. We share what we've learned so far and what comes next.
-mainImage: ../../sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/SEI-Public-Review.png
+mainImage: SEI-Public-Review.png
 mainImageAlt: Isometric illustration for Green Software Foundation showing a person sitting cross-legged with a laptop, surrounded by a stack of servers, an electricity pylon, two browser/document windows, and a megaphone — with the GSF energy icon (a two-tone circle with a lightning bolt) at the center, representing green software and sustainable computing communication.
 featured: false
 tags:
