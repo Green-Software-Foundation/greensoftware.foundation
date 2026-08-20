@@ -3,7 +3,7 @@ title: 'SCI for AI Bootcamp: How Four Organizations Are Measuring Their AI Emiss
 teaserText: Amadeus, AVEVA, Schneider Electric, and Siemens joined our first cohort to apply the SCI for AI methodology to their AI systems and work through common implementation challenges.
 date: 2026-08-20
 published: true
-summary: This summer, Amadeus, AVEVA, Schneider Electric, and Siemens have joined GSF's first SCI for AI Bootcamp cohort to apply the SCI for AI methodology to their AI systems. We share what we've learned so far and what comes next.
+summary: This summer, Amadeus, AVEVA, Schneider Electric, and Siemens have joined GSF's first cohort to apply the SCI for AI methodology to their AI systems. We share what we've learned so far and what comes next.
 mainImage: SCI-for-AI-Bootcamp.png
 mainImageAlt: 'Green Software Foundation illustration: several people conversing near buildings, power lines, and a bar chart, with a large mechanical hand holding a compass beneath a glowing target/location icon — representing measurement, direction, and collaboration in sustainable software.'
 featured: false
