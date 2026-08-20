@@ -28,7 +28,7 @@ The first cohort brings together Angel Cataron (Siemens), Gregoire Vilde (Schnei
 
 We've already completed four sessions, and two more are ahead. Here, we’re sharing what we’ve been working on, how the cohort model helps organizations turn their sustainability goals into a system-specific measurement approach, and what comes next.
 
-## Why SCI for AI Bootcamp Matters 
+## Why the SCI for AI Bootcamp Matters 
 
 With AI increasingly embedded across products, systems, and workflows, the need for standardized measurement approaches that can be incorporated into governance and decision-making is growing fast. At the same time, frameworks such as [the EU AI Act](https://greensoftware.foundation/articles/sci-for-ai-a-framework-for-eu-ai-act-environmental-compliance/) are starting to introduce environmental disclosure, making consistent measurement even more important.
 
@@ -68,7 +68,7 @@ The experience and participant feedback will help refine supporting materials we
 
 ## Get Involved 
 
-Building on this first cohort, we plan to translate these learnings into a repeatable implementation pathway to support more organizations in measuring and reducing the carbon impact of their AI systems. 
+Building on our first bootcamp, we plan to translate these learnings into a repeatable implementation pathway to support more organizations in measuring and reducing the carbon impact of their AI systems. 
 
 If your organization is interested in exploring future cohort-based learning opportunities, we’d love to hear from you. Get in touch with Russ Trow at [russell@greensoftware.foundation](mailto:russell@greensoftware.foundation) 
 
