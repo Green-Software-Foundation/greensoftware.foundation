@@ -34,7 +34,7 @@ With AI increasingly embedded across products, systems, and workflows, the need 
 
 SCI for AI provides a foundation for accurate measurement and credible reporting of AI emissions.
 
-In practice, applying the specification means navigating questions about the system boundary, data access, and measurement approaches while considering individual characteristics of AI systems. For instance, one organization encountered a common problem: its software ran on hardware owned by someone else, so the team couldn’t directly measure how much energy it used. They knew what the software was doing, but not how much power it consumed, and it wasn’t clear whether the software provider or the infrastructure owner should be responsible for providing the data. 
+In practice, applying the specification means navigating questions about the system boundary, data access, and measurement approaches while considering individual characteristics of AI systems. For instance, one organization encountered a common problem: its software ran on hardware owned by someone else, so the team couldn’t directly measure how much energy it used. They knew how much data moved through the system, but not how much power the underlying hardware consumed, and it wasn’t clear whether the software provider or the infrastructure owner should be responsible for providing the data. 
 
 The cohort model introduces a structured way for organizations to work through these decisions together, compare approaches, and build internal capability around a common methodology—while also generating feedback that can strengthen the current guidance, inform resources, and support adoption.
 
@@ -48,7 +48,7 @@ As part of a wider review process, the program helps connect the specification w
 
 Participating organizations entered the program with different levels of AI sustainability measurement maturity, ranging from initial exploration to organizations that had already established preliminary measurement baselines. 
 
-The four diverse use cases span both AI personas—provider and consumer—and a wide range of architectures, from a custom, self-hosted system to a managed cloud service, highlighting how the methodology applies across different systems and operating environments. 
+The four use cases span both AI personas—provider and consumer—and a range of architectures, from custom, self-hosted systems to managed cloud services. This gives participants a chance to compare how the methodology works across different systems and operating environments.
 
 The program is organized as a sequence of structured decisions, with each session building on the previous one and leading toward a tailored measurement approach. Starting from understanding the use case, participants move through defining boundaries, mapping the system and data availability, arriving at the approach needed to calculate an SCI for AI score, and translating it into a working blueprint. 
 
