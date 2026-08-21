@@ -18,7 +18,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-Developed through consensus among more than 20 member organizations, [Software Carbon Intensity (SCI) for AI](https://greensoftware.foundation/standards/sci-ai/) builds on the ISO SCI methodology to provide practitioners and organizations with a standardized way to measure, compare, and reduce the carbon emissions of AI systems throughout their lifecycle.
+Developed through consensus among more than 20 member organizations, [Software Carbon Intensity (SCI) for AI](https://greensoftware.foundation/standards/sci-ai/) builds on the ISO SCI methodology to provide practitioners and organizations with a standardized way to measure the carbon emissions of AI systems throughout their lifecycle.
 
 SCI for AI was ratified in late 2025, and through conversations with our members, it quickly became clear that organizations needed structured support to put it into practice, which then led to the creation of the bootcamp. 
 
