@@ -59,7 +59,8 @@ const featuredArticles = allArticles
     logoSrc="/assets/gsf-logo-full.svg"
     logoAlt="Green Software Foundation"
     logoHref="/"
-    topBar="none"
+    topBar="utility"
+    topBarLinks={[{ href: "/newsletter/", label: "Subscribe to Our Newsletter" }]}
     showSearch
     navItems={navItems}
   />
@@ -104,15 +105,6 @@ const featuredArticles = allArticles
       { icon: "/assets/renewable-icon-new.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programs, turning commitments into competence.", linkText: "Start learning →", linkHref: "/education/" },
       { icon: "/assets/realtime-icon-new.svg", title: "Community", description: "Champions, meetups, podcasts, and events, a global network of practitioners driving sustainable software forward. The movement that turns individual effort into industry change.", linkText: "Join the community →", linkHref: "/community/" },
     ]}
-  />
-
-  <!-- Newsletter subscribe CTA -->
-  <CTABanner
-    heading="Stay up to date"
-    body="Get the latest green software news, articles, and industry insights from the GSF in your inbox."
-    ctaText="Subscribe to our newsletter"
-    ctaHref="/newsletter/"
-    bgClass="bg-primary"
   />
 
   <!-- Section 4: Organisational Upskilling -->
@@ -224,6 +216,15 @@ const featuredArticles = allArticles
     ctaHref="/community/"
   />
 
+  <!-- Newsletter subscribe CTA -->
+  <CTABanner
+    heading="Stay up to date"
+    body="Get the latest green software news, articles, and industry insights from the GSF in your inbox."
+    ctaText="Subscribe to our newsletter"
+    ctaHref="/newsletter/"
+    bgClass="bg-primary"
+  />
+
   <!-- Section 12: Where To Go Next -->
   <ResourceCards
     heading="Where to *go next*"
@@ -244,13 +245,6 @@ const featuredArticles = allArticles
       ctaHref="/articles/"
     />
   )}
-
-  <!-- Section 14: Final CTA -->
-  <CTABanner
-    heading="Discuss your challenges with us"
-    ctaText="Request a discussion"
-    ctaHref="/membership/"
-  />
 
   <Footer />
 </Layout>
