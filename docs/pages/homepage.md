@@ -22,8 +22,8 @@ The primary entry point to the site. Leads with the member-acquisition message (
 | — | CTABanner | primary (green) | Newsletter subscribe CTA: "Stay up to date" / "Subscribe to our newsletter" → `/newsletter/`. Added in the redesign; briefly placed right after "What we do" but moved here, after the challenge stories and CommunityReach, so it lands after the page has made its strongest case rather than interrupting the definition → function → proof flow |
 | 12 | ResourceCards | — | "Where to go next" — routes by role |
 | 13 | ArticleCarousel | — | Featured content (conditional) |
-
-Section 14, the final "Discuss your challenges with us" `CTABanner`, was removed in the redesign — it was the third instance of that same CTA on the page (after the Hero and the CTACard), and the page now ends with Featured Content flowing straight into `<Footer />` (which has its own "Join our newsletter" signup form, a third newsletter touchpoint independent of the header link and the mid-page CTABanner).
+| 14 | CTABanner | primary-dark (dark green) | Final CTA: "Discuss your challenges with us" / "Request a discussion" → `/membership/`. This is the third mention of the same core CTA on the page (after the Hero and the CTACard) — deliberate top/middle/bottom repetition of the primary conversion goal, not an oversight. Briefly removed during the redesign, then restored: without it the page's last full-width section was the article carousel, a low-commitment close for a page built to drive membership conversations |
+| — | Footer | primary-darker | `showNewsletter={false}` — the footer's own "Join our newsletter" signup form is hidden on this page only, since the homepage already has two other newsletter touchpoints (header link, mid-page CTABanner) in close proximity. Every other page still shows it |
 
 Section numbering in the comments is historical and has gaps — sections added later are labelled by name rather than renumbering the whole file; it no longer reflects rendering order after the FeatureGrid move above. A "130,000+ practitioners trained · ISO adoption · ..." stat line was tried above the logo marquee during the redesign and removed again; `CommunityReach` ("Our Reach") covers reach stats instead.
 
@@ -68,6 +68,8 @@ The standard LogoMarquee component. Data comes from `members.json`, not a separa
 - **Newsletter CTABanner** — a second `CTABanner` instance (green `bg-primary`, distinct from the final dark-green `bg-primary-dark` one), "Stay up to date" / "Subscribe to our newsletter" → `/newsletter/`. Sits right after CommunityReach — after the stories and reach stats have made the case, not interrupting the "What we do" → stories flow
 - **ResourceCards "Where to go next"** — three role-based routes
 - **CTACard** — the page's second "Discuss your challenges with us" CTA, points at `/membership/`
+- **Final CTABanner** — the page's third and last "Discuss your challenges with us" CTA, right before the footer — see the Section Order note above on why this repetition is deliberate
+- **Footer, newsletter form hidden** — `<Footer showNewsletter={false} />`. `Footer` gained a `showNewsletter` prop (default `true`, so every other page is unaffected) specifically so the homepage's third newsletter touchpoint (the footer's own "Join our newsletter" form) doesn't stack on top of the header link and the mid-page CTABanner
 
 Note the page uses American spelling (`organizations`, `standardized`, `minimize`) while the rest of the site is predominantly British (`organisations`, `optimise`). Keep new homepage copy American for internal consistency.
 
@@ -86,3 +88,4 @@ Note the page uses American spelling (`organizations`, `standardized`, `minimize
 | Update reach stats | Edit the `CommunityReach` `stats` array |
 | Feature an article in the carousel | Set `featured: true` in the article's frontmatter — do not hardcode articles here |
 | Change member logos | Notion Members DB, then `npm run fetch-notion` — not in this file |
+| Show the footer newsletter form again on this page | Remove `showNewsletter={false}` from the `Footer` call in `index.astro` |
