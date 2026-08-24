@@ -95,7 +95,7 @@ const featuredArticles = allArticles
 
   <!-- Section 11: What We Do -->
   <FeatureGrid
-    heading="What we *do*"
+    heading="How GSF *helps*"
     body="Four functions. Each one driven by member needs. Each one producing results the industry adopts."
     variant="bordered"
     columns={2}
@@ -105,6 +105,12 @@ const featuredArticles = allArticles
       { icon: "/assets/renewable-icon-new.svg", title: "Education", description: "Building capability at every level. From the free Green Software Practitioner course (130,000+ completions) to advanced certification and cohort programs, turning commitments into competence.", linkText: "Start learning →", linkHref: "/education/" },
       { icon: "/assets/realtime-icon-new.svg", title: "Community", description: "Champions, meetups, podcasts, and events, a global network of practitioners driving sustainable software forward. The movement that turns individual effort into industry change.", linkText: "Join the community →", linkHref: "/community/" },
     ]}
+  />
+
+  <!-- Challenge stories intro -->
+  <TextBlock
+    heading="How our members solve common challenges together"
+    compact
   />
 
   <!-- Section 4: Organisational Upskilling -->
@@ -227,7 +233,7 @@ const featuredArticles = allArticles
 
   <!-- Section 12: Where To Go Next -->
   <ResourceCards
-    heading="Where to *go next*"
+    heading="Find your *next step*"
     cards={[
       { icon: "/assets/shape-icon-1-new.svg", title: "Leading sustainability strategy?", description: "See our impact, explore membership, governance & leadership.", ctaText: "Explore membership", ctaHref: "/membership/" },
       { icon: "/assets/shape-icon-2.svg", title: "Implementing in your engineering team?", description: "Education journey, standards & tools, Green Software Patterns.", ctaText: "Start the journey", ctaHref: "/education/" },
@@ -238,7 +244,7 @@ const featuredArticles = allArticles
   <!-- Section 13: Featured Content -->
   {featuredArticles.length >= 3 && (
     <ArticleCarousel
-      heading="Featured Content"
+      heading="Latest from the GSF"
       body="Stories, research, and insights from our members and community."
       articles={featuredArticles}
       ctaText="View all articles →"
