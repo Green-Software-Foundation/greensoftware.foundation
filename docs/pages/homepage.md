@@ -15,8 +15,8 @@ The primary entry point to the site. Leads with the member-acquisition message (
 | 1 | Hero | cream | "The sustainability challenges you're solving alone? *Your peers are solving together*" — the page `<h1>`, with a single "Discuss your challenges with us" CTA (`primary` button) |
 | 2 | LogoMarquee | white | Member logos, headed "A global network shaping industry standards" |
 | — | TextBlock | cream | "What is green software?" definition: minimize carbon, energy, water, waste |
-| 11 | FeatureGrid | — | "How GSF *helps*" (renamed from "What we do") — four functions. Moved here (right after the green software definition) in the redesign — was previously between CommunityReach and ResourceCards |
-| — | TextBlock | cream | "How our members solve common challenges together" — a `compact` heading-only intro added right before the first challenge story, no body/CTA |
+| 11 | FeatureGrid | — | "What we *do*" — four functions. Moved here (right after the green software definition) in the redesign — was previously between CommunityReach and ResourceCards. Briefly renamed to "How GSF helps" during the redesign, then reverted |
+| — | TextBlock | cream | "How our members solve shared challenges together" — a `compact` heading-only intro added right before the first challenge story, no body/CTA |
 | 4–8 | TabbedSection ×5 | cream | Member challenge stories |
 | 9 | CTACard | — | "Discuss your challenges with us" |
 | 10 | CommunityReach | — | Reach stats + world map |
@@ -63,11 +63,11 @@ The standard LogoMarquee component. Data comes from `members.json`, not a separa
 - **Navbar header newsletter link** — `topBar="utility"` with one link, "Subscribe to Our Newsletter" → `/newsletter/`, centered and bold via small changes to the shared `Navbar` component: the topBar row's alignment class is now conditional on `topBar !== "utility"` (`class:list`) so the existing `topBar="project-by"` line (used by `catalogue/index.astro`, the only other page not setting `topBar="none"`) keeps its original right alignment untouched, and `font-bold` was added to the plain-text topBarLink `<a>` (the icon-link branch is unaffected)
 - **Hero "solving alone / solving together"** — the page `<h1>` and its accent. Body copy does not mention "silicon to screen" — that phrase now lives only in the "What is green software?" definition below, to avoid repeating it twice in three sections. Single CTA, "Discuss your challenges with us", to `/membership/`, with `variant: "primary"` set explicitly — the `Hero`/`Button` combination falls back to an unstyled invisible button if a CTA omits `variant` (the Button component has no "default" variant despite Hero's fallback assuming one), so any Hero CTA on this page must set a real variant
 - **TextBlock "What is green software?"** — plain question heading with the green software definition as body text (minimize carbon, energy, water, waste). No image, no CTA — replaced the previous SplitCards problem-statement + GSF Chair quote section, and before that an "Our mission" heading with the same body text
-- **FeatureGrid "How GSF helps"** — Standards, Policy & Research, Education, Community. Sits right after the green software definition, directly ahead of the challenge stories that serve as proof of each function
-- **TextBlock "How our members solve common challenges together"** — heading-only, `compact`, no body or CTA, right before the five TabbedSections — introduces the stories rather than restating "How GSF helps"
+- **FeatureGrid "What we do"** — Standards, Policy & Research, Education, Community. Sits right after the green software definition, directly ahead of the challenge stories that serve as proof of each function
+- **TextBlock "How our members solve shared challenges together"** — heading-only, `compact`, no body or CTA, right before the five TabbedSections — introduces the stories rather than restating "What we do"
 - **Five TabbedSections** — each with a badge, quoted heading, illustration, CTA to a story page, and challenge/solution/impact tab copy
 - **CommunityReach** — five hardcoded stats (course completions, LinkedIn, meetup, podcast, newsletter) plus the world map — still has its own "Subscribe" link on the newsletter stat, separate from the CTABanner below
-- **Newsletter CTABanner** — a second `CTABanner` instance (green `bg-primary`, distinct from the final dark-green `bg-primary-dark` one), "Stay up to date" / "Subscribe to our newsletter" → `/newsletter/`. Sits right after CommunityReach — after the stories and reach stats have made the case, not interrupting the "How GSF helps" → stories flow
+- **Newsletter CTABanner** — a second `CTABanner` instance (green `bg-primary`, distinct from the final dark-green `bg-primary-dark` one), "Stay up to date" / "Subscribe to our newsletter" → `/newsletter/`. Sits right after CommunityReach — after the stories and reach stats have made the case, not interrupting the "What we do" → stories flow
 - **ResourceCards "Find your next step"** — three role-based routes
 - **CTACard** — the page's second "Discuss your challenges with us" CTA, points at `/membership/`
 - **Final CTABanner** — the page's third and last "Discuss your challenges with us" CTA, right before the footer — see the Section Order note above on why this repetition is deliberate
@@ -84,7 +84,7 @@ Note the page uses American spelling (`organizations`, `standardized`, `minimize
 | Replace the hero illustration | Replace `public/assets/silicon-to-screen.webp`. An SVG is preferable if the designer can supply one — `npm run build` runs `optimise-svgs`, and the current raster is only 411px wide against a 448px display slot, so it is soft on high-DPI screens |
 | Change the "global network" heading over the logos | Edit the `LogoMarquee` `heading` prop in `index.astro` |
 | Change the "What is green software?" definition | Edit the `TextBlock` props in `index.astro` |
-| Change "How GSF helps" heading or the four function cards | Edit the `FeatureGrid` props in `index.astro` |
+| Change "What we do" heading or the four function cards | Edit the `FeatureGrid` props in `index.astro` |
 | Change the "How our members solve..." story intro | Edit the `TextBlock` (`compact`) right before the first `TabbedSection` in `index.astro` |
 | Change the newsletter CTA copy or link | Edit the `CTABanner` props right after `CommunityReach` in `index.astro` |
 | Add/remove a challenge story | Add or remove a `TabbedSection` block; the linked story lives in `src/content/stories/` |
