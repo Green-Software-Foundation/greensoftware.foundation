@@ -6,7 +6,7 @@ published: true
 summary: This summer, Amadeus, AVEVA, Schneider Electric, and Siemens have joined GSF's first cohort to apply the SCI for AI methodology to their AI systems. We share what we've learned so far and what comes next.
 mainImage: SCI-for-AI-Bootcamp.png
 mainImageAlt: 'Green Software Foundation illustration: several people conversing near buildings, power lines, and a bar chart, with a large mechanical hand holding a compass beneath a glowing target/location icon — representing measurement, direction, and collaboration in sustainable software.'
-featured: false
+featured: true
 tags:
   - standards
   - SCI for AI
