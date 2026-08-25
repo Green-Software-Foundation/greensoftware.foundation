@@ -17,6 +17,7 @@ The primary entry point to the site. Leads with the member-acquisition message (
 | — | TextBlock | cream | "What is green software?" definition: minimize carbon, energy, water, waste |
 | 11 | FeatureGrid | — | "What we *do*" — four functions. Moved here (right after the green software definition) in the redesign — was previously between CommunityReach and ResourceCards. Briefly renamed to "How GSF helps" during the redesign, then reverted |
 | — | TextBlock | cream | "How our members solve shared challenges together" — a `compact` heading-only intro added right before the first challenge story, no body/CTA |
+| — | Testimonial | cream | GSF Chair quote (Gadhu Sundaram, NTT DATA), `align="left"`. Restored from the original pre-redesign SplitCards section, which this same quote was originally paired with alongside a "You're not the first to face these challenges" problem statement — that framing role is now covered by "What is green software?" earlier on the page, so only the quote itself came back, as a standalone `Testimonial`, right after the story intro headline it now supports |
 | 4–8 | TabbedSection ×5 | cream | Member challenge stories |
 | 9 | CTACard | — | "Discuss your challenges with us" |
 | 10 | CommunityReach | — | Reach stats + world map |
@@ -65,6 +66,7 @@ The standard LogoMarquee component. Data comes from `members.json`, not a separa
 - **TextBlock "What is green software?"** — plain question heading with the green software definition as body text (minimize carbon, energy, water, waste). No image, no CTA — replaced the previous SplitCards problem-statement + GSF Chair quote section, and before that an "Our mission" heading with the same body text
 - **FeatureGrid "What we do"** — Standards, Policy & Research, Education, Community. Sits right after the green software definition, directly ahead of the challenge stories that serve as proof of each function
 - **TextBlock "How our members solve shared challenges together"** — heading-only, `compact`, no body or CTA, right before the five TabbedSections — introduces the stories rather than restating "What we do"
+- **Testimonial (GSF Chair quote)** — Gadhu Sundaram's quote about challenges feeding back into standards and being applied to real problems, which maps directly onto the challenge/solution/impact structure of the stories that follow. Uses the existing `Testimonial` component (previously unused on the homepage, already used on 4 other pages) with a new `align="left"` prop — added because the component's `align` only ever defaulted to `"center"` before, and long (3-line) quotes read better left-aligned than centered; the other 4 pages using `Testimonial` are unaffected since they don't pass `align` and keep the `"center"` default. `company` is explicitly set to `""` since the component defaults `company` to `"Accenture"` when omitted, which would have been wrong here
 - **Five TabbedSections** — each with a badge, quoted heading, illustration, CTA to a story page, and challenge/solution/impact tab copy
 - **CommunityReach** — five hardcoded stats (course completions, LinkedIn, meetup, podcast, newsletter) plus the world map — still has its own "Subscribe" link on the newsletter stat, separate from the CTABanner below
 - **Newsletter CTABanner** — a second `CTABanner` instance (green `bg-primary`, distinct from the final dark-green `bg-primary-dark` one), "Stay up to date" / "Subscribe to our newsletter" → `/newsletter/`. Sits right after CommunityReach — after the stories and reach stats have made the case, not interrupting the "What we do" → stories flow
@@ -86,6 +88,7 @@ Note the page uses American spelling (`organizations`, `standardized`, `minimize
 | Change the "What is green software?" definition | Edit the `TextBlock` props in `index.astro` |
 | Change "What we do" heading or the four function cards | Edit the `FeatureGrid` props in `index.astro` |
 | Change the "How our members solve..." story intro | Edit the `TextBlock` (`compact`) right before the first `TabbedSection` in `index.astro` |
+| Change the GSF Chair quote or attribution | Edit the `Testimonial` props right after the story intro `TextBlock` in `index.astro` |
 | Change the newsletter CTA copy or link | Edit the `CTABanner` props right after `CommunityReach` in `index.astro` |
 | Add/remove a challenge story | Add or remove a `TabbedSection` block; the linked story lives in `src/content/stories/` |
 | Change which orgs appear on a story | Edit the `resolveOrgs([...])` array for that section |

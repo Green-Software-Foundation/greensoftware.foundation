@@ -8,6 +8,8 @@ interface Props {
   title?: string;
   /** Company or organisation */
   company?: string;
+  /** Text alignment for the quote and attribution */
+  align?: "center" | "left";
 }
 
 const {
@@ -15,6 +17,7 @@ const {
   author = "Navveen Balani",
   title = "Managing Director, Chief Technologist",
   company = "Accenture",
+  align = "center",
 } = Astro.props;
 ---
 
@@ -29,13 +32,13 @@ const {
         <img src="/assets/testimonial-icon.svg" alt="" class="h-12 w-16 md:h-14 md:w-24" />
       </div>
 
-      <div class="text-center">
+      <div class:list={[align === "left" ? "text-left" : "text-center"]}>
         <blockquote
           class="text-lg font-medium text-primary-dark italic md:text-xl"
         >
           &ldquo;{quote}&rdquo;
         </blockquote>
-        <div class="mt-8 flex flex-col items-center justify-center gap-2">
+        <div class:list={["mt-8 flex flex-col gap-2", align === "left" ? "items-start" : "items-center justify-center"]}>
           {author && <cite class="not-italic font-bold text-lg">{author}</cite>}
           {title && <span class="text-primary">{title}</span>}
           {company && <span class="font-semibold text-accent-dark">{company}</span>}
