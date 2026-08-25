@@ -6,7 +6,7 @@ published: true
 summary: The GSF invites organizations to help build vendor-neutral training and credentials for sustainable AI, shaping the skills the industry needs.
 mainImage: GSF-Academy-v2.png
 mainImageAlt: Isometric illustration of the GSF Academy, showing people building and assembling a structure with data servers, books, and tools — representing the Green Software Foundation's initiative to build sustainable AI skills and training.
-featured: false
+featured: true
 tags:
   - standards
   - education
