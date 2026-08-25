@@ -1,20 +1,27 @@
 ---
-title: "Designing SCI for Web: What We Agreed and What Comes Next"
+title: 'Designing SCI for Web: What We Agreed and What Comes Next'
+teaserText: A consensus-built methodology for measuring the carbon intensity of web applications
+date: 2026-02-03
 published: true
-date: "2026-02-03"
-summary: "In autumn 2025, a group of GSF members reached consensus on the design foundation for SCI for Web.  Here is what they agreed on, how the AI-assisted process worked, and what's next."
-teaserText: "A consensus-built methodology for measuring the carbon intensity of web applications"
-mainImage: "./main.png"
-featured: true
-organizations:
-  - "Accenture"
-  - "Google"
-  - "NTT DATA"
-  - "Siemens"
-  - "UBS"
-  - "Cisco"
+summary: In autumn 2025, a group of GSF members reached consensus on the design foundation for SCI for Web.  Here is what they agreed on, how the AI-assisted process worked, and what's next.
+mainImage: ./main.png
+mainImageAlt: ''
+featured: false
+tags:
+  - sci-web
+authors: []
+translators: []
+originBlogName: ''
+publishedOriginUrl: ''
+lang: en
 additionalOrgCount: 9
-tags: ["sci-web"]
+organizations:
+  - Accenture
+  - Google
+  - NTT DATA
+  - Siemens
+  - UBS
+  - Cisco
 ---
 
 > Almost all of us use the web daily, and like everything else, we need to make using it more sustainable. By defining a standard for measuring website emissions, we make it easier for people to request greener digital services, for responsible technologists to build them, and to reach the fossil-free internet we all need.
