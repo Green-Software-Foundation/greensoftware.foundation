@@ -70,6 +70,8 @@ The experience and participant feedback will help refine supporting materials we
 
 Building on our first bootcamp, we plan to translate these learnings into a repeatable implementation pathway to support more organizations in measuring and reducing the carbon impact of their AI systems. 
 
+### For member organizations 
+
 If your organization is interested in exploring future cohort-based learning opportunities, we’d love to hear from you. Get in touch with Russ Trow at [russell@greensoftware.foundation](mailto:russell@greensoftware.foundation) 
 
 ### **Not a member yet?** 
