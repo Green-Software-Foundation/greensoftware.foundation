@@ -4,7 +4,7 @@ teaserText: Notes from the Executive Director, Green Software Foundation
 date: 2026-08-25
 published: true
 summary: In our ED series, Navveen Balani argues AI efficiency should be measured by the value it delivers. He examines how GSF specifications such as SCI, SEI, and SWI use functional units to connect compute to outcomes we care about.
-mainImage: ../../beyond-watts-what-should-ai-efficiency-really-measure/Beyond-Watts.png
+mainImage: Beyond-Watts.png
 mainImageAlt: 'Illustration for "Beyond Watts: What Should AI Efficiency Really Measure?" showing a figure struggling to carry a large letter "W" (watts) across a row of server racks on the left, while on the right a smaller figure rides in a hot-air balloon basket lifted by a giant letter "R" (rate/functional unit), with balloons labeled with energy, cost, data-transfer, and water icons. Green Software Foundation logo in the bottom left.'
 featured: false
 tags:
