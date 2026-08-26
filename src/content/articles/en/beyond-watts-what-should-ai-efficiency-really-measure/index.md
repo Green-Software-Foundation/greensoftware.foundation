@@ -137,7 +137,7 @@ The functional unit provides a way to do that while building on the technical me
 
 The future of AI efficiency may therefore be less about choosing between watts, task performance, and value, and more about understanding the relationship between them.
 
-**The resource tells us what AI consumed. The functional unit tells us what that consumption achieved. The rate connects the two.**
+> The resource tells us what AI consumed. The functional unit tells us what that consumption achieved. The rate connects the two.
 
 ## **Join the conversation**
 
