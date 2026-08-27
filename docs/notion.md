@@ -102,6 +102,7 @@ Person data for subscription-based people (name, title, LinkedIn, member org) is
 | Role for Subscription | roleLabel shown on site |
 |---|---|
 | `Working Group Chair` | Chair |
+| `Working Group Vice-Chair` | Vice-Chair |
 | `Project Chair` | Chair |
 | `Project Vice-Chair` | Vice-Chair |
 | `Committee Chair` | Chair |

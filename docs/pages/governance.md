@@ -74,7 +74,7 @@ See [Notion doc](../notion.md) for database IDs and property details.
 
 ### Subscriptions
 
-- `Role for Subscription` (select) — "Committee Chair", "Committee Vice-Chair", "Committee Member", "Working Group Chair", "Project Chair", "Project Vice-Chair", "Organization Lead"
+- `Role for Subscription` (select) — "Committee Chair", "Committee Vice-Chair", "Committee Member", "Working Group Chair", "Working Group Vice-Chair", "Project Chair", "Project Vice-Chair", "Organization Lead"
 - `PWCIs` (relation) — links to the working group/project/committee
 - `Subscription Status` (select) — must be "Active"
 
