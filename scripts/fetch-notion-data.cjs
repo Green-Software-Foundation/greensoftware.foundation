@@ -409,7 +409,7 @@ async function fetchChairsAndLeads(memberById) {
     "Chair",
     "Vice Chair",
     "Project Chair",
-    "Project Vice Chair",
+    "Project Vice-Chair",
     "Committee Chair",
     "Committee Vice-Chair",
     "Committee Member",
@@ -450,7 +450,7 @@ async function fetchChairsAndLeads(memberById) {
     "Chair": "Chair",
     "Vice Chair": "Vice-Chair",
     "Project Chair": "Chair",
-    "Project Vice Chair": "Vice-Chair",
+    "Project Vice-Chair": "Vice-Chair",
     "Committee Chair": "Chair",
     "Committee Vice-Chair": "Vice-Chair",
   };
