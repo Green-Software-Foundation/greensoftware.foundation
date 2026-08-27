@@ -90,28 +90,26 @@ Person data for subscription-based people (name, title, LinkedIn, member org) is
 
 ### Subscriptions DB
 
-- `Role for Subscription` (select) — e.g. "Committee Chair", "Project Lead", "Organization Lead"
+- `Role for Subscription` (select) — e.g. "Committee Chair", "Project Chair", "Organization Lead"
 - `PWCIs` (relation) — links to the working group/project/committee
 - `Subscription Status` (select) — must be "Active"
 - Roll-up fields: `First Name`, `Surname`, `Title`, `LinkedIn`, `Member`, `Volunteer Status`
 
 #### Distinguishing leadership on a standards page (e.g. Chair vs Vice Chair)
 
-`fetchChairsAndLeads()` in `scripts/fetch-notion-data.cjs` maps `Role for Subscription` values to the `roleLabel` shown next to a project lead's name in `projects.json` (consumed by `TeamGrid` on standards pages):
+`fetchChairsAndLeads()` in `scripts/fetch-notion-data.cjs` maps `Role for Subscription` values to the `roleLabel` shown next to a project chair's name in `projects.json` (consumed by `TeamGrid` on standards pages):
 
 | Role for Subscription | roleLabel shown on site |
 |---|---|
 | `Working Group Chair` | Chair |
-| `Project Lead` | Lead |
-| `Project Co-Lead` | Co-Lead |
-| `Chair` | Project Lead (Chair) |
-| `Vice Chair` | Vice Chair |
-| `Project Chair` | Project Lead (Chair) |
-| `Project Vice Chair` | Vice Chair |
+| `Chair` | Chair |
+| `Vice Chair` | Vice-Chair |
+| `Project Chair` | Chair |
+| `Project Vice Chair` | Vice-Chair |
 | `Committee Chair` | Chair |
 | `Committee Vice-Chair` | Vice-Chair |
 
-When a project has multiple "Project Lead" subscriptions and needs to distinguish a Chair from a Vice Chair (as opposed to two equal leads), set one person's `Role for Subscription` to `Project Chair` and the other's to `Project Vice Chair` rather than leaving both as `Project Lead`.
+When a project has multiple "Project Chair" subscriptions and needs to distinguish a Chair from a Vice Chair (as opposed to two equal chairs), set one person's `Role for Subscription` to `Project Vice Chair` rather than leaving both as `Project Chair`.
 
 **Careful when picking a value in Notion's select field:** typing a value that isn't an exact match for an existing option silently creates a *new* option instead of reusing one — this is how `Chair`/`Vice Chair`/`Project Chair`/`Project Vice Chair` all ended up coexisting as separate, easily-confused options. Always pick from the existing dropdown list rather than retyping the text. `Project Chair` and `Project Vice Chair` are the canonical values to use going forward; `Chair` and `Vice Chair` are kept mapped for compatibility but are unused stray options that could be deleted from the Notion schema.
 

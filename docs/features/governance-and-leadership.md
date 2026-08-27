@@ -125,13 +125,13 @@ Each chair's card should show:
 | Navveen Balani           | Accenture                 | Software Standards WG (Co-Chair)            |
 | Christopher Liljenstolpe | Cisco                     | Hardware Standards WG (Chair)               |
 | Chris Adams              | The Green Web Foundation  | Policy WG (Chair)                           |
-| Vaughan Knight           | Microsoft                 | Carbon Aware SDK (Project Lead)             |
-| Pindy Bhullar            | ClimateAction.tech        | SOFT (Project Lead)                         |
-| My Truong                | ZutaCore                  | WDPC (Project Lead)                         |
-| Joseph Cook              | Green Software Foundation | Impact Framework (Project Lead)             |
-| Florent Morel            | Amadeus                   | Carmen (Project Lead)                       |
-| Robin Castellon          | Amadeus                   | Carmen (Project Lead)                       |
-| Srinivasan Rakhunathan   | Microsoft                 | Impact Framework (Project Lead)             |
+| Vaughan Knight           | Microsoft                 | Carbon Aware SDK (Chair)                    |
+| Pindy Bhullar            | ClimateAction.tech        | SOFT (Chair)                                |
+| My Truong                | ZutaCore                  | WDPC (Chair)                                |
+| Joseph Cook              | Green Software Foundation | Impact Framework (Chair)                    |
+| Florent Morel            | Amadeus                   | Carmen (Chair)                              |
+| Robin Castellon          | Amadeus                   | Carmen (Chair)                              |
+| Srinivasan Rakhunathan   | Microsoft                 | Impact Framework (Chair)                    |
 
 **Data source:** Notion → `working_groups[].chairs`, `projects[].leads`, and `committees[].chair` / `committees[].vice_chair` in fetched JSON. The fetch script needs to be updated to produce a unified list of chairs/leads with their role labels.
 

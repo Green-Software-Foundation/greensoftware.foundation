@@ -44,7 +44,7 @@ If the Assembly's slug ever changes in Notion, update the `assemblyUrl` constant
 ## How to Update
 
 - **Change lifecycle stage or parent working group** — edit in Notion PWCIs DB (slug `"sci-otel"`), run `npm run fetch-notion`
-- **Add a TeamGrid once named leads exist** — leads are populated from Subscriptions records with role "Project Lead"/"Project Co-Lead" against this PWCI, not from the "Responsible PM" field. Once at least one exists, add a `TeamGrid` fed by `sciOtelProject?.leads`, matching Carmen's pattern
+- **Add a TeamGrid once named leads exist** — leads are populated from Subscriptions records with role "Project Chair"/"Project Vice Chair" against this PWCI, not from the "Responsible PM" field. Once at least one exists, add a `TeamGrid` fed by `sciOtelProject?.leads`, matching Carmen's pattern
 - **Edit page copy** — modify `src/pages/tools/sci-for-opentelemetry/index.astro` directly
 - **Navigation** — the entry in `src/lib/nav-items.ts` (Adoption → Tools section) points to `/tools/sci-for-opentelemetry/`
 - **Assembly status changes** — handled entirely on the Assembly page; no changes needed here unless the slug changes

@@ -39,7 +39,7 @@ The `groups` array determines which page sections a person appears in:
 |-------------|----------------------|----------------|
 | `steeringCommittee` | Steering Committee / Board | Subscriptions with committee roles linked to "Steering Committee" PWCI |
 | `administrativeTeam` | Our Team (staff) | GSF Team DB, Status = "Active" |
-| `chairsAndLeads` | Chairs & Project Leads | Subscriptions with roles: WG Chair, Project Lead/Co-Lead, Chair/Vice Chair, Committee Chair/Vice-Chair |
+| `chairsAndLeads` | Chairs & Project Chairs | Subscriptions with roles: WG Chair, Project Chair/Vice Chair, Chair/Vice Chair, Committee Chair/Vice-Chair |
 | `organisationalLeads` | Organisation Leads | Subscriptions with Role = "Organization Lead" |
 
 A person can belong to multiple groups and appears in each corresponding section.

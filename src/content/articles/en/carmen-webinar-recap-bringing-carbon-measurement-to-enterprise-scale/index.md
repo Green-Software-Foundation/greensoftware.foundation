@@ -22,7 +22,7 @@ We were thrilled to see nearly 60 participants join the session, ask specific qu
 
 ## Starting Point: The Consistency Gap 
 
-Florent Morel (Carmen Project Lead, Amadeus) set the stage by recalling Amadeus’s struggle to measure carbon emissions across over 250 cloud applications and hundreds of engineering teams. He shared how they tried using existing tools (Green Algorithms, internal models), but nothing worked at their scale. 
+Florent Morel (Carmen Project Chair, Amadeus) set the stage by recalling Amadeus’s struggle to measure carbon emissions across over 250 cloud applications and hundreds of engineering teams. He shared how they tried using existing tools (Green Algorithms, internal models), but nothing worked at their scale. 
 
 Carmen was born out of the need to fill this gap, but the main problem was consistency, not measurement. With each team using different constants, different implementations, and no common baseline, the key question they were asking was: Application by application, are we getting more efficient? 
 
@@ -30,7 +30,7 @@ Carmen was born out of the need to fill this gap, but the main problem was consi
 
 The existing GSF tools worked perfectly on an individual application or system level; the SCI specification gave the standard, the Impact Framework (IF) eased the calculation, but Carmen brought it to an enterprise scale. 
 
-Robin Castellon (Project Lead, Amadeus) took us step by step through how Carmen auto-generates IF manifest files from existing infrastructure data, runs the calculations, and outputs a per-component SCI score for every item in the stack. 
+Robin Castellon (Project Chair, Amadeus) took us step by step through how Carmen auto-generates IF manifest files from existing infrastructure data, runs the calculations, and outputs a per-component SCI score for every item in the stack. 
 
 It operates in two modes: daemon mode for fleet-wide reporting (plugs into FinOps pipeline) and API mode for specific application optimization (plugs into Prometheus/Kubernetes). 
 
@@ -38,7 +38,7 @@ Building on that foundation, Joseph Cook (Head of R&D at GSF) highlighted how wi
 
 ## The Philosophy Behind the Measurement 
 
-> “Our motto is data consistency over accuracy." —Florent Morel, Carmen Project Lead 
+> “Our motto is data consistency over accuracy." —Florent Morel, Carmen Project Chair 
 
 Carmen was never intended to provide absolute numbers. Florent emphasized that more than accuracy, what matters is the consistent measurement practice that eventually turns into a trend—and this is what Carmen enables. 
 

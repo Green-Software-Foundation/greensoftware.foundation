@@ -31,7 +31,7 @@ As a result, large data centers can have a substantial water footprint, in some 
 
 Yet the industry has no shared, reliable way to measure software's contribution to water consumption.
 
-> _"The scale at which AI and data centers are consuming water is unprecedented — and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Lead_ 
+> _"The scale at which AI and data centers are consuming water is unprecedented — and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Chair_ 
 
 ## **Why This Matters**
 

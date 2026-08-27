@@ -22,8 +22,8 @@ See [Notion doc](../notion.md) for how `projects.json` is populated from the PWC
 ### Leadership fallback (TeamGrid)
 
 If Carmen is not yet in `projects.json`, the TeamGrid uses a hardcoded fallback:
-- Florent Morel — Project Lead
-- Robin Castellon — Project Lead
+- Florent Morel — Project Chair
+- Robin Castellon — Project Chair
 - Joseph Cook — GSF Project Manager
 
 Once Carmen is in Notion with correct leads, remove the fallback and use `carmenProject.leads` directly (matching the RTC page pattern).
