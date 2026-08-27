@@ -406,8 +406,6 @@ async function fetchChairsAndLeads(memberById) {
 
   const leadershipRoles = [
     "Working Group Chair",
-    "Chair",
-    "Vice Chair",
     "Project Chair",
     "Project Vice-Chair",
     "Committee Chair",
@@ -447,8 +445,6 @@ async function fetchChairsAndLeads(memberById) {
   // Roles that qualify as named leads on a project (not "Committee Member" — too broad)
   const leadRoleLabels = {
     "Working Group Chair": "Chair",
-    "Chair": "Chair",
-    "Vice Chair": "Vice-Chair",
     "Project Chair": "Chair",
     "Project Vice-Chair": "Vice-Chair",
     "Committee Chair": "Chair",
