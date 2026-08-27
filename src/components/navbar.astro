@@ -51,7 +51,7 @@ const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production
 <header class="container" data-pagefind-ignore>
   {topBar !== "none" && (
     <div class="border-b border-primary-lighter pb-3">
-      <div class="flex items-center justify-center gap-3 text-xs md:justify-end">
+      <div class:list={["flex items-center justify-center gap-3 text-xs", topBar !== "utility" && "md:justify-end"]}>
         {topBar === "project-by" ? (
           <>
             <span>Project By</span>
@@ -78,7 +78,7 @@ const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production
             ) : (
               <a
                 href={link.href}
-                class="hover:text-primary transition-colors"
+                class="font-bold hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
