@@ -3,7 +3,7 @@ title: 'One Ledger: When Sustainability and Business Value Become the Same Conve
 teaserText: Notes from the Executive Director, Green Software Foundation
 date: 2026-08-04
 published: true
-summary: Drawing on his CleanEnviro Summit Catalyst 2026 keynote, Navveen Balani argues that cost efficiency and environmental efficiency in AI are converging into a single metric.
+summary: Drawing on his CleanEnviro Summit Catalyst 2026 keynote, Navveen Balani argues that cost efficiency and environmental efficiency in AI are increasingly being measured through the same lens.
 mainImage: One Ledger.png
 mainImageAlt: An illustrative workload-level dashboard bringing carbon, water, energy, cost, and hardware utilization into a single operational view.
 featured: false
