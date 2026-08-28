@@ -94,7 +94,7 @@ The current team is the best I've ever worked with. It took a long time to get h
 
 Thank you to the steering members, past and present. I used to see them as people I had to report to. Then one day, I had a vision: I was at the front, and they were all standing behind me, saying, "We believe in you. We trust you. That's why we put you in front." Ever since then, I've seen them as people who supported me. I'm proud of all of them.
 
-Thank you especially to all the chairs and project leads who volunteered their time and worked through difficult topics over the years.
+Thank you especially to all the chairs and project chairs who volunteered their time and worked through difficult topics over the years.
 
 And to the broader community: thank you for being supportive in a complicated space. This is not a black-and-white issue. If anyone tells you it is, they're wrong.
 

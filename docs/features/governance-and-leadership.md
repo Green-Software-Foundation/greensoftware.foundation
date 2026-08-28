@@ -10,7 +10,7 @@ Explains how the Green Software Foundation is structured, governed, and led. For
 
 ## Data Source
 
-All people data on this page is rendered from the JSON files produced by `scripts/fetch-notion-data.cjs`. The Notion fetch script pulls steering committee members, working group chairs, project leads, and committee members into `src/data/` at build time. No people data is hardcoded — if someone's role changes in Notion, the page updates on the next build.
+All people data on this page is rendered from the JSON files produced by `scripts/fetch-notion-data.cjs`. The Notion fetch script pulls steering committee members, working group chairs, project chairs, and committee members into `src/data/` at build time. No people data is hardcoded — if someone's role changes in Notion, the page updates on the next build.
 
 Staff/executive team data will also need to be sourced from Notion (currently missing from the fetch script — needs adding).
 

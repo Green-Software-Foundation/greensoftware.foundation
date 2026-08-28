@@ -77,7 +77,7 @@ The SWI specification is one of several standards in development, including futu
 
 :::
 
-#### **Project lead**
+#### **Project chair**
 
 [**Yi Ding**](https://www.linkedin.com/in/yi-ding-43571462/) is an Assistant Professor at Purdue University's Elmore Family School of Electrical and Computer Engineering, where she leads the STYLE Lab (Sustainable and Trustworthy computing sYstems and LEarning). Her research focuses on AI/ML systems and sustainability, examining the environmental impacts of computing, including carbon, water, and biodiversity. She has published on benchmarking LLM environmental impacts, water consumption in AI data centers, and carbon-aware computing, and previously held a visiting position at Meta's infrastructure data center. 
 

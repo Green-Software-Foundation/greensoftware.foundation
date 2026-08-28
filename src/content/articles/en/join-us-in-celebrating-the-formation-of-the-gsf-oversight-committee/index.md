@@ -9,7 +9,7 @@ mainImage: "./main.png"
 
 To better manage our time, resources and interests, we recently launched the [Oversight Committee](https://oc.greensoftware.foundation/) (OC). The OC will guide the foundation’s technical direction and ensure the foundation meets best practices across all projects. The OC will also provide recommendations to improve the [foundation charter](https://github.com/Green-Software-Foundation/charter), help set community norms and workflows, and deliver budget recommendations to the Steering Committee.  
 
-OC members currently include the chairs of all our working groups and all project leads. As members, these green software agents have committed to the foundation to stay up-to-date with issues related to green software and serve as active participants to help resolve technical-related matters affecting the community, address stakeholders and forum participants, and review project proposals. 
+OC members currently include the chairs of all our working groups and all project chairs. As members, these green software agents have committed to the foundation to stay up-to-date with issues related to green software and serve as active participants to help resolve technical-related matters affecting the community, address stakeholders and forum participants, and review project proposals. 
 
 Tammy McClellan and Chris Lloyd-Jones will serve as chair and vice-chair of the OC. Their responsibilities include:
 

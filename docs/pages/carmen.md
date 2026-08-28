@@ -15,7 +15,7 @@ A long-form landing page for Carmen, the open-source measurement engine that imp
 - **Project metadata** — imported from `src/data/projects.json`, looked up by slug `"carmen"`
 - **Lifecycle stage** — displayed as a badge in the hero, read from `projects.json`
 - **Parent working group** — resolved from `projects.json` to show "A [WG Name] Project" badge
-- **Project leads** — the `leads` array from `projects.json` feeds the TeamGrid
+- **Project chairs** — the `leads` array from `projects.json` feeds the TeamGrid
 
 See [Notion doc](../notion.md) for how `projects.json` is populated from the PWCIs database. Carmen must exist in the Notion PWCIs database with slug `"carmen"` for the dynamic elements to populate.
 

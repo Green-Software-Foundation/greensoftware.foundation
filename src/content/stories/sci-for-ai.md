@@ -142,7 +142,7 @@ contributors:
   - name: Navveen Balani
     role: Managing Director and Chief Technologist, Technology Sustainability Innovation
     org: Accenture
-    contribution: Led the SCI for AI specification as Software Standards Working Group Chair and project co-lead.
+    contribution: Led the SCI for AI specification as Software Standards Working Group Chair and project vice-chair.
   - name: Henry Richardson
     role: Senior Analyst
     org: WattTime

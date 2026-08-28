@@ -106,7 +106,7 @@ contributors:
     role: Technology Sustainability Consultant
     org: HSBC
     contribution: >
-      Project lead who identified the scaling gap through PhD research. Started at UBS
+      Project chair who identified the scaling gap through PhD research. Started at UBS
       where she applied the SCI Specification and founded the Sustainable Technology
       Guild, then co-chaired SOFT development from inception to ratification.
   - name: Sean O'Keefe

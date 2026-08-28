@@ -44,7 +44,7 @@ Built to complement the [GSF's Maturity Matrix Model](https://maturity-matrix.gr
 
 ### Charting Progress
 
-As of October 2025, four global GSF member organizations are working with the project lead to pilot and test the framework across their operations and specific departments.
+As of October 2025, four global GSF member organizations are working with the project chair to pilot and test the framework across their operations and specific departments.
 
 These early adopters are already seeing the framework's potential to navigate key challenges, such as data gaps, tool integration decisions, and securing buy-in, regardless of organizational size, industry, or maturity.
 

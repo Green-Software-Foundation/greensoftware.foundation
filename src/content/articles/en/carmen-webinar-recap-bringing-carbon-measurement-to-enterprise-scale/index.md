@@ -60,7 +60,7 @@ Amadeus showed how open standards and frameworks enable verification across the 
 
 Robin and Florent are already working on V0.2, which will add coverage of storage and cloud services, and a technical refactor to make the code more modular and easier to extend. As input and output formats won't change, everyone can start using V0.1 now without worrying about disruption. 
 
-Currently, Carmen only supports Azure, because that's what Amadeus’ system runs on. However, there are already open issues in the GitHub repository for both AWS and GCP inclusions. The project leads are actively seeking contributors from the community to support this improvement. 
+Currently, Carmen only supports Azure, because that's what Amadeus’ system runs on. However, there are already open issues in the GitHub repository for both AWS and GCP inclusions. The project chairs are actively seeking contributors from the community to support this improvement. 
 
 Joseph highlighted that using Carmen to capture AI emissions would be one of the most impactful features the community could build next.
 
@@ -70,7 +70,7 @@ Carmen is now open and available for anyone to explore and build on it. Joseph, 
 
 [**Watch Carmen’s webinar**](https://movement.greensoftware.foundation/spaces/22742081?utm_source=manual) on the Movement platform. 
 
-[**Office hours**](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup and come with your questions; this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST**.
+[**Office hours**](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project chairs. Bring your specific setup and come with your questions; this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST**.
 
 [**Subscribe to the project mailing list**](https://grnsft.org/carmen-public-mailing-list): This is a low-traffic channel for project updates, release announcements, and community news, delivered directly to your inbox.
 

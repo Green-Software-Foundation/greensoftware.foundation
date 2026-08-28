@@ -45,7 +45,7 @@ const staffSorted = [...staff].sort((a, b) => {
   return a.fullName.localeCompare(b.fullName);
 });
 
-// Chairs and project leads (from chairsAndLeads group only — requires fresh Notion fetch)
+// Chairs and project chairs (from chairsAndLeads group only — requires fresh Notion fetch)
 const chairsAndLeadsRaw = teamData.filter(p => p.groups.includes("chairsAndLeads"));
 
 // Filter out people whose only roles are "Committee Member" — keep chairs, leads, vice chairs
