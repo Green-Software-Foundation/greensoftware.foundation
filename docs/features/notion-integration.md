@@ -142,8 +142,8 @@ Members (Orgs)                 Volunteers (People)              PWCIs (Groups)
 Subscriptions (join table)
 ├─ Subscription Name (title)
 ├─ Role for Subscription
-│  (Subscriber / Organization Lead / WG Chair / Project Lead /
-│   Committee Chair / Committee Vice-Chair / Committee Member / Contributor)
+│  (Subscriber / Organization Lead / WG Chair / WG Vice-Chair / Project Chair /
+│   Project Vice-Chair / Committee Chair / Committee Vice-Chair / Committee Member / Contributor)
 ├─ Subscription Status (Active/Archived/New)
 ├─ Volunteers ←→ (relation to Volunteers)
 └─ PWCIs ←→ (relation to PWCIs)

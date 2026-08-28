@@ -398,20 +398,17 @@ async function fetchSteeringCommittee(memberById) {
 }
 
 // ---------------------------------------------------------------------------
-// Query 4a: Chairs & Project Leads
+// Query 4a: Chairs & Project Chairs
 // ---------------------------------------------------------------------------
 
 async function fetchChairsAndLeads(memberById) {
-  console.log("\nFetching Chairs & Project Leads (from Subscriptions)...");
+  console.log("\nFetching Chairs & Project Chairs (from Subscriptions)...");
 
   const leadershipRoles = [
     "Working Group Chair",
-    "Project Lead",
-    "Project Co-Lead",
-    "Chair",
-    "Vice Chair",
+    "Working Group Vice-Chair",
     "Project Chair",
-    "Project Vice Chair",
+    "Project Vice-Chair",
     "Committee Chair",
     "Committee Vice-Chair",
     "Committee Member",
@@ -449,12 +446,9 @@ async function fetchChairsAndLeads(memberById) {
   // Roles that qualify as named leads on a project (not "Committee Member" — too broad)
   const leadRoleLabels = {
     "Working Group Chair": "Chair",
-    "Project Lead": "Lead",
-    "Project Co-Lead": "Co-Lead",
-    "Chair": "Project Lead (Chair)",
-    "Vice Chair": "Vice Chair",
-    "Project Chair": "Project Lead (Chair)",
-    "Project Vice Chair": "Vice Chair",
+    "Working Group Vice-Chair": "Vice-Chair",
+    "Project Chair": "Chair",
+    "Project Vice-Chair": "Vice-Chair",
     "Committee Chair": "Chair",
     "Committee Vice-Chair": "Vice-Chair",
   };
@@ -1214,7 +1208,7 @@ async function main() {
   console.log(`General members: ${activeGeneralCount} active, ${allGeneral.length - activeGeneralCount} historical`);
   console.log(`Total members.json entries: ${allMembers.length}`);
   console.log(`Steering Committee people: ${steeringCommittee.length}`);
-  console.log(`Chairs & Project Leads: ${chairsAndLeads.length}`);
+  console.log(`Chairs & Project Chairs: ${chairsAndLeads.length}`);
   console.log(`Organisation Leads: ${orgLeads.length}`);
   console.log(`Admin Team: ${adminTeam.length}`);
   console.log(`Total people.json entries: ${peopleJson.length}`);

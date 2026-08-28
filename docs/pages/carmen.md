@@ -15,15 +15,15 @@ A long-form landing page for Carmen, the open-source measurement engine that imp
 - **Project metadata** — imported from `src/data/projects.json`, looked up by slug `"carmen"`
 - **Lifecycle stage** — displayed as a badge in the hero, read from `projects.json`
 - **Parent working group** — resolved from `projects.json` to show "A [WG Name] Project" badge
-- **Project leads** — the `leads` array from `projects.json` feeds the TeamGrid
+- **Project chairs** — the `leads` array from `projects.json` feeds the TeamGrid
 
 See [Notion doc](../notion.md) for how `projects.json` is populated from the PWCIs database. Carmen must exist in the Notion PWCIs database with slug `"carmen"` for the dynamic elements to populate.
 
 ### Leadership fallback (TeamGrid)
 
 If Carmen is not yet in `projects.json`, the TeamGrid uses a hardcoded fallback:
-- Florent Morel — Project Lead
-- Robin Castellon — Project Lead
+- Florent Morel — Project Chair
+- Robin Castellon — Project Chair
 - Joseph Cook — GSF Project Manager
 
 Once Carmen is in Notion with correct leads, remove the fallback and use `carmenProject.leads` directly (matching the RTC page pattern).

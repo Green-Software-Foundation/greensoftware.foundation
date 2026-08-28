@@ -29,7 +29,7 @@ The framework recognizes that carbon emissions from software don't fall solely u
 
 It provides decision trees, capability assessments, and clear action steps, supported by templates, checklists, and maturity matrices. Addressing the needs of different personas, from CTOs to developers to sustainability leads, SOFT offers an actionable path forward.
 
-> _"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business."—Pindy Bhullar, SOFT Project Lead_ 
+> _"SOFT gives changemakers the structured approach they need to reduce carbon emissions from software operations while achieving their business objectives—embedding sustainable software practices into the DNA of the business."—Pindy Bhullar, SOFT Project Chair_ 
 
 ## A Closer Look at SOFT
 
@@ -44,7 +44,7 @@ Built to complement the [GSF's Maturity Matrix Model](https://maturity-matrix.gr
 
 ### Charting Progress
 
-As of October 2025, four global GSF member organizations are working with the project lead to pilot and test the framework across their operations and specific departments.
+As of October 2025, four global GSF member organizations are working with the project chair to pilot and test the framework across their operations and specific departments.
 
 These early adopters are already seeing the framework's potential to navigate key challenges, such as data gaps, tool integration decisions, and securing buy-in, regardless of organizational size, industry, or maturity.
 

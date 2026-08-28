@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-The foundation's governance structure: hierarchy diagram, steering committee, staff, chairs/project leads, organisation leads, and legal details.
+The foundation's governance structure: hierarchy diagram, steering committee, staff, chairs/project chairs, organisation leads, and legal details.
 
 ## Dynamic Elements
 
@@ -30,7 +30,7 @@ Sorted with Executive Director first, then alphabetical. Displayed in a 3-column
 
 **Notion pipeline:** Queries GSF Team DB for pages with Status = "Active". Cross-references against Volunteers DB for LinkedIn and photos.
 
-### Chairs & Project Leads
+### Chairs & Project Chairs
 
 **Source:** `people.json` entries where `groups` includes `"chairsAndLeads"`
 
@@ -74,7 +74,7 @@ See [Notion doc](../notion.md) for database IDs and property details.
 
 ### Subscriptions
 
-- `Role for Subscription` (select) — "Committee Chair", "Committee Vice-Chair", "Committee Member", "Working Group Chair", "Project Lead", "Project Co-Lead", "Organization Lead"
+- `Role for Subscription` (select) — "Committee Chair", "Committee Vice-Chair", "Committee Member", "Working Group Chair", "Working Group Vice-Chair", "Project Chair", "Project Vice-Chair", "Organization Lead"
 - `PWCIs` (relation) — links to the working group/project/committee
 - `Subscription Status` (select) — must be "Active"
 

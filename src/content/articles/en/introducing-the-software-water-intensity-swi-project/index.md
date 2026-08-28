@@ -31,7 +31,7 @@ As a result, large data centers can have a substantial water footprint, in some 
 
 Yet the industry has no shared, reliable way to measure software's contribution to water consumption.
 
-> _"The scale at which AI and data centers are consuming water is unprecedented — and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Lead_ 
+> _"The scale at which AI and data centers are consuming water is unprecedented — and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Chair_ 
 
 ## **Why This Matters**
 
@@ -77,7 +77,7 @@ The SWI specification is one of several standards in development, including futu
 
 :::
 
-#### **Project lead**
+#### **Project chair**
 
 [**Yi Ding**](https://www.linkedin.com/in/yi-ding-43571462/) is an Assistant Professor at Purdue University's Elmore Family School of Electrical and Computer Engineering, where she leads the STYLE Lab (Sustainable and Trustworthy computing sYstems and LEarning). Her research focuses on AI/ML systems and sustainability, examining the environmental impacts of computing, including carbon, water, and biodiversity. She has published on benchmarking LLM environmental impacts, water consumption in AI data centers, and carbon-aware computing, and previously held a visiting position at Meta's infrastructure data center. 
 

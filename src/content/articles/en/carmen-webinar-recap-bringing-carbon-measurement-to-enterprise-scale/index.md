@@ -22,7 +22,7 @@ We were thrilled to see nearly 60 participants join the session, ask specific qu
 
 ## Starting Point: The Consistency Gap 
 
-Florent Morel (Carmen Project Lead, Amadeus) set the stage by recalling Amadeus’s struggle to measure carbon emissions across over 250 cloud applications and hundreds of engineering teams. He shared how they tried using existing tools (Green Algorithms, internal models), but nothing worked at their scale. 
+Florent Morel (Carmen Project Chair, Amadeus) set the stage by recalling Amadeus’s struggle to measure carbon emissions across over 250 cloud applications and hundreds of engineering teams. He shared how they tried using existing tools (Green Algorithms, internal models), but nothing worked at their scale. 
 
 Carmen was born out of the need to fill this gap, but the main problem was consistency, not measurement. With each team using different constants, different implementations, and no common baseline, the key question they were asking was: Application by application, are we getting more efficient? 
 
@@ -30,7 +30,7 @@ Carmen was born out of the need to fill this gap, but the main problem was consi
 
 The existing GSF tools worked perfectly on an individual application or system level; the SCI specification gave the standard, the Impact Framework (IF) eased the calculation, but Carmen brought it to an enterprise scale. 
 
-Robin Castellon (Project Lead, Amadeus) took us step by step through how Carmen auto-generates IF manifest files from existing infrastructure data, runs the calculations, and outputs a per-component SCI score for every item in the stack. 
+Robin Castellon (Project Chair, Amadeus) took us step by step through how Carmen auto-generates IF manifest files from existing infrastructure data, runs the calculations, and outputs a per-component SCI score for every item in the stack. 
 
 It operates in two modes: daemon mode for fleet-wide reporting (plugs into FinOps pipeline) and API mode for specific application optimization (plugs into Prometheus/Kubernetes). 
 
@@ -38,7 +38,7 @@ Building on that foundation, Joseph Cook (Head of R&D at GSF) highlighted how wi
 
 ## The Philosophy Behind the Measurement 
 
-> “Our motto is data consistency over accuracy." —Florent Morel, Carmen Project Lead 
+> “Our motto is data consistency over accuracy." —Florent Morel, Carmen Project Chair 
 
 Carmen was never intended to provide absolute numbers. Florent emphasized that more than accuracy, what matters is the consistent measurement practice that eventually turns into a trend—and this is what Carmen enables. 
 
@@ -60,7 +60,7 @@ Amadeus showed how open standards and frameworks enable verification across the 
 
 Robin and Florent are already working on V0.2, which will add coverage of storage and cloud services, and a technical refactor to make the code more modular and easier to extend. As input and output formats won't change, everyone can start using V0.1 now without worrying about disruption. 
 
-Currently, Carmen only supports Azure, because that's what Amadeus’ system runs on. However, there are already open issues in the GitHub repository for both AWS and GCP inclusions. The project leads are actively seeking contributors from the community to support this improvement. 
+Currently, Carmen only supports Azure, because that's what Amadeus’ system runs on. However, there are already open issues in the GitHub repository for both AWS and GCP inclusions. The project chairs are actively seeking contributors from the community to support this improvement. 
 
 Joseph highlighted that using Carmen to capture AI emissions would be one of the most impactful features the community could build next.
 
@@ -70,7 +70,7 @@ Carmen is now open and available for anyone to explore and build on it. Joseph, 
 
 [**Watch Carmen’s webinar**](https://movement.greensoftware.foundation/spaces/22742081?utm_source=manual) on the Movement platform. 
 
-[**Office hours**](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project leads. Bring your specific setup and come with your questions; this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST**.
+[**Office hours**](https://movement.greensoftware.foundation/spaces/23617166/events): We’re introducing office hours that give you direct access to the project chairs. Bring your specific setup and come with your questions; this is where they will get resolved. The first session will take place on **Wednesday, May 13, at 10 am BST**.
 
 [**Subscribe to the project mailing list**](https://grnsft.org/carmen-public-mailing-list): This is a low-traffic channel for project updates, release announcements, and community news, delivered directly to your inbox.
 

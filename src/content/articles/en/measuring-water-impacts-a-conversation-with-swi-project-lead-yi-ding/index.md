@@ -1,11 +1,11 @@
 ---
-title: "Measuring Software's Water Footprint: A Conversation with SWI Project Lead Yi Ding"
+title: "Measuring Software's Water Footprint: A Conversation with SWI Project Chair Yi Ding"
 teaserText: Yi Ding explains what her research shows about AI's water footprint and why the industry needs a shared standard that addresses the unique challenges of water measurement.
 date: 2026-07-09
 published: true
 summary: In our Q&A, Yi Ding shares how the SWI project is building a practical standard for measuring software's water footprint to support more informed engineering and business decisions.
 mainImage: Yi-Ding-Q&A.png
-mainImageAlt: "Quote card: Yi Ding, Assistant Professor at Purdue University and SWI Project Lead at GSF, says she'd like software teams to think about Software Water Intensity (SWI) as naturally as they think about energy efficiency or SCI five years from now."
+mainImageAlt: "Quote card: Yi Ding, Assistant Professor at Purdue University and SWI Project Chair at GSF, says she'd like software teams to think about Software Water Intensity (SWI) as naturally as they think about energy efficiency or SCI five years from now."
 featured: false
 tags:
   - standards
@@ -17,7 +17,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-Yi Ding is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University, where she leads the STYLE (Sustainable and Trustworthy computing sYstems and LEarning) Lab. She is also the Project Lead for GSF's Software Water Intensity (SWI) project. 
+Yi Ding is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University, where she leads the STYLE (Sustainable and Trustworthy computing sYstems and LEarning) Lab. She is also the Project Chair for GSF's Software Water Intensity (SWI) project. 
 
 ## **What inspired you to focus on the intersection of AI, water, and environmental sustainability?**
 

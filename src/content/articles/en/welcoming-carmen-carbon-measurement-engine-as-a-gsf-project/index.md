@@ -38,7 +38,7 @@ The future of sustainable software isn't built through isolated efforts but thro
 As organizations reinforce their sustainability commitments, Carmen provides the production-proven measurement foundation that teams can adopt, verify, and build upon.
 
 # The Path Forward 
-The transfer of ownership ensures Carmen remains freely available and community-driven as adoption scales. Florent Morel and Robin Castellon will continue as the project leads under GSF's governance. The repository transition has established the project infrastructure needed for community engagement, including issue tracking, contribution guidelines, and documentation resources.
+The transfer of ownership ensures Carmen remains freely available and community-driven as adoption scales. Florent Morel and Robin Castellon will continue as the project chairs under GSF's governance. The repository transition has established the project infrastructure needed for community engagement, including issue tracking, contribution guidelines, and documentation resources.
 
 While we’re establishing Carmen as a fully operational GSF project, our immediate roadmap includes expanding infrastructure monitoring beyond VMs to storage and additional cloud services, guided by early adopter feedback. Organizations beyond Amadeus can now use Carmen to measure, understand, and act on their software emissions.
 

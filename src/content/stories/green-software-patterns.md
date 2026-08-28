@@ -98,13 +98,13 @@ contributors:
       Core contributor to the Green Software Patterns catalog, bringing Microsoft's
       engineering perspective to pattern development and review.
   - name: Franziska Warncke
-    role: Project Co-Lead, Green Software Patterns
+    role: Project Vice-Chair, Green Software Patterns
     org: NTT DATA
     contribution: >
       Drove the Patterns catalog development and led the serverless SCI measurement
       methodology alongside Denis Angeletta. Now co-leads v2 with Liya Mathew.
   - name: Liya Mathew
-    role: Project Co-Lead, Green Software Patterns v2
+    role: Project Vice-Chair, Green Software Patterns v2
     org: Goldman Sachs
     contribution: >
       Co-leading the vision and execution of Green Software Patterns v2 with Franziska
