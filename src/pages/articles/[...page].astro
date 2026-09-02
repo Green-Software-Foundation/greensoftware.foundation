@@ -16,7 +16,7 @@ export const getStaticPaths = (async ({ paginate }) => {
     .filter((a) => a.data.lang === "en")
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-  return paginate(englishArticles, { pageSize: 12 });
+  return paginate(englishArticles, { pageSize: 15 });
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
