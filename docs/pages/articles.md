@@ -5,7 +5,7 @@
 
 ## What the pages show
 
-The **listing page** displays all published English articles in a paginated grid (12 per page), sorted by date (newest first). Each card shows the main image, date, title, and summary.
+The **listing page** displays all published English articles in a paginated 3-column grid (12 per page, `lg:grid-cols-3`, matching the [Member Stories](stories.md) grid layout), sorted by date (newest first). Each card shows the main image, date, title, and summary.
 
 The **detail page** shows the full article content with author information, language switcher (if translations exist), structured data (JSON-LD), and a newsletter signup.
 
