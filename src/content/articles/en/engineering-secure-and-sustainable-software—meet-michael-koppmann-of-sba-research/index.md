@@ -4,8 +4,8 @@ teaserText: Bringing security and resilience expertise to green software develop
 date: 2026-09-03
 published: true
 summary: GSF's new member shares how security, resilience, and sustainability can work together in software engineering and how SBA Research is applying these principles across the software lifecycle.
-mainImage: ../../engineering-secure-and-sustainable-software—meet-michael-koppmann-of-sba-research/SBA-Member-Q&A.png
-mainImageAlt: ''
+mainImage: ../../engineering-secure-and-sustainable-software—meet-michael-koppmann-of-sba-research/SBA-Member-Q&A (1).png
+mainImageAlt: 'Quote card with a headshot of Michael Koppmann: "We see security and sustainability as mutually reinforcing: both benefit from efficient, maintainable systems and deliberate engineering decisions. Applied together, these principles can support software that is more resource-efficient, reliable, and user-friendly." Attributed to Michael Koppmann, senior information security consultant at SBA Research. Green Software Foundation and SBA Research logos appear at the bottom.'
 featured: false
 tags: []
 authors: []
@@ -15,7 +15,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-Michael is a Senior Information Security Consultant at SBA Research, with a career centered on application security, penetration testing, and secure software engineering. His research spans sustainable software development, secure and maintainable software engineering, and privacy-enhancing technologies. 
+Michael is a senior information security consultant at SBA Research, with a career centered on application security, penetration testing, and secure software engineering. His research spans sustainable software development, secure and maintainable software engineering, and privacy-enhancing technologies. 
 
 He is also one of the OWASP Vienna chapter leaders, helping to strengthen the local information security community.
 
