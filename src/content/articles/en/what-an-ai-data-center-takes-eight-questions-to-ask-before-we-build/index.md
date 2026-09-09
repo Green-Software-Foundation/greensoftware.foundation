@@ -100,13 +100,13 @@ The same principle can apply to AI infrastructure: standardize the questions, bo
 
 Infrastructure sustainability is frequently described in terms such as "water efficient," "energy efficient," "low carbon," "advanced cooling," "renewable powered," and "sustainable AI infrastructure." While those claims can represent meaningful engineering improvements, on their own they don’t provide enough information to enable comparison. 
 
-Each claim needs a specific measurement behind it: “Water efficient” needs water consumption against a functional unit; “Energy efficient” needs energy relative to useful output; “Grid flexible” needs a measure of how much demand can be shifted or reduced, and under what conditions; and “Hardware efficient” needs both operational performance and embodied impact.
+Each claim needs a specific measurement behind it: “water efficient” needs water consumption against a functional unit; “energy efficient” needs energy relative to useful output; “grid flexible” needs a measure of how much demand can be shifted or reduced, and under what conditions; and “hardware efficient” needs both operational performance and embodied impact.
 
-These numbers are what make commitments measurable, while measurement makes systems comparable, and comparability creates the basis for improvement. 
+Making these claims measurable ultimately makes commitments meaningful, systems comparable, and improvement possible.
 
 ## **From Software Demand to Infrastructure Impact**
 
-Software decisions are increasingly becoming infrastructure decisions.
+> Software decisions are increasingly becoming infrastructure decisions.
 
 The application shapes the workload, which then determines compute demand. At scale, that demand determines how much energy, water, hardware, and physical infrastructure is needed to support it.
 
