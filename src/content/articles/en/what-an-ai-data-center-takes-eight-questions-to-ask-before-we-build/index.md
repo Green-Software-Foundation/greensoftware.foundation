@@ -120,6 +120,4 @@ The next step is not only to measure what a data center consumes after it was bu
 
 **Eight shared questions provide a practical place to start.** 
 
-— 
-
 _The views expressed here reflect ongoing conversations across the green software community and are intended to surface ideas for discussion rather than to convey formal Foundation positions._
