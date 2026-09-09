@@ -4,7 +4,7 @@ teaserText: Notes from the Executive Director, Green Software Foundation
 date: 2026-09-08
 published: true
 summary: Sustainability decisions around AI data centers need to happen before infrastructure is built. In the latest ED Notes, Navveen Balani proposes a framework for evaluating water, energy, land, and accountability while connecting software demand to physical infrastructure.
-mainImage: ../../what-an-ai-data-center-takes-eight-questions-to-ask-before-we-build/What-AI-Data-Center-Takes.png
+mainImage: What-AI-Data-Center-Takes.png
 mainImageAlt: Stylised illustration of a person in round glasses looking over a dark grid landscape containing a data centre, water tank and pipe, cooling units, solar panels, a wind turbine, trees and factory chimneys, with icons for soil, energy and water above. Green Software Foundation logo, bottom left.
 featured: false
 tags:
