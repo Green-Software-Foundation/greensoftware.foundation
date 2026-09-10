@@ -40,9 +40,9 @@ const filtered = allArticles
 | `community` | Community | `/community/` |
 | `education` | Education | `/education/` |
 
-## Homepage Carousel
+## Homepage "Recent Updates"
 
-The homepage carousel uses `featured: true` in frontmatter instead of tags. Up to 10 featured articles are shown, sorted newest first.
+The homepage does **not** use `ArticleCarousel` — its "Recent Updates" section is a `CardGrid` (4-column, image + title only, no description, whole card links to the article). It still uses `featured: true` in frontmatter instead of tags, the same as before the carousel was replaced. Up to 16 featured articles are shown, sorted newest first. See [homepage doc](../pages/homepage.md#recent-updates-featured-articles).
 
 ## 3-Article Minimum
 

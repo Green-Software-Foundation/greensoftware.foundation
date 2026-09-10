@@ -7,7 +7,8 @@ interface CardItem {
   /** Card image shown at the top */
   imageSrc?: string;
   title: string;
-  description: string;
+  /** Card description. Omit to render an image/title-only card */
+  description?: string;
   /** HTML description (rendered with set:html, used instead of description when provided) */
   bodyHtml?: string;
   featured?: boolean;
@@ -15,6 +16,8 @@ interface CardItem {
   ctaText?: string;
   /** CTA link href */
   ctaHref?: string;
+  /** Makes the whole card a link to this URL (used when there's no separate per-card CTA) */
+  href?: string;
 }
 
 interface Props {
@@ -34,6 +37,10 @@ interface Props {
   decorSrc?: string;
   /** Background class */
   bgClass?: string;
+  /** Section-level CTA link text, shown centred below the grid */
+  ctaText?: string;
+  /** Section-level CTA link href */
+  ctaHref?: string;
 }
 
 const columnClasses: Record<number, string> = {
@@ -51,6 +58,8 @@ const {
   align = "center",
   decorSrc,
   bgClass = "bg-accent-lightest-2",
+  ctaText,
+  ctaHref,
 } = Astro.props;
 
 // Split heading into plain and accent segments
@@ -83,10 +92,13 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
       </div>
     )}
     <div class={`relative z-10 grid gap-4 lg:gap-6 ${columnClasses[columns]}`}>
-      {cards.map((card) => (
-        <div class:list={[
+      {cards.map((card) => {
+        const Tag = card.href ? "a" : "div";
+        return (
+        <Tag href={card.href} class:list={[
           "flex flex-col rounded-xl shadow-sm overflow-hidden",
           card.featured ? "bg-primary-darker text-white" : "border bg-white",
+          card.href && "transition-shadow hover:shadow-md",
         ]}>
           {card.imageSrc && (
             <div class="overflow-hidden">
@@ -119,11 +131,11 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
             )}
             {card.bodyHtml ? (
               <p set:html={card.bodyHtml} class:list={["mt-2 text-sm", card.featured ? "text-white/80" : ""]} />
-            ) : (
+            ) : card.description ? (
               <p class:list={["mt-2 text-sm", card.featured ? "text-white/80" : "text-gray-darker"]}>
                 {card.description}
               </p>
-            )}
+            ) : null}
             {card.ctaText && card.ctaHref && (
               <div class="mt-auto pt-4">
                 <a href={card.ctaHref} target="_blank" rel="noopener noreferrer" class="w-full">
@@ -132,11 +144,19 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
               </div>
             )}
           </div>
-        </div>
-      ))}
+        </Tag>
+        );
+      })}
     </div>
     {decorSrc && (
       <Image class="absolute top-[13px] right-[1.5%] -z-0 hidden px-[5%] lg:block" src={decorSrc} alt="" />
+    )}
+    {ctaText && ctaHref && (
+      <div class="mt-8 text-center">
+        <a href={ctaHref} class="inline-flex items-center text-sm font-bold text-primary hover:underline">
+          {ctaText}
+        </a>
+      </div>
     )}
   </div>
 </section>

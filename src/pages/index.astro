@@ -16,7 +16,6 @@ import FeatureGrid from "@/components/feature-grid.astro";
 import CardGrid from "@/components/card-grid.astro";
 import StatsGrid from "@/components/stats-grid.astro";
 import CommunityReach from "@/components/community-reach.astro";
-import ArticleCarousel from "@/components/article-carousel.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import CTACard from "@/components/cta-card.astro";
@@ -36,18 +35,16 @@ const resolveOrgs = (names: string[]) =>
       return a.name.localeCompare(b.name);
     });
 
-// ----- Featured articles -----
+// ----- Recent updates (featured articles) -----
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 10)
+  .slice(0, 16)
   .map(a => ({
     title: a.data.title,
-    description: a.data.summary || a.data.teaserText,
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
-    cta: "Read the story →",
   }));
 ---
 
@@ -117,6 +114,18 @@ const featuredArticles = allArticles
       role: "GSF Chair - VP of Application Services, NTT DATA",
     }}
   />
+
+  <!-- Recent Updates (featured articles) -->
+  {featuredArticles.length >= 3 && (
+    <CardGrid
+      heading="Recent Updates"
+      body="Stories, research, and insights from our members and community"
+      columns={4}
+      cards={featuredArticles}
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- Section 4: Organisational Upskilling -->
   <TabbedSection
@@ -250,17 +259,6 @@ const featuredArticles = allArticles
       { icon: "/assets/shape-icon-3.svg", title: "Want to contribute?", description: "Member playbook, working groups, community", ctaText: "Get involved", ctaHref: "/community/" },
     ]}
   />
-
-  <!-- Section 13: Featured Content -->
-  {featuredArticles.length >= 3 && (
-    <ArticleCarousel
-      heading="Featured Content"
-      body="Stories, research, and insights from our members and community"
-      articles={featuredArticles}
-      ctaText="View all articles →"
-      ctaHref="/articles/"
-    />
-  )}
 
   <!-- Section 14: Final CTA -->
   <CTABanner

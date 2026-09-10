@@ -15,31 +15,31 @@ The primary entry point to the site. Leads with the "silicon to screen" definiti
 | — | TextWithImage | cream | "Solving alone / solving together" — the membership proposition. Was the Hero until the silicon-to-screen reorder, hence the h2 |
 | 2 | LogoMarquee | white | Member logos |
 | — | SplitCards | cream | Problem statement + GSF Chair quote |
+| — | CardGrid | cream | "Recent Updates" — featured content grid (conditional) |
 | 4–8 | TabbedSection ×5 | cream | Member challenge stories |
 | 9 | CTACard | — | "Discuss your challenges with us" |
 | 10 | CommunityReach | — | Reach stats + world map |
 | 11 | FeatureGrid | — | "What we do" — four functions |
 | 12 | ResourceCards | — | "Where to go next" — routes by role |
-| 13 | ArticleCarousel | — | Featured content (conditional) |
 | 14 | CTABanner | — | Final CTA |
 
 Section numbering in the comments is historical and has gaps — sections added later are labelled by name rather than renumbering the whole file.
 
 ## Dynamic Elements
 
-### Featured articles
+### Recent Updates (featured articles)
 
-The ArticleCarousel pulls from the `articles` content collection, not from hardcoded data:
+The "Recent Updates" section (a `CardGrid`, not the `ArticleCarousel` used elsewhere on the site) pulls from the `articles` content collection, not from hardcoded data:
 
 ```js
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 10);
+  .slice(0, 16);
 ```
 
-The whole section is wrapped in `{featuredArticles.length >= 3 && (...)}` — it disappears entirely below three articles rather than rendering a broken carousel. To feature an article, set `featured: true` in its frontmatter. See [article carousels doc](../components/article-carousels.md).
+Renders as a 4-column grid (image + title only, no description, no per-card CTA — the whole card links to the article via `CardGrid`'s `href` support). Up to 16 articles are shown; fewer featured articles just means fewer cards, not empty placeholders. The whole section is wrapped in `{featuredArticles.length >= 3 && (...)}` — it disappears entirely below three articles rather than rendering a sparse grid. To feature an article, set `featured: true` in its frontmatter. See [article carousels doc](../components/article-carousels.md).
 
 ### Organisation logos on the challenge stories
 
@@ -82,5 +82,5 @@ Note the page uses American spelling (`organizations`, `standardized`, `minimize
 | Add/remove a challenge story | Add or remove a `TabbedSection` block; the linked story lives in `src/content/stories/` |
 | Change which orgs appear on a story | Edit the `resolveOrgs([...])` array for that section |
 | Update reach stats | Edit the `CommunityReach` `stats` array |
-| Feature an article in the carousel | Set `featured: true` in the article's frontmatter — do not hardcode articles here |
+| Feature an article in "Recent Updates" | Set `featured: true` in the article's frontmatter — do not hardcode articles here |
 | Change member logos | Notion Members DB, then `npm run fetch-notion` — not in this file |
