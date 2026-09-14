@@ -40,9 +40,20 @@ const filtered = allArticles
 | `community` | Community | `/community/` |
 | `education` | Education | `/education/` |
 
-## Homepage "Recent Updates"
+## Homepage Carousel
 
-The homepage does **not** use `ArticleCarousel` — its "Recent Updates" section is a `CardGrid` (4-column, image + title only, no description, whole card links to the article). It still uses `featured: true` in frontmatter instead of tags, the same as before the carousel was replaced. Up to 16 featured articles are shown, sorted newest first. See [homepage doc](../pages/homepage.md#recent-updates-featured-articles).
+The homepage carousel ("Get involved with the latest projects") uses `featured: true` in frontmatter instead of tags. Up to 12 featured articles are shown, sorted newest first. It is the only carousel that passes `slidesPerView={4}`, a `primaryCtaText`/`primaryCtaHref` button, and per-card `secondaryCta` links. See [homepage doc](../pages/homepage.md#get-involved-with-the-latest-projects-featured-articles).
+
+## Optional Carousel Props
+
+| Prop | Default | Effect |
+|------|---------|--------|
+| `slidesPerView` | `3` | `4` adds a fourth card at `xl` and switches cards to the compact style (tighter padding, smaller title, description clamped to 3 lines). At `3` the cards are unchanged, so existing carousels are unaffected |
+| `primaryCtaText` / `primaryCtaHref` | — | Prominent primary button under the section heading, above the slider |
+| `ctaText` / `ctaHref` | — | Plain text link under the slider ("View all articles →") |
+| `secondaryCta` (per article) | — | Second link on the card under "Read the story →", for pointing at the project or assembly behind the article |
+
+Card slide widths are full class strings in a lookup map rather than interpolated — Tailwind only sees classes it can find literally in the source.
 
 ## 3-Article Minimum
 

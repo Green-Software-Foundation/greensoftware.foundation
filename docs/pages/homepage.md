@@ -15,7 +15,7 @@ The primary entry point to the site. Leads with the "silicon to screen" definiti
 | — | TextWithImage | cream | "Solving alone / solving together" — the membership proposition. Was the Hero until the silicon-to-screen reorder, hence the h2 |
 | 2 | LogoMarquee | white | Member logos |
 | — | SplitCards | cream | Problem statement + GSF Chair quote |
-| — | CardGrid | cream | "Recent Updates" — featured content grid (conditional) |
+| — | ArticleCarousel | cream | "Get involved with the latest projects" — featured articles, 4-up slider (conditional) |
 | 4–8 | TabbedSection ×5 | cream | Member challenge stories |
 | 9 | CTACard | — | "Discuss your challenges with us" |
 | 10 | CommunityReach | — | Reach stats + world map |
@@ -27,19 +27,29 @@ Section numbering in the comments is historical and has gaps — sections added 
 
 ## Dynamic Elements
 
-### Recent Updates (featured articles)
+### "Get involved with the latest projects" (featured articles)
 
-The "Recent Updates" section (a `CardGrid`, not the `ArticleCarousel` used elsewhere on the site) pulls from the `articles` content collection, not from hardcoded data:
+Sits directly under SplitCards, high on the page, and is framed as an invitation to join a project rather than an archive of reading. It pulls from the `articles` content collection, not from hardcoded data:
 
 ```js
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 16);
+  .slice(0, 12);
 ```
 
-Renders as a 4-column grid (image + title only, no description, no per-card CTA — the whole card links to the article via `CardGrid`'s `href` support). Up to 16 articles are shown; fewer featured articles just means fewer cards, not empty placeholders. The whole section is wrapped in `{featuredArticles.length >= 3 && (...)}` — it disappears entirely below three articles rather than rendering a sparse grid. To feature an article, set `featured: true` in its frontmatter. See [article carousels doc](../components/article-carousels.md).
+Renders as an `ArticleCarousel` with `slidesPerView={4}` — a slider, not a grid, so browsing the back catalogue keeps people on the page. Up to 12 articles are shown. The section is wrapped in `{featuredArticles.length >= 3 && (...)}` — it disappears entirely below three articles. To feature an article, set `featured: true` in its frontmatter. See [article carousels doc](../components/article-carousels.md).
+
+Three levels of action, deliberately:
+
+| Level | What | Where it points |
+|-------|------|-----------------|
+| Primary | "Discuss participation in projects" button under the section heading | `/membership/` |
+| Card primary | "Read the story →" | the article |
+| Card secondary | "Join the … project →" | the project behind the article |
+
+**Where the card secondary link comes from.** If the article sets `cta.primaryText` / `cta.primaryHref` in its frontmatter, that wins — editors can point a card at a specific working group, subscribe page, or assembly. Otherwise the local `projectLinksByTag` map in `index.astro` resolves the first matching tag to a project page, and articles matching nothing fall back to `/community/`. The map is ordered most specific first (`sci-ai` before `sci`, `sci` before `standards`), so order matters when adding to it. It is navigation config, not content — the destinations are site pages, so keep it in `index.astro` rather than duplicating project data into article frontmatter.
 
 ### Organisation logos on the challenge stories
 
@@ -82,5 +92,6 @@ Note the page uses American spelling (`organizations`, `standardized`, `minimize
 | Add/remove a challenge story | Add or remove a `TabbedSection` block; the linked story lives in `src/content/stories/` |
 | Change which orgs appear on a story | Edit the `resolveOrgs([...])` array for that section |
 | Update reach stats | Edit the `CommunityReach` `stats` array |
-| Feature an article in "Recent Updates" | Set `featured: true` in the article's frontmatter — do not hardcode articles here |
+| Feature an article in "Get involved with the latest projects" | Set `featured: true` in the article's frontmatter — do not hardcode articles here |
+| Change where a featured card's secondary link points | Set `cta.primaryText` / `cta.primaryHref` in that article's frontmatter, or add the tag to `projectLinksByTag` in `index.astro` |
 | Change member logos | Notion Members DB, then `npm run fetch-notion` — not in this file |
