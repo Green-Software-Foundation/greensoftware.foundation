@@ -36,6 +36,7 @@ Research papers are Markdown files in `src/content/research/`. Unlike articles, 
 | `type` | enum | Yes | `"paper"`, `"response"`, or `"report"` — see type definitions below |
 | `summary` | string | No | Short summary for the listing card |
 | `subtitle` | string | No | Displayed below the title |
+| `mainImage` | string | No | Optional cover image for the research paper listing card |
 | `published` | boolean | No | Defaults to `true`. Set `false` to hide from listings |
 | `workingGroup` | string | No | Slug of the working group (e.g. `"policy-wg"`). Resolved to a display name from `projects.json` |
 | `authors` | array | No | Author objects with `name` field |
