@@ -309,6 +309,13 @@ collections:
         i18n: true
         hint: "Concise summary shown in listings and search results."
 
+      - label: Main Image
+        name: mainImage
+        widget: image
+        required: false
+        i18n: duplicate
+        hint: "Optional cover image for the research paper listing card."
+
       - label: Jurisdiction
         name: jurisdiction
         widget: string
