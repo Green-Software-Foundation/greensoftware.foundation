@@ -23,7 +23,7 @@ Cloud Carbon Footprint provides data and methods for carbon. Until now, nothing 
 
 We’re excited to announce that Amadeus has transferred the Software Water Handbook to the Green Software Foundation. Led by Hongliu under the Software Standards Working Group, the Handbook will support the development and adoption of SWI, helping practitioners and organizations make informed decisions about their software’s water impact.
 
-## A closer look at the Software Water Handbook 
+## A Closer Look at the Software Water Handbook 
 
 The specification defines what to measure and how to calculate it. The Handbook complements it by connecting each component with relevant data sources and documenting the context, limitations, and methodological choices involved. 
 
@@ -61,9 +61,9 @@ We invite researchers, practitioners, and providers to contribute across four ar
 
 A documented workflow, automated schema checks, and a defined review and sign-off process make contributions structured, transparent, and consistent. 
 
-Explore the project’s repository and contribution guidance: [https://github.com/Green-Software-Foundation/software-water-handbook](https://github.com/Green-Software-Foundation/software-water-handbook) 
+Explore the [project’s repository and contribution guidance](https://github.com/Green-Software-Foundation/software-water-handbook).
 
-Learn more about the SWI specification: [https://greensoftware.foundation/standards/swi/](https://greensoftware.foundation/standards/swi/) 
+Learn more about the [SWI specification](https://greensoftware.foundation/standards/swi/).
 
 Reach out to the Software Standards Working Group to learn more about getting involved: [standards-wg@greensoftware.foundation](mailto:standards-wg@greensoftware.foundation) 
 
