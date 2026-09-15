@@ -27,7 +27,7 @@ We’re excited to announce that Amadeus has transferred the Software Water Hand
 
 The specification defines what to measure and how to calculate it. The Handbook complements it by connecting each component with relevant data sources and documenting the context, limitations, and methodological choices involved. 
 
-Built around SWI, it mirrors the specification’s four components: direct operational water, indirect electricity-generation water, embodied water, and scarcity-weighted impact.
+Built around SWI, the Handbook mirrors the specification’s four components: direct operational water, indirect electricity-generation water, embodied water, and scarcity-weighted impact.
 
 Established frameworks often consider different aspects of water risk, and as a result can produce very different assessments under similar conditions. Take [two data centers, one in Cairo and one in Dubai](https://caohongliu.medium.com/why-ais-water-footprint-is-harder-to-measure-than-carbon-096fc76536ad), each consuming 100 liters of water. [AWARE](https://doi.org/10.5281/zenodo.15133241) indicates around 12% higher impact in Cairo, while [Aqueduct](https://www.wri.org/aqueduct) flags greater risks in Dubai, including depletion and groundwater decline. 
 
