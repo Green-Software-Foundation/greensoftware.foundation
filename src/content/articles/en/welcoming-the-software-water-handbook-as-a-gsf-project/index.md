@@ -33,12 +33,12 @@ Established frameworks often consider different aspects of water risk, and as a 
 
 Neither is wrong. The frameworks were built to answer different questions, and understanding that distinction is crucial to choosing where to run workloads and what to report. 
 
-The Handbook makes these choices clear and actionable, supporting SWI in several ways: 
+The Handbook supports SWI in several ways: 
 
 - **Helps apply SWI with real-world data:** By bringing together structured data extractions and worked examples based on sustainability reports from major cloud providers and technology companies, the Handbook gives practitioners a practical starting point for measuring water impact. It also highlights where missing data, especially workload-level energy and allocation data, can prevent a defensible calculation.
-- **Informs reporting and method requirements:** It compares provider reporting against SWI’s definitions and clarifies which impact methods apply to different types of water use. For example, a cooling system can withdraw a large amount of water while consuming only a fraction: a consumption-only metric can miss local pressure, and a withdrawal-only metric can miss permanent depletion.
-- **Balances precision and usability:** By working through real examples, the Handbook helps the Working Group identify which details need to be preserved and where the methodology can be simplified without losing its ability to guide action.
+- **Informs reporting and method requirements:** It compares provider reporting against SWI’s definitions and clarifies which impact methods apply to different types of water use. For example, a cooling system can withdraw a large amount of water while consuming only a fraction—a consumption-only metric can miss local pressure, and a withdrawal-only metric can miss permanent depletion.
 - **Tracks evolving provider disclosure:** It analyzes sustainability reports over time, helping the specification respond to new data as it becomes available.
+- **Balances precision and usability:** By working through real examples, the Handbook helps the Working Group identify which details need to be preserved and where the methodology can be simplified without losing its ability to guide action.
 
 > “Working on Software Carbon Intensity (SCI) for AI showed me how much a shared standard can matter. Measuring water is harder—the location changes the meaning of the liter, and a single metric can answer one question while ignoring another. Navigating that takes practical guidance, not just raw numbers. That’s what inspired me to build the Handbook.”   
 
