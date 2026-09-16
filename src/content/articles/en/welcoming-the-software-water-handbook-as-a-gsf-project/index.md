@@ -21,7 +21,7 @@ As we’ve developed the [Software Water Intensity (SWI)](https://greensoftware.
 
 Cloud Carbon Footprint provides data and methods for carbon. Until now, nothing equivalent existed for water. Developed by Hongliu Cao at Amadeus, the [Software Water Handbook](https://github.com/Green-Software-Foundation/software-water-handbook) addresses this gap by bringing fragmented data sources, worked examples, and practical guidance into one resource.
 
-We’re excited to announce that Amadeus has transferred the Software Water Handbook to the Green Software Foundation. As a project chaired by Hongliu Cao under the Software Standards Working Group, the Handbook will support the development and adoption of SWI, helping practitioners and organizations make informed decisions about their software’s water impact.
+We’re excited to announce that Amadeus has transferred the Software Water Handbook to the Green Software Foundation. As a project led by Hongliu Cao under the Software Standards Working Group, the Handbook will support the development and adoption of SWI, helping practitioners and organizations make informed decisions about their software’s water impact.
 
 ## A Closer Look at the Software Water Handbook 
 
