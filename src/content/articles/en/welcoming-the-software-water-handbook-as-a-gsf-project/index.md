@@ -40,9 +40,7 @@ The Handbook supports SWI in several ways: 
 - **Tracks evolving provider disclosure:** It analyzes sustainability reports over time, helping the specification respond to new data as it becomes available.
 - **Balances precision and usability:** By working through real examples, the Handbook helps the Working Group identify which details need to be preserved and where the methodology can be simplified without losing its ability to guide action.
 
-> “Working on Software Carbon Intensity (SCI) for AI showed me how much a shared standard can matter. Measuring water is harder—the location changes the meaning of the liter, and a single metric can answer one question while ignoring another. Navigating that takes practical guidance, not just raw numbers. That’s what inspired me to build the Handbook.”   
-
-> Hongliu Cao, Senior Researcher, Amadeus, and Vice Chair of the Software Water Intensity project, GSF 
+> “Working on Software Carbon Intensity (SCI) for AI showed me how much a shared standard can matter. Measuring water is harder—the location changes the meaning of the liter, and a single metric can answer one question while ignoring another. Navigating that takes practical guidance, not just raw numbers. That’s what inspired me to build the Handbook.”—Hongliu Cao, Senior Researcher, Amadeus, and Vice Chair of the Software Water Intensity project, GSF 
 
 ## Building a Shared Resource 
 
