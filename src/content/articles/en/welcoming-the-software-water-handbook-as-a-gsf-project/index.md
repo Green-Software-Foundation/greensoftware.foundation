@@ -3,7 +3,7 @@ title: Welcoming the Software Water Handbook as a GSF Project
 teaserText: A shared resource helping practitioners and organizations measure and report software’s water impact.
 date: 2026-09-15
 published: true
-summary: Developed at Amadeus, the Handbook brings together scattered data needed to measure software’s water footprint, supporting the Software Water Intensity (SWI) specification.
+summary: The Handbook brings together scattered data needed to measure software's water footprint, helping practitioners and organizations apply the Software Water Intensity (SWI) specification.
 mainImage: Software-Water-Handbook-Intro.png
 mainImageAlt: Amadeus and Green Software Foundation logos flanking an open-book icon with a water droplet, set on an illustrated dark blue landscape of isometric blocks with waterfalls, a lily pad and rippling water.
 featured: false
