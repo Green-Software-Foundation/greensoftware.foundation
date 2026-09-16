@@ -80,6 +80,14 @@ The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) inclu
 
 To update any of these links, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro` and its entry in the `ctas` array passed to `<Hero />`.
 
+### SCI hero CTAs — Specification, Course, and Guidance
+
+The SCI page's hero `ctas` array (`src/pages/standards/sci/index.astro`) includes three links:
+
+- **Read the Specification** — links to the ISO/IEC 21031:2024 spec (`https://grnsft.org/sci`).
+- **Take the Course** — links to the SCI Fundamentals course (`https://grnsft.org/sci-fundamentals-course`).
+- **SCI Guidance** — links to the SCI Guide site (`https://sci-guide.greensoftware.foundation/`), the same URL used by the "Browse the SCI Guide" tab CTA and the "SCI Guidance" resource card further down the page.
+
 ## Lifecycle Stages
 
 The lifecycle stage badge comes from the `Lifecycle Stage` field in Notion's PWCIs database. On the standards overview page (`/standards/`), "Learn more" links are hidden for Proposal/Pre-proposal stages.
