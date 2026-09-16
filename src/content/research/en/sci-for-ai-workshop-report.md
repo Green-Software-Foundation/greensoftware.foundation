@@ -1,41 +1,49 @@
 ---
-title: "SCI for AI Assembly Report"
-subtitle: "Defining the GSF Approach to AI Measurement and Evaluating Existing Metrics"
+title: SCI for AI Assembly Report
+subtitle: Defining the GSF Approach to AI Measurement and Evaluating Existing Metrics
 date: 2025-07-03
 published: true
 status: published
 type: report
-version: "1.0"
-summary: >
-  In early 2025, AI experts from GSF member organizations participated in workshops to define the GSF approach to AI measurement and evaluate existing metrics. This report shares the outcomes that laid the groundwork for the SCI for AI specification.
+summary: In early 2025, AI experts from GSF member organizations participated in workshops to define the GSF approach to AI measurement and evaluate existing metrics. This report shares the outcomes that laid the groundwork for the SCI for AI specification.
+mainImage: ''
+jurisdiction: ''
+framework: ''
 workingGroup: software-wg
-tags: ["sci-ai", "standards"]
+version: '1.0'
+sourceUrl: ''
 authors:
   - name: SCI for AI Working Group
     org: Green Software Foundation
+doi: ''
+pdfUrl: ''
+tags:
+  - sci-ai
+  - standards
+lang: en
 ---
 
 ## Table of Contents
 
 - [Executive Summary](#executive-summary)
 - [1. Scope](#1-scope)
-  - [1.1. Foundational AI Paradigms](#11-foundational-ai-paradigms)
-  - [1.2. Emerging AI Technologies](#12-emerging-ai-technologies)
-  - [1.3. Application-Specific AI Solutions](#13-application-specific-ai-solutions)
+    - [1.1. Foundational AI Paradigms](#11-foundational-ai-paradigms)
+    - [1.2. Emerging AI Technologies](#12-emerging-ai-technologies)
+    - [1.3. Application-Specific AI Solutions](#13-application-specific-ai-solutions)
 - [2. Existing AI Measurement Metrics](#2-existing-ai-measurement-metrics)
-  - [2.1. Green AI Index](#21-green-ai-index)
-  - [2.2. EcoLogits](#22-ecologits)
-  - [2.3. EnergyScore](#23-energyscore)
+    - [2.1. Green AI Index](#21-green-ai-index)
+    - [2.2. EcoLogits](#22-ecologits)
+    - [2.3. EnergyScore](#23-energyscore)
 - [3. Rubric](#3-rubric)
-  - [3.1. Adoption](#31-adoption)
-  - [3.2. Pathway to Policy & Certification](#32-pathway-to-policy--certification)
-  - [3.3. Existing Standards Alignment](#33-existing-standards-alignment)
+    - [3.1. Adoption](#31-adoption)
+    - [3.2. Pathway to Policy & Certification](#32-pathway-to-policy--certification)
+    - [3.3. Existing Standards Alignment](#33-existing-standards-alignment)
 - [4. Measurement as a Tool for Incentivisation](#4-measurement-as-a-tool-for-incentivisation)
 - [5. Green AI](#5-green-ai)
-  - [5.1. Lifecycle Stages](#51-lifecycle-stages)
+    - [5.1. Lifecycle Stages](#51-lifecycle-stages)
 - [6. Clarity and Consistency](#6-clarity-and-consistency)
-  - [6.1. Boundary Definition](#61-boundary-definition)
-  - [6.2. Methodology](#62-methodology)
+    - [6.1. Boundary Definition](#61-boundary-definition)
+    - [6.2. Methodology](#62-methodology)
 - [7. Next Steps](#7-next-steps)
 - [8. Further Reading](#8-further-reading)
 
@@ -43,14 +51,12 @@ authors:
 
 The Software Carbon Intensity (SCI) specification provides a standardized method for measuring the carbon emissions associated with software systems. As Artificial Intelligence (AI) becomes an increasingly resource-intensive component of modern software, it is crucial to extend SCI methodology to account for the unique characteristics of AI.
 
-> "The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance." (Navveen Balani, Software Standards Working Group Chair)
+> "The purpose of this proposed specification is to assist AI practitioners—developers, data scientists, engineers, and decision-makers—in understanding and reducing the carbon footprint of AI systems. By making informed choices about model design, computational efficiency, and deployment strategies, practitioners can minimize emissions while maintaining performance."—Navveen Balani, Software Standards Working Group Chair 
 
 SCI for AI builds on the core principles of the SCI specification. However, it also expands and refines these principles in order to address the distinct architecture, deployment patterns, and operational complexity of AI systems.
 
 In early 2025, AI experts from GSF member organizations participated in a series of workshops hosted by the Software Standards Working Group. These sessions were designed to define the GSF approach to AI measurement as well as evaluate existing metrics. The outcomes laid the groundwork for creating the SCI for AI specification, which extends the Software Carbon Intensity (SCI) specification with AI-specific considerations—a major step toward addressing the complexities of measuring AI-related carbon emissions. The material presented in this document reflects a consensus among participating members:
 
-| | |
-| ----------- | ----------- |
 | Navveen Balani (Chair) | Accenture |
 | Angel Cataron | Siemens |
 | Brian O’Kelley | Scope3 |
@@ -260,16 +266,16 @@ Is the methodology aligned with established practices such as Life Cycle Assessm
 Does it aim to complement or extend these standards, or is it designed as a new standard for a different audience, purpose, or goal?
 
 | Criteria | GreenAI Index | EcoLogits | Energy Score | Berthelot et al (2024) |
-|----------|---------------|-----------|--------------|------------------------|
+| --- | --- | --- | --- | --- |
 | **Flexibility** | ✅ | ❌ | ❌ | ✅ |
-| **Granular** | | | | |
+| **Granular** |  |  |  |  |
 | • Component | ✅ | ❌ | ❌ | ✅ |
 | • Time | ❌ | ❌ | ❌ | ❌ |
 | **RunTime & DesignTime** | ✅ | ✅ | ❌ | ✅ |
 | **Explainability (1-5)** | 3 | 3 | 4 | 3 |
 | **Broad Scope** | ✅ | ✅ | ✅ | ✅ |
 | **Open Source & Proprietary** | ✅ | ✅ | ✅ | ✅ |
-| **Pathway to certification & policy** | | | | |
+| **Pathway to certification & policy** |  |  |  |  |
 | • Consensus | ❌ | ❌ | ❌ | ❌ |
 | • IPR | ❌ | ❌ | ❌ | ❌ |
 | • Alignment to Existing Measurement Standards (ISO, LCA, GHG) | ✅ | ✅ | ❌ | ✅ |
@@ -278,11 +284,11 @@ Does it aim to complement or extend these standards, or is it designed as a new 
 
 A key distinction between the SCI philosophy and other metrics is that it is, first and foremost, designed to incentivize behaviors, and only the behaviors we want. We believe that if you focus on developing a metric without paying attention to what that metric incentivizes, you will end up promoting the wrong behaviors, or your incentivization of the right behaviors will be accidental rather than intentional.
 
-Every measurement standard implicitly shapes behavior. By defining what is measured and how a standard establishes the boundaries of what is optimized. For example, some existing frameworks *incentivize* the purchase of carbon offsets, inadvertently shifting focus away from direct reductions within the value chain. Others may *disincentivize* potentially beneficial practices, such as time- or location-shifting of compute workloads, to align with low-carbon energy availability.
+Every measurement standard implicitly shapes behavior. By defining what is measured and how a standard establishes the boundaries of what is optimized. For example, some existing frameworks _incentivize_ the purchase of carbon offsets, inadvertently shifting focus away from direct reductions within the value chain. Others may _disincentivize_ potentially beneficial practices, such as time- or location-shifting of compute workloads, to align with low-carbon energy availability.
 
 As outlined in the scope section, the SCI specification focuses on incentivizing measurable engineering improvements that directly reduce the carbon footprint of software.
 
-For SCI for AI to achieve its intended impact, it must *incentivize* a clear and agreed-upon set of positive actions. These include, but are not limited to:
+For SCI for AI to achieve its intended impact, it must _incentivize_ a clear and agreed-upon set of positive actions. These include, but are not limited to:
 
 - Efficiency improvements to the hosting infrastructure.
 - Efficiency improvements in silicon chips.
@@ -299,21 +305,21 @@ For SCI for AI to achieve its intended impact, it must *incentivize* a clear and
 
 Other Green AI patterns as detailed here: [https://patterns.greensoftware.foundation/catalog/ai](https://patterns.greensoftware.foundation/catalog/ai)
 
-| | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
-|---|---|---|---|---|
+|  | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
+| --- | --- | --- | --- | --- |
 | Efficiency improvements to the hosting infrastructure | ✅ | ❌ | ❌ | ✅ |
 | Efficiency improvements in silicon | ✅ | ❌ | ❌ | ✅ |
 | Efficiency improvements in the model architecture | ✅ | ✅ | ✅ | ✅ |
 | Reducing the carbon footprint of training | ✅ | ❌ | ❌ | ✅ |
 | Reducing the carbon footprint of data collection and processing | ❌ | ❌ | ❌ | ❌ |
-| Running the AI system at times or in regions with cleaner electricity | ✅ | ☑️* | ❌ | ✅ |
+| Running the AI system at times or in regions with cleaner electricity | ✅ | ☑️\* | ❌ | ✅ |
 | Running the system on edge devices | ✅ | ❌ | ❌ | ✅ |
 | Leverage pre-trained models and transfer learning | ✅ | ❌ | ❌ | ✅ |
 | Optimising the size of models | ✅ | ✅ | ✅ | ❌ |
 | Use efficient file formats | ✅ | ❌ | ❌ | ❌ |
 | Evaluate tradeoffs between accuracy and efficiency | ❌ | ❌ | ❌ | ❌ |
 
-*[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.](https://huggingface.github.io/AIEnergyScore/)
+\*[The Energy Score intentionally normalizes regional grid intensity data to promote cross-model comparability, which may limit its granularity for localized optimization efforts.](https://huggingface.github.io/AIEnergyScore/)
 
 ## 5. Green AI
 
@@ -321,12 +327,12 @@ Other Green AI patterns as detailed here: [https://patterns.greensoftware.founda
 
 The Green AI Committee (GAIC) at the GSF [has defined Green AI](https://greensoftware.foundation/articles/green-ai-position-paper)as:
 
-*Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement.*
+_Green AI focuses on reducing the environmental impact of AI systems throughout their lifecycle. It emphasizes the standardization of measurement and metrics to ensure transparency, strengthen confidence in AI technologies, and drive continual improvement._
 
 The Committee identified these lifecycle stages that apply to Green AI:
 
 | Phase | Activities |
-|---|---|
+| --- | --- |
 | **Prepare** | **Research and Problem Definition:**<br>• Define the problem and identify solution requirements (engaging with end-users)<br>• Identify the problem + outcome<br>• Stakeholder engagement & expectations |
 | **Data Engineering (Build)** | **Data Identification and Collection:**<br>• Data Collection<br>• Collect data sources and prepare them (cleaning, normalizing)<br><br>**Data Preparation:**<br>• Data Pre-Processing<br>• Synthetic data generation |
 | **System Integration** | **Model Development:**<br>• Identify appropriate models and prepare them<br>• Feature Engineering<br><br>**Model Training:**<br>• Identify appropriate evaluation measures<br>• Model Selection<br>• Benchmarking<br>• Set up distributed training pipelines<br>• Define scheduling and resource allocation<br><br>**Model Testing**<br><br>**Model Evaluation:**<br>• Cost/Resource Analysis<br>• Optimize compute and resource cost spend<br><br>**System Integration:**<br>• System Integration Design<br>• System Integration Development<br>• System Integration Testing |
@@ -335,18 +341,18 @@ The Committee identified these lifecycle stages that apply to Green AI:
 
 The SCI measurement framework shall be designed to incentivize optimizations across all stages of the AI lifecycle, considering both software and hardware impacts and encompassing all supporting infrastructure and services throughout the lifecycle.
 
-| | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
-|---|---|---|---|---|
+|  | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
+| --- | --- | --- | --- | --- |
 | Prepare | ❌ | ❌ | ❌ | ❌ |
 | Data Engineering | ❌ | ❌ | ❌ | ❌ |
 | Model training | ✅ | ❌ | ❌ | ✅ |
 | System integration | ❌ | ❌ | ❌ | ❌ |
-| Runtime operations | ✅ | ☑️** | ☑️*** | ✅ |
+| Runtime operations | ✅ | ☑️\*\* | ☑️\*\*\* | ✅ |
 | End of life | ❌ | ❌ | ❌ | ❌ |
 
-** [Refers to the computation of the GPU-equipped servers.](https://ecologits.ai/latest/methodology/)
+\*\* [Refers to the computation of the GPU-equipped servers.](https://ecologits.ai/latest/methodology/)
 
-***[The score excludes CPU, RAM, networking, and storage energy, which can contribute to an additional consumption of 30% or more.](https://huggingface.github.io/AIEnergyScore/#methodology)
+\*\*\*[The score excludes CPU, RAM, networking, and storage energy, which can contribute to an additional consumption of 30% or more.](https://huggingface.github.io/AIEnergyScore/#methodology)
 
 ## 6. Clarity and Consistency
 
@@ -382,8 +388,8 @@ Given the significant emissions associated with model development (training, tes
 
 This level of specificity ensures that even complex or shared components can be measured fairly and consistently, enabling adoption at scale while maintaining accuracy and comparability.
 
-| | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
-|---|---|---|---|---|
+|  | **GreenAI Index** | **EcoLogits** | **Energy Score** | **Berthelot et al (2024) LCA** |
+| --- | --- | --- | --- | --- |
 | Boundary | ✅ | ✅ | ✅ | ✅ |
 | Methodology | ✅ | ✅ | ✅ | ✅ |
 
