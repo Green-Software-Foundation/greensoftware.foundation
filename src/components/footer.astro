@@ -37,6 +37,8 @@ interface Props {
   footerNote?: string;
   /** Footer link sections */
   sections?: FooterSection[];
+  /** Whether to show the "Join our newsletter" signup form */
+  showNewsletter?: boolean;
 }
 
 const year = new Date().getFullYear();
@@ -86,6 +88,7 @@ const {
   description = "The Green Software Foundation is a non-profit under the Linux Foundation with a mission to create a trusted ecosystem of people, standards, tooling, and best practices for green software.",
   footerNote,
   sections = defaultSections,
+  showNewsletter = true,
 } = Astro.props;
 ---
 
@@ -152,20 +155,22 @@ const {
       ))}
     </div>
     <!-- Newsletter signup -->
-    <div class="border-t border-white/10 py-6">
-      <div class="flex flex-col items-center gap-3 max-w-md mx-auto text-center">
-        <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
-        <div class="w-full">
-          <NewsletterForm
-            client:visible
-            variant="compact"
-            emailPlaceholder="you@example.com"
-            buttonText="Sign up"
-          />
+    {showNewsletter && (
+      <div class="border-t border-white/10 py-6">
+        <div class="flex flex-col items-center gap-3 max-w-md mx-auto text-center">
+          <h2 class="text-xs font-bold text-accent">JOIN OUR NEWSLETTER</h2>
+          <div class="w-full">
+            <NewsletterForm
+              client:visible
+              variant="compact"
+              emailPlaceholder="you@example.com"
+              buttonText="Sign up"
+            />
+          </div>
+          <p class="text-xs text-white/60">Weekly insights on digital sustainability and industry news</p>
         </div>
-        <p class="text-xs text-white/60">Weekly insights on digital sustainability and industry news</p>
       </div>
-    </div>
+    )}
     <div class="border-t border-white/10 py-4">
       <div class="flex flex-col items-center gap-2">
         <p class="text-center text-xs text-white/60">
