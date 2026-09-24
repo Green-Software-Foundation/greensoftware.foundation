@@ -15,6 +15,11 @@ interface Props {
   ctaText?: string;
   /** CTA link href */
   ctaHref?: string;
+  /** Prominent button under the heading — the section's primary next step */
+  primaryCtaText?: string;
+  primaryCtaHref?: string;
+  /** Cards visible at the widest breakpoint (3 by default, 4 for shorter cards) */
+  slidesPerView?: 3 | 4;
   /** Section ID for anchor links */
   id?: string;
 }
@@ -26,6 +31,9 @@ const {
   bgClass = "bg-accent-lightest-2",
   ctaText,
   ctaHref,
+  primaryCtaText,
+  primaryCtaHref,
+  slidesPerView,
   id,
 } = Astro.props;
 ---
@@ -39,6 +47,9 @@ const {
       articles={articles}
       ctaText={ctaText}
       ctaHref={ctaHref}
+      primaryCtaText={primaryCtaText}
+      primaryCtaHref={primaryCtaHref}
+      slidesPerView={slidesPerView}
     />
   </div>
 </section>

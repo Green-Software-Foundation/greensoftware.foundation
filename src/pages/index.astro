@@ -36,18 +36,46 @@ const resolveOrgs = (names: string[]) =>
       return a.name.localeCompare(b.name);
     });
 
-// ----- Featured articles -----
+// ----- Get involved with the latest projects (featured articles) -----
+// Each card carries a secondary action pointing at the project behind the article.
+// Where an article sets a `cta` in frontmatter that wins; otherwise the first matching
+// tag below decides, so the list is ordered most specific first.
+const projectLinksByTag: [string, { text: string; href: string }][] = [
+  ["sci-ai", { text: "Join the SCI for AI project →", href: "/standards/sci-ai/" }],
+  ["sci-web", { text: "Join the SCI for Web project →", href: "/standards/sci-web/" }],
+  ["swi", { text: "Join the SWI project →", href: "/standards/swi/" }],
+  ["soft", { text: "Join the SOFT project →", href: "/standards/soft/" }],
+  ["rtc", { text: "Join the Real-Time Cloud project →", href: "/standards/rtc/" }],
+  ["wdpc", { text: "Join the WDPC project →", href: "/standards/wdpc/" }],
+  ["see", { text: "Join the SEI project →", href: "/standards/sei/" }],
+  ["sci", { text: "Join the SCI project →", href: "/standards/sci/" }],
+  ["policy", { text: "Join the policy working group →", href: "/policy/" }],
+  ["research", { text: "Join the policy working group →", href: "/policy/" }],
+  ["education", { text: "Join the education working group →", href: "/education/" }],
+  ["standards", { text: "Join a standards working group →", href: "/standards/" }],
+  ["tools", { text: "Explore GSF tools →", href: "/tools/" }],
+  ["community", { text: "Join the community →", href: "/community/" }],
+];
+const communityFallback = { text: "Join the community →", href: "/community/" };
+const resolveProjectLink = (tags: string[] = []) => {
+  const lower = tags.map(t => t.toLowerCase());
+  return projectLinksByTag.find(([tag]) => lower.includes(tag))?.[1] || communityFallback;
+};
+
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const featuredArticles = allArticles
   .filter(a => a.data.featured && a.data.lang === "en")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 10)
+  .slice(0, 12)
   .map(a => ({
     title: a.data.title,
     description: a.data.summary || a.data.teaserText,
     imageSrc: a.data.mainImage?.src || "/assets/hero-illustration.svg",
     href: articleUrl(a.id),
     cta: "Read the story →",
+    secondaryCta: a.data.cta?.primaryHref
+      ? { text: `${a.data.cta.primaryText} →`, href: a.data.cta.primaryHref }
+      : resolveProjectLink(a.data.tags),
   }));
 ---
 
@@ -117,6 +145,20 @@ const featuredArticles = allArticles
       role: "GSF Chair - VP of Application Services, NTT DATA",
     }}
   />
+
+  <!-- Get involved with the latest projects (featured articles) -->
+  {featuredArticles.length >= 3 && (
+    <ArticleCarousel
+      heading="Get involved with the latest projects"
+      body="Every project below started with a member problem. Read how it was solved, then join the group still working on it"
+      articles={featuredArticles}
+      slidesPerView={4}
+      primaryCtaText="Discuss participation in projects"
+      primaryCtaHref="/membership/"
+      ctaText="View all articles →"
+      ctaHref="/articles/"
+    />
+  )}
 
   <!-- Section 4: Organisational Upskilling -->
   <TabbedSection
@@ -250,17 +292,6 @@ const featuredArticles = allArticles
       { icon: "/assets/shape-icon-3.svg", title: "Want to contribute?", description: "Member playbook, working groups, community", ctaText: "Get involved", ctaHref: "/community/" },
     ]}
   />
-
-  <!-- Section 13: Featured Content -->
-  {featuredArticles.length >= 3 && (
-    <ArticleCarousel
-      heading="Featured Content"
-      body="Stories, research, and insights from our members and community"
-      articles={featuredArticles}
-      ctaText="View all articles →"
-      ctaHref="/articles/"
-    />
-  )}
 
   <!-- Section 14: Final CTA -->
   <CTABanner
