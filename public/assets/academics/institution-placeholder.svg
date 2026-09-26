@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" fill="none">
+  <!-- Background -->
+  <rect width="160" height="80" fill="#f5f5ef" rx="6"/>
+  <!-- Building base -->
+  <rect x="30" y="46" width="100" height="22" fill="#2d6a4f" rx="2" opacity="0.15"/>
+  <!-- Main building body -->
+  <rect x="38" y="32" width="84" height="36" fill="#2d6a4f" rx="2" opacity="0.18"/>
+  <!-- Columns -->
+  <rect x="46" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <rect x="58" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <rect x="70" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <rect x="82" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <rect x="94" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <rect x="106" y="36" width="6" height="28" fill="#2d6a4f" opacity="0.35" rx="1"/>
+  <!-- Pediment (triangular roof) -->
+  <polygon points="34,32 80,14 126,32" fill="#2d6a4f" opacity="0.22"/>
+  <!-- Pediment outline -->
+  <polyline points="34,32 80,14 126,32" stroke="#2d6a4f" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+  <!-- Entablature (horizontal band) -->
+  <rect x="34" y="30" width="92" height="4" fill="#2d6a4f" opacity="0.28" rx="1"/>
+  <!-- Steps -->
+  <rect x="42" y="64" width="76" height="4" fill="#2d6a4f" opacity="0.20" rx="1"/>
+  <rect x="36" y="68" width="88" height="4" fill="#2d6a4f" opacity="0.14" rx="1"/>
+  <!-- Cupola on top -->
+  <rect x="72" y="9" width="16" height="6" fill="#2d6a4f" opacity="0.25" rx="1"/>
+  <rect x="76" y="5" width="8" height="5" fill="#2d6a4f" opacity="0.20" rx="1"/>
+  <!-- Centre door -->
+  <rect x="73" y="50" width="14" height="14" fill="#2d6a4f" opacity="0.30" rx="1"/>
+</svg>
