@@ -1,5 +1,10 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Announcement Banner Uses Supplied SVG Artwork
+
+- Replaced the CSS `clip-path` ribbon with the designed SVG (`public/assets/announcement-banner.svg`, 860x46, layered shapes plus GSF Academy logo). The text was removed from the SVG and is overlaid as live HTML so the link is real, selectable and editable in `src/lib/announcement.ts`; font size scales with the artwork via `cqw`.
+- Below 640px the artwork is hidden and a simple dark pill shows the text. Removed the now-unused `logoSrc` option.
+
 ## 2026-09-29 - Announcement Ribbon Moved Above the Navigation
 
 - `AnnouncementBanner` is still rendered by `Navbar`, but now immediately before `<header>` (below the non-production preview strip, if shown) instead of after it. Ribbon styling unchanged.
