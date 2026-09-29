@@ -1,5 +1,10 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Adoption Nav: Education Column Update
+
+- `src/lib/nav-items.ts`, Adoption > Education: added "GSF Academy" (`https://academy.greensoftware.foundation`) at the top, renamed "Courses" to "Green Software Practitioner" (same `learn.greensoftware.foundation` link), and removed "Resource Catalogue".
+- Nav only: the "Awesome Green Software" card on `/education/` is unchanged.
+
 ## 2026-09-29 - Site-wide Announcement Banner (Academy Pilot)
 
 **Objective**: Add a small, subtle banner at the top of every page promoting the Green Software & AI Academy pilot.

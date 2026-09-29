@@ -122,19 +122,19 @@ export const navItems = [
         },
         links: [
           {
+            href: "https://academy.greensoftware.foundation",
+            label: "GSF Academy",
+            external: true,
+          },
+          {
             href: "https://learn.greensoftware.foundation",
-            label: "Courses",
+            label: "Green Software Practitioner",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           },
           {
             href: "https://patterns.greensoftware.foundation",
             label: "Patterns",
             /* iconSrc: pi("gs-patterns"), icon: "book-open", */ external: true,
-          },
-          {
-            href: "https://github.com/Green-Software-Foundation/awesome-green-software",
-            label: "Resource Catalogue",
-            /* iconSrc: pi("awesome-gs"), icon: "trophy", */ external: true,
           },
         ],
       },
