@@ -6,7 +6,7 @@
 
 ### What We Built
 
-- **`AnnouncementBanner` component** (`src/components/announcement-banner.astro`), a static, non-sticky strip in `accent-lighter` with `primary-dark` text. Rendered once in `src/layouts/showcase.astro` before `<main>`, so all pages get it from a single change.
+- **`AnnouncementBanner` component** (`src/components/announcement-banner.astro`), a static, non-sticky strip styled like the dark preview strip (`primary-dark` background, white text) with a light `primary-light` bottom border for separation. Rendered once in `src/layouts/showcase.astro` before `<main>`, so all pages get it from a single change.
 - **Content in `src/lib/announcement.ts`** with an `enabled` flag, so wording, link or removal never needs markup changes.
 - Excluded from search via `data-pagefind-ignore`. Deliberately not dismissible.
 - Docs: `docs/components/announcement-banner.md`, README index entry.
