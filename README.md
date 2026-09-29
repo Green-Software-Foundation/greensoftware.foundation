@@ -48,6 +48,7 @@ The site has three layers of documentation: **system docs** (how the data pipeli
 - [Logo marquee](docs/components/logo-marquee.md) — data source, sort order, how to add/hide logos
 - [Article carousels](docs/components/article-carousels.md) — tags reference, featured flag, 3-article minimum
 - [People & teams](docs/components/people.md) — people.json structure, TeamGrid, photo resolution
+- [Announcement banner](docs/components/announcement-banner.md) — site-wide top strip, content config, how to hide it
 
 ### Pages
 

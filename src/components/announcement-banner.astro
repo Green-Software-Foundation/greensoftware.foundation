@@ -1,0 +1,16 @@
+---
+/**
+ * Small, subtle site-wide announcement strip. Rendered once by the showcase layout.
+ * Content lives in src/lib/announcement.ts.
+ */
+import { announcement } from "../lib/announcement";
+
+const { enabled, before, linkText, href, after } = announcement;
+---
+{enabled && (
+  <div class="bg-accent-lighter text-primary-dark text-center text-xs py-1.5 px-4 border-b border-accent-light" data-pagefind-ignore>
+    {before}{" "}
+    <a href={href} class="font-semibold underline hover:text-primary">{linkText}</a>{" "}
+    {after}
+  </div>
+)}

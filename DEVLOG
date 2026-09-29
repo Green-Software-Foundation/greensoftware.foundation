@@ -1,5 +1,16 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Site-wide Announcement Banner (Academy Pilot)
+
+**Objective**: Add a small, subtle banner at the top of every page promoting the Green Software & AI Academy pilot.
+
+### What We Built
+
+- **`AnnouncementBanner` component** (`src/components/announcement-banner.astro`), a static, non-sticky strip in `accent-lighter` with `primary-dark` text. Rendered once in `src/layouts/showcase.astro` before `<main>`, so all pages get it from a single change.
+- **Content in `src/lib/announcement.ts`** with an `enabled` flag, so wording, link or removal never needs markup changes.
+- Excluded from search via `data-pagefind-ignore`. Deliberately not dismissible.
+- Docs: `docs/components/announcement-banner.md`, README index entry.
+
 ## 2026-07-30 - Homepage: "From Silicon to Screen" Becomes the Lead Message
 
 **Objective**: Bring the "from silicon to screen" tagline and the green software definition onto the homepage from a prototype mockup, and promote it to the lead message ahead of the peer-collaboration pitch.
