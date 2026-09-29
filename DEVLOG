@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Announcement Banner: Missing Spaces Around Link
+
+- Fixed: the text paragraph is `display: flex` on desktop, which turns each text run and the link into separate flex items and drops whitespace-only ones, so the spaces around the link disappeared. The text is now wrapped in one `<span>` so it lays out as normal inline text.
+
 ## 2026-09-29 - Announcement Banner Uses Supplied SVG Artwork
 
 - Replaced the CSS `clip-path` ribbon with the designed SVG (`public/assets/announcement-banner.svg`, 860x46, layered shapes plus GSF Academy logo). The text was removed from the SVG and is overlaid as live HTML so the link is real, selectable and editable in `src/lib/announcement.ts`; font size scales with the artwork via `cqw`.

@@ -20,9 +20,11 @@ const { enabled, before, linkText, href, after } = announcement;
         class="banner-art hidden h-auto w-full sm:block"
       />
       <p class="banner-text text-white font-bold">
-        {before}{" "}
-        <a href={href} class="underline hover:text-accent-light">{linkText}</a>{" "}
-        {after}
+        <span>
+          {before}{" "}
+          <a href={href} class="underline hover:text-accent-light">{linkText}</a>{" "}
+          {after}
+        </span>
       </p>
     </div>
   </div>
