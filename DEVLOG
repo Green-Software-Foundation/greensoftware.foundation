@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Announcement Ribbon Moved Above the Navigation
+
+- `AnnouncementBanner` is still rendered by `Navbar`, but now immediately before `<header>` (below the non-production preview strip, if shown) instead of after it. Ribbon styling unchanged.
+
 ## 2026-09-29 - Announcement Banner Restyled as Ribbon Below Navbar
 
 - `AnnouncementBanner` is now a centred ribbon tab (dark teal core, two lighter teal layers, slanted sides) rendered by `Navbar` directly below the header, instead of a full-width strip in the layout. Removed from `showcase.astro`.
