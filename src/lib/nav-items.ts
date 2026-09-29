@@ -127,10 +127,15 @@ export const navItems = [
             external: true,
           },
           {
-            href: "https://learn.greensoftware.foundation",
+            href: "https://grnsft.org/mov-plat-gsp",
             label: "Green Software Practitioner",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           },
+          {
+            href: "https://grnsft.org/mov-plat-courses",
+            label: "Courses",
+            /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
+          },          
           {
             href: "https://patterns.greensoftware.foundation",
             label: "Patterns",
