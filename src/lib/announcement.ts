@@ -4,8 +4,8 @@
  */
 export const announcement = {
   enabled: true,
-  before: "Join the",
-  linkText: "GSF Green Software & AI Academy",
+  before: "Join the ",
+  linkText: "Green Software & AI Academy",
   href: "https://academy.greensoftware.foundation",
-  after: "pilot",
+  after: " pilot",
 };
