@@ -1,16 +1,79 @@
 ---
 /**
- * Small, subtle site-wide announcement strip. Rendered once by the showcase layout.
+ * Site-wide announcement ribbon. Rendered by Navbar, directly below the header.
  * Content lives in src/lib/announcement.ts.
  */
 import { announcement } from "../lib/announcement";
 
-const { enabled, before, linkText, href, after } = announcement;
+const { enabled, before, linkText, href, after, logoSrc } = announcement;
 ---
 {enabled && (
-  <div class="bg-primary-dark text-white text-center text-xs py-1.5 px-4 border-b border-primary-light" data-pagefind-ignore>
-    {before}{" "}
-    <a href={href} class="underline font-bold hover:text-accent-light">{linkText}</a>{" "}
-    {after}
+  <div class="container flex justify-center" data-pagefind-ignore>
+    <div class="ribbon relative w-full max-w-[1080px]">
+      <span class="ribbon-layer ribbon-outer bg-primary-lighter" aria-hidden="true"></span>
+      <span class="ribbon-layer ribbon-mid bg-primary-light" aria-hidden="true"></span>
+      <span class="ribbon-layer ribbon-core bg-primary-dark" aria-hidden="true"></span>
+      <p class="relative flex items-center justify-center gap-3 px-6 py-2 text-center text-sm font-semibold text-white">
+        {logoSrc && <img src={logoSrc} alt="" class="h-8 w-auto shrink-0" />}
+        <span>
+          {before}{" "}
+          <a href={href} class="underline font-bold hover:text-accent-light">{linkText}</a>{" "}
+          {after}
+        </span>
+      </p>
+    </div>
   </div>
 )}
+
+<style>
+  .ribbon-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  /* Mobile: a single dark pill with rounded bottom corners */
+  .ribbon-outer,
+  .ribbon-mid {
+    display: none;
+  }
+  .ribbon-core {
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  /* sm and up: three nested, slanted layers narrowing towards the bottom */
+  @media (min-width: 640px) {
+    .ribbon-outer,
+    .ribbon-mid {
+      display: block;
+    }
+    .ribbon-outer,
+    .ribbon-mid,
+    .ribbon-core {
+      border-radius: 0;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        calc(100% - 26px) 65%,
+        calc(100% - 32px) 85%,
+        calc(100% - 46px) 100%,
+        46px 100%,
+        32px 85%,
+        26px 65%
+      );
+    }
+    .ribbon-outer {
+      left: 0;
+      right: 0;
+    }
+    .ribbon-mid {
+      left: 28px;
+      right: 28px;
+    }
+    .ribbon-core {
+      left: 56px;
+      right: 56px;
+    }
+  }
+</style>

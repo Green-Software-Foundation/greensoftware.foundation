@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import NavigationComponent from "@/components/react/navbar";
 import type { NavItem } from "@/components/react/navbar";
 
+import AnnouncementBanner from "@/components/announcement-banner.astro";
 import DefaultLogo from "@/assets/sci-logo.svg";
 
 import GSFLogo from "@/assets/gsf-logo.svg";
@@ -28,6 +29,8 @@ interface Props {
   topBarLinks?: TopBarLink[];
   /** Show search icon placeholder */
   showSearch?: boolean;
+  /** Show the site-wide announcement ribbon below the header (default true) */
+  showAnnouncement?: boolean;
 }
 
 const {
@@ -38,6 +41,7 @@ const {
   topBar = "project-by",
   topBarLinks = [],
   showSearch = false,
+  showAnnouncement = true,
 } = Astro.props;
 
 const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production";
@@ -106,3 +110,4 @@ const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production
     </div>
   </div>
 </header>
+{showAnnouncement && <AnnouncementBanner />}

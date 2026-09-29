@@ -1,5 +1,11 @@
 # Development Log — GSF Website
 
+## 2026-09-29 - Announcement Banner Restyled as Ribbon Below Navbar
+
+- `AnnouncementBanner` is now a centred ribbon tab (dark teal core, two lighter teal layers, slanted sides) rendered by `Navbar` directly below the header, instead of a full-width strip in the layout. Removed from `showcase.astro`.
+- New `Navbar` prop `showAnnouncement` (default true); the catalogue demo passes `false` so it does not appear mid-page.
+- Optional `logoSrc` in `src/lib/announcement.ts` for the GSF Academy logo (unset for now). Below 640px it collapses to a single dark pill.
+
 ## 2026-09-29 - Adoption Nav: Education Column Update
 
 - `src/lib/nav-items.ts`, Adoption > Education: added "GSF Academy" (`https://academy.greensoftware.foundation`) at the top, renamed "Courses" to "Green Software Practitioner" (same `learn.greensoftware.foundation` link), and removed "Resource Catalogue".
