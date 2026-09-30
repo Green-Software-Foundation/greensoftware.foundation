@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-GSF's education programme: courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
+GSF's education programme: the Green Software & AI Academy pilot, courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
 
 ## Dynamic Elements
 
@@ -18,6 +18,7 @@ Articles tagged `"education"` in frontmatter are shown in a carousel (3-article 
 Everything else on this page is hardcoded:
 
 - **Hero** — heading, CTAs (free course link, patterns catalogue)
+- **Academy pilot** — dark CTACard directly under the hero: fourteen role-based courses across five tracks, member-organisation pilot, button to `https://academy.greensoftware.foundation`. Copy is taken from the launch announcement.
 - **Courses heading** — intro to Movement Platform courses
 - **Green Software Practitioner** — TabbedSection (overview, audience, outcomes)
 - **SOFT Essentials** — TabbedSection (overview, audience, outcomes)
@@ -34,6 +35,7 @@ Everything else on this page is hardcoded:
 | Change | Where |
 |--------|-------|
 | Add article to carousel | Tag article with `"education"` |
+| Update the Academy pilot card | Edit the CTACard under the hero in `education/index.astro` |
 | Add/update a course | Edit the TabbedSection props in `education/index.astro` |
 | Update member stories | Edit the MemberStories props in `education/index.astro` |
 | Add learning resource | Edit ResourceCards in `education/index.astro` |

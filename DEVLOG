@@ -1,5 +1,10 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Education Page: Academy Pilot Section
+
+- Added a dark `CTACard` directly under the hero on `/education/` featuring the Green Software & AI Academy pilot (fourteen role-based courses, five tracks, member-organisation pilot) with a button to `https://academy.greensoftware.foundation`. Copy is drawn from the launch announcement; quotes, course list and contacts are deliberately left to the Academy site.
+- Hold-back note: the announcement is dated October 1, 2026, so PR #105 should not reach production before then.
+
 ## 2026-09-29 - Announcement Banner: Missing Spaces Around Link
 
 - Fixed: the text paragraph is `display: flex` on desktop, which turns each text run and the link into separate flex items and drops whitespace-only ones, so the spaces around the link disappeared. The text is now wrapped in one `<span>` so it lays out as normal inline text.
