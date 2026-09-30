@@ -124,26 +124,31 @@ export const navItems = [
           {
             href: "https://academy.greensoftware.foundation",
             label: "Green AI & Software Academy",
+            description: "Role-based training and certification",
             external: true,
           },
           {
             href: "https://grnsft.org/mov-plat-gsp",
             label: "Green Software Practitioner",
+            description: "Free foundational course on building greener software",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           },
           {
             href: "https://grnsft.org/sci-fundamentals-course",
             label: "SCI Fundamentals",
+            description: "Learn to calculate Software Carbon Intensity scores",
             external: true,
           },
           {
             href: "https://grnsft.org/sci-ai-fundamentals-course",
             label: "SCI for AI Fundamentals",
+            description: "Measure the carbon footprint of AI systems",
             external: true,
           },
           {
             href: "https://grnsft.org/mov-plat-courses",
             label: "Further Courses",
+            description: "Explore more courses on the Movement Platform",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           }       
         ],
@@ -154,11 +159,13 @@ export const navItems = [
           {
             href: "https://awesome.greensoftware.foundation/",
             label: "Awesome Green Software",
+            description: "Curated tools, articles, and open-source projects",
             external: true,
           },
           {
             href: "https://patterns.greensoftware.foundation",
             label: "Green Software Patterns",
+            description: "Peer-reviewed techniques for reducing software emissions",
             /* iconSrc: pi("gs-patterns"), icon: "book-open", */ external: true,
           },
           {

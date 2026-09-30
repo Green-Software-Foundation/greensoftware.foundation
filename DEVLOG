@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Nav: Education Link Descriptions
+
+- `src/lib/nav-items.ts`: added one-line descriptions to the Education dropdown links (Academy, Practitioner, SCI Fundamentals, SCI for AI Fundamentals, Further Courses, Awesome Green Software, Green Software Patterns). Policy Radar already had one. Labels, links and order unchanged.
+
 ## 2026-09-30 - Nav: Articles Is Now a Top-Level Link
 
 - `src/lib/nav-items.ts`: moved Articles (`/articles/`) out of About > Impact into a plain top-level link between Community and About (order: Standards, Education, Adoption, Community, Articles, About). The nav component already supports plain links on desktop and mobile, so no component change. About > Impact keeps Member Stories and Press & Media.
