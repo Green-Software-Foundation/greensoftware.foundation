@@ -295,6 +295,7 @@ export const navItems = [
       },
     ],
   },
+  { href: "/articles/", label: "Articles" },
   {
     label: "About",
     sections: [
@@ -337,7 +338,6 @@ export const navItems = [
             href: "/stories/",
             label: "Member Stories" /* icon: "book-open" */,
           },
-          { href: "/articles/", label: "Articles" /* icon: "newspaper" */ },
           { href: "/press/", label: "Press & Media" /* icon: "mic" */ },
         ],
       },

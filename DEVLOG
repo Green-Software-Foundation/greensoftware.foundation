@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Nav: Articles Is Now a Top-Level Link
+
+- `src/lib/nav-items.ts`: moved Articles (`/articles/`) out of About > Impact into a plain top-level link between Community and About (order: Standards, Education, Adoption, Community, Articles, About). The nav component already supports plain links on desktop and mobile, so no component change. About > Impact keeps Member Stories and Press & Media.
+
 ## 2026-09-30 - Nav: Education Dropdown Links
 
 - `src/lib/nav-items.ts`, Education > Learn: added SOFT Essentials, SCI for AI Fundamentals and SCI Fundamentals (before the catch-all Courses link).
