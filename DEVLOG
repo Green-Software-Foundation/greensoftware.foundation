@@ -1,5 +1,10 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Nav: Education Is Now Its Own Dropdown
+
+- `src/lib/nav-items.ts`: extracted Education from the Adoption menu into a top-level dropdown placed before Adoption (order: Standards, Education, Adoption, Community, About). Two columns: **Learn** (GSF Academy, Green Software Practitioner, Courses) and **Resources** (Patterns), with a panel-level "About our education programme →" button replacing the old per-section header link. Links and labels unchanged.
+- Adoption now contains Policy & Research and Tools only (two columns instead of three). No component change: the menu renders from data.
+
 ## 2026-09-30 - Education Page: Academy Pilot Section
 
 - Added a dark `CTACard` directly under the hero on `/education/` featuring the Green Software & AI Academy pilot (fourteen role-based courses, five tracks, member-organisation pilot) with a button to `https://academy.greensoftware.foundation`. Copy is drawn from the launch announcement; quotes, course list and contacts are deliberately left to the Academy site.

@@ -112,14 +112,14 @@ export const navItems = [
     ],
   },
   {
-    label: "Adoption",
+    label: "Education",
+    footerLink: {
+      href: "/education/",
+      label: "About our education programme →",
+    },
     sections: [
       {
-        title: "Education",
-        headerLink: {
-          href: "/education/",
-          label: "About our education programme →",
-        },
+        title: "Learn",
         links: [
           {
             href: "https://academy.greensoftware.foundation",
@@ -135,7 +135,12 @@ export const navItems = [
             href: "https://grnsft.org/mov-plat-courses",
             label: "Courses",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
-          },          
+          },
+        ],
+      },
+      {
+        title: "Resources",
+        links: [
           {
             href: "https://patterns.greensoftware.foundation",
             label: "Patterns",
@@ -143,6 +148,11 @@ export const navItems = [
           },
         ],
       },
+    ],
+  },
+  {
+    label: "Adoption",
+    sections: [
       {
         title: "Policy & Research",
         headerLink: {
