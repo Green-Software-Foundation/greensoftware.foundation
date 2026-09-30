@@ -1,5 +1,10 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Nav: Education Dropdown Links
+
+- `src/lib/nav-items.ts`, Education > Learn: added SOFT Essentials, SCI for AI Fundamentals and SCI Fundamentals (before the catch-all Courses link).
+- Education > Resources: added Awesome Green Software (`awesome.greensoftware.foundation`) and moved Policy Radar in from Adoption > Policy & Research, which now holds Publications and State of Green Software.
+
 ## 2026-09-30 - Nav: Education Is Now Its Own Dropdown
 
 - `src/lib/nav-items.ts`: extracted Education from the Adoption menu into a top-level dropdown placed before Adoption (order: Standards, Education, Adoption, Community, About). Two columns: **Learn** (GSF Academy, Green Software Practitioner, Courses) and **Resources** (Patterns), with a panel-level "About our education programme →" button replacing the old per-section header link. Links and labels unchanged.

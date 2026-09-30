@@ -132,6 +132,21 @@ export const navItems = [
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           },
           {
+            href: "https://grnsft.org/mov-plat-soft-essentials",
+            label: "SOFT Essentials",
+            external: true,
+          },
+          {
+            href: "https://grnsft.org/sci-ai-fundamentals-course",
+            label: "SCI for AI Fundamentals",
+            external: true,
+          },
+          {
+            href: "https://grnsft.org/sci-fundamentals-course",
+            label: "SCI Fundamentals",
+            external: true,
+          },
+          {
             href: "https://grnsft.org/mov-plat-courses",
             label: "Courses",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
@@ -145,6 +160,17 @@ export const navItems = [
             href: "https://patterns.greensoftware.foundation",
             label: "Patterns",
             /* iconSrc: pi("gs-patterns"), icon: "book-open", */ external: true,
+          },
+          {
+            href: "https://awesome.greensoftware.foundation/",
+            label: "Awesome Green Software",
+            external: true,
+          },
+          {
+            href: "https://policy-radar.greensoftware.foundation",
+            label: "Policy Radar",
+            description: "Track emerging legislation and regulatory trends",
+            /* iconSrc: pi("policy-radar"), icon: "radar", */ external: true,
           },
         ],
       },
@@ -165,12 +191,6 @@ export const navItems = [
             label: "Publications",
             description:
               "Research papers, policy responses, and project reports",
-          },
-          {
-            href: "https://policy-radar.greensoftware.foundation",
-            label: "Policy Radar",
-            description: "Track emerging legislation and regulatory trends",
-            /* iconSrc: pi("policy-radar"), icon: "radar", */ external: true,
           },
           {
             href: "https://stateof.greensoftware.foundation",
