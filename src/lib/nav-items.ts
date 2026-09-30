@@ -123,7 +123,7 @@ export const navItems = [
         links: [
           {
             href: "https://academy.greensoftware.foundation",
-            label: "Green Software & AI Academy",
+            label: "Green AI & Software Academy",
             external: true,
           },
           {
@@ -145,12 +145,7 @@ export const navItems = [
             href: "https://grnsft.org/mov-plat-courses",
             label: "Further Courses",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
-          },
-          {
-            href: "https://badges.greensoftware.foundation",
-            label: "Digital Badges",
-            /* icon: "badge", */ external: true,
-          }          
+          }       
         ],
       },
       {
