@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-09-30 - Banner Text: Green AI & Software Academy
+
+- `src/lib/announcement.ts`: banner link text changed to "Green AI & Software Academy" (banner now reads "Join the Green AI & Software Academy pilot"), matching the Education menu label. Banner doc updated to match.
+
 ## 2026-09-30 - Nav: Education Link Descriptions
 
 - `src/lib/nav-items.ts`: added one-line descriptions to the Education dropdown links (Academy, Practitioner, SCI Fundamentals, SCI for AI Fundamentals, Further Courses, Awesome Green Software, Green Software Patterns). Policy Radar already had one. Labels, links and order unchanged.
