@@ -47,7 +47,7 @@ The environmental and financial footprint of a digital system is created across 
 
 Courses can be taken independently, allowing organizations to begin with the roles and capabilities most relevant to their goals. 
 
-Explore the [Academy courses](https://academy.greensoftware.foundation/). 
+::button{href="https://academy.greensoftware.foundation/" label="Explore the Academy courses" variant="primary"}
 
 ## Supporting Quotes 
 
