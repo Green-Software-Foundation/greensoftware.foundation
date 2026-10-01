@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-10-01 - Education Card: Green AI & Software Academy
+
+- `src/pages/education/index.astro`: the Academy CTACard heading and image alt now say "Green AI & Software Academy", matching the banner and the Education menu. `docs/pages/education.md` updated to match.
+
 ## 2026-09-30 - Banner Text: Green AI & Software Academy
 
 - `src/lib/announcement.ts`: banner link text changed to "Green AI & Software Academy" (banner now reads "Join the Green AI & Software Academy pilot"), matching the Education menu label. Banner doc updated to match.
