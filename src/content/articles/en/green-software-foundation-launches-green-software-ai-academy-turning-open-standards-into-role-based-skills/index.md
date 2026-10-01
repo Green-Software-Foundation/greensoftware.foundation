@@ -33,7 +33,7 @@ As AI adoption grows, many organizations are beginning to put sustainability com
 
 These opportunities extend beyond environmental impact to cost efficiency. The same skills that reduce carbon, energy, water, and waste also help teams identify unnecessary computation and idle capacity. 
 
-> "Every software and AI system carries both an environmental and a financial cost. Many of the same decisions influence both — the model you choose, the data you keep, the infrastructure you use, and the work your systems perform that nobody consumes. Those decisions sit across the organization, from the developer writing a query to the executive signing a contract. The Academy gives every role the skills to make those decisions with both environmental and financial impact in view."**—**Navveen Balani, Executive Director, Green Software Foundation
+> "Every software and AI system carries both an environmental and a financial cost. Many of the same decisions influence both — the model you choose, the data you keep, the infrastructure you use, and the work your systems perform that nobody consumes. Those decisions sit across the organization, from the developer writing a query to the executive signing a contract. The Academy gives every role the skills to make those decisions with both environmental and financial impact in view."—Navveen Balani, Executive Director, Green Software Foundation
 
 ## **Reducing Software and AI Impact, from Silicon to Screen**
 
@@ -46,6 +46,8 @@ The environmental and financial footprint of a digital system is created across 
 - **Run**: GreenOps Practitioner.
 
 Courses can be taken independently, allowing organizations to begin with the roles and capabilities most relevant to their goals. 
+
+Explore the [Academy courses](https://academy.greensoftware.foundation/). 
 
 ## Supporting Quotes 
 
