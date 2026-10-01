@@ -1,6 +1,6 @@
 ---
 title: Green Software Foundation Launches Green Software & AI Academy, Turning Open Standards into Role-Based Skills
-teaserText: Fourteen courses help teams, from executives to engineers, measure and reduce the environmental impact of software and AI.
+teaserText: Launching with fourteen courses, the Academy help teams, from engineers to executives, measure and reduce the environmental impact of software and AI.
 date: 2026-10-01
 published: true
 summary: The Green Software & AI Academy pilot is now open to GSF members, offering fourteen courses and vendor-neutral certification built on GSF's open standards to help teams measure and reduce the environmental impact of software and AI.
