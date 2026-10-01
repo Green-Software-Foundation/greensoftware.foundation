@@ -40,7 +40,7 @@ Assembly status is a Notion "status" type property (not "select"). The exact val
 | `Apply now` | Yes | "Upcoming assemblies" | Yes — full application form |
 | `Register interest` | Yes | "Upcoming assemblies" | Yes — interest registration form |
 | `Upcoming` | Yes | "Upcoming assemblies" | Yes — interest registration form |
-| `In Progress` | Yes | "Upcoming assemblies" | No |
+| `In Progress` | Yes | "Upcoming assemblies" | Yes — waitlist form (badge still reads "In Progress") |
 | `Pending` | Yes | "Upcoming assemblies", badged "Waitlist" | Yes — framed as joining a waitlist (used once the application deadline has passed but the assembly still wants to capture interest) |
 | `Done` | Yes | "Completed assemblies" | No — shows report link if available |
 | `Backlog` | **Hidden** | Not shown | — |
@@ -80,13 +80,13 @@ Inline `<section>` using native `<details>`/`<summary>` HTML for zero-JS accordi
 
 ## Application Form
 
-The form appears on **detail pages** (not the index) when `status` is `Apply now`, `Register interest`, `Upcoming`, or `Pending`.
+The form appears on **detail pages** (not the index) when `status` is `Apply now`, `Register interest`, `Upcoming`, `In Progress`, or `Pending`.
 
-### Waitlist framing (`Pending` status)
+### Waitlist framing (`Pending` and `In Progress` statuses)
 
-When `status` is `Pending`, the same form is shown but reframed as joining a waitlist rather than applying — used when an assembly's application deadline has passed but it's still worth capturing interest (e.g. for a future run, or in case a seat opens up):
+When `status` is `Pending` or `In Progress`, the same form is shown but reframed as joining a waitlist rather than applying — used when an assembly's application deadline has passed but it's still worth capturing interest (e.g. for a future run, or in case a seat opens up):
 
-- Status badge reads "Waitlist" instead of the raw "Pending" value
+- Status badge reads "Waitlist" instead of the raw "Pending" value (for `In Progress` the badge keeps reading "In Progress")
 - Hero CTA and submit button read "Join the waitlist"
 - Form heading/copy explain that applications have closed but people can still join the waitlist
 - Success state reads "You're on the waitlist"
