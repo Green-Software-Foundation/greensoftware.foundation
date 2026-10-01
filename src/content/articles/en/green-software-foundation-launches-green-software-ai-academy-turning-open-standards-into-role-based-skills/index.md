@@ -49,13 +49,13 @@ Courses can be taken independently, allowing organizations to begin with the rol
 
 ## Supporting Quotes 
 
-> _“Scaling sustainable IT requires robust capability building across every organizational role. The Green Software & AI Academy fills this gap by training professionals to reduce both the environmental and financial costs of digital systems. Grounded in open standards, it empowers teams to drive efficiency that delivers both planet-positive outcomes and direct economic savings.”—_Jonathan Turnbull, Environment & AI Lead, Google, and Vice Chair, Green Software Foundation
+> “Scaling sustainable IT requires robust capability building across every organizational role. The Green Software & AI Academy fills this gap by training professionals to reduce both the environmental and financial costs of digital systems. Grounded in open standards, it empowers teams to drive efficiency that delivers both planet-positive outcomes and direct economic savings.”—Jonathan Turnbull, Environment & AI Lead, Google, and Vice Chair, Green Software Foundation
 
-> _“As AI adoption accelerates, sustainability must become a core consideration in how we design, deploy, and operate digital solutions. The Green Software & AI Academy provides practical, role-based learning that helps professionals translate sustainability principles into everyday decisions, building the skills needed to create more responsible and efficient AI-enabled systems.”—_Janardan Misra, Innovation Research Principal Director, Accenture, and Steering Committee Member, Green Software Foundation
+> “As AI adoption accelerates, sustainability must become a core consideration in how we design, deploy, and operate digital solutions. The Green Software & AI Academy provides practical, role-based learning that helps professionals translate sustainability principles into everyday decisions, building the skills needed to create more responsible and efficient AI-enabled systems.”—Janardan Misra, Innovation Research Principal Director, Accenture, and Steering Committee Member, Green Software Foundation
 
-> _“Sustainable digital transformation requires turning principles into practical action. The Green Software & AI Academy equips professionals across roles with the skills to measure impact, make informed technology decisions, and apply open standards in practice. By building these capabilities across organizations, the Academy can help scale more sustainable digital practices.”—_Taichi Imura, Manager, Sustainability Business Office, NTT DATA, and Steering Committee Member, Green Software Foundation 
+> “Sustainable digital transformation requires turning principles into practical action. The Green Software & AI Academy equips professionals across roles with the skills to measure impact, make informed technology decisions, and apply open standards in practice. By building these capabilities across organizations, the Academy can help scale more sustainable digital practices.”—Taichi Imura, Manager, Sustainability Business Office, NTT DATA, and Steering Committee Member, Green Software Foundation 
 
-> _"The environmental impact of digital systems is shaped long before and long after the code is written, across hardware, infrastructure, and system operations. The Green Software & AI Academy gives engineering teams a standards-based approach to understand the complete picture and act on it. Offering this collection of role-specific trainings makes it possible to build this capability consistently. We’re excited to see it launch."_—Carolin Rubner, Head of Research Group, Siemens, and Steering Committee Member, Green Software Foundation
+> "The environmental impact of digital systems is shaped long before and long after the code is written, across hardware, infrastructure, and system operations. The Green Software & AI Academy gives engineering teams a standards-based approach to understand the complete picture and act on it. Offering this collection of role-specific trainings makes it possible to build this capability consistently. We’re excited to see it launch."—Carolin Rubner, Head of Research Group, Siemens, and Steering Committee Member, Green Software Foundation
 
 ## **Join the Pilot** 
 
@@ -77,5 +77,4 @@ Members of the GSF represent a balanced mix of for-profit organizations, nonprof
 
 Steering Members include Accenture, Google, NTT DATA, Siemens and UBS.
 
-**Media contact:**
-Gosia Fricze, [gosia@greensoftware.foundation](mailto:gosia@greensoftware.foundation), Green Software Foundation
+**Media contact:** Gosia Fricze, [gosia@greensoftware.foundation](mailto:gosia@greensoftware.foundation), Green Software Foundation
