@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-10-01 - Academy Name Reverted to Green Software & AI Academy
+
+- Changed every mention of "Green AI & Software Academy" back to "Green Software & AI Academy": banner link text (`src/lib/announcement.ts`), Education menu label (`src/lib/nav-items.ts`), the Academy card heading and image alt on `/education/`, and the banner and education page docs. Earlier DEVLOG entries are left as history.
+
 ## 2026-10-01 - Education Card: Green AI & Software Academy
 
 - `src/pages/education/index.astro`: the Academy CTACard heading and image alt now say "Green AI & Software Academy", matching the banner and the Education menu. `docs/pages/education.md` updated to match.

@@ -123,7 +123,7 @@ export const navItems = [
         links: [
           {
             href: "https://academy.greensoftware.foundation",
-            label: "Green AI & Software Academy",
+            label: "Green Software & AI Academy",
             description: "Role-based training and certification",
             external: true,
           },
