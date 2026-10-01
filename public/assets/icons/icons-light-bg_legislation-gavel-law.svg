@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="46.9" x2="41.4" y2="46.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".1" stop-color="#409187"/>
+      <stop offset=".4" stop-color="#64a58b"/>
+      <stop offset=".7" stop-color="#9ec592"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="6.2" y1="40.7" x2="35.2" y2="40.7" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="13.3" y1="210.6" x2="47.3" y2="210.6" gradientTransform="translate(2.2 -198) scale(1.1 1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003834"/>
+      <stop offset="1" stop-color="#006d68"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient3" x1="24" y1="210.6" x2="40.2" y2="210.6" gradientTransform="translate(-15.3 -188.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003834"/>
+      <stop offset="1" stop-color="#006d68"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient4" x1="21.3" y1="200.7" x2="43.2" y2="200.7" gradientTransform="translate(-20 -187.6)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="21.3" y1="220.3" x2="43.2" y2="220.3" gradientTransform="translate(-10.7 -190)" xlink:href="#linear-gradient"/>
+  </defs>
+  <rect class="st5" x="0" y="43.8" width="41.4" height="6.2" rx="3" ry="3"/>
+  <rect class="st1" x="6.2" y="37.5" width="29" height="6.2" rx="2.5" ry="2.5"/>
+  <g>
+    <rect class="st0" x="15.8" y="9.8" width="35.8" height="5.6" rx="2.3" ry="2.3" transform="translate(-2 17.4) rotate(-28.2)"/>
+    <rect class="st2" x="8.5" y="12.7" width="16.2" height="18.2" transform="translate(-8.3 10.4) rotate(-28.2)"/>
+    <g>
+      <rect class="st4" x="1" y="10.3" width="21.9" height="5.6" rx="2.8" ry="2.8" transform="translate(-4.8 7.2) rotate(-28.2)"/>
+      <rect class="st3" x="10.3" y="27.6" width="21.9" height="5.6" rx="2.8" ry="2.8" transform="translate(-11.8 13.7) rotate(-28.2)"/>
+    </g>
+  </g>
+</svg>
