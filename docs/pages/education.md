@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-GSF's education programme: the Green AI & Software Academy pilot, courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
+GSF's education programme: the Green Software & AI Academy pilot, courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
 
 ## Dynamic Elements
 
