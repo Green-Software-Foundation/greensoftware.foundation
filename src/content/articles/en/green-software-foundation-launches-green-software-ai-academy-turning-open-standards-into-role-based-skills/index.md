@@ -61,11 +61,11 @@ Explore the [Academy courses](https://academy.greensoftware.foundation/).
 
 ## **Join the Pilot** 
 
-The Academy pilot is open to GSF member organizations. Participating members help shape the program around real-world roles, responsibilities, and skills gaps across the industry.
+The Academy pilot is open to GSF member organizations. Participating organizations help shape the program around real-world roles, responsibilities, and skills gaps across the industry.
 
-Membership gives organizations access to Academy learning and certification for their teams, alongside opportunities to take part in the working groups and committees developing the standards, specifications, and open-source initiatives the courses are built on.
+GSF membership provides access to Academy learning and certification for teams, alongside opportunities to take part in the working groups and committees developing the standards, specifications, and open-source initiatives the courses are built on.
 
-GSF invites organizations that want to participate in the pilot to join the Foundation. Get in touch to discuss the details: 
+GSF invites organizations that want to join the pilot to get in touch to discuss the details: 
 
 **Navveen Balani, Executive Director,** [navveen@greensoftware.foundation](mailto:navveen@greensoftware.foundation)
 
