@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import NavigationComponent from "@/components/react/navbar";
 import type { NavItem } from "@/components/react/navbar";
 
+import AnnouncementBanner from "@/components/announcement-banner.astro";
 import DefaultLogo from "@/assets/sci-logo.svg";
 
 import GSFLogo from "@/assets/gsf-logo.svg";
@@ -28,6 +29,8 @@ interface Props {
   topBarLinks?: TopBarLink[];
   /** Show search icon placeholder */
   showSearch?: boolean;
+  /** Show the site-wide announcement ribbon above the header (default true) */
+  showAnnouncement?: boolean;
 }
 
 const {
@@ -38,6 +41,7 @@ const {
   topBar = "project-by",
   topBarLinks = [],
   showSearch = false,
+  showAnnouncement = true,
 } = Astro.props;
 
 const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production";
@@ -48,6 +52,7 @@ const isProduction = import.meta.env.PROD && process.env.CONTEXT === "production
     This is a development preview. Visit <a href="https://greensoftware.foundation" class="underline font-bold hover:text-accent-light">greensoftware.foundation</a> for the official site.
   </div>
 )}
+{showAnnouncement && <AnnouncementBanner />}
 <header class="container" data-pagefind-ignore>
   {topBar !== "none" && (
     <div class="border-b border-primary-lighter pb-3">

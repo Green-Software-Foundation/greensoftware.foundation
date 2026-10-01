@@ -1,0 +1,64 @@
+---
+/**
+ * Site-wide announcement ribbon. Rendered by Navbar, directly above the header.
+ * Artwork: public/assets/announcement-banner.svg (viewBox 860x46, logo included, no text).
+ * Text and link live in src/lib/announcement.ts and are overlaid as real HTML.
+ */
+import { announcement } from "../lib/announcement";
+
+const { enabled, before, linkText, href, after } = announcement;
+---
+{enabled && (
+  <div class="container flex justify-center" data-pagefind-ignore>
+    <div class="banner relative w-full max-w-[860px]">
+      <img
+        src="/assets/announcement-banner.svg"
+        alt=""
+        aria-hidden="true"
+        width="860"
+        height="46"
+        class="banner-art hidden h-auto w-full sm:block"
+      />
+      <p class="banner-text text-white font-bold">
+        <span>
+          {before}{" "}
+          <a href={href} class="underline hover:text-accent-light">{linkText}</a>{" "}
+          {after}
+        </span>
+      </p>
+    </div>
+  </div>
+)}
+
+<style>
+  .banner {
+    container-type: inline-size;
+  }
+  /* Mobile: single dark pill with rounded bottom corners */
+  .banner-text {
+    background: var(--color-primary-dark, #00524f);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  /* sm and up: text overlaid on the artwork. 1.91cqw = 16.429/860, the size used in the artwork. */
+  @media (min-width: 640px) {
+    .banner-text {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 34.35%;
+      display: flex;
+      align-items: center;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      white-space: nowrap;
+      font-size: 1.91cqw;
+      line-height: 1;
+    }
+  }
+</style>

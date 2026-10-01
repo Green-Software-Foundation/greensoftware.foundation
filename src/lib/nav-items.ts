@@ -112,32 +112,75 @@ export const navItems = [
     ],
   },
   {
-    label: "Adoption",
+    label: "Education",
+    footerLink: {
+      href: "/education/",
+      label: "About our education programme →",
+    },
     sections: [
       {
-        title: "Education",
-        headerLink: {
-          href: "/education/",
-          label: "About our education programme →",
-        },
+        title: "Learn",
         links: [
           {
-            href: "https://learn.greensoftware.foundation",
-            label: "Courses",
+            href: "https://academy.greensoftware.foundation",
+            label: "Green AI & Software Academy",
+            description: "Role-based training and certification",
+            external: true,
+          },
+          {
+            href: "https://grnsft.org/mov-plat-gsp",
+            label: "Green Software Practitioner",
+            description: "Free foundational course on building greener software",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
           },
           {
+            href: "https://grnsft.org/sci-fundamentals-course",
+            label: "SCI Fundamentals",
+            description: "Learn to calculate Software Carbon Intensity scores",
+            external: true,
+          },
+          {
+            href: "https://grnsft.org/sci-ai-fundamentals-course",
+            label: "SCI for AI Fundamentals",
+            description: "Measure the carbon footprint of AI systems",
+            external: true,
+          },
+          {
+            href: "https://grnsft.org/mov-plat-courses",
+            label: "Further Courses",
+            description: "Explore more courses on the Movement Platform",
+            /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
+          }       
+        ],
+      },
+      {
+        title: "Resources",
+        links: [
+          {
+            href: "https://awesome.greensoftware.foundation/",
+            label: "Awesome Green Software",
+            description: "Curated tools, articles, and open-source projects",
+            external: true,
+          },
+          {
             href: "https://patterns.greensoftware.foundation",
-            label: "Patterns",
+            label: "Green Software Patterns",
+            description: "Peer-reviewed techniques for reducing software emissions",
             /* iconSrc: pi("gs-patterns"), icon: "book-open", */ external: true,
           },
           {
-            href: "https://github.com/Green-Software-Foundation/awesome-green-software",
-            label: "Resource Catalogue",
-            /* iconSrc: pi("awesome-gs"), icon: "trophy", */ external: true,
+            href: "https://policy-radar.greensoftware.foundation",
+            label: "Policy Radar",
+            description: "Track emerging legislation and regulatory trends",
+            /* iconSrc: pi("policy-radar"), icon: "radar", */ external: true,
           },
         ],
       },
+    ],
+  },
+  {
+    label: "Adoption",
+    sections: [
       {
         title: "Policy & Research",
         headerLink: {
@@ -152,12 +195,6 @@ export const navItems = [
               "Research papers, policy responses, and project reports",
           },
           {
-            href: "https://policy-radar.greensoftware.foundation",
-            label: "Policy Radar",
-            description: "Track emerging legislation and regulatory trends",
-            /* iconSrc: pi("policy-radar"), icon: "radar", */ external: true,
-          },
-          {
             href: "https://stateof.greensoftware.foundation",
             label: "State of Green Software",
             /* iconSrc: pi("state-of-green-software"), icon: "bar-chart", */ external: true,
@@ -165,11 +202,11 @@ export const navItems = [
         ],
       },
       {
-        title: "Tools",
+        title: "Tooling",
         links: [
           {
-            href: "https://github.com/Green-Software-Foundation/carbon-aware-sdk",
-            label: "Carbon Aware SDK",
+            href: "https://grnsft.org/labs",
+            label: "Labs",
             description: "SDK for building carbon-aware applications",
             /* iconSrc: pi("carbon-aware-sdk"), icon: "cloud", */ external: true,
           },
@@ -223,6 +260,16 @@ export const navItems = [
         title: "Connect",
         links: [
           {
+            href: "https://champions.greensoftware.foundation",
+            label: "Champions Programme",
+            /* iconSrc: pi("green-software-champions"), icon: "trophy", */ external: true,
+          },    
+          {
+            href: "https://grnsft.org/meetup",
+            label: "Meetup Community",
+            /* iconSrc: pi("movement-platform"), icon: "users", */ external: true,
+          },          
+          {
             href: "https://movement.greensoftware.foundation",
             label: "Movement Platform",
             /* iconSrc: pi("movement-platform"), icon: "users", */ external: true,
@@ -230,36 +277,27 @@ export const navItems = [
           {
             href: "/newsletter/",
             label: "Newsletter" /* icon: "newspaper", */,
-          },
-          {
-            href: "https://badges.greensoftware.foundation",
-            label: "Badges",
-            /* icon: "badge", */ external: true,
-          },
-          {
-            href: "https://champions.greensoftware.foundation",
-            label: "Champions Programme",
-            /* iconSrc: pi("green-software-champions"), icon: "trophy", */ external: true,
-          },
+          }
         ],
       },
       {
         title: "Events",
         links: [
           {
-            href: "https://summit.greensoftware.foundation",
-            label: "Summit",
-            /* icon: "calendar", */ external: true,
-          },
-          {
             href: "https://hack.greensoftware.foundation/",
             label: "Carbon Hack",
             /* icon: "zap", */ external: true,
-          },
+          },          
+          {
+            href: "https://summit.greensoftware.foundation",
+            label: "Summit",
+            /* icon: "calendar", */ external: true,
+          }
         ],
       },
     ],
   },
+  { href: "/articles/", label: "Articles" },
   {
     label: "About",
     sections: [
@@ -302,7 +340,6 @@ export const navItems = [
             href: "/stories/",
             label: "Member Stories" /* icon: "book-open" */,
           },
-          { href: "/articles/", label: "Articles" /* icon: "newspaper" */ },
           { href: "/press/", label: "Press & Media" /* icon: "mic" */ },
         ],
       },

@@ -1,5 +1,71 @@
 # Development Log — GSF Website
 
+## 2026-10-01 - Education Card: Green AI & Software Academy
+
+- `src/pages/education/index.astro`: the Academy CTACard heading and image alt now say "Green AI & Software Academy", matching the banner and the Education menu. `docs/pages/education.md` updated to match.
+
+## 2026-09-30 - Banner Text: Green AI & Software Academy
+
+- `src/lib/announcement.ts`: banner link text changed to "Green AI & Software Academy" (banner now reads "Join the Green AI & Software Academy pilot"), matching the Education menu label. Banner doc updated to match.
+
+## 2026-09-30 - Nav: Education Link Descriptions
+
+- `src/lib/nav-items.ts`: added one-line descriptions to the Education dropdown links (Academy, Practitioner, SCI Fundamentals, SCI for AI Fundamentals, Further Courses, Awesome Green Software, Green Software Patterns). Policy Radar already had one. Labels, links and order unchanged.
+
+## 2026-09-30 - Nav: Articles Is Now a Top-Level Link
+
+- `src/lib/nav-items.ts`: moved Articles (`/articles/`) out of About > Impact into a plain top-level link between Community and About (order: Standards, Education, Adoption, Community, Articles, About). The nav component already supports plain links on desktop and mobile, so no component change. About > Impact keeps Member Stories and Press & Media.
+
+## 2026-09-30 - Nav: Education Dropdown Links
+
+- `src/lib/nav-items.ts`, Education > Learn: added SOFT Essentials, SCI for AI Fundamentals and SCI Fundamentals (before the catch-all Courses link).
+- Education > Resources: added Awesome Green Software (`awesome.greensoftware.foundation`) and moved Policy Radar in from Adoption > Policy & Research, which now holds Publications and State of Green Software.
+
+## 2026-09-30 - Nav: Education Is Now Its Own Dropdown
+
+- `src/lib/nav-items.ts`: extracted Education from the Adoption menu into a top-level dropdown placed before Adoption (order: Standards, Education, Adoption, Community, About). Two columns: **Learn** (GSF Academy, Green Software Practitioner, Courses) and **Resources** (Patterns), with a panel-level "About our education programme →" button replacing the old per-section header link. Links and labels unchanged.
+- Adoption now contains Policy & Research and Tools only (two columns instead of three). No component change: the menu renders from data.
+
+## 2026-09-30 - Education Page: Academy Pilot Section
+
+- Added a dark `CTACard` directly under the hero on `/education/` featuring the Green Software & AI Academy pilot (fourteen role-based courses, five tracks, member-organisation pilot) with a button to `https://academy.greensoftware.foundation`. Copy is drawn from the launch announcement; quotes, course list and contacts are deliberately left to the Academy site.
+- Hold-back note: the announcement is dated October 1, 2026, so PR #105 should not reach production before then.
+
+## 2026-09-29 - Announcement Banner: Missing Spaces Around Link
+
+- Fixed: the text paragraph is `display: flex` on desktop, which turns each text run and the link into separate flex items and drops whitespace-only ones, so the spaces around the link disappeared. The text is now wrapped in one `<span>` so it lays out as normal inline text.
+
+## 2026-09-29 - Announcement Banner Uses Supplied SVG Artwork
+
+- Replaced the CSS `clip-path` ribbon with the designed SVG (`public/assets/announcement-banner.svg`, 860x46, layered shapes plus GSF Academy logo). The text was removed from the SVG and is overlaid as live HTML so the link is real, selectable and editable in `src/lib/announcement.ts`; font size scales with the artwork via `cqw`.
+- Below 640px the artwork is hidden and a simple dark pill shows the text. Removed the now-unused `logoSrc` option.
+
+## 2026-09-29 - Announcement Ribbon Moved Above the Navigation
+
+- `AnnouncementBanner` is still rendered by `Navbar`, but now immediately before `<header>` (below the non-production preview strip, if shown) instead of after it. Ribbon styling unchanged.
+
+## 2026-09-29 - Announcement Banner Restyled as Ribbon Below Navbar
+
+- `AnnouncementBanner` is now a centred ribbon tab (dark teal core, two lighter teal layers, slanted sides) rendered by `Navbar` directly below the header, instead of a full-width strip in the layout. Removed from `showcase.astro`.
+- New `Navbar` prop `showAnnouncement` (default true); the catalogue demo passes `false` so it does not appear mid-page.
+- Optional `logoSrc` in `src/lib/announcement.ts` for the GSF Academy logo (unset for now). Below 640px it collapses to a single dark pill.
+
+## 2026-09-29 - Adoption Nav: Education Column Update
+
+- `src/lib/nav-items.ts`, Adoption > Education: added "GSF Academy" (`https://academy.greensoftware.foundation`) at the top, renamed "Courses" to "Green Software Practitioner" (same `learn.greensoftware.foundation` link), and removed "Resource Catalogue".
+- Nav only: the "Awesome Green Software" card on `/education/` is unchanged.
+
+## 2026-09-29 - Site-wide Announcement Banner (Academy Pilot)
+
+**Objective**: Add a small, subtle banner at the top of every page promoting the Green Software & AI Academy pilot.
+
+### What We Built
+
+- **`AnnouncementBanner` component** (`src/components/announcement-banner.astro`), a static, non-sticky strip styled like the dark preview strip (`primary-dark` background, white text) with a light `primary-light` bottom border for separation. Rendered once in `src/layouts/showcase.astro` before `<main>`, so all pages get it from a single change.
+- **Content in `src/lib/announcement.ts`** with an `enabled` flag, so wording, link or removal never needs markup changes.
+- Excluded from search via `data-pagefind-ignore`. Deliberately not dismissible.
+- Docs: `docs/components/announcement-banner.md`, README index entry.
+
 ## 2026-07-30 - Homepage: "From Silicon to Screen" Becomes the Lead Message
 
 **Objective**: Bring the "from silicon to screen" tagline and the green software definition onto the homepage from a prototype mockup, and promote it to the lead message ahead of the peer-collaboration pitch.
