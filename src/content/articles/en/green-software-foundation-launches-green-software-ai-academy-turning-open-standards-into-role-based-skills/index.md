@@ -29,11 +29,11 @@ As AI adoption grows, many organizations are beginning to put sustainability com
 - **Building capable teams:** Hands-on training makes measuring and reducing the environmental impact of AI and software part of everyday work.  
 - **Developing a shared understanding of standards the industry is adopting:** Courses are grounded in GSF specifications for carbon, energy, and water, including the Software Carbon Intensity (SCI) specification, published as [ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html). Teams learn to measure consistently and document their assumptions, producing results that can be trusted, reviewed, and compared over time.
 - **Supporting regulation and policy readiness:** The Academy bridges the gap between regulation and technical practice, with dedicated courses for practitioners and policymakers. It helps organizations prepare for regulations such as CSRD and the EU AI Act.    
-- **Training certified practitioners:** Each course includes scenario-based assessment and leads to a vendor-neutral GSF certification that professionals can share to demonstrate their skills and organizations can use in hiring, workforce development, and skills frameworks.
+- **Training certified practitioners:** Each course includes scenario-based assessment and leads to a vendor-neutral GSF certification that professionals can share to demonstrate their skills, and organizations can use in hiring, workforce development, and skills frameworks.
 
 These opportunities extend beyond environmental impact to cost efficiency. The same skills that reduce carbon, energy, water, and waste also help teams identify unnecessary computation and idle capacity. 
 
-_"Every software and AI system carries both an environmental and a financial cost. Many of the same decisions influence both — the model you choose, the data you keep, the infrastructure you use, and the work your systems perform that nobody consumes. Those decisions sit across the organization, from the developer writing a query to the executive signing a contract. The Academy gives every role the skills to make those decisions with both environmental and financial impact in view."**—Navveen Balani, Executive Director, Green Software Foundation**_
+> "Every software and AI system carries both an environmental and a financial cost. Many of the same decisions influence both — the model you choose, the data you keep, the infrastructure you use, and the work your systems perform that nobody consumes. Those decisions sit across the organization, from the developer writing a query to the executive signing a contract. The Academy gives every role the skills to make those decisions with both environmental and financial impact in view."**—**Navveen Balani, Executive Director, Green Software Foundation
 
 ## **Reducing Software and AI Impact, from Silicon to Screen**
 
@@ -49,13 +49,13 @@ Courses can be taken independently, allowing organizations to begin with the rol
 
 ## Supporting Quotes 
 
-_“Scaling sustainable IT requires robust capability building across every organizational role. The Green Software & AI Academy fills this gap by training professionals to reduce both the environmental and financial costs of digital systems. Grounded in open standards, it empowers teams to drive efficiency that delivers both planet-positive outcomes and direct economic savings.”—_Jonathan Turnbull, Environment & AI Lead, Google, and Vice Chair, Green Software Foundation
+> _“Scaling sustainable IT requires robust capability building across every organizational role. The Green Software & AI Academy fills this gap by training professionals to reduce both the environmental and financial costs of digital systems. Grounded in open standards, it empowers teams to drive efficiency that delivers both planet-positive outcomes and direct economic savings.”—_Jonathan Turnbull, Environment & AI Lead, Google, and Vice Chair, Green Software Foundation
 
-_“As AI adoption accelerates, sustainability must become a core consideration in how we design, deploy, and operate digital solutions. The Green Software & AI Academy provides practical, role-based learning that helps professionals translate sustainability principles into everyday decisions, building the skills needed to create more responsible and efficient AI-enabled systems.”—_Janardan Misra, Innovation Research Principal Director, Accenture, and Steering Committee Member, Green Software Foundation
+> _“As AI adoption accelerates, sustainability must become a core consideration in how we design, deploy, and operate digital solutions. The Green Software & AI Academy provides practical, role-based learning that helps professionals translate sustainability principles into everyday decisions, building the skills needed to create more responsible and efficient AI-enabled systems.”—_Janardan Misra, Innovation Research Principal Director, Accenture, and Steering Committee Member, Green Software Foundation
 
-_“Sustainable digital transformation requires turning principles into practical action. The Green Software & AI Academy equips professionals across roles with the skills to measure impact, make informed technology decisions, and apply open standards in practice. By building these capabilities across organizations, the Academy can help scale more sustainable digital practices.”—_Taichi Imura, Manager, Sustainability Business Office, NTT DATA, and Steering Committee Member, Green Software Foundation 
+> _“Sustainable digital transformation requires turning principles into practical action. The Green Software & AI Academy equips professionals across roles with the skills to measure impact, make informed technology decisions, and apply open standards in practice. By building these capabilities across organizations, the Academy can help scale more sustainable digital practices.”—_Taichi Imura, Manager, Sustainability Business Office, NTT DATA, and Steering Committee Member, Green Software Foundation 
 
-_"The environmental impact of digital systems is shaped long before and long after the code is written, across hardware, infrastructure, and system operations. The Green Software & AI Academy gives engineering teams a standards-based approach to understand the complete picture and act on it. Offering this collection of role-specific trainings makes it possible to build this capability consistently. We’re excited to see it launch."_—Carolin Rubner, Head of Research Group, Siemens, and Steering Committee Member, Green Software Foundation
+> _"The environmental impact of digital systems is shaped long before and long after the code is written, across hardware, infrastructure, and system operations. The Green Software & AI Academy gives engineering teams a standards-based approach to understand the complete picture and act on it. Offering this collection of role-specific trainings makes it possible to build this capability consistently. We’re excited to see it launch."_—Carolin Rubner, Head of Research Group, Siemens, and Steering Committee Member, Green Software Foundation
 
 ## **Join the Pilot** 
 
@@ -65,14 +65,15 @@ Membership gives organizations access to Academy learning and certification for 
 
 GSF invites organizations that want to participate in the pilot to join the Foundation. Get in touch to discuss the details: 
 
-**Navveen Balani, Executive Director,** [**navveen@greensoftware.foundation**](navveen@greensoftware.foundation)  
-**Jamie Cowan, Head of Global Partnerships,** [**jamie@greensoftware.foundation**](jamie@greensoftware.foundation) 
+**Navveen Balani, Executive Director,** [navveen@greensoftware.foundation](mailto:navveen@greensoftware.foundation) 
+
+**Jamie Cowan, Head of Global Partnerships,** [jamie@greensoftware.foundation](mailto:jamie@greensoftware.foundation)   
 
 ## **About Green Software Foundation**
 
 The Green Software Foundation (GSF) is a nonprofit organization under the Linux Foundation. It aims to create a trusted ecosystem of people, standards, tooling, and best practices for building green software and AI across carbon, energy, water, and waste.
 
-Members of the GSF represent a balanced mix of for-profit organizations, nonprofits, and academia from around the world, including several Fortune Global 500 companies. The Foundation operates by consensus. Three Working Groups — Standards, Policy and Hardware — together with the Green AI Committee oversee the Foundation's ongoing projects.
+Members of the GSF represent a balanced mix of for-profit organizations, nonprofits, and academia from around the world, including several Fortune Global 500 companies. The Foundation operates by consensus. Three Working Groups—Standards, Policy and Hardware—together with the Green AI Committee oversee the Foundation's ongoing projects.
 
 Steering Members include Accenture, Google, NTT DATA, Siemens and UBS.
 
