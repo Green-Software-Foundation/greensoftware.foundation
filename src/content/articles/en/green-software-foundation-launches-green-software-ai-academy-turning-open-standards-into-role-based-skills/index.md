@@ -65,9 +65,9 @@ Membership gives organizations access to Academy learning and certification for 
 
 GSF invites organizations that want to participate in the pilot to join the Foundation. Get in touch to discuss the details: 
 
-**Navveen Balani, Executive Director,** [navveen@greensoftware.foundation](mailto:navveen@greensoftware.foundation) 
+**Navveen Balani, Executive Director,** [navveen@greensoftware.foundation](mailto:navveen@greensoftware.foundation)
 
-**Jamie Cowan, Head of Global Partnerships,** [jamie@greensoftware.foundation](mailto:jamie@greensoftware.foundation)   
+**Jamie Cowan, Head of Global Partnerships,** [jamie@greensoftware.foundation](mailto:jamie@greensoftware.foundation).    
 
 ## **About Green Software Foundation**
 
@@ -77,4 +77,4 @@ Members of the GSF represent a balanced mix of for-profit organizations, nonprof
 
 Steering Members include Accenture, Google, NTT DATA, Siemens and UBS.
 
-**Media contact:** Gosia Fricze, [gosia@greensoftware.foundation](mailto:gosia@greensoftware.foundation), Green Software Foundation
+**Media contact:** Gosia Fricze, Community Manager, [gosia@greensoftware.foundation](mailto:gosia@greensoftware.foundation).
