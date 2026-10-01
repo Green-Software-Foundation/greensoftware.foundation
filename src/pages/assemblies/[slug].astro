@@ -46,8 +46,8 @@ export function getStaticPaths() {
 
 const { assembly } = Astro.props as { assembly: Assembly };
 const isCompleted = assembly.status === "Done";
-const isWaitlist = assembly.status === "Pending";
-const showApplicationForm = ["Apply now", "Register interest", "Upcoming", "Pending"].includes(assembly.status);
+const isWaitlist = assembly.status === "Pending" || assembly.status === "In Progress";
+const showApplicationForm = ["Apply now", "Register interest", "Upcoming", "In Progress", "Pending"].includes(assembly.status);
 
 function formatDate(d: string | null): string {
   if (!d) return "—";
@@ -152,7 +152,7 @@ const vis = visibilityStyle(assembly.visibility);
                 isWaitlist ? "bg-white/15 text-white/90" :
                 "bg-accent-lighter text-primary-dark"
               }`}>
-                {isWaitlist ? "Waitlist" : assembly.status}
+                {assembly.status === "Pending" ? "Waitlist" : assembly.status}
               </span>
             )}
 
