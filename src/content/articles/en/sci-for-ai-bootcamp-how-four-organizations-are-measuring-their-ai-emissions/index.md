@@ -18,6 +18,8 @@ publishedOriginUrl: ''
 lang: en
 ---
 
+**_Update—October 2026:_** _The first SCI for AI Bootcamp cohort has now completed its final session. The article below reflects the program's progress as of August 2026._
+
 Developed through consensus among more than 20 member organizations, [Software Carbon Intensity (SCI) for AI](https://greensoftware.foundation/standards/sci-ai/) builds on the ISO SCI methodology to provide practitioners and organizations with a standardized way to measure the carbon emissions of AI systems throughout their lifecycle.
 
 SCI for AI was ratified in late 2025, and through conversations with our members, it quickly became clear that organizations needed structured support to put it into practice, which then led to the creation of the bootcamp. 
