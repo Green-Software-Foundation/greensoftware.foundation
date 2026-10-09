@@ -39,7 +39,7 @@ These opportunities extend beyond environmental impact to cost efficiency. The s
 
 The environmental and financial footprint of a digital system is created across its full [**Silicon-to-Screen**](https://greensoftware.foundation/articles/revisiting-green-software-from-silicon-to-screen/) lifecycle. The Academy follows it, giving each role the knowledge and practical skills needed to understand, measure, and reduce impact within the decisions it controls.
 
-- **Lead and govern**: Green IT for Leaders; Green AI for Executives; Getting Started and Scaling Green Software and Green AI; Green AI for Policy Makers.
+- **Lead and manage**: Green IT for Leaders; Green AI for Executives; Getting Started and Scaling Green Software and Green AI; Green AI for Policy Makers.
 - **Design**: Green and Efficient Architect; Designing Green Agentic Systems.
 - **Build and measure**: Green Software Developer; SCI for AI Practitioner: The Measurement Lab; Software Water Foundations.
 - **Data and models**: Green Data Practitioner; Green AI for ML Practitioners; Effective, Efficient and Green AI Prompting.
