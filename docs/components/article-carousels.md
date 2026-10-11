@@ -42,7 +42,18 @@ const filtered = allArticles
 
 ## Homepage Carousel
 
-The homepage carousel uses `featured: true` in frontmatter instead of tags. Up to 10 featured articles are shown, sorted newest first.
+The homepage carousel ("Get involved with the latest projects") uses `featured: true` in frontmatter instead of tags. Up to 12 featured articles are shown, sorted newest first. It is the only carousel that passes `slidesPerView={4}`, a `primaryCtaText`/`primaryCtaHref` button, and per-card `secondaryCta` links. See [homepage doc](../pages/homepage.md#get-involved-with-the-latest-projects-featured-articles).
+
+## Optional Carousel Props
+
+| Prop | Default | Effect |
+|------|---------|--------|
+| `slidesPerView` | `3` | `4` adds a fourth card at `xl` and switches cards to the compact style (tighter padding, smaller title, description clamped to 3 lines). At `3` the cards are unchanged, so existing carousels are unaffected |
+| `primaryCtaText` / `primaryCtaHref` | — | Prominent primary button under the section heading, above the slider |
+| `ctaText` / `ctaHref` | — | Plain text link under the slider ("View all articles →") |
+| `secondaryCta` (per article) | — | Second link on the card under "Read the story →", for pointing at the project or assembly behind the article |
+
+Card slide widths are full class strings in a lookup map rather than interpolated — Tailwind only sees classes it can find literally in the source.
 
 ## 3-Article Minimum
 
