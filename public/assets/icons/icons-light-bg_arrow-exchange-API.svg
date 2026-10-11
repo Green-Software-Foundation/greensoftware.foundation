@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        stroke: #fff;
+      }
+
+      .st1, .st2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .st3 {
+        fill: url(#linear-gradient);
+      }
+
+      .st2 {
+        stroke: url(#linear-gradient1);
+      }
+
+      .st4 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="25" y1="47" x2="25" y2="3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#338a86"/>
+      <stop offset=".2" stop-color="#529b89"/>
+      <stop offset=".6" stop-color="#94c091"/>
+      <stop offset=".9" stop-color="#bed796"/>
+      <stop offset="1" stop-color="#cee098"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="8" y1="15.1" x2="42" y2="15.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006d68"/>
+      <stop offset="1" stop-color="#003834"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="8" y1="15.1" x2="42" y2="15.1" xlink:href="#linear-gradient1"/>
+  </defs>
+  <rect class="st3" x="3" y="3" width="44" height="44" rx="5.3" ry="5.3"/>
+  <g>
+    <g>
+      <line class="st2" x1="8" y1="15.1" x2="29.1" y2="15.1"/>
+      <polygon class="st0" points="26.5 24 42 15.1 26.5 6.1 26.5 24"/>
+    </g>
+    <g>
+      <line class="st1" x1="20.9" y1="34.9" x2="42" y2="34.9"/>
+      <polygon class="st4" points="23.5 43.9 8 34.9 23.5 26 23.5 43.9"/>
+    </g>
+  </g>
+</svg>
