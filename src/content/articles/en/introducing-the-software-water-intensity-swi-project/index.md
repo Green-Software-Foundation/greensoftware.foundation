@@ -1,9 +1,9 @@
 ---
 title: Introducing the Software Water Intensity (SWI) Project
-teaserText: Led by the Software Standards Working Group, the Software Water Intensity (SWI) project aims to develop a consistent way to measure and reduce software's water footprint.
+teaserText: Developing a consistent way to measure and reduce software's water footprint.
 date: 2026-06-10
 published: true
-summary: Led by the Software Standards Working Group, the Software Water Intensity (SWI) project aims to develop a consistent way to measure and reduce software's water footprint.
+summary: Developed under the Software Standards Working Group, the project aims to provide a consistent approach for measuring and reducing software's water footprint.
 mainImage: SWE-Announcement-cover.png
 mainImageAlt: Isometric illustration showing a data center stack at the center, with water flowing from its base into a dark blue pool below. Small figures interact with the infrastructure — one examining a document, another observing the environment. Trees and natural elements surround the scene, rendered in green tones. Green Software Foundation logo in the bottom left corner.
 featured: false
@@ -17,10 +17,10 @@ originBlogName: ''
 publishedOriginUrl: ''
 lang: en
 cta:
-  primaryText: Subscribe to the SWI project
   primaryHref: https://wiki.greensoftware.foundation/subscribe-swi
-  secondaryText: Join the Green Software Foundation
+  primaryText: Subscribe to the SWI project
   secondaryHref: https://greensoftware.foundation/join-us/
+  secondaryText: Join the Green Software Foundation
 ---
 
 Software's environmental impact has long been understood through a single lens: carbon. The [tools, standards, and practices the industry](https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf) has built over the past few years reflect that focus. As data centers expand and AI workloads grow, the gap between the resources software consumes and what the industry can measure is widening, and water usage is a significant part of it. 
