@@ -41,7 +41,7 @@ Transparency remains a key hurdle. Cloud providers' sustainability reports often
 
 ## Looking Ahead 
 
-For Ryan, the importance of granular data extends beyond carbon. Together with the Software Standards Working Group (SSWG), the PWG has been exploring how much water computing consumes and how it should be measured, through the [Software Water Intensity (SWI)](https://directory.greensoftware.foundation/projects/swe/) project.
+For Ryan, the importance of granular data extends beyond carbon. Together with the Software Standards Working Group (SSWG), the PWG has been exploring how much water computing consumes and how it should be measured, through the [Software Water Intensity (SWI)](https://greensoftware.foundation/standards/swi/) project.
 
 “From my perspective at Electricity Maps,” he notes, “a key question is the water impact of the electricity powering the data centers where our workloads run.”
 
