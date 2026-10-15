@@ -15,7 +15,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-We’re excited to introduce Ryan Sholin, Strategic Account Manager at Electricity Maps, as Co-Chair of our Policy Working Group (PWG), working alongside Chris Adams of the Green Web Foundation. 
+We’re excited to introduce Ryan Sholin, Strategic Account Manager at Electricity Maps, who recently stepped into the role of Co-Chair of our Policy Working Group (PWG), alongside Chris Adams of the Green Web Foundation.
 
 ## Meet the New Co-Chair 
 
