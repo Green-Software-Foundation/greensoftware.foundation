@@ -3,7 +3,7 @@ title: 'Leadership Update: Meet Ryan Sholin, Co-Chair of the Policy Working Grou
 teaserText: Moving green software policy from estimates to evidence.
 date: 2026-10-15
 published: true
-summary: Join us in welcoming Ryan Sholin, the new Co-Chair of the GSF Policy Working Group, and learn about his data-first approach to making policy practical for engineers.
+summary: We’re thrilled to welcome Ryan Sholin as Co-Chair of the GSF Policy Working Group. Learn about his data-first approach to making policy practical for engineers, and how he’s already applying it.
 mainImage: PWG-New-Chair.png
 mainImageAlt: Illustration of two people seen from above, seated across a green table covered in papers, folders, an open book, a coffee cup, a gavel, a pencil and a clipboard with plant drawings. A sheet on the table reads “Policy Working Group.” Green Software Foundation logo in the corner.
 featured: false
