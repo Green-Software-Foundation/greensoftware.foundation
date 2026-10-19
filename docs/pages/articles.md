@@ -1,7 +1,7 @@
 # Articles
 
-**URL:** `/articles/` (listing) and `/articles/{slug}/` (detail)
-**Source files:** `src/pages/articles/[...page].astro` (listing), `src/pages/articles/[...slug].astro` (detail)
+**URL:** `/articles/` (listing), `/articles/{slug}/` (detail), `/rss.xml` (feed)
+**Source files:** `src/pages/articles/[...page].astro` (listing), `src/pages/articles/[...slug].astro` (detail), `src/pages/rss.xml.js` (feed)
 
 ## What the pages show
 
@@ -22,6 +22,10 @@ The **detail page** shows the full article content with author information, lang
 - Page heading and description
 - CTA banner at the bottom
 - Breadcrumb navigation
+
+## RSS feed
+
+`src/pages/rss.xml.js` uses [`@astrojs/rss`](https://docs.astro.build/en/recipes/rss/) to generate a feed at `/rss.xml`. It uses the same source and filtering as the listing page — published English articles, sorted newest first — so no separate data source to keep in sync.
 
 ## How articles work
 

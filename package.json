@@ -14,6 +14,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/react": "^4.3.1",
+    "@astrojs/rss": "^4.0.19",
     "@hookform/resolvers": "^5.2.1",
     "@notionhq/client": "^5.1.0",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -78,11 +79,11 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sonner": "^2.0.7",
+    "svgo": "^4.0.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.12",
     "unified": "^11.0.5",
     "vaul": "^1.1.2",
-    "svgo": "^4.0.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
