@@ -11,11 +11,11 @@ import TextWithImage from "@/components/text-with-image.astro";
 import TabbedSection from "@/components/tabbed-section.astro";
 import CardGrid from "@/components/card-grid.astro";
 import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
 import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Footer from "@/components/footer.astro";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 import ArticleCarousel from "@/components/article-carousel.astro";
@@ -44,6 +44,7 @@ const MEMBERSHIP_CTA = "/membership/";
 const SILO_WHITEPAPER = "https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Interoperability%20Layer%20for%20Real-Time%20Data%20Centre%20Sustainability%20Optimisation.md";
 const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
 const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
+const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for-operations-silo/";
 ---
 
 <Layout
@@ -76,7 +77,7 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
     subtitle="A standardised, vendor-neutral interoperability layer between data centre infrastructure and software platforms."
     body="Building on the Green Software Foundation's WDPC standard, SILO defines a common framework for collecting, normalising, and exchanging operational metrics across compute, power, cooling, networking, storage, and facility systems — enabling real-time sustainability optimisation across traditionally siloed domains."
     ctas={[
-      { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/silo/" },
+      { text: "Apply to the Assembly", variant: "primary", href: SILO_ASSEMBLY_URL },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
       { text: "White Paper", variant: "outline", href: SILO_WHITEPAPER },
       { text: "Companion Technical Note", variant: "outline", href: SILO_COMPANION_NOTE },
@@ -91,6 +92,20 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
   <!-- Logo Marquee -->
   <LogoMarquee
     heading="Developed with consensus from GSF member organisations"
+  />
+
+  <!-- Starting with an Assembly -->
+  <TextWithImage
+    badge="HOW THIS PROJECT WORKS"
+    heading="Starting with an"
+    headingAccent="Assembly"
+    headingStyle="light"
+    body="SILO is in the proposal stage, which starts with a GSF Assembly — a structured, time-boxed process for bringing a group of experts to consensus on a hard question. The SILO Assembly brings together data centre operators, infrastructure and platform vendors, and sustainability experts to define the requirements and scope for a common interoperability layer, before the work moves into a formal draft specification."
+    imageSrc="/assets/assemblies-process-illustration.webp"
+    imageAlt="The Assembly process illustration"
+    ctaText="Apply to the Assembly"
+    ctaHref={SILO_ASSEMBLY_URL}
+    bgClass="bg-white"
   />
 
   <!-- What is SILO? (bordered feature grid) -->
@@ -289,43 +304,13 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Leading the Charge -->
-  <section class="pb-12 md:pb-16 lg:pb-20">
-    <div class="container">
-      <div class="grid auto-cols-fr grid-cols-1 justify-between gap-5 lg:grid-cols-2 lg:gap-6">
-        <div class="relative flex flex-col justify-between rounded-2xl border p-6 md:p-8">
-          <img src="/assets/standards/wdpc/leading-decor.svg" class="absolute top-0 right-0 select-none pointer-events-none" />
-          <div>
-            <img src="/assets/standards/wdpc/leading-icon.svg" alt="" />
-          </div>
-          <div>
-            <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Leading The Charge</h2>
-            <p class="mt-2 text-xl">Project Leadership</p>
-            <Badge className="mt-2">Actively recruiting contributors</Badge>
-            <p class="mt-4">
-              We're building this standard with input from data centre operators, infrastructure and platform vendors, and sustainability experts worldwide. Your expertise can help shape how the industry standardises real-time sustainability data for decades to come.
-            </p>
-            <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <a href="https://directory.greensoftware.foundation/projects/silo/" target="_blank" rel="noopener noreferrer">
-                <Button>Visit the Directory</Button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex items-center justify-center">
-          <img src="/assets/standards/wdpc/leading-illustration.svg" class="rounded-2xl object-cover" />
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Timeline -->
   <Timeline
     heading="Journey to *Transformation*"
-    body="Current focus: SILO is in the proposal stage — experts, operators, and sustainability practitioners are invited to help shape its scope and requirements."
+    body="Current focus: SILO is in the pre-draft stage — experts, operators, and sustainability practitioners are invited to help shape its scope and requirements."
     items={[
-      { date: "Proposal", description: "Requirements gathering from diverse stakeholders, defining scope and objectives, validating requirements.", current: true },
-      { date: "Pre-Draft", description: "Research and analysis, composing a preliminary technical specification draft." },
+      { date: "Proposal", description: "Requirements gathering from diverse stakeholders, defining scope and objectives, validating requirements." },
+      { date: "Pre-Draft", description: "Research and analysis, composing a preliminary technical specification draft.", current: true },
       { date: "Draft", description: "Full specification with structured sections: introduction, scope, objectives, requirements, design, metrics, and compliance." },
       { date: "Consistency Review", description: "Peer reviews, stakeholder feedback, and iterative refinement of the document." },
       { date: "WG Approval", description: "Working group review, broader feedback incorporation, and formal sign-off." },
@@ -392,12 +377,32 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
     </div>
   </section>
 
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={siloProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(siloProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
+
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
     body="SILO is a path toward standardised, real-time sustainability data. We need diverse perspectives to ensure this standard serves the entire ecosystem."
     columns={3}
     cards={[
+      {
+        icon: "/assets/standards/wdpc/shape-icon-4.svg",
+        title: "Apply to the SILO Assembly",
+        description: "Join the Assembly shaping SILO's requirements and scope",
+        ctaText: "Apply Now",
+        ctaHref: SILO_ASSEMBLY_URL,
+      },
       {
         icon: "/assets/standards/wdpc/shape-icon-1.svg",
         title: "Join the Hardware Standards Working Group (GSF Members Only)",

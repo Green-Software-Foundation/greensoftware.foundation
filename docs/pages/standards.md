@@ -70,15 +70,24 @@ Currently three hardware standards have dedicated pages:
 
 All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 and SILO both reuse WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` and `public/assets/standards/silo/` once available. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
 
-### SILO hero CTAs — White Paper, Companion Technical Note, and Project Q&A
+### SILO hero CTAs — Assembly, White Paper, Companion Technical Note, and Project Q&A
 
-The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) includes three links alongside "Visit the Directory" / "Back to Standards":
+The SILO page's hero `ctas` array (`src/pages/standards/silo/index.astro`) includes four links alongside "Visit the Directory" / "Back to Standards":
 
+- **Apply to the Assembly** — links to the SILO Assembly detail page at `/assemblies/sustainability-interoperability-layer-for-operations-silo/` (`SILO_ASSEMBLY_URL` const at the top of the page frontmatter). This is a hardcoded URL, not a lookup from `assemblies.json` — same pattern used on the SCI for OpenTelemetry page (`src/pages/tools/sci-for-opentelemetry/index.astro`). If the Assembly's slug ever changes in Notion, update this const.
 - **White Paper** — links out to the SILO white paper on GitHub (`SILO_WHITEPAPER` const at the top of the page frontmatter).
 - **Companion Technical Note** — links to the internal companion note detailing the internal interoperability layer, published as a [research collection entry](research.md) at `/policy/research/silo-companion-technical-note/` (`SILO_COMPANION_NOTE` const).
 - **Project Q&A** — links to a Q&A covering the problem SILO solves, its audience, roadmap, and how to get involved, published as a [research collection entry](research.md) at `/policy/research/silo-project-qa/` (`SILO_PROJECT_QA` const).
 
 To update any of these links, edit the corresponding `const` at the top of `src/pages/standards/silo/index.astro` and its entry in the `ctas` array passed to `<Hero />`.
+
+The Assembly also has a matching card ("Apply to the SILO Assembly") in the "Get Involved" `CardGrid` further down the page, using the same `SILO_ASSEMBLY_URL` const.
+
+A "Starting with an Assembly" `TextWithImage` section (right after the hero/logo marquee) explains the Assembly process and links to it via the same `SILO_ASSEMBLY_URL` const — mirroring the equivalent section on the SCI for OpenTelemetry page (`src/pages/tools/sci-for-opentelemetry/index.astro`).
+
+### SILO project leadership — TeamGrid
+
+Unlike WDPC and Open19 (which only show a generic "Leading The Charge" recruiting banner with no named chair, or in WDPC's case a single hardcoded plain-text name line), SILO has removed that generic banner in favour of a `TeamGrid` section ("Project *Leadership*", placed just before the "Get Involved" `CardGrid`) that follows the same Notion-driven pattern as SCI and other software standards pages: `siloProject?.leads` (from `projects.json`, populated from an Active "Project Chair" Subscription in Notion linked to the SILO PWCI) supplies `fullName`/`roleLabel`, and `<TeamGrid>` auto-resolves the person's photo, company, and LinkedIn from `people.json` by name. See [People & Team Display](../components/people.md) for how to add/update a project chair in Notion.
 
 ### SCI hero CTAs — Specification, Course, and Guidance
 
