@@ -3,7 +3,7 @@ title: Introducing the Software Water Intensity (SWI) Project
 teaserText: Developing a consistent way to measure and reduce software's water footprint.
 date: 2026-06-10
 published: true
-summary: Developed under the Software Standards Working Group, the project aims to provide a consistent approach for measuring and reducing software's water footprint.
+summary: Launched under the Software Standards Working Group, the project aims to provide a consistent approach for measuring and reducing software's water footprint.
 mainImage: SWE-Announcement-cover.png
 mainImageAlt: Isometric illustration showing a data center stack at the center, with water flowing from its base into a dark blue pool below. Small figures interact with the infrastructure — one examining a document, another observing the environment. Trees and natural elements surround the scene, rendered in green tones. Green Software Foundation logo in the bottom left corner.
 featured: false
@@ -31,37 +31,37 @@ As a result, large data centers can have a substantial water footprint, in some 
 
 Yet the industry has no shared, reliable way to measure software's contribution to water consumption.
 
-> _"The scale at which AI and data centers are consuming water is unprecedented — and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Chair_ 
+> _"The scale at which AI and data centers are consuming water is unprecedented—and the industry has no consistent way to measure it. Developing the Software Water Intensity specification is a direct response to that gap. I am honored to lead this project and to work alongside exceptional researchers and industry practitioners who share the conviction that water-aware software is not only necessary, but achievable."—Yi Ding, Assistant Professor, Purdue University and SWI Project Chair_ 
 
-## **Why This Matters**
+## **Why Measuring Water Impact Matters**
 
 When we began working on the[ Software Carbon Intensity (SCI) specification](https://sci.greensoftware.foundation/), software's carbon footprint was inconsistently measured and rarely discussed in engineering teams. Today,[ SCI is ratified as ISO/IEC 21031:2024](https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status/) and used across the industry to make carbon measurable and reportable, helping organizations identify opportunities for reduction.
 
 While awareness around water footprint is increasing, water measurement is at the same early stage. 
 
-Just by choosing a region where we run our software, organizations can[ change a workload's water footprint dramatically](https://arxiv.org/abs/2506.22773), though today we don’t have a shared way to see that difference. A standard gives organizations and practitioners a consistent approach to measure their footprint, compare options, and make informed choices about where and how their workloads run. 
+Only by choosing a region where to run software can organizations[ change a workload's water footprint dramatically](https://arxiv.org/abs/2506.22773), though today we don’t have a shared way to see that difference. A standard gives organizations and practitioners a consistent approach to measure their footprint, compare options, and make informed choices about where and how their workloads run. 
 
-As regulations including CSRD and disclosure requirements around water and sustainability [are tightening across regions](https://perspectives.se.com/blog-stream/changing-tides-the-future-of-water-risk-disclosure-requirements), and more data center operators begin publishing water data, the industry needs to better understand and respond to the implications of software's water footprint.
+As regulations, including CSRD and disclosure requirements around water and sustainability, [are tightening across regions](https://perspectives.se.com/blog-stream/changing-tides-the-future-of-water-risk-disclosure-requirements), and more data center operators begin publishing water data, the industry needs to be able to better understand and respond to the implications of software's water footprint.
 
 ## **Solution and Scope** 
 
-We’re launching the SWI project within the Software Standards Working Group, building on the same rate-based measurement approach that has helped make SCI a practical framework for reducing software carbon emissions.
+The SWI project, launched under the Software Standards Working Group (SSWG), builds on the same rate-based measurement approach that has helped make SCI a practical framework for reducing software carbon emissions.
 
 Our aim is to develop the SWI specification following the same pattern as the SCI family of standards: a high-level specification that applies to all software, with domain-specific extensions to follow for areas where water consumption presents unique challenges, such as AI and hardware.
 
 > _"A standard earns its credibility through process: open development, genuine expertise, and formal ratification that carries weight well beyond the working group that built it. That discipline defined the SCI specification, and it defines our approach to water. Regulatory oversight of software water consumption is inevitable. When it arrives, the industry will need a standard it can stand behind — and the evidence to show how it was built." — Sean McIlroy, Program Director, Green Software Foundation_
 
-The SWI project is designed for cloud and infrastructure providers, hardware and semiconductor manufacturers, AI platform companies, and organizations facing water disclosure requirements that need a consistent and credible way to measure software's water footprint.
+The SWI project is designed for cloud and infrastructure providers, hardware and semiconductor manufacturers, AI platform companies, and any organization facing water disclosure requirements that needs a consistent and credible method to measure software's water footprint.
 
 ## **How to Contribute** 
 
-The Software Water Intensity project is under the guidance of the Standards Working Group and currently in incubation, open to contributions from member organizations.
+The project is under the guidance of the SSWG and currently in incubation, open to contributions from member organizations.
 
 :::card
 
 ### Already a member?
 
-Subscribe to the Software Water Intensity (SWI) project to get added to the mailing list, receive SWI meeting invites, and get updates on the project progress.
+Subscribe to the project to get added to the mailing list, receive working group meeting invites, and get updates on the progress.
 
 ::button{href="https://wiki.greensoftware.foundation/subscribe-swi" label="Subscribe to the SWI project" variant="primary"}
 
