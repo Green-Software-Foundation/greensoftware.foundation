@@ -44,6 +44,7 @@ const MEMBERSHIP_CTA = "/membership/";
 const SILO_WHITEPAPER = "https://github.com/Green-Software-Foundation/sci-policy-and-legislation-alignment-white-paper-series/blob/main/whitepapers/Interoperability%20Layer%20for%20Real-Time%20Data%20Centre%20Sustainability%20Optimisation.md";
 const SILO_COMPANION_NOTE = "/policy/research/silo-companion-technical-note/";
 const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
+const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for-operations-silo/";
 ---
 
 <Layout
@@ -77,6 +78,7 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
     body="Building on the Green Software Foundation's WDPC standard, SILO defines a common framework for collecting, normalising, and exchanging operational metrics across compute, power, cooling, networking, storage, and facility systems — enabling real-time sustainability optimisation across traditionally siloed domains."
     ctas={[
       { text: "Visit the Directory", variant: "primary", href: "https://directory.greensoftware.foundation/projects/silo/" },
+      { text: "Apply to the Assembly", variant: "outline", href: SILO_ASSEMBLY_URL },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
       { text: "White Paper", variant: "outline", href: SILO_WHITEPAPER },
       { text: "Companion Technical Note", variant: "outline", href: SILO_COMPANION_NOTE },
@@ -398,6 +400,13 @@ const SILO_PROJECT_QA = "/policy/research/silo-project-qa/";
     body="SILO is a path toward standardised, real-time sustainability data. We need diverse perspectives to ensure this standard serves the entire ecosystem."
     columns={3}
     cards={[
+      {
+        icon: "/assets/standards/wdpc/shape-icon-4.svg",
+        title: "Apply to the SILO Assembly",
+        description: "Join the Assembly shaping SILO's requirements and scope",
+        ctaText: "Apply Now",
+        ctaHref: SILO_ASSEMBLY_URL,
+      },
       {
         icon: "/assets/standards/wdpc/shape-icon-1.svg",
         title: "Join the Hardware Standards Working Group (GSF Members Only)",
