@@ -1,10 +1,18 @@
 ---
-title: "Green Software Ingrained in the Corporate Fabric - Meet Savannah Goodman of Google"
+title: Green Software Ingrained in the Corporate Fabric—Meet Savannah Goodman of Google
+teaserText: By 2030, we aim to achieve net-zero emissions across our operations and value chain. We aim to run on carbon-free energy 24/7 on every grid where we operate. In 2022, we matched 64% of our data center and office electricity use with regional carbon-free sources on an hourly basis.
+date: 2023-08-31
 published: true
-date: "2023-08-31"
-summary: "Google has systematically integrated sustainability in its corporate fabric. A great example is Cloud Carbon Footprint. Google gives its cloud customers a tool to understand their carbon emissions related to Google Cloud resources as well as guidance on how to reduce their carbon footprint."
-teaserText: "By 2030, we aim to achieve net-zero emissions across our operations and value chain. We aim to run on carbon-free energy 24/7 on every grid where we operate. In 2022, we matched 64% of our data center and office electricity use with regional carbon-free sources on an hourly basis."
-mainImage: "./main.png"
+summary: Google has systematically integrated sustainability in its corporate fabric. A great example is Cloud Carbon Footprint. Google gives its cloud customers a tool to understand their carbon emissions related to Google Cloud resources as well as guidance on how to reduce their carbon footprint.
+mainImage: ./main.png
+mainImageAlt: ''
+featured: false
+tags: []
+authors: []
+translators: []
+originBlogName: ''
+publishedOriginUrl: ''
+lang: en
 ---
 
 Behind the face of Google is a corporation deeply committed to sustainability. With the mission to organize the world’s information and make it universally accessible and useful, Google engages billions of people every day. Grounded in this mission, they provide individuals, organizations, and governments with quality information to make decisions and build tools to drive positive action for the planet. A profound legacy in research and breakthroughs in AI allow people new ways of accessing information and accelerating innovation needed to tackle climate change.
