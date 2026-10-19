@@ -11,6 +11,7 @@ import TextWithImage from "@/components/text-with-image.astro";
 import TabbedSection from "@/components/tabbed-section.astro";
 import CardGrid from "@/components/card-grid.astro";
 import Timeline from "@/components/timeline.astro";
+import TeamGrid from "@/components/team-grid.astro";
 import CTACard from "@/components/cta-card.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
@@ -407,6 +408,19 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
       </div>
     </div>
   </section>
+
+  <!-- Team (driven from projects.json) -->
+  <TeamGrid
+    heading="Project *Leadership*"
+    body={parentWg ? `Part of the ${parentWg.name}` : ""}
+    columns={siloProject?.leads?.length === 2 ? 2 : 3}
+    highlighted={[]}
+    members={(siloProject?.leads ?? []).map(lead => ({
+      fullName: lead.fullName,
+      role: lead.roleLabel,
+    }))}
+    bgClass="bg-white"
+  />
 
   <!-- Get Involved -->
   <CardGrid

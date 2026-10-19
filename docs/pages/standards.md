@@ -85,6 +85,10 @@ The Assembly also has a matching card ("Apply to the SILO Assembly") in the "Get
 
 A "Starting with an Assembly" `TextWithImage` section (right after the hero/logo marquee) explains the Assembly process and links to it via the same `SILO_ASSEMBLY_URL` const — mirroring the equivalent section on the SCI for OpenTelemetry page (`src/pages/tools/sci-for-opentelemetry/index.astro`).
 
+### SILO project leadership — TeamGrid
+
+Unlike WDPC and Open19 (which only show a generic "Leading The Charge" recruiting banner with no named chair, or in WDPC's case a single hardcoded plain-text name line), SILO also has a `TeamGrid` section ("Project *Leadership*", placed just before the "Get Involved" `CardGrid`) that follows the same Notion-driven pattern as SCI and other software standards pages: `siloProject?.leads` (from `projects.json`, populated from an Active "Project Chair" Subscription in Notion linked to the SILO PWCI) supplies `fullName`/`roleLabel`, and `<TeamGrid>` auto-resolves the person's photo, company, and LinkedIn from `people.json` by name. See [People & Team Display](../components/people.md) for how to add/update a project chair in Notion.
+
 ### SCI hero CTAs — Specification, Course, and Guidance
 
 The SCI page's hero `ctas` array (`src/pages/standards/sci/index.astro`) includes three links:
