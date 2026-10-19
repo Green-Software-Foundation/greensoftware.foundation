@@ -83,6 +83,8 @@ To update any of these links, edit the corresponding `const` at the top of `src/
 
 The Assembly also has a matching card ("Apply to the SILO Assembly") in the "Get Involved" `CardGrid` further down the page, using the same `SILO_ASSEMBLY_URL` const.
 
+A "Starting with an Assembly" `TextWithImage` section (right after the hero/logo marquee) explains the Assembly process and links to it via the same `SILO_ASSEMBLY_URL` const — mirroring the equivalent section on the SCI for OpenTelemetry page (`src/pages/tools/sci-for-opentelemetry/index.astro`).
+
 ### SCI hero CTAs — Specification, Course, and Guidance
 
 The SCI page's hero `ctas` array (`src/pages/standards/sci/index.astro`) includes three links:
