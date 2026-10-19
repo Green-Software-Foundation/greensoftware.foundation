@@ -87,7 +87,7 @@ A "Starting with an Assembly" `TextWithImage` section (right after the hero/logo
 
 ### SILO project leadership — TeamGrid
 
-Unlike WDPC and Open19 (which only show a generic "Leading The Charge" recruiting banner with no named chair, or in WDPC's case a single hardcoded plain-text name line), SILO also has a `TeamGrid` section ("Project *Leadership*", placed just before the "Get Involved" `CardGrid`) that follows the same Notion-driven pattern as SCI and other software standards pages: `siloProject?.leads` (from `projects.json`, populated from an Active "Project Chair" Subscription in Notion linked to the SILO PWCI) supplies `fullName`/`roleLabel`, and `<TeamGrid>` auto-resolves the person's photo, company, and LinkedIn from `people.json` by name. See [People & Team Display](../components/people.md) for how to add/update a project chair in Notion.
+Unlike WDPC and Open19 (which only show a generic "Leading The Charge" recruiting banner with no named chair, or in WDPC's case a single hardcoded plain-text name line), SILO has removed that generic banner in favour of a `TeamGrid` section ("Project *Leadership*", placed just before the "Get Involved" `CardGrid`) that follows the same Notion-driven pattern as SCI and other software standards pages: `siloProject?.leads` (from `projects.json`, populated from an Active "Project Chair" Subscription in Notion linked to the SILO PWCI) supplies `fullName`/`roleLabel`, and `<TeamGrid>` auto-resolves the person's photo, company, and LinkedIn from `people.json` by name. See [People & Team Display](../components/people.md) for how to add/update a project chair in Notion.
 
 ### SCI hero CTAs — Specification, Course, and Guidance
 
