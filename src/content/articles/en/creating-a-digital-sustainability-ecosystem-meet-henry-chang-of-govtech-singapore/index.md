@@ -1,10 +1,18 @@
 ---
-title: "Creating a Digital Sustainability Ecosystem - Meet Henry Chang of GovTech Singapore"
+title: Creating a Digital Sustainability Ecosystem—Meet Henry Chang of GovTech Singapore
+teaserText: Taking small steps toward a smart and sustainable city, GovTech Singapore aims to achieve greener outcomes for Singapore’s digitalization efforts.
+date: 2023-09-19
 published: true
-date: "2023-09-19"
-summary: "GovTech, Singapore’s primary government agency for driving digital transformation across the public sector, plays a pivotal role in ensuring that the move toward a Smart Nation is environmentally sustainable."
-teaserText: "Taking small steps toward a smart and sustainable city, GovTech Singapore aims to achieve greener outcomes for Singapore’s digitalization efforts."
-mainImage: "./main.png"
+summary: GovTech, Singapore’s primary government agency for driving digital transformation across the public sector, plays a pivotal role in ensuring that the move toward a Smart Nation is environmentally sustainable.
+mainImage: ./main.png
+mainImageAlt: ''
+featured: false
+tags: []
+authors: []
+translators: []
+originBlogName: ''
+publishedOriginUrl: ''
+lang: en
 ---
 
 GovTech established its Sustainability Framework and Strategy in 2023 to support the nation’s ambition in becoming a net-zero government around 2045. One key initiative led by GovTech is the consolidation of standalone data centers and the migration of government systems to the cloud. 70% of the eligible government workload will be migrated to the cloud by 2023, bringing about sizable reductions in the Singapore government’s digital carbon footprint.
