@@ -1,10 +1,18 @@
 ---
-title: "Cultivating Sustainability by Design - Meet Natalie Pullin & Tim Smolcic of HSBC"
+title: Cultivating Sustainability by Design—Meet Natalie Pullin & Tim Smolcic of HSBC
+teaserText: '"Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software."'
+date: 2024-07-09
 published: true
-date: "2024-07-09"
-summary: "The GSF new member interview shares why HSBC is embracing green software and choosing to set an example in being carbon-efficient."
-teaserText: "\"Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software.\""
-mainImage: "./main.jpg"
+summary: The GSF new member interview shares why HSBC is embracing green software and choosing to set an example in being carbon-efficient.
+mainImage: ./main.jpg
+mainImageAlt: ''
+featured: false
+tags: []
+authors: []
+translators: []
+originBlogName: ''
+publishedOriginUrl: ''
+lang: en
 ---
 
 Natalie Pullin is the CTO Head of Sustainability at HSBC Technology. ​At HSBC, Natalie leads the effort to embed sustainability by design into technology practices, products, and services and to reach net zero operations by 2030.  In her previous roles as Head of Sustainability Consulting at Fujitsu and Global Sustainability Solutions Lead at Microsoft, she developed strategies that helped organizations turn pledges into progress.
@@ -26,4 +34,4 @@ In recent years, there has been a lack of industry-wide best practices and educa
 
 ## How do you hope to contribute and benefit from the GSF?
 
-At HSBC, we want to give our technology teams tools and resources to learn about green software best practices and patterns and contribute to the GSF's working groups. Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software. 
+At HSBC, we want to give our technology teams tools and resources to learn about green software best practices and patterns and contribute to the GSF's working groups. Our aim is to pioneer, along with the GSF, in co-creating innovations and solutions to benefit the technology industry’s approach to green software.
