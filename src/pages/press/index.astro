@@ -21,7 +21,7 @@ const activeSteeringMembers = (members as any[]).filter((m) => m.active && m.mem
 const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organisationType));
 const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organisationType));
 const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
-const governedBy = activeSteeringMembers.map((m) => m.companyName).join(", ");
+const governedBy = activeSteeringMembers.map((m) => m.companyName).sort((a, b) => a.localeCompare(b)).join(", ");
 
 // Stories with stats for the impact section — hidden for now: the stories are about
 // GSF projects rather than member case studies. Set to true to show again.
@@ -169,8 +169,8 @@ const milestones = [
   </section>
   )}
 
-  <!-- Leadership -->
-  <section class="bg-white py-16 md:py-24">
+  <!-- Leadership (no top padding when stories are hidden — it follows the white boilerplate section directly) -->
+  <section class:list={["bg-white", showImpactStories ? "py-16 md:py-24" : "pb-16 md:pb-24"]}>
     <div class="mx-auto max-w-4xl px-6">
       <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Leadership</h2>
       <p class="text-lg text-primary-dark/70 mb-10">
