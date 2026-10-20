@@ -14,7 +14,7 @@ Press boilerplate, impact stories (currently hidden), leadership, key messages, 
 Computed from `src/data/members.json` at build time:
 
 - Total members = active steering + active general + active academic/government
-- "Governed by" list = active steering member company names
+- "Governed by" list = active steering member company names, sorted alphabetically
 
 ### Leadership photos
 
@@ -34,7 +34,7 @@ These names are matched against `src/data/people.json` to resolve photos, compan
 
 ### Impact stories (currently hidden)
 
-**Hidden** via `const showImpactStories = false;` near the top of the page file. The stories with stats are about GSF projects and standards rather than member case studies, so the "Impact & Member Stories" framing was misleading on a press page. Set the flag to `true` to show the section again (e.g. once genuine member case studies exist).
+**Hidden** via `const showImpactStories = false;` near the top of the page file. The stories with stats are about GSF projects and standards rather than member case studies, so the "Impact & Member Stories" framing was misleading on a press page. Set the flag to `true` to show the section again (e.g. once genuine member case studies exist). The same flag also restores the Leadership section's top padding — while stories are hidden, Leadership drops its top padding so the gap after the white boilerplate section isn't doubled.
 
 Pulled from the stories content collection, filtered to only stories with `stats` data (`s.data.published !== false && !!s.data.stats?.length`). Each card links to the full story page.
 
