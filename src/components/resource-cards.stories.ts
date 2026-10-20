@@ -12,7 +12,7 @@ export const Default = {
       {
         icon: "/assets/standardized-icon.svg",
         title: "Green Software Patterns",
-        description: "A curated online catalog of software patterns reviewed and published by the GSF.",
+        description: "A curated online catalogue of software patterns reviewed and published by the GSF.",
         ctaText: "Browse patterns →",
         ctaHref: "#",
       },

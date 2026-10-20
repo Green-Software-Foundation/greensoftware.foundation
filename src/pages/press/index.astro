@@ -18,8 +18,8 @@ import pressMentions from "@/data/press-mentions.json";
 // Active members only
 const academicGovTypes = ["Academia", "Government"];
 const activeSteeringMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "Steering");
-const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organizationType));
-const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organizationType));
+const activeGeneralMembers = (members as any[]).filter((m) => m.active && m.membershipLevel === "General" && !academicGovTypes.includes(m.organisationType));
+const activeAcademicMembers = (members as any[]).filter((m) => m.active && academicGovTypes.includes(m.organisationType));
 const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
 const governedBy = activeSteeringMembers.map((m) => m.companyName).join(", ");
 

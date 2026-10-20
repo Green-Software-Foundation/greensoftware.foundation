@@ -14,7 +14,7 @@ export const Default = {
       { date: "Mar 2023", description: "<strong>Carbon Hack 22</strong> — Our flagship hackathon attracting teams from around the world.", completed: true },
       { date: "Dec 2024", description: "<strong>SCI for AI Ratified</strong> — Extending the SCI specification to AI and machine learning workloads.", completed: true },
       { date: "2025", description: "<strong>Real-Time Cloud</strong> — Developing a standard for real-time carbon measurement of cloud workloads.", current: true },
-      { date: "Future", description: "<strong>Global Adoption</strong> — Working toward universal adoption of green software standards." },
+      { date: "Future", description: "<strong>Global Adoption</strong> — Working towards universal adoption of green software standards." },
     ],
   },
 };

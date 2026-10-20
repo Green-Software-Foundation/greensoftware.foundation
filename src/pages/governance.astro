@@ -70,8 +70,8 @@ const chairsWithLabels = chairsFiltered
   })
   .sort((a, b) => a.fullName.localeCompare(b.fullName));
 
-// Organization Leads (from organizationalLeads group, populated by fetch script)
-const orgLeadsRaw = teamData.filter(p => p.groups.includes("organizationalLeads"));
+// Organization Leads (from organisationalLeads group, populated by fetch script)
+const orgLeadsRaw = teamData.filter(p => p.groups.includes("organisationalLeads"));
 const orgLeadsList = orgLeadsRaw.map(p => ({
   name: p.fullName,
   company: p.company || "",

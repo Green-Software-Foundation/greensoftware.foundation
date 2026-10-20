@@ -10,7 +10,7 @@ export const Default = {
     headingAccent: "Impact",
     body: "Since our founding in 2021, we've grown into a global force for sustainable software.",
     stats: [
-      { value: "80+", label: "Member organizations" },
+      { value: "80+", label: "Member organisations" },
       { value: "3", label: "ISO-accredited standards" },
       { value: "450K", label: "Podcast downloads" },
       { value: "37", label: "Meetup groups" },

@@ -6,20 +6,20 @@ export default {
 
 export const Default = {
   args: {
-    heading: "ISO-accredited and endorsed by leading technology organizations",
+    heading: "ISO-accredited and endorsed by leading technology organisations",
   },
 };
 
 export const CustomHeading = {
   args: {
-    heading: "Trusted by 80+ member organizations worldwide",
+    heading: "Trusted by 80+ member organisations worldwide",
     bgClass: "bg-white",
   },
 };
 
-export const Grayscale = {
+export const Greyscale = {
   args: {
     heading: "Our members",
-    grayscale: true,
+    greyscale: true,
   },
 };

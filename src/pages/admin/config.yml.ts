@@ -156,11 +156,11 @@ collections:
             name: role
             widget: string
             required: false
-          - label: Organization
+          - label: Organisation
             name: company
             widget: string
             required: false
-          - label: Organization Website
+          - label: Organisation Website
             name: companyWebsite
             widget: string
             required: false
@@ -190,11 +190,11 @@ collections:
             name: role
             widget: string
             required: false
-          - label: Organization
+          - label: Organisation
             name: company
             widget: string
             required: false
-          - label: Organization Website
+          - label: Organisation Website
             name: companyWebsite
             widget: string
             required: false
@@ -359,7 +359,7 @@ collections:
           - label: Name
             name: name
             widget: string
-          - label: Organization
+          - label: Organisation
             name: org
             widget: string
             required: false
@@ -418,7 +418,7 @@ collections:
         direction: Ascending
     thumbnail: mainImage
     description: >
-      Collaborative member stories. Narrative accounts of how organizations
+      Collaborative member stories. Narrative accounts of how organisations
       came together through the foundation to solve a shared problem.
     fields:
       - label: Title
@@ -454,11 +454,11 @@ collections:
         required: false
         hint: "Short heading for the journey/timeline section."
 
-      - label: Organizations
+      - label: Organisations
         name: orgs
         widget: list
         required: false
-        hint: "The member organizations involved in this story."
+        hint: "The member organisations involved in this story."
         fields:
           - label: Name
             name: name
@@ -538,7 +538,7 @@ collections:
           - label: Role
             name: role
             widget: string
-          - label: Organization
+          - label: Organisation
             name: org
             widget: string
           - label: Photo
