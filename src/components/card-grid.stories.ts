@@ -20,7 +20,7 @@ const sampleCards = [
   },
   {
     title: "Green Software Patterns",
-    description: "A curated catalogue of proven patterns for building green software.",
+    description: "A curated catalog of proven patterns for building green software.",
     ctaText: "Browse patterns →",
     ctaHref: "#",
   },

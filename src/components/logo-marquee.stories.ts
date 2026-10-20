@@ -12,14 +12,14 @@ export const Default = {
 
 export const CustomHeading = {
   args: {
-    heading: "Trusted by 80+ member organisations worldwide",
+    heading: "Trusted by 80+ member organizations worldwide",
     bgClass: "bg-white",
   },
 };
 
-export const Greyscale = {
+export const Grayscale = {
   args: {
     heading: "Our members",
-    greyscale: true,
+    grayscale: true,
   },
 };

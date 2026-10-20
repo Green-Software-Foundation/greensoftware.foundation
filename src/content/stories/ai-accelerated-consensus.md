@@ -37,7 +37,7 @@ timeline:
       When the SCI Specification achieved ISO 21031:2024 status, it validated that a
       multi-stakeholder, consensus-driven process could produce a globally recognized
       standard. But even this celebrated achievement had taken over three years from
-      inception. The question became: how do you keep the rigour of consensus while
+      inception. The question became: how do you keep the rigor of consensus while
       compressing the timeline? GSF had 17 active projects. If each required 3+ years
       of traditional consensus-building, the pipeline would be unmanageable.
     source:
@@ -113,7 +113,7 @@ timeline:
 featuredQuote:
   text: >
     Traditional standards processes take years. But regulations aren't waiting, and
-    neither is the technology. We needed a way to keep the rigour of multi-stakeholder
+    neither is the technology. We needed a way to keep the rigor of multi-stakeholder
     consensus while compressing the timeline from years to weeks. AI-facilitated
     consensus gave us that — and now we have a replicable model for every standard
     we develop.
@@ -143,7 +143,7 @@ contributors:
 quotes:
   - text: >
       Traditional standards processes take years. But regulations aren't waiting, and
-      neither is the technology. We needed a way to keep the rigour of multi-stakeholder
+      neither is the technology. We needed a way to keep the rigor of multi-stakeholder
       consensus while compressing the timeline from years to weeks.
     author: Asim Hussain
     role: Executive Director, Green Software Foundation

@@ -7,7 +7,7 @@ export default {
 export const Default = {
   args: {
     heading: "How members are *solving real problems*",
-    body: "Every story starts the same way: an organisation brings us a problem they can't solve alone",
+    body: "Every story starts the same way: an organization brings us a problem they can't solve alone",
     projects: [
       {
         title: "Our engineers don't know how to build green software",
@@ -26,7 +26,7 @@ export const Default = {
       {
         title: "Our pilots work but nothing scales across the org",
         description:
-          "Eight GSF member organisations built SOFT — the first ratified standard for embedding green software practices across an entire organisation.",
+          "Eight GSF member organizations built SOFT — the first ratified standard for embedding green software practices across an entire organization.",
         orgs: [
           { name: "HSBC", logoSrc: "/assets/logos/hsbc.svg" },
           { name: "Microsoft", logoSrc: "/assets/logos/microsoft.svg" },
@@ -50,7 +50,7 @@ export const SingleCard = {
       {
         title: "We can't measure software carbon",
         description:
-          "11 organisations built the Software Carbon Intensity specification into ISO 21031:2024.",
+          "11 organizations built the Software Carbon Intensity specification into ISO 21031:2024.",
         orgs: [
           { name: "Accenture", logoSrc: "/assets/logos/accenture.svg" },
           { name: "UBS", logoSrc: "/assets/logos/ubs.png" },
@@ -70,7 +70,7 @@ export const NoLogos = {
       {
         title: "A project with text only",
         description:
-          "This card has no organisation logos to demonstrate the fallback layout.",
+          "This card has no organization logos to demonstrate the fallback layout.",
         href: "#",
       },
       {

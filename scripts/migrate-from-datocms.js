@@ -829,7 +829,7 @@ async function migrateHomepage() {
   const data = await datocmsQuery(`{
     homepage {
       numberOfIndividuals
-      numberOfOrganisations
+      numberOfOrganizations
       steeringMembers {
         companyName
         companyWebsite
@@ -894,7 +894,7 @@ async function migrateHomepage() {
     JSON.stringify(
       {
         numberOfIndividuals: homepage.numberOfIndividuals,
-        numberOfOrganisations: homepage.numberOfOrganisations,
+        numberOfOrganizations: homepage.numberOfOrganizations,
       },
       null,
       2
@@ -936,7 +936,7 @@ async function migrateTeam() {
     const groups = [];
     if (m.isSteeringCommitteeMember) groups.push("steeringCommittee");
     if (m.isAdministrativeTeamMember) groups.push("administrativeTeam");
-    if (m.isGeneralMember) groups.push("organisationalLeads");
+    if (m.isGeneralMember) groups.push("organizationalLeads");
 
     const entry = {
       fullName: m.fullName,

@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "fetch-notion": "node scripts/fetch-notion-data.cjs",
-    "optimise-svgs": "node scripts/optimise-svgs.mjs",
-    "build": "npm run optimise-svgs && astro build && pagefind --site dist",
-    "build:full": "npm run fetch-notion && npm run optimise-svgs && astro build && pagefind --site dist",
+    "optimize-svgs": "node scripts/optimize-svgs.mjs",
+    "build": "npm run optimize-svgs && astro build && pagefind --site dist",
+    "build:full": "npm run fetch-notion && npm run optimize-svgs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
   },

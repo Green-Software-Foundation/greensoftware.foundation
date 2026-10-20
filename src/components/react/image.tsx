@@ -1,5 +1,5 @@
 /**
- * Optimised image component for React islands.
+ * Optimized image component for React islands.
  *
  * Mirrors the logic of src/components/image.astro — SVGs pass through as plain
  * <img> elements; raster images get a <picture> with AVIF + WebP sources backed

@@ -70,7 +70,7 @@ export default function SearchDialog() {
       try {
         const w = window as unknown as { pagefind?: PagefindAPI };
         if (!w.pagefind) {
-          // Use new Function to create a dynamic import that Vite cannot analyse
+          // Use new Function to create a dynamic import that Vite cannot analyze
           const loadPagefind = new Function(
             "return import('/pagefind/pagefind.js')",
           );

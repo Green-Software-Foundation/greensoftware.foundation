@@ -9,7 +9,7 @@ export const Default = {
     badge: "STANDARDS",
     heading: "SCI Specification",
     tabs: [
-      { value: "problem", heading: "The Problem", description: "Software carbon emissions are invisible. Without a standard way to measure them, organisations can't manage what they can't see." },
+      { value: "problem", heading: "The Problem", description: "Software carbon emissions are invisible. Without a standard way to measure them, organizations can't manage what they can't see." },
       { value: "solution", heading: "The Solution", description: "SCI provides a rate-based score (carbon per unit of work) that enables fair comparison and continuous improvement." },
       { value: "impact", heading: "The Impact", description: "Teams using SCI report 20-40% reductions in software carbon intensity within the first year." },
     ],

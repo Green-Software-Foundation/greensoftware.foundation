@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Optimise all SVGs in public/assets using SVGO.
+ * Optimize all SVGs in public/assets using SVGO.
  * Runs automatically before every build so newly-added SVGs are always compressed.
  */
 import { optimize, loadConfig } from "svgo";
@@ -26,7 +26,7 @@ try {
 
 let totalBefore = 0;
 let totalAfter = 0;
-let optimised = 0;
+let optimized = 0;
 
 for (const file of svgFiles) {
   const input = readFileSync(file, "utf8");
@@ -40,11 +40,11 @@ for (const file of svgFiles) {
 
   if (result.data !== input) {
     writeFileSync(file, result.data);
-    optimised++;
+    optimized++;
   }
 }
 
 const savedKB = ((totalBefore - totalAfter) / 1024).toFixed(1);
 console.log(
-  `✓ SVG optimisation: ${svgFiles.length} files scanned, ${optimised} optimised, ${savedKB} KB saved`
+  `✓ SVG optimisation: ${svgFiles.length} files scanned, ${optimized} optimized, ${savedKB} KB saved`
 );
