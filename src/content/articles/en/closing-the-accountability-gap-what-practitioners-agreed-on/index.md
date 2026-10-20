@@ -131,7 +131,7 @@ GSF is already applying this principle: [the Software Carbon Intensity (SCI) for
 
 ### How we got here: AI-supported consensus process
 
-Consensus is how GSF develops standards. Getting dozens of organizations, from hyperscalers to NGOs, to agree on a standard such as the Software Carbon Intensity (SCI) specification typically takes months, if not years, of deliberation in closed working groups. We've been refining an AI-supported process to do this faster without losing the rigour.
+Consensus is how GSF develops standards. Getting dozens of organizations, from hyperscalers to NGOs, to agree on a standard such as the Software Carbon Intensity (SCI) specification typically takes months, if not years, of deliberation in closed working groups. We've been refining an AI-supported process to do this faster without losing the rigor.
 
 [The Green IO Paris Assembly](https://greensoftware.foundation/articles/the-accountability-gap-who-should-own-software-s-environmental-impact) was the first time we tested this approach outside of GSF membership.
 

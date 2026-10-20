@@ -93,7 +93,7 @@ The benefits for those early adopters extend beyond meeting regulatory requireme
 
 The SCI for AI to EU AI Act whitepaper is the second in a series exploring how our standards align with global regulatory frameworks.
 
-In the first paper, we examine how the Software Carbon Intensity (SCI) specification can support organisations responding to Corporate Sustainability Reporting Directive (CSRD) requirements. 
+In the first paper, we examine how the Software Carbon Intensity (SCI) specification can support organizations responding to Corporate Sustainability Reporting Directive (CSRD) requirements. 
 
 Together, they highlight a broader theme: the growing connection between sustainability standards and regulatory compliance. As governments move from high-level environmental ambitions toward more specific reporting and accountability requirements, practitioners and organizations will increasingly need practical methodologies that translate policy goals into measurable outcomes.
 

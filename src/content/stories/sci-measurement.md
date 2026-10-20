@@ -90,7 +90,7 @@ timeline:
       an internationally recognized standard in under three years. For context, ISO certification
       for a software specification typically takes five to seven years. GSF's consensus-driven
       process, combining open community review with direct enterprise participation, compressed
-      that timeline without compromising rigour. CAST demonstrated that fixing just ten green
+      that timeline without compromising rigor. CAST demonstrated that fixing just ten green
       code deficiencies with four person-days of effort could reduce annual CO₂ emissions by
       an estimated 400 kg and save over 1,000 kWh per year. Autostrade per l'Italia, working
       with CAST, achieved an average of 15.1% CO₂ savings across 60 applications.

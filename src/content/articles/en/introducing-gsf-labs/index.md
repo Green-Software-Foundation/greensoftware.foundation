@@ -58,7 +58,7 @@ To deliver on this vision, we focus on three core areas: standards, policy, and 
 
 Labs is home to implementations that build on GSF standards, including the [SCI](https://sci.greensoftware.foundation/) (ISO/IEC 21031:2024) and SCI for AI specifications. Through the Reference Implementations repository, we aim to demonstrate what applying these standards looks like in practice. 
 
-> “Everything we do at the GSF—standards, education, practitioner enablement, and policy—starts with understanding what practitioners need to put sustainable IT into practice. GSF Labs closes the gap between idea and adoption, letting our community experiment with emerging tools and methodologies before bringing proven approaches into their own organisations.”—Gadhu Sundaram, Chair, Green Software Foundation
+> “Everything we do at the GSF—standards, education, practitioner enablement, and policy—starts with understanding what practitioners need to put sustainable IT into practice. GSF Labs closes the gap between idea and adoption, letting our community experiment with emerging tools and methodologies before bringing proven approaches into their own organizations.”—Gadhu Sundaram, Chair, Green Software Foundation
 
 ## **Next Steps** 
 

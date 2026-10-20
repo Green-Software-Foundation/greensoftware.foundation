@@ -3,7 +3,7 @@
  * Optimise all SVGs in public/assets using SVGO.
  * Runs automatically before every build so newly-added SVGs are always compressed.
  */
-import { optimize, loadConfig } from "svgo";
+import { optimise, loadConfig } from "svgo";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { globSync } from "node:fs";
@@ -30,7 +30,7 @@ let optimised = 0;
 
 for (const file of svgFiles) {
   const input = readFileSync(file, "utf8");
-  const result = optimize(input, {
+  const result = optimise(input, {
     path: file,
     multipass: true,
   });

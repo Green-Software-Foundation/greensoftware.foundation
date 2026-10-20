@@ -27,7 +27,7 @@ Mei-Lian Wei (Emma) is an Assistant Research Fellow in the First Research Divisi
 
 In Taiwan, the government and private sector are actively pursuing a balanced path where economic growth and environmental sustainability advance hand in hand. As a trusted strategic advisor to both policymakers and industry leaders, TIER naturally integrates global and domestic sustainability frameworks into our core research. Environmental sustainability is not an isolated topic for us, but a foundational lens through which we shape future industrial policies and digital transformation. Our [First Research Division](https://english.tier.org.tw/eng_about/intro_div1.aspx), for instance, has led projects in offshore wind deployment, smart transportation systems, and EV infrastructure. 
 
-## **What does green software mean to your organisation?**
+## **What does green software mean to your organization?**
 
 Green software is a highly innovative concept for both TIER and Taiwan’s tech sector. Currently, the environmental impact of digital services is often abstract and difficult to quantify or visualize. For our organization, green software is the key to translating these invisible digital emissions into actionable metrics, enabling us to pioneer green digital transformation in Taiwan.
 

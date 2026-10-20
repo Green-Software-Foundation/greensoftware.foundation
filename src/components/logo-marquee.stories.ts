@@ -6,7 +6,7 @@ export default {
 
 export const Default = {
   args: {
-    heading: "ISO-accredited and endorsed by leading technology organizations",
+    heading: "ISO-accredited and endorsed by leading technology organisations",
   },
 };
 

@@ -64,7 +64,7 @@ As the industry looks ahead, the project plays a central role in translating GSF
 
 We warmly invite organizations from around the world to explore the SOFT Framework, adopt it, and share their feedback. Your input will help us refine and grow its positive impact together.
 
-- [SOFT GitHub documentation](https://github.com/Green-Software-Foundation/SOFT/blob/main/Sustainable-Organisational-Framework-for-Technology.md)
+- [SOFT GitHub documentation](https://github.com/Green-Software-Foundation/SOFT/blob/main/Sustainable-Organizational-Framework-for-Technology.md)
 
 **Join the Community**: Visit [the Green Software Movement platform](https://movement.greensoftware.foundation/share/j53ZQiXvaEmzIVWI?utm_source=manual) to connect with others implementing sustainable frameworks like SOFT and access training resources.
 

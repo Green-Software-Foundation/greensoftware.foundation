@@ -67,7 +67,7 @@ Microsoft has been at the vanguard of system level optimization for years. In th
 
 "The system level optimization includes software that enables effective utilization of the GPUs and networking equipment. Over the past several years, Microsoft has developed software techniques that have grown the ability to train models with tens of trillions of parameters while simultaneously driving down the resource requirements and time to train and serve them in production.” 
 
-Microsoft has also helped develop a framework for measuring software carbon intensity and collaborated with leading universities, the Allen Institute, and Hugging Face to create [a tool that measures the electricity usage](https://techcommunity.microsoft.com/t5/green-tech-blog/charting-the-path-towards-sustainable-ai-with-azure-machine/ba-p/2866923) of machine-learning programs that run on Azure.   
+Microsoft has also helped develop a framework for measuring software carbon intensity and collaborated with leading universities, the Allen Institute, and Hugging Face to create [a tool that measures the electricity usage](https://techcommunity.microsoft.com/t5/green-tech-blog/charting-the-path-toward-sustainable-ai-with-azure-machine/ba-p/2866923) of machine-learning programs that run on Azure.   
 
 “We’ve made advances with [DeepSpeed](https://learn.microsoft.com/en-us/azure/machine-learning/concept-onnx), for training efficiency and [ONNX Runtime](https://learn.microsoft.com/en-us/azure/machine-learning/concept-onnx), which gives high-performance inference support for large Transformer-based models, helping to optimize consumption and latency,” adds Chanezon.
 
