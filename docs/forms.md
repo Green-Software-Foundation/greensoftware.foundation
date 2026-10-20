@@ -45,6 +45,10 @@ To add a new Netlify form:
 5. Deploy to Netlify — the form will be auto-detected on first deploy
 6. Configure the Netlify → Notion integration for the new form in the Netlify dashboard
 
+## Field names are a contract
+
+Input `name` attributes are read by `netlify/functions/submission-created.cjs` (e.g. `data["organisation"]`) and by GA4 event parameters. **Don't rename them** — not even for spelling (UK → US). Change the visible label text instead. Renaming `organisation` → `organization` in October 2026 silently blanked the organisation field on every enquiry and application until it was reverted.
+
 ## GA4 tracking
 
 Both forms fire GA4 events on successful submission:
