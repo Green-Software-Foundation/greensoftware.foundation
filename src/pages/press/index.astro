@@ -23,7 +23,9 @@ const activeAcademicMembers = (members as any[]).filter((m) => m.active && acade
 const totalMembers = activeSteeringMembers.length + activeGeneralMembers.length + activeAcademicMembers.length;
 const governedBy = activeSteeringMembers.map((m) => m.companyName).join(", ");
 
-// Stories with stats for the impact section
+// Stories with stats for the impact section — hidden for now: the stories are about
+// GSF projects rather than member case studies. Set to true to show again.
+const showImpactStories = false;
 const stories = await getCollection("stories", (s) => s.data.published !== false && !!s.data.stats?.length);
 
 // Leadership — configure names here, data pulled from team.json
@@ -130,6 +132,7 @@ const milestones = [
   </section>
 
   <!-- Impact from Stories (dynamic) -->
+  {showImpactStories && (
   <section class="bg-accent-lightest-2 py-16 md:py-24">
     <div class="mx-auto max-w-6xl px-6">
       <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Impact & <span class="text-primary">Member Stories</span></h2>
@@ -164,6 +167,7 @@ const milestones = [
       </div>
     </div>
   </section>
+  )}
 
   <!-- Leadership -->
   <section class="bg-white py-16 md:py-24">
