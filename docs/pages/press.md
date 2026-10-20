@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-Press boilerplate, impact stories, leadership, key messages, timeline, media coverage, and contact details.
+Press boilerplate, impact stories (currently hidden), leadership, key messages, timeline, media coverage, and contact details.
 
 ## Dynamic Elements
 
@@ -32,7 +32,9 @@ These names are matched against `src/data/people.json` to resolve photos, compan
 
 **When leadership changes:** update both the name strings in the code AND ensure the person exists in Notion with a photo.
 
-### Impact stories
+### Impact stories (currently hidden)
+
+**Hidden** via `const showImpactStories = false;` near the top of the page file. The stories with stats are about GSF projects and standards rather than member case studies, so the "Impact & Member Stories" framing was misleading on a press page. Set the flag to `true` to show the section again (e.g. once genuine member case studies exist).
 
 Pulled from the stories content collection, filtered to only stories with `stats` data (`s.data.published !== false && !!s.data.stats?.length`). Each card links to the full story page.
 
