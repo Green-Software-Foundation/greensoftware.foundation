@@ -50,7 +50,7 @@ These three resource dimensions are connected, but distinct, and treating any of
 
 **Energy is the lever.** It’s the dimension that practitioners and architects directly control, but rarely measure. Reducing the tokens reduces the GPU-seconds and reduces the kilowatt-hours. Reasoning models stacked on agentic loops are pushing energy consumption much steeper than the cost curve.
 
-**Carbon is the climate consequence.** A kilowatt-hour from a solar-heavy grid at midday carries a fraction of the carbon of one drawn from coal at night. Where and when an agent runs matters as much as how much energy it consumes. Embodied carbon, the emissions baked into the hardware, is rising rapidly as the industry expands AI data centre capacity.
+**Carbon is the climate consequence.** A kilowatt-hour from a solar-heavy grid at midday carries a fraction of the carbon of one drawn from coal at night. Where and when an agent runs matters as much as how much energy it consumes. Embodied carbon, the emissions baked into the hardware, is rising rapidly as the industry expands AI data center capacity.
 
 **Water is the local impact, and its use by AI is increasingly drawing community attention.** Agentic workloads, with their long execution times and sustained GPU utilization, generate heat that needs cooling. In response, many data centers rely on evaporative cooling, which can consume millions of liters of freshwater per facility per day. Water impact is also place-specific—a liter consumed in a stressed watershed is not interchangeable with a liter elsewhere. The available alternatives are more energy-intensive and increase the carbon cost instead.
 

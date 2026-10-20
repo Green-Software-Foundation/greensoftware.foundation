@@ -50,7 +50,7 @@ This is why all four dimensions matter. Carbon, energy, water, and waste are clo
 
 There is another reason why we need to consider all of these dimensions: cost. Energy is the largest variable operating expense in a modern technology infrastructure. Water restrictions are reshaping where data centers can be built. Hardware costs are rising as accelerator demand outpaces supply. The same engineering decisions that reduce environmental impact also reduce the cost of running modern software. 
 
-> _“Green software, from silicon to screen, marks the Foundation's next chapter—a commitment to measuring and advancing the reduction of the digital value chain's end-to-end resource footprint. This work spans software, infrastructure, networks and data centres and addresses all material impact categories including energy, carbon, water and waste. The standards and community supporting this effort are open, vendor-neutral, and designed to serve the whole industry.”—Gadhu Sundaram, Chair, Green Software Foundation; Vice President, NTT DATA UK_
+> _“Green software, from silicon to screen, marks the Foundation's next chapter—a commitment to measuring and advancing the reduction of the digital value chain's end-to-end resource footprint. This work spans software, infrastructure, networks and data centers and addresses all material impact categories including energy, carbon, water and waste. The standards and community supporting this effort are open, vendor-neutral, and designed to serve the whole industry.”—Gadhu Sundaram, Chair, Green Software Foundation; Vice President, NTT DATA UK_
 
 ## The Technology Stack: Six Layers, From Silicon to Screen
 

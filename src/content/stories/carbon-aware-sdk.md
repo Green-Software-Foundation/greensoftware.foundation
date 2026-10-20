@@ -180,7 +180,7 @@ cta:
   ctaHref: "https://carbon-aware-sdk.greensoftware.foundation"
 ---
 
-In 2021, organizations across the Green Software Foundation knew something frustrating: the electricity grid was cleaner at certain times and in certain places, but their software had no way to respond to that signal. Workloads ran on dirty power even when clean power was available hours later or in a neighbouring region.
+In 2021, organizations across the Green Software Foundation knew something frustrating: the electricity grid was cleaner at certain times and in certain places, but their software had no way to respond to that signal. Workloads ran on dirty power even when clean power was available hours later or in a neighboring region.
 
 Every organization faced the same fragmented landscape. Carbon data came from different providers — WattTime, Electricity Maps — in different formats, with different access methods. Building a carbon-aware application meant each company reinventing the same integration work.
 

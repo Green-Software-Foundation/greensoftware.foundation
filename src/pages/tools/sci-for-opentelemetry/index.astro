@@ -19,7 +19,7 @@ const sciOtelProject = projects.find((p: any) => p.slug === "sci-otel");
 const parentWg = projects.find((p: any) => p.name === sciOtelProject?.parent);
 
 // Notion's lifecycle stage casing doesn't always match the canonical stage
-// names used on /standards/ (e.g. "Pre-draft" vs "Pre-Draft") — normalise for display.
+// names used on /standards/ (e.g. "Pre-draft" vs "Pre-Draft") — normalize for display.
 const lifecycleLabel = sciOtelProject?.lifecycle
   ?.split("-")
   .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -80,7 +80,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
   <!-- The Problem -->
   <TextBlock
     heading="Carbon Has No *Shared Vocabulary* in OpenTelemetry"
-    body="The Software Carbon Intensity (SCI) specification (ISO/IEC 21031:2022) defines a standardised method for measuring the carbon intensity of a software system. Its components — energy consumption, hardware utilisation, and a functional unit — map directly onto concepts that observability practitioners already instrument. But OpenTelemetry has no agreed attribute names or metric definitions for any of them."
+    body="The Software Carbon Intensity (SCI) specification (ISO/IEC 21031:2022) defines a standardized method for measuring the carbon intensity of a software system. Its components — energy consumption, hardware utilization, and a functional unit — map directly onto concepts that observability practitioners already instrument. But OpenTelemetry has no agreed attribute names or metric definitions for any of them."
     bodyExtra={[
       "A previous attempt to address this stalled in 2023 when the primary driver changed roles. This project picks that work back up: starting with a draft set of semantic conventions for the OpenTelemetry Semantic Conventions SIG to review, then building the instrumentation that puts them into practice.",
     ]}
@@ -129,7 +129,7 @@ const lifecycleLabel = sciOtelProject?.lifecycle
       },
       {
         title: "Observability Backend Vendors",
-        description: "Interest from observability backend vendors, to ensure standardised carbon signals are consumable across the ecosystem.",
+        description: "Interest from observability backend vendors, to ensure standardized carbon signals are consumable across the ecosystem.",
       },
     ]}
     bgClass="bg-accent-lightest-2"

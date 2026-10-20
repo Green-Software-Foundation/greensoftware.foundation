@@ -42,8 +42,8 @@ const MEMBERSHIP_CTA = "/membership/";
 ---
 
 <Layout
-  title="Open19 — Open Standard for Data Centre Hardware | Green Software Foundation"
-  description="Open19 standardises rack and server form factors within the 19-inch rack footprint, enabling multi-vendor flexibility, simplified deployment, and sustainable hardware innovation."
+  title="Open19 — Open Standard for Data Center Hardware | Green Software Foundation"
+  description="Open19 standardizes rack and server form factors within the 19-inch rack footprint, enabling multi-vendor flexibility, simplified deployment, and sustainable hardware innovation."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -67,9 +67,9 @@ const MEMBERSHIP_CTA = "/membership/";
       ...(open19Project?.lifecycle ? [{ text: open19Project.lifecycle, variant: "dark" as const }] : []),
     ]}
     heading="Open Standard for"
-    headingAccent="Data Centre Hardware"
-    subtitle="Standardise rack infrastructure, reduce deployment complexity, and enable sustainable hardware innovation across the data centre ecosystem."
-    body="Open19 defines standardised form factors for servers, power delivery, and cooling within any 19-inch rack — enabling plug-and-play hardware from multiple vendors, eliminating cabling complexity, and providing the foundation for next-generation liquid-cooled, high-density compute."
+    headingAccent="Data Center Hardware"
+    subtitle="Standardize rack infrastructure, reduce deployment complexity, and enable sustainable hardware innovation across the data center ecosystem."
+    body="Open19 defines standardized form factors for servers, power delivery, and cooling within any 19-inch rack — enabling plug-and-play hardware from multiple vendors, eliminating cabling complexity, and providing the foundation for next-generation liquid-cooled, high-density compute."
     ctas={[
       { text: "View the Specification", variant: "primary", href: GSF_OPEN19_REPO },
       { text: "Back to Standards", variant: "outline", href: "/standards/" },
@@ -82,13 +82,13 @@ const MEMBERSHIP_CTA = "/membership/";
 
   <!-- Logo Marquee -->
   <LogoMarquee
-    heading="Developed with consensus from GSF member organisations"
+    heading="Developed with consensus from GSF member organizations"
   />
 
   <!-- Plain-English Explainer -->
   <TextBlock
     heading="The Universal Cabinet — and the Standard it Was Missing"
-    body="The 19-inch rack is the near-universal server cabinet format used in data centres around the world. Despite this common physical footprint, servers, power, and cabling have historically been proprietary — meaning hardware from one vendor rarely connects cleanly with gear from another. Open19 fills that gap. Think of it like USB for data centre infrastructure: it defines a common connector contract for power, data, and cooling so that any compliant server brick slides into any compliant rack and works immediately — without bespoke cabling or vendor lock-in."
+    body="The 19-inch rack is the near-universal server cabinet format used in data centers around the world. Despite this common physical footprint, servers, power, and cabling have historically been proprietary — meaning hardware from one vendor rarely connects cleanly with gear from another. Open19 fills that gap. Think of it like USB for data center infrastructure: it defines a common connector contract for power, data, and cooling so that any compliant server brick slides into any compliant rack and works immediately — without bespoke cabling or vendor lock-in."
     bgClass="bg-accent-lightest-2"
   />
 
@@ -99,7 +99,7 @@ const MEMBERSHIP_CTA = "/membership/";
     items={[
       {
         date: "2016",
-        description: "<strong>Born at LinkedIn</strong> — LinkedIn developed and open-sourced the initial Open19 specification — designed to standardise 19-inch rack hardware and reduce deployment complexity at hyperscale.",
+        description: "<strong>Born at LinkedIn</strong> — LinkedIn developed and open-sourced the initial Open19 specification — designed to standardize 19-inch rack hardware and reduce deployment complexity at hyperscale.",
         completed: true,
       },
       {
@@ -129,24 +129,24 @@ const MEMBERSHIP_CTA = "/membership/";
   <!-- What is Open19? -->
   <FeatureGrid
     heading="What is *Open19*?"
-    body="Open19 is an open hardware specification that standardises server, storage, and networking form factors within the universal 19-inch rack footprint — removing proprietary barriers and unlocking a competitive multi-vendor ecosystem. Critically, the specification constrains only the physical envelope, power interfaces, and network connectors — never the internal components — so vendors retain full freedom to differentiate on processors, memory, storage, and GPUs."
+    body="Open19 is an open hardware specification that standardizes server, storage, and networking form factors within the universal 19-inch rack footprint — removing proprietary barriers and unlocking a competitive multi-vendor ecosystem. Critically, the specification constrains only the physical envelope, power interfaces, and network connectors — never the internal components — so vendors retain full freedom to differentiate on processors, memory, storage, and GPUs."
     columns={2}
     variant="bordered"
     features={[
       {
         icon: "/assets/standards/wdpc/standardized-icon.svg",
-        title: "Standardised Brick Form Factors",
-        description: "Server 'bricks' are standardised half-width and full-width modules that slot into any Open19 cage. There are no constraints on internal components — vendors innovate freely on processors, memory, storage, and GPUs within the form factor.",
+        title: "Standardized Brick Form Factors",
+        description: "Server 'bricks' are standardized half-width and full-width modules that slot into any Open19 cage. There are no constraints on internal components — vendors innovate freely on processors, memory, storage, and GPUs within the form factor.",
       },
       {
         icon: "/assets/standards/wdpc/realtime-icon.svg",
         title: "Blind-Mate Connectors",
-        description: "Power and data connections complete automatically on insertion — no rear-of-rack cabling once the cage is installed. Each brick receives 50 GbE networking (with a 200 GbE pathway) via standardised switch modules, making deployment as simple as sliding hardware into a slot.",
+        description: "Power and data connections complete automatically on insertion — no rear-of-rack cabling once the cage is installed. Each brick receives 50 GbE networking (with a 200 GbE pathway) via standardized switch modules, making deployment as simple as sliding hardware into a slot.",
       },
       {
         icon: "/assets/standards/wdpc/grid-stability-icon.svg",
         title: "Modular Power Architecture",
-        description: "Standardised 9.6 kW and 19.2 kW power shelves accept varied AC or DC inputs. V2 introduces native 48V DC distribution, eliminating inefficient voltage conversion stages and reducing energy waste at the infrastructure level.",
+        description: "Standardized 9.6 kW and 19.2 kW power shelves accept varied AC or DC inputs. V2 introduces native 48V DC distribution, eliminating inefficient voltage conversion stages and reducing energy waste at the infrastructure level.",
       },
       {
         icon: "/assets/standards/wdpc/renewable-icon.svg",
@@ -160,7 +160,7 @@ const MEMBERSHIP_CTA = "/membership/";
   <!-- Why Open19 Matters -->
   <TextBlock
     heading="Why *Open19* Matters"
-    body="As data centres face escalating power densities from AI workloads and increasing pressure to operate sustainably, the need for flexible, efficient, open hardware infrastructure has never been greater."
+    body="As data centers face escalating power densities from AI workloads and increasing pressure to operate sustainably, the need for flexible, efficient, open hardware infrastructure has never been greater."
     compact
     bgClass="bg-accent-lightest-2"
   />
@@ -169,7 +169,7 @@ const MEMBERSHIP_CTA = "/membership/";
   <TextWithImage
     heading="Industry"
     headingAccent="Impact"
-    body="The data centre industry has long suffered from proprietary lock-in, complex cabling requirements, and significant labour costs during hardware installation. Open19 addresses these challenges directly: by standardising the physical and electrical interfaces between servers and racks, it enables a competitive multi-vendor ecosystem where operators are not tied to a single supplier. This interoperability accelerates procurement cycles, simplifies maintenance, and allows operators to adopt the best available technology regardless of brand — a foundation for building modern, agile, sustainable infrastructure."
+    body="The data center industry has long suffered from proprietary lock-in, complex cabling requirements, and significant labour costs during hardware installation. Open19 addresses these challenges directly: by standardizing the physical and electrical interfaces between servers and racks, it enables a competitive multi-vendor ecosystem where operators are not tied to a single supplier. This interoperability accelerates procurement cycles, simplifies maintenance, and allows operators to adopt the best available technology regardless of brand — a foundation for building modern, agile, sustainable infrastructure."
     imageSrc="/assets/standards/wdpc/why-wdpc-feat-1.svg"
     imageAlt="Industry impact illustration"
     bgClass="bg-accent-lightest-2"
@@ -185,7 +185,7 @@ const MEMBERSHIP_CTA = "/membership/";
     iconFeatures={[
       {
         icon: "/assets/standards/wdpc/cost-icon.svg",
-        description: '<span class="font-extrabold">Cost Reduction</span> — target 50% reduction in common components such as cables and PDUs through standardised interfaces',
+        description: '<span class="font-extrabold">Cost Reduction</span> — target 50% reduction in common components such as cables and PDUs through standardized interfaces',
       },
       {
         icon: "/assets/standards/wdpc/realtime-icon.svg",
@@ -212,7 +212,7 @@ const MEMBERSHIP_CTA = "/membership/";
   <TextWithImage
     heading="Environmental"
     headingAccent="Impact"
-    body="Open19 is designed with sustainability as a core principle. Native 48V DC power distribution eliminates the efficiency losses associated with multiple voltage conversion stages, directly reducing energy waste. The V2 liquid cooling standard enables rack densities previously requiring custom proprietary solutions, allowing more compute per footprint and reducing the cooling overhead that accounts for a significant share of data centre energy consumption. By standardising these efficiencies, Open19 makes sustainable infrastructure practices accessible to operators of any scale — from edge deployments to hyperscale clouds."
+    body="Open19 is designed with sustainability as a core principle. Native 48V DC power distribution eliminates the efficiency losses associated with multiple voltage conversion stages, directly reducing energy waste. The V2 liquid cooling standard enables rack densities previously requiring custom proprietary solutions, allowing more compute per footprint and reducing the cooling overhead that accounts for a significant share of data center energy consumption. By standardizing these efficiencies, Open19 makes sustainable infrastructure practices accessible to operators of any scale — from edge deployments to hyperscale clouds."
     imageSrc="/assets/standards/wdpc/why-wdpc-feat-3.svg"
     imageAlt="Environmental impact illustration"
     bgClass="bg-accent-lightest-2"
@@ -271,7 +271,7 @@ const MEMBERSHIP_CTA = "/membership/";
   <!-- Platform Building Blocks -->
   <FeatureGrid
     heading="The *Open19* Platform"
-    body="Four standardised building blocks that together eliminate proprietary lock-in and enable multi-vendor innovation at every layer of rack infrastructure."
+    body="Four standardized building blocks that together eliminate proprietary lock-in and enable multi-vendor innovation at every layer of rack infrastructure."
     columns={4}
     variant="cards"
     features={[
@@ -307,9 +307,9 @@ const MEMBERSHIP_CTA = "/membership/";
       {
         imageSrc: "/assets/standards/wdpc/blog-illustration-1.svg",
         icon: "/assets/standards/wdpc/blog-developers-icon.svg",
-        title: "Data Centre Operators",
+        title: "Data Center Operators",
         description: "",
-        bodyHtml: "Open19 transforms your procurement strategy. With standardised interfaces across vendors, you gain true hardware flexibility — source the best brick for each workload without rack redesign.<br/><br/>V2's liquid cooling support prepares your infrastructure for the next wave of compute density, without replacing existing 19-inch rack investments.",
+        bodyHtml: "Open19 transforms your procurement strategy. With standardized interfaces across vendors, you gain true hardware flexibility — source the best brick for each workload without rack redesign.<br/><br/>V2's liquid cooling support prepares your infrastructure for the next wave of compute density, without replacing existing 19-inch rack investments.",
       },
       {
         imageSrc: "/assets/standards/wdpc/blog-illustration-2.svg",
@@ -323,7 +323,7 @@ const MEMBERSHIP_CTA = "/membership/";
         icon: "/assets/standards/wdpc/blog-sustainability-icon.svg",
         title: "Sustainability Teams",
         description: "",
-        bodyHtml: "Open19 turns hardware efficiency from a vendor promise into a verifiable standard. Native 48V power and liquid cooling reduce energy waste at the infrastructure level, giving you a reliable baseline for emissions measurement and reporting.<br/><br/>Standardised efficiency means comparable data across your fleet — essential for credible sustainability disclosures.",
+        bodyHtml: "Open19 turns hardware efficiency from a vendor promise into a verifiable standard. Native 48V power and liquid cooling reduce energy waste at the infrastructure level, giving you a reliable baseline for emissions measurement and reporting.<br/><br/>Standardized efficiency means comparable data across your fleet — essential for credible sustainability disclosures.",
       },
     ]}
     bgClass="bg-accent-lightest-2"
@@ -343,7 +343,7 @@ const MEMBERSHIP_CTA = "/membership/";
             <p class="mt-2 text-xl">Project Leadership</p>
             <Badge className="mt-2">Actively recruiting contributors</Badge>
             <p class="mt-4">
-              We're building this standard with input from data centre operators, hardware vendors, and sustainability experts worldwide. Your expertise can help shape how the industry deploys and manages hardware infrastructure for decades to come.
+              We're building this standard with input from data center operators, hardware vendors, and sustainability experts worldwide. Your expertise can help shape how the industry deploys and manages hardware infrastructure for decades to come.
             </p>
             <div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <a href={GSF_OPEN19_REPO} target="_blank" rel="noopener noreferrer">
@@ -420,7 +420,7 @@ const MEMBERSHIP_CTA = "/membership/";
   <!-- Get Involved -->
   <CardGrid
     heading="Get Involved"
-    body="Open19 thrives on diverse expertise — from data centre operators to hardware engineers to sustainability practitioners. Help shape the open hardware standard for sustainable infrastructure."
+    body="Open19 thrives on diverse expertise — from data center operators to hardware engineers to sustainability practitioners. Help shape the open hardware standard for sustainable infrastructure."
     columns={3}
     cards={[
       {

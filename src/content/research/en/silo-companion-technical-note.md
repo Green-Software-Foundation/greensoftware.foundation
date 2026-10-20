@@ -12,9 +12,9 @@ tags: ["silo", "hardware-standards"]
 
 ## Purpose
 
-The white paper *Bridging the Sustainability Gap* describes an open specification that enables data centres to receive real-time grid signals and optimise their operation based on sustainability objectives.
+The white paper *Bridging the Sustainability Gap* describes an open specification that enables data centers to receive real-time grid signals and optimize their operation based on sustainability objectives.
 
-This companion note clarifies the role of the internal interoperability layer described in the original technical proposal. The white paper focuses on the external interface between the data centre and the grid, while the technical proposal defines the internal semantics and interoperability capabilities that make those interactions practical in heterogeneous, multi-vendor environments.
+This companion note clarifies the role of the internal interoperability layer described in the original technical proposal. The white paper focuses on the external interface between the data center and the grid, while the technical proposal defines the internal semantics and interoperability capabilities that make those interactions practical in heterogeneous, multi-vendor environments.
 
 ## Architecture
 
