@@ -24,7 +24,7 @@ Three leaders are configured at the top of the file (lines 30–34):
 const leadershipConfig = [
   { name: "Gadhu Sundaram", title: "Chairperson" },
   { name: "Jonathan Turnbull", title: "Vice-Chairperson" },
-  { name: "Asim Hussain", title: "Executive Director" },
+  { name: "Navveen Balani", title: "Executive Director" },
 ];
 ```
 
