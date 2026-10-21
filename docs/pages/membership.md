@@ -45,7 +45,7 @@ Clicks on membership enquiry mailto links fire a `membership_enquiry` GA4 event 
 
 ## Static Elements
 
-- **Hero** — heading, "Book a discussion" CTA, plus two outline buttons for the membership agreement: "View agreement" (links to the [charter repo](https://github.com/Green-Software-Foundation/charter/blob/main/GSF-5.0.1-Membership-agreement-v3.pdf), opens in a new tab) and "Download agreement (PDF)" (self-hosted copy at `public/assets/membership/gsf-membership-agreement-v3.pdf`)
+- **Hero** — heading, "Book a discussion" CTA, plus two outline buttons grouped under a small "Membership agreement:" label: "View on GitHub" (links to the [charter repo](https://github.com/Green-Software-Foundation/charter/blob/main/GSF-5.0.1-Membership-agreement-v3.pdf), opens in a new tab) and "Download PDF" (self-hosted copy at `public/assets/membership/gsf-membership-agreement-v3.pdf`)
 - **TextBlock** — "Members bring their hardest problems"
 - **Steering proposition** — TextWithImage
 - **Contact section** — dark banner with email
