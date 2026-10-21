@@ -17,7 +17,7 @@ publishedOriginUrl: ''
 lang: en
 ---
 
-_Photo: Clara Lacasse_
+<p class="text-sm text-gray-darker italic">Photo: Clara Lacasse</p>
 
 Boris is an AI sustainability engineer focused on turning research into action inside organizations and is a co-founder and CEO of Sustainable AI Group. 
 
