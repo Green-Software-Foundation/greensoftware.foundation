@@ -17,6 +17,8 @@ publishedOriginUrl: ''
 lang: en
 ---
 
+_Photo: Clara Lacasse_
+
 Boris is an AI sustainability engineer focused on turning research into action inside organizations and is a co-founder and CEO of Sustainable AI Group. 
 
 Previously, he served as Head of AI Sustainability at Salesforce, where he built the company's AI sustainability strategy from the ground up and co-created the [AI Energy Score](https://huggingface.co/spaces/AIEnergyScore/Leaderboard). 
