@@ -83,7 +83,7 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
       { text: "Companion Technical Note", variant: "outline", href: SILO_COMPANION_NOTE },
       { text: "Project Q&A", variant: "outline", href: SILO_PROJECT_QA },
     ]}
-    imageSrc="/assets/standards/wdpc/hero-illustration.svg"
+    imageSrc="/assets/hero-silo.webp"
     imageAlt="SILO illustration"
     bgClass="bg-accent-lightest-2"
     id="overview"
@@ -93,6 +93,12 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
   <LogoMarquee
     heading="Developed with consensus from GSF member organizations"
   />
+
+  <div class="bg-white">
+    <div class="container">
+      <hr class="border-t border-accent-lighter" />
+    </div>
+  </div>
 
   <!-- Starting with an Assembly -->
   <TextWithImage
@@ -152,7 +158,7 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
     heading="Industry"
     headingAccent="Impact"
     body="By providing standardized data models, interfaces, and semantic definitions, SILO enables consistent visibility into the real-time state of both IT workloads and physical infrastructure. It serves as a vendor-neutral foundation for integrating telemetry from diverse hardware and software environments — letting data center operators, management platforms, and optimization engines consume and share information through a common interface."
-    imageSrc="/assets/standards/wdpc/why-wdpc-feat-1.svg"
+    imageSrc="/assets/industry-impact-hardware.webp"
     imageAlt="Industry impact illustration"
     bgClass="bg-accent-lightest-2"
   />
@@ -161,41 +167,26 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
   <TextWithImage
     heading="Business"
     headingAccent="Benefits"
-    imageSrc="/assets/standards/wdpc/why-wdpc-feat-2.svg"
+    imageSrc="/assets/business-benefit.webp"
     imageAlt="Business benefits illustration"
     reversed
-    iconFeatures={[
-      {
-        icon: "/assets/standards/wdpc/grid-stability-icon.svg",
-        description: '<span class="font-extrabold">Adaptive Cooling</span> coordinates thermal response to real-time workload and environmental signals',
-      },
-      {
-        icon: "/assets/standards/wdpc/realtime-icon.svg",
-        description: '<span class="font-extrabold">Dynamic Workload Placement</span> routes compute to where power, cooling, and carbon conditions are most favourable',
-      },
-      {
-        icon: "/assets/standards/wdpc/infra-icon.svg",
-        description: '<span class="font-extrabold">Predictive Maintenance</span> surfaces early warning signals across facility and IT systems',
-      },
-      {
-        icon: "/assets/standards/wdpc/heat-icon.svg",
-        description: '<span class="font-extrabold">Heat Reuse Optimization</span> coordinates waste heat delivery to district heating and other reuse pathways',
-      },
-      {
-        icon: "/assets/standards/wdpc/co2-icon.svg",
-        description: '<span class="font-extrabold">Automated Sustainability Reporting</span> standardizes PUE, WUE, CUE, and emissions reporting across vendors',
-      },
-    ]}
-    iconFeaturesBgIcon="/assets/standards/wdpc/icon-bg.svg"
     bgClass="bg-accent-lightest-2"
-  />
+  >
+    <ul class="mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-primary-dark marker:text-primary">
+      <li><span class="font-extrabold">Adaptive Cooling</span> coordinates thermal response to real-time workload and environmental signals</li>
+      <li><span class="font-extrabold">Dynamic Workload Placement</span> routes compute to where power, cooling, and carbon conditions are most favourable</li>
+      <li><span class="font-extrabold">Predictive Maintenance</span> surfaces early warning signals across facility and IT systems</li>
+      <li><span class="font-extrabold">Heat Reuse Optimization</span> coordinates waste heat delivery to district heating and other reuse pathways</li>
+      <li><span class="font-extrabold">Automated Sustainability Reporting</span> standardizes PUE, WUE, CUE, and emissions reporting across vendors</li>
+    </ul>
+  </TextWithImage>
 
   <!-- Environmental Impact -->
   <TextWithImage
     heading="Environmental"
     headingAccent="Impact"
     body="SILO supports standardized measurement and reporting of sustainability metrics including Power Usage Effectiveness (PUE), Water Usage Effectiveness (WUE), Carbon Usage Effectiveness (CUE), energy consumption, water consumption, and associated carbon emissions. Success is evaluated based on the availability, consistency, and interoperability of these metrics across participating systems — enabling organizations to quantify operational improvements and sustainability outcomes over time."
-    imageSrc="/assets/standards/wdpc/why-wdpc-feat-3.svg"
+    imageSrc="/assets/environmental-impact.webp"
     imageAlt="Environmental impact illustration"
     bgClass="bg-accent-lightest-2"
   />
@@ -280,21 +271,21 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
     columns={3}
     cards={[
       {
-        imageSrc: "/assets/standards/wdpc/blog-illustration-1.svg",
+        imageSrc: "/assets/dev-operator-practitioner.webp",
         icon: "/assets/standards/wdpc/blog-developers-icon.svg",
         title: "Data Center Operators",
         description: "",
         bodyHtml: "SILO gives you standardized, real-time visibility across compute, power, cooling, and facility systems — enabling adaptive cooling, dynamic workload placement, and predictive maintenance without bespoke integrations per vendor.<br/><br/>Consistent metrics mean comparable data across your fleet.",
       },
       {
-        imageSrc: "/assets/standards/wdpc/blog-illustration-2.svg",
+        imageSrc: "/assets/business-vendor-stats.webp",
         icon: "/assets/standards/wdpc/blog-business-icon.svg",
         title: "Software & Platform Vendors",
         description: "",
         bodyHtml: "SILO's standardized APIs and semantic models let you build optimization engines and management platforms that work across heterogeneous infrastructure — without writing custom integrations for every vendor's telemetry format.<br/><br/>Build once against a common interface, deploy anywhere.",
       },
       {
-        imageSrc: "/assets/standards/wdpc/blog-illustration-3.svg",
+        imageSrc: "/assets/sustainability-teams.webp",
         icon: "/assets/standards/wdpc/blog-sustainability-icon.svg",
         title: "Sustainability Teams",
         description: "",
@@ -325,13 +316,12 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
       <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Dive Deeper</h2>
       <div class="mt-8 grid grid-cols-1 items-center justify-center gap-12 md:mt-10 lg:grid-cols-2 lg:gap-x-20">
         <div class="order-2 flex w-full items-center justify-center md:order-1 lg:justify-start">
-          <img src="/assets/standards/wdpc/dive-illustration.svg" class="object-cover" />
+          <img src="/assets/dive-deeper.webp" alt="Dive deeper illustration" class="object-cover" />
         </div>
         <div class="order-1 md:order-2">
           <div class="grid grid-cols-1">
             {[
               {
-                icon: "/assets/standards/wdpc/dive-icon-1.svg",
                 title: "Contribute to the Project",
                 description: "Work on the SILO codebase — open issues, submit PRs, and collaborate on the specification.",
                 buttonLink: GSF_SILO_REPO,
@@ -339,7 +329,6 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
                 badge: "GSF Members Only",
               },
               {
-                icon: "/assets/standards/wdpc/dive-icon-2.svg",
                 title: "Shape the Specification",
                 description: "Review the SILO proposal and data models; propose changes and provide technical feedback.",
                 buttonLink: GSF_SILO_REPO,
@@ -347,7 +336,6 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
                 badge: "GSF Members Only",
               },
               {
-                icon: "/assets/standards/wdpc/dive-icon-4.svg",
                 title: "Hardware Standards WG",
                 description: "Join the working group overseeing SILO, WDPC, and other hardware sustainability standards.",
                 buttonLink: HARDWARE_WG,
@@ -356,14 +344,9 @@ const SILO_ASSEMBLY_URL = "/assemblies/sustainability-interoperability-layer-for
               },
             ].map((feature) => (
               <div class="flex flex-col items-start justify-start border-b border-primary-light/50 py-4 last:border-b-0">
-                <div class="flex w-full items-center justify-start">
-                  <div class="flex w-full items-center justify-center gap-3">
-                    <img src={feature.icon} alt="" class="h-8 w-auto" />
-                    <div class="flex w-full flex-wrap items-center justify-between gap-1">
-                      <h3 class="text-xl font-bold text-primary">{feature.title}</h3>
-                      {feature.badge && <Badge>{feature.badge}</Badge>}
-                    </div>
-                  </div>
+                <div class="flex w-full flex-wrap items-center justify-between gap-1">
+                  <h3 class="text-xl font-bold text-primary">{feature.title}</h3>
+                  {feature.badge && <Badge>{feature.badge}</Badge>}
                 </div>
                 <p class="mt-2">{feature.description}</p>
                 <a href={feature.buttonLink} target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center text-sm font-bold text-primary hover:underline md:mt-4">
