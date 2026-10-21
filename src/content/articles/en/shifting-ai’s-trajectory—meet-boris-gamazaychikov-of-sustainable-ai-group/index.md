@@ -33,7 +33,7 @@ We were founded in May 2026 by Dr. Sasha Luccioni, a former Hugging Face researc
 
 Environmental sustainability is fundamental to the work we do. For example, we recently launched [CLEER](https://sustainableaigroup.com/cleerlaunch) (Closed-model Latent Energy Estimation Range), our research-based approach to estimate the energy and emissions of closed AI models. We published it alongside a [technical report](https://reports.sustainableaigroup.com/CLEER-Tech-Report/) that dives deeper into the methodology. 
 
-Our recent work also includes initiatives to [estimate the energy footprint of AI video generation](https://sustainableaigroup.com/video) and a [course](https://www.linkedin.com/learning/smarter-ways-to-use-ai-at-work-cut-costs-carbon-and-complexity) explaining how to use AI to reduce its cost and carbon impact. 
+Our recent work also includes initiatives to [estimate the energy footprint of AI video generation](https://sustainableaigroup.com/video) and a [course](https://www.linkedin.com/learning/smarter-ways-to-use-ai-at-work-cut-costs-carbon-and-complexity) explaining how to use AI while cutting its cost and carbon impact. 
 
 We are also hosting a [webinar](https://luma.com/n1t2a7dg) on November 4 on the CLEER approach for those who would like to learn more.
 
