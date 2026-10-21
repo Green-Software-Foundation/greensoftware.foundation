@@ -45,7 +45,7 @@ Clicks on membership enquiry mailto links fire a `membership_enquiry` GA4 event 
 
 ## Static Elements
 
-- **Hero** — heading, CTA (mailto link)
+- **Hero** — heading, "Book a discussion" CTA, plus two outline buttons for the membership agreement: "View on GitHub" (links to the [charter repo](https://github.com/Green-Software-Foundation/charter/blob/main/GSF-5.0.1-Membership-agreement-v3.pdf), opens in a new tab) and "Download PDF" (self-hosted copy at `public/assets/membership/gsf-membership-agreement-v3.pdf`)
 - **TextBlock** — "Members bring their hardest problems"
 - **Steering proposition** — TextWithImage
 - **Contact section** — dark banner with email
@@ -64,5 +64,6 @@ Clicks on membership enquiry mailto links fire a `membership_enquiry` GA4 event 
 | Add/change member stories | Edit the `ProjectCards` props in `membership/index.astro` |
 | Update steering benefits | Edit the FeatureGrid in `membership/index.astro` |
 | Change contact email | Edit the mailto link (currently `help@greensoftware.foundation`) |
+| Update membership agreement | Replace `public/assets/membership/gsf-membership-agreement-v3.pdf` with the latest PDF from the [charter repo](https://github.com/Green-Software-Foundation/charter). If the filename changes there, update both hero button links in `membership/index.astro` |
 | Update apply screenshots | Replace PNGs in `public/assets/membership/` |
 | Update apply page copy | Edit `membership/apply.astro` |

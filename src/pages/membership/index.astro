@@ -53,12 +53,27 @@ const resolveOrgs = (names: string[]) =>
   />
   <!-- Custom double-height CTA below hero body — sits inside the hero bg -->
   <div class="bg-accent-lightest-2 -mt-20 pb-12 md:-mt-28 md:pb-16 lg:-mt-32">
-    <div class="container">
+    <div class="container flex flex-wrap gap-4">
       <a
         href="/membership/enquire/"
         class="inline-flex items-center rounded-lg bg-primary px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-primary-dark"
       >
         Book a discussion
+      </a>
+      <a
+        href="https://github.com/Green-Software-Foundation/charter/blob/main/GSF-5.0.1-Membership-agreement-v3.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center rounded-lg border border-primary px-8 py-3.5 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-white"
+      >
+        View on GitHub
+      </a>
+      <a
+        href="/assets/membership/gsf-membership-agreement-v3.pdf"
+        download
+        class="inline-flex items-center rounded-lg border border-primary px-8 py-3.5 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-white"
+      >
+        Download PDF
       </a>
     </div>
   </div>
