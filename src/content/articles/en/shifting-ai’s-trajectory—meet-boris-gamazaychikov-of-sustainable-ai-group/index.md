@@ -3,7 +3,7 @@ title: Shifting AI’s Trajectory—Meet Boris Gamazaychikov of Sustainable AI G
 teaserText: Turning AI sustainability research into action.
 date: 2026-10-21
 published: true
-summary: Join us in welcoming Sustainable AI Group to the GSF. Learn how they aim to help organizations measure and manage AI's environmental impacts.
+summary: Join us in welcoming Sustainable AI Group to the GSF. Learn how joining the Foundation aligns with their goal of helping organizations push the tech sector towards sustainability.
 mainImage: Sustainable-AI-Group-Q&A (1).png
 mainImageAlt: 'Quote card with a black-and-white portrait of Boris Gamazaychikov on a dark green background. The quote reads: “Digital infrastructure (including software and AI) has the potential to be a net environmental benefit to the world. But first we need to be upfront about understanding and reducing its real, physical impacts.” Attributed to Boris Gamazaychikov, Co-Founder and CEO of Sustainable AI Group, with the Green Software Foundation and Sustainable AI Group logos below.'
 featured: true
