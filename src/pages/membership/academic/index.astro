@@ -1,0 +1,1080 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
+import LogoMarquee from "@/components/logo-marquee.astro";
+import Footer from "@/components/footer.astro";
+import Testimonial from "@/components/testimonial.astro";
+
+import membersData from "@/data/members.json";
+const academicLogos = (membersData as any[])
+  .filter((m: any) => m.active && m.logo && !m.hideLogo && m.organisationType === "Academia")
+  .sort((a: any, b: any) => a.companyName.localeCompare(b.companyName))
+  .map((m: any) => ({
+    name: m.companyName,
+    logo: `/assets/${m.logo}`,
+    website: m.companyWebsite || "greensoftware.foundation",
+  }));
+
+const heroBody = `If your institution is working on software sustainability, AI energy footprint, or digital environmental methodology — there are <strong class="font-extrabold text-primary">GSF members actively looking for what you are building</strong>. Submit your proposal for consideration.`;
+
+const workingOnCards = [
+  {
+    title: "AI Workload Carbon Quantification",
+    description:
+      "The SCI for AI standard (ratified December 2025) is the first consensus-based methodology for measuring the carbon footprint of AI systems across six lifecycle stages — training, fine-tuning, inference, storage, transmission, and end-of-life. GSF members need independent academic input to validate training-versus-inference carbon apportionment, embodied carbon in AI hardware, and optimisation of long-running workloads.",
+    icon: "/assets/realtime-icon.svg",
+    link: "/standards/sci-ai/",
+    linkText: "About SCI for AI",
+  },
+  {
+    title: "Carbon-Aware Scheduling Methodology",
+    description:
+      "Carbon-aware scheduling shifts computational workloads to times and locations where electricity grids are running on lower-carbon sources. A UCL research project presented to the GSF Steering Committee in April 2026 demonstrated 44–56% carbon savings through temporal and spatial scheduling — a result that directly informed active work on GSF standards.",
+    icon: "/assets/co2-icon.svg",
+  },
+  {
+    title: "SCI Methodology Validation",
+    description:
+      "The Software Carbon Intensity standard (ISO/IEC 21031:2024) is the only ISO-certified metric for measuring the carbon footprint of software systems. Under CSRD Scope 3 reporting requirements, independent academic validation of SCI measurement approaches carries regulatory and procurement weight that industry-produced documentation cannot provide — giving academic researchers a direct route to policy-relevant impact.",
+    icon: "/assets/standardized-icon.svg",
+    link: "/standards/sci/",
+    linkText: "About the SCI Standard",
+  },
+  {
+    title: "Data Centre Water & Energy Baseline Standards",
+    description:
+      "The WDPC standard addresses measurement of power, cooling, and water consumption in data centres. Establishing defensible measurement baselines for water and energy use across hyperscale and edge infrastructure is an active research need — particularly as EU and national regulations introduce mandatory environmental reporting for digital infrastructure operators.",
+    icon: "/assets/shape-icon-1.svg",
+    link: "/standards/wdpc/",
+    linkText: "About the WDPC Standard",
+  },
+  {
+    title: "SCI for Web",
+    description:
+      "SCI for Web is an early-stage specification extending Software Carbon Intensity methodology to web-based software systems — addressing client-side rendering, CDN energy use, and carbon measurement across distributed web architectures. Because the standard is still in development, academic input into its design foundations is actively sought.",
+    icon: "/assets/shape-icon-2.svg",
+    link: "/standards/sci-web/",
+    linkText: "About SCI for Web",
+  },
+  {
+    title: "Your Research. Your Vision.",
+    description:
+      "GSF members are actively looking for research that addresses unsolved green software problems. If your institution is working in this field and you don't see your area above, tell us about it — we welcome proposals, ideas, and white papers on any aspect of software sustainability.",
+    icon: "/assets/shape-icon-2.svg",
+    link: "#submission-form",
+    linkText: "Submit Your Idea",
+    cta: true,
+  },
+];
+
+const engagementForms = [
+  {
+    title: "Co-authorship",
+    body: "On white papers and technical guidance aligned with GSF standards — research that reaches the organisations implementing it, not only those reading it.",
+    buttonText: "Published Papers",
+    buttonHref: "https://greensoftware.foundation/policy/research/",
+  },
+  {
+    title: "Assembly participation",
+    body: "Via GSF's Harmony platform — the AI-facilitated consensus mechanism through which standards are shaped from blank-page problem statement to ratified specification. Academic voices participate in the process, not just the output.",
+    buttonText: "About GSF Assemblies",
+    buttonHref: "https://greensoftware.foundation/assemblies/",
+  },
+  {
+    title: "Structured introductions",
+    body: "To specific GSF member organisations where a research project aligns with an active member challenge — subject to Policy Working Group review and approval.",
+    buttonText: "GSF Membership Governance",
+    buttonHref: "https://greensoftware.foundation/governance/",
+  },
+  {
+    title: "Named researcher recognition",
+    body: "In GSF publications and communications — providing evidence of real-world impact, a publication route, and a named industry partner.",
+    buttonText: "Published Papers",
+    buttonHref: "https://greensoftware.foundation/policy/research/",
+  },
+  {
+    title: "Hackathon & event participation",
+    body: "Including the annual Carbon Hack, providing applied research opportunities with direct industry involvement.",
+    buttonText: "GSF Past Hackathons",
+    buttonHref: "https://hack.greensoftware.foundation/",
+  },
+  {
+    title: "Formal academic membership",
+    body: "Available at no cost as the collaboration matures and alignment with GSF's mission is established.",
+    buttonText: "Submit your interest",
+    buttonHref: "#submission-form",
+  },
+];
+
+const softwareStandards = [
+  {
+    title: "Software Carbon Intensity (SCI)",
+    status: "Published · ISO/IEC 21031:2024",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Measures carbon intensity of software as a rate per unit of work. The only ISO-certified metric for software carbon — the foundation for all downstream SCI extensions and the primary metric referenced in CSRD Scope 3 reporting.",
+    link: "/standards/sci/",
+    linkText: "About the SCI Standard",
+  },
+  {
+    title: "SCI for Artificial Intelligence",
+    status: "Ratified · Dec 2025",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Extends SCI to cover AI systems across the full lifecycle — training, fine-tuning, inference, storage, transmission, and end-of-life. Directly addresses the gap in existing corporate AI emissions reporting. A UCL carbon-aware scheduler project, presented to the GSF Steering Committee in April 2026, demonstrated 44–56% carbon savings.",
+    link: "/standards/sci-ai/",
+    linkText: "About SCI for AI",
+  },
+  {
+    title: "SCI for Web",
+    status: "Draft",
+    statusColor: "bg-yellow-100 text-yellow-800",
+    description:
+      "Extends SCI to web applications and digital services. Developed via AI-accelerated consensus process — 14 experts, 15 organisations, full agreement in 10 weeks. An early-stage specification where academic input into design foundations and client-side measurement methodology is directly relevant.",
+    link: "/standards/sci-web/",
+    linkText: "About SCI for Web",
+  },
+  {
+    title: "Sustainable Organisational Framework for Technology (SOFT)",
+    status: "Ratified · Nov 2025",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "The first ratified standard for embedding green software practice across an entire organisation — not just individual projects. Addresses the endemic problem of green pilots that never scale. Active research need: implementation case studies; CSRD compliance pathway analysis; sector-specific adaptation frameworks.",
+    link: "/standards/soft/",
+    linkText: "About the SOFT Framework",
+  },
+  {
+    title: "Real Time Energy and Carbon Standard for Cloud (RTC)",
+    status: "Published",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Establishes a benchmark for real-time carbon and energy reporting by cloud providers. Underpins demand-side carbon-aware computing and directly feeds into the Carbon Aware SDK. Active research need: granular grid carbon intensity data integration; provider compliance benchmarking.",
+    link: "/standards/rtc/",
+    linkText: "About the RTC Standard",
+  },
+  {
+    title: "Software Energy Efficiency (SEE)",
+    status: "Pre-Draft",
+    statusColor: "bg-orange-100 text-orange-700",
+    description:
+      "Methodology for calculating the energy consumption rate of a software system. Earlier in the specification lifecycle — an active research area where foundational academic input can directly shape the standard's direction. Not yet ratified.",
+    link: "/standards/see/",
+    linkText: "About SEE",
+  },
+  {
+    title: "Software Water Efficiency (SWE)",
+    status: "Pre-Proposal",
+    statusColor: "bg-gray-100 text-gray-600",
+    description:
+      "Methodology for calculating the water consumption rate of a software system. At the earliest lifecycle stage — signals GSF's forward research agenda into water as a resource constraint alongside carbon and energy. Academic research proposals in this area are particularly welcome.",
+  },
+];
+
+const hardwareStandards = [
+  {
+    title: "Workload Dynamic Power and Cooling (WDPC)",
+    status: "Approved",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Standardises data coordination between computational workloads and energy and cooling infrastructure. Critical for data centre operators optimising at the hardware–software boundary, and underpins defensible measurement baselines for EU mandatory environmental reporting.",
+    link: "/standards/wdpc/",
+    linkText: "About the WDPC Standard",
+  },
+  {
+    title: "Open19",
+    status: "Published",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "Open hardware specification standardising server, storage, and networking form factors within the 19-inch rack footprint. Features 48V DC native power architecture, modular design, and pluggable liquid cooling — enabling multi-vendor flexibility and sustainable hardware innovation.",
+    link: "/standards/open19/",
+    linkText: "About Open19",
+  },
+  {
+    title: "Software Carbon Intensity for Circularity (SCI-C)",
+    status: "In Progress",
+    statusColor: "bg-primary/10 text-primary",
+    description:
+      "SCI-C is the first standard to create a direct, measurable link between software release decisions and hardware retirement at scale. For any organisation with a large device fleet, a data centre footprint, or EU regulatory exposure on circularity — under CSRD, the Circular Economy Action Plan, and right-to-repair legislation — this is a standard they will want to have shaped from the inside rather than inherited from outside.",
+    link: "#submission-form",
+    linkText: "We welcome your submission or ideas",
+  },
+];
+
+const crossCuttingAreas = [
+  {
+    title: "Reducing Carbon in the Gaming Industry",
+    assemblyName: "SCI for Games",
+    description:
+      "The gaming industry is one of the largest and fastest-growing software sectors by energy consumption, yet no standardised methodology exists for measuring its carbon intensity. This GSF Assembly, developed in partnership with the Sustainable Games Alliance, is working to extend SCI to cover game software — defining the measurement boundaries, functional units, and data sources that reflect how games are developed, distributed, and played.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
+  },
+  {
+    title: "Making Carbon a First-Class Signal in Software Observability",
+    assemblyName: "SCI for OpenTelemetry",
+    description:
+      "Engineering teams routinely instrument software with observability tooling to monitor performance and reliability — but carbon intensity is absent from those signals. This assembly is developing a methodology to integrate SCI measurement directly into OpenTelemetry tooling, enabling teams to surface carbon data alongside latency and error rates within their existing observability stacks.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
+  },
+  {
+    title: "Measuring Software Carbon Across the Vehicle Lifecycle",
+    assemblyName: "SCI for Automotive",
+    description:
+      "Software in modern vehicles spans a wide range of systems — from embedded control units to cloud-connected services — yet no standard methodology exists for measuring its carbon intensity across the full vehicle lifecycle. This assembly is applying SCI methodology to automotive software, defining how to calculate carbon intensity across the hardware and connectivity boundaries of a modern vehicle.",
+    link: "/assemblies/",
+    linkText: "Register your interest in the assembly",
+  },
+  {
+    title: "Bridging Carbon Measurement into ESG and Regulatory Disclosure",
+    assemblyName: "SCI Disclosure Certification",
+    description:
+      "Voluntary structured self-reporting programme under development. Bridges SCI into ESG and CSRD disclosure workflows — providing a certification pathway for organisations that want to demonstrate SCI compliance in regulatory reporting.",
+    link: "https://greensoftware.foundation/standards/certification/",
+    linkText: "View certification programme",
+  },
+  {
+    title: "Closing the Gap Between Hardware Efficiency and Software Workload Decisions",
+    assemblyName: "Hardware–Software Interoperability for Data Centre Sustainability",
+    description:
+      "Sitting at the intersection of hardware efficiency standards and operational data centre practice, this assembly addresses a critical gap: hardware-level efficiency metrics and software-level workload decisions are currently optimised in isolation. The goal is a shared framework that enables data centre operators to align workload scheduling with real-time energy and cooling constraints.",
+    link: "/assemblies/hardware-software-interoperability-for-data-centre-sustainability/",
+    linkText: "Register your interest in the assembly",
+  },
+];
+
+const policyEngagements = [
+  {
+    title: "GHG Protocol Scope 2 Consultation",
+    description:
+      "Formal response submitted. GSF argued for time- and location-sensitive emissions data, pushing back against annual averages and broad geographic boundaries that strip out the granularity software engineers need to act.",
+    link: "/articles/why-the-gsf-is-participating-in-the-ghg-protocol-scope-2-consultation/",
+    linkText: "Read the response",
+  },
+  {
+    title: "AI Environmental Impacts Act",
+    description:
+      "GSF's first formal policy endorsement. Called for mandated environmental impact studies on AI, an AI Environmental Impacts Consortium, and a voluntary reporting framework for AI developers.",
+    link: "/articles/the-gsf-endorses-the-ai-environmental-impacts-act/",
+    linkText: "Read the endorsement",
+  },
+  {
+    title: "EU AI Act",
+    description:
+      "Analysis via the Green AI Committee on what the first binding global AI regulation means for sustainable software development and emissions disclosure. Directly relevant to researchers working on AI environmental assessment frameworks.",
+    link: "/articles/the-eu-ai-act-insights-from-the-green-ai-committee/",
+    linkText: "Read the analysis",
+  },
+  {
+    title: "NY Corporate Climate Accountability Act",
+    description:
+      "Coordinated technical responses to proposed New York state legislation on corporate climate accountability. GSF contributed standards expertise to the policy development process.",
+  },
+  {
+    title: "European Green Digital Coalition (EGDC)",
+    description:
+      "Engaging to align GSF standards with EU digital sustainability policy objectives. Provides a route for academic research that informs GSF standards to reach EU-level policy formation.",
+  },
+  {
+    title: "UK Government Digital Sustainability Alliance (GDSA)",
+    description:
+      "GSF is a member — contributing technical expertise to UK government digital sustainability strategy. Academic institutions with UK research profiles can engage with government digital policy via GSF membership.",
+    link: "/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+    linkText: "Read about GDSA",
+  },
+];
+
+const researchProgramme = [
+  {
+    title: "AI Environmental Assessments",
+    date: "Ratified November 2025",
+    description:
+      "Key publication examining the environmental impact of AI systems — frameworks for assessing and reducing the carbon footprint of AI workloads. Co-authored with academic partners.",
+    link: "https://research-information.bris.ac.uk/en/publications/beyond-counting-carbon-ai-environmental-assessments-struggle-to-i/",
+    linkText: "Read the publication",
+  },
+  {
+    title: "Green AI Position Paper",
+    date: "Policy research",
+    description:
+      "Defines Green AI, assesses environmental impacts across the AI lifecycle, and outlines key actions for industry and policy. The foundational document for GSF's AI sustainability work.",
+    link: "/policy/research/green-ai-position-paper/",
+    linkText: "Read the paper",
+  },
+  {
+    title: "SCI for Foundation Models — Texas State University",
+    date: "GSF-funded academic study",
+    description:
+      "Independent academic study confirming SCI as an effective metric for measuring the carbon impact of AI software. Demonstrates the type of industry-funded academic research GSF facilitates.",
+    link: "/articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/",
+    linkText: "Read the article",
+  },
+  {
+    title: "Carbon-Aware Computing Whitepaper — UBS & Microsoft",
+    date: "Industry case study",
+    description:
+      "First enterprise-scale implementation of carbon-aware computing using SCI and the Carbon Aware SDK. Demonstrates avoidance of multiple metric tons of CO₂eq annually — a direct example of academic research methodology deployed at production scale.",
+    link: "/articles/carbon-aware-computing-whitepaper-how-ubs-succeeded-in-measuring-and-reducing-car/",
+    linkText: "Read the whitepaper",
+  },
+];
+
+const greenAICommitteeMembers = [
+  { name: "Sanjay Podder", org: "Accenture", role: "Co-Chair" },
+  { name: "Thomas Lewis", org: "Microsoft", role: "Co-Chair" },
+  { name: "Federica Sarro", org: "UCL", role: "Member" },
+  { name: "Gadhu Sundaram", org: "NTT Data", role: "Member" },
+  { name: "Nisha Menon", org: "Siemens", role: "Member" },
+  { name: "Savannah Goodman", org: "Google", role: "Member" },
+  { name: "Vincent Caldeira", org: "IBM / Red Hat", role: "Member" },
+  { name: "Vinjosh Varghese", org: "UBS", role: "Member" },
+];
+
+const committeeWithLogos = greenAICommitteeMembers.map((member) => {
+  const matched = (membersData as any[]).find((m: any) => {
+    if (!m.active || !m.logo || m.hideLogo) return false;
+    const mName = (m.companyName || "").toLowerCase();
+    const orgLower = member.org.toLowerCase();
+    return mName.includes(orgLower) || orgLower.includes(mName);
+  });
+  const initials = member.name
+    .split(" ")
+    .filter(Boolean)
+    .map((w: string) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+  return {
+    ...member,
+    logo: matched ? `/assets/${matched.logo}` : null,
+    initials,
+  };
+});
+
+const membershipBenefits = [
+  {
+    title: "Named industry partnerships",
+    body: "Structured connections to GSF member organisations working on adjacent challenges, providing the industry-linked research context that EU Horizon, UKRI, and NSF funding applications increasingly require.",
+    icon: "leading-icon.svg",
+  },
+  {
+    title: "Publication routes",
+    body: "Co-authorship credit on GSF technical reports, reviewed by the relevant Assembly and released publicly — a route to work that is read by the organisations deploying it, not only the academics citing it.",
+    icon: "standardized-icon.svg",
+  },
+  {
+    title: "Evidence of real-world impact",
+    body: "GSF standards are ISO-certified and in active deployment across banking, technology, and infrastructure. Research that contributes to them produces the impact evidence that determines career progression and institutional research rankings.",
+    icon: "realtime-icon.svg",
+  },
+  {
+    title: "Peer network access",
+    body: "Participation in working groups, Assemblies, and GSF events alongside the member organisations deploying green software at scale.",
+    icon: "co2-icon.svg",
+  },
+];
+---
+
+<Layout
+  title="Academic & Research Engagement — Green Software Foundation"
+  description="The Green Software Foundation connects academic research in software sustainability directly to the Fortune 500 organisations implementing it. Free membership for qualifying institutions."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <!-- Section 1: Hero -->
+  <Hero
+    badge="Academic & Research Engagement"
+    heading="Where Research"
+    headingAccent="Becomes Standard"
+    body={heroBody}
+    ctas={[
+      { text: "Submit a Proposal", variant: "primary", href: "#submission-form" },
+      { text: "View our membership governance →", variant: "outline", href: "/governance/" },
+    ]}
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Academic & Research Engagement illustration"
+    bgClass="bg-accent-lightest-2"
+  />
+
+  <!-- Academic member logos (directly below hero) -->
+  {academicLogos.length > 0 ? (
+    <LogoMarquee
+      heading="Academic members of the GSF"
+      logos={academicLogos}
+      bgClass="bg-white"
+      fadeBgClass="from-white"
+      directoryHref="/membership/"
+      directoryText="About membership"
+    />
+  ) : (
+    <section class="bg-white py-10 md:py-12">
+      <div class="container">
+        <p class="mb-4 text-center text-sm font-medium text-gray-darker">
+          Academic members of the GSF
+        </p>
+        <p class="text-center text-base font-semibold text-primary-dark">
+          Chalmers University of Technology · Concordia University · University College London · University of Amsterdam · University of Bristol · University of Edinburgh · Manchester Metropolitan University · Texas State University
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- Bridge section: GSF's unique position -->
+  <section class="bg-primary py-14 md:py-20">
+    <div class="container">
+      <div class="mx-auto max-w-4xl">
+        <!-- Two-column bridge visual -->
+        <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-5 mb-10 md:mb-12">
+          <div class="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-center sm:flex-1 sm:max-w-xs">
+            <p class="text-xs font-bold uppercase tracking-widest text-white/50">Research Institutions</p>
+            <p class="mt-1.5 text-base font-extrabold text-white">Methodology &amp; Rigour</p>
+          </div>
+          <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-white/30 text-white font-bold text-lg">
+            +
+          </div>
+          <div class="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-center sm:flex-1 sm:max-w-xs">
+            <p class="text-xs font-bold uppercase tracking-widest text-white/50">Industry Members</p>
+            <p class="mt-1.5 text-base font-extrabold text-white">Real-World Deployment</p>
+          </div>
+        </div>
+
+        <!-- Statement text -->
+        <div class="text-center">
+          <p class="text-xl font-extrabold leading-snug text-white md:text-2xl lg:text-3xl">
+            GSF is where a computer science department's measurement methodology research <span class="text-accent">connects directly</span> to the ESG reporting reality of a Fortune 500 company implementing it next quarter.
+          </p>
+          <p class="mt-4 text-base font-semibold text-white/70 md:text-lg">
+            That structural position — trusted by research institutions and industry organisations simultaneously — is what makes the work possible.
+          </p>
+          <div class="mx-auto mt-8 h-px w-16 bg-white/20"></div>
+          <p class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
+            Within the Foundation, industry organisations bring specific, unsolved challenges. Research institutions bring the methodology to address them. GSF provides the governance structure to make that exchange productive — turning collaboration into co-authored white papers, technical reports, and ratified ISO standards that the industry deploys at scale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Forms of Engagement -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">Forms of Engagement</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
+        Engagement with GSF is not a single pathway. The following forms have emerged from real collaborations.
+      </p>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {engagementForms.map((item) => (
+          <div class="flex flex-col rounded-xl border bg-accent-lightest-2 p-6">
+            <h3 class="text-lg font-extrabold text-primary-dark">{item.title}</h3>
+            <p class="mt-3 flex-1 text-base leading-relaxed text-primary-dark">{item.body}</p>
+            <div class="mt-5">
+              <a
+                href={item.buttonHref}
+                class="inline-block rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                {item.buttonText}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The Convening Model -->
+  <section class="bg-accent-lightest-2 py-16 md:py-24">
+    <div class="container">
+      <p class="mb-3 text-center text-xs font-bold uppercase tracking-widest text-primary">How It Works</p>
+      <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">Where Academia <span class="text-primary">Connects</span> with Enterprise</h2>
+
+      <div class="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2 md:gap-10">
+        <div class="rounded-2xl border border-accent-lighter bg-white p-6 md:p-8">
+          <p class="text-base leading-relaxed text-primary-dark">
+            GSF operates at the intersection of two populations that rarely meet with the right structure in place: industry organisations with specific, unsolved green software problems — and research institutions with the methodology and rigour to address them.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-accent-lighter bg-white p-6 md:p-8">
+          <p class="text-base leading-relaxed text-primary-dark">
+            The Foundation's role is to hold the network, run the matching process, and provide the governance infrastructure through which collaboration becomes output — a white paper, a co-authored technical report, or a ratified specification that changes how the industry reduces software carbon.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: What Our Members Are Working On -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
+        What Our Members Are Working On
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark md:text-lg">
+        GSF member organisations — spanning global banks, technology companies, infrastructure providers, and automotive manufacturers — regularly surface specific green software challenges that academic research is positioned to address.
+      </p>
+    </div>
+  </section>
+
+  <!-- Full member logo marquee -->
+  <LogoMarquee
+    heading="GSF member organisations"
+    bgClass="bg-white"
+    fadeBgClass="from-white"
+    directoryHref="https://directory.greensoftware.foundation/members/"
+    directoryText="View all members"
+  />
+
+  <section class="bg-white pt-12 pb-16 md:pt-16 md:pb-20">
+    <div class="container">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {workingOnCards.map((card) => (
+          card.cta ? (
+            <div class="flex flex-col rounded-lg border-2 border-dashed border-primary bg-primary/5 p-5">
+              <img src={card.icon} alt="" class="mb-4 h-10 w-10 opacity-60" loading="lazy" decoding="async" />
+              <h3 class="text-lg font-bold text-primary">{card.title}</h3>
+              <p class="mt-2 flex-1 text-sm text-primary-dark">{card.description}</p>
+              <div class="mt-4">
+                <a
+                  href={card.link}
+                  class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+                >
+                  {card.linkText}
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div class="flex flex-col rounded-lg border bg-accent-lightest-2 p-5 shadow-sm">
+              <img src={card.icon} alt="" class="mb-4 h-10 w-10" loading="lazy" decoding="async" />
+              <h3 class="text-lg font-bold text-primary">{card.title}</h3>
+              <p class="mt-2 flex-1 text-sm text-gray-darker">{card.description}</p>
+              {card.link && (
+                <div class="mt-4">
+                  <a
+                    href={card.link}
+                    class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+                  >
+                    {card.linkText} →
+                  </a>
+                </div>
+              )}
+            </div>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonial
+    quote="If your institution is active in any of these areas, use the submission form below. Our members' problem statements evolve as the field develops. This list is not exhaustive, and we welcome suggestions."
+    author="Gadhu Sundaram"
+    title="Chairperson"
+    company="Green Software Foundation"
+  />
+
+  <!-- Section 5: Standards — Active Research Areas -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-center text-2xl font-semibold md:text-3xl lg:text-4xl">
+        Standards — Active Research Areas
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base text-primary-dark md:text-lg">
+        GSF produces and maintains ISO-certified standards. The following specifications have active, open research needs.
+      </p>
+
+      <!-- Software Standards Working Group -->
+      <div class="mt-12">
+        <div class="mb-6 flex items-center gap-4">
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Software Standards Working Group</h3>
+          <div class="h-px flex-1 bg-accent-lighter"></div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {softwareStandards.map((item) => (
+            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+              <div class="mb-3 flex items-start justify-between gap-2">
+                <h4 class="text-base font-bold leading-snug text-primary-dark">{item.title}</h4>
+                <span class={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${item.statusColor}`}>{item.status}</span>
+              </div>
+              <p class="flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              {item.link && (
+                <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                  {item.linkText} →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Hardware Standards Working Group -->
+      <div class="mt-10">
+        <div class="mb-6 flex items-center gap-4">
+          <h3 class="shrink-0 text-base font-extrabold uppercase tracking-wide text-primary-dark">Hardware Standards Working Group</h3>
+          <div class="h-px flex-1 bg-accent-lighter"></div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          {hardwareStandards.map((item) => (
+            <div class="flex flex-col rounded-lg border bg-white p-5 shadow-sm">
+              <div class="mb-3 flex items-start justify-between gap-2">
+                <h4 class="text-base font-bold leading-snug text-primary-dark">{item.title}</h4>
+                <span class={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${item.statusColor}`}>{item.status}</span>
+              </div>
+              <p class="flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+              {item.link && (
+                <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                  {item.linkText} →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Future Research via GSF Assemblies — standalone section -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <p class="mb-3 text-xs font-bold uppercase tracking-widest text-primary">Active Initiatives</p>
+      <h2 class="text-2xl font-extrabold md:text-3xl lg:text-4xl">
+        Future Research via GSF Assemblies<br class="hidden sm:block" />
+        <span class="text-primary">Powered by the Harmony Tool</span>
+      </h2>
+
+      <div class="mt-6 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div class="rounded-2xl border border-accent-lighter bg-accent-lightest-2 p-6 lg:p-8">
+          <p class="text-base leading-relaxed text-primary-dark">
+            GSF Assemblies give your research a direct route into the standards process. Each Assembly is a structured, AI-facilitated working group where you bring your methodology and expertise — and the <strong>Harmony</strong> tool builds consensus around it alongside industry practitioners who will deploy the output.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-primary-dark">
+            The process is genuinely collaborative: you contribute your academic rigour and help shape the specification from its foundations — not reviewing a draft after the fact. When an Assembly reaches consensus, the output is ratified as a GSF standard, often progressing to ISO certification. Your contribution becomes part of the standard, not just cited by it.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-primary-dark">
+            Harmony accelerates this: in one recent Assembly, 14 experts from 15 organisations reached full consensus in 10 weeks. The same infrastructure — and the same seat at the table — is available to academic institutions engaging through GSF.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center lg:w-56 lg:shrink-0">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <p class="text-sm font-semibold text-primary-dark">Join an active Assembly and shape the next GSF standard from the ground up.</p>
+          <a
+            href="https://greensoftware.foundation/assemblies/"
+            class="w-full rounded-lg bg-primary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+          >
+            Explore GSF Assemblies
+          </a>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-gray-darker">Active initiatives feeding into the standards pipeline — where academic collaboration is being actively sought.</p>
+
+      <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {crossCuttingAreas.map((item) => (
+          <div class="flex flex-col rounded-lg border border-dashed border-primary/30 bg-primary/5 p-5">
+            <h3 class="text-base font-bold text-primary-dark">{item.title}</h3>
+            {item.assemblyName && (
+              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-primary/70">{item.assemblyName}</p>
+            )}
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+            {item.link && (
+              <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                {item.linkText} →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Green AI Committee full-width section -->
+  <section class="bg-primary py-14 md:py-16">
+    <div class="container">
+      <!-- Header + CTAs + two text boxes: left column -->
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <!-- Left: eyebrow, title, CTAs, then text boxes -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">GSF Committee</p>
+            <h2 class="mb-5 text-2xl font-extrabold text-white md:text-3xl lg:text-4xl">Green AI Committee</h2>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="#submission-form"
+                class="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent hover:text-primary-dark"
+              >
+                GSF Academic Members can join the Green AI Committee →
+              </a>
+              <a
+                href="/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
+                class="inline-block rounded-lg border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+              >
+                EU AI Act analysis →
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Policy &amp; Standards</p>
+            <p class="text-base leading-relaxed text-white/90">
+              The Green AI Committee is GSF's dedicated policy and standards body responding to EU AI Act obligations — and was an active contributor to the SCI for AI ratification process. It coordinates GSF's collective technical response to AI environmental regulation across member organisations, translating industry deployment realities into policy positions that regulators can act on.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-accent">For Academic Researchers</p>
+            <p class="text-base leading-relaxed text-white/90">
+              For academic researchers working at the intersection of AI, environmental assessment, and regulatory compliance, the Green AI Committee is the point of engagement — connecting academic expertise directly to the policy and standards processes where it carries weight.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Committee members grid -->
+        <div>
+          <div class="mb-5 flex items-center gap-4">
+            <p class="shrink-0 text-xs font-bold uppercase tracking-widest text-white/50">Committee Members</p>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+
+          <!-- Co-chairs: featured, horizontal layout (logo left, text right) -->
+          <div class="mb-3 grid gap-3 sm:grid-cols-2">
+            {committeeWithLogos.filter((m) => m.role === "Co-Chair").map((member) => (
+              <div class="relative flex items-center gap-4 rounded-xl bg-white p-5">
+                <span class="absolute right-3 top-3 rounded-full bg-accent px-2.5 py-0.5 text-xs font-bold text-primary-dark">Co-Chair</span>
+                <div class="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl p-1">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-xl font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div class="min-w-0 pr-14">
+                  <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
+                  <p class="mt-0.5 text-xs text-gray-darker">{member.org}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Regular members: compact 2-col grid -->
+          <div class="grid gap-3 sm:grid-cols-2">
+            {committeeWithLogos.filter((m) => m.role !== "Co-Chair").map((member) => (
+              <div class="flex items-center gap-3 rounded-xl bg-white p-4">
+                <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg p-1">
+                  {member.logo ? (
+                    <img src={member.logo} alt={member.org} class="h-full w-full object-contain" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="text-base font-extrabold text-primary">{member.initials}</span>
+                  )}
+                </div>
+                <div class="min-w-0">
+                  <p class="text-sm font-extrabold leading-tight text-primary-dark">{member.name}</p>
+                  <p class="mt-0.5 truncate text-xs text-gray-darker">{member.org}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5b: Active GSF Policy Engagements -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container">
+      <div class="flex flex-wrap items-baseline gap-4">
+        <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Active GSF Policy Engagements</h2>
+        <a
+          href="https://greensoftware.foundation/policy/"
+          class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+        >
+          About our policy work →
+        </a>
+      </div>
+      <p class="mt-4 max-w-2xl text-base text-primary-dark md:text-lg">
+        GSF participates directly in regulatory consultations and policy formation. Academic researchers working in these areas can contribute formal expertise via GSF membership.
+      </p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {policyEngagements.map((item) => (
+          <div class="flex flex-col rounded-lg border bg-accent-lightest-2 p-5">
+            <h3 class="text-base font-bold text-primary-dark">{item.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+            {item.link && (
+              <a href={item.link} class="mt-3 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                {item.linkText} →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5c: Research Programme -->
+  <section class="bg-accent-lightest-2 py-16 md:py-20">
+    <div class="container">
+      <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Research Programme</h2>
+      <p class="mt-4 max-w-2xl text-base text-primary-dark md:text-lg">
+        Selected publications and case studies from GSF's research programme — demonstrating the type of industry-linked academic work the Foundation facilitates.
+      </p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
+        {researchProgramme.map((item) => (
+          <div class="flex flex-col rounded-lg border bg-white p-6 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-wide text-primary">{item.date}</p>
+            <h3 class="mt-2 text-base font-bold text-primary-dark">{item.title}</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-gray-darker">{item.description}</p>
+            {item.link && (
+              <a href={item.link} class="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                {item.linkText} →
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 text-center">
+        <a
+          href="/policy/research/"
+          class="inline-block rounded-lg border border-primary px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+        >
+          Full publications library →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Academic Membership -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="container">
+      <p class="mb-3 text-center text-xs font-bold uppercase tracking-widest text-primary">Academic Membership</p>
+      <h2 class="text-center text-2xl font-extrabold md:text-3xl lg:text-4xl">
+        The formal relationship that follows <span class="text-primary">substantive engagement</span>
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-center text-base leading-relaxed text-primary-dark md:text-lg">
+        When research and mission are genuinely aligned, academic membership provides structured access to the network and governance infrastructure through which that alignment creates measurable real-world impact.
+      </p>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2">
+        {membershipBenefits.map((item) => (
+          <div class="flex gap-4 rounded-xl border border-accent-lighter bg-accent-lightest-2 p-6">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-base font-extrabold text-primary-dark">{item.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-gray-darker">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mx-auto mt-10 max-w-3xl rounded-2xl bg-primary p-6 text-white md:p-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-lg font-extrabold">Available at no cost for qualifying institutions</p>
+            <p class="mt-1 text-sm leading-relaxed text-white/80">
+              Membership decisions are made at the Policy Working Group level — collectively, not by a single point of contact.
+            </p>
+          </div>
+          <a
+            href="#submission-form"
+            class="inline-block shrink-0 rounded-lg bg-white px-5 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-accent-lightest-2"
+          >
+            Submit a proposal →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Statement Banner -->
+  <section class="bg-primary py-10 md:py-12">
+    <div class="container">
+      <p class="text-center text-2xl font-extrabold leading-tight text-white md:text-3xl lg:text-4xl">
+        Academic engagement within the GSF is{" "}
+        <span class="text-accent">established</span>,{" "}
+        not{" "}
+        <span class="text-accent">experimental</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 7: Submission Form + How Engagement Works (two-column) -->
+  <section id="submission-form" class="bg-white py-16 md:py-20">
+    <div class="container">
+      <div class="grid gap-12 lg:grid-cols-[1fr_400px] lg:gap-16 xl:gap-20">
+
+        <!-- Left: Submission Form -->
+        <div>
+          <h2 class="text-2xl font-semibold md:text-3xl lg:text-4xl">Submit a Proposal</h2>
+          <p class="mt-4 text-base leading-relaxed text-primary-dark md:text-lg">
+            Submit your proposal, idea, or white paper using the form below. All submissions are reviewed by the GSF Policy Working Group, which determines next steps for engagement — including whether your research connects with an active challenge from a GSF member organisation.
+          </p>
+
+          <div id="submission-form-wrap" class="mt-8">
+            <form id="academic-submission-form" class="space-y-5" novalidate>
+              <div>
+                <label for="full-name" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Full name <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="job-title" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Job title <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="job-title"
+                  name="job-title"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="institution" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Institution name <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="institution"
+                  name="institution"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="email" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Email address <span class="text-primary">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label for="research-area" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Brief description of your research area <span class="text-primary">*</span>
+                </label>
+                <textarea
+                  id="research-area"
+                  name="research-area"
+                  required
+                  rows={5}
+                  class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                ></textarea>
+                <p class="mt-1 text-xs text-gray-darker">Max 300 words</p>
+              </div>
+              <div>
+                <label for="member-collab" class="mb-1 block text-sm font-semibold text-primary-dark">
+                  Are you aware of any specific GSF member organisations you would like to explore
+                  collaboration with?
+                </label>
+                <textarea
+                  id="member-collab"
+                  name="member-collab"
+                  rows={3}
+                  class="w-full resize-y rounded-lg border border-primary-lighter px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                ></textarea>
+                <p class="mt-1 text-xs text-gray-darker">Optional · Max 100 words</p>
+              </div>
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+                >
+                  Submit for Review
+                </button>
+              </div>
+              <p class="text-xs text-gray-darker">
+                By submitting this form you agree to GSF's{" "}
+                <a href="/privacy/" class="underline hover:text-primary-dark">privacy policy</a>.
+                Submissions are reviewed by the GSF Policy Working Group. We aim to acknowledge all
+                substantive submissions, though we do not publish a fixed response time.
+              </p>
+            </form>
+
+            <div
+              id="submission-confirmation"
+              class="hidden rounded-xl border border-primary/30 bg-white px-6 py-10 text-center shadow-sm"
+            >
+              <p class="text-lg font-semibold text-primary-dark">
+                Thank you — your submission has been received.
+              </p>
+              <p class="mt-3 text-sm text-gray-darker">
+                The GSF Policy Working Group will review your proposal. We aim to acknowledge all
+                substantive submissions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: How Engagement Works -->
+        <div class="rounded-2xl bg-accent-lightest-2 p-6 md:p-8 lg:sticky lg:top-8 lg:self-start">
+          <p class="text-xs font-bold uppercase tracking-widest text-primary">How Engagement Works</p>
+          <div class="mt-5 space-y-0">
+            {[
+              "Institutions submit an idea, proposal, or white paper using the form on this page.",
+              "The GSF Policy Working Group reviews all submissions and determines the appropriate form of engagement — which may include connection to a specific industry member, integration into an active Assembly or working group, or co-authorship on a GSF publication.",
+              "Where a strong match exists between a research submission and an active industry member challenge, GSF facilitates the introduction — subject to review and approval by the Policy Working Group.",
+              "Substantive collaborations may progress toward formal academic membership — available at no cost for qualifying institutions.",
+            ].map((step, i) => (
+              <div class="relative flex gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    {i + 1}
+                  </div>
+                  {i < 3 && <div class="w-0.5 grow bg-primary/20 my-1" />}
+                </div>
+                <div class={`${i < 3 ? "pb-5" : "pb-0"} pt-1`}>
+                  <p class="text-sm leading-relaxed text-primary-dark">{step}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="mt-6 text-xs leading-relaxed text-gray-darker/70 italic border-t border-accent-lighter pt-4">
+            There is no guaranteed outcome from submission. Every substantive proposal receives a considered review — decisions are made collectively by the Policy Working Group, not by a single point of contact. The process has genuine governance integrity.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.getElementById("academic-submission-form") as HTMLFormElement | null;
+  const confirmation = document.getElementById("submission-confirmation");
+
+  if (form && confirmation) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      form.classList.add("hidden");
+      confirmation.classList.remove("hidden");
+    });
+  }
+</script>
