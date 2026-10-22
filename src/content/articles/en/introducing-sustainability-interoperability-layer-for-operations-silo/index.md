@@ -31,7 +31,7 @@ Today we’re excited to launch the [Sustainability Interoperability Layer for O
 
 SILO defines a common data model that unlocks coordinated optimization of compute, cooling, and power. This lets workload schedulers make infrastructure-aware decisions and automated system controls anticipate demand and reduce energy use.
 
-By adding a shared semantic layer, SILO complements our [Workload Dynamic Power and Cooling](https://greensoftware.foundation/standards/wdpc/) (WDPC) specification. While existing systems continue using their current protocols, software can consume information regardless of the underlying vendor or interface.
+By adding an interoperability layer, SILO complements our [Workload Dynamic Power and Cooling](https://greensoftware.foundation/standards/wdpc/) (WDPC) specification. While existing systems continue using their current protocols, software can consume information regardless of the underlying vendor or interface.
 
 SILO supports the entire data center ecosystem: 
 
@@ -58,6 +58,6 @@ Participants will map the interoperability challenges and open questions behind 
 
 The Assembly runs asynchronously over email and, on average, requires an hour per week of participants' time over eight weeks. It starts November 16. Applications are open to anyone: [Apply by November 6, 2026](https://greensoftware.foundation/assemblies/sustainability-interoperability-layer-for-operations-silo/). 
 
-## Project Lead 
+### Project Lead 
 
 Lilach Butchmits is Product Director at ZutaCore, where she leads industry standards and research partnerships. Her work centers on projects that improve the sustainability and efficiency of AI data centers. She also actively participates in several industry initiatives focused on liquid cooling and sustainable digital infrastructure.
