@@ -58,7 +58,7 @@ Participants will map the interoperability challenges and open questions behind 
 
 The Assembly runs asynchronously over email and, on average, requires an hour per week of participants' time over eight weeks. It starts November 16. Applications are open to anyone until November 6.  
 
-[Apply to join the Assembly](https://greensoftware.foundation/assemblies/sustainability-interoperability-layer-for-operations-silo/). 
+::button{href="/assemblies/sustainability-interoperability-layer-for-operations-silo/" label="Apply to join the Assembly"}
 
 ### Project Lead 
 
