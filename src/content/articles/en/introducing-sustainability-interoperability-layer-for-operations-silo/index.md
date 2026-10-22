@@ -56,7 +56,9 @@ The Assembly will especially benefit from facility engineers running mixed-vendo
 
 Participants will map the interoperability challenges and open questions behind three use cases: adaptive cooling, dynamic workload placement, and automated efficiency reporting (PUE, WUE, and CUE).
 
-The Assembly runs asynchronously over email and, on average, requires an hour per week of participants' time over eight weeks. It starts November 16. Applications are open to anyone: [Apply by November 6, 2026](https://greensoftware.foundation/assemblies/sustainability-interoperability-layer-for-operations-silo/). 
+The Assembly runs asynchronously over email and, on average, requires an hour per week of participants' time over eight weeks. It starts November 16. Applications are open to anyone until November 6.  
+
+[Apply to join the Assembly](https://greensoftware.foundation/assemblies/sustainability-interoperability-layer-for-operations-silo/). 
 
 ### Project Lead 
 
