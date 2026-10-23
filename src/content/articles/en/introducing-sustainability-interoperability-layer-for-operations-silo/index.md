@@ -3,7 +3,7 @@ title: Introducing Sustainability Interoperability Layer for Operations (SILO)
 teaserText: Connecting cooling, power, and compute data across vendors for energy-efficient operations.
 date: 2026-10-22
 published: true
-summary: We're thrilled to launch SILO, an initiative to connect cooling, power, and compute data across vendors for more energy-efficient operations, building on GSF’s existing standards work.
+summary: We've launched SILO, an initiative to connect cooling, power, and compute data across vendors for more energy-efficient operations, building on GSF’s existing standards work.
 mainImage: SILO-Announcement.png
 mainImageAlt: Isometric illustration of a data center platform where icons for power, cooling, water, servers, cloud, and a software dashboard are connected by lines to a central glowing sphere, representing a shared layer linking infrastructure data. Green Software Foundation logo in the corner.
 featured: true
