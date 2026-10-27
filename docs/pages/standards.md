@@ -68,7 +68,13 @@ Currently three hardware standards have dedicated pages:
 - **WDPC** — `src/pages/standards/wdpc/index.astro` at `/standards/wdpc/`
 - **Open19** — `src/pages/standards/open19/index.astro` at `/standards/open19/`
 
-All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 and SILO both reuse WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` and `public/assets/standards/silo/` once available. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
+All three appear under the Hardware section in the nav (`src/lib/nav-items.ts`, SILO listed first) and in the standards index (`src/pages/standards/index.astro`, `standardDefs` array). Open19 reuses WDPC's icon/illustration assets as placeholders — dedicated SVGs should be added to `public/assets/standards/open19/` once available.
+
+### SILO illustrations and layout tweaks
+
+SILO has its own illustrations (WebP, in `public/assets/`): `hero-silo.webp` (hero), `industry-impact-hardware.webp`, `business-benefit.webp` and `environmental-impact.webp` (the three "Why SILO Matters" rows), `dev-operator-practitioner.webp`, `business-vendor-stats.webp` and `sustainability-teams.webp` (the three "SILO Audience" cards), and `dive-deeper.webp` (Dive Deeper). The "What is SILO?", tabbed architecture, use-case and Get Involved icons still reuse WDPC assets.
+
+Unlike WDPC, the SILO "Business Benefits" section passes a plain bulleted `<ul>` through `TextWithImage`'s default slot instead of `iconFeatures`, and the "Dive Deeper" rows have no icons. A thin `border-accent-lighter` (#ebf2d4) divider sits between the logo marquee and the "Starting with an Assembly" section. Articles tagged `"open19"` / `"silo"` will automatically appear in each page's carousel.
 
 ### SILO hero CTAs — Assembly, White Paper, Companion Technical Note, and Project Q&A
 
