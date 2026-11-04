@@ -8,6 +8,10 @@ interface Props {
   title?: string;
   /** Company or organisation */
   company?: string;
+  /** Text alignment for the quote and attribution */
+  align?: "center" | "left";
+  /** Use larger section padding (py-12 md:py-16 lg:py-20) to match the rhythm of larger content sections, instead of the default lighter padding */
+  spacious?: boolean;
 }
 
 const {
@@ -15,10 +19,12 @@ const {
   author = "Navveen Balani",
   title = "Managing Director, Chief Technologist",
   company = "Accenture",
+  align = "center",
+  spacious = false,
 } = Astro.props;
 ---
 
-<section class="py-8 md:py-12 lg:py-16">
+<section class:list={[spacious ? "py-12 md:py-16 lg:py-20" : "py-8 md:py-12 lg:py-16"]}>
   <div class="container">
     <div
       class="relative rounded-4xl border-3 border-accent-lighter px-12 py-12 backdrop-blur-sm md:px-20 md:py-16"
@@ -29,13 +35,13 @@ const {
         <img src="/assets/testimonial-icon.svg" alt="" class="h-12 w-16 md:h-14 md:w-24" />
       </div>
 
-      <div class="text-center">
+      <div class:list={[align === "left" ? "text-left" : "text-center"]}>
         <blockquote
           class="text-lg font-medium text-primary-dark italic md:text-xl"
         >
           &ldquo;{quote}&rdquo;
         </blockquote>
-        <div class="mt-8 flex flex-col items-center justify-center gap-2">
+        <div class:list={["mt-8 flex flex-col gap-2", align === "left" ? "items-start" : "items-center justify-center"]}>
           {author && <cite class="not-italic font-bold text-lg">{author}</cite>}
           {title && <span class="text-primary">{title}</span>}
           {company && <span class="font-semibold text-accent-dark">{company}</span>}

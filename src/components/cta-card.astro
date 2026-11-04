@@ -21,6 +21,8 @@ interface Props {
   bgClass?: string;
   /** Visual variant: "light" (default, green card) or "dark" (dark teal card with white text) */
   variant?: "light" | "dark";
+  /** Reduce top padding only (bottom padding is unaffected, so the gap to whatever follows stays the same) */
+  compactTop?: boolean;
 }
 
 const {
@@ -33,6 +35,7 @@ const {
   imageAlt = "",
   bgClass = "bg-accent-lightest-2",
   variant = "light",
+  compactTop = false,
 } = Astro.props;
 
 const isDark = variant === "dark";
@@ -46,7 +49,7 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
 const hasAccentSyntax = headingParts.some(p => p.accent);
 ---
 
-<section class={`py-12 md:py-18 lg:py-20 ${bgClass}`}>
+<section class:list={[compactTop ? "pt-6 md:pt-8 lg:pt-10" : "pt-12 md:pt-18 lg:pt-20", "pb-12 md:pb-18 lg:pb-20", bgClass]}>
   <div class="container">
     <div
       class:list={[
