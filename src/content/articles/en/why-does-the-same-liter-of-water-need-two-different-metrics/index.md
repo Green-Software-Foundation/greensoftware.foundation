@@ -3,7 +3,7 @@ title: Why Does the Same Liter of Water Need Two Different Metrics?
 teaserText: How SWI aims to provide a clearer picture of software's water footprint.
 date: 2026-11-05
 published: true
-summary: The same amount of water can have different environmental impacts depending on where it is consumed. Yi Ding explains why the Software Water Intensity (SWI) specification uses both raw and stress-adjusted metrics to provide a clearer picture of software's water footprint.
+summary: The same amount of water can have very different environmental impacts depending on where it's consumed. Yi Ding explains how the Software Water Intensity (SWI) specification uses both raw and stress-adjusted metrics to provide a clearer picture of software's water footprint.
 mainImage: Why-We-Need-Two-Metrics-.png
 mainImageAlt: Illustration split down the middle. On the left, a smiling woman holds a clear umbrella under heavy rain against a dark blue sky. On the right, a bearded man stands in a bright, dry landscape with a sun, hills and cacti. Between them is a cube of water with a single drop falling into it, showing the same volume of water in two very different conditions.
 featured: false
@@ -34,10 +34,9 @@ The raw metric asks a straightforward question: **How much water is associated w
 
 The stress-adjusted metric asks: **What is the potential consequence of that water use in the place where it occurs?** It applies a location-specific characterization factor to the same volume. In simple terms: 
 
-**Raw water intensity = water volume/unit of software service**
+**Raw water intensity = water volume / unit of software service**
 
-
-**Stress-adjusted water intensity = (water volume x local water-stress factor) / unit of software service**
+**Stress-adjusted water intensity = (water volume × local water-stress factor) / unit of software service**
 
 The adjusted result doesn’t claim that the activity physically used more or less water. Instead, it’s an indicator that can inform practitioner decisions: a liter in a more water-stressed region receives greater weight because its use has greater potential to intensify competition for scarce water.
 
