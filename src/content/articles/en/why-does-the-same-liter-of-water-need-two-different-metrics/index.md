@@ -50,7 +50,9 @@ Raw values are also essential for engineering: they help teams compare infrastru
 
 Reporting only raw volume creates the opposite problem. It can make two locations look equivalent even when their watersheds face very different conditions. It can also make the location with the lowest water use per unit of computing look better even if that use occurs where water is much scarcer.
 
-Therefore, the Software Standards Working Group (SSWG) chose dual reporting to preserve both transparency and decision relevance. The two metrics complement each other to provide a more complete picture of software’s water footprint, and neither can replace the other.
+Therefore, the Software Standards Working Group (SSWG) chose dual reporting to preserve both transparency and decision relevance. 
+
+> The two metrics complement each other to provide a more complete picture of software’s water footprint, and neither can replace the other.
 
 ## **What the SCARF Research Shows**
 
