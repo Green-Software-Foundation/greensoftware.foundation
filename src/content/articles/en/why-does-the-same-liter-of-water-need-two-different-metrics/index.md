@@ -12,7 +12,7 @@ tags:
 authors:
   - fullName: Yi Ding
     role: Project Chair of Software Water Intensity (SWI)
-    company: ''
+    company: Green Software Foundation
     companyWebsite: ''
     photo: ''
     socialMedia: []
