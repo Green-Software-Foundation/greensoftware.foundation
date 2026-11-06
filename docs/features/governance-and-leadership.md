@@ -49,8 +49,7 @@ Linux Foundation
               │     │     ├── Hardware Standards WG
               │     │     └── Policy WG
               │     └── Committees
-              │           ├── Green AI Committee
-              │           └── Developer Relations Committee
+              │           └── Green AI Committee
               └── Staff (day-to-day operations)
 ```
 
