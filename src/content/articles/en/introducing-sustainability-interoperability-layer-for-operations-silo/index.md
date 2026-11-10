@@ -1,5 +1,5 @@
 ---
-title: Introducing Sustainability Interoperability Layer for Operations (SILO)
+title: Introducing Standardized Interoperability Layer for Real-Time Sustainability Optimization (SILO)
 teaserText: Connecting cooling, power, and compute data across vendors for energy-efficient operations.
 date: 2026-10-22
 published: true
@@ -23,7 +23,7 @@ Although we’ve seen significant progress in hardware innovation, connecting in
 
 Regulatory requirements are also increasing, making consistent infrastructure data even more crucial. Under the EU Energy Efficiency Directive, data centers of 500 kW or more report sustainability data annually. The European Commission is now consulting on minimum performance standards, and its [assessment of the first reporting period](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026DC0500) found that nearly a third of the reported data wasn’t reliable.
 
-Today we’re excited to launch the [Sustainability Interoperability Layer for Operations](https://greensoftware.foundation/standards/silo/) (SILO), led by Lilach Butchmits (ZutaCore) under the Hardware Standards Working Group (HSWG). The project aims to reduce integration complexity while enabling smarter, more energy-efficient operation of AI and high-performance computing infrastructure.
+Today we’re excited to launch the [Standardized Interoperability Layer for Real-Time Sustainability Optimization](https://greensoftware.foundation/standards/silo/) (SILO), led by Lilach Butchmits (ZutaCore) under the Hardware Standards Working Group (HSWG). The project aims to reduce integration complexity while enabling smarter, more energy-efficient operation of AI and high-performance computing infrastructure.
 
 > _“GSF is uniquely positioned to bring together stakeholders from across the ecosystem to address this challenge. By making infrastructure data more interoperable and accessible, SILO can help unlock smarter energy optimization at scale and, with it, faster innovation and a more sustainable path for digital infrastructure overall.”—Lilach Butchmits, Product Director at ZutaCore and SILO Project Lead_ 
 
