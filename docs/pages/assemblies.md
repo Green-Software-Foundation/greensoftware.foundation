@@ -60,6 +60,8 @@ The fetch script sorts assemblies by status priority: Apply now (0) → Register
 
 Only visible assemblies (not `Backlog`) generate detail pages.
 
+The URL slug comes from the Notion `slug` property if it is set, otherwise it is generated from the assembly name (lowercased, non-alphanumerics replaced with hyphens). Either way the value is passed through the same slugify step. To rename an assembly without breaking its URL, fill in `slug` with the current URL slug before changing the name.
+
 ## Visibility Badges
 
 Each assembly has an optional `Visibility` field:
@@ -159,6 +161,8 @@ If the assembly has a `workingGroup` relation (resolved from Notion PWCIs), a "G
 | Change | Where |
 |--------|-------|
 | Create new assembly | Add to Notion Assemblies DB |
+| Rename an assembly (keep URL) | Set `slug` in Notion to the current URL slug, then change `Workshop` |
+| Change an assembly's URL | Change `slug` in Notion, and add a redirect from the old URL in `netlify.toml` |
 | Open/close applications | Change `Status` in Notion |
 | Add details content | Add content directly to the Notion page body |
 | Set report URL | Set `Report` URL field in Notion |

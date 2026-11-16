@@ -132,6 +132,7 @@ When a project has multiple "Project Chair" subscriptions and needs to distingui
 ### Assemblies DB
 
 - `Workshop` / `Name` (title) — assembly name
+- `slug` (text) — URL slug for the detail page (`/assemblies/<slug>/`). Optional: if empty, the slug is generated from the assembly name. Set it before renaming an assembly so the URL stays the same
 - `Status` (status) — controls visibility and form display (see [assemblies page doc](pages/assemblies.md))
 - `Purpose` (select), `Summary` (rich text), `Deliverable` (rich text)
 - `Lead`, `Facilitator` (rich text)
