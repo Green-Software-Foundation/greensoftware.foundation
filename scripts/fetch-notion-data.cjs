@@ -929,7 +929,10 @@ async function fetchAssemblies() {
     const name = titleText(p["Workshop"]) || titleText(p["Name"]);
     if (!name) continue;
 
-    const slug = slugify(name);
+    // URL slug: use the Notion "slug" property when set, so an assembly can be
+    // renamed without changing its URL. Falls back to the slugified name.
+    // The custom value is slugified too, to guard against stray spaces/capitals.
+    const slug = slugify(richText(p["slug"]?.rich_text) || name);
     // Status is a Notion "status" type, not "select"
     const status = p["Status"]?.status?.name || "";
     const stage = selectName(p["Stage"]);
