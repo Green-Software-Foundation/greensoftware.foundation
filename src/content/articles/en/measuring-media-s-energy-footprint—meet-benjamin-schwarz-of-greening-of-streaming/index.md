@@ -1,6 +1,6 @@
 ---
 title: Measuring Media's Energy Footprint—Meet Benjamin Schwarz of Greening of Streaming
-teaserText: Verifiable data, from encoders to home devices
+teaserText: Verifiable data, from encoders to home devices.
 date: 2026-11-17
 published: true
 summary: New GSF member GoS shares how they measure the electricity use of streaming hardware and why that expertise complements the GSF’s broader work on software.
