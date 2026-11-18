@@ -18,11 +18,11 @@ lang: en
 
 Benjamin is the President of Greening of Streaming (GoS) and co-chair of its Watt Lab working group. His background spans trade associations, start-ups, consulting, and telco, with a focus on TV, VoD, OTT, and streaming. Together with his lifelong interest in environmental issues, this led him to join GoS four years ago.
 
-## 1. Can you tell us about Greening of Streaming?
+## Can you tell us about Greening of Streaming?
 
 [Greening of Streaming](https://www.greeningofstreaming.org/) is a global, member-driven non-profit uniting the streaming industry to reduce its environmental impact. Our members range from global media companies to specialized technology providers and academic researchers. They work together in member-led Labs to share expertise and build solutions that benefit the whole sector. The Labs include: Language, Marketing, Policy & Guidelines, Watt, and Protocol. We have one firm rule: no greenwashing. Every claim we make has to be backed by verifiable data. We recently reconstituted as a non-profit association under French law. 
 
-## 2. How does environmental sustainability fit into your organization?
+## How does environmental sustainability fit into your organization?
 
 Sustainability lies at the core of our mission. When GoS started over five years ago, the biggest gap was energy engineering: the industry relied on estimates rather than measurements. Today, we still approach it mainly from that perspective. We put power meters on real encoders, streaming boxes, and TVs, and we label every finding by how confident we are in it. The Watt Lab is building an open platform that measures energy use, from encoders to home devices.  
 
@@ -30,7 +30,7 @@ This work is supported by the belief that if it can't be measured, it shouldn't 
 
 Other examples of our work include two recent publications from our Language Lab: “Artificial Intelligence in Streaming Media Sustainability” and “Overview of the Power Factor”.
 
-## 3. What does green software mean to you?
+## What does green software mean to you?
 
 At first, green software meant mainly efficiency. Now that our understanding has grown, sufficiency has become just as important: not only doing things with less energy, but asking how much is enough. As a software engineer in the 1980s and 1990s, I saw when the most expensive resource stopped being the computer and became the developer. We learned to write software that was efficient to maintain, but not efficient to run. For me, part of green software's mission is to reverse that second part of the trend.
 
