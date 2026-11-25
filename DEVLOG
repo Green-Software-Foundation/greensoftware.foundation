@@ -1,5 +1,9 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Nav: Education Intro Link Moved to the Top
+
+- `src/lib/nav-items.ts`: removed the Education menu's bottom "About our education program →" button (`footerLink`). `/education/` is now the first link in the Learn column, labelled "Introduction to GSF Education programme", with the description "Free courses, professional certification, and patterns". Other links unchanged.
+
 ## 2026-11-25 - Education: Page Rethought Around Three Routes
 
 - `src/pages/education/index.astro` restructured so the Academy is the centrepiece rather than an add-on:
