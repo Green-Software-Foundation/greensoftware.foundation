@@ -12,7 +12,7 @@ export const Default = {
       {
         title: "Our engineers don't know how to build green software",
         description:
-          "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 130,000 engineers across the industry.",
+          "Goldman Sachs, Avanade, and GSF members worldwide built and scaled the Green Software Practitioner course — now completed by over 145,000 engineers across the industry.",
         orgs: [
           { name: "Goldman Sachs", logoSrc: "/assets/logos/goldman-sachs.png" },
           { name: "Avanade", logoSrc: "/assets/logos/avanade.webp" },

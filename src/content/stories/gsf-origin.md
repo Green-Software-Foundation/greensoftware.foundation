@@ -27,7 +27,7 @@ stats:
     label: Founding organizations — Microsoft, Accenture, GitHub, Thoughtworks, and Goldman Sachs
   - value: "70+"
     label: Member organizations spanning technology, consulting, financial services, and academia
-  - value: "130,000+"
+  - value: "145,000+"
     label: Practitioners trained through the Green Software Practitioner course
   - value: "17"
     label: Active projects spanning standards, tools, frameworks, and training

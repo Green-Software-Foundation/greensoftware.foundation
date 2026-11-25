@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-GSF's education programme: the Green Software & AI Academy pilot, courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
+GSF's education programme: the Green Software & AI Academy pilot, courses (Green Software Practitioner, SCI Fundamentals, SCI for AI Fundamentals, SOFT Essentials), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
 
 ## Dynamic Elements
 
@@ -21,6 +21,7 @@ Everything else on this page is hardcoded:
 - **Academy pilot** — dark CTACard directly under the hero: fourteen role-based courses across five tracks, member-organisation pilot, button to `https://academy.greensoftware.foundation`. Copy is taken from the launch announcement.
 - **Courses heading** — intro to Movement Platform courses
 - **Green Software Practitioner** — TabbedSection (overview, audience, outcomes)
+- **SCI Fundamentals** — TabbedSection (overview, audience, outcomes), links to `https://grnsft.org/sci-fundamentals-course`
 - **SOFT Essentials** — TabbedSection (overview, audience, outcomes)
 - **SCI for AI Fundamentals** — TabbedSection (overview, audience, outcomes)
 - **"More courses coming"** — TextBlock placeholder

@@ -1,5 +1,11 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: SCI Fundamentals Card; Practitioner Figure 145,000+
+
+- `src/pages/education/index.astro`: added an SCI Fundamentals TabbedSection between Green Software Practitioner and SCI for AI Fundamentals, linking to `https://grnsft.org/sci-fundamentals-course` (same link as the nav and `/standards/sci/`). Copy drawn from the course's badge page. The page now lists all four Movement Platform courses.
+- Green Software Practitioner completion figure updated from 130,000+ to 145,000+ on the homepage, About, Education and Membership pages, the about-gsf catalogue component, project-cards story, and the stats of the Practitioner and GSF origin member stories.
+- Dated articles and the origin story's "By 2025" timeline line keep 130,000+, since they describe the figure at the time.
+
 ## 2026-10-01 - Academy Name Reverted to Green Software & AI Academy
 
 - Changed every mention of "Green AI & Software Academy" back to "Green Software & AI Academy": banner link text (`src/lib/announcement.ts`), Education menu label (`src/lib/nav-items.ts`), the Academy card heading and image alt on `/education/`, and the banner and education page docs. Earlier DEVLOG entries are left as history.
