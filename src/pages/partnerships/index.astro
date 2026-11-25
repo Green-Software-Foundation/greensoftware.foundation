@@ -895,16 +895,29 @@ const sections = [
           </li>
         ))}
       </ul>
-      <p class="mb-3 mt-6 text-center text-xs font-bold uppercase tracking-wider text-accent-dark">Or filter by topic</p>
-      <div data-filter-bar class="flex flex-wrap justify-center gap-2 text-sm font-semibold">
-        <button type="button" data-filter="all" aria-pressed="true" class="rounded-full border border-primary px-4 py-1.5 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">Show all</button>
-        {filters.map((f) => (
-          <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full border border-primary px-4 py-1.5 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">{f.label}</button>
-        ))}
-      </div>
-      <p data-filter-status aria-live="polite" class="mt-3 text-center text-sm text-primary-dark/70"></p>
     </div>
   </nav>
+
+  <!-- Topic filter: sticky on larger screens, plus a floating "show everything" pill while a filter is active -->
+  <div class="z-30 border-b border-primary-lighter bg-white/95 py-3 backdrop-blur md:sticky md:top-0">
+    <div class="container">
+      <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold">
+        <span class="mr-1 text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</span>
+        <div data-filter-bar class="flex flex-wrap items-center justify-center gap-2">
+          <button type="button" data-filter="all" aria-pressed="true" class="rounded-full border border-primary px-3.5 py-1 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">All topics</button>
+          {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full border border-primary px-3.5 py-1 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">{f.label}</button>
+          ))}
+        </div>
+      </div>
+      <p data-filter-status aria-live="polite" class="mt-2 text-center text-sm text-primary-dark/70 empty:hidden"></p>
+    </div>
+  </div>
+
+  <div data-filter-float hidden class="fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-3 rounded-full bg-primary-dark py-2 pl-5 pr-2 text-sm text-white shadow-lg">
+    <span data-filter-float-text></span>
+    <button type="button" class="rounded-full bg-white px-4 py-1.5 font-semibold text-primary-dark hover:bg-accent-lightest-2">Show everything</button>
+  </div>
 
   <TextBlock heading={intro.heading} body={intro.body} bodyExtra={intro.extra} />
 
@@ -945,16 +958,28 @@ const sections = [
   var secs=[].slice.call(document.querySelectorAll('[data-section]'));
   var pills=[].slice.call(document.querySelectorAll('a[data-pill]'));
   var status=document.querySelector('[data-filter-status]');
+  var float=document.querySelector('[data-filter-float]');
+  var floatText=document.querySelector('[data-filter-float-text]');
+  var current='all';
+  function label(f){var b=btns.filter(function(x){return x.getAttribute('data-filter')===f;})[0];return b?b.textContent:'';}
   function apply(f){
-    var n=0;
+    current=f; var n=0;
     cards.forEach(function(c){var show=f==='all'||(' '+c.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1;c.hidden=!show;if(show)n++;});
-    secs.forEach(function(s){var any=s.querySelector('[data-tags]:not([hidden])');s.hidden=!any;});
+    secs.forEach(function(s){s.hidden=!s.querySelector('[data-tags]:not([hidden])');});
     pills.forEach(function(p){var s=document.getElementById(p.getAttribute('data-pill'));p.parentElement.hidden=!!(s&&s.hidden);});
-    btns.forEach(function(b){var on=b.getAttribute('data-filter')===f;b.setAttribute('aria-pressed',on?'true':'false');});
-    if(status) status.textContent=f==='all'?'':'Showing '+n+' item'+(n===1?'':'s')+' for '+(btns.filter(function(b){return b.getAttribute('data-filter')===f;})[0].textContent)+'.';
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-filter')===f?'true':'false');});
+    var on=f!=='all';
+    if(status) status.textContent=on?'Showing '+n+' item'+(n===1?'':'s')+' about '+label(f)+'.':'';
+    if(float){float.hidden=!on; if(floatText) floatText.textContent='Showing: '+label(f);}
   }
-  bar.addEventListener('click',function(e){var b=e.target.closest('button[data-filter]');if(!b)return;apply(b.getAttribute('data-filter'));
-    var first=document.querySelector('[data-section]:not([hidden])'); if(first&&b.getAttribute('data-filter')!=='all'){first.scrollIntoView({behavior:'smooth',block:'start'});}});
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-filter]'); if(!b) return;
+    var f=b.getAttribute('data-filter');
+    if(f===current&&f!=='all'){apply('all');return;}
+    apply(f);
+    if(f!=='all'){var first=document.querySelector('[data-section]:not([hidden])'); if(first) first.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+  if(float){float.querySelector('button').addEventListener('click',function(){apply('all');bar.scrollIntoView({behavior:'smooth',block:'center'});});}
 })();
 </script>
 </Layout>

@@ -19,7 +19,9 @@ A wrapping row of pill links ("Jump to") sits directly below the hero, with no h
 
 ## Topic filter
 
-Below the "Jump to" links, "Or filter by topic" buttons (Show all, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy) show only the cards on that topic and hide empty sections. It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "Show all". To add a topic, add a button to `filters` and tag the relevant cards.
+A "Filter by topic" bar (All topics, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy) sits under the "Jump to" links. It stays pinned to the top of the screen on larger screens, so it is always reachable. Choosing a topic shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "All topics", or use the floating "Show everything" pill that appears at the bottom of the screen whenever a filter is active (this works on phones too).
+
+It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "All topics". To add a topic, add a button to `filters` and tag the relevant cards.
 
 ## Plain-English writing
 
