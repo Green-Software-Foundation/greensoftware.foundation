@@ -32,6 +32,7 @@ The "Member case studies" section is organised by member: each card is titled wi
 
 - **Academic members** is its own section (one card per member institution), with its own "Jump to" button.
 - **Future roadmap** (SILO, SCI for OpenTelemetry, SCI for Security, SCI for MCP, other items) is a section plus a third row of topic buttons in the sticky filter bar. SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards (orange) with no source yet: add scope, status and public references, or remove them before launch.
+- Hero: below the intro, "Government and academic institutions can join the Foundation for free." with a "Discuss membership" button to `/membership/enquire/`.
 - Hero image: `public/assets/partnerships-hero.svg` (a globe linked to a government building, university, policy document and certification rosette).
 
 ## Calls to action
