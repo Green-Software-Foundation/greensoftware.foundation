@@ -11,7 +11,7 @@ GSF's education programme as three routes: **foundation courses** (free, Movemen
 
 ### Article carousel
 
-Articles tagged `"education"` in frontmatter are shown in a carousel (3-article minimum). See [article carousels doc](../components/article-carousels.md).
+Articles tagged `"learning"` in frontmatter are shown in the "Keep learning: articles and blog posts" carousel at the bottom of the page (3-article minimum). The `learning` tag marks guides, explainers and reading for continued education (the Academy launch, SCI for AI Bootcamp, measuring guides, the reading list, and similar); it is separate from the broader `education` tag, which is still used on the articles page. See [article carousels doc](../components/article-carousels.md).
 
 ## Static Elements
 
@@ -24,7 +24,7 @@ Everything else on this page is hardcoded:
 - **Green Software Patterns** (`#patterns`) — one bordered FeatureGrid panel (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the patterns member story and `https://patterns.greensoftware.foundation/contribute`. Ends with the section-level call to action "Browse the patterns catalog →" to `https://patterns.greensoftware.foundation`. The "50+" count and pattern structure come from the patterns site.
 - **Member stories** — MemberStories component with 2 hardcoded stories (Green Software Practitioner, Green Software Patterns) linking to `/stories/`
 - **Learning resources** — 5 ResourceCards (Awesome Green Software, podcasts, meetups, stories). Patterns has its own section above, so it is not repeated here.
-- **Education for organisations** — FeatureGrid (`linkStyle="button"`): Cohort Training (button to the SCI for AI Bootcamp article), In-House Licensing (no link yet), Champions, Membership
+- **Education for organisations** — FeatureGrid (`linkStyle="button"`): Cohort Training (button to the SCI for AI Bootcamp article), In-House Licensing ("Email Jamie to discuss →", a `mailto:` link to `jamie@greensoftware.foundation` with a subject line), Champions, Membership
 - **CTA banner** — link to free course
 
 ### FeatureGrid options used here
@@ -35,7 +35,7 @@ Optional props added to `src/components/feature-grid.astro`; without them every 
 
 | Change | Where |
 |--------|-------|
-| Add article to carousel | Tag article with `"education"` |
+| Add article to the "Keep learning" carousel | Tag article with `"learning"` |
 | Update the Academy tracks, courses, stats or quote | Edit the `#academy` FeatureGrid (`variant="panel"`) in `education/index.astro` (course links use the Academy site's course slugs) |
 | Add or change a foundation course | Edit the `#foundation-courses` FeatureGrid features in `education/index.astro` |
 | Update member stories | Edit the MemberStories props in `education/index.astro` |

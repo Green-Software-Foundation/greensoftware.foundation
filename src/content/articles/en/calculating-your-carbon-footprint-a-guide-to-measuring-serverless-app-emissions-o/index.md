@@ -5,7 +5,7 @@ date: "2025-01-23"
 summary: "Denis Angeletta and Franziska Warncke explain how NTT Data applied the SCI specification to quantify the carbon emissions of serverless applications."
 teaserText: "NTT Data is a leading global provider of end-to-end ICT services. Their comprehensive use case illustrates how to address the environmental metric challenges of serverless computing."
 mainImage: "./main.png"
-tags: ["sci", "standards"]
+tags: ["sci", "standards", "learning"]
 ---
 
 Serverless applications, known for their scalability and efficiency, present unique opportunities and challenges in sustainability.

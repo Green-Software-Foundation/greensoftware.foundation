@@ -141,6 +141,8 @@ collections:
         hint: >
           Categorise articles with tags such as "policy", "research", "standards",
           "community". Used to surface articles on topic pages like Policy & Research.
+          Add "learning" to show an article in the "Keep learning" carousel on the
+          Education page (guides, explainers and reading for continued education).
 
       - label: Authors
         name: authors

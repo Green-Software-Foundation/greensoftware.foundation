@@ -146,12 +146,6 @@ export const navItems = [
             description: "Measure the carbon footprint of AI systems",
             external: true,
           },
-          {
-            href: "https://grnsft.org/mov-plat-courses",
-            label: "Further Courses",
-            description: "Explore more courses on the Movement Platform",
-            /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
-          }       
         ],
       },
       {

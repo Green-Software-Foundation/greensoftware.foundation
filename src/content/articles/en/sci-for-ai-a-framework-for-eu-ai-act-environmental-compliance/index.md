@@ -10,6 +10,7 @@ featured: false
 tags:
   - policy
   - standards
+  - learning
 authors: []
 translators: []
 originBlogName: ''

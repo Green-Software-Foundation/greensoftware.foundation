@@ -14,12 +14,12 @@ import CTABanner from "@/components/cta-banner.astro";
 import MemberStories from "@/components/member-stories.astro";
 import Footer from "@/components/footer.astro";
 
-// ----- Articles tagged "education" for the carousel -----
+// ----- Articles tagged "learning" for the carousel (continued-education reading) -----
 const allArticles = await getCollection("articles", (a) => a.data.published !== false);
 const educationArticles = allArticles
   .filter((a: any) => {
     const tags = (a.data.tags || []).map((t: string) => t.toLowerCase());
-    return tags.includes("education");
+    return tags.includes("learning");
   })
   .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
   .map((a: any) => ({
@@ -186,7 +186,7 @@ const educationArticles = allArticles
     linkStyle="button"
     features={[
       { icon: "/assets/standardized-icon.svg", title: "Cohort-Based Training", description: "Structured learning programs with facilitated sessions, group exercises, and peer discussion. Designed for teams adopting green software practices together. Our first SCI for AI Bootcamp ran for 12 weeks with Amadeus, AVEVA, Schneider Electric, and Siemens.", linkText: "Read about the SCI for AI Bootcamp →", linkHref: "/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/" },
-      { icon: "/assets/renewable-icon.svg", title: "In-House Licensing", description: "Integrate GSF courses directly into your internal learning platforms. Deliver green software training at scale, on your own schedule." },
+      { icon: "/assets/renewable-icon.svg", title: "In-House Licensing", description: "Integrate GSF courses directly into your internal learning platforms. Deliver green software training at scale, on your own schedule.", linkText: "Email Jamie to discuss →", linkHref: "mailto:jamie@greensoftware.foundation?subject=In-house%20licensing%20enquiry" },
       { icon: "/assets/co2-icon.svg", title: "Champions Program", description: "Recognize and empower your most passionate green software advocates. Champions drive adoption from within, supported by the global GSF community.", linkText: "Learn about Champions →", linkHref: "https://champions.greensoftware.foundation" },
       { icon: "/assets/realtime-icon.svg", title: "Become a Member", description: "Education programs are available to GSF member organizations. Membership gives you access to cohort training, in-house licensing, and the full GSF ecosystem.", linkText: "Explore membership →", linkHref: "/membership/" },
     ]}
@@ -195,8 +195,8 @@ const educationArticles = allArticles
   <!-- Section 10: Education articles -->
   {educationArticles.length >= 3 && (
     <ArticleCarousel
-      heading="Education & Learning"
-      body="Stories and insights from practitioners, educators, and organizations building the green software movement."
+      heading="Keep learning: articles and blog posts"
+      body="Guides, explainers, and reading to take your green software skills further, from measuring software carbon to the latest on the Academy and the standards."
       articles={educationArticles}
       ctaText="View all articles →"
       ctaHref="/articles/"
