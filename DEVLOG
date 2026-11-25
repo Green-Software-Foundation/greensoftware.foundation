@@ -1,5 +1,11 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: American Spelling and One Practitioner Short Link
+
+- `src/lib/nav-items.ts`: the Green Software Practitioner link now uses `https://grnsft.org/mov-plat-gs-practitioner`, the same short link as the rest of the site (was `grnsft.org/mov-plat-gsp`). Membership "enrolment" description changed to "enrollment".
+- `src/pages/education/index.astro`: "programme leads" changed to "program leads" (American spelling, matching the rest of the site's copy).
+- `docs/pages/education.md`: American spelling.
+
 ## 2026-11-25 - Education: Review Follow-ups to PR #123
 
 - `src/pages/education/index.astro`:

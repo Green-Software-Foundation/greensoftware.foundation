@@ -129,7 +129,7 @@ export const navItems = [
             external: true,
           },
           {
-            href: "https://grnsft.org/mov-plat-gsp",
+            href: "https://grnsft.org/mov-plat-gs-practitioner",
             label: "Green Software Practitioner",
             description: "Free foundational course on building greener software",
             /* iconSrc: pi("gs-practitioner"), icon: "graduation-cap", */ external: true,
@@ -361,7 +361,7 @@ export const navItems = [
           {
             href: "/membership/apply/",
             label: "How to Apply",
-            description: "Step-by-step guide to the enrolment process",
+            description: "Step-by-step guide to the enrollment process",
           },
           {
             href: "https://wiki.greensoftware.foundation/getting-started",
