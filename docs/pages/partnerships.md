@@ -15,7 +15,11 @@ Everything is **static**. Content lives in the `sections` array in the page fron
 
 ## In-page navigation
 
-A sticky pill bar directly below the hero links to each section (`#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#policy`). Labels come from the `NAV` map in the generator that produced the `sections` array; each section is wrapped in a `div` with the matching `id` and `scroll-mt-16` so headings clear the sticky bar. To add a section, add an entry to `sections` with an `id` and `navLabel`.
+A wrapping row of pill links ("Jump to") sits directly below the hero, with no horizontal scrolling. It links to `#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research` and `#policy`. Each section is wrapped in a `div` with the matching `id`. To add a section, add an entry to `sections` with an `id` and `navLabel`.
+
+## Plain-English writing
+
+The page is written for first-time visitors (governments, international bodies, universities). A short "Three terms to know" block explains SCI, SCI for AI and Real Time Cloud. Each card has a plain-English headline and one or two sentences, and a small label above the title naming the country or organisation (the `label` field on `CardGrid` cards). Keep new cards in that style and avoid unexplained jargon.
 
 ## Editorial rules
 

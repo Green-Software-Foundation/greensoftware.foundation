@@ -6,6 +6,8 @@ interface CardItem {
   icon?: string;
   /** Card image shown at the top */
   imageSrc?: string;
+  /** Small label shown above the title (e.g. a country or organisation name) */
+  label?: string;
   title: string;
   description: string;
   /** HTML description (rendered with set:html, used instead of description when provided) */
@@ -113,7 +115,10 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
             )}
             {!card.icon && (
               <>
-                <hr class:list={["my-4", card.featured ? "border-white/20" : "border-border"]} />
+                {card.label && (
+                  <p class:list={["text-xs font-bold uppercase tracking-wider", card.featured ? "text-white/70" : "text-accent-dark"]}>{card.label}</p>
+                )}
+                <hr class:list={[card.label ? "mb-4 mt-3" : "my-4", card.featured ? "border-white/20" : "border-border"]} />
                 <h3 class="text-lg font-bold">{card.title}</h3>
               </>
             )}
