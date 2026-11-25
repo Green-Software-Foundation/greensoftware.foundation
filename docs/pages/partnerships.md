@@ -24,6 +24,10 @@ The "Filter by topic" panel (Standards & topics: SCI, SCI for AI, SCI for Web, R
 
 A small inline script at the bottom of the page does this. Each card carries a `data-tags` attribute (the optional `tags` field on `CardGrid` cards); each section wrapper has `data-section`. Cards with no topic only appear under "Show everything".
 
+## Calls to action at the top of every section
+
+Each section opens with a slim dark call-to-action strip (heading, one-line invitation, button), so anyone arriving via a jump link is met with a way to engage: membership enquiry (`/membership/enquire/`) for G7, Government, Standards, In development, Case studies and Academic members; Contact (`/contact/`) for International organisations, Validation, Research and Policy; SCI for AI (`/standards/sci-ai/`) for WRI; Assemblies (`/assemblies/`) for Assemblies. The copy lives in the `cta` field of each section in the generator. The strip is inline markup using the existing `Button`, not a new component.
+
 ## Sections of note
 
 - **Standards in development** (`#roadmap`) sits straight after Standards. Its cards use the dark "featured" card style with an "In development" label, and the button reads "Learn more and get involved" (SILO, SWI, SCI for OpenTelemetry link to their GSF pages). SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards with no source yet.

@@ -9,6 +9,7 @@ import TextBlock from "@/components/text-block.astro";
 import CardGrid from "@/components/card-grid.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
+import { Button } from "@/components/ui/button";
 import Footer from "@/components/footer.astro";
 
 // All content on this page is hardcoded (static recognition evidence).
@@ -20,7 +21,12 @@ const roadmapFilters = [{"id": "silo", "label": "Data center specification (SILO
 const sections = [
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Help shape the next standards",
+      "body": "SCI for AI was developed with more than 20 partner organisations. Join the Foundation to help develop what comes next.",
+      "text": "Discuss membership",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "g7",
     "navLabel": "G7",
@@ -65,7 +71,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Working in government or the public sector?",
+      "body": "Government organisations join the Foundation free of charge. Talk to us about adopting GSF standards, training or procurement guidance.",
+      "text": "Discuss government membership",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "gov",
     "navLabel": "Governments",
@@ -367,7 +378,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "An international organisation?",
+      "body": "We welcome conversations about measuring and reducing the footprint of digital technology and AI.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
     "cols": 2,
     "id": "igo",
     "navLabel": "International (IGOs)",
@@ -392,7 +408,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Working on how AI is measured and compared?",
+      "body": "Organisations shaping AI measurement and procurement are welcome to contribute to SCI for AI.",
+      "text": "Get involved with SCI for AI",
+      "href": "/standards/sci-ai/"
+    },
     "cols": 3,
     "id": "wri",
     "navLabel": "WRI",
@@ -429,7 +450,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Help develop GSF standards",
+      "body": "Standards are written by members through open working groups and consensus. Join to help shape them.",
+      "text": "Discuss membership",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "standards",
     "navLabel": "Standards",
@@ -514,7 +540,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Shape what comes next",
+      "body": "The standards in development are open to participation. Join a working group and help write them.",
+      "text": "Discuss membership and get involved",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "roadmap",
     "navLabel": "In development",
@@ -590,7 +621,12 @@ const sections = [
   },
   {
     "special": "assemblies",
-    "cta": null,
+    "cta": {
+      "heading": "Take part in an Assembly",
+      "body": "See which Assemblies are running and how to take part.",
+      "text": "See upcoming Assemblies",
+      "href": "/assemblies/"
+    },
     "cols": 3,
     "id": "assemblies",
     "navLabel": "Assemblies",
@@ -602,7 +638,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Reviewing or citing GSF standards?",
+      "body": "If your organisation uses, references or evaluates our standards, we would like to hear from you.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
     "cols": 3,
     "id": "independent",
     "navLabel": "Validation",
@@ -692,7 +733,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Add your organisation's case study",
+      "body": "Members publish their results with GSF. Tell us how your organisation is putting the standards to work.",
+      "text": "Discuss membership",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "industry",
     "navLabel": "Case studies",
@@ -925,7 +971,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "A researcher? Collaborate with us",
+      "body": "We work with universities and research institutes on measurement, methods and evidence.",
+      "text": "Discuss collaboration",
+      "href": "/contact/"
+    },
     "cols": 3,
     "id": "research",
     "navLabel": "Research",
@@ -1246,7 +1297,12 @@ const sections = [
   },
   {
     "special": null,
-    "cta": null,
+    "cta": {
+      "heading": "Engage with GSF on skills and policy",
+      "body": "Join the Policy Working Group, work with us on consultations, or bring GSF training to your teams.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
     "cols": 3,
     "id": "policy",
     "navLabel": "Skills & policy",
@@ -1506,12 +1562,17 @@ const sections = [
   {sections.map((s) => (
     <div id={s.id} data-section class="scroll-mt-24">
       {s.cta && (
-        <CTABanner
-          heading={s.cta.heading}
-          body={s.cta.body}
-          ctaText={s.cta.text}
-          ctaHref={s.cta.href}
-        />
+        <section class="bg-primary-dark py-6 md:py-8" data-pagefind-ignore>
+          <div class="container flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+            <div class="max-w-3xl">
+              <h2 class="text-xl font-extrabold text-white md:text-2xl">{s.cta.heading}</h2>
+              <p class="mt-1 text-sm text-white/80 md:text-base">{s.cta.body}</p>
+            </div>
+            <a href={s.cta.href} class="shrink-0">
+              <Button variant="primary-invert">{s.cta.text}</Button>
+            </a>
+          </div>
+        </section>
       )}
       {s.special === "assemblies" ? (
         <FeatureGrid
