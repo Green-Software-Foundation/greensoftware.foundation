@@ -23,6 +23,10 @@ A "Filter by topic" bar (All topics, SCI, SCI for AI, SCI for Web, Real Time Clo
 
 It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "All topics". To add a topic, add a button to `filters` and tag the relevant cards.
 
+## Member case studies
+
+The "Member case studies" section is organised by member: each card is titled with the member's name (Microsoft, Google Cloud, UBS, Accenture, Thoughtworks and others), with the sector as the small label and a short account of what they did with GSF's standards. To add a member, add a card to the `industry` section in the generator with the member name as the title and a public source link.
+
 ## Calls to action
 
 Each card has up to two buttons: **View source** (external evidence, new tab) and **Learn more about …** (an internal GSF page chosen from the card's topic: SCI → `/standards/sci/`, SCI for AI → `/standards/sci-ai/`, SCI for Web, Real Time Cloud, SWI, SCI for OpenTelemetry, Carmen, `/education/`, `/policy/`, `/membership/`, `/press/`, `/about/`). The mapping lives in the generator (`LEARN`) and feeds the optional `secondaryCtaText` / `secondaryCtaHref` fields on `CardGrid` cards.
@@ -49,6 +53,6 @@ Cards titled "⚠ UNVERIFIED" and the "Draft review key" block are temporary rev
 - IFS keynote, London Climate Action Week June 2026
 - ARCHER2 course GSF attribution
 - Second international research organisation card in the IGO section: placeholder wording, replace once the history of the discussions is available
-- Dodge et al. FAccT 2022 authorship and GSF reference (replace link with ACM DOI)
+- Dodge et al. FAccT 2022 authorship and GSF reference (the ACM link is the one GSF's own SCI page uses)
 
 Also confirm before launch: Norwegian Environment Agency wording (source was an internal Steering email, 24 Nov 2026) and the credit for Taiwan's green software label (MODA-led; TIER is a member and research partner).

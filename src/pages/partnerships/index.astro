@@ -600,15 +600,15 @@ const sections = [
   {
     "cols": 3,
     "id": "industry",
-    "navLabel": "Industry",
-    "heading": "Industry adoption",
-    "body": "Global technology companies and banks are building GSF's standards into their own guidance, tools and products.",
+    "navLabel": "Member case studies",
+    "heading": "Member case studies",
+    "body": "What our members have built, measured and achieved with GSF's standards, from global cloud providers to banks, travel technology and industrial firms.",
     "note": "",
     "cards": [
       {
-        "label": "Microsoft",
-        "title": "Azure's official guidance is built on GSF's principles",
-        "bodyHtml": "Microsoft's architecture guidance for sustainable cloud workloads aligns with the Green Software Principles and was developed in partnership with GSF. Its training also teaches SCI as the better-suited way to calculate software emissions.",
+        "label": "Cloud",
+        "title": "Microsoft",
+        "bodyHtml": "Azure's official sustainability guidance is aligned with the Green Software Principles and was developed in partnership with GSF. Microsoft's training also teaches SCI as the better-suited way to calculate software emissions, and Azure helped write Real Time Cloud.",
         "tags": [
           "sci"
         ],
@@ -618,9 +618,9 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "Google Cloud",
-        "title": "Recommends customers align with GSF",
-        "bodyHtml": "Google's architecture guidance lists GSF alongside the W3C and the GHG Protocol, and credits GSF with SCI.",
+        "label": "Cloud",
+        "title": "Google Cloud",
+        "bodyHtml": "Google's architecture guidance recommends customers align with the W3C, the Green Software Foundation and the GHG Protocol, and credits GSF with developing SCI. Google Cloud also helped write Real Time Cloud.",
         "tags": [
           "sci"
         ],
@@ -630,9 +630,9 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "UBS",
-        "title": "One of the first banks to publish an SCI case study",
-        "bodyHtml": "UBS measured two banking applications. With Microsoft it also ran GSF's <a href='https://greensoftware.foundation/stories/carbon-aware-sdk/'>Carbon Aware SDK</a> on a live risk platform.",
+        "label": "Banking",
+        "title": "UBS",
+        "bodyHtml": "One of the first banks to publish an SCI case study, measuring an investment banking and an asset management application. With Microsoft, UBS also ran GSF's <a href='https://greensoftware.foundation/stories/carbon-aware-sdk/'>Carbon Aware SDK</a> on a live risk platform.",
         "tags": [
           "sci"
         ],
@@ -642,9 +642,9 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "Intesa Sanpaolo",
-        "title": "A live SCI dashboard across a bank's IT",
-        "bodyHtml": "With NTT DATA Italy, the bank built a real-time dashboard showing SCI scores across its infrastructure.",
+        "label": "Banking",
+        "title": "Intesa Sanpaolo",
+        "bodyHtml": "With NTT DATA Italy, built a real-time dashboard showing SCI scores across the bank's entire IT infrastructure.",
         "tags": [
           "sci"
         ],
@@ -654,19 +654,43 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "Globant",
-        "title": "GSF appears in a US securities filing",
-        "bodyHtml": "The company's annual report to the SEC names the GSF partnership as part of its climate compliance activity.",
-        "tags": [],
+        "label": "Banking",
+        "title": "Goldman Sachs",
+        "bodyHtml": "Writes about its work with GSF on its own developer blog and contributes to revising the Principles of Green Software Engineering.",
+        "tags": [
+          "principles"
+        ],
         "ctaText": "View source",
-        "ctaHref": "https://www.sec.gov/Archives/edgar/data/1557860/000162828025009110/glob-20241231.htm",
-        "secondaryCtaText": "Learn more about our partnerships",
-        "secondaryCtaHref": "/about/"
+        "ctaHref": "https://developer.gs.com/blog/posts/meet-the-green-software-foundation-organization-leads-sarah-hsu",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
       },
       {
-        "label": "Accenture",
-        "title": "A real SCI score: 0.025 gCO₂ per API call",
-        "bodyHtml": "Accenture measured a production application handling 890,000 requests a month.",
+        "label": "Banking",
+        "title": "Rabobank",
+        "bodyHtml": "Applied the Principles of Sustainable Software Engineering to analyse its own applications and aim for structural change in how its teams work.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://rabobank.jobs/en/techblog/eight-principles-of-sustainable-software-engineering/",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Banking",
+        "title": "HSBC",
+        "bodyHtml": "Contributed to SOFT, GSF's framework for organisational transformation, alongside colleagues from Microsoft, NTT DATA, Siemens and others.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/press/",
+        "secondaryCtaText": "Learn more about SOFT",
+        "secondaryCtaHref": "/standards/soft/"
+      },
+      {
+        "label": "Consulting",
+        "title": "Accenture",
+        "bodyHtml": "Published one of the first enterprise SCI scores: 0.025 gCO₂ per API call across 890,000 monthly requests. Accenture also co-developed Singapore's national green software guide with GSF and IMDA.",
         "tags": [
           "sci"
         ],
@@ -676,45 +700,21 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "CAST",
-        "title": "15.1% average CO₂ savings across 60 applications",
-        "bodyHtml": "Working with CAST, Autostrade per l'Italia cut emissions across a portfolio of applications.",
+        "label": "Technology consulting",
+        "title": "Thoughtworks",
+        "bodyHtml": "A GSF founding member, Thoughtworks published a global implementation guide for calculating software carbon intensity.",
         "tags": [
           "sci"
         ],
         "ctaText": "View source",
-        "ctaHref": "https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric/",
+        "ctaHref": "https://www.thoughtworks.com/insights/blog/ethical-tech/calculating-software-carbon-intensity",
         "secondaryCtaText": "Learn more about SCI",
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "Amadeus",
-        "title": "Donated its carbon measurement tool to GSF",
-        "bodyHtml": "The travel technology company handed over Carmen, its production tool. It was also the <a href='https://amadeus.com/en/insights/blog/amadeus-joins-green-software-foundation-to-develop-green-coding-practices'>first travel company to join GSF</a>.",
-        "tags": [
-          "sci"
-        ],
-        "ctaText": "View source",
-        "ctaHref": "https://amadeus.com/en/blog/articles/open-source-carbon-measurement-engine",
-        "secondaryCtaText": "Learn more about Carmen",
-        "secondaryCtaHref": "/tools/carmen/"
-      },
-      {
-        "label": "HCLTech",
-        "title": "Turned SCI into a product",
-        "bodyHtml": "The $14bn IT services firm sells an 'SCI Meter' to calculate and reduce application scores.",
-        "tags": [
-          "sci"
-        ],
-        "ctaText": "View source",
-        "ctaHref": "https://www.hcltech.com/sustainability-engineering",
-        "secondaryCtaText": "Learn more about SCI",
-        "secondaryCtaHref": "/standards/sci/"
-      },
-      {
-        "label": "NTT DATA",
-        "title": "A founding-era supporter and builder",
-        "bodyHtml": "The Steering member publicly celebrated SCI becoming an ISO standard (<a href='https://nttdata-solutions.com/fr/salle-de-presse/communiques-de-presse/gsf-develops-an-alpha-version-of-software-carbon-intensity-a-method-for-scoring-the-carbon-emissions-of-software-operations/'>and its 2021 alpha</a>). NTT DATA Japan built a <a href='https://greensoftware.foundation/articles/building-green-software-through-standards-and-collaboration/'>carbon-aware Kubernetes scheduler</a>.",
+        "label": "IT services",
+        "title": "NTT DATA",
+        "bodyHtml": "A Steering member that publicly celebrated SCI becoming an ISO standard (<a href='https://nttdata-solutions.com/fr/salle-de-presse/communiques-de-presse/gsf-develops-an-alpha-version-of-software-carbon-intensity-a-method-for-scoring-the-carbon-emissions-of-software-operations/'>and announced its alpha in 2021</a>). NTT DATA Japan built a <a href='https://greensoftware.foundation/articles/building-green-software-through-standards-and-collaboration/'>carbon-aware Kubernetes scheduler</a>.",
         "tags": [
           "sci"
         ],
@@ -724,19 +724,79 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "Goldman Sachs and Rabobank",
-        "title": "Banks discuss GSF on their own engineering sites",
-        "bodyHtml": "Goldman Sachs writes about GSF on its developer blog. <a href='https://rabobank.jobs/en/techblog/eight-principles-of-sustainable-software-engineering/'>Rabobank</a> applied the principles to its applications.",
+        "label": "IT services",
+        "title": "HCLTech",
+        "bodyHtml": "Turned SCI into a product: its 'SCI Meter' calculates and reduces application scores.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.hcltech.com/sustainability-engineering",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Digital services",
+        "title": "Globant",
+        "bodyHtml": "The GSF partnership is named in the company's annual report to the US Securities and Exchange Commission, as part of its climate compliance activity.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.sec.gov/Archives/edgar/data/1557860/000162828025009110/glob-20241231.htm",
+        "secondaryCtaText": "Learn more about our partnerships",
+        "secondaryCtaHref": "/about/"
+      },
+      {
+        "label": "Software analytics",
+        "title": "CAST",
+        "bodyHtml": "Working with CAST, Autostrade per l'Italia achieved average CO₂ savings of 15.1% across 60 applications.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Travel technology",
+        "title": "Amadeus",
+        "bodyHtml": "The first travel company to join GSF, Amadeus donated Carmen, its production carbon measurement engine, to the Foundation and took part in the SCI for AI Bootcamp.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://amadeus.com/en/blog/articles/open-source-carbon-measurement-engine",
+        "secondaryCtaText": "Learn more about Carmen",
+        "secondaryCtaHref": "/tools/carmen/"
+      },
+      {
+        "label": "Industrial technology",
+        "title": "Siemens, AVEVA and Schneider Electric",
+        "bodyHtml": "Joined Amadeus in the first SCI for AI Bootcamp, applying the standard to their own AI systems, including an HR system and a customer-facing application. Their lessons feed our guidance and training.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Member collaboration",
+        "title": "Green Software Patterns catalogue",
+        "bodyHtml": "Built by NTT DATA, Goldman Sachs, Accenture, AVEVA and contributors from 11 organisations, with measurable before-and-after impact for each pattern.",
         "tags": [
           "principles"
         ],
         "ctaText": "View source",
-        "ctaHref": "https://developer.gs.com/blog/posts/meet-the-green-software-foundation-organization-leads-sarah-hsu"
+        "ctaHref": "https://greensoftware.foundation/press/",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
       },
       {
-        "label": "Trustwise",
-        "title": "Selling SCI alignment as a product feature",
-        "bodyHtml": "The AI security vendor's platform offers real-time emissions tracking aligned with ISO/IEC 21031.",
+        "label": "Technology vendor",
+        "title": "Trustwise",
+        "bodyHtml": "Offers real-time emissions tracking aligned with ISO/IEC 21031 as a feature of its AI security platform.",
         "tags": [
           "sci"
         ],
@@ -746,16 +806,8 @@ const sections = [
         "secondaryCtaHref": "/standards/sci/"
       },
       {
-        "label": "NatWest",
-        "title": "⚠ UNVERIFIED: A bank case study citing SCI",
-        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> No public link found. Locate the source before including.</span></span>A NatWest case study is reported to cite SCI.",
-        "tags": [
-          "sci"
-        ]
-      },
-      {
-        "label": "Green Metrics Tool and APIs.json",
-        "title": "Tools that build SCI in",
+        "label": "Open-source tools",
+        "title": "Green Metrics Tool and APIs.json",
         "bodyHtml": "The Blue Angel-winning Green Metrics Tool generates SCI scores automatically, and the <a href='https://apisjson.org/common/software-carbon-intensity/'>APIs.json</a> format defines a field for publishing an SCI score.",
         "tags": [
           "sci"
@@ -764,6 +816,14 @@ const sections = [
         "ctaHref": "https://www.green-coding.io/blog/sci-per-phase/",
         "secondaryCtaText": "Learn more about SCI",
         "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Banking",
+        "title": "⚠ UNVERIFIED: NatWest",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> No public link found. Locate the source before including.</span></span>A NatWest case study is reported to cite SCI.",
+        "tags": [
+          "sci"
+        ]
       }
     ],
     "bg": "bg-accent-lightest-2"
@@ -877,12 +937,24 @@ const sections = [
       {
         "label": "ACM FAccT 2022",
         "title": "⚠ UNVERIFIED: A widely cited paper on the carbon intensity of AI",
-        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Verify authorship and the GSF reference, and replace this secondary link with the ACM DOI.</span></span>The Dodge et al. paper is counted among GSF's peer-reviewed citations, with Microsoft and Allen Institute co-authors.",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Confirm authorship and the GSF reference. The ACM link is the one GSF's own SCI page already uses.</span></span>The Dodge et al. paper is counted among GSF's peer-reviewed citations, with Microsoft and Allen Institute co-authors.",
         "tags": [
           "sci"
         ],
         "ctaText": "View source",
-        "ctaHref": "https://www.emergentmind.com/topics/software-carbon-intensity-sci"
+        "ctaHref": "https://dl.acm.org/doi/pdf/10.1145/3531146.3533234"
+      },
+      {
+        "label": "ACM SoCC 2024",
+        "title": "The Sunk Carbon Fallacy: rethinking carbon metrics for carbon-aware scheduling",
+        "bodyHtml": "Published at the ACM Symposium on Cloud Computing, and cited on GSF's SCI page among peer-reviewed research.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://arxiv.org/abs/2410.15087",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
       },
       {
         "label": "Academic member · United Kingdom",
