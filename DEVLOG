@@ -1,5 +1,11 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: Green Software Patterns Section
+
+- `src/pages/education/index.astro`: new `#patterns` FeatureGrid after the Academy pilot card, explaining what a pattern is (structure: problem, solution, SCI impact, assumptions, considerations, references), how to use them (by role or lifecycle stage, apply and measure), why they help (expert-reviewed, measured impact), and how to propose one.
+- Hero button "Browse patterns" renamed "Explore patterns" and now jumps to `#patterns` instead of leaving the site; the section links on to the catalog.
+- `docs/pages/education.md` updated.
+
 ## 2026-11-25 - Education: Foundation Courses and Academy Tracks
 
 - `src/pages/education/index.astro` restructured around two levels of learning:
