@@ -3,12 +3,12 @@ title: "Our engineers don't know how to build green software"
 published: true
 summary: >
   How Sarah Hsu of Goldman Sachs, Chris Lloyd-Jones of Avanade, and GSF members worldwide
-  built and scaled the Green Software Practitioner course — now completed by over 130,000
+  built and scaled the Green Software Practitioner course — now completed by over 145,000
   engineers across the industry.
 
 mainImage: /assets/stories/green-software-practitioner.jpg
 problemHeading: Every company was starting from zero — no shared language, no curriculum, no certification
-journeyHeading: From a free course to 130,000 engineers trained
+journeyHeading: From a free course to 145,000 engineers trained
 
 orgs:
   - name: Goldman Sachs
@@ -22,7 +22,7 @@ orgs:
   - name: Siemens
 
 stats:
-  - value: "130,000+"
+  - value: "145,000+"
     label: Engineers who have completed the Green Software Practitioner course
   - value: "50,000+"
     label: Trained in under a year at launch

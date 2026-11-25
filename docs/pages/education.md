@@ -5,7 +5,7 @@
 
 ## What the Page Shows
 
-GSF's education programme: the Green Software & AI Academy pilot, courses (Green Software Practitioner, SOFT Essentials, SCI for AI Fundamentals), Movement Platform, member stories, learning resources, organisation programmes, and related articles.
+GSF's education programme as three routes: **foundation courses** (free, Movement Platform: Green Software Practitioner, SCI Fundamentals, SCI for AI Fundamentals, SOFT Essentials), **professional certification** through the Green Software & AI Academy (the centrepiece, five role tracks, fourteen courses), and **Green Software Patterns** for putting it into practice. Also member stories, learning resources, organisation programmes, and related articles.
 
 ## Dynamic Elements
 
@@ -17,25 +17,26 @@ Articles tagged `"education"` in frontmatter are shown in a carousel (3-article 
 
 Everything else on this page is hardcoded:
 
-- **Hero** — heading, CTAs (free course link, patterns catalogue)
-- **Academy pilot** — dark CTACard directly under the hero: fourteen role-based courses across five tracks, member-organisation pilot, button to `https://academy.greensoftware.foundation`. Copy is taken from the launch announcement.
-- **Courses heading** — intro to Movement Platform courses
-- **Green Software Practitioner** — TabbedSection (overview, audience, outcomes)
-- **SOFT Essentials** — TabbedSection (overview, audience, outcomes)
-- **SCI for AI Fundamentals** — TabbedSection (overview, audience, outcomes)
-- **"More courses coming"** — TextBlock placeholder
-- **Movement Platform CTA** — CTACard
+- **Hero** — heading, body naming the three routes, CTAs "Start free" (`#foundation-courses`), "Explore the Academy" (`#academy`), "Explore patterns" (`#patterns`)
+- **Three ways to learn** — FeatureGrid (cards, 3 columns, `linkStyle="button"`): Foundation courses ("Start here"), Green Software & AI Academy ("Go professional", `featured` dark card), Green Software Patterns ("Put it into practice"). Buttons jump to the three sections below.
+- **Foundation courses** (`#foundation-courses`) — one compact bordered FeatureGrid (4 columns, `linkStyle="button"`): a card per course with a one-line description and "Take the course →" button (Practitioner, SCI Fundamentals via `https://grnsft.org/sci-fundamentals-course`, SCI for AI Fundamentals, SOFT Essentials). Ends with the section-level "Join the Movement Platform →" button and a note that Practitioner + SCI Fundamentals are the recommended starting point for the Academy. The earlier long tabbed sections (overview, audience, outcomes per course) were removed from this page; the detail lives on each course page.
+- **Academy: professional certification** (`#academy`) — the centrepiece: one large dark FeatureGrid `variant="panel"`. Contents: eyebrow "Professional certification", heading, intro (14 courses, 5 tracks, GSF standards, scenario-based assessment, vendor-neutral certification), three headline numbers, five white audience cards, a quote from the Academy launch announcement (Navveen Balani, Executive Director), and closing buttons "Explore the Academy →" (`https://academy.greensoftware.foundation`) and "Become a member →" (`/membership/`). Each audience card has: the Academy track name as a pill, an audience title ("Courses for people who lead and manage" etc.), a who-it's-for line, the track's courses as links to their Academy course pages (`academy.greensoftware.foundation/course/<slug>`), and a button to the Academy home page (the Academy site has no per-track URLs). Track, course names and slugs come from the Academy site.
+- **Green Software Patterns** (`#patterns`) — one bordered FeatureGrid panel (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the patterns member story and `https://patterns.greensoftware.foundation/contribute`. Ends with the section-level call to action "Browse the patterns catalog →" to `https://patterns.greensoftware.foundation`. The "50+" count and pattern structure come from the patterns site.
 - **Member stories** — MemberStories component with 2 hardcoded stories (Green Software Practitioner, Green Software Patterns) linking to `/stories/`
-- **Learning resources** — 6 ResourceCards (Patterns, Awesome Green Software, podcasts, meetups, stories)
-- **Education for organisations** — FeatureGrid (Cohort Training, In-House Licensing, Champions, Membership)
+- **Learning resources** — 5 ResourceCards (Awesome Green Software, podcasts, meetups, stories). Patterns has its own section above, so it is not repeated here.
+- **Education for organisations** — FeatureGrid (`linkStyle="button"`): Cohort Training (button to the SCI for AI Bootcamp article), In-House Licensing (no link yet), Champions, Membership
 - **CTA banner** — link to free course
+
+### FeatureGrid options used here
+
+Optional props added to `src/components/feature-grid.astro`; without them every other page renders as before: `linkStyle` (`"link"` default, or `"button"`: primary button pinned to the bottom of each card); section-level `ctaText` / `ctaHref` / `ctaLeadIn` (button under the grid, inside the same container); per feature `badge` (pill above the title) and `descriptionHtml` (HTML description); and a `variant="panel"` look (large dark panel with white cards) that also takes `eyebrow`, `stats` (headline numbers), `quote` (pull quote) and `ctaSecondaryText` / `ctaSecondaryHref` (second, outlined button).
 
 ## How to Update
 
 | Change | Where |
 |--------|-------|
 | Add article to carousel | Tag article with `"education"` |
-| Update the Academy pilot card | Edit the CTACard under the hero in `education/index.astro` |
-| Add/update a course | Edit the TabbedSection props in `education/index.astro` |
+| Update the Academy tracks, courses, stats or quote | Edit the `#academy` FeatureGrid (`variant="panel"`) in `education/index.astro` (course links use the Academy site's course slugs) |
+| Add or change a foundation course | Edit the `#foundation-courses` FeatureGrid features in `education/index.astro` |
 | Update member stories | Edit the MemberStories props in `education/index.astro` |
 | Add learning resource | Edit ResourceCards in `education/index.astro` |

@@ -1,5 +1,54 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Nav: Education Intro Link Moved to the Top
+
+- `src/lib/nav-items.ts`: removed the Education menu's bottom "About our education program →" button (`footerLink`). `/education/` is now the first link in the Learn column, labelled "Introduction to GSF Education programme", with the description "Free courses, professional certification, and patterns". Other links unchanged.
+
+## 2026-11-25 - Education: Page Rethought Around Three Routes
+
+- `src/pages/education/index.astro` restructured so the Academy is the centrepiece rather than an add-on:
+  - Hero names the three routes with three jump buttons (Start free, Explore the Academy, Explore patterns).
+  - New "Three ways to learn" row (cards, Academy as the dark featured card) replaces the two-card learning pathway.
+  - Foundation courses shrunk to one compact panel of four course cards plus the Movement Platform button. The four long tabbed course sections and the separate Movement Platform card are gone from this page.
+  - The Academy is now one large dark panel: eyebrow, heading, intro, headline numbers (14 courses, 5 tracks, ISO), the five audience cards, a quote from the launch announcement, and closing buttons (Academy site, membership). The separate pilot CTACard was folded into it.
+  - Patterns panel unchanged. The duplicate Patterns card was removed from Learning resources.
+  - Removed the now-unused TextBlock, TabbedSection and CTACard imports.
+- `src/components/feature-grid.astro`: new optional `variant="panel"` (dark panel with white cards) with `eyebrow`, `stats`, `quote`, `ctaSecondaryText` / `ctaSecondaryHref`. Existing variants and pages are unchanged.
+- `docs/pages/education.md` updated.
+
+## 2026-11-25 - Education: Audience Cards, Unified Patterns Panel, Org Buttons; Community Nav Descriptions
+
+- `src/components/feature-grid.astro`: new optional props, defaults unchanged so other pages are unaffected: `linkStyle` (`"button"` renders each card's link as a primary button pinned to the bottom of the card), section-level `ctaText` / `ctaHref` / `ctaLeadIn` (button under the grid inside the same container), and per-feature `badge` and `descriptionHtml`.
+- `/education/` Academy section: cards retitled by audience ("Courses for people who lead and manage", "...who design systems", "...who build and measure", "...who work with data and models", "...who run systems"), with the Academy track name as a pill, a who-it's-for line, linked course names and a button each. Course names and links follow the Academy site; this adds Building a Green AI Agent (Build and measure), which makes the fourteen courses the launch article describes, so the intro says "Fourteen courses across five tracks" again. The Academy site has no per-track URLs, so the buttons go to its home page.
+- `/education/` patterns: the separate "Find a pattern you can apply today" CTACard is gone. The patterns section is now one bordered panel with the catalog button inside it (section-level CTA), so it reads as one section.
+- `/education/` organisations: links render as buttons. Cohort-Based Training now links to the SCI for AI Bootcamp article and mentions the first cohort. In-House Licensing has no link yet.
+- `src/lib/nav-items.ts`: Community menu now has a one-line description under every link (Champions Program, Meetup Community, Movement Platform, Newsletter, Carbon Hack, Summit), matching the podcasts. Labels, links and order unchanged.
+- `docs/pages/education.md` updated.
+
+## 2026-11-25 - Education: Green Software Patterns Section
+
+- `src/pages/education/index.astro`: new `#patterns` FeatureGrid after the Academy pilot card, explaining what a pattern is (structure: problem, solution, SCI impact, assumptions, considerations, references), how to use them (by role or lifecycle stage, apply and measure), why they help (expert-reviewed, measured impact), and how to propose one.
+- Hero button "Browse patterns" renamed "Explore patterns" and now jumps to `#patterns` instead of leaving the site; the section links on to the catalog.
+- Follow-up: the catalog link was easy to miss inside the first card, so it moved to its own light CTACard ("Find a pattern you can apply today", button "Browse the patterns catalog →") straight after the four cards.
+- `docs/pages/education.md` updated.
+
+## 2026-11-25 - Education: Foundation Courses and Academy Tracks
+
+- `src/pages/education/index.astro` restructured around two levels of learning:
+  - New "Your learning pathway" FeatureGrid under the hero: 1. Foundation courses (free, Movement Platform), 2. Professional certification (Academy), with jump links to `#foundation-courses` and `#academy`.
+  - The Movement Platform courses are now called **foundation courses** (not "basic"); the intro names Practitioner + SCI Fundamentals as the recommended starting point for the Academy.
+  - New Academy section after the Movement Platform CTA: a 5-column FeatureGrid of the five tracks (Lead and manage, Design, Build and measure, Data and models, Run) with their courses, from the Academy launch article.
+  - The dark Academy pilot CTACard moved from under the hero to close the Academy section; copy rewritten (role list now shown in the tracks above).
+  - Removed the outdated "More courses coming soon" block (the AI and advanced courses it promised now exist).
+  - Page meta description updated.
+- `docs/pages/education.md` updated to match.
+
+## 2026-11-25 - Education: SCI Fundamentals Card; Practitioner Figure 145,000+
+
+- `src/pages/education/index.astro`: added an SCI Fundamentals TabbedSection between Green Software Practitioner and SCI for AI Fundamentals, linking to `https://grnsft.org/sci-fundamentals-course` (same link as the nav and `/standards/sci/`). Copy drawn from the course's badge page. The page now lists all four Movement Platform courses.
+- Green Software Practitioner completion figure updated from 130,000+ to 145,000+ on the homepage, About, Education and Membership pages, the about-gsf catalogue component, project-cards story, and the stats of the Practitioner and GSF origin member stories.
+- Dated articles and the origin story's "By 2025" timeline line keep 130,000+, since they describe the figure at the time.
+
 ## 2026-10-01 - Academy Name Reverted to Green Software & AI Academy
 
 - Changed every mention of "Green AI & Software Academy" back to "Green Software & AI Academy": banner link text (`src/lib/announcement.ts`), Education menu label (`src/lib/nav-items.ts`), the Academy card heading and image alt on `/education/`, and the banner and education page docs. Earlier DEVLOG entries are left as history.
