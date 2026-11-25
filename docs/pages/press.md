@@ -40,7 +40,7 @@ Pulled from the stories content collection, filtered to only stories with `stats
 
 ### Press mentions (media coverage)
 
-From `src/data/press-mentions.json` (fetched from the Notion "GSF Mentions in the News" database). Each mention shows source name, date, title, and links to the external article. The section is a **full-width sideways scroller, three cards deep**: left/right arrow buttons, a visible scrollbar, a fade with an arrow at the right edge, and cards that peek past the edge make it obvious there is more to scroll to. Arrow keys also scroll when the strip is focused. The arrows and fade hide themselves when everything already fits. A small inline script at the end of the page file drives the arrows.
+From `src/data/press-mentions.json` (fetched from the Notion "GSF Mentions in the News" database). Each mention shows source name, date, title, and links to the external article.
 
 **To add a press mention:** add it to the Notion Press Mentions database. See [Notion doc](../notion.md).
 
