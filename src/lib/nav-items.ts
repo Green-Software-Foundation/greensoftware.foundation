@@ -21,6 +21,9 @@ export const navItems = [
   {
     label: "Standards",
     footerLink: { href: "/standards/", label: "About our standards process →" },
+    extraFooterLinks: [
+      { href: "/partnerships/", label: "Partnerships & Recognition →" },
+    ],
     sections: [
       {
         title: "Software",

@@ -3,7 +3,7 @@
 **URL:** `/partnerships/`
 **File:** `src/pages/partnerships/index.astro`
 **Breadcrumb:** Home / About / Partnerships & Recognition
-**Navigation:** About menu, after Governance & Leadership (`src/lib/nav-items.ts`)
+**Navigation:** About menu (after Governance & Leadership) and a second green button, "Partnerships & Recognition →", at the bottom of the Standards dropdown beside "About our standards process →" (`src/lib/nav-items.ts`, `extraFooterLinks`; rendered in `src/components/react/navbar.tsx`)
 
 ## What the Page Shows
 
