@@ -24,10 +24,6 @@ The "Filter by topic" panel (Standards & topics: SCI, SCI for AI, SCI for Web, R
 
 A small inline script at the bottom of the page does this. Each card carries a `data-tags` attribute (the optional `tags` field on `CardGrid` cards); each section wrapper has `data-section`. Cards with no topic only appear under "Show everything".
 
-## Member case studies
-
-The "Member case studies" section is organised by member: each card is titled with the member's name (Microsoft, Google Cloud, UBS, Accenture, Thoughtworks and others), with the sector as the small label and a short account of what they did with GSF's standards. To add a member, add a card to the `industry` section in the generator with the member name as the title and a public source link.
-
 ## Sections of note
 
 - **Standards in development** (`#roadmap`) sits straight after Standards. Its cards use the dark "featured" card style with an "In development" label, and the button reads "Learn more and get involved" (SILO, SWI, SCI for OpenTelemetry link to their GSF pages). SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards with no source yet.
