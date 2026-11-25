@@ -1,5 +1,11 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: Licensing Email, "Keep learning" Articles, Nav Cleanup
+
+- `/education/` In-House Licensing card: button "Email Jamie to discuss →" (`mailto:jamie@greensoftware.foundation` with subject "In-house licensing enquiry"). All four organisation cards now have a button.
+- `/education/` bottom carousel renamed "Keep learning: articles and blog posts" with new intro copy, and now driven by a new `learning` tag instead of `education` (which pulled in profiles, news and older posts). Eight articles carry the tag: Academy launch, SCI for AI Bootcamp, SCI for AI and the EU AI Act, Built to Measure, Measuring for Reporting vs. Action, Patterns Catalog: The Next Chapter, the serverless measurement guide, and the green software reading list. Editors can add or remove the tag in the CMS (hint added to the Tags field). `docs/pages/education.md` and `docs/components/article-carousels.md` updated.
+- `src/lib/nav-items.ts`: removed "Further Courses" from the Education menu; the Movement Platform stays reachable from the Community menu and the Education page.
+
 ## 2026-11-25 - Nav: Education Intro Link Moved to the Top
 
 - `src/lib/nav-items.ts`: removed the Education menu's bottom "About our education program →" button (`footerLink`). `/education/` is now the first link in the Learn column, labelled "Introduction to GSF Education programme", with the description "Free courses, professional certification, and patterns". Other links unchanged.

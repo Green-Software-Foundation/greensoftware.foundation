@@ -11,6 +11,7 @@ tags:
   - standards
   - SCI for AI
   - community
+  - learning
 authors: []
 translators: []
 originBlogName: ''

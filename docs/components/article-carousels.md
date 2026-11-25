@@ -38,7 +38,7 @@ const filtered = allArticles
 | `policy` | Policy & Research | `/policy/` |
 | `research` | Policy & Research | `/policy/` |
 | `community` | Community | `/community/` |
-| `education` | Education | `/education/` |
+| `learning` | Education ("Keep learning" carousel) | `/education/` |
 
 ## Homepage Carousel
 

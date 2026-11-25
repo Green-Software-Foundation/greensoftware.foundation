@@ -10,6 +10,7 @@ featured: true
 tags:
   - standards
   - education
+  - learning
 authors: []
 translators: []
 originBlogName: ''

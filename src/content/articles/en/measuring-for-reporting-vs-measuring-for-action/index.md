@@ -17,6 +17,7 @@ authors:
         link: https://www.linkedin.com/in/asimhussain/
 originBlogName: ''
 publishedOriginUrl: ''
+tags: ["learning"]
 ---
 
 There are two reasons to measure carbon emissions. One is reporting. The other is driving action. Both matter. But they're not the same thing, and the trade-offs between them are worth understanding.
