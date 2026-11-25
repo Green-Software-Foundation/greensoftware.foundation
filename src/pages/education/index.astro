@@ -159,14 +159,15 @@ const educationArticles = allArticles
   <div id="academy" class="scroll-mt-24"></div>
   <FeatureGrid
     heading="Professional certification: the Green Software & AI *Academy*"
-    body="The Academy takes you beyond the foundations. Its courses are built around the decisions each role controls, and follow the full silicon-to-screen lifecycle of a digital system. They are grounded in GSF standards for carbon, energy, and water, including the SCI specification (ISO/IEC 21031:2024), SCI for AI, SEI, and SWI. Every course ends in a scenario-based assessment and leads to a vendor-neutral GSF certification. Courses can be taken independently, so teams can start with the roles that matter most to them."
+    body="The Academy takes you beyond the foundations. Fourteen courses across five tracks, each built around the decisions a role controls, and follow the full silicon-to-screen lifecycle of a digital system. They are grounded in GSF standards for carbon, energy, and water, including the SCI specification (ISO/IEC 21031:2024), SCI for AI, SEI, and SWI. Every course ends in a scenario-based assessment and leads to a vendor-neutral GSF certification. Courses can be taken independently, so teams can start with the roles that matter most to them."
     columns={5}
+    linkStyle="button"
     features={[
-      { title: "Lead and manage", description: "For executives, managers, and policymakers. Courses: Green IT for Leaders · Green AI for Executives · Getting Started and Scaling Green Software and Green AI · Green AI for Policy Makers." },
-      { title: "Design", description: "For architects. Courses: Green and Efficient Architect · Designing Green Agentic Systems." },
-      { title: "Build and measure", description: "For developers. Courses: Green Software Developer · SCI for AI Practitioner: The Measurement Lab · Software Water Foundations." },
-      { title: "Data and models", description: "For data and ML practitioners. Courses: Green Data Practitioner · Green AI for ML Practitioners · Effective, Efficient and Green AI Prompting." },
-      { title: "Run", description: "For operations and platform teams. Course: GreenOps Practitioner." },
+      { badge: "Lead and manage", title: "Courses for people who lead and manage", description: "Executives, sponsors, programme leads, and policymakers who set direction, budgets, and rules.", descriptionHtml: "<p>Executives, sponsors, programme leads, and policymakers who set direction, budgets, and rules.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-it-leaders\">Green IT for Leaders</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-for-executives\">Green AI for Executives</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/scaling-green-ai-and-software\">Scaling Green AI and Software</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-for-policy-makers\">Green AI for Policy Makers</a></li></ul>", linkText: "Explore leader courses →", linkHref: "https://academy.greensoftware.foundation/" },
+      { badge: "Design", title: "Courses for people who design systems", description: "Architects who shape how software and AI systems are designed, before any code is written.", descriptionHtml: "<p>Architects who shape how software and AI systems are designed, before any code is written.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-and-efficient-architect\">Green and Efficient Architect</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/designing-green-agentic-systems\">Designing Green Agentic Systems</a></li></ul>", linkText: "Explore architect courses →", linkHref: "https://academy.greensoftware.foundation/" },
+      { badge: "Build and measure", title: "Courses for people who build and measure", description: "Developers and engineers who build software and AI systems and measure their impact.", descriptionHtml: "<p>Developers and engineers who build software and AI systems and measure their impact.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-software-developer\">Green Software Developer</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/building-a-green-ai-agent\">Building a Green AI Agent</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/sci-for-ai-practitioner-the-measurement-lab\">SCI for AI Practitioner: The Measurement Lab</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/software-water-foundations\">Software Water Foundations</a></li></ul>", linkText: "Explore developer courses →", linkHref: "https://academy.greensoftware.foundation/" },
+      { badge: "Data and models", title: "Courses for people who work with data and models", description: "Data and ML engineers who work with data pipelines, models, and prompts.", descriptionHtml: "<p>Data and ML engineers who work with data pipelines, models, and prompts.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-data-practitioner\">Green Data Practitioner</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-for-ml-practitioners\">Green AI for ML Practitioners</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-prompting-for-self-and-agents\">Green AI Prompting, for Self & Agents</a></li></ul>", linkText: "Explore data and ML courses →", linkHref: "https://academy.greensoftware.foundation/" },
+      { badge: "Run", title: "Courses for people who run systems", description: "Platform, SRE, and DevOps teams who operate software and AI in production.", descriptionHtml: "<p>Platform, SRE, and DevOps teams who operate software and AI in production.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/greenops-practitioner\">GreenOps Practitioner</a></li></ul>", linkText: "Explore operations courses →", linkHref: "https://academy.greensoftware.foundation/" },
     ]}
   />
 
@@ -185,23 +186,17 @@ const educationArticles = allArticles
   <FeatureGrid
     heading="Put it into practice with Green Software *Patterns*"
     body="Courses teach the principles. Patterns show you what to change. The Green Software Patterns catalog is a free, open-source library of more than 50 peer-reviewed techniques for reducing the emissions of software across AI, cloud, and web. Each pattern describes one concrete change, such as choosing the cloud region closest to your users, and explains how it lowers your Software Carbon Intensity (SCI) score."
+    variant="bordered"
     columns={4}
+    ctaLeadIn="Browse more than 50 free, peer-reviewed patterns by role or lifecycle stage. Each one shows what to change, why it works, and how it affects your SCI score."
+    ctaText="Browse the patterns catalog →"
+    ctaHref="https://patterns.greensoftware.foundation"
     features={[
       { icon: "/assets/shape-icon-1.svg", title: "What a pattern is", description: "A short, practical guide to one change. Every pattern follows the same structure: the problem, the solution, its SCI impact, the assumptions behind it, things to consider before applying it, and references." },
       { icon: "/assets/standardized-icon.svg", title: "How to use them", description: "Find patterns for your role, such as DevOps, front-end, AI/ML, or solution architecture, or for your lifecycle stage, from requirements to operations. Review the solution, check how it fits your system, then apply it and measure the result." },
       { icon: "/assets/co2-icon.svg", title: "Why they help", description: "Patterns turn what you learned in the courses into changes you can make this sprint. Each one is reviewed by subject-matter experts from GSF member organizations, and measured: NTT DATA recorded about a 4% carbon reduction from a single pattern.", linkText: "Read the patterns story →", linkHref: "/stories/green-software-patterns/" },
       { icon: "/assets/realtime-icon.svg", title: "Share what works", description: "Found a technique that cuts emissions? Propose it on GitHub. You describe the problem and your approach, and the patterns team helps develop it through expert and community review.", linkText: "Propose a pattern →", linkHref: "https://patterns.greensoftware.foundation/contribute" },
     ]}
-  />
-
-  <!-- Section 7e: Patterns catalog CTA -->
-  <CTACard
-    heading="Find a pattern you can apply *today*"
-    body="Browse more than 50 free, peer-reviewed patterns by role or lifecycle stage. Each one shows what to change, why it works, and how it affects your SCI score."
-    ctaText="Browse the patterns catalog →"
-    ctaHref="https://patterns.greensoftware.foundation"
-    imageSrc="/assets/ready-new.svg"
-    imageAlt="Green Software Patterns catalog illustration"
   />
 
   <!-- Section 8: Education stories -->
@@ -246,8 +241,9 @@ const educationArticles = allArticles
     body="Scaling green software skills across your teams? We offer tailored programs for GSF member organizations."
     variant="bordered"
     columns={2}
+    linkStyle="button"
     features={[
-      { icon: "/assets/standardized-icon.svg", title: "Cohort-Based Training", description: "Structured learning programs with facilitated sessions, group exercises, and peer discussion. Designed for teams adopting green software practices together." },
+      { icon: "/assets/standardized-icon.svg", title: "Cohort-Based Training", description: "Structured learning programs with facilitated sessions, group exercises, and peer discussion. Designed for teams adopting green software practices together. Our first SCI for AI Bootcamp ran for 12 weeks with Amadeus, AVEVA, Schneider Electric, and Siemens.", linkText: "Read about the SCI for AI Bootcamp →", linkHref: "/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/" },
       { icon: "/assets/renewable-icon.svg", title: "In-House Licensing", description: "Integrate GSF courses directly into your internal learning platforms. Deliver green software training at scale, on your own schedule." },
       { icon: "/assets/co2-icon.svg", title: "Champions Program", description: "Recognize and empower your most passionate green software advocates. Champions drive adoption from within, supported by the global GSF community.", linkText: "Learn about Champions →", linkHref: "https://champions.greensoftware.foundation" },
       { icon: "/assets/realtime-icon.svg", title: "Become a Member", description: "Education programs are available to GSF member organizations. Membership gives you access to cohort training, in-house licensing, and the full GSF ecosystem.", linkText: "Explore membership →", linkHref: "/membership/" },

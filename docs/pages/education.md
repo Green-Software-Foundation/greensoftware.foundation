@@ -25,21 +25,24 @@ Everything else on this page is hardcoded:
 - **SCI for AI Fundamentals** — TabbedSection (overview, audience, outcomes)
 - **SOFT Essentials** — TabbedSection (overview, audience, outcomes)
 - **Movement Platform CTA** — CTACard
-- **Academy: professional certification** (`#academy`) — FeatureGrid (5 columns), one card per track: Lead and manage, Design, Build and measure, Data and models, Run, each listing its courses. Track and course names are taken from the Academy launch article (2026-10-01).
+- **Academy: professional certification** (`#academy`) — FeatureGrid (5 columns, `linkStyle="button"`), one card per track. Each card has the Academy track name as a pill (Lead and manage, Design, Build and measure, Data and models, Run), an audience title ("Courses for people who lead and manage" etc.), a short description of who it is for, the track's courses as links to their Academy course pages (`academy.greensoftware.foundation/course/<slug>`), and a button to the Academy home page. The Academy site has no per-track URLs, so all five buttons go to its home page, where the tracks are shown. Track, course names and slugs come from the Academy site (14 courses).
 - **Academy pilot** — dark CTACard with button to `https://academy.greensoftware.foundation`
-- **Green Software Patterns** (`#patterns`) — FeatureGrid (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the patterns member story and `https://patterns.greensoftware.foundation/contribute`. The "50+" count and pattern structure come from the patterns site.
-- **Patterns catalog CTA** — light CTACard ("Find a pattern you can apply today") directly after the patterns cards, the main button to `https://patterns.greensoftware.foundation`
+- **Green Software Patterns** (`#patterns`) — one bordered FeatureGrid panel (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the patterns member story and `https://patterns.greensoftware.foundation/contribute`. The panel ends with the section-level call to action (`ctaLeadIn`, `ctaText`, `ctaHref`): "Browse the patterns catalog →" to `https://patterns.greensoftware.foundation`. The "50+" count and pattern structure come from the patterns site.
 - **Member stories** — MemberStories component with 2 hardcoded stories (Green Software Practitioner, Green Software Patterns) linking to `/stories/`
 - **Learning resources** — 6 ResourceCards (Patterns, Awesome Green Software, podcasts, meetups, stories)
-- **Education for organisations** — FeatureGrid (Cohort Training, In-House Licensing, Champions, Membership)
+- **Education for organisations** — FeatureGrid (`linkStyle="button"`): Cohort Training (button to the SCI for AI Bootcamp article), In-House Licensing (no link yet), Champions, Membership
 - **CTA banner** — link to free course
+
+### FeatureGrid options used here
+
+These optional props were added to `src/components/feature-grid.astro`; without them every other page renders as before: `linkStyle` (`"link"` default, or `"button"`: primary button aligned to the bottom of each card), `ctaText` / `ctaHref` / `ctaLeadIn` (section-level button under the grid, inside the same container; cards and bordered variants), and per feature `badge` (pill above the title) and `descriptionHtml` (HTML description, used instead of `description`).
 
 ## How to Update
 
 | Change | Where |
 |--------|-------|
 | Add article to carousel | Tag article with `"education"` |
-| Update the Academy tracks or courses | Edit the `#academy` FeatureGrid in `education/index.astro` |
+| Update the Academy tracks or courses | Edit the `#academy` FeatureGrid in `education/index.astro` (course links use the Academy site's course slugs) |
 | Update the Academy pilot card | Edit the dark CTACard after the Academy tracks in `education/index.astro` |
 | Add/update a course | Edit the TabbedSection props in `education/index.astro` |
 | Update member stories | Edit the MemberStories props in `education/index.astro` |

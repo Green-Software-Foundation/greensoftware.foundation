@@ -262,21 +262,26 @@ export const navItems = [
           {
             href: "https://champions.greensoftware.foundation",
             label: "Champions Program",
+            description: "Advocate for green software in your organization",
             /* iconSrc: pi("green-software-champions"), icon: "trophy", */ external: true,
           },    
           {
             href: "https://grnsft.org/meetup",
             label: "Meetup Community",
+            description: "Local meetup groups in 17 countries",
             /* iconSrc: pi("movement-platform"), icon: "users", */ external: true,
           },          
           {
             href: "https://movement.greensoftware.foundation",
             label: "Movement Platform",
+            description: "Learn, discuss, and connect with practitioners",
             /* iconSrc: pi("movement-platform"), icon: "users", */ external: true,
           },
           {
             href: "/newsletter/",
-            label: "Newsletter" /* icon: "newspaper", */,
+            label: "Newsletter",
+            description: "Green software insights and community updates",
+            /* icon: "newspaper", */
           }
         ],
       },
@@ -286,11 +291,13 @@ export const navItems = [
           {
             href: "https://hack.greensoftware.foundation/",
             label: "Carbon Hack",
+            description: "Our flagship green software hackathon",
             /* icon: "zap", */ external: true,
           },          
           {
             href: "https://summit.greensoftware.foundation",
             label: "Summit",
+            description: "Annual in-person events for the community",
             /* icon: "calendar", */ external: true,
           }
         ],

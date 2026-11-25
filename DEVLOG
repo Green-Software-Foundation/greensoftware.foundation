@@ -1,5 +1,14 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: Audience Cards, Unified Patterns Panel, Org Buttons; Community Nav Descriptions
+
+- `src/components/feature-grid.astro`: new optional props, defaults unchanged so other pages are unaffected: `linkStyle` (`"button"` renders each card's link as a primary button pinned to the bottom of the card), section-level `ctaText` / `ctaHref` / `ctaLeadIn` (button under the grid inside the same container), and per-feature `badge` and `descriptionHtml`.
+- `/education/` Academy section: cards retitled by audience ("Courses for people who lead and manage", "...who design systems", "...who build and measure", "...who work with data and models", "...who run systems"), with the Academy track name as a pill, a who-it's-for line, linked course names and a button each. Course names and links follow the Academy site; this adds Building a Green AI Agent (Build and measure), which makes the fourteen courses the launch article describes, so the intro says "Fourteen courses across five tracks" again. The Academy site has no per-track URLs, so the buttons go to its home page.
+- `/education/` patterns: the separate "Find a pattern you can apply today" CTACard is gone. The patterns section is now one bordered panel with the catalog button inside it (section-level CTA), so it reads as one section.
+- `/education/` organisations: links render as buttons. Cohort-Based Training now links to the SCI for AI Bootcamp article and mentions the first cohort. In-House Licensing has no link yet.
+- `src/lib/nav-items.ts`: Community menu now has a one-line description under every link (Champions Program, Meetup Community, Movement Platform, Newsletter, Carbon Hack, Summit), matching the podcasts. Labels, links and order unchanged.
+- `docs/pages/education.md` updated.
+
 ## 2026-11-25 - Education: Green Software Patterns Section
 
 - `src/pages/education/index.astro`: new `#patterns` FeatureGrid after the Academy pilot card, explaining what a pattern is (structure: problem, solution, SCI impact, assumptions, considerations, references), how to use them (by role or lifecycle stage, apply and measure), why they help (expert-reviewed, measured impact), and how to propose one.
