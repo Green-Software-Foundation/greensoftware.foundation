@@ -8,6 +8,8 @@ interface CardItem {
   imageSrc?: string;
   /** Small label shown above the title (e.g. a country or organisation name) */
   label?: string;
+  /** Topic tags, rendered as a space-separated data-tags attribute (used by page-level filters) */
+  tags?: string[];
   title: string;
   description: string;
   /** HTML description (rendered with set:html, used instead of description when provided) */
@@ -86,7 +88,7 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
     )}
     <div class={`relative z-10 grid gap-4 lg:gap-6 ${columnClasses[columns]}`}>
       {cards.map((card) => (
-        <div class:list={[
+        <div data-tags={card.tags ? card.tags.join(" ") : undefined} class:list={[
           "flex flex-col rounded-xl shadow-sm overflow-hidden",
           card.featured ? "bg-primary-darker text-white" : "border bg-white",
         ]}>

@@ -17,6 +17,10 @@ Everything is **static**. Content lives in the `sections` array in the page fron
 
 A wrapping row of pill links ("Jump to") sits directly below the hero, with no horizontal scrolling. It links to `#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research` and `#policy`. Each section is wrapped in a `div` with the matching `id`. To add a section, add an entry to `sections` with an `id` and `navLabel`.
 
+## Topic filter
+
+Below the "Jump to" links, "Or filter by topic" buttons (Show all, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy) show only the cards on that topic and hide empty sections. It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "Show all". To add a topic, add a button to `filters` and tag the relevant cards.
+
 ## Plain-English writing
 
 The page is written for first-time visitors (governments, international bodies, universities). A short "Three terms to know" block explains SCI, SCI for AI and Real Time Cloud. Each card has a plain-English headline and one or two sentences, and a small label above the title naming the country or organisation (the `label` field on `CardGrid` cards). Keep new cards in that style and avoid unexplained jargon.
