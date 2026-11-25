@@ -17,6 +17,7 @@ import Footer from "@/components/footer.astro";
 const sections = [
   {
     "id": "g7",
+    "navLabel": "G7",
     "heading": "Recognised by the G7",
     "body": "The French G7 Presidency's official overview of global initiatives for measuring AI's energy and resource use names SCI for AI by title and credits the Green Software Foundation, in the same table as ISO, ITU, IEEE, CEN and AFNOR.",
     "note": "The overview is a living document that came out of the G7 Energy and AI Work Plan (Kananaskis, then the Canadian Presidency in November 2025, then the French Presidency), with additions feeding the OECD AI Tools Catalogue. Wording: GSF is recognised in the G7 overview; it is not “G7-endorsed”.",
@@ -44,6 +45,7 @@ const sections = [
   },
   {
     "id": "gov",
+    "navLabel": "National governments",
     "heading": "Working with national governments",
     "body": "Seven governments and the European Union now reference, adopt or build with GSF standards and training.",
     "note": "",
@@ -215,6 +217,7 @@ const sections = [
   },
   {
     "id": "igo",
+    "navLabel": "International organisations",
     "heading": "Intergovernmental organisations",
     "body": "GSF is in active dialogue with intergovernmental organisations, bodies established by treaty between national governments.",
     "note": "The specifics of these engagements are confidential and further detail can be shared in the appropriate setting. Intergovernmental organisations set the highest bar for neutrality and evidence; that they are engaging reflects GSF's position as a non-profit, vendor-neutral foundation governed under the Linux Foundation, with standards ratified by consensus and certified by ISO. Government, non-profit and academic organisations join free of charge.",
@@ -228,6 +231,7 @@ const sections = [
   },
   {
     "id": "wri",
+    "navLabel": "World Resources Institute",
     "heading": "World Resources Institute",
     "body": "WRI, which co-developed the Greenhouse Gas Protocol, is assessing how AI products could be compared on environmental performance. GSF is engaged in that assessment.",
     "note": "GSF has contributed technical input on SCI for AI and on what is needed for results to be consistent and comparable across providers. The assessment is ongoing. References to WRI are drawn from public sources and do not imply WRI's endorsement of GSF or its standards.",
@@ -249,6 +253,7 @@ const sections = [
   },
   {
     "id": "standards",
+    "navLabel": "Standards",
     "heading": "Standards with international standing",
     "body": "The credibility behind the recognition.",
     "note": "",
@@ -300,6 +305,7 @@ const sections = [
   },
   {
     "id": "independent",
+    "navLabel": "Independent validation",
     "heading": "Independent validation",
     "body": "Bodies with no obligation to choose GSF's standards, choosing them.",
     "note": "",
@@ -357,6 +363,7 @@ const sections = [
   },
   {
     "id": "industry",
+    "navLabel": "Industry",
     "heading": "Industry adoption",
     "body": "Global platforms and regulated institutions building on GSF.",
     "note": "",
@@ -448,6 +455,7 @@ const sections = [
   },
   {
     "id": "research",
+    "navLabel": "Academia & research",
     "heading": "Academia, research and policy voices",
     "body": "",
     "note": "",
@@ -523,6 +531,7 @@ const sections = [
   },
   {
     "id": "policy",
+    "navLabel": "Skills & policy",
     "heading": "Skills, policy and reach",
     "body": "",
     "note": "",
@@ -620,8 +629,21 @@ const sections = [
     </p>
   </div>
 
+  <!-- In-page navigation -->
+  <nav aria-label="On this page" class="sticky top-0 z-30 border-b border-primary-lighter bg-white/95 backdrop-blur">
+    <div class="container">
+      <ul class="flex gap-2 overflow-x-auto py-3 text-sm font-semibold">
+        {sections.map((s) => (
+          <li class="shrink-0">
+            <a href={`#${s.id}`} class="inline-block rounded-full border border-primary-lighter px-4 py-1.5 text-primary-dark transition-colors hover:bg-primary hover:text-white">{s.navLabel}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
   {sections.map((s) => (
-    <div id={s.id}>
+    <div id={s.id} class="scroll-mt-16">
       <CardGrid
         heading={s.heading}
         body={s.body}
