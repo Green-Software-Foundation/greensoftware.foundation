@@ -14,25 +14,25 @@ External recognition and validation of GSF: G7 recognition, national governments
 
 Everything is **static**. Content lives in the `sections` array in the page frontmatter and renders through `CardGrid`, `TextBlock` and `CTABanner`. Nothing comes from Notion or content collections.
 
-## Navigation bar
+## Section navigation
 
-A full-width bar sits directly below the hero and **sticks to the top of the screen** on larger screens. It holds plain-text jump links to every section (`#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#roadmap`, `#assemblies`, `#independent`, `#industry`, `#research`, `#academic`, `#policy`), a "Show everything" button and a "Filter by topic" button that opens a panel of topic chips. On phones the bar is not sticky; the floating pill handles getting back. Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24` so headings clear the sticky bar.
+A full-width block sits directly below the hero. It is **not sticky**: everything is visible at once. It has the heading "Navigate to the section of interest", a "Show everything" button, the twelve section links grouped into four columns (Government and institutional recognition; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter), and the topic-filter chips shown in the open ("Show only a standard or topic" and "In development"). Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24`.
 
 ## Topic filter
 
-The "Filter by topic" panel (Standards & topics: SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; In development: Data center specification (SILO), SCI for OpenTelemetry, SCI for Security, SCI for MCP) shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any jump link, or use the floating "Show everything" pill at the bottom of the screen whenever a filter is active. The panel closes after a choice, on Escape, or when clicking elsewhere.
-
+The topic chips in the navigation block (Standards & topics: SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; In development: Data center specification (SILO), SCI for OpenTelemetry, SCI for Security, SCI for MCP) shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any jump link, or use the floating "Show everything" pill at the bottom of the screen whenever a filter is active. 
 A small inline script at the bottom of the page does this. Each card carries a `data-tags` attribute (the optional `tags` field on `CardGrid` cards); each section wrapper has `data-section`. Cards with no topic only appear under "Show everything".
 
 ## Calls to action at the top of every section
 
-Each section opens with a slim dark call-to-action strip (heading, one-line invitation, button), so anyone arriving via a jump link is met with a way to engage: membership enquiry (`/membership/enquire/`) for G7, Government, Standards, In development, Case studies and Academic members; Contact (`/contact/`) for International organisations, Validation, Research and Policy; SCI for AI (`/standards/sci-ai/`) for WRI; Assemblies (`/assemblies/`) for Assemblies. The copy lives in the `cta` field of each section in the generator. The strip is inline markup using the existing `Button`, not a new component.
+Each section opens with a slim dark call-to-action strip (heading, one-line invitation, button), so anyone arriving via a jump link is met with a way to engage: membership enquiry (`/membership/enquire/`) for G7, Government, Standards, In development and Academic members; Contact (`/contact/`) for Case studies, International organisations, Validation, Research and Policy; SCI for AI (`/standards/sci-ai/`) for WRI; Assemblies (`/assemblies/`) for Assemblies. The copy lives in the `cta` field of each section in the generator. The strip is inline markup using the existing `Button`, not a new component.
 
 ## Sections of note
 
 - **Standards in development** (`#roadmap`) sits straight after Standards. Its cards use the dark "featured" card style with an "In development" label, and the button reads "Learn more and get involved" (SILO, SWI, SCI for OpenTelemetry link to their GSF pages). SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards with no source yet.
-- **Assemblies, powered by Harmony** (`#assemblies`) is a dark FeatureGrid panel explaining why Assemblies exist (consensus at scale breaks down), what Harmony does and the result, with links to `/assemblies/` and the Assemblies story. Wording follows the site's own Assemblies page and "Consensus at speed" story.
-- **Case studies** is organised by member: each card is titled with the member's name, sector as the label. To add a member, add a card to the `industry` section in the generator.
+- **Assemblies, powered by Harmony** (`#assemblies`) leads with the problem, not the product name: the heading is "Standards traditionally take far too long. How do you speed up their creation?" and the lead paragraph explains that Assemblies, powered by Harmony, is GSF's tool for speeding up the specification process. It is a dark FeatureGrid panel explaining why Assemblies exist (consensus at scale breaks down), what Harmony does and the result, with links to `/assemblies/` and the Assemblies story. Wording follows the site's own Assemblies page and "Consensus at speed" story.
+- **Case studies** opens with "Using SCI? Share your case study" and a "Get in touch" button to `/contact/` (not a membership enquiry); the section is organised by member: each card is titled with the member's name, sector as the label. To add a member, add a card to the `industry` section in the generator.
+- **World Resources Institute and Green AI Committee** (`#wri`) has three cards: the WRI programme, Sustainable AI Group, and the GSF Green AI Committee (mission, co-chairs, member organisations from `src/content/research/en/green-ai-position-paper.md`, with links to the position paper and the EU AI Act article).
 - **Academic members** opens with a call to action inviting institutions to discuss membership (`/membership/enquire/`), then one card per member institution.
 - **Policy, research and skills** has one card for each document in `src/content/research/` (9 today) plus a card for the full publications hub. When a new research document is added there, add its card here.
 - Hero: "Government and academic institutions can join the Foundation for free." with a "Discuss membership" button to `/membership/enquire/`; hero image `public/assets/partnerships-hero.svg`.
@@ -43,7 +43,7 @@ Each card has up to two buttons: **View source** (external evidence, new tab) an
 
 ## Plain-English writing
 
-The page is written for first-time visitors (governments, international bodies, universities). A short "Three terms to know" block explains SCI, SCI for AI and Real Time Cloud. Each card has a plain-English headline and one or two sentences, and a small label above the title naming the country or organisation (the `label` field on `CardGrid` cards). Keep new cards in that style and avoid unexplained jargon.
+The page is written for first-time visitors (governments, international bodies, universities). An "About the Foundation and key terms" panel (a short description plus a definition list, data in `intro` in the frontmatter) explains SCI, SCI for AI and Real Time Cloud. Each card has a plain-English headline and one or two sentences, and a small label above the title naming the country or organisation (the `label` field on `CardGrid` cards). Keep new cards in that style and avoid unexplained jargon.
 
 ## Editorial rules
 

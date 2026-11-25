@@ -15,7 +15,22 @@ import Footer from "@/components/footer.astro";
 // All content on this page is hardcoded (static recognition evidence).
 // Items marked "UNVERIFIED" come from the source document without a confirmed
 // public source and MUST be verified or removed before launch. See docs/pages/partnerships.md.
-const intro = {"heading": "New here? *Three terms to know*", "body": "The Green Software Foundation is a non-profit, vendor-neutral foundation under the Linux Foundation. We write open standards that help organisations measure and reduce the environmental impact of software.", "extra": ["SCI (Software Carbon Intensity) is a way of measuring how much carbon a piece of software produces each time it is used. It is an international standard, ISO/IEC 21031.", "SCI for AI applies the same idea to artificial intelligence systems.", "Real Time Cloud is a standard for cloud providers to share live energy and carbon data in a common format."]};
+const intro = {
+  eyebrow: "Background",
+  heading: "About the Foundation and *key terms*",
+  body: "The Green Software Foundation is a non-profit, vendor-neutral foundation under the Linux Foundation. We write open standards that help organisations measure and reduce the environmental impact of software.",
+  terms: [
+    { term: "SCI", full: "Software Carbon Intensity", def: "A way of measuring how much carbon a piece of software produces each time it is used. It is an international standard, ISO/IEC 21031." },
+    { term: "SCI for AI", full: "Software Carbon Intensity for AI", def: "Applies the same method to artificial intelligence systems." },
+    { term: "Real Time Cloud", full: "Real Time Cloud specification", def: "A standard for cloud providers to share live energy and carbon data in a common format." },
+  ],
+};
+const navGroups = [
+  { title: "Government and institutional recognition", ids: ["g7", "gov", "igo", "wri"] },
+  { title: "Standards", ids: ["standards", "roadmap", "assemblies"] },
+  { title: "Evidence and adoption", ids: ["independent", "industry"] },
+  { title: "Research, academia and policy", ids: ["research", "academic", "policy"] },
+];
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
 const roadmapFilters = [{"id": "silo", "label": "Data center specification (SILO)"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
 const sections = [
@@ -416,8 +431,8 @@ const sections = [
     },
     "cols": 3,
     "id": "wri",
-    "navLabel": "WRI",
-    "heading": "World Resources Institute",
+    "navLabel": "WRI & Green AI",
+    "heading": "World Resources Institute and Green AI Committee",
     "body": "WRI co-created the Greenhouse Gas Protocol, the world's most widely used carbon accounting standard. It is now assessing how buyers could compare AI products on environmental performance. GSF is engaged in that assessment, contributing technical input on SCI for AI and on what makes results consistent and comparable across providers.",
     "note": "",
     "cards": [
@@ -444,6 +459,19 @@ const sections = [
         "ctaHref": "https://sustainableaigroup.com/",
         "secondaryCtaText": "Read why they joined GSF",
         "secondaryCtaHref": "/articles/shifting-ais-trajectorymeet-boris-gamazaychikov-of-sustainable-ai-group/"
+      },
+      {
+        "label": "GSF Green AI Committee",
+        "title": "The committee guiding GSF's work on AI",
+        "bodyHtml": "The Green AI Committee guides GSF's strategy for the knowledge, standards and tools that reduce the environmental impact of AI systems. It is co-chaired by Accenture and Microsoft, with members from BCG, Futurewei, UCL, NTT DATA, Globant, HSBC and Siemens. Its May 2025 position paper defines Green AI and is cited in the US public-sector AI procurement handbook.",
+        "tags": [
+          "sci-ai",
+          "policy"
+        ],
+        "ctaText": "Read the position paper",
+        "ctaHref": "/policy/research/green-ai-position-paper/",
+        "secondaryCtaText": "Committee insights on the EU AI Act",
+        "secondaryCtaHref": "/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
       }
     ],
     "bg": "bg-white"
@@ -630,7 +658,7 @@ const sections = [
     "cols": 3,
     "id": "assemblies",
     "navLabel": "Assemblies",
-    "heading": "Assemblies, powered by Harmony",
+    "heading": "Standards take too long. How do you speed them up?",
     "body": "",
     "note": "",
     "cards": [],
@@ -734,10 +762,10 @@ const sections = [
   {
     "special": null,
     "cta": {
-      "heading": "Add your organisation's case study",
-      "body": "Members publish their results with GSF. Tell us how your organisation is putting the standards to work.",
-      "text": "Discuss membership",
-      "href": "/membership/enquire/"
+      "heading": "Using SCI? Share your case study",
+      "body": "If your organisation is using SCI or our other standards, we would love to hear how and, with your agreement, feature your use case here.",
+      "text": "Get in touch",
+      "href": "/contact/"
     },
     "cols": 3,
     "id": "industry",
@@ -1508,41 +1536,47 @@ const sections = [
     imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
   />
 
-  <!-- Sticky navigation: jump links to every section, plus a topic-filter panel.
-       A floating "Show everything" pill also appears while a filter is active. -->
-  <nav aria-label="On this page" class="relative z-30 border-b border-primary-lighter bg-white md:sticky md:top-0">
-    <div class="container">
-      <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
-        <ul class="flex flex-1 flex-wrap items-center gap-x-5 gap-y-1 text-sm font-semibold">
-          {sections.map((s) => (
-            <li>
-              <a href={`#${s.id}`} data-pill={s.id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{s.navLabel}</a>
-            </li>
-          ))}
-        </ul>
-        <div class="flex items-center gap-2">
-          <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-4 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary">Show everything</button>
-          <button type="button" data-filter-toggle aria-expanded="false" aria-controls="filter-panel" class="rounded-full border-2 border-primary-dark px-4 py-1 text-sm font-bold text-primary-dark transition-colors hover:bg-primary-lightest-2">Filter by topic &darr;</button>
+  <!-- Section navigation: always visible, not sticky. Every section and topic filter is shown
+       in the open; a floating "Show everything" pill appears while a filter is active. -->
+  <nav aria-label="On this page" class="border-b border-primary-lighter bg-white">
+    <div class="container py-8">
+      <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="text-xl font-extrabold text-primary-dark md:text-2xl">Navigate to the section of interest</h2>
+          <p class="mt-1 text-sm text-primary-dark/80 md:text-base">Jump to a section below, or show only the items on one standard or topic.</p>
         </div>
+        <button type="button" data-filter="all" aria-pressed="true" class="self-start rounded-full bg-primary-dark px-4 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary md:self-auto">Show everything</button>
       </div>
-    </div>
-    <div id="filter-panel" data-filter-panel hidden class="absolute inset-x-0 top-full border-b border-primary-lighter bg-accent-lightest-2 shadow-lg">
-      <div data-filter-bar class="container py-6">
-        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Standards &amp; topics</p>
+      <div class="mt-6 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+        {navGroups.map((g) => (
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
+            <ul class="mt-2 space-y-1 text-sm font-semibold">
+              {g.ids.map((id) => (
+                <li>
+                  <a href={`#${id}`} data-pill={id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{sections.find((x) => x.id === id).navLabel}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div data-filter-bar class="mt-8 border-t border-primary-lighter pt-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Show only a standard or topic</p>
         <div class="mt-3 flex flex-wrap gap-2">
           {filters.map((f) => (
             <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
           ))}
         </div>
-        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-accent-dark">In development</p>
+        <p class="mt-5 text-xs font-bold uppercase tracking-wider text-accent-dark">In development</p>
         <div class="mt-3 flex flex-wrap gap-2">
           {roadmapFilters.map((f) => (
             <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
           ))}
         </div>
       </div>
+      <p data-filter-status aria-live="polite" class="mt-4 text-sm text-primary-dark/70 empty:hidden"></p>
     </div>
-    <p data-filter-status aria-live="polite" class="container pb-2 text-sm text-primary-dark/70 empty:hidden"></p>
   </nav>
 
   <div data-filter-float hidden class="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full bg-primary-dark py-3 pl-6 pr-3 text-base font-semibold text-white shadow-2xl ring-4 ring-white">
@@ -1550,7 +1584,32 @@ const sections = [
     <button type="button" class="rounded-full bg-white px-5 py-2 font-bold text-primary-dark hover:bg-accent-lightest-2">Show everything</button>
   </div>
 
-  <TextBlock heading={intro.heading} body={intro.body} bodyExtra={intro.extra} />
+  <section class="bg-accent-lightest-2 py-12 md:py-16" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-5 lg:gap-14">
+        <div class="lg:col-span-2">
+          <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{intro.eyebrow}</p>
+          <h2 id="intro-heading" class="mt-2 text-2xl font-semibold md:text-3xl">
+            {intro.heading.split(/(\*[^*]+\*)/g).filter(Boolean).map((part) =>
+              part.startsWith("*") ? <span class="font-bold text-primary">{part.slice(1, -1)}</span> : part
+            )}
+          </h2>
+          <p class="mt-4 text-base leading-relaxed md:text-lg">{intro.body}</p>
+        </div>
+        <dl class="divide-y divide-primary-lighter rounded-lg border border-primary-lighter bg-white lg:col-span-3">
+          {intro.terms.map((t) => (
+            <div class="grid gap-1 p-5 sm:grid-cols-[11rem_1fr] sm:gap-6">
+              <dt>
+                <span class="block text-lg font-extrabold text-primary-dark">{t.term}</span>
+                <span class="block text-sm text-primary-dark/70">{t.full}</span>
+              </dt>
+              <dd class="text-base leading-relaxed">{t.def}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </section>
 
   <!-- DRAFT REVIEW KEY: remove before launch -->
   <div class="container my-6">
@@ -1578,8 +1637,8 @@ const sections = [
         <FeatureGrid
           variant="panel"
           eyebrow="How GSF standards are made"
-          heading="Assemblies, powered by *Harmony*"
-          body="Agreeing a standard across competing organisations, time zones and languages has traditionally taken years. Assemblies use Harmony, GSF's AI-assisted consensus engine, to bring hundreds of perspectives together asynchronously, so a consensus design document can take weeks, not years."
+          heading="Standards traditionally take far too long. How do you *speed up* their creation?"
+          body="Agreeing a standard across competing organisations, time zones and languages has traditionally taken years. Assemblies, powered by Harmony, is GSF's tool for speeding up the specification process: Harmony is an AI-assisted consensus engine that brings hundreds of perspectives together asynchronously, so a consensus design document can take weeks, not years."
           stats={[
             { value: "10 weeks", label: "from a blank page to a consensus design document" },
             { value: "14", label: "experts from 15 organisations in one assembly" },
