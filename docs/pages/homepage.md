@@ -14,6 +14,7 @@ The primary entry point to the site. Leads with the "silicon to screen" definiti
 | 1 | Hero | cream | "Sustainable technology, from *silicon to screen*" — the page `<h1>` |
 | — | TextWithImage | cream | "Solving alone / solving together" — the membership proposition. Was the Hero until the silicon-to-screen reorder, hence the h2 |
 | 2 | LogoMarquee | white | Member logos |
+| — | FeatureGrid (panel) | dark | "Recognised by governments and global institutions" — G7, UK, Singapore, Taiwan; links to `/partnerships/` (see [partnerships page doc](partnerships.md)) |
 | — | SplitCards | cream | Problem statement + GSF Chair quote |
 | 4–8 | TabbedSection ×5 | cream | Member challenge stories |
 | 9 | CTACard | — | "Discuss your challenges with us" |

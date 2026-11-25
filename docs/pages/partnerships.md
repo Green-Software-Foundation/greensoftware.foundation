@@ -3,6 +3,7 @@
 **URL:** `/partnerships/`
 **File:** `src/pages/partnerships/index.astro`
 **Breadcrumb:** Home / About / Partnerships & Recognition
+**Featured on:** the homepage (after the logo marquee) and the About page (after Mission & Vision) via a dark FeatureGrid panel, "Recognised by governments and global institutions". Update the panel's figures and cards if the evidence here changes.
 **Navigation:** About menu (after Governance & Leadership) and a second green button, "Partnerships & Recognition →", at the bottom of the Standards dropdown beside "About our standards process →" (`src/lib/nav-items.ts`, `extraFooterLinks`; rendered in `src/components/react/navbar.tsx`)
 
 ## What the Page Shows
