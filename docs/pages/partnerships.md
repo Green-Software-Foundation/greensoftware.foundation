@@ -16,7 +16,7 @@ Everything is **static**. Content lives in the `sections` array in the page fron
 
 ## Navigation box
 
-One box ("Explore the evidence") sits directly below the hero, with three rows: **Jump to** (links to each section: `#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#academic`, `#policy`, `#roadmap`), **Filter by topic** and **Future roadmap**. Each section is wrapped in a `div` with the matching `id`. To add a section, add an entry to `sections` with an `id` and `navLabel`.
+One untitled box sits directly below the hero: a quiet contents grid, **Jump to** (links to each section: `#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#academic`, `#policy`, `#roadmap`), then **Filter by topic** (with a Show everything button) and **Future roadmap** topic chips. Jump links are plain text rows, filters are chips, so the two read as different things. Each section is wrapped in a `div` with the matching `id`. To add a section, add an entry to `sections` with an `id` and `navLabel`.
 
 ## Topic filter
 

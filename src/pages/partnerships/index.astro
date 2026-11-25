@@ -15,7 +15,7 @@ import Footer from "@/components/footer.astro";
 // public source and MUST be verified or removed before launch. See docs/pages/partnerships.md.
 const intro = {"heading": "New here? *Three terms to know*", "body": "The Green Software Foundation is a non-profit, vendor-neutral foundation under the Linux Foundation. We write open standards that help organisations measure and reduce the environmental impact of software.", "extra": ["SCI (Software Carbon Intensity) is a way of measuring how much carbon a piece of software produces each time it is used. It is an international standard, ISO/IEC 21031.", "SCI for AI applies the same idea to artificial intelligence systems.", "Real Time Cloud is a standard for cloud providers to share live energy and carbon data in a common format."]};
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
-const roadmapFilters = [{"id": "silo", "label": "SILO"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
+const roadmapFilters = [{"id": "silo", "label": "Data center specification (SILO)"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
 const sections = [
   {
     "cols": 3,
@@ -363,7 +363,7 @@ const sections = [
   {
     "cols": 2,
     "id": "igo",
-    "navLabel": "International organisations (IGOs)",
+    "navLabel": "International (IGOs)",
     "heading": "Working with international organisations (IGOs)",
     "body": "Some intergovernmental organisations, which are set up by treaty between governments, are in active talks with the Foundation. Details are confidential and can be shared in the right setting.",
     "note": "",
@@ -1324,27 +1324,34 @@ const sections = [
     imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
   />
 
-  <!-- Single navigation box: jump links to sections, plus topic filters. A floating "Show everything" pill appears while a filter is active. -->
+  <!-- Single navigation box: a quiet contents list to jump to sections, then topic filters.
+       A floating "Show everything" pill appears while a filter is active. -->
   <section class="bg-white py-8">
     <div class="container">
       <nav aria-label="On this page" class="mx-auto max-w-5xl rounded-2xl bg-accent-lightest-2 p-6 md:p-8">
-        <h2 class="text-center text-lg font-bold text-primary-dark">Explore the evidence</h2>
-        <div data-filter-bar class="mt-5 grid gap-x-6 gap-y-4 md:grid-cols-[9rem_1fr]">
-          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Jump to</p>
-          <ul class="flex flex-wrap gap-2">
-            {sections.map((s) => (
-              <li><a href={`#${s.id}`} data-pill={s.id} class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:bg-primary hover:text-white hover:ring-primary">{s.navLabel}</a></li>
-            ))}
-          </ul>
-          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</p>
-          <div class="flex flex-wrap gap-2">
+        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Jump to</p>
+        <ul class="mt-3 grid gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {sections.map((s) => (
+            <li>
+              <a href={`#${s.id}`} data-pill={s.id} class="flex items-center justify-between gap-2 border-b border-primary-lighter py-2.5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary">
+                <span>{s.navLabel}</span><span aria-hidden="true" class="text-primary/60">&darr;</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div data-filter-bar class="mt-8">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</p>
             <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-5 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary">Show everything</button>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-2">
             {filters.map((f) => (
               <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
             ))}
           </div>
-          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Future roadmap</p>
-          <div class="flex flex-wrap gap-2">
+          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-accent-dark">Future roadmap</p>
+          <div class="mt-3 flex flex-wrap gap-2">
             {roadmapFilters.map((f) => (
               <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
             ))}
