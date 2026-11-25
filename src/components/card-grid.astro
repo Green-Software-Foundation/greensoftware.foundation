@@ -19,6 +19,9 @@ interface CardItem {
   ctaText?: string;
   /** CTA link href */
   ctaHref?: string;
+  /** Optional secondary CTA (e.g. an internal 'Learn more' link), shown as an outline button */
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
 }
 
 interface Props {
@@ -131,11 +134,18 @@ const hasAccentSyntax = headingParts.some(p => p.accent);
                 {card.description}
               </p>
             )}
-            {card.ctaText && card.ctaHref && (
-              <div class="mt-auto pt-4">
-                <a href={card.ctaHref} target="_blank" rel="noopener noreferrer" class="w-full">
-                  <Button variant={card.featured ? "secondary" : "primary"} className="w-full">{card.ctaText}</Button>
-                </a>
+            {((card.ctaText && card.ctaHref) || (card.secondaryCtaText && card.secondaryCtaHref)) && (
+              <div class="mt-auto flex flex-col gap-2 pt-4">
+                {card.ctaText && card.ctaHref && (
+                  <a href={card.ctaHref} target="_blank" rel="noopener noreferrer" class="w-full">
+                    <Button variant={card.featured ? "secondary" : "primary"} className="w-full">{card.ctaText}</Button>
+                  </a>
+                )}
+                {card.secondaryCtaText && card.secondaryCtaHref && (
+                  <a href={card.secondaryCtaHref} class="w-full">
+                    <Button variant="outline-primary" className="w-full whitespace-normal text-center">{card.secondaryCtaText}</Button>
+                  </a>
+                )}
               </div>
             )}
           </div>
