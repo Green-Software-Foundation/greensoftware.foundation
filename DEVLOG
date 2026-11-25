@@ -1,5 +1,17 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: Page Rethought Around Three Routes
+
+- `src/pages/education/index.astro` restructured so the Academy is the centrepiece rather than an add-on:
+  - Hero names the three routes with three jump buttons (Start free, Explore the Academy, Explore patterns).
+  - New "Three ways to learn" row (cards, Academy as the dark featured card) replaces the two-card learning pathway.
+  - Foundation courses shrunk to one compact panel of four course cards plus the Movement Platform button. The four long tabbed course sections and the separate Movement Platform card are gone from this page.
+  - The Academy is now one large dark panel: eyebrow, heading, intro, headline numbers (14 courses, 5 tracks, ISO), the five audience cards, a quote from the launch announcement, and closing buttons (Academy site, membership). The separate pilot CTACard was folded into it.
+  - Patterns panel unchanged. The duplicate Patterns card was removed from Learning resources.
+  - Removed the now-unused TextBlock, TabbedSection and CTACard imports.
+- `src/components/feature-grid.astro`: new optional `variant="panel"` (dark panel with white cards) with `eyebrow`, `stats`, `quote`, `ctaSecondaryText` / `ctaSecondaryHref`. Existing variants and pages are unchanged.
+- `docs/pages/education.md` updated.
+
 ## 2026-11-25 - Education: Audience Cards, Unified Patterns Panel, Org Buttons; Community Nav Descriptions
 
 - `src/components/feature-grid.astro`: new optional props, defaults unchanged so other pages are unaffected: `linkStyle` (`"button"` renders each card's link as a primary button pinned to the bottom of the card), section-level `ctaText` / `ctaHref` / `ctaLeadIn` (button under the grid inside the same container), and per-feature `badge` and `descriptionHtml`.

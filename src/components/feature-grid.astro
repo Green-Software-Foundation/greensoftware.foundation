@@ -17,6 +17,17 @@ interface Feature {
   featured?: boolean;
 }
 
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Quote {
+  text: string;
+  author?: string;
+  role?: string;
+}
+
 interface Props {
   /** Heading text. Wrap words in *asterisks* for accent colour */
   heading?: string;
@@ -28,8 +39,8 @@ interface Props {
   features?: Feature[];
   /** Number of columns (2, 3, 4, or 5) */
   columns?: 2 | 3 | 4 | 5;
-  /** Display variant: "cards" (default), "bordered" (centred card with bordered grid), or "plain" (left-aligned with vertical dividers) */
-  variant?: "cards" | "bordered" | "plain";
+  /** Display variant: "cards" (default), "bordered" (centred card with bordered grid), "plain" (left-aligned with vertical dividers), or "panel" (large dark feature panel: eyebrow, heading, stats, white cards, quote and CTAs) */
+  variant?: "cards" | "bordered" | "plain" | "panel";
   /** Reduce vertical padding (useful when used as a section heading) */
   compact?: boolean;
   /** Background class */
@@ -41,6 +52,15 @@ interface Props {
   ctaHref?: string;
   /** Short line shown above the section-level button */
   ctaLeadIn?: string;
+  /** Second, outlined section-level button (panel variant) */
+  ctaSecondaryText?: string;
+  ctaSecondaryHref?: string;
+  /** Small uppercase label above the heading (panel variant) */
+  eyebrow?: string;
+  /** Headline numbers shown under the heading (panel variant) */
+  stats?: Stat[];
+  /** Pull quote shown under the cards (panel variant) */
+  quote?: Quote;
 }
 
 const cardColumnClasses: Record<number, string> = {
@@ -74,6 +94,11 @@ const {
   ctaText,
   ctaHref,
   ctaLeadIn,
+  ctaSecondaryText,
+  ctaSecondaryHref,
+  eyebrow,
+  stats = [],
+  quote,
 } = Astro.props;
 
 const asButton = linkStyle === "button";
@@ -220,6 +245,79 @@ const headingParts = heading.split(/(\*[^*]+\*)/g).filter(Boolean).map(part => {
           </div>
         )}
       </>
+    )}
+
+    {variant === "panel" && (
+      <div class="overflow-hidden rounded-3xl bg-primary-darker px-5 py-10 text-white md:px-8 md:py-14 lg:px-10 lg:py-16">
+        <div class="mx-auto max-w-4xl text-center">
+          {eyebrow && (
+            <span class="mb-4 inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wider text-accent uppercase">{eyebrow}</span>
+          )}
+          <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl">
+            {headingParts.map(part =>
+              part.accent
+                ? <span class="text-accent">{part.text}</span>
+                : part.text
+            )}
+          </h2>
+          {body && (
+            <p class="mx-auto mt-5 max-w-3xl text-base text-white/80 md:text-lg">{body}</p>
+          )}
+        </div>
+        {stats.length > 0 && (
+          <div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 border-y border-white/15 py-8 sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div class="text-center">
+                <p class="text-4xl font-extrabold text-accent md:text-5xl">{stat.value}</p>
+                <p class="mt-1 text-sm text-white/80">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+        {/* Card markup mirrors the "cards" variant (white cards on the dark panel) */}
+        <div class={`mt-10 grid gap-5 ${cardColumnClasses[columns]}`}>
+          {features.map((feature) => (
+            <div class:list={["flex flex-col rounded-xl bg-white p-5 text-gray-darker shadow-sm"]}>
+              {feature.icon && <Image src={feature.icon} alt="" class="mb-4 h-10 w-10" sizes="40px" />}
+              {feature.badge && (
+                <span class="mb-3 inline-block self-start rounded-full bg-accent-lighter px-3 py-1 text-xs font-semibold text-accent-darker">{feature.badge}</span>
+              )}
+              <h3 class="text-lg font-bold text-primary">{feature.title}</h3>
+              {feature.descriptionHtml ? (
+                <div set:html={feature.descriptionHtml} class="mt-2 text-sm" />
+              ) : (
+                <p class="mt-2 text-sm">{feature.description}</p>
+              )}
+              {feature.linkText && (
+                <div class="mt-auto pt-5">
+                  <a href={feature.linkHref || "#"} class={buttonClass()}>{feature.linkText}</a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        {quote && (
+          <figure class="mx-auto mt-12 max-w-3xl text-center">
+            <blockquote class="text-lg font-medium italic md:text-xl">&ldquo;{quote.text}&rdquo;</blockquote>
+            {quote.author && (
+              <figcaption class="mt-4 text-sm text-white/80">
+                <span class="font-bold text-white">{quote.author}</span>{quote.role && <span>, {quote.role}</span>}
+              </figcaption>
+            )}
+          </figure>
+        )}
+        {ctaText && (
+          <div class="mx-auto mt-12 max-w-3xl border-t border-white/15 pt-10 text-center">
+            {ctaLeadIn && <p class="mb-6 text-base text-white/80 md:text-lg">{ctaLeadIn}</p>}
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href={ctaHref || "#"} class={cn(buttonVariants({ variant: "primary-invert", size: "lg" }), "h-12 whitespace-normal text-base")}>{ctaText}</a>
+              {ctaSecondaryText && (
+                <a href={ctaSecondaryHref || "#"} class={cn(buttonVariants({ size: "lg" }), "h-12 whitespace-normal border border-white/70 bg-transparent text-base text-white hover:bg-white/10")}>{ctaSecondaryText}</a>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     )}
 
     {variant === "plain" && (
