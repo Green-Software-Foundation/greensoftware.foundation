@@ -59,6 +59,7 @@ The site has three layers of documentation: **system docs** (how the data pipeli
 - [Press & Media](docs/pages/press.md) — member counts, leadership, timeline, press mentions
 - [Governance](docs/pages/governance.md) — steering committee, staff, chairs/leads, org leads
 - [Policy & Research](docs/pages/policy.md) — engagement, partnerships, research papers
+- [Partnerships & Recognition](docs/pages/partnerships.md) — government, intergovernmental, academic and industry recognition
 - [Community](docs/pages/community.md) — podcasts, meetups, events
 - [Education](docs/pages/education.md) — courses, learning resources
 - [Membership](docs/pages/membership.md) — logo marquee, fee tables, member stories

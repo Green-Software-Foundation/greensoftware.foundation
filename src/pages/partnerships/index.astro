@@ -1,0 +1,645 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import StatsGrid from "@/components/stats-grid.astro";
+import TextBlock from "@/components/text-block.astro";
+import CardGrid from "@/components/card-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import Footer from "@/components/footer.astro";
+
+// All content on this page is hardcoded (static recognition evidence).
+// Items marked "UNVERIFIED" come from the source document without a confirmed
+// public source and MUST be verified or removed before launch. See docs/pages/partnerships.md.
+const sections = [
+  {
+    "id": "g7",
+    "heading": "Recognised by the G7",
+    "body": "The French G7 Presidency's official overview of global initiatives for measuring AI's energy and resource use names SCI for AI by title and credits the Green Software Foundation, in the same table as ISO, ITU, IEEE, CEN and AFNOR.",
+    "note": "The overview is a living document that came out of the G7 Energy and AI Work Plan (Kananaskis, then the Canadian Presidency in November 2025, then the French Presidency), with additions feeding the OECD AI Tools Catalogue. Wording: GSF is recognised in the G7 overview; it is not “G7-endorsed”.",
+    "cards": [
+      {
+        "title": "French G7 Presidency: overview of AI measurement initiatives",
+        "bodyHtml": "An official G7 Presidency document cataloguing the world's initiatives for measuring AI's energy and resource use. SCI for AI is listed by name, alongside ISO/IEC TR 20226, ITU-T/ETSI, IEEE P7100, CEN, AFNOR SPEC 2314, the Salesforce/Hugging Face AI Energy Score, and academic tools from Cambridge, Michigan and Grenoble.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf"
+      },
+      {
+        "title": "G7 Digital and Technology Ministerial Declaration, 29 May 2026",
+        "bodyHtml": "Declaration from G7 digital ministers meeting in Paris. The first time the G7 acknowledged the environmental impact of digital technology, and it commits to measuring AI's footprint. This is the policy context for the recognition above.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Context</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.gov.uk/government/publications/g7-digital-and-technology-ministerial-declaration-29-may-2026/g7-digital-and-technology-ministerial-declaration-29-may-2026"
+      },
+      {
+        "title": "Declaration, independent G7/G20 archive",
+        "bodyHtml": "The same declaration, hosted on an independent archive.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Context</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://g7g20-documents.org/database/document/2026-g7-france-ministerial-meetings-idt-ministers-ministers-language-g7-ministerial-declaration-on-digital-technology"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "id": "gov",
+    "heading": "Working with national governments",
+    "body": "Seven governments and the European Union now reference, adopt or build with GSF standards and training.",
+    "note": "",
+    "cards": [
+      {
+        "title": "United Kingdom: Defra Digital Sustainability Strategy 2025 to 2030",
+        "bodyHtml": "The UK environment department's strategy mandates the GSF course for developers, DevOps, testers, architects, SREs, product managers and user designers. GSF training is written into government policy.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Practitioner course</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.gov.uk/government/publications/defra-digital-sustainability-strategy-2025-to-2030/defra-digital-sustainability-strategy-2025-to-2030"
+      },
+      {
+        "title": "United Kingdom: Defra's 15th Service Standard point",
+        "bodyHtml": "The first time sustainability has been added to a UK government service standard. Defra names SCI as the recommended methodology for Objective 1, inside a mandatory service assessment process.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://digital.defra.gov.uk/sustainability/metrics"
+      },
+      {
+        "title": "United Kingdom: Government Digital Sustainability Alliance",
+        "bodyHtml": "GSF is a formal partner of Defra's alliance of government, suppliers and academia. Working groups cover AI, Scope 3, Planetary Impact and Circular Economy.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Partnership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.gov.uk/government/groups/government-digital-sustainability-alliance-gdsa"
+      },
+      {
+        "title": "GDSA Terms of Reference, June 2026",
+        "bodyHtml": "The alliance's formal governing document: a structured government body with defined membership.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Partnership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://assets.publishing.service.gov.uk/media/6a47bc3f1c8bd7ce25a5eb61/Government_Digital_Sustainability_Alliance__GDSA__Terms_of_Reference.pdf"
+      },
+      {
+        "title": "GSF joins the UK Government Digital Sustainability Alliance (Oct 2025)",
+        "bodyHtml": "GSF's announcement of the partnership, with terms and scope.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Partnership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/"
+      },
+      {
+        "title": "⚠ UNVERIFIED: UK: GDSA membership size",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> Member count has no current public source. Check the live GDSA figure before using.</p></div>The GDSA has more than 90 member organisations.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Partnership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.gov.uk/government/groups/government-digital-sustainability-alliance-gdsa"
+      },
+      {
+        "title": "UK G-Cloud listing citing SCI under social value criteria",
+        "bodyHtml": "On the UK government's official procurement marketplace, SCI assessment is offered as a way to meet the &ldquo;Fighting Climate Change&rdquo; social value criteria. SCI is appearing in government buying.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/461692165553019"
+      },
+      {
+        "title": "Norway: Norwegian Environment Agency joins GSF",
+        "bodyHtml": "The Norwegian Environment Agency, the Norwegian government's environmental authority, joined the Green Software Foundation in November 2026 at the General membership level. Onboarding of its team is under way.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Membership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.environmentagency.no/"
+      },
+      {
+        "title": "Singapore: IMDA Practical Green Software Guide for Enterprises",
+        "bodyHtml": "A national guide for businesses, published January 2026 by Singapore's digital regulator, co-developed with Accenture and GSF.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF practices</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.imda.gov.sg/-/media/imda/files/infocomm-media-landscape/emerging-technologies-and-research/green-computing/imda-practical-green-software-guide-for-enterprises.pdf"
+      },
+      {
+        "title": "Singapore: IMDA press release",
+        "bodyHtml": "Reports industry trials in which participating companies cut carbon, cost and energy by at least 20%.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF practices</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/imda-simplifies-digital-sustainability-adoption-for-businesses-with-new-practical-resources"
+      },
+      {
+        "title": "Singapore: IMDA-hosted GSF Global Summit 2024",
+        "bodyHtml": "The only GSF summit edition hosted by a national agency. Speakers included the Tony Blair Institute, Red Hat and GitHub. Singapore was the first country to join GSF as a government member (2023); IMDA contributed to SCI for AI and GovTech Singapore is a member.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.imda.gov.sg/activities/activities-catalogue/gsf-global-summit-2024-sg-edition"
+      },
+      {
+        "title": "⚠ UNVERIFIED: Singapore: IMDA adoption of SCI (AI Magazine)",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> Wording unconfirmed. Do not say IMDA &ldquo;formally adopted&rdquo; SCI until the exact wording is verified against the source or IMDA.</p></div>Reported to have adopted SCI for its own engineers and data centre partners.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://aimagazine.com/company-reports/how-imda-shapes-the-future-of-singapores-digital-economy"
+      },
+      {
+        "title": "Taiwan: Ministry of Digital Affairs digital sustainability roadmap (Chinese)",
+        "bodyHtml": "Writes ISO 21031 into national policy planning. The stated first-phase goal is to use ISO 21031 Software Carbon Intensity, with voluntary web sustainability design guidelines, to promote low-carbon software, apps and websites.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greenweb.moda.gov.tw/gain/download/43/11729740228.pdf/%E6%95%B8%E4%BD%8D%E6%B0%B8%E7%BA%8C%E6%8E%A8%E5%8B%95%E8%A6%8F%E5%8A%83"
+      },
+      {
+        "title": "Taiwan: MODA Green Software Handbook, 21 November 2025 (Chinese)",
+        "bodyHtml": "The government's official reference handbook on green software, built on SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greenweb.moda.gov.tw/green-software-handbook-20251121-v1.pdf"
+      },
+      {
+        "title": "Taiwan: independent coverage of the MODA green software label (iThome, Chinese)",
+        "bodyHtml": "MODA is studying a green software label with a grading mechanism; its draft green digital services blueprint includes national standards, a voluntary label and inclusion in green procurement. A voluntary label built on SCI is in pilot, with Trend Micro named as a pilot company.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI (ISO 21031)</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.ithome.com.tw/news/174994"
+      },
+      {
+        "title": "Taiwan: MODA, CISA and TIER green software promotion, August 2026 (CNA, Chinese)",
+        "bodyHtml": "Joint promotion with the Taiwan software industry association and TIER. The headline reports more than 100 companies responding.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.cna.com.tw/postwrite/chi/442135"
+      },
+      {
+        "title": "Taiwan: interview with TIER on the national programme",
+        "bodyHtml": "TIER (the Taiwan Institute of Economic Research), Taiwan's leading economic policy think tank, completed its GSF membership application in May 2026. Its 2026 worked example applies SCI to training a BERT-scale model across 256 A100 GPUs.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/turning-digital-emissions-into-actionable-metricsmeet-mei-lian-wei-of-tier/"
+      },
+      {
+        "title": "United States: Greening AI in the Public Sector (Data & Society with the GovAI Coalition)",
+        "bodyHtml": "A procurement handbook telling US public agencies how to buy AI with environmental impact in mind. GSF provided technical review; the handbook draws on GSF definitions, cites the Green AI Position Paper, and points agencies to SCI and Real Time Cloud. Built on 10 months of fieldwork and 5 months of co-design with government staff.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI, Real Time Cloud</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://datasociety.net/wp-content/uploads/2026/06/AI-Procurement-Handbook-layout-R8-180626-1.pdf"
+      },
+      {
+        "title": "United States: GovAI Coalition",
+        "bodyHtml": "Represents more than 900 local, state, county and federal agencies, which shows the reach of the handbook. The National Renewable Energy Laboratory (NREL), a US federal lab, is a GSF member.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Context</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.govaicoalition.org/"
+      },
+      {
+        "title": "Germany: Umweltbundesamt, Blue Angel for software, background report (TEXTE 157/2025, German)",
+        "bodyHtml": "The German Federal Environment Agency's report names GSF among the initiatives drawing attention to software's environmental impact.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.umweltbundesamt.de/system/files/medien/11850/publikationen/157_2025_texte.pdf"
+      },
+      {
+        "title": "Germany: first Blue Angels for software (Federal Environment Ministry, German)",
+        "bodyHtml": "The first two Blue Angel software awards (June 2025) went to Nextcloud Server and the Green Metrics Tool, which implements SCI natively. The Blue Angel forms part of public administration procurement criteria.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.bundesumweltministerium.de/pressemitteilung/blauer-engel-fuer-ressourcen-und-energieeffiziente-cloud-software-vergeben"
+      },
+      {
+        "title": "France: AFG practical guide 7 (French)",
+        "bodyHtml": "The French asset management trade body advises firms to ask suppliers for an SCI score or impact report, alongside AFNOR Spec 2314 for frugal AI. SCI enters financial-sector supplier due diligence.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.afg.asso.fr/app/uploads/2026/05/Fiche-7-Choisir-des-logiciels-sobres-et-optimises_mai2026.pdf"
+      },
+      {
+        "title": "European Union: JRC Best Practice Guidelines, EU Code of Conduct on Data Centre Energy Efficiency (2024)",
+        "bodyHtml": "Official European Commission Joint Research Centre guidance that references GSF.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://e3p.jrc.ec.europa.eu/sites/default/files/2024-04/JRC136986_2024_best_practice_guidelines.pdf"
+      },
+      {
+        "title": "European Union: BEREC workshop report on digital services ecodesign",
+        "bodyHtml": "The body of EU telecoms regulators records GSF's contribution (Asim Hussain on the philosophy of measurement).<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.berec.europa.eu/en/all-documents/berec/reports/berec-summary-report-on-external-workshop-on-digital-services-ecodesign-for-greener-networks-and-icts"
+      },
+      {
+        "title": "European Union: EXIGENCE project",
+        "bodyHtml": "EU-funded research cites ISO/IEC 21031 as the standard method for monitoring IT carbon emission rates.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://projectexigence.eu/green-ict-digest/iso/"
+      },
+      {
+        "title": "SCI for AI mapped to EU AI Act Annex XI and Article 95",
+        "bodyHtml": "GSF's formal analysis of how SCI for AI meets, and goes beyond, the Act's energy reporting requirements. A shorter <a href='https://greensoftware.foundation/articles/sci-for-ai-a-framework-for-eu-ai-act-environmental-compliance/'>article version</a> is available.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/policy/research/sci-ai-eu-ai-act/"
+      },
+      {
+        "title": "Leveraging SCI for CSRD compliance (white paper, March 2026)",
+        "bodyHtml": "Maps SCI to the EU's corporate sustainability reporting rules.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/policy/research/sci-csrd-compliance/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "id": "igo",
+    "heading": "Intergovernmental organisations",
+    "body": "GSF is in active dialogue with intergovernmental organisations, bodies established by treaty between national governments.",
+    "note": "The specifics of these engagements are confidential and further detail can be shared in the appropriate setting. Intergovernmental organisations set the highest bar for neutrality and evidence; that they are engaging reflects GSF's position as a non-profit, vendor-neutral foundation governed under the Linux Foundation, with standards ratified by consensus and certified by ISO. Government, non-profit and academic organisations join free of charge.",
+    "cards": [
+      {
+        "title": "Scope of engagement",
+        "bodyHtml": "Discussions cover applying SCI and SCI for AI to large-scale research computing and data infrastructure; role-based training for technical and scientific staff; and aligning GSF standards with emerging international frameworks for measuring digital and AI emissions. They include a European intergovernmental scientific organisation operating shared research infrastructure on behalf of its member states."
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "id": "wri",
+    "heading": "World Resources Institute",
+    "body": "WRI, which co-developed the Greenhouse Gas Protocol, is assessing how AI products could be compared on environmental performance. GSF is engaged in that assessment.",
+    "note": "GSF has contributed technical input on SCI for AI and on what is needed for results to be consistent and comparable across providers. The assessment is ongoing. References to WRI are drawn from public sources and do not imply WRI's endorsement of GSF or its standards.",
+    "cards": [
+      {
+        "title": "Tech and Net Zero Conference 2026 agenda (techUK)",
+        "bodyHtml": "WRI is working with Climate Group, The B Team, Sustainable AI Group, the University of Oxford, techUK and others on a programme enabling clear comparison of AI products, starting with energy and emissions. Richard Tarboton, WRI's Director of Corporate Transition, led a session on 21 October 2026.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.techuk.org/events/tech-and-net-zero-conference-2026"
+      },
+      {
+        "title": "Sustainable AI Group joins GSF",
+        "bodyHtml": "One of WRI's named programme partners is now inside GSF.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/projects"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "id": "standards",
+    "heading": "Standards with international standing",
+    "body": "The credibility behind the recognition.",
+    "note": "",
+    "cards": [
+      {
+        "title": "ISO/IEC 21031:2024",
+        "bodyHtml": "SCI is a formally recognised international standard. It went from alpha in December 2021 to ISO in March 2024, in under three years, where certification typically takes five to seven. <a href='https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status/'>Announcement</a>.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.iso.org/standard/86612.html"
+      },
+      {
+        "title": "SCI for AI",
+        "bodyHtml": "Ratified in December 2025 after 11 months of work with 20+ partner organisations. <a href='https://greensoftware.foundation/stories/sci-for-ai/'>How it was built</a>, with participants from Siemens, IMDA Singapore, Google, Microsoft and UBS.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://sci-for-ai.greensoftware.foundation/"
+      },
+      {
+        "title": "Real Time Cloud",
+        "bodyHtml": "Ratified April 2025. Cloud providers share live energy and carbon data in a common format. Built by a working group including Microsoft Azure, Google Cloud and AWS.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Real Time Cloud</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/stories/real-time-cloud/"
+      },
+      {
+        "title": "Software Water Intensity project",
+        "bodyHtml": "Measuring software's water footprint, led by Purdue University.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SWI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/introducing-the-software-water-intensity-swi-project/"
+      },
+      {
+        "title": "SCI for Web, with W3C and The Green Web Foundation",
+        "bodyHtml": "A formal collaboration with the body that sets web standards. GSF manages SCI for Web through its consensus process while the W3C Sustainable Web Interest Group provides feedback.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for Web</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/"
+      },
+      {
+        "title": "SCI standard page",
+        "bodyHtml": "7+ independent implementations with published results, and 15+ peer-reviewed papers since 2022, including at ACM FAccT and SoCC.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/standards/sci/"
+      },
+      {
+        "title": "SCI for AI Bootcamp",
+        "bodyHtml": "Amadeus, AVEVA, Schneider Electric and Siemens applied SCI for AI to real systems across provider and consumer scopes. Learnings feed a forthcoming FAQ and Getting Started Guide and the Academy.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "id": "independent",
+    "heading": "Independent validation",
+    "body": "Bodies with no obligation to choose GSF's standards, choosing them.",
+    "note": "",
+    "cards": [
+      {
+        "title": "Carbon Trust: The Carbon Impact of AI Video Generation (June 2026)",
+        "bodyHtml": "Commissioned through DIMPACT (BBC, Netflix, Spotify, Sky). The Carbon Trust chose SCI for AI as its reference methodology, compared it directly with AFNOR SPEC 2314, and had the GSF Standards Working Group review its method.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/the-carbon-impact-of-ai-video-generation"
+      },
+      {
+        "title": "Responsible AI Institute verification programme",
+        "bodyHtml": "Lists ISO/IEC 21031 SCI among applied verification standards, alongside NIST AI RMF and ISO/IEC 42001.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.responsible.ai/?p=6934"
+      },
+      {
+        "title": "Payments Association carbon emissions framework",
+        "bodyHtml": "A whole sector built its framework in alignment with ISO/IEC 21031.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://thepaymentsassociation.org/whitepaper/carbon-emissions-framework/"
+      },
+      {
+        "title": "ITU Green Digital Action, COP28 call to action",
+        "bodyHtml": "The UN telecoms agency calls for an agreed methodology for software carbon intensity scoring.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Context</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.itu.int/initiatives/green-digital-action-atcop28/wp-content/uploads/sites/4/2023/12/Call-to-Action-Pillar4-Green-standards.pdf"
+      },
+      {
+        "title": "Linux Foundation: Open Source Sustainability Ecosystem report",
+        "bodyHtml": "Profiles GSF as a &ldquo;heavily backed industry non-profit&rdquo;.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.linuxfoundation.org/hubfs/LF%20Energy/OpenSourceSustainabilityEcosystem_FINAL.pdf"
+      },
+      {
+        "title": "Linux Foundation: COP27 press release",
+        "bodyHtml": "Announcement timed to the UN climate summit.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.linuxfoundation.org/press/gsf-decarbonization-software"
+      },
+      {
+        "title": "CNCF: SCI entering OpenTelemetry (15 October 2026)",
+        "bodyHtml": "How SCI could become part of cloud-native observability through OpenTelemetry semantic conventions.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for OTel</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.cncf.io/blog/2026/10/15/carbon-as-a-first-class-signal-bringing-software-carbon-intensity-to-opentelemetry/"
+      },
+      {
+        "title": "ITEA 4 GreenCode State of the Art Review",
+        "bodyHtml": "A European (Eureka Network) R&amp;D review naming ISO 21031 as the baseline for measurable software sustainability.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://itea4.org/index.php/project/workpackage/deliverable/document/download/777/GreenCode%20SOTA%20Review.pdf"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "id": "industry",
+    "heading": "Industry adoption",
+    "body": "Global platforms and regulated institutions building on GSF.",
+    "note": "",
+    "cards": [
+      {
+        "title": "Microsoft Azure Well-Architected: sustainability design principles",
+        "bodyHtml": "Official architecture guidance aligned with the Green Software Principles, developed in partnership with GSF (<a href='https://www.infoq.com/news/2022/10/azure-sustainability-waf/'>InfoQ</a>). <a href='https://learn.microsoft.com/training/modules/sustainable-software-engineering-overview'>Microsoft Learn</a> teaches SCI as the better-suited calculation for software.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Principles, SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://learn.microsoft.com/en-ca/azure/well-architected/sustainability/sustainability-design-principles"
+      },
+      {
+        "title": "Google Cloud Well-Architected: align with industry guidelines",
+        "bodyHtml": "Recommends customers align with the W3C Web Sustainability Guidelines, the Green Software Foundation and the GHG Protocol, and credits GSF with SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://docs.cloud.google.com/architecture/framework/sustainability/industry-guidelines"
+      },
+      {
+        "title": "UBS: baselining software carbon emissions",
+        "bodyHtml": "One of the first published financial services SCI case studies. UBS and Microsoft also ran the <a href='https://greensoftware.foundation/stories/carbon-aware-sdk/'>Carbon Aware SDK</a> on a live banking risk platform.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/baselining-software-carbon-emissions-ubs-use-case/"
+      },
+      {
+        "title": "Intesa Sanpaolo",
+        "bodyHtml": "With NTT DATA Italy, a real-time dashboard showing SCI scores across the bank's IT infrastructure.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/stories/sci-measurement/"
+      },
+      {
+        "title": "Globant 10-K, FY2024",
+        "bodyHtml": "The GSF partnership appears in a US securities filing as part of the company's climate compliance activity.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Partnership</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.sec.gov/Archives/edgar/data/1557860/000162828025009110/glob-20241231.htm"
+      },
+      {
+        "title": "Accenture: implementing SCI",
+        "bodyHtml": "A production application scored 0.025 gCO₂ per API call across 890,000 monthly requests.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/"
+      },
+      {
+        "title": "CAST: applying the SCI metric",
+        "bodyHtml": "Autostrade per l'Italia achieved an average 15.1% CO₂ saving across 60 applications.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric/"
+      },
+      {
+        "title": "Amadeus: Carmen carbon measurement engine",
+        "bodyHtml": "Amadeus donated its production tool to GSF. <a href='https://amadeus.com/en/insights/blog/amadeus-joins-green-software-foundation-to-develop-green-coding-practices'>Amadeus joined GSF</a> as the first travel company.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI tooling</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://amadeus.com/en/blog/articles/open-source-carbon-measurement-engine"
+      },
+      {
+        "title": "HCLTech SCI Meter",
+        "bodyHtml": "A $14bn-revenue IT services firm productised SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.hcltech.com/sustainability-engineering"
+      },
+      {
+        "title": "NTT DATA press releases",
+        "bodyHtml": "A Steering member publicly celebrating its role in building the standard (<a href='https://nttdata-solutions.com/fr/salle-de-presse/communiques-de-presse/gsf-develops-an-alpha-version-of-software-carbon-intensity-a-method-for-scoring-the-carbon-emissions-of-software-operations/'>2021 alpha</a>). NTT DATA Japan built a <a href='https://greensoftware.foundation/articles/building-green-software-through-standards-and-collaboration/'>Carbon Aware Kubernetes scheduler</a>.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://nttdata.com/global/en/news/press-release/2024/may/the-development-of-a-new-international-standard-called-software-carbon-intensity"
+      },
+      {
+        "title": "Goldman Sachs and Rabobank engineering blogs",
+        "bodyHtml": "Major banks discussing GSF on their own sites; <a href='https://rabobank.jobs/en/techblog/eight-principles-of-sustainable-software-engineering/'>Rabobank</a> applied the principles to its applications.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Principles</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://developer.gs.com/blog/posts/meet-the-green-software-foundation-organization-leads-sarah-hsu"
+      },
+      {
+        "title": "Trustwise launch",
+        "bodyHtml": "Vendors now sell alignment with ISO/IEC 21031 as a product feature.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.fintechfutures.com/press-releases/trustwise-introduces-the-first-trust-layer-for-agentic-ai"
+      },
+      {
+        "title": "⚠ UNVERIFIED: NatWest case study citing SCI",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> No public link found. Locate the source before including.</p></div>A NatWest case study is reported to cite SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>"
+      },
+      {
+        "title": "Green Metrics Tool and APIs.json",
+        "bodyHtml": "The Blue Angel-winning tool generates SCI automatically; <a href='https://apisjson.org/common/software-carbon-intensity/'>APIs.json</a> defines a property for publishing an SCI score.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.green-coding.io/blog/sci-per-phase/"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "id": "research",
+    "heading": "Academia, research and policy voices",
+    "body": "",
+    "note": "",
+    "cards": [
+      {
+        "title": "Tony Blair Institute: Greening AI",
+        "bodyHtml": "A policy agenda positioning GSF as a leading voice on greener AI (<a href='https://researchonline.lse.ac.uk/id/eprint/123705'>LSE copy</a>).<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://institute.global/insights/climate-and-energy/greening-ai-a-policy-agenda-for-the-artificial-intelligence-and-energy-revolutions"
+      },
+      {
+        "title": "techUK",
+        "bodyHtml": "The UK tech industry body cites GSF's AI and SCI work; it is also a named partner in WRI's AI comparability programme.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.techuk.org/resource/we-optimised-the-hardware-we-forgot-the-software-it-s-time-to-build-better-by-design.html"
+      },
+      {
+        "title": "Texas State University",
+        "bodyHtml": "Independent study finding SCI effective for foundation models: GPT-Neo 1.3B used 27% of the energy of GPT-J 6B for comparable answers.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/"
+      },
+      {
+        "title": "Estimating GHG Emissions from AI Use (arXiv, 2026)",
+        "bodyHtml": "Notes none of a dozen-plus AI emissions standards efforts was widely adopted, then names SCI for AI as extending ISO/IEC 21031 to AI systems.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://arxiv.org/pdf/2608.06733"
+      },
+      {
+        "title": "GAISSALabel (UPC / ACM 2024)",
+        "bodyHtml": "Peer-reviewed energy labels for ML models citing SCI and the Impact Framework.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://upcommons.upc.edu/bitstreams/40519de3-1004-4711-86bb-3901aeddfe85/download"
+      },
+      {
+        "title": "Accenture Labs survey and independent convergence",
+        "bodyHtml": "A survey defining SCI as the GSF method; <a href='https://arxiv.org/pdf/2306.10049'>another paper</a> notes its formula is recognisable as the SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://arxiv.org/html/2506.09683v1"
+      },
+      {
+        "title": "Purdue FUEL (ACL 2025)",
+        "bodyHtml": "Complementary LLM-serving research; lead author Yi Ding chairs the SWI project.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI for AI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://arxiv.org/abs/2502.11256v2"
+      },
+      {
+        "title": "KIT, LOCO 2026 and further research",
+        "bodyHtml": "Karlsruhe Institute of Technology cites GSF repeatedly; <a href='https://arxiv.org/pdf/2609.13355'>LOCO 2026</a> (Manchester, CERN) cites SCI for Web; <a href='https://arxiv.org/pdf/2506.09370'>an industry study</a> cites SCI.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://publikationen.bibliothek.kit.edu/1000183038/162332018"
+      },
+      {
+        "title": "Academic members",
+        "bodyHtml": "UCL, Bristol, Edinburgh, Chalmers, Concordia, Amsterdam, Limerick, Linnaeus, Manchester Metropolitan, Huddersfield, Salento, L'Aquila, Universidad Politécnica de Madrid, Mondragon, Texas State, IIIT Hyderabad and IIM Mumbai.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Members</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://directory.greensoftware.foundation/members/"
+      },
+      {
+        "title": "⚠ UNVERIFIED: ARCHER2 (UK national supercomputing service) green software course",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> Explicit GSF attribution not yet confirmed in the materials.</p></div>Training materials teach carbon efficiency and energy efficiency as green software principles that mirror GSF's.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">GSF principles</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://epcced.github.io/green-software-archer2/key-points.html"
+      },
+      {
+        "title": "⚠ UNVERIFIED: Dodge et al., Measuring the Carbon Intensity of AI in Cloud Instances (ACM FAccT 2022)",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> Verify authorship and the GSF reference, and replace this secondary link with the ACM DOI.</p></div>The FAccT paper counted among GSF's peer-reviewed citations, with Microsoft and Allen Institute co-authors.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">SCI</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://www.emergentmind.com/topics/software-carbon-intensity-sci"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "id": "policy",
+    "heading": "Skills, policy and reach",
+    "body": "",
+    "note": "",
+    "cards": [
+      {
+        "title": "Green Software Practitioner course",
+        "bodyHtml": "More than 130,000 completions, over 30,000 in financial services. The course Defra mandates.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Training</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/education/"
+      },
+      {
+        "title": "⚠ UNVERIFIED: IFS keynote, London Climate Action Week (June 2026)",
+        "bodyHtml": "<div class=\"mb-3 rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><p class=\"font-bold\">UNVERIFIED: needs further work before launch</p><p class=\"mt-1\"><strong>To verify:</strong> No public recording or link found. Needs a source or written confirmation from IFS.</p></div>Sophie Graham, Head of Sustainability AI at IFS, referenced GSF and the Practitioner course in her keynote at the Leadership Summit.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Training</p>"
+      },
+      {
+        "title": "Green Software & AI Academy",
+        "bodyHtml": "Role-based training built on SCI, SCI for AI, SEI and SWI; pilot open to organisations (<a href='https://greensoftware.foundation/articles/green-software-foundation-announces-intent-to-launch-green-software-ai-academy-to-build-the-skills-needed-for-sustainable-ai/'>announcement</a>).<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Training</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://academy.greensoftware.foundation/"
+      },
+      {
+        "title": "Response to the GHG Protocol Scope 2 consultation",
+        "bodyHtml": "GSF's formal submission advocating hourly carbon accounting.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Policy</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/articles/gsfs-response-to-ghg-protocol-advocating-for-hourly-carbon-accounting/"
+      },
+      {
+        "title": "Green AI Position Paper",
+        "bodyHtml": "Ratified by the Steering Committee; cited in the US procurement handbook.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Policy</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/policy/research/green-ai-position-paper/"
+      },
+      {
+        "title": "Policy and Research hub",
+        "bodyHtml": "All GSF positions in one place.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Policy</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/policy/"
+      },
+      {
+        "title": "Press coverage",
+        "bodyHtml": "BBC, MIT Technology Review, Forbes, Raconteur and Economic Times; <a href='https://www.fortune.com/2021/05/25/microsoft-accenture-goldman-sachs-to-develop-green-software-energy-consumption'>Fortune</a> covered the founding.<p class=\"mt-3 text-xs font-semibold uppercase tracking-wide text-primary\">Press</p>",
+        "ctaText": "View source →",
+        "ctaHref": "https://greensoftware.foundation/press/"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  }
+];
+---
+
+<Layout
+  title="Partnerships & Recognition — Green Software Foundation"
+  description="Governments, intergovernmental bodies and universities working with the Green Software Foundation: from G7 recognition to national adoption of SCI."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about/" },
+    { label: "Partnerships & Recognition" },
+  ]} />
+
+  <Hero
+    heading="Partnerships"
+    headingAccent="& Recognition"
+    body="From the G7 to national digital agencies, the Green Software Foundation's open standards are being cited, adopted and built into public policy. This page brings together the public evidence."
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/hero-illustration.svg"
+    imageAlt="Partnerships and recognition illustration"
+  />
+
+  <StatsGrid
+    heading="Standards institutions"
+    headingAccent="rely on"
+    stats={[
+      { value: "ISO/IEC 21031", label: "SCI is an international standard" },
+      { value: "7", label: "governments and the EU engaged" },
+      { value: "3 of 3", label: "major hyperscalers reference GSF" },
+      { value: "130,000+", label: "practitioners trained" },
+      { value: "~70", label: "member organisations" },
+    ]}
+  />
+
+  <!-- DRAFT REVIEW KEY: remove before launch -->
+  <div class="container my-6">
+    <p class="rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-4 text-sm text-orange-900">
+      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> come from the source document but lack a confirmed public source. They need verification before this page goes live.
+    </p>
+  </div>
+
+  {sections.map((s) => (
+    <div id={s.id}>
+      <CardGrid
+        heading={s.heading}
+        body={s.body}
+        cards={s.cards}
+        columns={3}
+        align="left"
+        bgClass={s.bg}
+      />
+      {s.note && <TextBlock body={s.note} compact bgClass={s.bg} />}
+    </div>
+  ))}
+
+  <CTABanner
+    heading="Work with the Green Software Foundation"
+    body="Government, non-profit and academic organisations join free of charge. We are a non-profit, vendor-neutral foundation under the Linux Foundation, with standards ratified by consensus and certified by ISO."
+    ctaText="Join the Foundation"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+</Layout>

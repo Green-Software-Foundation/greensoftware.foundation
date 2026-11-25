@@ -317,6 +317,10 @@ export const navItems = [
             href: "/governance/",
             label: "Governance & Leadership" /* icon: "shield" */,
           },
+          {
+            href: "/partnerships/",
+            label: "Partnerships & Recognition",
+          },
           { href: "/brand/", label: "Brand & Assets" /* icon: "palette" */ },
           { href: "/contact/", label: "Contact" /* icon: "mail" */ },
           {
