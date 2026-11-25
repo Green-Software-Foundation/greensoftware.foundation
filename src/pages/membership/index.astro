@@ -98,6 +98,30 @@ const resolveOrgs = (names: string[]) =>
     fadeBgClass="from-white"
   />
 
+  <!-- Partnerships & Recognition feature: links through to /partnerships/ -->
+  <FeatureGrid
+    variant="panel"
+    eyebrow="Why it matters"
+    heading="Join standards that *governments and institutions* rely on"
+    body="Membership puts you inside the organisation whose open standards are being cited, adopted and built into public policy, from the G7 to national digital agencies."
+    stats={[
+      { value: "ISO/IEC 21031", label: "SCI is an international standard" },
+      { value: "G7", label: "SCI for AI named in the G7's official AI overview" },
+      { value: "7", label: "national governments, plus the EU, engaged" },
+    ]}
+    columns={4}
+    linkStyle="button"
+    features={[
+      { badge: "G7", title: "The G7's official AI overview", description: "SCI for AI is named in the French G7 Presidency's overview of AI measurement initiatives, beside ISO, ITU and IEEE.", linkText: "See the evidence →", linkHref: "/partnerships/#g7" },
+      { badge: "United Kingdom", title: "Written into UK government policy", description: "Defra's digital sustainability strategy requires GSF training, and the new government service standard recommends SCI.", linkText: "See the evidence →", linkHref: "/partnerships/#gov" },
+      { badge: "Singapore", title: "A national guide built with GSF", description: "IMDA's national green software guide was developed with GSF. Singapore was the first country to join as a government member.", linkText: "See the evidence →", linkHref: "/partnerships/#gov" },
+      { badge: "Taiwan", title: "SCI in the national roadmap", description: "Taiwan's Ministry of Digital Affairs writes ISO 21031 (SCI) into its digital sustainability roadmap, with a green software label in pilot.", linkText: "See the evidence →", linkHref: "/partnerships/#gov" },
+    ]}
+    ctaLeadIn="Government, non-profit and academic organisations join GSF free of charge."
+    ctaText="Explore partnerships & recognition →"
+    ctaHref="/partnerships/"
+  />
+
   <!-- Section 3: Steering Proposition -->
   <TextWithImage
     heading="Bring us your"

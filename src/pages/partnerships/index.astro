@@ -15,14 +15,15 @@ import Footer from "@/components/footer.astro";
 // public source and MUST be verified or removed before launch. See docs/pages/partnerships.md.
 const intro = {"heading": "New here? *Three terms to know*", "body": "The Green Software Foundation is a non-profit, vendor-neutral foundation under the Linux Foundation. We write open standards that help organisations measure and reduce the environmental impact of software.", "extra": ["SCI (Software Carbon Intensity) is a way of measuring how much carbon a piece of software produces each time it is used. It is an international standard, ISO/IEC 21031.", "SCI for AI applies the same idea to artificial intelligence systems.", "Real Time Cloud is a standard for cloud providers to share live energy and carbon data in a common format."]};
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
+const roadmapFilters = [{"id": "silo", "label": "SILO"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
 const sections = [
   {
     "cols": 3,
     "id": "g7",
     "navLabel": "G7",
     "heading": "Recognised in the G7's official AI overview",
-    "body": "When the French G7 Presidency catalogued the world's methods for measuring AI's energy and resource use, SCI for AI was named, credited to the Green Software Foundation, and listed beside ISO, ITU, IEEE, CEN and AFNOR.",
-    "note": "The overview is a living document. It grew out of the G7 Energy and AI Work Plan, from Kananaskis through the Canadian Presidency (November 2025) to the French Presidency, and it feeds the OECD AI Tools Catalogue.",
+    "body": "When the French G7 Presidency catalogued the world's methods for measuring AI's energy and resource use, SCI for AI was named, credited to the Green Software Foundation, and listed beside ISO, ITU, IEEE, CEN and AFNOR. The overview is a living document that grew out of the G7 Energy and AI Work Plan and feeds the OECD AI Tools Catalogue.",
+    "note": "",
     "cards": [
       {
         "label": "G7 · French Presidency",
@@ -364,8 +365,8 @@ const sections = [
     "id": "igo",
     "navLabel": "International organisations (IGOs)",
     "heading": "Working with international organisations (IGOs)",
-    "body": "Some intergovernmental organisations, which are set up by treaty between governments, are in active talks with the Foundation.",
-    "note": "Details of these discussions are confidential and can be shared in the right setting. Intergovernmental organisations hold the highest bar for neutrality, which makes their engagement with a non-profit, vendor-neutral foundation under the Linux Foundation notable. Government, non-profit and academic organisations join free of charge.",
+    "body": "Some intergovernmental organisations, which are set up by treaty between governments, are in active talks with the Foundation. They hold the highest bar for neutrality, which makes their engagement with a non-profit, vendor-neutral foundation notable. Details are confidential and can be shared in the right setting.",
+    "note": "",
     "cards": [
       {
         "label": "Intergovernmental organisations (IGOs)",
@@ -387,8 +388,8 @@ const sections = [
     "id": "wri",
     "navLabel": "World Resources Institute",
     "heading": "World Resources Institute",
-    "body": "WRI co-created the Greenhouse Gas Protocol, the world's most widely used carbon accounting standard. It is now assessing how buyers could compare AI products on environmental performance, and GSF is in the conversation while the approach is still being shaped.",
-    "note": "GSF is engaged with WRI as it assesses the programme, and has contributed technical input on SCI for AI and on what is needed for results to be consistent and comparable across providers.",
+    "body": "WRI co-created the Greenhouse Gas Protocol, the world's most widely used carbon accounting standard. It is now assessing how buyers could compare AI products on environmental performance. GSF is engaged in that assessment, contributing technical input on SCI for AI and on what makes results consistent and comparable across providers.",
+    "note": "",
     "cards": [
       {
         "label": "World Resources Institute",
@@ -577,7 +578,8 @@ const sections = [
         "title": "SCI is heading into OpenTelemetry",
         "bodyHtml": "The Cloud Native Computing Foundation (home of Kubernetes) described in October 2026 how SCI could become part of OpenTelemetry, the industry standard for software monitoring.",
         "tags": [
-          "sci"
+          "sci",
+          "otel"
         ],
         "ctaText": "View source",
         "ctaHref": "https://www.cncf.io/blog/2026/10/15/carbon-as-a-first-class-signal-bringing-software-carbon-intensity-to-opentelemetry/",
@@ -957,7 +959,18 @@ const sections = [
         "ctaHref": "https://arxiv.org/abs/2410.15087",
         "secondaryCtaText": "Learn more about SCI",
         "secondaryCtaHref": "/standards/sci/"
-      },
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "cols": 3,
+    "id": "academic",
+    "navLabel": "Academic members",
+    "heading": "Our academic members",
+    "body": "Seventeen universities and institutes from nine countries are members of the Foundation, contributing research, teaching and technical expertise to our open standards.",
+    "note": "",
+    "cards": [
       {
         "label": "Academic member · United Kingdom",
         "title": "University College London",
@@ -1129,7 +1142,7 @@ const sections = [
         "secondaryCtaHref": "/membership/"
       }
     ],
-    "bg": "bg-white"
+    "bg": "bg-accent-lightest-2"
   },
   {
     "cols": 3,
@@ -1218,6 +1231,64 @@ const sections = [
         "secondaryCtaHref": "/press/"
       }
     ],
+    "bg": "bg-white"
+  },
+  {
+    "cols": 3,
+    "id": "roadmap",
+    "navLabel": "Future roadmap",
+    "heading": "Future roadmap",
+    "body": "Where GSF's standards and tools are heading next. Recognition and evidence will be added here as each one matures.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Data centres",
+        "title": "SILO",
+        "bodyHtml": "The Standardised Interoperability Layer for Real-Time Sustainability Optimisation: a common layer for sustainability data and control across data centre systems.",
+        "tags": [
+          "silo"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://github.com/Green-Software-Foundation/silo",
+        "secondaryCtaText": "Learn more about SILO",
+        "secondaryCtaHref": "/standards/silo/"
+      },
+      {
+        "label": "Observability",
+        "title": "SCI for OpenTelemetry",
+        "bodyHtml": "Work to give SCI a shared vocabulary inside OpenTelemetry, the industry standard for monitoring software. In October 2026 the Cloud Native Computing Foundation described how carbon could become a first-class signal.",
+        "tags": [
+          "sci",
+          "otel"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.cncf.io/blog/2026/10/15/carbon-as-a-first-class-signal-bringing-software-carbon-intensity-to-opentelemetry/",
+        "secondaryCtaText": "Learn more about SCI for OpenTelemetry",
+        "secondaryCtaHref": "/tools/sci-for-opentelemetry/"
+      },
+      {
+        "label": "Security",
+        "title": "⚠ PLACEHOLDER: SCI for Security",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to security. Further detail to follow.",
+        "tags": [
+          "sci-security"
+        ]
+      },
+      {
+        "label": "AI agents",
+        "title": "⚠ PLACEHOLDER: SCI for MCP",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to the Model Context Protocol, the open standard for connecting AI systems to tools and data. Further detail to follow.",
+        "tags": [
+          "sci-mcp"
+        ]
+      },
+      {
+        "label": "More to come",
+        "title": "⚠ PLACEHOLDER: Other roadmap discussions",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add any other roadmap items we want to feature, or remove this card.</span></span>Further standards and tools in discussion will appear here as recognition and evidence emerge.",
+        "tags": []
+      }
+    ],
     "bg": "bg-accent-lightest-2"
   }
 ];
@@ -1247,8 +1318,8 @@ const sections = [
     headingAccent="& Recognition"
     body="From the G7 to national digital agencies, the Green Software Foundation's open standards are being cited, adopted and built into public policy. This page brings together the public evidence."
     bgClass="bg-accent-lightest-2"
-    imageSrc="/assets/hero-illustration.svg"
-    imageAlt="Partnerships and recognition illustration"
+    imageSrc="/assets/partnerships-hero.svg"
+    imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
   />
 
   <!-- In-page navigation -->
@@ -1268,12 +1339,18 @@ const sections = [
   <!-- Topic filter: sticky on larger screens, plus a floating "show everything" pill while a filter is active -->
   <div class="z-30 border-b border-primary-lighter bg-white/95 py-3 backdrop-blur md:sticky md:top-0">
     <div class="container">
-      <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold">
-        <span class="mr-1 text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</span>
-        <div data-filter-bar class="flex flex-wrap items-center justify-center gap-2">
+      <div data-filter-bar class="flex flex-col items-center gap-2 text-sm font-semibold">
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <span class="mr-1 text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</span>
           <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-5 py-2 font-bold text-white shadow-sm ring-2 ring-primary-dark ring-offset-2 transition-colors hover:bg-primary">Show everything</button>
           <span aria-hidden="true" class="hidden h-6 w-px bg-primary-lighter sm:block"></span>
           {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full border border-primary px-3.5 py-1 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">{f.label}</button>
+          ))}
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <span class="mr-1 text-xs font-bold uppercase tracking-wider text-accent-dark">Future roadmap</span>
+          {roadmapFilters.map((f) => (
             <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full border border-primary px-3.5 py-1 text-primary-dark transition-colors hover:bg-primary hover:text-white aria-pressed:bg-primary aria-pressed:text-white">{f.label}</button>
           ))}
         </div>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-label="A globe connected to a government building, a university, a policy document and a certification rosette">
+  <defs>
+    <clipPath id="globe"><circle cx="280" cy="240" r="118"/></clipPath>
+    <linearGradient id="sphere" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#006d69"/>
+      <stop offset="1" stop-color="#003734"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft backdrop -->
+  <circle cx="280" cy="240" r="205" fill="#ebf2d4"/>
+  <circle cx="280" cy="240" r="170" fill="#d7e6a9" opacity="0.45"/>
+
+  <!-- connection lines -->
+  <g stroke="#83993e" stroke-width="2.5" stroke-dasharray="3 7" stroke-linecap="round" fill="none">
+    <path d="M148 150 L215 192"/>
+    <path d="M412 148 L350 192"/>
+    <path d="M150 352 L214 292"/>
+    <path d="M412 350 L350 290"/>
+  </g>
+
+  <!-- globe -->
+  <circle cx="280" cy="240" r="118" fill="url(#sphere)"/>
+  <g clip-path="url(#globe)" fill="none" stroke="#80b6b4" stroke-width="1.6" opacity="0.55">
+    <ellipse cx="280" cy="240" rx="118" ry="118"/>
+    <ellipse cx="280" cy="240" rx="78" ry="118"/>
+    <ellipse cx="280" cy="240" rx="38" ry="118"/>
+    <line x1="280" y1="122" x2="280" y2="358"/>
+    <line x1="162" y1="240" x2="398" y2="240"/>
+    <path d="M168 190 Q280 170 392 190"/>
+    <path d="M168 290 Q280 310 392 290"/>
+  </g>
+  <!-- simplified continents -->
+  <g clip-path="url(#globe)" fill="#aecc53" opacity="0.9">
+    <path d="M214 176 q18 -14 38 -6 q10 10 -2 22 q-8 10 -4 22 q-14 8 -26 -4 q-14 -16 -6 -34z"/>
+    <path d="M300 204 q22 -12 44 2 q12 14 2 30 q-6 14 -2 28 q-18 14 -34 -2 q-12 -16 -10 -34 q-2 -14 0 -24z"/>
+    <path d="M232 262 q14 -4 22 8 q4 16 -6 28 q-12 8 -20 -4 q-4 -16 4 -32z"/>
+  </g>
+  <!-- globe label -->
+  <rect x="222" y="224" width="116" height="32" rx="16" fill="#ffffff"/>
+  <text x="280" y="245" text-anchor="middle" font-family="Nunito Sans, system-ui, sans-serif" font-size="14" font-weight="800" fill="#00524f">ISO/IEC 21031</text>
+
+  <!-- orbit ring -->
+  <ellipse cx="280" cy="240" rx="196" ry="62" transform="rotate(-18 280 240)" fill="none" stroke="#006d69" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- node: government building -->
+  <g transform="translate(118 128)">
+    <circle r="42" fill="#ffffff" stroke="#aecc53" stroke-width="4"/>
+    <g fill="#00524f">
+      <path d="M-20 -6 L0 -22 L20 -6 Z"/>
+      <rect x="-16" y="-2" width="5" height="18"/>
+      <rect x="-6" y="-2" width="5" height="18"/>
+      <rect x="4" y="-2" width="5" height="18"/>
+      <rect x="14" y="-2" width="5" height="18" transform="translate(-1 0)"/>
+      <rect x="-22" y="18" width="44" height="5" rx="1"/>
+    </g>
+  </g>
+
+  <!-- node: university -->
+  <g transform="translate(442 118)">
+    <circle r="42" fill="#ffffff" stroke="#aecc53" stroke-width="4"/>
+    <g fill="#00524f">
+      <path d="M-24 -4 L0 -16 L24 -4 L0 8 Z"/>
+      <path d="M-14 4 L-14 14 Q0 24 14 14 L14 4 L0 11 Z"/>
+      <rect x="21" y="-3" width="3" height="18" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- node: policy document -->
+  <g transform="translate(120 366)">
+    <circle r="42" fill="#ffffff" stroke="#aecc53" stroke-width="4"/>
+    <rect x="-15" y="-22" width="30" height="40" rx="4" fill="#00524f"/>
+    <g stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+      <line x1="-8" y1="-12" x2="8" y2="-12"/>
+      <line x1="-8" y1="-4" x2="8" y2="-4"/>
+      <line x1="-8" y1="4" x2="2" y2="4"/>
+    </g>
+    <circle cx="8" cy="10" r="8" fill="#aecc53"/>
+    <path d="M4 10 L7 13 L12 7" fill="none" stroke="#00524f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- node: certification rosette -->
+  <g transform="translate(440 362)">
+    <circle r="42" fill="#ffffff" stroke="#aecc53" stroke-width="4"/>
+    <path d="M-10 6 L-16 24 L-6 19 L0 26 L2 8 Z" fill="#83993e"/>
+    <path d="M10 6 L16 24 L6 19 L0 26 L-2 8 Z" fill="#576629"/>
+    <circle cy="-4" r="17" fill="#00524f"/>
+    <circle cy="-4" r="11" fill="none" stroke="#aecc53" stroke-width="2.5"/>
+    <path d="M-5 -4 L-1 0 L6 -8" fill="none" stroke="#aecc53" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- leaf accents -->
+  <g fill="#aecc53">
+    <path d="M258 70 q26 -24 54 -8 q-10 30 -42 30 q-8 -6 -12 -22z" opacity="0.9"/>
+    <path d="M286 408 q22 -18 46 -6 q-8 26 -36 26 q-6 -6 -10 -20z" opacity="0.7"/>
+  </g>
+  <path d="M276 100 q4 -14 14 -22" fill="none" stroke="#00524f" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

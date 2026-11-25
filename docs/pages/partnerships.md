@@ -3,7 +3,7 @@
 **URL:** `/partnerships/`
 **File:** `src/pages/partnerships/index.astro`
 **Breadcrumb:** Home / About / Partnerships & Recognition
-**Featured on:** the homepage (after the logo marquee) and the About page (after Mission & Vision) via a dark FeatureGrid panel, "Recognised by governments and global institutions". Update the panel's figures and cards if the evidence here changes.
+**Featured on:** the homepage (after the logo marquee), the About page (after Mission & Vision) and the Membership page (after the logo marquee) via a dark FeatureGrid panel, "Recognised by governments and global institutions". Update the panel's figures and cards if the evidence here changes.
 **Navigation:** About menu (after Governance & Leadership) and a second green button, "Partnerships & Recognition →", at the bottom of the Standards dropdown beside "About our standards process →" (`src/lib/nav-items.ts`, `extraFooterLinks`; rendered in `src/components/react/navbar.tsx`)
 
 ## What the Page Shows
@@ -27,6 +27,12 @@ It is a small inline script at the bottom of the page. Each card carries a `data
 ## Member case studies
 
 The "Member case studies" section is organised by member: each card is titled with the member's name (Microsoft, Google Cloud, UBS, Accenture, Thoughtworks and others), with the sector as the small label and a short account of what they did with GSF's standards. To add a member, add a card to the `industry` section in the generator with the member name as the title and a public source link.
+
+## Academic members and Future roadmap
+
+- **Academic members** is its own section (one card per member institution), with its own "Jump to" button.
+- **Future roadmap** (SILO, SCI for OpenTelemetry, SCI for Security, SCI for MCP, other items) is a section plus a third row of topic buttons in the sticky filter bar. SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards (orange) with no source yet: add scope, status and public references, or remove them before launch.
+- Hero image: `public/assets/partnerships-hero.svg` (a globe linked to a government building, university, policy document and certification rosette).
 
 ## Calls to action
 
@@ -54,6 +60,7 @@ Cards titled "⚠ UNVERIFIED" and the "Draft review key" block are temporary rev
 - IFS keynote, London Climate Action Week June 2026
 - ARCHER2 course GSF attribution
 - Second international research organisation card in the IGO section: placeholder wording, replace once the history of the discussions is available
+- Future roadmap placeholders: SCI for Security, SCI for MCP, and other roadmap discussions
 - Dodge et al. FAccT 2022 authorship and GSF reference (the ACM link is the one GSF's own SCI page uses)
 
 Also confirm before launch: Norwegian Environment Agency wording (source was an internal Steering email, 24 Nov 2026) and the credit for Taiwan's green software label (MODA-led; TIER is a member and research partner).
