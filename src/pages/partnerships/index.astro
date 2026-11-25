@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/breadcrumb.astro";
 import Hero from "@/components/hero.astro";
 import TextBlock from "@/components/text-block.astro";
 import CardGrid from "@/components/card-grid.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
 import Footer from "@/components/footer.astro";
 
@@ -18,6 +19,8 @@ const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI f
 const roadmapFilters = [{"id": "silo", "label": "Data center specification (SILO)"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
 const sections = [
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "g7",
     "navLabel": "G7",
@@ -61,6 +64,8 @@ const sections = [
     "bg": "bg-accent-lightest-2"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "gov",
     "navLabel": "Governments",
@@ -361,6 +366,8 @@ const sections = [
     "bg": "bg-white"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 2,
     "id": "igo",
     "navLabel": "International (IGOs)",
@@ -384,6 +391,8 @@ const sections = [
     "bg": "bg-accent-lightest-2"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "wri",
     "navLabel": "WRI",
@@ -419,6 +428,8 @@ const sections = [
     "bg": "bg-white"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "standards",
     "navLabel": "Standards",
@@ -463,18 +474,6 @@ const sections = [
         "secondaryCtaHref": "/standards/rtc/"
       },
       {
-        "label": "SWI",
-        "title": "A standard in development to measure software's water use",
-        "bodyHtml": "The Software Water Intensity project, led by Purdue University, is developing a standard for measuring the water footprint of software, extending GSF's work from carbon to water.",
-        "tags": [
-          "swi"
-        ],
-        "ctaText": "View source",
-        "ctaHref": "https://greensoftware.foundation/articles/introducing-the-software-water-intensity-swi-project/",
-        "secondaryCtaText": "Learn more about Software Water Intensity",
-        "secondaryCtaHref": "/standards/swi/"
-      },
-      {
         "label": "W3C",
         "title": "A formal partnership with the body that sets web standards",
         "bodyHtml": "GSF runs SCI for Web through its consensus process while the W3C's Sustainable Web group gives feedback.",
@@ -514,6 +513,96 @@ const sections = [
     "bg": "bg-accent-lightest-2"
   },
   {
+    "special": null,
+    "cta": null,
+    "cols": 3,
+    "id": "roadmap",
+    "navLabel": "In development",
+    "heading": "Standards in development",
+    "body": "These standards are being built now, and they are open to participation. Learn more and help shape them.",
+    "note": "",
+    "cards": [
+      {
+        "label": "In development · Data centers",
+        "title": "Data center specification (SILO)",
+        "bodyHtml": "The Standardized Interoperability Layer for Real-Time Sustainability Optimization: a common layer for sustainability data and control across data center systems. Join the community shaping it.",
+        "tags": [
+          "silo"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more and get involved",
+        "secondaryCtaHref": "/standards/silo/"
+      },
+      {
+        "label": "In development · Water",
+        "title": "Software Water Intensity (SWI)",
+        "bodyHtml": "A standard to measure software's water use, led by Purdue University and extending GSF's work from carbon to water. Contribute to how the water footprint of software is measured.",
+        "tags": [
+          "swi"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more and get involved",
+        "secondaryCtaHref": "/standards/swi/"
+      },
+      {
+        "label": "In development · Observability",
+        "title": "SCI for OpenTelemetry",
+        "bodyHtml": "Work to give SCI a shared vocabulary inside OpenTelemetry, the industry standard for monitoring software. The Cloud Native Computing Foundation described the approach in October 2026. Help define it.",
+        "tags": [
+          "sci",
+          "otel"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more and get involved",
+        "secondaryCtaHref": "/tools/sci-for-opentelemetry/"
+      },
+      {
+        "label": "In development · Security",
+        "title": "⚠ PLACEHOLDER: SCI for Security",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to security. Further detail to follow.",
+        "tags": [
+          "sci-security"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more and get involved",
+        "secondaryCtaHref": "/community/"
+      },
+      {
+        "label": "In development · AI agents",
+        "title": "⚠ PLACEHOLDER: SCI for MCP",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to the Model Context Protocol, the open standard for connecting AI systems to tools and data. Further detail to follow.",
+        "tags": [
+          "sci-mcp"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more and get involved",
+        "secondaryCtaHref": "/community/"
+      },
+      {
+        "label": "In development · More to come",
+        "title": "⚠ PLACEHOLDER: Other roadmap discussions",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add any other roadmap items we want to feature, or remove this card.</span></span>Further standards and tools in discussion will appear here as they take shape.",
+        "tags": [],
+        "featured": true
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": "assemblies",
+    "cta": null,
+    "cols": 3,
+    "id": "assemblies",
+    "navLabel": "Assemblies",
+    "heading": "Assemblies, powered by Harmony",
+    "body": "",
+    "note": "",
+    "cards": [],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "independent",
     "navLabel": "Validation",
@@ -602,11 +691,13 @@ const sections = [
     "bg": "bg-white"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "industry",
     "navLabel": "Case studies",
-    "heading": "Member case studies",
-    "body": "How members are using GSF's standards, from cloud providers to banks, travel technology and industrial firms.",
+    "heading": "Case studies",
+    "body": "",
     "note": "",
     "cards": [
       {
@@ -833,6 +924,8 @@ const sections = [
     "bg": "bg-accent-lightest-2"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "research",
     "navLabel": "Research",
@@ -964,6 +1057,13 @@ const sections = [
     "bg": "bg-white"
   },
   {
+    "special": null,
+    "cta": {
+      "heading": "Inviting your academic institution to join",
+      "body": "Academic institutions join the Foundation free of charge. Get in touch to discuss membership and the benefits of being part of the Foundation.",
+      "text": "Discuss academic membership",
+      "href": "/membership/enquire/"
+    },
     "cols": 3,
     "id": "academic",
     "navLabel": "Academic members",
@@ -1145,11 +1245,13 @@ const sections = [
     "bg": "bg-accent-lightest-2"
   },
   {
+    "special": null,
+    "cta": null,
     "cols": 3,
     "id": "policy",
     "navLabel": "Skills & policy",
-    "heading": "Skills, policy and reach",
-    "body": "Training, policy positions and press coverage.",
+    "heading": "Policy, research and skills",
+    "body": "GSF's published papers, consultation responses and training.",
     "note": "",
     "cards": [
       {
@@ -1185,38 +1287,122 @@ const sections = [
         "secondaryCtaHref": "/education/"
       },
       {
-        "label": "Policy",
-        "title": "Our response to the GHG Protocol consultation",
-        "bodyHtml": "A formal submission to the world's main carbon accounting standard, arguing for hourly rather than annual carbon accounting.",
+        "label": "Consultation response · March 2026",
+        "title": "Data Centers as Flexible Grid Participants",
+        "bodyHtml": "GSF's response to Ofgem's Demand Connections Reform call for input, on how software-controlled flexibility in data centers can help address Great Britain's connections crisis.",
         "tags": [
           "policy"
         ],
-        "ctaText": "View source",
-        "ctaHref": "https://greensoftware.foundation/articles/gsfs-response-to-ghg-protocol-advocating-for-hourly-carbon-accounting/",
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/data-centres-ofgem-response/",
         "secondaryCtaText": "Learn more about our policy work",
         "secondaryCtaHref": "/policy/"
       },
       {
-        "label": "Policy",
+        "label": "Consultation response · December 2025",
+        "title": "Response to the GHG Protocol Scope 2 consultation",
+        "bodyHtml": "GSF's formal response to the proposed revisions, advocating hourly granularity in carbon accounting to enable carbon-aware software operations.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/ghg-protocol-scope-2-response/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Position paper · May 2025",
         "title": "Green AI Position Paper",
-        "bodyHtml": "Our formal position on AI and sustainability, ratified by the Steering Committee and cited in the US public-sector procurement handbook.",
+        "bodyHtml": "Defines Green AI, assesses environmental impacts across the AI lifecycle and outlines key actions. Written by the GSF Green AI Committee and cited in the US public-sector procurement handbook.",
         "tags": [
           "policy"
         ],
-        "ctaText": "View source",
-        "ctaHref": "https://greensoftware.foundation/policy/research/green-ai-position-paper/",
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/green-ai-position-paper/",
         "secondaryCtaText": "Learn more about our policy work",
         "secondaryCtaHref": "/policy/"
       },
       {
-        "label": "Policy",
-        "title": "All our policy and research in one place",
-        "bodyHtml": "Every position, white paper and consultation response.",
+        "label": "White paper · February 2026",
+        "title": "SCI for AI and EU AI Act environmental compliance",
+        "bodyHtml": "How SCI for AI provides a methodology for measuring and reducing AI's climate impact, exceeding the Act's current environmental documentation requirements.",
         "tags": [
           "policy"
         ],
-        "ctaText": "View source",
-        "ctaHref": "https://greensoftware.foundation/policy/",
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-ai-eu-ai-act/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "White paper · January 2026",
+        "title": "The SCI standard and CSRD compliance",
+        "bodyHtml": "How SCI (ISO/IEC 21031:2024) can help European organisations measure, report and reduce software emissions within the CSRD and ESRS E1 reporting framework.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-csrd-compliance/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Assembly report · July 2025",
+        "title": "SCI for AI Assembly Report",
+        "bodyHtml": "Outcomes of the 2025 expert workshops that defined GSF's approach to AI measurement and evaluated existing metrics, laying the groundwork for SCI for AI.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-for-ai-workshop-report/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Assembly report · January 2026",
+        "title": "SCI for Web Assembly Report",
+        "bodyHtml": "The consensus design document for SCI for Web, created by 14 GSF members through an AI-assisted assembly. Covers scope, personas, existing tools and implementation practices.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-web-assembly-report/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Technical note · July 2026",
+        "title": "SILO companion technical note",
+        "bodyHtml": "How the internal interoperability layer complements the external, grid-facing interface to form a complete, deployable specification.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/silo-companion-technical-note/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Q&A · August 2026",
+        "title": "SILO Project Q&A",
+        "bodyHtml": "The problem SILO solves in practice, who it is for, the roadmap ahead and how to get involved.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/silo-project-qa/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Policy and research",
+        "title": "All GSF policy and research in one place",
+        "bodyHtml": "Every position, white paper, consultation response and assembly report, with the Policy Working Group's mission and the Policy Radar.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Browse all publications",
+        "ctaHref": "/policy/research/",
         "secondaryCtaText": "Learn more about our policy work",
         "secondaryCtaHref": "/policy/"
       },
@@ -1232,64 +1418,6 @@ const sections = [
       }
     ],
     "bg": "bg-white"
-  },
-  {
-    "cols": 3,
-    "id": "roadmap",
-    "navLabel": "Roadmap",
-    "heading": "Future roadmap",
-    "body": "Where GSF's standards and tools are heading next. Recognition and evidence will be added here as each one matures.",
-    "note": "",
-    "cards": [
-      {
-        "label": "Data centres",
-        "title": "SILO",
-        "bodyHtml": "The Standardised Interoperability Layer for Real-Time Sustainability Optimisation: a common layer for sustainability data and control across data centre systems.",
-        "tags": [
-          "silo"
-        ],
-        "ctaText": "View source",
-        "ctaHref": "https://github.com/Green-Software-Foundation/silo",
-        "secondaryCtaText": "Learn more about SILO",
-        "secondaryCtaHref": "/standards/silo/"
-      },
-      {
-        "label": "Observability",
-        "title": "SCI for OpenTelemetry",
-        "bodyHtml": "Work to give SCI a shared vocabulary inside OpenTelemetry, the industry standard for monitoring software. In October 2026 the Cloud Native Computing Foundation described how carbon could become a first-class signal.",
-        "tags": [
-          "sci",
-          "otel"
-        ],
-        "ctaText": "View source",
-        "ctaHref": "https://www.cncf.io/blog/2026/10/15/carbon-as-a-first-class-signal-bringing-software-carbon-intensity-to-opentelemetry/",
-        "secondaryCtaText": "Learn more about SCI for OpenTelemetry",
-        "secondaryCtaHref": "/tools/sci-for-opentelemetry/"
-      },
-      {
-        "label": "Security",
-        "title": "⚠ PLACEHOLDER: SCI for Security",
-        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to security. Further detail to follow.",
-        "tags": [
-          "sci-security"
-        ]
-      },
-      {
-        "label": "AI agents",
-        "title": "⚠ PLACEHOLDER: SCI for MCP",
-        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to the Model Context Protocol, the open standard for connecting AI systems to tools and data. Further detail to follow.",
-        "tags": [
-          "sci-mcp"
-        ]
-      },
-      {
-        "label": "More to come",
-        "title": "⚠ PLACEHOLDER: Other roadmap discussions",
-        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add any other roadmap items we want to feature, or remove this card.</span></span>Further standards and tools in discussion will appear here as recognition and evidence emerge.",
-        "tags": []
-      }
-    ],
-    "bg": "bg-accent-lightest-2"
   }
 ];
 ---
@@ -1324,43 +1452,42 @@ const sections = [
     imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
   />
 
-  <!-- Single navigation box: a quiet contents list to jump to sections, then topic filters.
-       A floating "Show everything" pill appears while a filter is active. -->
-  <section class="bg-white py-8">
+  <!-- Sticky navigation: jump links to every section, plus a topic-filter panel.
+       A floating "Show everything" pill also appears while a filter is active. -->
+  <nav aria-label="On this page" class="relative z-30 border-b border-primary-lighter bg-white md:sticky md:top-0">
     <div class="container">
-      <nav aria-label="On this page" class="mx-auto max-w-5xl rounded-2xl bg-accent-lightest-2 p-6 md:p-8">
-        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Jump to</p>
-        <ul class="mt-3 grid gap-x-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
+        <ul class="flex flex-1 flex-wrap items-center gap-x-5 gap-y-1 text-sm font-semibold">
           {sections.map((s) => (
             <li>
-              <a href={`#${s.id}`} data-pill={s.id} class="flex items-center justify-between gap-2 border-b border-primary-lighter py-2.5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary">
-                <span>{s.navLabel}</span><span aria-hidden="true" class="text-primary/60">&darr;</span>
-              </a>
+              <a href={`#${s.id}`} data-pill={s.id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{s.navLabel}</a>
             </li>
           ))}
         </ul>
-
-        <div data-filter-bar class="mt-8">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Filter by topic</p>
-            <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-5 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary">Show everything</button>
-          </div>
-          <div class="mt-3 flex flex-wrap gap-2">
-            {filters.map((f) => (
-              <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
-            ))}
-          </div>
-          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-accent-dark">Future roadmap</p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            {roadmapFilters.map((f) => (
-              <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
-            ))}
-          </div>
+        <div class="flex items-center gap-2">
+          <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-4 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary">Show everything</button>
+          <button type="button" data-filter-toggle aria-expanded="false" aria-controls="filter-panel" class="rounded-full border-2 border-primary-dark px-4 py-1 text-sm font-bold text-primary-dark transition-colors hover:bg-primary-lightest-2">Filter by topic &darr;</button>
         </div>
-        <p data-filter-status aria-live="polite" class="mt-4 text-center text-sm text-primary-dark/70 empty:hidden"></p>
-      </nav>
+      </div>
     </div>
-  </section>
+    <div id="filter-panel" data-filter-panel hidden class="absolute inset-x-0 top-full border-b border-primary-lighter bg-accent-lightest-2 shadow-lg">
+      <div data-filter-bar class="container py-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Standards &amp; topics</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+          ))}
+        </div>
+        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-accent-dark">In development</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {roadmapFilters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+          ))}
+        </div>
+      </div>
+    </div>
+    <p data-filter-status aria-live="polite" class="container pb-2 text-sm text-primary-dark/70 empty:hidden"></p>
+  </nav>
 
   <div data-filter-float hidden class="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full bg-primary-dark py-3 pl-6 pr-3 text-base font-semibold text-white shadow-2xl ring-4 ring-white">
     <span data-filter-float-text></span>
@@ -1372,20 +1499,54 @@ const sections = [
   <!-- DRAFT REVIEW KEY: remove before launch -->
   <div class="container my-6">
     <p class="rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-4 text-sm text-orange-900">
-      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> come from the source document but lack a confirmed public source. They need verification before this page goes live.
+      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> or <strong>PLACEHOLDER</strong> need verification or content before this page goes live.
     </p>
   </div>
 
   {sections.map((s) => (
-    <div id={s.id} data-section class="scroll-mt-4">
-      <CardGrid
-        heading={s.heading}
-        body={s.body}
-        cards={s.cards}
-        columns={s.cols}
-        align="left"
-        bgClass={s.bg}
-      />
+    <div id={s.id} data-section class="scroll-mt-24">
+      {s.cta && (
+        <CTABanner
+          heading={s.cta.heading}
+          body={s.cta.body}
+          ctaText={s.cta.text}
+          ctaHref={s.cta.href}
+        />
+      )}
+      {s.special === "assemblies" ? (
+        <FeatureGrid
+          variant="panel"
+          eyebrow="How GSF standards are made"
+          heading="Assemblies, powered by *Harmony*"
+          body="Agreeing a standard across competing organisations, time zones and languages has traditionally taken years. Assemblies use Harmony, GSF's AI-assisted consensus engine, to bring hundreds of perspectives together asynchronously, so a consensus design document can take weeks, not years."
+          stats={[
+            { value: "10 weeks", label: "from a blank page to a consensus design document" },
+            { value: "14", label: "experts from 15 organisations in one assembly" },
+            { value: "< 3 years", label: "from first draft of SCI to ISO standard" },
+          ]}
+          columns={3}
+          linkStyle="button"
+          features={[
+            { badge: "The problem", title: "Consensus at scale breaks down", description: "Competitors around one table don't freely share, and the loudest voice dominates. Live meetings disadvantage people in other time zones and languages. Traditional multi-stakeholder processes can take years." },
+            { badge: "The tool", title: "Harmony, an AI-assisted facilitator", description: "Harmony can hold the perspectives of hundreds of people at once. AI reads and synthesises; humans rate, validate and cast every vote. Every response is logged, and its inclusion can be verified." },
+            { badge: "The result", title: "Consensus in weeks, not years", description: "In one assembly, 14 experts from 15 organisations went from a blank page to a consensus design document in ten weeks. The process is now repeatable across new GSF specifications." },
+          ]}
+          ctaLeadIn="Every new GSF specification can use the Assembly process. Members help shape the standards they will rely on."
+          ctaText="Explore Assemblies →"
+          ctaHref="/assemblies/"
+          ctaSecondaryText="Read the story →"
+          ctaSecondaryHref="/stories/ai-accelerated-consensus/"
+        />
+      ) : (
+        <CardGrid
+          heading={s.heading}
+          body={s.body}
+          cards={s.cards}
+          columns={s.cols}
+          align="left"
+          bgClass={s.bg}
+        />
+      )}
       {s.note && <TextBlock body={s.note} compact bgClass={s.bg} />}
     </div>
   ))}
@@ -1401,7 +1562,12 @@ const sections = [
   <script is:inline>
 (function(){
   var bar=document.querySelector('[data-filter-bar]'); if(!bar) return;
-  var btns=[].slice.call(bar.querySelectorAll('button[data-filter]'));
+  var btns=[].slice.call(document.querySelectorAll('button[data-filter]'));
+  var panel=document.querySelector('[data-filter-panel]'); var toggle=document.querySelector('[data-filter-toggle]');
+  function setPanel(open){if(!panel||!toggle)return;panel.hidden=!open;toggle.setAttribute('aria-expanded',open?'true':'false');}
+  if(toggle){toggle.addEventListener('click',function(){setPanel(panel.hidden);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setPanel(false);});
+  document.addEventListener('click',function(e){if(panel&&!panel.hidden&&!e.target.closest('[data-filter-panel]')&&!e.target.closest('[data-filter-toggle]'))setPanel(false);});
   var cards=[].slice.call(document.querySelectorAll('[data-tags]'));
   var secs=[].slice.call(document.querySelectorAll('[data-section]'));
   var links=[].slice.call(document.querySelectorAll('a[data-pill]'));
@@ -1417,14 +1583,15 @@ const sections = [
       var show=f==='all'||(f.indexOf('sec-')===0?inSection(c,f.slice(4)):(' '+c.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1);
       c.hidden=!show; if(show)n++;
     });
-    secs.forEach(function(s){s.hidden=!s.querySelector('[data-tags]:not([hidden])');});
+    secs.forEach(function(s){s.hidden=(f!=='all')&&!s.querySelector('[data-tags]:not([hidden])');});
     btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-filter')===f?'true':'false');});
     var on=f!=='all';
     if(status) status.textContent=on?'Showing '+n+' item'+(n===1?'':'s')+' for '+label(f)+'.':'';
     if(float){float.hidden=!on; if(floatText) floatText.textContent='Showing: '+label(f);}
   }
-  bar.addEventListener('click',function(e){
+  document.addEventListener('click',function(e){
     var b=e.target.closest('button[data-filter]'); if(!b) return;
+    setPanel(false);
     var f=b.getAttribute('data-filter');
     if(f===current&&f!=='all'){apply('all');return;}
     apply(f);
@@ -1435,7 +1602,7 @@ const sections = [
     var t=document.getElementById(a.getAttribute('data-pill'));
     if(t&&current!=='all'){e.preventDefault();apply('all');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},50);}
   });});
-  if(float){float.querySelector('button').addEventListener('click',function(){apply('all');bar.scrollIntoView({behavior:'smooth',block:'center'});});}
+  if(float){float.querySelector('button').addEventListener('click',function(){apply('all');window.scrollTo({top:0,behavior:'smooth'});});}
 })();
 </script>
 </Layout>

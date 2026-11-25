@@ -14,26 +14,28 @@ External recognition and validation of GSF: G7 recognition, national governments
 
 Everything is **static**. Content lives in the `sections` array in the page frontmatter and renders through `CardGrid`, `TextBlock` and `CTABanner`. Nothing comes from Notion or content collections.
 
-## Navigation box
+## Navigation bar
 
-One untitled box sits directly below the hero: a quiet contents grid, **Jump to** (links to each section: `#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#academic`, `#policy`, `#roadmap`), then **Filter by topic** (with a Show everything button) and **Future roadmap** topic chips. Jump links are plain text rows, filters are chips, so the two read as different things. Each section is wrapped in a `div` with the matching `id`. To add a section, add an entry to `sections` with an `id` and `navLabel`.
+A full-width bar sits directly below the hero and **sticks to the top of the screen** on larger screens. It holds plain-text jump links to every section (`#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#roadmap`, `#assemblies`, `#independent`, `#industry`, `#research`, `#academic`, `#policy`), a "Show everything" button and a "Filter by topic" button that opens a panel of topic chips. On phones the bar is not sticky; the floating pill handles getting back. Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24` so headings clear the sticky bar.
 
 ## Topic filter
 
-The "Filter by topic" and "Future roadmap" rows (Show everything, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; SILO, SCI for OpenTelemetry, SCI for Security, SCI for MCP) show only matching cards and hide empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any "Jump to" link, or use the floating "Show everything" pill that appears at the bottom of the screen whenever a filter is active (this works on phones too).
+The "Filter by topic" panel (Standards & topics: SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; In development: Data center specification (SILO), SCI for OpenTelemetry, SCI for Security, SCI for MCP) shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any jump link, or use the floating "Show everything" pill at the bottom of the screen whenever a filter is active. The panel closes after a choice, on Escape, or when clicking elsewhere.
 
-It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "Show everything". To add a topic, add a button to `filters` and tag the relevant cards.
+A small inline script at the bottom of the page does this. Each card carries a `data-tags` attribute (the optional `tags` field on `CardGrid` cards); each section wrapper has `data-section`. Cards with no topic only appear under "Show everything".
 
 ## Member case studies
 
 The "Member case studies" section is organised by member: each card is titled with the member's name (Microsoft, Google Cloud, UBS, Accenture, Thoughtworks and others), with the sector as the small label and a short account of what they did with GSF's standards. To add a member, add a card to the `industry` section in the generator with the member name as the title and a public source link.
 
-## Academic members and Future roadmap
+## Sections of note
 
-- **Academic members** is its own section (one card per member institution), with its own "Jump to" button.
-- **Future roadmap** (SILO, SCI for OpenTelemetry, SCI for Security, SCI for MCP, other items) is a section plus a third row of topic buttons in the sticky filter bar. SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards (orange) with no source yet: add scope, status and public references, or remove them before launch.
-- Hero: below the intro, "Government and academic institutions can join the Foundation for free." with a "Discuss membership" button to `/membership/enquire/`.
-- Hero image: `public/assets/partnerships-hero.svg` (a globe linked to a government building, university, policy document and certification rosette).
+- **Standards in development** (`#roadmap`) sits straight after Standards. Its cards use the dark "featured" card style with an "In development" label, and the button reads "Learn more and get involved" (SILO, SWI, SCI for OpenTelemetry link to their GSF pages). SCI for Security, SCI for MCP and "Other roadmap discussions" are **PLACEHOLDER** cards with no source yet.
+- **Assemblies, powered by Harmony** (`#assemblies`) is a dark FeatureGrid panel explaining why Assemblies exist (consensus at scale breaks down), what Harmony does and the result, with links to `/assemblies/` and the Assemblies story. Wording follows the site's own Assemblies page and "Consensus at speed" story.
+- **Case studies** is organised by member: each card is titled with the member's name, sector as the label. To add a member, add a card to the `industry` section in the generator.
+- **Academic members** opens with a call to action inviting institutions to discuss membership (`/membership/enquire/`), then one card per member institution.
+- **Policy, research and skills** has one card for each document in `src/content/research/` (9 today) plus a card for the full publications hub. When a new research document is added there, add its card here.
+- Hero: "Government and academic institutions can join the Foundation for free." with a "Discuss membership" button to `/membership/enquire/`; hero image `public/assets/partnerships-hero.svg`.
 
 ## Calls to action
 
@@ -61,7 +63,7 @@ Cards titled "⚠ UNVERIFIED" and the "Draft review key" block are temporary rev
 - IFS keynote, London Climate Action Week June 2026
 - ARCHER2 course GSF attribution
 - Second international research organisation card in the IGO section: placeholder wording, replace once the history of the discussions is available
-- Future roadmap placeholders: SCI for Security, SCI for MCP, and other roadmap discussions
+- In-development placeholders: SCI for Security, SCI for MCP, and other roadmap discussions
 - Dodge et al. FAccT 2022 authorship and GSF reference (the ACM link is the one GSF's own SCI page uses)
 
 Also confirm before launch: Norwegian Environment Agency wording (source was an internal Steering email, 24 Nov 2026) and the credit for Taiwan's green software label (MODA-led; TIER is a member and research partner).
