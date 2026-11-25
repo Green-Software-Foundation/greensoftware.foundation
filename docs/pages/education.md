@@ -27,7 +27,8 @@ Everything else on this page is hardcoded:
 - **Movement Platform CTA** — CTACard
 - **Academy: professional certification** (`#academy`) — FeatureGrid (5 columns), one card per track: Lead and manage, Design, Build and measure, Data and models, Run, each listing its courses. Track and course names are taken from the Academy launch article (2026-10-01).
 - **Academy pilot** — dark CTACard with button to `https://academy.greensoftware.foundation`
-- **Green Software Patterns** (`#patterns`) — FeatureGrid (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the catalog, the patterns member story, and `https://patterns.greensoftware.foundation/contribute`. The "50+" count and pattern structure come from the patterns site.
+- **Green Software Patterns** (`#patterns`) — FeatureGrid (4 columns): what a pattern is, how to use them, why they help, how to contribute. Links to the patterns member story and `https://patterns.greensoftware.foundation/contribute`. The "50+" count and pattern structure come from the patterns site.
+- **Patterns catalog CTA** — light CTACard ("Find a pattern you can apply today") directly after the patterns cards, the main button to `https://patterns.greensoftware.foundation`
 - **Member stories** — MemberStories component with 2 hardcoded stories (Green Software Practitioner, Green Software Patterns) linking to `/stories/`
 - **Learning resources** — 6 ResourceCards (Patterns, Awesome Green Software, podcasts, meetups, stories)
 - **Education for organisations** — FeatureGrid (Cohort Training, In-House Licensing, Champions, Membership)

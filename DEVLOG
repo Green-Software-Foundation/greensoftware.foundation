@@ -4,6 +4,7 @@
 
 - `src/pages/education/index.astro`: new `#patterns` FeatureGrid after the Academy pilot card, explaining what a pattern is (structure: problem, solution, SCI impact, assumptions, considerations, references), how to use them (by role or lifecycle stage, apply and measure), why they help (expert-reviewed, measured impact), and how to propose one.
 - Hero button "Browse patterns" renamed "Explore patterns" and now jumps to `#patterns` instead of leaving the site; the section links on to the catalog.
+- Follow-up: the catalog link was easy to miss inside the first card, so it moved to its own light CTACard ("Find a pattern you can apply today", button "Browse the patterns catalog →") straight after the four cards.
 - `docs/pages/education.md` updated.
 
 ## 2026-11-25 - Education: Foundation Courses and Academy Tracks
