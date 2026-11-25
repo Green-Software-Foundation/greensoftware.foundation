@@ -1,5 +1,21 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: American Spelling and One Practitioner Short Link
+
+- `src/lib/nav-items.ts`: the Green Software Practitioner link now uses `https://grnsft.org/mov-plat-gs-practitioner`, the same short link as the rest of the site (was `grnsft.org/mov-plat-gsp`). Membership "enrolment" description changed to "enrollment".
+- `src/pages/education/index.astro`: "programme leads" changed to "program leads" (American spelling, matching the rest of the site's copy).
+- `docs/pages/education.md`: American spelling.
+
+## 2026-11-25 - Education: Review Follow-ups to PR #123
+
+- `src/pages/education/index.astro`:
+  - Lead with the outcome rather than the price: hero button "Start free" is now "Start with the foundations", and the "Three ways to learn" card button "See the free courses" is now "Gain the foundations". "Free" stays in the body copy.
+  - "Foundation courses" renamed "Foundational courses" (hero, card, section heading, meta description) so it no longer reads as "the Foundation's courses". The `#foundation-courses` anchor is unchanged so existing links keep working.
+  - Academy cards: titles no longer repeat the track pill. Now Leaders and policymakers, Architects, Developers and engineers, Data and ML engineers, and Platform, SRE, and DevOps teams, with the who-it's-for lines trimmed to match. Course names in each card are in alphabetical order.
+- `src/pages/index.astro`: the "Take the course" link under the 145,000+ stat now goes to `https://grnsft.org/mov-plat-gs-practitioner` instead of `learn.greensoftware.foundation`. Links to `learn.greensoftware.foundation` in older articles are left as they are on purpose.
+- `src/lib/nav-items.ts`: Education menu link to `/education/` relabelled from "Introduction to GSF Education programme" to "GSF Education".
+- `docs/pages/education.md` updated.
+
 ## 2026-11-25 - Nav: Education Intro Link Moved to the Top
 
 - `src/lib/nav-items.ts`: removed the Education menu's bottom "About our education program →" button (`footerLink`). `/education/` is now the first link in the Learn column, labelled "Introduction to GSF Education programme", with the description "Free courses, professional certification, and patterns". Other links unchanged.
