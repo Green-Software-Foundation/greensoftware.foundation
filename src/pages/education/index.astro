@@ -7,13 +7,10 @@ import { navItems } from "@/lib/nav-items";
 // Parameterised components
 import Navbar from "@/components/navbar.astro";
 import Hero from "@/components/hero.astro";
-import TextBlock from "@/components/text-block.astro";
-import TabbedSection from "@/components/tabbed-section.astro";
 import FeatureGrid from "@/components/feature-grid.astro";
 import ResourceCards from "@/components/resource-cards.astro";
 import ArticleCarousel from "@/components/article-carousel.astro";
 import CTABanner from "@/components/cta-banner.astro";
-import CTACard from "@/components/cta-card.astro";
 import MemberStories from "@/components/member-stories.astro";
 import Footer from "@/components/footer.astro";
 
@@ -51,9 +48,10 @@ const educationArticles = allArticles
   <Hero
     heading="Learn to build"
     headingAccent="greener software"
-    body="Free courses, practical patterns, and a global community of practitioners. Whether you're just starting out or scaling green software across your organization — everything you need to build the skills is here."
+    body="Three ways to learn: free foundation courses to get started, professional certification through the Green Software & AI Academy, and practical patterns you can apply today. Whether you're just starting out or scaling green software across your organization, start where you are."
     ctas={[
-      { text: "Take the free course", variant: "primary", href: "https://grnsft.org/mov-plat-gs-practitioner" },
+      { text: "Start free", variant: "primary", href: "#foundation-courses" },
+      { text: "Explore the Academy", variant: "primary", href: "#academy" },
       { text: "Explore patterns", variant: "outline", href: "#patterns" },
     ]}
     imageSrc="/assets/why-feat-1.svg"
@@ -61,105 +59,50 @@ const educationArticles = allArticles
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Section 1b: Learning pathway (two levels) -->
+  <!-- Section 2: Three ways to learn -->
   <FeatureGrid
-    heading="Your *learning pathway*"
-    body="GSF education works at two levels. Start with free foundation courses that give everyone a shared language for green software, then build professional, role-based skills and certification through the Green Software & AI Academy."
-    variant="bordered"
-    columns={2}
+    heading="Three ways to *learn*"
+    body="Start with the free foundations, go professional with role-based certification, and put it all into practice with patterns."
+    columns={3}
+    linkStyle="button"
     features={[
-      { icon: "/assets/renewable-icon.svg", title: "1. Foundation courses", description: "Free, self-paced courses on the Movement Platform, open to everyone. Learn the principles of green software and how to measure it with the SCI specification, and earn a digital credential for each course.", linkText: "See the foundation courses →", linkHref: "#foundation-courses" },
-      { icon: "/assets/standardized-icon.svg", title: "2. Professional certification", description: "The Green Software & AI Academy: in-depth courses built around the decisions each role makes, from executives to engineers. Scenario-based assessment leads to a vendor-neutral GSF certification. Now in pilot with GSF member organizations.", linkText: "See the Academy tracks →", linkHref: "#academy" },
+      { icon: "/assets/renewable-icon.svg", badge: "Start here", title: "Foundation courses", description: "Free, self-paced courses on the Movement Platform, open to everyone. Learn the principles of green software and how to measure it, and earn a digital credential for each course.", linkText: "See the free courses →", linkHref: "#foundation-courses" },
+      { icon: "/assets/standardized-icon.svg", badge: "Go professional", title: "Green Software & AI Academy", description: "Fourteen role-based courses across five tracks, from executives to engineers. Scenario-based assessment leads to a vendor-neutral GSF certification. Now in pilot with GSF member organizations.", linkText: "Explore the Academy →", linkHref: "#academy", featured: true },
+      { icon: "/assets/co2-icon.svg", badge: "Put it into practice", title: "Green Software Patterns", description: "A free, open-source catalog of more than 50 peer-reviewed techniques for reducing the emissions of software across AI, cloud, and web. Each one is a concrete change you can make.", linkText: "Explore patterns →", linkHref: "#patterns" },
     ]}
   />
 
-  <!-- Section 2: Foundation courses heading -->
+  <!-- Section 3: Foundation courses (compact) -->
   <div id="foundation-courses" class="scroll-mt-24"></div>
-  <TextBlock
+  <FeatureGrid
     heading="*Foundation* courses on the Movement Platform"
-    body="Our foundation courses are hosted on the Movement Platform, a community hub where you can learn, discuss, and connect with fellow practitioners. All four are free and self-paced. Green Software Practitioner and SCI Fundamentals are the recommended starting point for the Academy."
-    compact
-  />
-
-  <!-- Section 4: Green Software Practitioner -->
-  <TabbedSection
-    badge="FLAGSHIP COURSE"
-    heading="Green Software Practitioner"
-    imageSrc="/assets/why-feat-1.svg"
-    imageAlt="Green Software Practitioner course"
-    ctaText="Take the course →"
-    ctaHref="https://grnsft.org/mov-plat-gs-practitioner"
-    compact
-    tabs={[
-      { value: "overview", heading: "Overview", description: "The comprehensive course that teaches you how to build, maintain, and run greener applications — regardless of domain, industry, or technology stack. Covers carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and climate commitments." },
-      { value: "audience", heading: "Who it's for", description: "Software practitioners of all kinds — developers, DevOps, testers, architects, SREs, product managers, and UX designers. Requires a minimum of one year of industry experience. No prior sustainability knowledge needed." },
-      { value: "outcome", heading: "What you'll learn", description: "Understand the key drivers of carbon emissions in software. Learn three concrete actions to reduce emissions. Measure software carbon using GHG protocols and the SCI specification. Align engineering work with organizational climate commitments." },
-    ]}
-  />
-
-  <!-- Section 4b: SCI Fundamentals -->
-  <TabbedSection
-    badge="SPECIFICATION COURSE"
-    heading="SCI Fundamentals"
-    imageSrc="/assets/why-feat-2-new.svg"
-    imageAlt="SCI Fundamentals course"
-    ctaText="Take the course →"
-    ctaHref="https://grnsft.org/sci-fundamentals-course"
-    compact
-    tabs={[
-      { value: "overview", heading: "Overview", description: "Most carbon metrics tell you how bad things are. The Software Carbon Intensity (SCI) specification, published as ISO/IEC 21031:2024, is designed to tell you what to do about it. This course introduces the SCI: how the equation works, why it was designed the way it was, and how to calculate a score for your own software." },
-      { value: "audience", heading: "Who it's for", description: "Developers, architects, and sustainability professionals who want to measure the carbon emissions of their software. A natural next step after the Green Software Practitioner course, and the foundation for SCI for AI Fundamentals." },
-      { value: "outcome", heading: "What you'll learn", description: "Explain why traditional carbon metrics fail to drive action in software teams. Describe the two boundaries every metric must align to. Calculate operational and embodied emissions with the SCI equation. Understand why the SCI excludes market-based measures such as offsets and RECs. Choose quantification methods based on the data you have, and apply the SCI to real systems. Takes about 20 minutes, with a digital credential on completion." },
-    ]}
-  />
-
-  <!-- Section 5: SCI for AI Fundamentals -->
-  <TabbedSection
-    badge="SPECIFICATION COURSE"
-    heading="SCI for AI Fundamentals"
-    imageSrc="/assets/why-feat-2.svg"
-    imageAlt="SCI for AI Fundamentals course"
-    ctaText="Take the course →"
-    ctaHref="https://grnsft.org/sci-ai-fundamentals-course"
-    compact
-    tabs={[
-      { value: "overview", heading: "Overview", description: "The SCI was designed to tell you what to do about carbon emissions — not just measure them. This course introduces the Software Carbon Intensity for AI specification: a standard built to make AI's carbon footprint transparent, comparable, and actionable. You'll learn the philosophy behind the SCI, work through the equation and its components, and arrive at practical guidance you can apply to your own organization." },
-      { value: "audience", heading: "Who it's for", description: "Software practitioners, sustainability professionals, and IT leaders who want to go beyond awareness and actually measure and reduce the carbon emissions of AI systems. Assumes foundational knowledge of digital sustainability, general familiarity with software systems, and a broad awareness of AI's environmental impact." },
-      { value: "outcome", heading: "What you'll learn", description: "Explain why traditional carbon metrics fail to drive action in software teams. Calculate SCI scores using the core equation and its components. Distinguish between Provider and Consumer responsibilities in AI systems. Select appropriate functional units for your AI measurement needs. Design measurement strategies that align accountability with agency. Includes 50 minutes of video across 9 modules and a digital credential upon completion." },
-    ]}
-  />
-
-  <!-- Section 6: SOFT Essentials -->
-  <TabbedSection
-    badge="FRAMEWORK COURSE"
-    heading="SOFT Essentials"
-    imageSrc="/assets/why-feat-3.svg"
-    imageAlt="SOFT Essentials course"
-    ctaText="Take the course →"
-    ctaHref="https://grnsft.org/mov-plat-soft-essentials"
-    compact
-    tabs={[
-      { value: "overview", heading: "Overview", description: "Learn the essentials of the Sustainable Organizational Framework for Technology (SOFT) — the comprehensive framework for embedding green software practices across your entire organization, from strategy to operations." },
-      { value: "audience", heading: "Who it's for", description: "Technology leaders, sustainability managers, and anyone responsible for scaling green software practices beyond individual teams. Ideal for organizations that have completed the Green Software Practitioner course and want to go further." },
-      { value: "outcome", heading: "What you'll learn", description: "Understand the four SOFT domains: Strategy, Implementation, Operational, and Compliance. Learn how to assess your organization's current maturity and build a roadmap for systematic adoption of green software practices." },
-    ]}
-  />
-
-  <!-- Section 7: Movement Platform CTA -->
-  <CTACard
-    heading="Join the Movement Platform"
-    body="The Movement Platform is your hub for foundation learning. Access all four courses, join discussions, connect with fellow practitioners, and track your progress — all in one place."
-    ctaText="Explore the platform →"
+    body="Four free, self-paced courses, hosted on the Movement Platform, a community hub where you can learn, discuss, and connect with fellow practitioners."
+    variant="bordered"
+    columns={4}
+    linkStyle="button"
+    ctaLeadIn="Green Software Practitioner and SCI Fundamentals are the recommended starting point for the Academy."
+    ctaText="Join the Movement Platform →"
     ctaHref="https://movement.greensoftware.foundation"
-    imageSrc="/assets/dive-illustration.svg"
-    imageAlt="Movement Platform illustration"
+    features={[
+      { badge: "Flagship course", title: "Green Software Practitioner", description: "The comprehensive introduction to building, maintaining, and running greener applications, whatever your domain or stack. Takes just a few hours, and has been completed by 145,000+ people.", linkText: "Take the course →", linkHref: "https://grnsft.org/mov-plat-gs-practitioner" },
+      { badge: "Specification course", title: "SCI Fundamentals", description: "Learn how the Software Carbon Intensity equation works and how to calculate a score for your own software. About 20 minutes.", linkText: "Take the course →", linkHref: "https://grnsft.org/sci-fundamentals-course" },
+      { badge: "Specification course", title: "SCI for AI Fundamentals", description: "Measure the carbon footprint of AI systems with the SCI for AI specification. 50 minutes of video across 9 modules.", linkText: "Take the course →", linkHref: "https://grnsft.org/sci-ai-fundamentals-course" },
+      { badge: "Framework course", title: "SOFT Essentials", description: "The Sustainable Organizational Framework for Technology: how to embed green software practices across your whole organization.", linkText: "Take the course →", linkHref: "https://grnsft.org/mov-plat-soft-essentials" },
+    ]}
   />
 
-  <!-- Section 7b: Academy — professional certification, five tracks -->
+  <!-- Section 4: Academy — professional certification (centrepiece) -->
   <div id="academy" class="scroll-mt-24"></div>
   <FeatureGrid
-    heading="Professional certification: the Green Software & AI *Academy*"
-    body="The Academy takes you beyond the foundations. Fourteen courses across five tracks, each built around the decisions a role controls, and follow the full silicon-to-screen lifecycle of a digital system. They are grounded in GSF standards for carbon, energy, and water, including the SCI specification (ISO/IEC 21031:2024), SCI for AI, SEI, and SWI. Every course ends in a scenario-based assessment and leads to a vendor-neutral GSF certification. Courses can be taken independently, so teams can start with the roles that matter most to them."
+    variant="panel"
+    eyebrow="Professional certification"
+    heading="The Green Software & AI *Academy*"
+    body="Go beyond the foundations. Fourteen role-based courses across five tracks, each built around the decisions a role controls and grounded in GSF standards for carbon, energy, and water, including SCI, SCI for AI, SEI, and SWI. Every course ends in a scenario-based assessment and leads to a vendor-neutral GSF certification."
+    stats={[
+      { value: "14", label: "role-based courses" },
+      { value: "5", label: "role tracks, from leaders to operations" },
+      { value: "ISO", label: "built on SCI, published as ISO/IEC 21031:2024" },
+    ]}
     columns={5}
     linkStyle="button"
     features={[
@@ -169,19 +112,19 @@ const educationArticles = allArticles
       { badge: "Data and models", title: "Courses for people who work with data and models", description: "Data and ML engineers who work with data pipelines, models, and prompts.", descriptionHtml: "<p>Data and ML engineers who work with data pipelines, models, and prompts.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-data-practitioner\">Green Data Practitioner</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-for-ml-practitioners\">Green AI for ML Practitioners</a></li><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/green-ai-prompting-for-self-and-agents\">Green AI Prompting, for Self & Agents</a></li></ul>", linkText: "Explore data and ML courses →", linkHref: "https://academy.greensoftware.foundation/" },
       { badge: "Run", title: "Courses for people who run systems", description: "Platform, SRE, and DevOps teams who operate software and AI in production.", descriptionHtml: "<p>Platform, SRE, and DevOps teams who operate software and AI in production.</p><ul class=\"mt-3 list-disc space-y-1.5 pl-4\"><li><a class=\"font-semibold text-primary underline underline-offset-2 hover:no-underline\" href=\"https://academy.greensoftware.foundation/course/greenops-practitioner\">GreenOps Practitioner</a></li></ul>", linkText: "Explore operations courses →", linkHref: "https://academy.greensoftware.foundation/" },
     ]}
-  />
-
-  <!-- Section 7c: Academy pilot CTA -->
-  <CTACard
-    heading="Join the Green Software & AI *Academy* pilot"
-    body="The GSF's first professional training and certification program is now in pilot with GSF member organizations, who help shape it around real roles, responsibilities, and skills gaps. Membership gives your teams access to Academy learning and certification."
+    quote={{
+      text: "Those decisions sit across the organization, from the developer writing a query to the executive signing a contract. The Academy gives every role the skills to make those decisions with both environmental and financial impact in view.",
+      author: "Navveen Balani",
+      role: "Executive Director, Green Software Foundation",
+    }}
+    ctaLeadIn="The pilot is open to GSF member organizations, who help shape the program around real roles and skills gaps. We recommend starting with Green Software Practitioner and SCI Fundamentals."
     ctaText="Explore the Academy →"
     ctaHref="https://academy.greensoftware.foundation"
-    imageAlt="Green Software & AI Academy illustration"
-    variant="dark"
+    ctaSecondaryText="Become a member →"
+    ctaSecondaryHref="/membership/"
   />
 
-  <!-- Section 7d: Green Software Patterns -->
+  <!-- Section 5: Green Software Patterns -->
   <div id="patterns" class="scroll-mt-24"></div>
   <FeatureGrid
     heading="Put it into practice with Green Software *Patterns*"
@@ -226,7 +169,6 @@ const educationArticles = allArticles
     heading="Learning *resources*"
     body="Beyond our courses, a growing ecosystem of resources to support your green software journey."
     cards={[
-      { icon: "/assets/shape-icon-1.svg", title: "Green Software Patterns", description: "An open-source catalog of peer-reviewed, actionable techniques for reducing software emissions across AI, Cloud, and Web.", ctaText: "Browse the catalog", ctaHref: "https://patterns.greensoftware.foundation" },
       { icon: "/assets/shape-icon-2.svg", title: "Awesome Green Software", description: "A curated list of tools, articles, research papers, and open-source projects in the green software space.", ctaText: "Explore the list", ctaHref: "https://github.com/Green-Software-Foundation/awesome-green-software" },
       { icon: "/assets/shape-icon-3.svg", title: "Environment Variables Podcast", description: "Practitioner-focused conversations with the people building the green software movement.", ctaText: "Listen now", ctaHref: "https://podcast.greensoftware.foundation" },
       { icon: "/assets/shape-icon-1.svg", title: "CXO Bytes Podcast", description: "Bite-sized insights for technology leaders on sustainability, digital transformation, and the business case for green software.", ctaText: "Listen now", ctaHref: "https://podcasts.castplus.fm/cxo-bytes" },

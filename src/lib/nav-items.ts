@@ -113,14 +113,15 @@ export const navItems = [
   },
   {
     label: "Education",
-    footerLink: {
-      href: "/education/",
-      label: "About our education program →",
-    },
     sections: [
       {
         title: "Learn",
         links: [
+          {
+            href: "/education/",
+            label: "Introduction to GSF Education programme",
+            description: "Free courses, professional certification, and patterns",
+          },
           {
             href: "https://academy.greensoftware.foundation",
             label: "Green Software & AI Academy",
