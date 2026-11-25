@@ -16,7 +16,7 @@ Everything is **static**. Content lives in the `sections` array in the page fron
 
 ## Section navigation
 
-A full-width block sits directly below the hero. It is **not sticky**: everything is visible at once. It has the heading "Navigate to the section of interest", a "Show everything" button, the thirteen section links grouped into four columns (Government and institutional recognition; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter), and the topic-filter chips shown in the open ("Show only a standard or topic" and "In development"). Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24`.
+A full-width block sits directly below the hero. It is **not sticky**: everything is visible at once. It has the heading "Navigate to the section of interest", a "Show everything" button, the thirteen section links plus an "In the press" link (under Evidence and adoption, jumping to the media coverage scroller, `#press`) grouped into four columns (Government and institutional recognition; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter), and the topic-filter chips shown in the open ("Show only a standard or topic" and "In development"). Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24`.
 
 ## Media coverage scroller
 

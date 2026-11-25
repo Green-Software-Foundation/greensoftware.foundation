@@ -26,10 +26,11 @@ const intro = {
     { term: "Real Time Cloud", full: "Real Time Cloud specification", def: "A standard for cloud providers to share live energy and carbon data in a common format." },
   ],
 };
+const extraNavLabels: Record<string, string> = { press: "In the press" };
 const navGroups = [
   { title: "Government and institutional recognition", ids: ["g7", "gov", "igo", "wri"] },
   { title: "Standards", ids: ["standards", "roadmap", "assemblies", "selfcert"] },
-  { title: "Evidence and adoption", ids: ["independent", "industry"] },
+  { title: "Evidence and adoption", ids: ["independent", "industry", "press"] },
   { title: "Research, academia and policy", ids: ["research", "academic", "policy"] },
 ];
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
@@ -1643,7 +1644,7 @@ const sections = [
             <ul class="mt-2 space-y-1 text-sm font-semibold">
               {g.ids.map((id) => (
                 <li>
-                  <a href={`#${id}`} data-pill={id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{sections.find((x) => x.id === id).navLabel}</a>
+                  <a href={`#${id}`} data-pill={id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</a>
                 </li>
               ))}
             </ul>
@@ -1787,7 +1788,7 @@ const sections = [
   ))}
 
   <!-- Media Coverage: full-width sideways scroller, three cards deep -->
-  <section class="bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
+  <section id="press" class="scroll-mt-24 bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
     <div class="mx-auto max-w-6xl px-6">
       <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
