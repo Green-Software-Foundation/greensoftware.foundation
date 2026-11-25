@@ -1,5 +1,16 @@
 # Development Log — GSF Website
 
+## 2026-11-25 - Education: Foundation Courses and Academy Tracks
+
+- `src/pages/education/index.astro` restructured around two levels of learning:
+  - New "Your learning pathway" FeatureGrid under the hero: 1. Foundation courses (free, Movement Platform), 2. Professional certification (Academy), with jump links to `#foundation-courses` and `#academy`.
+  - The Movement Platform courses are now called **foundation courses** (not "basic"); the intro names Practitioner + SCI Fundamentals as the recommended starting point for the Academy.
+  - New Academy section after the Movement Platform CTA: a 5-column FeatureGrid of the five tracks (Lead and manage, Design, Build and measure, Data and models, Run) with their courses, from the Academy launch article.
+  - The dark Academy pilot CTACard moved from under the hero to close the Academy section; copy rewritten (role list now shown in the tracks above).
+  - Removed the outdated "More courses coming soon" block (the AI and advanced courses it promised now exist).
+  - Page meta description updated.
+- `docs/pages/education.md` updated to match.
+
 ## 2026-11-25 - Education: SCI Fundamentals Card; Practitioner Figure 145,000+
 
 - `src/pages/education/index.astro`: added an SCI Fundamentals TabbedSection between Green Software Practitioner and SCI for AI Fundamentals, linking to `https://grnsft.org/sci-fundamentals-course` (same link as the nav and `/standards/sci/`). Copy drawn from the course's badge page. The page now lists all four Movement Platform courses.

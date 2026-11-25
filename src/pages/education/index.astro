@@ -36,7 +36,7 @@ const educationArticles = allArticles
 
 <Layout
   title="Education — Green Software Foundation"
-  description="Learn green software principles through GSF's education program, including the Linux Foundation training course, Carbon Hack events, and community resources."
+  description="Learn green software principles through GSF's education program, from free foundation courses on the Movement Platform to professional certification through the Green Software & AI Academy."
 >
   <Navbar
     logoSrc="/assets/gsf-logo-full.svg"
@@ -61,20 +61,23 @@ const educationArticles = allArticles
     bgClass="bg-accent-lightest-2"
   />
 
-  <!-- Section 1b: Academy pilot -->
-  <CTACard
-    heading="Green Software & AI *Academy* pilot"
-    body="The GSF's first professional training and certification program. Fourteen role-based courses across five tracks (leaders, architects, developers, data and ML practitioners, and policymakers), grounded in GSF standards including SCI, published as ISO/IEC 21031:2024. Each course leads to a vendor-neutral GSF certification. The pilot is open to GSF member organizations."
-    ctaText="Explore the Academy →"
-    ctaHref="https://academy.greensoftware.foundation"
-    imageAlt="Green Software & AI Academy illustration"
-    variant="dark"
+  <!-- Section 1b: Learning pathway (two levels) -->
+  <FeatureGrid
+    heading="Your *learning pathway*"
+    body="GSF education works at two levels. Start with free foundation courses that give everyone a shared language for green software, then build professional, role-based skills and certification through the Green Software & AI Academy."
+    variant="bordered"
+    columns={2}
+    features={[
+      { icon: "/assets/renewable-icon.svg", title: "1. Foundation courses", description: "Free, self-paced courses on the Movement Platform, open to everyone. Learn the principles of green software and how to measure it with the SCI specification, and earn a digital credential for each course.", linkText: "See the foundation courses →", linkHref: "#foundation-courses" },
+      { icon: "/assets/standardized-icon.svg", title: "2. Professional certification", description: "The Green Software & AI Academy: in-depth courses built around the decisions each role makes, from executives to engineers. Scenario-based assessment leads to a vendor-neutral GSF certification. Now in pilot with GSF member organizations.", linkText: "See the Academy tracks →", linkHref: "#academy" },
+    ]}
   />
 
-  <!-- Section 2: Courses heading -->
+  <!-- Section 2: Foundation courses heading -->
+  <div id="foundation-courses" class="scroll-mt-24"></div>
   <TextBlock
-    heading="*Courses* on the Movement Platform"
-    body="Our courses are hosted on the Movement Platform — a community hub where you can learn, discuss, and connect with fellow practitioners. All courses are free and self-paced."
+    heading="*Foundation* courses on the Movement Platform"
+    body="Our foundation courses are hosted on the Movement Platform, a community hub where you can learn, discuss, and connect with fellow practitioners. All four are free and self-paced. Green Software Practitioner and SCI Fundamentals are the recommended starting point for the Academy."
     compact
   />
 
@@ -142,21 +145,39 @@ const educationArticles = allArticles
     ]}
   />
 
-  <!-- Section 7: More courses coming -->
-  <TextBlock
-    heading="More *courses* coming soon"
-    body="We're actively developing new courses to cover emerging areas of green software — including AI-specific training and advanced practitioner pathways. Join the Movement Platform to be the first to know when new courses launch."
-    compact
-  />
-
   <!-- Section 7: Movement Platform CTA -->
   <CTACard
     heading="Join the Movement Platform"
-    body="The Movement Platform is your hub for green software learning. Access all courses, join discussions, connect with fellow practitioners, and track your progress — all in one place."
+    body="The Movement Platform is your hub for foundation learning. Access all four courses, join discussions, connect with fellow practitioners, and track your progress — all in one place."
     ctaText="Explore the platform →"
     ctaHref="https://movement.greensoftware.foundation"
     imageSrc="/assets/dive-illustration.svg"
     imageAlt="Movement Platform illustration"
+  />
+
+  <!-- Section 7b: Academy — professional certification, five tracks -->
+  <div id="academy" class="scroll-mt-24"></div>
+  <FeatureGrid
+    heading="Professional certification: the Green Software & AI *Academy*"
+    body="The Academy takes you beyond the foundations. Its courses are built around the decisions each role controls, and follow the full silicon-to-screen lifecycle of a digital system. They are grounded in GSF standards for carbon, energy, and water, including the SCI specification (ISO/IEC 21031:2024), SCI for AI, SEI, and SWI. Every course ends in a scenario-based assessment and leads to a vendor-neutral GSF certification. Courses can be taken independently, so teams can start with the roles that matter most to them."
+    columns={5}
+    features={[
+      { title: "Lead and manage", description: "For executives, managers, and policymakers. Courses: Green IT for Leaders · Green AI for Executives · Getting Started and Scaling Green Software and Green AI · Green AI for Policy Makers." },
+      { title: "Design", description: "For architects. Courses: Green and Efficient Architect · Designing Green Agentic Systems." },
+      { title: "Build and measure", description: "For developers. Courses: Green Software Developer · SCI for AI Practitioner: The Measurement Lab · Software Water Foundations." },
+      { title: "Data and models", description: "For data and ML practitioners. Courses: Green Data Practitioner · Green AI for ML Practitioners · Effective, Efficient and Green AI Prompting." },
+      { title: "Run", description: "For operations and platform teams. Course: GreenOps Practitioner." },
+    ]}
+  />
+
+  <!-- Section 7c: Academy pilot CTA -->
+  <CTACard
+    heading="Join the Green Software & AI *Academy* pilot"
+    body="The GSF's first professional training and certification program is now in pilot with GSF member organizations, who help shape it around real roles, responsibilities, and skills gaps. Membership gives your teams access to Academy learning and certification."
+    ctaText="Explore the Academy →"
+    ctaHref="https://academy.greensoftware.foundation"
+    imageAlt="Green Software & AI Academy illustration"
+    variant="dark"
   />
 
   <!-- Section 8: Education stories -->
