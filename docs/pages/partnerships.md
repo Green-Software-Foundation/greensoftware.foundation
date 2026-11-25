@@ -11,11 +11,11 @@ External recognition and validation of GSF: G7 recognition, national governments
 
 ## Dynamic vs Static
 
-Everything is **static**. Content lives in the `sections` array in the page frontmatter and renders through `CardGrid`, `StatsGrid`, `TextBlock` and `CTABanner`. Nothing comes from Notion or content collections.
+Everything is **static**. Content lives in the `sections` array in the page frontmatter and renders through `CardGrid`, `TextBlock` and `CTABanner`. Nothing comes from Notion or content collections.
 
 ## In-page navigation
 
-A sticky pill bar below the stats links to each section (`#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#policy`). Labels come from the `NAV` map in the generator that produced the `sections` array; each section is wrapped in a `div` with the matching `id` and `scroll-mt-16` so headings clear the sticky bar. To add a section, add an entry to `sections` with an `id` and `navLabel`.
+A sticky pill bar directly below the hero links to each section (`#g7`, `#gov`, `#igo`, `#wri`, `#standards`, `#independent`, `#industry`, `#research`, `#policy`). Labels come from the `NAV` map in the generator that produced the `sections` array; each section is wrapped in a `div` with the matching `id` and `scroll-mt-16` so headings clear the sticky bar. To add a section, add an entry to `sections` with an `id` and `navLabel`.
 
 ## Editorial rules
 

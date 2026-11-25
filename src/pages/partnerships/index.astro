@@ -5,7 +5,6 @@ import { navItems } from "@/lib/nav-items";
 import Navbar from "@/components/navbar.astro";
 import Breadcrumb from "@/components/breadcrumb.astro";
 import Hero from "@/components/hero.astro";
-import StatsGrid from "@/components/stats-grid.astro";
 import TextBlock from "@/components/text-block.astro";
 import CardGrid from "@/components/card-grid.astro";
 import CTABanner from "@/components/cta-banner.astro";
@@ -610,25 +609,6 @@ const sections = [
     imageAlt="Partnerships and recognition illustration"
   />
 
-  <StatsGrid
-    heading="Standards institutions"
-    headingAccent="rely on"
-    stats={[
-      { value: "ISO/IEC 21031", label: "SCI is an international standard" },
-      { value: "7", label: "governments and the EU engaged" },
-      { value: "3 of 3", label: "major hyperscalers reference GSF" },
-      { value: "130,000+", label: "practitioners trained" },
-      { value: "~70", label: "member organisations" },
-    ]}
-  />
-
-  <!-- DRAFT REVIEW KEY: remove before launch -->
-  <div class="container my-6">
-    <p class="rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-4 text-sm text-orange-900">
-      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> come from the source document but lack a confirmed public source. They need verification before this page goes live.
-    </p>
-  </div>
-
   <!-- In-page navigation -->
   <nav aria-label="On this page" class="sticky top-0 z-30 border-b border-primary-lighter bg-white/95 backdrop-blur">
     <div class="container">
@@ -641,6 +621,13 @@ const sections = [
       </ul>
     </div>
   </nav>
+
+  <!-- DRAFT REVIEW KEY: remove before launch -->
+  <div class="container my-6">
+    <p class="rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-4 text-sm text-orange-900">
+      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> come from the source document but lack a confirmed public source. They need verification before this page goes live.
+    </p>
+  </div>
 
   {sections.map((s) => (
     <div id={s.id} class="scroll-mt-16">
