@@ -254,36 +254,55 @@ const milestones = [
     </div>
   </section>
 
-  <!-- Media Coverage -->
-  <section class="bg-white py-16 md:py-24">
+  <!-- Media Coverage: full-width sideways scroller, three cards deep -->
+  <section class="bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
     <div class="mx-auto max-w-6xl px-6">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Media <span class="text-primary">Coverage</span></h2>
-      <p class="text-lg text-primary-dark/70 mb-10">
-        The Green Software Foundation in the news.
-      </p>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {(pressMentions as any[]).map((mention: any) => (
-          <a
-            href={mention.url}
-            target="_blank"
-            rel="noopener"
-            class="group block rounded-lg border border-border bg-accent-lightest-2 p-5 hover:shadow-lg hover:border-primary-lighter transition-all"
-          >
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <span class="text-xs font-bold text-primary uppercase tracking-wider">{mention.source}</span>
-              {mention.date && (
-                <span class="text-xs text-primary-dark/40 whitespace-nowrap">
-                  {new Date(mention.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}
-                </span>
-              )}
-            </div>
-            <h3 class="text-sm font-bold text-primary-dark group-hover:text-primary transition-colors line-clamp-3">
-              {mention.title}
-            </h3>
-            <div class="mt-3 text-xs text-primary-dark/40 truncate">{new URL(mention.url).hostname}</div>
-          </a>
-        ))}
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 id="coverage-heading" class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Media <span class="text-primary">Coverage</span></h2>
+          <p class="text-lg text-primary-dark/70">
+            The Green Software Foundation in the news. <strong class="font-bold text-primary-dark">Scroll sideways to see all {(pressMentions as any[]).length} stories.</strong>
+          </p>
+        </div>
+        <div class="flex items-center gap-2" data-coverage-controls>
+          <button type="button" data-coverage-prev aria-label="Scroll media coverage left" class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark text-xl font-bold text-white shadow-sm transition hover:bg-primary disabled:cursor-not-allowed disabled:opacity-30">&larr;</button>
+          <button type="button" data-coverage-next aria-label="Scroll media coverage right" class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark text-xl font-bold text-white shadow-sm transition hover:bg-primary disabled:cursor-not-allowed disabled:opacity-30">&rarr;</button>
+        </div>
       </div>
+    </div>
+    <div class="relative mt-8">
+      <div
+        data-coverage-scroller
+        tabindex="0"
+        role="region"
+        aria-label="Media coverage, scrolls sideways"
+        class="coverage-scroll overflow-x-auto scroll-smooth px-6 pb-5 md:px-10"
+      >
+        <div class="grid w-max grid-flow-col grid-rows-3 auto-cols-[17rem] gap-4 md:auto-cols-[21rem]">
+          {(pressMentions as any[]).map((mention: any) => (
+            <a
+              href={mention.url}
+              target="_blank"
+              rel="noopener"
+              class="group block rounded-lg border border-border bg-accent-lightest-2 p-5 hover:shadow-lg hover:border-primary-lighter transition-all"
+            >
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span class="text-xs font-bold text-primary uppercase tracking-wider">{mention.source}</span>
+                {mention.date && (
+                  <span class="text-xs text-primary-dark/50 whitespace-nowrap">
+                    {new Date(mention.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}
+                  </span>
+                )}
+              </div>
+              <h3 class="text-sm font-bold text-primary-dark group-hover:text-primary transition-colors line-clamp-3">
+                {mention.title}
+              </h3>
+              <div class="mt-3 text-xs text-primary-dark/50 truncate">{new URL(mention.url).hostname}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div data-coverage-fade aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 flex w-24 items-center justify-end bg-gradient-to-l from-white via-white/80 to-transparent pr-3 text-3xl font-bold text-primary transition-opacity">&rsaquo;</div>
     </div>
   </section>
 
@@ -327,4 +346,39 @@ const milestones = [
   />
 
   <Footer />
+  <style>
+    .coverage-scroll { scrollbar-width: auto; scrollbar-color: var(--color-primary, #2f6b5e) #e5ede9; }
+    .coverage-scroll::-webkit-scrollbar { height: 12px; }
+    .coverage-scroll::-webkit-scrollbar-track { background: #e5ede9; border-radius: 9999px; }
+    .coverage-scroll::-webkit-scrollbar-thumb { background: var(--color-primary, #2f6b5e); border-radius: 9999px; }
+  </style>
+  <script is:inline>
+    (function () {
+      var sc = document.querySelector('[data-coverage-scroller]');
+      if (!sc) return;
+      var prev = document.querySelector('[data-coverage-prev]');
+      var next = document.querySelector('[data-coverage-next]');
+      var fade = document.querySelector('[data-coverage-fade]');
+      function update() {
+        var max = sc.scrollWidth - sc.clientWidth;
+        var atStart = sc.scrollLeft <= 2;
+        var atEnd = sc.scrollLeft >= max - 2;
+        if (prev) prev.disabled = atStart;
+        if (next) next.disabled = atEnd;
+        if (fade) fade.style.opacity = atEnd ? '0' : '1';
+        var controls = document.querySelector('[data-coverage-controls]');
+        if (controls) controls.hidden = max <= 2;
+      }
+      function step(dir) { sc.scrollBy({ left: dir * Math.max(sc.clientWidth * 0.8, 280), behavior: 'smooth' }); }
+      if (prev) prev.addEventListener('click', function () { step(-1); });
+      if (next) next.addEventListener('click', function () { step(1); });
+      sc.addEventListener('scroll', update, { passive: true });
+      sc.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+      });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </Layout>
