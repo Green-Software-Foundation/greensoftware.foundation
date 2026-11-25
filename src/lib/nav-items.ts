@@ -119,7 +119,7 @@ export const navItems = [
         links: [
           {
             href: "/education/",
-            label: "Introduction to GSF Education programme",
+            label: "GSF Education",
             description: "Free courses, professional certification, and patterns",
           },
           {
