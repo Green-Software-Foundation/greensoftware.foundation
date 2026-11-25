@@ -20,7 +20,7 @@ A slim row of text links (sticky on larger screens) sits directly below the hero
 
 ## Topic filter
 
-A calm "Filter by topic" card (All topics, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy) sits under the "Jump to" links. It is not sticky; the floating "Show everything" pill keeps the way back always in view. Choosing a topic shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "All topics", or use the floating "Show everything" pill that appears at the bottom of the screen whenever a filter is active (this works on phones too).
+A calm "Filter by topic" card (rows: Sections, Standards & topics, Future roadmap; choosing a section such as G7 or WRI shows only that section) (All topics, SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy) sits under the "Jump to" links. The top links always stay visible; clicking one for a hidden section clears the filter and scrolls there. The card is not sticky; the floating "Show everything" pill keeps the way back always in view. Choosing a topic shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "All topics", or use the floating "Show everything" pill that appears at the bottom of the screen whenever a filter is active (this works on phones too).
 
 It is a small inline script at the bottom of the page. Each card carries a `data-tags` attribute, set from the optional `tags` field on `CardGrid` cards; each section wrapper has `data-section`. Cards with no topic only appear under "All topics". To add a topic, add a button to `filters` and tag the relevant cards.
 

@@ -1343,12 +1343,18 @@ const sections = [
       <div class="mx-auto max-w-5xl rounded-2xl bg-accent-lightest-2 p-6 md:p-8">
         <div class="text-center">
           <h2 class="text-lg font-bold text-primary-dark">Filter by topic</h2>
-          <p class="mt-1 text-sm text-primary-dark/70">Show only the evidence on one standard or area of work.</p>
+          <p class="mt-1 text-sm text-primary-dark/70">Show only one section, standard or area of work.</p>
         </div>
         <div data-filter-bar class="mt-5 grid gap-x-6 gap-y-4 md:grid-cols-[9rem_1fr]">
-          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Standards &amp; topics</p>
+          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Sections</p>
           <div class="flex flex-wrap gap-2">
             <button type="button" data-filter="all" aria-pressed="true" class="rounded-full bg-primary-dark px-5 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary">Show everything</button>
+            {sections.map((s) => (
+              <button type="button" data-filter={`sec-${s.id}`} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{s.navLabel}</button>
+            ))}
+          </div>
+          <p class="pt-1.5 text-xs font-bold uppercase tracking-wider text-accent-dark">Standards &amp; topics</p>
+          <div class="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
             ))}
@@ -1407,20 +1413,23 @@ const sections = [
   var btns=[].slice.call(bar.querySelectorAll('button[data-filter]'));
   var cards=[].slice.call(document.querySelectorAll('[data-tags]'));
   var secs=[].slice.call(document.querySelectorAll('[data-section]'));
-  var pills=[].slice.call(document.querySelectorAll('a[data-pill]'));
+  var links=[].slice.call(document.querySelectorAll('a[data-pill]'));
   var status=document.querySelector('[data-filter-status]');
   var float=document.querySelector('[data-filter-float]');
   var floatText=document.querySelector('[data-filter-float-text]');
   var current='all';
-  function label(f){var b=btns.filter(function(x){return x.getAttribute('data-filter')===f;})[0];return b?b.textContent:'';}
+  function label(f){var b=btns.filter(function(x){return x.getAttribute('data-filter')===f;})[0];return b?b.textContent.trim():'';}
+  function inSection(c,id){var s=c.closest('[data-section]');return !!s&&s.id===id;}
   function apply(f){
     current=f; var n=0;
-    cards.forEach(function(c){var show=f==='all'||(' '+c.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1;c.hidden=!show;if(show)n++;});
+    cards.forEach(function(c){
+      var show=f==='all'||(f.indexOf('sec-')===0?inSection(c,f.slice(4)):(' '+c.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1);
+      c.hidden=!show; if(show)n++;
+    });
     secs.forEach(function(s){s.hidden=!s.querySelector('[data-tags]:not([hidden])');});
-    pills.forEach(function(p){var s=document.getElementById(p.getAttribute('data-pill'));p.parentElement.hidden=!!(s&&s.hidden);});
     btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-filter')===f?'true':'false');});
     var on=f!=='all';
-    if(status) status.textContent=on?'Showing '+n+' item'+(n===1?'':'s')+' about '+label(f)+'.':'';
+    if(status) status.textContent=on?'Showing '+n+' item'+(n===1?'':'s')+' for '+label(f)+'.':'';
     if(float){float.hidden=!on; if(floatText) floatText.textContent='Showing: '+label(f);}
   }
   bar.addEventListener('click',function(e){
@@ -1430,6 +1439,11 @@ const sections = [
     apply(f);
     if(f!=='all'){var first=document.querySelector('[data-section]:not([hidden])'); if(first) first.scrollIntoView({behavior:'smooth',block:'start'});}
   });
+  // Top links always stay visible. If a link points to a hidden section, clear the filter first.
+  links.forEach(function(a){a.addEventListener('click',function(e){
+    var t=document.getElementById(a.getAttribute('data-pill'));
+    if(t&&t.hidden){e.preventDefault();apply('all');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},50);}
+  });});
   if(float){float.querySelector('button').addEventListener('click',function(){apply('all');bar.scrollIntoView({behavior:'smooth',block:'center'});});}
 })();
 </script>
