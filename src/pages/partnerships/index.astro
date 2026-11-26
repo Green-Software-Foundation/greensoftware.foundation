@@ -1802,10 +1802,10 @@ const sections = [
   </nav>
 
   <!-- Sticky section bar: hidden until the full menu above has scrolled out of view -->
-  <div data-sticky-nav hidden class="fixed inset-x-0 top-0 z-40 shadow-lg">
-    <div class="bg-primary-dark text-white">
+  <div data-sticky-nav hidden class="sticky-nav fixed inset-x-0 top-0 z-40">
+    <div class="sticky-strip bg-primary-dark text-white">
       <div class="container flex h-14 items-center justify-between gap-3">
-        <p class="min-w-0 truncate text-sm">
+        <p class="sticky-where min-w-0 truncate text-sm">
           <span class="text-white/70">You are in:</span>
           <span data-current-section class="ml-1 font-bold"></span>
         </p>
@@ -1848,6 +1848,25 @@ const sections = [
       </div>
     </div>
   </div>
+
+  <!-- Side progress rail: shows where you are on the page. Full labels on wide screens (1760px+),
+       dots with labels on hover on laptops (1024px+), hidden on tablets and phones. -->
+  <nav aria-label="Page progress" data-rail hidden class="page-rail fixed left-3 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
+    <div class="rail-box relative rounded-xl py-3 pl-3 pr-4">
+      <div aria-hidden="true" class="absolute bottom-5 left-[17px] top-5 w-0.5 rounded-full bg-primary-lighter"></div>
+      <div aria-hidden="true" data-rail-fill class="absolute left-[17px] top-5 w-0.5 rounded-full bg-primary transition-[height] duration-300" style="height:0"></div>
+      <ol class="relative space-y-2.5">
+        {[...sections.map((x) => ({ id: x.id, label: x.navLabel })), { id: "press", label: "In the press" }].map((item) => (
+          <li data-rail-item={item.id}>
+            <a href={`#${item.id}`} data-pill={item.id} data-rail-link={item.id} class="rail-link flex items-center gap-3">
+              <span aria-hidden="true" class="rail-dot block h-3 w-3 shrink-0 rounded-full border-2 border-primary-lighter bg-white transition-all duration-200"></span>
+              <span class="rail-label whitespace-nowrap text-xs text-primary-dark/55 transition-all duration-200">{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </nav>
 
   <div data-filter-float hidden class="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full bg-primary-dark py-3 pl-6 pr-3 text-base font-semibold text-white shadow-2xl ring-4 ring-white">
     <span data-filter-float-text></span>
@@ -1989,7 +2008,7 @@ const sections = [
         tabindex="0"
         role="region"
         aria-label="Media coverage, scrolls sideways"
-        class="coverage-scroll overflow-x-auto scroll-smooth px-6 pb-5 md:px-10"
+        class="coverage-scroll overflow-x-auto scroll-smooth px-6 pb-5 md:px-10 lg:pl-20"
       >
         <div class="grid w-max grid-flow-col grid-rows-3 auto-cols-[17rem] gap-4 md:auto-cols-[21rem]">
           {(pressMentions as any[]).map((mention: any) => (
@@ -2074,13 +2093,29 @@ const sections = [
   if(float){float.querySelector('button').addEventListener('click',function(){apply('all');window.scrollTo({top:0,behavior:'smooth'});});}
   // Sticky section bar: show once the full menu has scrolled away; keep "You are in" current.
   var navEl=document.querySelector('[data-section-nav]'); var sticky=document.querySelector('[data-sticky-nav]');
-  var current=document.querySelector('[data-current-section]');
+  var currentLabel=document.querySelector('[data-current-section]');
   var labelled=[].slice.call(document.querySelectorAll('[data-nav-label]'));
+  var rail=document.querySelector('[data-rail]'); var fill=document.querySelector('[data-rail-fill]');
+  var railLinks=[].slice.call(document.querySelectorAll('[data-rail-link]'));
   function onScroll(){
-    if(navEl&&sticky){var show=navEl.getBoundingClientRect().bottom<0; if(sticky.hidden===show){sticky.hidden=!show; if(!show)setPanel(false);}}
-    if(current){var name=labelled.length?labelled[0].getAttribute('data-nav-label'):'';
-      labelled.forEach(function(el){if(!el.hidden&&el.getBoundingClientRect().top<=120)name=el.getAttribute('data-nav-label');});
-      current.textContent=name;}
+    var show=false;
+    if(navEl&&sticky){show=navEl.getBoundingClientRect().bottom<0; if(sticky.hidden===show){sticky.hidden=!show; if(!show)setPanel(false);}}
+    if(rail) rail.hidden=!show;
+    var active=labelled.length?labelled[0]:null;
+    labelled.forEach(function(el){if(!el.hidden&&el.getBoundingClientRect().top<=120)active=el;});
+    if(currentLabel&&active) currentLabel.textContent=active.getAttribute('data-nav-label');
+    if(rail&&active){
+      var activeLink=null;
+      railLinks.forEach(function(a){
+        var target=document.getElementById(a.getAttribute('data-rail-link'));
+        a.parentNode.hidden=!!(target&&target.hidden);
+        var on=a.getAttribute('data-rail-link')===active.id;
+        if(on){a.setAttribute('aria-current','location');activeLink=a;}else{a.removeAttribute('aria-current');}
+      });
+      var passed=true;
+      railLinks.forEach(function(a){ if(a===activeLink){passed=false;return;} if(passed)a.setAttribute('data-passed','');else a.removeAttribute('data-passed'); });
+      if(fill&&activeLink){var dot=activeLink.querySelector('.rail-dot'); var box=fill.parentNode.getBoundingClientRect(); var d=dot.getBoundingClientRect(); fill.style.height=Math.max(0,(d.top+d.height/2)-box.top-20)+'px';}
+    }
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll);
@@ -2088,6 +2123,28 @@ const sections = [
 })();
 </script>
   <style>
+    /* Side progress rail */
+    .page-rail .rail-label { display: none; }
+    .page-rail:hover .rail-box, .page-rail:focus-within .rail-box { background: rgba(255,255,255,0.97); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .page-rail:hover .rail-label, .page-rail:focus-within .rail-label { display: inline; }
+    .page-rail .rail-link:hover .rail-label { color: var(--color-primary, #2f6b5e); }
+    .page-rail .rail-link[data-passed] .rail-dot { border-color: var(--color-primary, #2f6b5e); }
+    .page-rail .rail-link[aria-current] .rail-dot { background: var(--color-primary, #2f6b5e); border-color: var(--color-primary, #2f6b5e); transform: scale(1.35); }
+    .page-rail .rail-link[aria-current] .rail-label { display: inline; font-size: 0.875rem; font-weight: 800; color: var(--color-primary-dark, #1f4a40); }
+    @media (max-width: 1759px) {
+      /* Laptops: dots only (labels on hover); the sticky bar above still names the current section */
+      .page-rail:not(:hover):not(:focus-within) .rail-link[aria-current] .rail-label { display: none; }
+    }
+    @media (min-width: 1760px) {
+      .page-rail .rail-label { display: inline; }
+      .page-rail:hover .rail-box { background: transparent; box-shadow: none; }
+      /* With the rail showing, the sticky bar slims to a floating "Show all sections" button */
+      .sticky-nav .sticky-strip { background: transparent; pointer-events: none; }
+      .sticky-nav .sticky-where { visibility: hidden; }
+      .sticky-nav [data-filter-toggle] { pointer-events: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.18); outline: 1px solid rgba(0,0,0,0.06); }
+    }
+    .sticky-nav:not([hidden]) .sticky-strip { box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    @media (min-width: 1760px) { .sticky-nav:not([hidden]) .sticky-strip { box-shadow: none; } }
     .coverage-scroll { scrollbar-width: auto; scrollbar-color: var(--color-primary, #2f6b5e) #e5ede9; }
     .coverage-scroll::-webkit-scrollbar { height: 12px; }
     .coverage-scroll::-webkit-scrollbar-track { background: #e5ede9; border-radius: 9999px; }

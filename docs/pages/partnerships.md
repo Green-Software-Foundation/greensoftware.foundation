@@ -29,6 +29,12 @@ Two parts, sharing the same links and filters:
 
 Each section wrapper has the matching `id` and `scroll-mt-24`, so headings clear the sticky bar.
 
+3. **Side progress rail** ("Page progress"), fixed to the left edge and shown at the same moment as the sticky bar. It lists every section (built from the `sections` array plus "In the press") on a vertical line: the current section is bold and slightly larger with a filled dot, sections already passed have darker dots, and the line fills down to the current one. Each item is a link. It sits in the page margin, so its form depends on screen width:
+   - **1760px and wider:** full labels always visible. The sticky bar slims to just the floating **Show all sections** button (its dark strip and "You are in" text are hidden, because the rail shows where you are).
+   - **1024px to 1759px:** dots only; hovering or focusing the rail opens a white panel with every label. The full sticky bar stays, naming the current section.
+   - **Below 1024px:** no rail; the sticky bar only.
+   While a filter is on, rail items for hidden sections are hidden too. The media scroller has extra left padding on large screens (`lg:pl-20`) so the rail never overlaps it. Rail styles are in the `<style>` block at the end of the page file; its behaviour shares the scroll handler with the sticky bar. Note the script already uses a `current` variable for the active filter, so the sticky bar's label element is `currentLabel`.
+
 ## Legislation & reporting button
 
 The **Legislation & reporting** button is the first, highlighted item in the "Show only:" row (in both the full menu and the sticky dropdown), with a one-line explanation under it in the full menu. It is a normal filter button (`data-filter="legislation"`), so it uses the same filter and "Show everything" behaviour as the topic chips. It shows every card tagged `legislation`: government policy and procurement (UK, Taiwan, Germany, US GovAI handbook), the French asset managers' guidance, G7 ministers, and the EU AI Act, CSRD, GHG Protocol Scope 2 and Ofgem papers. When adding a card that shows GSF standards supporting a law, regulation, reporting rule or procurement requirement, add `"legislation"` to its `tags`.
