@@ -1,0 +1,2174 @@
+---
+import Layout from "@/layouts/showcase.astro";
+import { navItems } from "@/lib/nav-items";
+
+import Navbar from "@/components/navbar.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
+import Hero from "@/components/hero.astro";
+import TextBlock from "@/components/text-block.astro";
+import CardGrid from "@/components/card-grid.astro";
+import FeatureGrid from "@/components/feature-grid.astro";
+import CTABanner from "@/components/cta-banner.astro";
+import { Button } from "@/components/ui/button";
+import Footer from "@/components/footer.astro";
+import pressMentions from "@/data/press-mentions.json";
+
+// All content on this page is hardcoded (static recognition evidence).
+// Items marked "UNVERIFIED" come from the source document without a confirmed
+// public source and MUST be verified or removed before launch. See docs/pages/partnerships.md.
+const intro = {
+  eyebrow: "Background",
+  heading: "About the Foundation and *key terms*",
+  body: "The Green Software Foundation is a non-profit, vendor-neutral foundation under the Linux Foundation. We write open standards that help organisations measure and reduce the environmental impact of software.",
+  terms: [
+    { term: "SCI", full: "Software Carbon Intensity", def: "A way of measuring how much carbon a piece of software produces each time it is used. It is an international standard, ISO/IEC 21031." },
+    { term: "SCI for AI", full: "Software Carbon Intensity for AI", def: "Applies the same method to artificial intelligence systems." },
+    { term: "Real Time Cloud", full: "Real Time Cloud specification", def: "A standard for cloud providers to share live energy and carbon data in a common format." },
+  ],
+};
+const extraNavLabels: Record<string, string> = { press: "In the press" };
+const navGroups = [
+  { title: "Government and international", ids: ["g7", "gov", "igo", "wri"] },
+  { title: "Standards", ids: ["working-groups", "standards", "roadmap", "assemblies", "selfcert"] },
+  { title: "Evidence and adoption", ids: ["independent", "industry", "press"] },
+  { title: "Research, academia and policy", ids: ["research", "academic", "policy"] },
+];
+const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
+const sections = [
+  {
+    "special": null,
+    "cta": {
+      "heading": "Taking part in a working group",
+      "body": "Working groups are member-led. Representatives of GSF member organisations can take part, and government and academic organisations can become members free of charge.",
+      "text": "Membership enquiries",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "working-groups",
+    "navLabel": "Working groups",
+    "heading": "How GSF's work is organised",
+    "body": "GSF's standards and policy work is carried out by three member-led working groups. Each oversees a related area of work and the projects within it.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Software Standards Working Group",
+        "title": "Specifications for measuring and reducing software's impact",
+        "bodyHtml": "Develops baseline specifications for green software that can be implemented on the computing platforms in widespread use. Its ratified work includes SCI (ISO/IEC 21031:2024), SCI for AI and SOFT. Current work includes the Software Water Intensity methodology, editorial work on SCI for AI for submission to ISO, the Software Energy Intensity specification and SCI for OpenTelemetry.",
+        "tags": [
+          "sci",
+          "sci-ai",
+          "swi"
+        ],
+        "ctaText": "Working group on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/software-standards-wg",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Hardware Standards Working Group",
+        "title": "Standards for sustainable hardware and data centre infrastructure",
+        "bodyHtml": "Develops terminology, measurement methods and reporting frameworks for efficient and sustainable physical hardware and supporting infrastructure, designed to work across manufacturers and operators. Its work includes Open19 (published), Workload Dynamic Power and Cooling (WDPC) and the SILO data centre interoperability specification.",
+        "tags": [
+          "silo"
+        ],
+        "ctaText": "Learn more about SILO",
+        "ctaHref": "/standards/silo/",
+        "secondaryCtaText": "Learn more about Open19",
+        "secondaryCtaHref": "/standards/open19/"
+      },
+      {
+        "label": "Policy Working Group",
+        "title": "Engaging with policymakers on green software",
+        "bodyHtml": "Engages with external bodies on existing and proposed policy relevant to green software, prepares GSF's own policy proposals and consultation responses, and maintains the public Policy Radar. Current work includes evidence for the European Commission's consultation on data centre performance standards.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Working group on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Contributing to GSF standards",
+      "body": "SCI for AI was developed with more than 20 partner organisations. Organisations that wish to contribute to future standards can make an enquiry.",
+      "text": "Make an enquiry",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "g7",
+    "navLabel": "G7",
+    "heading": "G7 recognition of SCI and SCI for AI",
+    "body": "When the French G7 Presidency catalogued the world's methods for measuring AI's energy and resource use, SCI for AI was named, credited to the Green Software Foundation, and listed beside ISO, ITU, IEEE, CEN and AFNOR. The overview is a living document that grew out of the G7 Energy and AI Work Plan and feeds the OECD AI Tools Catalogue.",
+    "note": "",
+    "cards": [
+      {
+        "label": "G7 · French Presidency",
+        "title": "SCI for AI is listed with ISO, ITU and IEEE in the G7's official AI overview",
+        "bodyHtml": "The French G7 Presidency's overview of global AI measurement initiatives lists SCI for AI by name and credits GSF, in the same table as ISO, ITU, IEEE, CEN and AFNOR. Methods from Google, Mistral, Salesforce and Hugging Face, and the universities of Cambridge, Michigan and Grenoble appear in the same peer set.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.entreprises.gouv.fr/files/files/Actualites/2026/g7/overview-measurement-monitoring-energy-resource-ai-models.pdf",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "G7 · Digital ministers",
+        "title": "G7 ministers put AI's environmental footprint on the agenda",
+        "bodyHtml": "In May 2026, G7 digital ministers meeting in Paris acknowledged the environmental impact of digital technology for the first time and committed to measuring AI's footprint. Recognition of SCI for AI sits within this agenda.",
+        "tags": [
+          "sci-ai",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.gov.uk/government/publications/g7-digital-and-technology-ministerial-declaration-29-may-2026/g7-digital-and-technology-ministerial-declaration-29-may-2026",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "G7 · Archive",
+        "title": "The ministerial declaration, in the public record",
+        "bodyHtml": "A second copy of the declaration, held on an independent G7/G20 document archive.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://g7g20-documents.org/database/document/2026-g7-france-ministerial-meetings-idt-ministers-ministers-language-g7-ministerial-declaration-on-digital-technology"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Government and public sector enquiries",
+      "body": "Government organisations can become members of the Foundation free of charge. For information on GSF standards, training or procurement guidance, get in touch.",
+      "text": "Enquire about government membership",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "gov",
+    "navLabel": "Governments",
+    "heading": "GSF and national governments",
+    "body": "Governments are using GSF's standards in their policies, buying rules, guidance and training.",
+    "note": "",
+    "cards": [
+      {
+        "label": "United Kingdom",
+        "title": "Government policy requires GSF's course",
+        "bodyHtml": "The Department for Environment, Food & Rural Affairs (Defra) now requires developers, testers, architects and product staff to take the Green Software Foundation course. GSF training is written into government policy.",
+        "tags": [
+          "training",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.gov.uk/government/publications/defra-digital-sustainability-strategy-2025-to-2030/defra-digital-sustainability-strategy-2025-to-2030",
+        "secondaryCtaText": "Learn more about GSF training",
+        "secondaryCtaHref": "/education/"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "SCI is the recommended method in a new government service standard",
+        "bodyHtml": "Defra added sustainability as a new point in the UK government's Service Standard, the first time it has featured. For measuring environmental impact, it recommends SCI as part of a mandatory service assessment.",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://digital.defra.gov.uk/sustainability/metrics",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "A formal partner of the Government Digital Sustainability Alliance",
+        "bodyHtml": "The alliance, led by Defra, brings together government, technology suppliers and universities to reduce the footprint of government IT. Its working groups cover AI, Scope 3 emissions, planetary impact and the circular economy.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.gov.uk/government/groups/government-digital-sustainability-alliance-gdsa",
+        "secondaryCtaText": "Learn more about our partnerships",
+        "secondaryCtaHref": "/about/"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "The alliance is a formal body with written rules",
+        "bodyHtml": "Its June 2026 Terms of Reference set out membership and how it is run, showing it is a structured government body, not an informal network.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://assets.publishing.service.gov.uk/media/6a47bc3f1c8bd7ce25a5eb61/Government_Digital_Sustainability_Alliance__GDSA__Terms_of_Reference.pdf",
+        "secondaryCtaText": "Learn more about our partnerships",
+        "secondaryCtaHref": "/about/"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "Our announcement of joining the alliance (October 2025)",
+        "bodyHtml": "The Foundation's own announcement of the partnership, with the terms and Defra's scope.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/the-green-software-foundation-joins-the-uk-government-digital-sustainability-alli/",
+        "secondaryCtaText": "Learn more about our partnerships",
+        "secondaryCtaHref": "/about/"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "⚠ UNVERIFIED: How big is the alliance?",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Member count has no current public source. Check the live GDSA figure before using.</span></span>The alliance is reported to have more than 90 member organisations.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.gov.uk/government/groups/government-digital-sustainability-alliance-gdsa"
+      },
+      {
+        "label": "United Kingdom",
+        "title": "SCI is cited in a government procurement listing",
+        "bodyHtml": "On the UK government's procurement marketplace (G-Cloud), a supplier offers SCI assessment as a way to meet the government's 'Fighting Climate Change' social value criteria.",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/461692165553019",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Norway",
+        "title": "The Norwegian Environment Agency joins GSF",
+        "bodyHtml": "The Norwegian government's environmental authority joined the Foundation in November 2026 at the General membership level. Onboarding of its team is under way.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.environmentagency.no/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Singapore",
+        "title": "A national green software guide, written with GSF",
+        "bodyHtml": "In January 2026 Singapore's digital regulator, IMDA, published a practical guide for businesses, developed together with Accenture and GSF.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.imda.gov.sg/-/media/imda/files/infocomm-media-landscape/emerging-technologies-and-research/green-computing/imda-practical-green-software-guide-for-enterprises.pdf"
+      },
+      {
+        "label": "Singapore",
+        "title": "Companies cut carbon, cost and energy by at least 20% in trials",
+        "bodyHtml": "IMDA's announcement of the guide reports industry trials in which participating companies cut carbon, cost and energy use by at least 20%.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/imda-simplifies-digital-sustainability-adoption-for-businesses-with-new-practical-resources"
+      },
+      {
+        "label": "Singapore",
+        "title": "IMDA hosted our Global Summit",
+        "bodyHtml": "The only GSF summit hosted by a national agency (2024). Singapore was the first country to join GSF as a government member, in 2023; IMDA also helped write SCI for AI.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.imda.gov.sg/activities/activities-catalogue/gsf-global-summit-2024-sg-edition"
+      },
+      {
+        "label": "Singapore",
+        "title": "IMDA has adopted SCI",
+        "bodyHtml": "A June 2026 report on IMDA by BizClik Media, publisher of AI Magazine, states that the authority adopted GSF's Software Carbon Intensity specification, enabling organisations to identify inefficiencies and baseline their carbon footprint. IMDA's own engineers apply green software techniques, and the authority works with data centres to combine green software recommendations with infrastructure changes.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source (report, page 8)",
+        "ctaHref": "https://publication.bizclikmedia.com/imda-report/0654572001780310067/p8",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Taiwan",
+        "title": "SCI is written into the national digital sustainability roadmap",
+        "bodyHtml": "Taiwan's Ministry of Digital Affairs plans to use ISO 21031 (SCI), with voluntary web design guidelines, to promote low-carbon software, apps and websites. (Document in Chinese.)",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greenweb.moda.gov.tw/gain/download/43/11729740228.pdf/%E6%95%B8%E4%BD%8D%E6%B0%B8%E7%BA%8C%E6%8E%A8%E5%8B%95%E8%A6%8F%E5%8A%83",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Taiwan",
+        "title": "The government's green software handbook is built on SCI",
+        "bodyHtml": "The Ministry's official reference handbook on green software, published November 2025. (In Chinese.)",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greenweb.moda.gov.tw/green-software-handbook-20251121-v1.pdf",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Taiwan",
+        "title": "A national green software label is being piloted",
+        "bodyHtml": "Independent press reports the Ministry is developing a voluntary green software label, graded and linked to government buying. A pilot built on SCI is under way, with Trend Micro named as a pilot company. (In Chinese.)",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.ithome.com.tw/news/174994",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Taiwan",
+        "title": "More than 100 companies respond to the government's promotion",
+        "bodyHtml": "The Ministry, the Taiwan software industry association (CISA) and the Taiwan Institute of Economic Research (TIER) jointly promoted green software in August 2026. (In Chinese.)",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.cna.com.tw/postwrite/chi/442135",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Taiwan",
+        "title": "TIER explains the national programme",
+        "bodyHtml": "TIER, Taiwan's leading economic policy think tank, has applied to join GSF. Its researcher explains how the programme works, including a 2026 worked example applying SCI to training an AI model on 256 GPUs.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/turning-digital-emissions-into-actionable-metricsmeet-mei-lian-wei-of-tier/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "United States",
+        "title": "GSF reviewed a handbook for public-sector AI buying",
+        "bodyHtml": "Data & Society and the GovAI Coalition wrote a handbook telling US agencies how to buy AI with its environmental impact in mind. GSF provided technical review, and the handbook points agencies to SCI and Real Time Cloud.",
+        "tags": [
+          "sci",
+          "rtc",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://datasociety.net/wp-content/uploads/2026/06/AI-Procurement-Handbook-layout-R8-180626-1.pdf",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "United States",
+        "title": "The coalition behind it covers 900+ agencies",
+        "bodyHtml": "The GovAI Coalition represents more than 900 local, state, county and federal bodies. The National Renewable Energy Laboratory, a US federal lab, is also a GSF member.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.govaicoalition.org/",
+        "secondaryCtaText": "Learn more about the Policy Working Group",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Germany",
+        "title": "The federal environment agency names GSF",
+        "bodyHtml": "In its report behind the Blue Angel ecolabel for software, the Umweltbundesamt lists GSF among the initiatives highlighting software's environmental impact. (In German.)",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.umweltbundesamt.de/system/files/medien/11850/publikationen/157_2025_texte.pdf"
+      },
+      {
+        "label": "Germany",
+        "title": "The first Blue Angel software awards went to a tool built on SCI",
+        "bodyHtml": "The ministry's June 2025 awards went to Nextcloud Server and the Green Metrics Tool, which implements SCI. The Blue Angel is part of public procurement criteria. (In German.)",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.bundesumweltministerium.de/pressemitteilung/blauer-engel-fuer-ressourcen-und-energieeffiziente-cloud-software-vergeben",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "France",
+        "title": "Asset managers are told to ask suppliers for an SCI score",
+        "bodyHtml": "The French asset management trade body (AFG) advises firms to request an SCI score or impact report from software suppliers, and to check alignment with the French AI standard AFNOR SPEC 2314. (In French.)",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.afg.asso.fr/app/uploads/2026/05/Fiche-7-Choisir-des-logiciels-sobres-et-optimises_mai2026.pdf",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "European Union",
+        "title": "GSF is referenced in EU data centre guidance",
+        "bodyHtml": "The European Commission's Joint Research Centre refers to GSF in its 2024 best practice guidelines for data centre energy efficiency.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://e3p.jrc.ec.europa.eu/sites/default/files/2024-04/JRC136986_2024_best_practice_guidelines.pdf"
+      },
+      {
+        "label": "European Union",
+        "title": "EU telecoms regulators invited GSF to contribute",
+        "bodyHtml": "BEREC, the body of EU telecoms regulators, recorded GSF's contribution on how to approach measurement at a workshop on greener digital services.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.berec.europa.eu/en/all-documents/berec/reports/berec-summary-report-on-external-workshop-on-digital-services-ecodesign-for-greener-networks-and-icts"
+      },
+      {
+        "label": "European Union",
+        "title": "EU-funded research uses SCI as its baseline",
+        "bodyHtml": "The EXIGENCE project cites ISO/IEC 21031 as the standard method for tracking IT carbon emissions.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://projectexigence.eu/green-ict-digest/iso/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "European Union",
+        "title": "How SCI for AI helps with the EU AI Act",
+        "bodyHtml": "GSF's analysis shows how SCI for AI meets the Act's energy reporting requirements and goes further. There is also a <a href='https://greensoftware.foundation/articles/sci-for-ai-a-framework-for-eu-ai-act-environmental-compliance/'>shorter article</a>.",
+        "tags": [
+          "sci-ai",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/policy/research/sci-ai-eu-ai-act/",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "European Union",
+        "title": "How SCI helps with EU sustainability reporting (CSRD)",
+        "bodyHtml": "A March 2026 white paper showing how companies can use SCI to produce the software emissions data the EU's reporting rules require.",
+        "tags": [
+          "sci",
+          "legislation"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/policy/research/sci-csrd-compliance/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Enquiries from international organisations",
+      "body": "For discussions on measuring and reducing the footprint of digital technology and AI, get in touch.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
+    "cols": 2,
+    "id": "igo",
+    "navLabel": "International (IGOs)",
+    "heading": "GSF and intergovernmental organisations (IGOs)",
+    "body": "Some intergovernmental organisations, which are set up by treaty between governments, are in active talks with the Foundation. Details are confidential and can be shared in the right setting.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Intergovernmental organisations (IGOs)",
+        "title": "Talks covering research computing, training and standards",
+        "bodyHtml": "The discussions include a European intergovernmental scientific organisation that runs shared research facilities for its member states. They cover using SCI and SCI for AI on large-scale research computing, role-based training for technical staff, and aligning GSF standards with emerging international frameworks for digital and AI emissions.",
+        "tags": []
+      },
+      {
+        "label": "Intergovernmental organisations (IGOs)",
+        "title": "⚠ UNVERIFIED: Early conversations with a second international research organisation",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Placeholder wording drafted without the history of these discussions. Replace once the context is available, and do not name the organisation in any external version.</span></span>GSF is also in early conversations with a second international scientific research organisation about measuring and reducing the carbon footprint of research computing and software. Further detail will follow.",
+        "tags": []
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Contributing to SCI for AI",
+      "body": "Organisations working on AI measurement and procurement can contribute to SCI for AI.",
+      "text": "About SCI for AI",
+      "href": "/standards/sci-ai/"
+    },
+    "cols": 3,
+    "id": "wri",
+    "navLabel": "Green AI & WRI",
+    "heading": "Green AI Committee, SCI for AI and WRI (World Resources Institute)",
+    "body": "WRI co-created the Greenhouse Gas Protocol, the world's most widely used carbon accounting standard. It is now assessing how buyers could compare AI products on environmental performance. GSF is engaged in that assessment, contributing technical input on SCI for AI and on what makes results consistent and comparable across providers.",
+    "note": "",
+    "explainer": {
+      "eyebrow": "Why both matter",
+      "heading": "A total and a rate: *measurement needs both* (GHG and SCI)",
+      "intro": "The GHG Protocol gives organisations the total: how much they emit across a reporting period. SCI gives them the rate: how much carbon a piece of software produces for each unit of work it does. They answer different questions, and they are designed to be used together.",
+      "items": [
+        {
+          "title": "The total",
+          "tag": "GHG Protocol",
+          "body": "One figure for the whole organisation, in tonnes of CO₂e and classified by scope. It is what regulators, investors and auditors need to judge an organisation's overall footprint. On its own it cannot show engineers which design decisions made it larger or smaller, and it moves with business growth."
+        },
+        {
+          "title": "The rate",
+          "tag": "SCI",
+          "body": "Carbon per functional unit, such as per API request or per user, for a specific piece of software. It gives a team a target it can act on, and shows efficiency improving even while usage is growing."
+        },
+        {
+          "title": "Together",
+          "tag": "In practice",
+          "body": "Software-level SCI scores can be aggregated into the totals that feed GHG Protocol inventories and reporting such as CSRD, which requires absolute figures. The rate guides the improvements; the total shows whether overall emissions are actually falling."
+        }
+      ],
+      "closing": "GSF's view is that organisations need both. A total without a rate is hard to act on, and a rate without a total can hide growth.",
+      "ctaText": "How SCI supports CSRD reporting",
+      "ctaHref": "/policy/research/sci-csrd-compliance/"
+    },
+    "cards": [
+      {
+        "label": "World Resources Institute",
+        "title": "A programme to help buyers compare AI products",
+        "bodyHtml": "WRI is working with Climate Group, The B Team, Sustainable AI Group, the University of Oxford, techUK and others so buyers can clearly compare AI products, starting with energy and emissions. Its Director of Corporate Transition led a session on it on 21 October 2026.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source (techUK conference page)",
+        "ctaHref": "https://www.techuk.org/events/tech-and-net-zero-conference-2026",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Sustainable AI Group",
+        "title": "One of WRI's programme partners has joined GSF",
+        "bodyHtml": "The Sustainable AI Group, named as a partner in WRI's programme, is now a member of the Foundation. Its co-founder explains why it joined and what it hopes to contribute to SCI for AI.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "Visit Sustainable AI Group",
+        "ctaHref": "https://sustainableaigroup.com/",
+        "secondaryCtaText": "Read why they joined GSF",
+        "secondaryCtaHref": "/articles/shifting-ais-trajectorymeet-boris-gamazaychikov-of-sustainable-ai-group/"
+      },
+      {
+        "label": "GSF Green AI Committee",
+        "title": "The committee guiding GSF's work on AI",
+        "bodyHtml": "The Green AI Committee guides GSF's strategy for the knowledge, standards and tools that reduce the environmental impact of AI systems. It is co-chaired by Accenture and Microsoft, with members from BCG, Futurewei, UCL, NTT DATA, Globant, HSBC and Siemens. Its May 2025 position paper defines Green AI and is cited in the US public-sector AI procurement handbook.",
+        "tags": [
+          "sci-ai",
+          "policy"
+        ],
+        "ctaText": "Read the position paper",
+        "ctaHref": "/policy/research/green-ai-position-paper/",
+        "secondaryCtaText": "Committee insights on the EU AI Act",
+        "secondaryCtaHref": "/articles/the-eu-ai-act-insights-from-the-green-ai-committee/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "How GSF standards are developed",
+      "body": "Standards are written by members through open working groups and consensus.",
+      "text": "Membership enquiries",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "standards",
+    "navLabel": "Standards",
+    "heading": "GSF standards",
+    "body": "Open standards developed and ratified through GSF's consensus process.",
+    "note": "",
+    "cards": [
+      {
+        "label": "SCI",
+        "title": "SCI is an international standard (ISO/IEC 21031:2024)",
+        "bodyHtml": "SCI went from first draft in December 2021 to an ISO standard in March 2024, in under three years. ISO standards for software typically take five to seven. <a href='https://greensoftware.foundation/articles/sci-specification-achieves-iso-standard-status/'>Read the announcement</a>.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.iso.org/standard/86612.html",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "SCI for AI",
+        "title": "A way to measure the carbon impact of AI",
+        "bodyHtml": "SCI for AI extends ISO/IEC 21031 to AI systems, giving organisations a consistent method for calculating the carbon impact of the AI they build or use. It was ratified in December 2025 after 11 months of work with more than 20 partner organisations. <a href='https://greensoftware.foundation/stories/sci-for-ai/'>How it was built</a>, with contributors from Siemens, IMDA Singapore, Google, Microsoft and UBS.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://sci-for-ai.greensoftware.foundation/",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Real Time Cloud",
+        "title": "Built with Microsoft Azure, Google Cloud and AWS",
+        "bodyHtml": "Ratified in April 2025, Real Time Cloud lets cloud providers share live energy and carbon data in a common format. A working group including Microsoft Azure, Google Cloud and AWS built it.",
+        "tags": [
+          "rtc"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/stories/real-time-cloud/",
+        "secondaryCtaText": "Learn more about Real Time Cloud",
+        "secondaryCtaHref": "/standards/rtc/"
+      },
+      {
+        "label": "SOFT",
+        "title": "A framework for adopting green software across an organisation",
+        "bodyHtml": "The Sustainable Organisational Framework for Technology (SOFT) guides organisations in embedding sustainable software practices across strategy, implementation, operations and compliance. It is ratified. It was co-chaired by HSBC and Microsoft, with contributions from Avanade, BCG X, Cisco, NTT DATA, Siemens and UBS.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "Trial the framework (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/soft",
+        "secondaryCtaText": "Learn more about SOFT",
+        "secondaryCtaHref": "/standards/soft/"
+      },
+      {
+        "label": "Open19 · Hardware",
+        "title": "An open standard for data centre hardware",
+        "bodyHtml": "Open19 standardises server, storage and networking form factors within the 19-inch rack. Version 2, released in December 2023, adds native 48V DC power and pluggable liquid cooling. The project came to GSF when the Sustainable and Scalable Infrastructure Alliance merged into the Foundation in December 2024, and is published under the Hardware Standards Working Group.",
+        "tags": [],
+        "ctaText": "View on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/open19",
+        "secondaryCtaText": "Learn more about Open19",
+        "secondaryCtaHref": "/standards/open19/"
+      },
+      {
+        "label": "W3C",
+        "title": "A formal partnership with the body that sets web standards",
+        "bodyHtml": "GSF runs SCI for Web through its consensus process while the W3C's Sustainable Web group gives feedback.",
+        "tags": [
+          "sci-web"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/the-green-software-foundation-and-world-wide-web-consortium-w3c-collaborate-to-ad/",
+        "secondaryCtaText": "Learn more about SCI for Web",
+        "secondaryCtaHref": "/standards/sci-web/"
+      },
+      {
+        "label": "SCI",
+        "title": "SCI in practice and in research",
+        "bodyHtml": "At least seven independent organisations have published results using SCI, and more than 15 peer-reviewed papers since 2022, including at the ACM conferences on fairness, accountability and transparency (FAccT) and on cloud computing (SoCC), refer to it. Selected examples are listed under Member case studies and Research.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/standards/sci/",
+        "secondaryCtaText": "See the research papers",
+        "secondaryCtaHref": "#research"
+      },
+      {
+        "label": "SCI for AI Bootcamp",
+        "title": "Four organisations tried SCI for AI on real systems",
+        "bodyHtml": "Amadeus, AVEVA, Schneider Electric and Siemens applied SCI for AI to their own AI systems. Their lessons feed our guidance and training.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Find out how we can help you with your goals",
+      "body": "Speak to us about how GSF's standards and work can support your organisation's objectives.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
+    "cols": 3,
+    "id": "roadmap",
+    "navLabel": "In development",
+    "heading": "Standards in development",
+    "body": "Standards currently underway. We welcome subject matter experts and your perspective. Please get in touch.",
+    "note": "",
+    "cards": [
+      {
+        "label": "In development · Data centers",
+        "title": "Data center specification (SILO)",
+        "bodyHtml": "The Standardized Interoperability Layer for Real-Time Sustainability Optimization: a common layer for sustainability data and control across data center systems.",
+        "tags": [
+          "silo"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/silo/"
+      },
+      {
+        "label": "In development · Water",
+        "title": "Software Water Intensity (SWI)",
+        "bodyHtml": "A standard to measure software's water use, led by Purdue University and extending GSF's work from carbon to water. An implementation guide is being developed alongside the specification.",
+        "tags": [
+          "swi"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/swi/"
+      },
+      {
+        "label": "In development · Observability",
+        "title": "SCI for OpenTelemetry",
+        "bodyHtml": "Work to give SCI a shared vocabulary inside OpenTelemetry, the industry standard for monitoring software. The Cloud Native Computing Foundation described the approach in October 2026.",
+        "tags": [
+          "sci",
+          "otel"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/tools/sci-for-opentelemetry/",
+        "ctaText": "Join the Assembly waitlist",
+        "ctaHref": "/assemblies/sci-for-open-telemetry/#apply"
+      },
+      {
+        "label": "In development · Energy",
+        "title": "Software Energy Intensity (SEI)",
+        "bodyHtml": "A methodology for calculating the energy consumption rate of a software system, complementing SCI's carbon rate. Developed by the Software Standards Working Group, it is at the pre-draft stage.",
+        "tags": [],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/sei/"
+      },
+      {
+        "label": "In development · Data centers",
+        "title": "Workload Dynamic Power and Cooling (WDPC)",
+        "bodyHtml": "A specification for standardised coordination between computing workloads and energy infrastructure, so that rapid power swings from workloads such as AI training can be managed without destabilising power systems. Developed by the Hardware Standards Working Group.",
+        "tags": [],
+        "featured": true,
+        "ctaText": "Review the draft (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling",
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/wdpc/"
+      },
+      {
+        "label": "In development · Security",
+        "title": "⚠ PLACEHOLDER: SCI for Security",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to security. Further detail to follow.",
+        "tags": [
+          "sci-security"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/community/"
+      },
+      {
+        "label": "In development · AI agents",
+        "title": "⚠ PLACEHOLDER: SCI for MCP",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add the scope, status and any public references, or remove this card.</span></span>A planned extension of SCI to the Model Context Protocol, the open standard for connecting AI systems to tools and data. Further detail to follow.",
+        "tags": [
+          "sci-mcp"
+        ],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/community/"
+      },
+      {
+        "label": "In development · More to come",
+        "title": "⚠ PLACEHOLDER: Other roadmap discussions",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">PLACEHOLDER: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Add any other roadmap items we want to feature, or remove this card.</span></span>Further standards and tools in discussion will appear here as they take shape.",
+        "tags": [],
+        "featured": true
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": "assemblies",
+    "cta": {
+      "heading": "Taking part in an Assembly",
+      "body": "See which Assemblies are running and how to take part.",
+      "text": "See upcoming Assemblies",
+      "href": "/assemblies/"
+    },
+    "cols": 3,
+    "id": "assemblies",
+    "navLabel": "Assemblies",
+    "heading": "GSF Assemblies, powered by Harmony",
+    "body": "",
+    "note": "",
+    "cards": [],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Submit your calculated SCI score for self-certification",
+      "body": "Governments, institutions and organisations of any size can submit their calculation to GSF for free and receive a certificate.",
+      "text": "Submit for self-certification",
+      "href": "/standards/certification/"
+    },
+    "cols": 3,
+    "id": "selfcert",
+    "navLabel": "SCI self-certification",
+    "heading": "Submit your SCI calculation for self-certification",
+    "body": "If you have calculated an SCI score, you can submit your calculation to GSF to be self-certified. Governments, public bodies, institutions and companies can all submit, free of charge, whatever their size, sector or GSF membership. GSF issues a certificate for the publicly disclosed score under ISO/IEC 21031:2024. GSF certifies the disclosure, not the score: the review confirms the submission is complete and detailed enough for others to evaluate, and does not audit the calculation itself.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Step 1",
+        "title": "Submit your calculated SCI score",
+        "bodyHtml": "Any organisation that has calculated an SCI score can submit a seven-section questionnaire by email. It covers the software, the score and its units, the boundary, the calculation inputs and the measurement period. Submission materials include an applicant guide and an example.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "Submit for self-certification",
+        "ctaHref": "/standards/certification/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Step 2",
+        "title": "GSF reviews it and issues a certificate",
+        "bodyHtml": "GSF checks the submission is complete, and the Software Standards Working Group then has seven days to sign it off. From submission to certificate usually takes around four weeks.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "Read the announcement",
+        "ctaHref": "/articles/sci-self-certification-a-standardized-way-to-disclose-software-s-carbon-emissions-data/"
+      },
+      {
+        "label": "Step 3",
+        "title": "A public record and a shareable badge",
+        "bodyHtml": "Approved disclosures are published openly on GitHub so procurement teams, auditors, researchers and regulators can examine the method. The certificate is valid for one year, is renewed with a new submission, and comes with a badge the organisation can share.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View published disclosures",
+        "ctaHref": "https://github.com/Green-Software-Foundation/certification",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Citing or evaluating GSF standards",
+      "body": "Organisations that use, reference or evaluate our standards can get in touch.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
+    "cols": 3,
+    "id": "independent",
+    "navLabel": "External references",
+    "heading": "External references to GSF standards",
+    "body": "Where other organisations cite or build on GSF standards in their own work.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Carbon Trust",
+        "title": "Chose SCI for AI to measure the carbon of AI video",
+        "bodyHtml": "In a June 2026 report for DIMPACT (BBC, Netflix, Spotify and Sky), the Carbon Trust picked SCI for AI as its method, compared it with the French AFNOR SPEC 2314, and had GSF's Standards Working Group check its approach.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.carbontrust.com/our-work-and-impact/guides-reports-and-tools/the-carbon-impact-of-ai-video-generation",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Responsible AI Institute",
+        "title": "ISO/IEC 21031 is among its verification standards",
+        "bodyHtml": "Its AI verification programme lists ISO/IEC 21031 (SCI) alongside NIST AI RMF and ISO/IEC 42001.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.responsible.ai/?p=6934",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Payments Association",
+        "title": "A carbon emissions framework aligned with ISO/IEC 21031",
+        "bodyHtml": "The payments industry body's framework for measuring the carbon of digital payments is aligned with ISO/IEC 21031.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://thepaymentsassociation.org/whitepaper/carbon-emissions-framework/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "ITU · United Nations",
+        "title": "ITU Green Digital Action: a call for a common method to score software's carbon intensity",
+        "bodyHtml": "The International Telecommunication Union, the United Nations specialised agency for information and communication technologies, set out a call to action at COP28 for an agreed methodology for deriving the carbon intensity of software and the corresponding carbon efficiency, so that a consistent approach can be determined. ISO/IEC 21031 (SCI) is a methodology of this kind.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.itu.int/initiatives/green-digital-action-atcop28/wp-content/uploads/sites/4/2023/12/Call-to-Action-Pillar4-Green-standards.pdf"
+      },
+      {
+        "label": "Linux Foundation",
+        "title": "Referenced in the Linux Foundation's Open Source Sustainability Ecosystem report",
+        "bodyHtml": "The open-source consortium that hosts GSF describes us this way in its Open Source Sustainability Ecosystem report. It also marked GSF's launch at the COP27 climate summit.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.linuxfoundation.org/hubfs/LF%20Energy/OpenSourceSustainabilityEcosystem_FINAL.pdf"
+      },
+      {
+        "label": "CNCF",
+        "title": "SCI is heading into OpenTelemetry",
+        "bodyHtml": "The Cloud Native Computing Foundation (home of Kubernetes) described in October 2026 how SCI could become part of OpenTelemetry, the industry standard for software monitoring.",
+        "tags": [
+          "sci",
+          "otel"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.cncf.io/blog/2026/10/15/carbon-as-a-first-class-signal-bringing-software-carbon-intensity-to-opentelemetry/",
+        "secondaryCtaText": "Learn more about SCI for OpenTelemetry",
+        "secondaryCtaHref": "/tools/sci-for-opentelemetry/"
+      },
+      {
+        "label": "ITEA 4 (Eureka)",
+        "title": "A European R&D programme names ISO 21031 as the baseline",
+        "bodyHtml": "Its GreenCode review treats ISO 21031 as the baseline for measurable software sustainability.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://itea4.org/index.php/project/workpackage/deliverable/document/download/777/GreenCode%20SOTA%20Review.pdf",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Using SCI? Share your case study",
+      "body": "If your organisation is using SCI or our other standards, we would like to hear how and, with your agreement, feature your use case here.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
+    "cols": 3,
+    "id": "industry",
+    "navLabel": "Case studies",
+    "heading": "Case studies",
+    "body": "",
+    "note": "",
+    "cards": [
+      {
+        "label": "Cloud",
+        "title": "Microsoft",
+        "bodyHtml": "Azure's official sustainability guidance is aligned with the Green Software Principles and was developed in partnership with GSF. Microsoft's training also teaches SCI as the better-suited way to calculate software emissions, and Azure helped write Real Time Cloud.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://learn.microsoft.com/en-ca/azure/well-architected/sustainability/sustainability-design-principles",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Cloud",
+        "title": "Google Cloud",
+        "bodyHtml": "Google's architecture guidance recommends customers align with the W3C, the Green Software Foundation and the GHG Protocol, and credits GSF with developing SCI. Google Cloud also helped write Real Time Cloud.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://docs.cloud.google.com/architecture/framework/sustainability/industry-guidelines",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Banking",
+        "title": "UBS",
+        "bodyHtml": "One of the first banks to publish an SCI case study, measuring an investment banking and an asset management application. With Microsoft, UBS also ran GSF's <a href='https://greensoftware.foundation/stories/carbon-aware-sdk/'>Carbon Aware SDK</a> on a live risk platform.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/baselining-software-carbon-emissions-ubs-use-case/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Banking",
+        "title": "Intesa Sanpaolo",
+        "bodyHtml": "With NTT DATA Italy, built a real-time dashboard showing SCI scores across the bank's entire IT infrastructure.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/stories/sci-measurement/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Banking",
+        "title": "Goldman Sachs",
+        "bodyHtml": "Writes about its work with GSF on its own developer blog and contributes to revising the Principles of Green Software Engineering.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://developer.gs.com/blog/posts/meet-the-green-software-foundation-organization-leads-sarah-hsu",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Banking",
+        "title": "Rabobank",
+        "bodyHtml": "Applied the Principles of Sustainable Software Engineering to analyse its own applications and aim for structural change in how its teams work.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://rabobank.jobs/en/techblog/eight-principles-of-sustainable-software-engineering/",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Banking",
+        "title": "HSBC",
+        "bodyHtml": "Contributed to SOFT, GSF's framework for organisational transformation, alongside colleagues from Microsoft, NTT DATA, Siemens and others.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/press/",
+        "secondaryCtaText": "Learn more about SOFT",
+        "secondaryCtaHref": "/standards/soft/"
+      },
+      {
+        "label": "Consulting",
+        "title": "Accenture",
+        "bodyHtml": "Published one of the first enterprise SCI scores: 0.025 gCO₂ per API call across 890,000 monthly requests. Accenture also co-developed Singapore's national green software guide with GSF and IMDA.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/how-accenture-implemented-the-sci-specification-score-to-track-software-emissions/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Technology consulting",
+        "title": "Thoughtworks",
+        "bodyHtml": "A GSF founding member, Thoughtworks published a global implementation guide for calculating software carbon intensity.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.thoughtworks.com/insights/blog/ethical-tech/calculating-software-carbon-intensity",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "IT services",
+        "title": "NTT DATA",
+        "bodyHtml": "A Steering member that published a statement on SCI becoming an ISO standard (<a href='https://nttdata-solutions.com/fr/salle-de-presse/communiques-de-presse/gsf-develops-an-alpha-version-of-software-carbon-intensity-a-method-for-scoring-the-carbon-emissions-of-software-operations/'>and announced its alpha in 2021</a>). NTT DATA Japan built a <a href='https://greensoftware.foundation/articles/building-green-software-through-standards-and-collaboration/'>carbon-aware Kubernetes scheduler</a>.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://nttdata.com/global/en/news/press-release/2024/may/the-development-of-a-new-international-standard-called-software-carbon-intensity",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "IT services",
+        "title": "HCLTech",
+        "bodyHtml": "Offers an 'SCI Meter' that calculates and reduces application SCI scores.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.hcltech.com/sustainability-engineering",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Digital services",
+        "title": "Globant",
+        "bodyHtml": "The GSF partnership is named in the company's annual report to the US Securities and Exchange Commission, as part of its climate compliance activity.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://www.sec.gov/Archives/edgar/data/1557860/000162828025009110/glob-20241231.htm",
+        "secondaryCtaText": "Learn more about our partnerships",
+        "secondaryCtaHref": "/about/"
+      },
+      {
+        "label": "Software analytics",
+        "title": "CAST",
+        "bodyHtml": "Working with CAST, Autostrade per l'Italia achieved average CO₂ savings of 15.1% across 60 applications.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/decarbonizing-software-how-cast-applied-the-sci-metric/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Travel technology",
+        "title": "Amadeus",
+        "bodyHtml": "The first travel company to join GSF, Amadeus donated Carmen, its production carbon measurement engine, to the Foundation and took part in the SCI for AI Bootcamp.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://amadeus.com/en/blog/articles/open-source-carbon-measurement-engine",
+        "secondaryCtaText": "Learn more about Carmen",
+        "secondaryCtaHref": "/tools/carmen/"
+      },
+      {
+        "label": "Industrial technology",
+        "title": "Siemens, AVEVA and Schneider Electric",
+        "bodyHtml": "Joined Amadeus in the first SCI for AI Bootcamp, applying the standard to their own AI systems, including an HR system and a customer-facing application. Their lessons feed our guidance and training.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/sci-for-ai-bootcamp-how-four-organizations-are-measuring-their-ai-emissions/",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Member collaboration",
+        "title": "Green Software Patterns catalogue",
+        "bodyHtml": "Built by NTT DATA, Goldman Sachs, Accenture, AVEVA and contributors from 11 organisations, with measurable before-and-after impact for each pattern.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/press/",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Technology vendor",
+        "title": "Trustwise",
+        "bodyHtml": "Offers real-time emissions tracking aligned with ISO/IEC 21031 as a feature of its AI security platform.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.fintechfutures.com/press-releases/trustwise-introduces-the-first-trust-layer-for-agentic-ai",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Open-source tools",
+        "title": "Green Metrics Tool and APIs.json",
+        "bodyHtml": "The Blue Angel-winning Green Metrics Tool generates SCI scores automatically, and the <a href='https://apisjson.org/common/software-carbon-intensity/'>APIs.json</a> format defines a field for publishing an SCI score.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.green-coding.io/blog/sci-per-phase/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Banking",
+        "title": "⚠ UNVERIFIED: NatWest",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> No public link found. Locate the source before including.</span></span>A NatWest case study is reported to cite SCI.",
+        "tags": [
+          "sci"
+        ]
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Research collaboration",
+      "body": "GSF works with universities and research institutes on measurement, methods and evidence.",
+      "text": "Discuss collaboration",
+      "href": "/contact/"
+    },
+    "cols": 3,
+    "id": "research",
+    "navLabel": "Research",
+    "heading": "Academic and policy references to GSF",
+    "body": "Universities and policy institutes that have tested, cited or built on GSF work.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Tony Blair Institute",
+        "title": "Cites GSF in its Greening AI policy agenda",
+        "bodyHtml": "The Tony Blair Institute's policy agenda on AI and energy refers to GSF's work (<a href='https://researchonline.lse.ac.uk/id/eprint/123705'>copy hosted by LSE</a>).",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://institute.global/insights/climate-and-energy/greening-ai-a-policy-agenda-for-the-artificial-intelligence-and-energy-revolutions"
+      },
+      {
+        "label": "techUK",
+        "title": "Cites GSF's AI and SCI work",
+        "bodyHtml": "techUK, the UK technology industry body, cites GSF's AI and SCI work in its article on building better by design. It is also a named partner in WRI's AI comparison programme.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://www.techuk.org/resource/we-optimised-the-hardware-we-forgot-the-software-it-s-time-to-build-better-by-design.html",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Texas State University",
+        "title": "Found SCI effective for AI models",
+        "bodyHtml": "An independent study found one model used only 27% of the energy of a larger one while giving comparable answers.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/articles/texas-state-university-deems-gsf-sci-an-effective-metric-to-evaluate-the-carbon-i/",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Academic paper, 2026",
+        "title": "Describes SCI for AI as extending ISO/IEC 21031 to AI systems",
+        "bodyHtml": "The paper notes more than a dozen efforts to standardise AI emissions, none widely adopted, and describes SCI for AI as a framework for calculating and comparing emissions across deployments.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://arxiv.org/pdf/2608.06733",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "Universitat Politècnica de Catalunya",
+        "title": "Energy labels for AI models built on SCI",
+        "bodyHtml": "Peer-reviewed research (ACM 2024) cites SCI and the Impact Framework as foundations.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://upcommons.upc.edu/bitstreams/40519de3-1004-4711-86bb-3901aeddfe85/download",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Accenture Labs and others",
+        "title": "Researchers independently arrive at the same method",
+        "bodyHtml": "A survey defines SCI as the GSF method; <a href='https://arxiv.org/pdf/2306.10049'>another paper</a> notes its formula matches the SCI specification.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://arxiv.org/html/2506.09683v1",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      },
+      {
+        "label": "Purdue University",
+        "title": "Complementary research on AI language models",
+        "bodyHtml": "Published at a top AI conference (ACL 2025). Its lead author chairs GSF's water-intensity project.",
+        "tags": [
+          "sci-ai"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://arxiv.org/abs/2502.11256v2",
+        "secondaryCtaText": "Learn more about SCI for AI",
+        "secondaryCtaHref": "/standards/sci-ai/"
+      },
+      {
+        "label": "KIT and further research",
+        "title": "More academic citations",
+        "bodyHtml": "Karlsruhe Institute of Technology cites GSF repeatedly, and a 2026 low-carbon computing workshop paper <a href='https://arxiv.org/pdf/2609.13355'>cites SCI for Web</a>. <a href='https://arxiv.org/pdf/2506.09370'>An industry study</a> also cites SCI.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://publikationen.bibliothek.kit.edu/1000183038/162332018"
+      },
+      {
+        "label": "ARCHER2",
+        "title": "⚠ UNVERIFIED: The UK national supercomputer's course mirrors GSF's principles",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Explicit GSF attribution not yet confirmed in the materials.</span></span>Training materials from the UK's national supercomputing service teach carbon and energy efficiency as green software principles.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://epcced.github.io/green-software-archer2/key-points.html"
+      },
+      {
+        "label": "ACM FAccT 2022",
+        "title": "⚠ UNVERIFIED: A widely cited paper on the carbon intensity of AI",
+        "bodyHtml": "<span class=\"mb-3 block rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-3 text-sm text-orange-900\"><strong class=\"block\">UNVERIFIED: needs further work before launch</strong><span class=\"mt-1 block\"><strong>To verify:</strong> Confirm authorship and the GSF reference. The ACM link is the one GSF's own SCI page already uses.</span></span>The Dodge et al. paper is counted among GSF's peer-reviewed citations, with Microsoft and Allen Institute co-authors.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://dl.acm.org/doi/pdf/10.1145/3531146.3533234"
+      },
+      {
+        "label": "ACM SoCC 2024",
+        "title": "The Sunk Carbon Fallacy: rethinking carbon metrics for carbon-aware scheduling",
+        "bodyHtml": "Published at the ACM Symposium on Cloud Computing, and cited on GSF's SCI page among peer-reviewed research.",
+        "tags": [
+          "sci"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://arxiv.org/abs/2410.15087",
+        "secondaryCtaText": "Learn more about SCI",
+        "secondaryCtaHref": "/standards/sci/"
+      }
+    ],
+    "bg": "bg-white"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Academic membership",
+      "body": "Academic institutions can become members of the Foundation free of charge. Get in touch to discuss membership.",
+      "text": "Enquire about academic membership",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "academic",
+    "navLabel": "Academic members",
+    "heading": "Our academic members",
+    "body": "Seventeen universities and institutes from nine countries are members of the Foundation.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Academic member · United Kingdom",
+        "title": "University College London",
+        "bodyHtml": "University College London is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · United Kingdom",
+        "title": "University of Bristol",
+        "bodyHtml": "University of Bristol is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · United Kingdom",
+        "title": "University of Edinburgh",
+        "bodyHtml": "University of Edinburgh is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Sweden",
+        "title": "Chalmers University of Technology",
+        "bodyHtml": "Chalmers University of Technology is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Canada",
+        "title": "Concordia University",
+        "bodyHtml": "Concordia University is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Netherlands",
+        "title": "University of Amsterdam",
+        "bodyHtml": "University of Amsterdam is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Ireland",
+        "title": "University of Limerick",
+        "bodyHtml": "University of Limerick is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Sweden",
+        "title": "Linnaeus University",
+        "bodyHtml": "Linnaeus University is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · United Kingdom",
+        "title": "Manchester Metropolitan University",
+        "bodyHtml": "Manchester Metropolitan University is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · United Kingdom",
+        "title": "University of Huddersfield",
+        "bodyHtml": "University of Huddersfield is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Italy",
+        "title": "University of Salento",
+        "bodyHtml": "University of Salento is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Italy",
+        "title": "University of L'Aquila",
+        "bodyHtml": "University of L'Aquila is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Spain",
+        "title": "Universidad Politécnica de Madrid",
+        "bodyHtml": "Universidad Politécnica de Madrid is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · Spain",
+        "title": "Mondragon University",
+        "bodyHtml": "Mondragon University is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · United States",
+        "title": "Texas State University",
+        "bodyHtml": "Texas State University is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · India",
+        "title": "IIIT Hyderabad",
+        "bodyHtml": "IIIT Hyderabad is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      },
+      {
+        "label": "Academic member · India",
+        "title": "IIM Mumbai",
+        "bodyHtml": "IIM Mumbai is a member of the Green Software Foundation, contributing to and learning from our open standards and community.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://directory.greensoftware.foundation/members/",
+        "secondaryCtaText": "Learn more about membership",
+        "secondaryCtaHref": "/membership/"
+      }
+    ],
+    "bg": "bg-accent-lightest-2"
+  },
+  {
+    "special": null,
+    "cta": {
+      "heading": "Skills and policy enquiries",
+      "body": "Organisations can join the Policy Working Group, work with GSF on consultations, or arrange GSF training for their teams.",
+      "text": "Get in touch",
+      "href": "/contact/"
+    },
+    "cols": 3,
+    "id": "policy",
+    "navLabel": "Skills & policy",
+    "heading": "Policy, research and skills",
+    "body": "GSF's published papers, consultation responses and training.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Training",
+        "title": "The free Practitioner course has trained 130,000+ people",
+        "bodyHtml": "More than 30,000 are in financial services. It is the course the UK's Defra requires.",
+        "tags": [
+          "training"
+        ],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/education/",
+        "secondaryCtaText": "Learn more about GSF training",
+        "secondaryCtaHref": "/education/"
+      },
+      {
+        "label": "Training",
+        "title": "A new Green Software & AI Academy",
+        "bodyHtml": "Role-based professional training built on SCI, SCI for AI, SEI and SWI, with 14 courses. A pilot for GSF member organisations is open until December 2026, with supported onboarding. <a href='https://greensoftware.foundation/articles/green-software-foundation-announces-intent-to-launch-green-software-ai-academy-to-build-the-skills-needed-for-sustainable-ai/'>Announcement</a>.",
+        "tags": [
+          "training"
+        ],
+        "ctaText": "Visit the Academy",
+        "ctaHref": "https://academy.greensoftware.foundation/",
+        "secondaryCtaText": "Learn more about GSF training",
+        "secondaryCtaHref": "/education/"
+      },
+      {
+        "label": "Consultation response · March 2026",
+        "title": "Data Centers as Flexible Grid Participants",
+        "bodyHtml": "GSF's response to Ofgem's Demand Connections Reform call for input, on how software-controlled flexibility in data centers can help address Great Britain's connections crisis.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/data-centres-ofgem-response/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Consultation response · December 2025",
+        "title": "Response to the GHG Protocol Scope 2 consultation",
+        "bodyHtml": "GSF's formal response to the proposed revisions, advocating hourly granularity in carbon accounting to enable carbon-aware software operations.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/ghg-protocol-scope-2-response/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Position paper · May 2025",
+        "title": "Green AI Position Paper",
+        "bodyHtml": "Defines Green AI, assesses environmental impacts across the AI lifecycle and outlines key actions. Written by the GSF Green AI Committee and cited in the US public-sector procurement handbook.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/green-ai-position-paper/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "White paper · February 2026",
+        "title": "SCI for AI and EU AI Act environmental compliance",
+        "bodyHtml": "How SCI for AI provides a methodology for measuring and reducing AI's climate impact, exceeding the Act's current environmental documentation requirements.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-ai-eu-ai-act/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "White paper · January 2026",
+        "title": "The SCI standard and CSRD compliance",
+        "bodyHtml": "How SCI (ISO/IEC 21031:2024) can help European organisations measure, report and reduce software emissions within the CSRD and ESRS E1 reporting framework.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-csrd-compliance/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Assembly report · July 2025",
+        "title": "SCI for AI Assembly Report",
+        "bodyHtml": "Outcomes of the 2025 expert workshops that defined GSF's approach to AI measurement and evaluated existing metrics, laying the groundwork for SCI for AI.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-for-ai-workshop-report/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Assembly report · January 2026",
+        "title": "SCI for Web Assembly Report",
+        "bodyHtml": "The consensus design document for SCI for Web, created by 14 GSF members through an AI-assisted assembly. Covers scope, personas, existing tools and implementation practices.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/sci-web-assembly-report/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Technical note · July 2026",
+        "title": "SILO companion technical note",
+        "bodyHtml": "How the internal interoperability layer complements the external, grid-facing interface to form a complete, deployable specification.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/silo-companion-technical-note/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Q&A · August 2026",
+        "title": "SILO Project Q&A",
+        "bodyHtml": "The problem SILO solves in practice, who it is for, the roadmap ahead and how to get involved.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Read the paper",
+        "ctaHref": "/policy/research/silo-project-qa/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Policy Radar · Public tool",
+        "title": "A public tracker of policy relevant to green software",
+        "bodyHtml": "The Policy Working Group's Policy Radar is a public calendar of consultations, proposed legislation and enacted laws relevant to green software in the regions where GSF members operate. Anyone can suggest a policy to add.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Open the Policy Radar",
+        "ctaHref": "https://policy-radar.greensoftware.foundation/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Consultation response · In preparation",
+        "title": "EU data centre performance standards",
+        "bodyHtml": "The Policy Working Group is preparing evidence for the European Commission's consultation on data centre performance standards, ahead of requirements expected to be proposed in 2027. Evidence from specialists familiar with SCI, SCI for AI, WDPC, SILO or Energy Efficiency Directive reporting is welcome until 14 December 2026.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Contribute evidence (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg/issues/189",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "White paper · In scoping",
+        "title": "Data centre transparency requirements (United States)",
+        "bodyHtml": "The Policy Working Group is scoping a white paper on data centre disclosure requirements, setting out how growing political attention on data centres could translate into credible, measurable requirements.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Contribute (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg/issues/190",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Policy and research",
+        "title": "All GSF policy and research in one place",
+        "bodyHtml": "Every position, white paper, consultation response and assembly report, with the Policy Working Group's mission and the Policy Radar.",
+        "tags": [
+          "policy"
+        ],
+        "ctaText": "Browse all publications",
+        "ctaHref": "/policy/research/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Press",
+        "title": "Press coverage of GSF",
+        "bodyHtml": "Our press page links BBC, MIT Technology Review, Forbes, Raconteur and the Economic Times. <a href='https://www.fortune.com/2021/05/25/microsoft-accenture-goldman-sachs-to-develop-green-software-energy-consumption'>Fortune</a> covered our founding.",
+        "tags": [],
+        "ctaText": "View source",
+        "ctaHref": "https://greensoftware.foundation/press/",
+        "secondaryCtaText": "Learn more about GSF in the press",
+        "secondaryCtaHref": "/press/"
+      }
+    ],
+    "bg": "bg-white"
+  }
+];
+---
+
+<Layout
+  title="Partnerships & Adoption — Green Software Foundation"
+  description="Governments, intergovernmental bodies and universities working with the Green Software Foundation: from G7 recognition to national adoption of SCI."
+>
+  <Navbar
+    logoSrc="/assets/gsf-logo-full.svg"
+    logoAlt="Green Software Foundation"
+    logoHref="/"
+    topBar="none"
+    showSearch
+    navItems={navItems}
+  />
+
+  <Breadcrumb items={[
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about/" },
+    { label: "Partnerships & Adoption" },
+  ]} />
+
+  <Hero
+    heading="Partnerships"
+    headingAccent="& Adoption"
+    body="From the G7 to national digital agencies, the Green Software Foundation's open standards are being cited, adopted and built into public policy."
+    ctaLeadIn="Interested in partnering with the GSF?"
+    ctas={[{ text: "Partnership enquiries", variant: "primary", href: "/membership/enquire/" }]}
+    bgClass="bg-accent-lightest-2"
+    imageSrc="/assets/partnerships-hero.svg"
+    imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
+  />
+
+  <!-- Section navigation. The full menu sits below the hero; once it scrolls out of view a slim
+       bar sticks to the top of the screen showing the current section, with a "Show all sections"
+       button that opens the same menu as a dropdown. A floating pill appears while a filter is on. -->
+  <nav aria-label="On this page" data-section-nav class="border-b border-primary-lighter bg-white">
+    <div class="container py-8 md:py-10">
+      <div class="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+        {navGroups.map((g) => (
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
+            <ul class="mt-3 space-y-2">
+              {g.ids.map((id) => (
+                <li>
+                  <a href={`#${id}`} data-pill={id} class="group flex items-center justify-between gap-2 rounded-md px-2 py-1.5 -mx-2 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-lightest-2 hover:text-primary">
+                    <span>{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</span>
+                    <span aria-hidden="true" class="text-primary/40 transition-colors group-hover:text-primary">&rarr;</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div data-filter-bar class="mt-8 border-t border-primary-lighter pt-5">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
+          <button type="button" data-filter="legislation" aria-pressed="false" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
+          {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+          ))}
+          <button type="button" data-filter="all" aria-pressed="true" class="ml-1 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-dark aria-pressed:hidden">Show everything</button>
+        </div>
+      </div>
+      <p data-filter-status aria-live="polite" class="sr-only"></p>
+    </div>
+  </nav>
+
+  <!-- Sticky section bar: hidden until the full menu above has scrolled out of view -->
+  <div data-sticky-nav hidden class="sticky-nav fixed inset-x-0 top-0 z-40">
+    <div class="sticky-strip bg-primary-dark text-white">
+      <div class="container flex h-14 items-center justify-between gap-3">
+        <p class="sticky-where min-w-0 truncate text-sm">
+          <span class="text-white/70">You are in:</span>
+          <span data-current-section class="ml-1 font-bold"></span>
+        </p>
+        <button type="button" data-filter-toggle aria-expanded="false" aria-controls="filter-panel" class="flex shrink-0 items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-primary-dark transition-colors hover:bg-accent-lightest-2">
+          <span aria-hidden="true">&#9776;</span>
+          <span data-toggle-text>Show all sections</span>
+          <span aria-hidden="true" data-toggle-caret>&#9662;</span>
+        </button>
+      </div>
+    </div>
+    <div id="filter-panel" data-filter-panel hidden class="max-h-[75vh] overflow-y-auto border-b border-primary-lighter bg-white">
+      <div class="container py-6">
+        <div class="grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        {navGroups.map((g) => (
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
+            <ul class="mt-2 space-y-1">
+              {g.ids.map((id) => (
+                <li>
+                  <a href={`#${id}`} data-pill={id} class="group flex items-center justify-between gap-2 rounded-md px-2 py-1.5 -mx-2 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-lightest-2 hover:text-primary">
+                    <span>{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</span>
+                    <span aria-hidden="true" class="text-primary/40 transition-colors group-hover:text-primary">&rarr;</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        </div>
+        <div class="mt-6 border-t border-primary-lighter pt-4">
+          <div class="flex flex-wrap items-center gap-2">
+          <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
+          <button type="button" data-filter="legislation" aria-pressed="false" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
+          {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+          ))}
+          <button type="button" data-filter="all" aria-pressed="true" class="ml-1 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-dark aria-pressed:hidden">Show everything</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side progress rail: shows where you are on the page. Full labels on wide screens (1760px+),
+       dots with labels on hover on laptops (1024px+), hidden on tablets and phones. -->
+  <nav aria-label="Page progress" data-rail hidden class="page-rail fixed left-3 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
+    <div class="rail-box relative rounded-xl py-3 pl-3 pr-4">
+      <div aria-hidden="true" class="absolute bottom-5 left-[17px] top-5 w-0.5 rounded-full bg-primary-lighter"></div>
+      <div aria-hidden="true" data-rail-fill class="absolute left-[17px] top-5 w-0.5 rounded-full bg-primary transition-[height] duration-300" style="height:0"></div>
+      <ol class="relative space-y-2.5">
+        {[...sections.map((x) => ({ id: x.id, label: x.navLabel })), { id: "press", label: "In the press" }].map((item) => (
+          <li data-rail-item={item.id}>
+            <a href={`#${item.id}`} data-pill={item.id} data-rail-link={item.id} class="rail-link flex items-center gap-3">
+              <span aria-hidden="true" class="rail-dot block h-3 w-3 shrink-0 rounded-full border-2 border-primary-lighter bg-white transition-all duration-200"></span>
+              <span class="rail-label whitespace-nowrap text-xs text-primary-dark/55 transition-all duration-200">{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </nav>
+
+  <div data-filter-float hidden class="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full bg-primary-dark py-3 pl-6 pr-3 text-base font-semibold text-white shadow-2xl ring-4 ring-white">
+    <span data-filter-float-text></span>
+    <button type="button" class="rounded-full bg-white px-5 py-2 font-bold text-primary-dark hover:bg-accent-lightest-2">Show everything</button>
+  </div>
+
+  <section class="bg-accent-lightest-2 py-12 md:py-16" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-5 lg:gap-14">
+        <div class="lg:col-span-2">
+          <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{intro.eyebrow}</p>
+          <h2 id="intro-heading" class="mt-2 text-2xl font-semibold md:text-3xl">
+            {intro.heading.split(/(\*[^*]+\*)/g).filter(Boolean).map((part) =>
+              part.startsWith("*") ? <span class="font-bold text-primary">{part.slice(1, -1)}</span> : part
+            )}
+          </h2>
+          <p class="mt-4 text-base leading-relaxed md:text-lg">{intro.body}</p>
+        </div>
+        <dl class="divide-y divide-primary-lighter rounded-lg border border-primary-lighter bg-white lg:col-span-3">
+          {intro.terms.map((t) => (
+            <div class="grid gap-1 p-5 sm:grid-cols-[11rem_1fr] sm:gap-6">
+              <dt>
+                <span class="block text-lg font-extrabold text-primary-dark">{t.term}</span>
+                <span class="block text-sm text-primary-dark/70">{t.full}</span>
+              </dt>
+              <dd class="text-base leading-relaxed">{t.def}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  {sections.map((s) => (
+    <div id={s.id} data-section data-nav-label={s.navLabel} class="scroll-mt-24">
+      {s.cta && (
+        <section class="bg-primary-dark py-6 md:py-8" data-pagefind-ignore>
+          <div class="container flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+            <div class="max-w-3xl">
+              <h2 class="text-xl font-extrabold text-white md:text-2xl">{s.cta.heading}</h2>
+              <p class="mt-1 text-sm text-white/80 md:text-base">{s.cta.body}</p>
+            </div>
+            <a href={s.cta.href} class="shrink-0">
+              <Button variant="primary-invert">{s.cta.text}</Button>
+            </a>
+          </div>
+        </section>
+      )}
+      {s.special === "assemblies" ? (
+        <FeatureGrid
+          variant="panel"
+          eyebrow="How GSF standards are made"
+          heading="GSF Assemblies, powered by *Harmony*"
+          body="Achieving consensus when creating a standard has traditionally taken far too long, because it means agreeing across competing organisations, time zones and languages. How do you speed it up? GSF developed a new method: Assemblies, powered by Harmony. Harmony is GSF's AI-assisted consensus engine. It brings hundreds of perspectives together asynchronously, so a consensus design document can take weeks, not years."
+          stats={[
+            { value: "10 weeks", label: "from a blank page to a consensus design document" },
+            { value: "14", label: "experts from 15 organisations in one assembly" },
+            { value: "< 3 years", label: "from first draft of SCI to ISO standard" },
+          ]}
+          columns={3}
+          linkStyle="button"
+          features={[
+            { badge: "The problem", title: "Consensus at scale breaks down", description: "Competitors around one table don't freely share, and the loudest voice dominates. Live meetings disadvantage people in other time zones and languages. Traditional multi-stakeholder processes can take years." },
+            { badge: "The tool", title: "Harmony, an AI-assisted facilitator", description: "Harmony can hold the perspectives of hundreds of people at once. AI reads and synthesises; humans rate, validate and cast every vote. Every response is logged, and its inclusion can be verified." },
+            { badge: "The result", title: "Consensus in weeks, not years", description: "In one assembly, 14 experts from 15 organisations went from a blank page to a consensus design document in ten weeks. The process is now repeatable across new GSF specifications." },
+          ]}
+          ctaLeadIn="Every new GSF specification can use the Assembly process."
+          ctaText="About Assemblies →"
+          ctaHref="/assemblies/"
+          ctaSecondaryText="Read the story →"
+          ctaSecondaryHref="/stories/ai-accelerated-consensus/"
+        />
+      ) : (
+        <CardGrid
+          heading={s.heading}
+          body={s.body}
+          cards={s.cards}
+          columns={s.cols}
+          align="left"
+          bgClass={s.bg}
+        />
+      )}
+      {s.explainer && (
+        <section class="bg-accent-lightest-2 py-12 md:py-16">
+          <div class="container">
+            <div class="max-w-3xl">
+              <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{s.explainer.eyebrow}</p>
+              <h3 class="mt-2 text-2xl font-semibold md:text-3xl">
+                {s.explainer.heading.split(/(\*[^*]+\*)/g).filter(Boolean).map((part) =>
+                  part.startsWith("*") ? <span class="font-bold text-primary">{part.slice(1, -1)}</span> : part
+                )}
+              </h3>
+              <p class="mt-4 text-base leading-relaxed md:text-lg">{s.explainer.intro}</p>
+            </div>
+            <div class="mt-8 grid gap-6 md:grid-cols-3">
+              {s.explainer.items.map((it) => (
+                <div class="rounded-lg border border-primary-lighter bg-white p-6">
+                  <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{it.tag}</p>
+                  <h4 class="mt-1 text-xl font-extrabold text-primary-dark">{it.title}</h4>
+                  <p class="mt-3 text-base leading-relaxed">{it.body}</p>
+                </div>
+              ))}
+            </div>
+            <p class="mt-8 max-w-3xl text-lg font-semibold text-primary-dark">{s.explainer.closing}</p>
+            <a href={s.explainer.ctaHref} class="mt-4 inline-block"><Button variant="primary">{s.explainer.ctaText}</Button></a>
+          </div>
+        </section>
+      )}
+      {s.note && <TextBlock body={s.note} compact bgClass={s.bg} />}
+    </div>
+  ))}
+
+  <!-- Media Coverage: full-width sideways scroller, three cards deep -->
+  <section id="press" data-nav-label="In the press" class="scroll-mt-24 bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 id="coverage-heading" class="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">Media <span class="text-primary">Coverage</span></h2>
+          <p class="text-lg text-primary-dark/70">
+            The Green Software Foundation in the news. <strong class="font-bold text-primary-dark">Scroll sideways.</strong>
+          </p>
+        </div>
+        <div class="flex items-center gap-2" data-coverage-controls>
+          <button type="button" data-coverage-prev aria-label="Scroll media coverage left" class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark text-xl font-bold text-white shadow-sm transition hover:bg-primary disabled:cursor-not-allowed disabled:opacity-30">&larr;</button>
+          <button type="button" data-coverage-next aria-label="Scroll media coverage right" class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark text-xl font-bold text-white shadow-sm transition hover:bg-primary disabled:cursor-not-allowed disabled:opacity-30">&rarr;</button>
+        </div>
+      </div>
+    </div>
+    <div class="relative mt-8">
+      <div
+        data-coverage-scroller
+        tabindex="0"
+        role="region"
+        aria-label="Media coverage, scrolls sideways"
+        class="coverage-scroll overflow-x-auto scroll-smooth px-6 pb-5 md:px-10 lg:pl-20"
+      >
+        <div class="grid w-max grid-flow-col grid-rows-3 auto-cols-[17rem] gap-4 md:auto-cols-[21rem]">
+          {(pressMentions as any[]).map((mention: any) => (
+            <a
+              href={mention.url}
+              target="_blank"
+              rel="noopener"
+              class="group block rounded-lg border border-border bg-accent-lightest-2 p-5 hover:shadow-lg hover:border-primary-lighter transition-all"
+            >
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span class="text-xs font-bold text-primary uppercase tracking-wider">{mention.source}</span>
+                {mention.date && (
+                  <span class="text-xs text-primary-dark/50 whitespace-nowrap">
+                    {new Date(mention.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}
+                  </span>
+                )}
+              </div>
+              <h3 class="text-sm font-bold text-primary-dark group-hover:text-primary transition-colors line-clamp-3">
+                {mention.title}
+              </h3>
+              <div class="mt-3 text-xs text-primary-dark/50 truncate">{new URL(mention.url).hostname}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div data-coverage-fade aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 flex w-24 items-center justify-end bg-gradient-to-l from-white via-white/80 to-transparent pr-3 text-3xl font-bold text-primary transition-opacity">&rsaquo;</div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Membership"
+    body="Government, non-profit and academic organisations can become members free of charge. GSF is a non-profit, vendor-neutral foundation under the Linux Foundation. Its standards are ratified by consensus, and SCI is published as ISO/IEC 21031:2024."
+    ctaText="Membership enquiries"
+    ctaHref="/membership/"
+  />
+
+  <Footer />
+  <script is:inline>
+(function(){
+  var bar=document.querySelector('[data-filter-bar]'); if(!bar) return;
+  var btns=[].slice.call(document.querySelectorAll('button[data-filter]'));
+  var panel=document.querySelector('[data-filter-panel]'); var toggle=document.querySelector('[data-filter-toggle]');
+  function setPanel(open){if(!panel||!toggle)return;panel.hidden=!open;toggle.setAttribute('aria-expanded',open?'true':'false');var tt=toggle.querySelector('[data-toggle-text]');if(tt)tt.textContent=open?'Close':'Show all sections';var tc=toggle.querySelector('[data-toggle-caret]');if(tc)tc.innerHTML=open?'&#9652;':'&#9662;';}
+  if(toggle){toggle.addEventListener('click',function(){setPanel(panel.hidden);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setPanel(false);});
+  document.addEventListener('click',function(e){if(panel&&!panel.hidden&&!e.target.closest('[data-filter-panel]')&&!e.target.closest('[data-filter-toggle]'))setPanel(false);});
+  var cards=[].slice.call(document.querySelectorAll('[data-tags]'));
+  var secs=[].slice.call(document.querySelectorAll('[data-section]'));
+  var links=[].slice.call(document.querySelectorAll('a[data-pill]'));
+  var status=document.querySelector('[data-filter-status]');
+  var float=document.querySelector('[data-filter-float]');
+  var floatText=document.querySelector('[data-filter-float-text]');
+  var current='all';
+  function label(f){var b=btns.filter(function(x){return x.getAttribute('data-filter')===f;})[0];return b?b.textContent.trim():'';}
+  function inSection(c,id){var s=c.closest('[data-section]');return !!s&&s.id===id;}
+  function apply(f){
+    current=f; var n=0;
+    cards.forEach(function(c){
+      var show=f==='all'||(f.indexOf('sec-')===0?inSection(c,f.slice(4)):(' '+c.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1);
+      c.hidden=!show; if(show)n++;
+    });
+    secs.forEach(function(s){s.hidden=(f!=='all')&&!s.querySelector('[data-tags]:not([hidden])');});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-filter')===f?'true':'false');});
+    var on=f!=='all';
+    if(status) status.textContent=on?'Showing '+n+' item'+(n===1?'':'s')+' for '+label(f)+'.':'';
+    if(float){float.hidden=!on; if(floatText) floatText.textContent='Showing: '+label(f);}
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-filter]'); if(!b) return;
+    setPanel(false);
+    var f=b.getAttribute('data-filter');
+    if(f===current&&f!=='all'){apply('all');return;}
+    apply(f);
+    if(f!=='all'){var first=document.querySelector('[data-section]:not([hidden])'); if(first) first.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+  // Jump links: show the full list again if a filter is on, then scroll to the section.
+  links.forEach(function(a){a.addEventListener('click',function(e){
+    setPanel(false);
+    var t=document.getElementById(a.getAttribute('data-pill'));
+    if(t&&current!=='all'){e.preventDefault();apply('all');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},50);}
+  });});
+  if(float){float.querySelector('button').addEventListener('click',function(){apply('all');window.scrollTo({top:0,behavior:'smooth'});});}
+  // Sticky section bar: show once the full menu has scrolled away; keep "You are in" current.
+  var navEl=document.querySelector('[data-section-nav]'); var sticky=document.querySelector('[data-sticky-nav]');
+  var currentLabel=document.querySelector('[data-current-section]');
+  var labelled=[].slice.call(document.querySelectorAll('[data-nav-label]'));
+  var rail=document.querySelector('[data-rail]'); var fill=document.querySelector('[data-rail-fill]');
+  var railLinks=[].slice.call(document.querySelectorAll('[data-rail-link]'));
+  function onScroll(){
+    var show=false;
+    if(navEl&&sticky){show=navEl.getBoundingClientRect().bottom<0; if(sticky.hidden===show){sticky.hidden=!show; if(!show)setPanel(false);}}
+    if(rail) rail.hidden=!show;
+    var active=labelled.length?labelled[0]:null;
+    labelled.forEach(function(el){if(!el.hidden&&el.getBoundingClientRect().top<=120)active=el;});
+    if(currentLabel&&active) currentLabel.textContent=active.getAttribute('data-nav-label');
+    if(rail&&active){
+      var activeLink=null;
+      railLinks.forEach(function(a){
+        var target=document.getElementById(a.getAttribute('data-rail-link'));
+        a.parentNode.hidden=!!(target&&target.hidden);
+        var on=a.getAttribute('data-rail-link')===active.id;
+        if(on){a.setAttribute('aria-current','location');activeLink=a;}else{a.removeAttribute('aria-current');}
+      });
+      var passed=true;
+      railLinks.forEach(function(a){ if(a===activeLink){passed=false;return;} if(passed)a.setAttribute('data-passed','');else a.removeAttribute('data-passed'); });
+      if(fill&&activeLink){var dot=activeLink.querySelector('.rail-dot'); var box=fill.parentNode.getBoundingClientRect(); var d=dot.getBoundingClientRect(); fill.style.height=Math.max(0,(d.top+d.height/2)-box.top-20)+'px';}
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
+</script>
+  <style>
+    /* Side progress rail */
+    .page-rail .rail-label { display: none; }
+    .page-rail:hover .rail-box, .page-rail:focus-within .rail-box { background: rgba(255,255,255,0.97); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .page-rail:hover .rail-label, .page-rail:focus-within .rail-label { display: inline; }
+    .page-rail .rail-link:hover .rail-label { color: var(--color-primary, #2f6b5e); }
+    .page-rail .rail-link[data-passed] .rail-dot { border-color: var(--color-primary, #2f6b5e); }
+    .page-rail .rail-link[aria-current] .rail-dot { background: var(--color-primary, #2f6b5e); border-color: var(--color-primary, #2f6b5e); transform: scale(1.35); }
+    .page-rail .rail-link[aria-current] .rail-label { display: inline; font-size: 0.875rem; font-weight: 800; color: var(--color-primary-dark, #1f4a40); }
+    @media (max-width: 1759px) {
+      /* Laptops: dots only (labels on hover); the sticky bar above still names the current section */
+      .page-rail:not(:hover):not(:focus-within) .rail-link[aria-current] .rail-label { display: none; }
+    }
+    @media (min-width: 1760px) {
+      .page-rail .rail-label { display: inline; }
+      .page-rail:hover .rail-box { background: transparent; box-shadow: none; }
+      /* With the rail showing, the sticky bar slims to a floating "Show all sections" button */
+      .sticky-nav .sticky-strip { background: transparent; pointer-events: none; }
+      .sticky-nav .sticky-where { visibility: hidden; }
+      .sticky-nav [data-filter-toggle] { pointer-events: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.18); outline: 1px solid rgba(0,0,0,0.06); }
+    }
+    .sticky-nav:not([hidden]) .sticky-strip { box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    @media (min-width: 1760px) { .sticky-nav:not([hidden]) .sticky-strip { box-shadow: none; } }
+    .coverage-scroll { scrollbar-width: auto; scrollbar-color: var(--color-primary, #2f6b5e) #e5ede9; }
+    .coverage-scroll::-webkit-scrollbar { height: 12px; }
+    .coverage-scroll::-webkit-scrollbar-track { background: #e5ede9; border-radius: 9999px; }
+    .coverage-scroll::-webkit-scrollbar-thumb { background: var(--color-primary, #2f6b5e); border-radius: 9999px; }
+  </style>
+  <script is:inline>
+    (function () {
+      var sc = document.querySelector('[data-coverage-scroller]');
+      if (!sc) return;
+      var prev = document.querySelector('[data-coverage-prev]');
+      var next = document.querySelector('[data-coverage-next]');
+      var fade = document.querySelector('[data-coverage-fade]');
+      function update() {
+        var max = sc.scrollWidth - sc.clientWidth;
+        var atStart = sc.scrollLeft <= 2;
+        var atEnd = sc.scrollLeft >= max - 2;
+        if (prev) prev.disabled = atStart;
+        if (next) next.disabled = atEnd;
+        if (fade) fade.style.opacity = atEnd ? '0' : '1';
+        var controls = document.querySelector('[data-coverage-controls]');
+        if (controls) controls.hidden = max <= 2;
+      }
+      function step(dir) { sc.scrollBy({ left: dir * Math.max(sc.clientWidth * 0.8, 280), behavior: 'smooth' }); }
+      if (prev) prev.addEventListener('click', function () { step(-1); });
+      if (next) next.addEventListener('click', function () { step(1); });
+      sc.addEventListener('scroll', update, { passive: true });
+      sc.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+      });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</Layout>

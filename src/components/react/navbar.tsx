@@ -113,6 +113,7 @@ export interface NavItemDropdown {
   featured?: NavFeatured;
   columns?: number; // columns per row in the grid (default: number of sections)
   footerLink?: { href: string; label: string }; // panel-level CTA at the bottom
+  extraFooterLinks?: { href: string; label: string }[]; // further CTAs shown beside footerLink, same style
 }
 
 export interface NavItemLink {
@@ -240,13 +241,16 @@ function MegaMenuPanel({ item }: { item: NavItemDropdown }) {
         )}
       </div>
       {item.footerLink && (
-        <div className="border-t border-gray/30 px-6 py-3">
-          <a
-            href={item.footerLink.href}
-            className="inline-flex items-center gap-1.5 rounded-md bg-accent-lightest-2 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-accent-lighter"
-          >
-            {item.footerLink.label}
-          </a>
+        <div className="flex flex-wrap items-center gap-3 border-t border-gray/30 px-6 py-3">
+          {[item.footerLink, ...(item.extraFooterLinks ?? [])].map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="inline-flex items-center gap-1.5 rounded-md bg-accent-lightest-2 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-accent-lighter"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       )}
     </div>
@@ -338,13 +342,16 @@ function MobileNav({
                     <MobileNavSection key={section.title} section={section} />
                   ))}
                   {item.footerLink && (
-                    <div className="mt-1 px-2 pb-1">
-                      <a
-                        href={item.footerLink.href}
-                        className="inline-flex items-center rounded-md bg-accent-lightest-2 px-3 py-1.5 text-sm font-semibold text-primary"
-                      >
-                        {item.footerLink.label}
-                      </a>
+                    <div className="mt-1 flex flex-wrap gap-2 px-2 pb-1">
+                      {[item.footerLink, ...(item.extraFooterLinks ?? [])].map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className="inline-flex items-center rounded-md bg-accent-lightest-2 px-3 py-1.5 text-sm font-semibold text-primary"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>

@@ -12,6 +12,7 @@ These pages have no dynamic data — all content is hardcoded in their Astro fil
 
 ## Notes
 
+- The **About** page has a "How governments and institutions use GSF standards" panel (FeatureGrid, panel variant) after Mission & Vision, linking to `/partnerships/`. The same panel appears on the homepage; keep the two in sync. Content is hardcoded.
 - The **About** and **Contact** pages have `data-pagefind-body` and are included in site search
 - The **Brand** page shows colour palettes, logo downloads, and Canva template links
 - The **Newsletter** page contains a signup form

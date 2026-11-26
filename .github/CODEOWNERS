@@ -1,0 +1,4 @@
+# Pages that need Russ Trow's review and approval before going live
+/src/pages/partnerships/ @russelltrow
+/docs/pages/partnerships.md @russelltrow
+/src/lib/nav-items.ts @russelltrow
