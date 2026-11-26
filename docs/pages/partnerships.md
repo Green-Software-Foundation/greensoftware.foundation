@@ -24,7 +24,7 @@ The hero call to action reads "Interested in partnering with the GSF?" with a "P
 
 Two parts, sharing the same links and filters:
 
-1. **Full menu ("On this page")**, directly below the hero and not sticky. Section links are in four groups (Government and international; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter, plus "In the press" via `extraNavLabels`). Below them is one "Show only:" row: the highlighted **Legislation & reporting** button, the topic chips, and a "Show everything" link that appears only while a filter is on.
+1. **Full menu**, directly below the hero and not sticky, with no heading or explanatory text (the `nav` keeps `aria-label="On this page"` for screen readers). Section links are in four groups (Government and international; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter, plus "In the press" via `extraNavLabels`). Below them is one "Show only:" row: the highlighted **Legislation & reporting** button, the topic chips, and a "Show everything" link that appears only while a filter is on.
 2. **Sticky section bar**, hidden until the full menu scrolls out of view, then fixed to the top of the screen on all screen sizes. It shows "You are in: <current section>" (each section wrapper carries `data-nav-label`) and a **Show all sections** button that opens the same menu as a dropdown (capped at 75% of the screen height, scrolls inside). The dropdown closes after a choice, on Escape, or when clicking elsewhere, and the button reads "Close" while it is open.
 
 Each section wrapper has the matching `id` and `scroll-mt-24`, so headings clear the sticky bar.
@@ -37,7 +37,7 @@ Each section wrapper has the matching `id` and `scroll-mt-24`, so headings clear
 
 ## Legislation & reporting button
 
-The **Legislation & reporting** button is the first, highlighted item in the "Show only:" row (in both the full menu and the sticky dropdown), with a one-line explanation under it in the full menu. It is a normal filter button (`data-filter="legislation"`), so it uses the same filter and "Show everything" behaviour as the topic chips. It shows every card tagged `legislation`: government policy and procurement (UK, Taiwan, Germany, US GovAI handbook), the French asset managers' guidance, G7 ministers, and the EU AI Act, CSRD, GHG Protocol Scope 2 and Ofgem papers. When adding a card that shows GSF standards supporting a law, regulation, reporting rule or procurement requirement, add `"legislation"` to its `tags`.
+The **Legislation & reporting** button is the first, highlighted item in the "Show only:" row (in both the full menu and the sticky dropdown), with no explanatory text. Choosing a filter shows no "Showing N items" line on screen; the count is announced to screen readers only. It is a normal filter button (`data-filter="legislation"`), so it uses the same filter and "Show everything" behaviour as the topic chips. It shows every card tagged `legislation`: government policy and procurement (UK, Taiwan, Germany, US GovAI handbook), the French asset managers' guidance, G7 ministers, and the EU AI Act, CSRD, GHG Protocol Scope 2 and Ofgem papers. When adding a card that shows GSF standards supporting a law, regulation, reporting rule or procurement requirement, add `"legislation"` to its `tags`.
 
 ## Topic filter
 
@@ -89,7 +89,7 @@ The page is written for first-time visitors (governments, international bodies, 
 
 ## Unverified items (launch blockers)
 
-Cards titled "⚠ UNVERIFIED" and the "Draft review key" block are temporary review aids. Before launch, verify each item against a public source or delete it, then remove the orange markup and the review key:
+Cards titled "⚠ UNVERIFIED" are temporary review aids (the "Draft review key" box at the top of the page was removed in November 2026; the orange markers on each card remain). Before launch, verify each item against a public source or delete it, then remove the orange markup:
 
 - GDSA membership count (90+)
 - NatWest case study citing SCI

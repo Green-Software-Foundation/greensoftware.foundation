@@ -1769,9 +1769,7 @@ const sections = [
        button that opens the same menu as a dropdown. A floating pill appears while a filter is on. -->
   <nav aria-label="On this page" data-section-nav class="border-b border-primary-lighter bg-white">
     <div class="container py-8 md:py-10">
-      <h2 class="text-xl font-extrabold text-primary-dark md:text-2xl">On this page</h2>
-      <p class="mt-1 text-sm text-primary-dark/70 md:text-base">Select a section to go straight to it.</p>
-      <div class="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {navGroups.map((g) => (
           <div>
             <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
@@ -1791,15 +1789,14 @@ const sections = [
       <div data-filter-bar class="mt-8 border-t border-primary-lighter pt-5">
         <div class="flex flex-wrap items-center gap-2">
           <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
-          <button type="button" data-filter="legislation" aria-pressed="false" title="Where GSF standards support legal and regulatory commitments: CSRD, the EU AI Act, public procurement and government policy" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
+          <button type="button" data-filter="legislation" aria-pressed="false" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
           {filters.map((f) => (
             <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
           ))}
           <button type="button" data-filter="all" aria-pressed="true" class="ml-1 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-dark aria-pressed:hidden">Show everything</button>
         </div>
-        <p class="mt-2 text-xs text-primary-dark/60">"Legislation &amp; reporting" shows where GSF standards support legal and regulatory commitments, including CSRD, the EU AI Act, public procurement and government policy.</p>
       </div>
-      <p data-filter-status aria-live="polite" class="mt-3 text-sm font-semibold text-primary-dark empty:hidden"></p>
+      <p data-filter-status aria-live="polite" class="sr-only"></p>
     </div>
   </nav>
 
@@ -1840,7 +1837,7 @@ const sections = [
         <div class="mt-6 border-t border-primary-lighter pt-4">
           <div class="flex flex-wrap items-center gap-2">
           <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
-          <button type="button" data-filter="legislation" aria-pressed="false" title="Where GSF standards support legal and regulatory commitments: CSRD, the EU AI Act, public procurement and government policy" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
+          <button type="button" data-filter="legislation" aria-pressed="false" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
           {filters.map((f) => (
             <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
           ))}
@@ -1901,13 +1898,6 @@ const sections = [
       </div>
     </div>
   </section>
-
-  <!-- DRAFT REVIEW KEY: remove before launch -->
-  <div class="container my-6">
-    <p class="rounded-md border-2 border-dashed border-orange-500 bg-orange-50 p-4 text-sm text-orange-900">
-      <strong>Draft review key:</strong> cards marked <strong>UNVERIFIED</strong> or <strong>PLACEHOLDER</strong> need verification or content before this page goes live.
-    </p>
-  </div>
 
   {sections.map((s) => (
     <div id={s.id} data-section data-nav-label={s.navLabel} class="scroll-mt-24">
