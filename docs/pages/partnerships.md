@@ -83,12 +83,15 @@ The page is written for first-time visitors (governments, international bodies, 
 - Never name the second intergovernmental organisation (or its affiliates' authorship) anywhere on the page.
 - Do not publish internal-only items or items held as "forthcoming" until they are published.
 
+## Verified since drafting
+
+- **IMDA and SCI** (Singapore, Governments section): confirmed against BizClik Media's "IMDA Report" (published 1 June 2026), page 8: "The authority adopted the Green Software Foundation's Software Carbon Intensity specifications". The card quotes the report's wording and links to that page.
+
 ## Unverified items (launch blockers)
 
 Cards titled "⚠ UNVERIFIED" and the "Draft review key" block are temporary review aids. Before launch, verify each item against a public source or delete it, then remove the orange markup and the review key:
 
 - GDSA membership count (90+)
-- IMDA "adopted" SCI (AI Magazine wording)
 - NatWest case study citing SCI
 - ARCHER2 course GSF attribution
 - Second international research organisation card in the IGO section: placeholder wording, replace once the history of the discussions is available
