@@ -1,11 +1,20 @@
 ---
-title: "Green Software Patterns Catalog: The Next Chapter"
+title: 'Green Software Patterns Catalog: The Next Chapter'
+teaserText: With fresh perspectives and a clear roadmap, the Green Software Patterns Catalog is set to evolve and improve its impact on reducing software’s carbon emissions.
+date: 2025-03-25
 published: true
-date: "2025-03-25"
-summary: "In 2024, GSF members participated in a design thinking workshop to evolve GS Patterns Catalog. Today, we share their insights, observations, and guideposts that will shape the project's evolution. "
-teaserText: "With fresh perspectives and a clear roadmap, the Green Software Patterns Catalog is set to evolve and improve its impact on reducing software’s carbon emissions."
-mainImage: "./main.png"
-tags: ["education", "learning"]
+summary: In 2024, GSF members participated in a design thinking workshop to evolve GS Patterns Catalog. Today, we share their insights, observations, and guideposts that will shape the project's evolution.
+mainImage: ./main.png
+mainImageAlt: ''
+featured: false
+tags:
+  - education
+  - learning
+authors: []
+translators: []
+originBlogName: ''
+publishedOriginUrl: ''
+lang: en
 ---
 
 ## Project Overview
@@ -39,15 +48,15 @@ Identified challenges were broken down into eight distinct themes:
 7. Enterprise Architecture
 8. Infrastructure & Architecture 
 
-A better understanding of the potential limitations and how the users might interact with the Catalog laid the ground for defining user-specific “jobs to be done,”* such as: 
+A better understanding of the potential limitations and how the users might interact with the Catalog laid the ground for defining user-specific “jobs to be done,”\* such as: 
 
-*“As a CTO,”* every time I “want to understand how to make my existing software applications greener,” I need “provide clear guidance to my teams on which applications to decarbonize and the priority patterns to implement” but “lack of knowledge about green patterns and how they apply to my applications” gets in the way, and that means “we end up making poor choices based on lack of information or we do nothing.” *
+_“As a CTO,”_ every time I “want to understand how to make my existing software applications greener,” I need “provide clear guidance to my teams on which applications to decarbonize and the priority patterns to implement” but “lack of knowledge about green patterns and how they apply to my applications” gets in the way, and that means “we end up making poor choices based on lack of information or we do nothing.” \*
 
 Or
 
-*“As an Architect,”* every time I “modernize an app (e.g., migrate to the cloud) I need a way so simply and easily get the SCI score,” but “the time it takes” gets in the way, and that means “it is given less (no) focus.”*
+_“As an Architect,”_ every time I “modernize an app (e.g., migrate to the cloud) I need a way so simply and easily get the SCI score,” but “the time it takes” gets in the way, and that means “it is given less (no) focus.”\*
 
-Understanding user needs and the problems they want to solve, members had a clear starting point for mapping “jobs to be done.”*
+Understanding user needs and the problems they want to solve, members had a clear starting point for mapping “jobs to be done.”\*
 
 ## Green by Default 
 
@@ -60,17 +69,17 @@ During the workshops, members discussed expanding the Catalog’s reach and stre
 
 ## Roadmap
 
-In the final stage of the workshop, participants reflected on each step to define their vision of the “Green Software Nirvana”* for 2030 and outlined a strategy to achieve it.
+In the final stage of the workshop, participants reflected on each step to define their vision of the “Green Software Nirvana”\* for 2030 and outlined a strategy to achieve it.
 
 **Green Software Nirvana**
 
-**Green Software Patterns integrate into all major tool environments, ensuring automated, default application, and real-time impact measurement. With AI-driven analysis, forecasting, and optimization, Green Software Patterns allow for improved decision-making throughout the software lifecycle–design, implementation, and use–to minimize emissions. **
+"Green Software Patterns integrate into all major tool environments, ensuring automated, default application, and real-time impact measurement. With AI-driven analysis, forecasting, and optimization, Green Software Patterns allow for improved decision-making throughout the software lifecycle–design, implementation, and use–to minimize emissions."  
 
-*Disclaimer: The vision above only reflects the perspectives of the workshop participants. It does not represent a consensus view of the project team or the Green Software Foundation.*
+_Disclaimer: The vision above only reflects the perspectives of the workshop participants. It does not represent a consensus view of the project team or the Green Software Foundation._
 
 ![Roadmap timeline from today to 2027 showing milestones for the Green Software Patterns Catalog](./gs-patterns-catalog-roadmap.png)
-*GS Patterns Catalog Roadmap*
 
+_GS Patterns Catalog Roadmap_
 
 ## How to Contribute
 
