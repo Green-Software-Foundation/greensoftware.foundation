@@ -29,12 +29,69 @@ const intro = {
 const extraNavLabels: Record<string, string> = { press: "In the press" };
 const navGroups = [
   { title: "Government and international", ids: ["g7", "gov", "igo", "wri"] },
-  { title: "Standards", ids: ["standards", "roadmap", "assemblies", "selfcert"] },
+  { title: "Standards", ids: ["working-groups", "standards", "roadmap", "assemblies", "selfcert"] },
   { title: "Evidence and adoption", ids: ["independent", "industry", "press"] },
   { title: "Research, academia and policy", ids: ["research", "academic", "policy"] },
 ];
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
 const sections = [
+  {
+    "special": null,
+    "cta": {
+      "heading": "Taking part in a working group",
+      "body": "Working groups are member-led. Representatives of GSF member organisations can take part, and government and academic organisations can become members free of charge.",
+      "text": "Membership enquiries",
+      "href": "/membership/enquire/"
+    },
+    "cols": 3,
+    "id": "working-groups",
+    "navLabel": "Working groups",
+    "heading": "How GSF's work is organised",
+    "body": "GSF's standards and policy work is carried out by three member-led working groups. Each oversees a related area of work and the projects within it.",
+    "note": "",
+    "cards": [
+      {
+        "label": "Software Standards Working Group",
+        "title": "Specifications for measuring and reducing software's impact",
+        "bodyHtml": "Develops baseline specifications for green software that can be implemented on the computing platforms in widespread use. Its ratified work includes SCI (ISO/IEC 21031:2024), SCI for AI and SOFT. Current work includes the Software Water Intensity methodology, editorial work on SCI for AI for submission to ISO, the Software Energy Intensity specification and SCI for OpenTelemetry.",
+        "tags": [
+          "sci",
+          "sci-ai",
+          "swi"
+        ],
+        "ctaText": "Working group on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/software-standards-wg",
+        "secondaryCtaText": "Learn more about our standards",
+        "secondaryCtaHref": "/standards/"
+      },
+      {
+        "label": "Hardware Standards Working Group",
+        "title": "Standards for sustainable hardware and data centre infrastructure",
+        "bodyHtml": "Develops terminology, measurement methods and reporting frameworks for efficient and sustainable physical hardware and supporting infrastructure, designed to work across manufacturers and operators. Its work includes Open19 (published), Workload Dynamic Power and Cooling (WDPC) and the SILO data centre interoperability specification.",
+        "tags": [
+          "silo"
+        ],
+        "ctaText": "Learn more about SILO",
+        "ctaHref": "/standards/silo/",
+        "secondaryCtaText": "Learn more about Open19",
+        "secondaryCtaHref": "/standards/open19/"
+      },
+      {
+        "label": "Policy Working Group",
+        "title": "Engaging with policymakers on green software",
+        "bodyHtml": "Engages with external bodies on existing and proposed policy relevant to green software, prepares GSF's own policy proposals and consultation responses, and maintains the public Policy Radar. Current work includes evidence for the European Commission's consultation on data centre performance standards.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Working group on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      }
+    ],
+    "bg": "bg-white"
+  },
   {
     "special": null,
     "cta": {
@@ -453,9 +510,21 @@ const sections = [
       "heading": "A total and a rate: *measurement needs both* (GHG and SCI)",
       "intro": "The GHG Protocol gives organisations the total: how much they emit across a reporting period. SCI gives them the rate: how much carbon a piece of software produces for each unit of work it does. They answer different questions, and they are designed to be used together.",
       "items": [
-        { "title": "The total", "tag": "GHG Protocol", "body": "One figure for the whole organisation, in tonnes of CO₂e and classified by scope. It is what regulators, investors and auditors need to judge an organisation's overall footprint. On its own it cannot show engineers which design decisions made it larger or smaller, and it moves with business growth." },
-        { "title": "The rate", "tag": "SCI", "body": "Carbon per functional unit, such as per API request or per user, for a specific piece of software. It gives a team a target it can act on, and shows efficiency improving even while usage is growing." },
-        { "title": "Together", "tag": "In practice", "body": "Software-level SCI scores can be aggregated into the totals that feed GHG Protocol inventories and reporting such as CSRD, which requires absolute figures. The rate guides the improvements; the total shows whether overall emissions are actually falling." }
+        {
+          "title": "The total",
+          "tag": "GHG Protocol",
+          "body": "One figure for the whole organisation, in tonnes of CO₂e and classified by scope. It is what regulators, investors and auditors need to judge an organisation's overall footprint. On its own it cannot show engineers which design decisions made it larger or smaller, and it moves with business growth."
+        },
+        {
+          "title": "The rate",
+          "tag": "SCI",
+          "body": "Carbon per functional unit, such as per API request or per user, for a specific piece of software. It gives a team a target it can act on, and shows efficiency improving even while usage is growing."
+        },
+        {
+          "title": "Together",
+          "tag": "In practice",
+          "body": "Software-level SCI scores can be aggregated into the totals that feed GHG Protocol inventories and reporting such as CSRD, which requires absolute figures. The rate guides the improvements; the total shows whether overall emissions are actually falling."
+        }
       ],
       "closing": "GSF's view is that organisations need both. A total without a rate is hard to act on, and a rate without a total can hide growth.",
       "ctaText": "How SCI supports CSRD reporting",
@@ -554,6 +623,28 @@ const sections = [
         "secondaryCtaHref": "/standards/rtc/"
       },
       {
+        "label": "SOFT",
+        "title": "A framework for adopting green software across an organisation",
+        "bodyHtml": "The Sustainable Organisational Framework for Technology (SOFT) guides organisations in embedding sustainable software practices across strategy, implementation, operations and compliance. It is ratified. It was co-chaired by HSBC and Microsoft, with contributions from Avanade, BCG X, Cisco, NTT DATA, Siemens and UBS.",
+        "tags": [
+          "principles"
+        ],
+        "ctaText": "Trial the framework (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/soft",
+        "secondaryCtaText": "Learn more about SOFT",
+        "secondaryCtaHref": "/standards/soft/"
+      },
+      {
+        "label": "Open19 · Hardware",
+        "title": "An open standard for data centre hardware",
+        "bodyHtml": "Open19 standardises server, storage and networking form factors within the 19-inch rack. Version 2, released in December 2023, adds native 48V DC power and pluggable liquid cooling. The project came to GSF when the Sustainable and Scalable Infrastructure Alliance merged into the Foundation in December 2024, and is published under the Hardware Standards Working Group.",
+        "tags": [],
+        "ctaText": "View on GitHub",
+        "ctaHref": "https://github.com/Green-Software-Foundation/open19",
+        "secondaryCtaText": "Learn more about Open19",
+        "secondaryCtaHref": "/standards/open19/"
+      },
+      {
         "label": "W3C",
         "title": "A formal partnership with the body that sets web standards",
         "bodyHtml": "GSF runs SCI for Web through its consensus process while the W3C's Sustainable Web group gives feedback.",
@@ -621,7 +712,7 @@ const sections = [
       {
         "label": "In development · Water",
         "title": "Software Water Intensity (SWI)",
-        "bodyHtml": "A standard to measure software's water use, led by Purdue University and extending GSF's work from carbon to water.",
+        "bodyHtml": "A standard to measure software's water use, led by Purdue University and extending GSF's work from carbon to water. An implementation guide is being developed alongside the specification.",
         "tags": [
           "swi"
         ],
@@ -639,7 +730,29 @@ const sections = [
         ],
         "featured": true,
         "secondaryCtaText": "Learn more or get in touch",
-        "secondaryCtaHref": "/tools/sci-for-opentelemetry/"
+        "secondaryCtaHref": "/tools/sci-for-opentelemetry/",
+        "ctaText": "Join the Assembly waitlist",
+        "ctaHref": "/assemblies/sci-for-open-telemetry/#apply"
+      },
+      {
+        "label": "In development · Energy",
+        "title": "Software Energy Intensity (SEI)",
+        "bodyHtml": "A methodology for calculating the energy consumption rate of a software system, complementing SCI's carbon rate. Developed by the Software Standards Working Group, it is at the pre-draft stage.",
+        "tags": [],
+        "featured": true,
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/sei/"
+      },
+      {
+        "label": "In development · Data centers",
+        "title": "Workload Dynamic Power and Cooling (WDPC)",
+        "bodyHtml": "A specification for standardised coordination between computing workloads and energy infrastructure, so that rapid power swings from workloads such as AI training can be managed without destabilising power systems. Developed by the Hardware Standards Working Group.",
+        "tags": [],
+        "featured": true,
+        "ctaText": "Review the draft (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/Workload-Dynamic-Power-and-Cooling",
+        "secondaryCtaText": "Learn more or get in touch",
+        "secondaryCtaHref": "/standards/wdpc/"
       },
       {
         "label": "In development · Security",
@@ -1431,11 +1544,11 @@ const sections = [
       {
         "label": "Training",
         "title": "A new Green Software & AI Academy",
-        "bodyHtml": "Role-based professional training built on SCI, SCI for AI, SEI and SWI. A pilot is open to organisations. <a href='https://greensoftware.foundation/articles/green-software-foundation-announces-intent-to-launch-green-software-ai-academy-to-build-the-skills-needed-for-sustainable-ai/'>Announcement</a>.",
+        "bodyHtml": "Role-based professional training built on SCI, SCI for AI, SEI and SWI, with 14 courses. A pilot for GSF member organisations is open until December 2026, with supported onboarding. <a href='https://greensoftware.foundation/articles/green-software-foundation-announces-intent-to-launch-green-software-ai-academy-to-build-the-skills-needed-for-sustainable-ai/'>Announcement</a>.",
         "tags": [
           "training"
         ],
-        "ctaText": "View source",
+        "ctaText": "Visit the Academy",
         "ctaHref": "https://academy.greensoftware.foundation/",
         "secondaryCtaText": "Learn more about GSF training",
         "secondaryCtaHref": "/education/"
@@ -1549,6 +1662,45 @@ const sections = [
         ],
         "ctaText": "Read the paper",
         "ctaHref": "/policy/research/silo-project-qa/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Policy Radar · Public tool",
+        "title": "A public tracker of policy relevant to green software",
+        "bodyHtml": "The Policy Working Group's Policy Radar is a public calendar of consultations, proposed legislation and enacted laws relevant to green software in the regions where GSF members operate. Anyone can suggest a policy to add.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Open the Policy Radar",
+        "ctaHref": "https://policy-radar.greensoftware.foundation/",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "Consultation response · In preparation",
+        "title": "EU data centre performance standards",
+        "bodyHtml": "The Policy Working Group is preparing evidence for the European Commission's consultation on data centre performance standards, ahead of requirements expected to be proposed in 2027. Evidence from specialists familiar with SCI, SCI for AI, WDPC, SILO or Energy Efficiency Directive reporting is welcome until 14 December 2026.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Contribute evidence (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg/issues/189",
+        "secondaryCtaText": "Learn more about our policy work",
+        "secondaryCtaHref": "/policy/"
+      },
+      {
+        "label": "White paper · In scoping",
+        "title": "Data centre transparency requirements (United States)",
+        "bodyHtml": "The Policy Working Group is scoping a white paper on data centre disclosure requirements, setting out how growing political attention on data centres could translate into credible, measurable requirements.",
+        "tags": [
+          "policy",
+          "legislation"
+        ],
+        "ctaText": "Contribute (GitHub)",
+        "ctaHref": "https://github.com/Green-Software-Foundation/policy-wg/issues/190",
         "secondaryCtaText": "Learn more about our policy work",
         "secondaryCtaHref": "/policy/"
       },
