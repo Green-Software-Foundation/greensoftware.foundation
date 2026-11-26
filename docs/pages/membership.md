@@ -7,7 +7,7 @@
 
 The membership proposition: steering and general membership benefits, real member stories, fee tables, and the process to join.
 
-## Partnerships & Recognition panel
+## Partnerships & Adoption panel
 
 A dark FeatureGrid panel ("Join standards that governments and institutions rely on") sits after the logo marquee and links to `/partnerships/`. It mirrors the homepage and About panels (see [partnerships page doc](partnerships.md)); keep the figures in sync. Content is hardcoded.
 

@@ -1,34 +1,41 @@
-# Partnerships & Recognition Page
+# Partnerships & Adoption Page
 
 **URL:** `/partnerships/`
 **File:** `src/pages/partnerships/index.astro`
-**Breadcrumb:** Home / About / Partnerships & Recognition
-**Featured on:** the homepage (after the logo marquee), the About page (after Mission & Vision) and the Membership page (after the logo marquee) via a dark FeatureGrid panel, "Recognised by governments and global institutions". Update the panel's figures and cards if the evidence here changes.
-**Navigation:** About menu (after Governance & Leadership) and a second green button, "Partnerships & Recognition →", at the bottom of the Standards dropdown beside "About our standards process →" (`src/lib/nav-items.ts`, `extraFooterLinks`; rendered in `src/components/react/navbar.tsx`)
+**Breadcrumb:** Home / About / Partnerships & Adoption
+**Featured on:** the homepage (after the logo marquee), the About page (after Mission & Vision) and the Membership page (after the logo marquee) via a dark FeatureGrid panel, "How governments and institutions use GSF standards" (homepage and About; reworded from "Recognised by…" to match the factual tone). Update the panel's figures and cards if the evidence here changes.
+**Navigation:** About menu (after Governance & Leadership) and a second green button, "Partnerships & Adoption →", at the bottom of the Standards dropdown beside "About our standards process →" (`src/lib/nav-items.ts`, `extraFooterLinks`; rendered in `src/components/react/navbar.tsx`)
 
 ## What the Page Shows
 
-External recognition and validation of GSF: G7 recognition, national governments, intergovernmental organisations, WRI, standards credibility, independent validation, industry adoption, research, and skills/policy reach. Aimed at governments, intergovernmental bodies and universities.
+How governments, intergovernmental bodies, institutions and organisations are working with and adopting GSF standards: G7 recognition, national governments, intergovernmental organisations, WRI, standards credibility, independent validation, industry adoption, research, and skills/policy reach. Aimed at governments, intergovernmental bodies and universities.
 
 ## Dynamic vs Static
 
 Everything is **static**. Content lives in the `sections` array in the page frontmatter and renders through `CardGrid`, `TextBlock` and `CTABanner`. Nothing comes from Notion or content collections.
 
+## Page title
+
+The page was renamed from "Partnerships & Recognition" to **"Partnerships & Adoption"** (November 2026): "Recognition" read as trying too hard for a government audience. The URL stays `/partnerships/`. The name also appears in `src/lib/nav-items.ts` (About menu and the Standards dropdown button) and in the feature panels on the homepage, About and Membership pages (eyebrow and "Explore partnerships & adoption →" button). Keep them in sync.
+
+The hero call to action reads "Interested in partnering with the GSF?" with a "Partnership enquiries" button to the membership enquiry form (`/membership/enquire/`).
+
 ## Section navigation
 
-A full-width block sits directly below the hero. It is **not sticky**: everything is visible at once. It has the heading "Navigate to the section of interest", a "Show everything" button, the thirteen section links plus an "In the press" link (under Evidence and adoption, jumping to the media coverage scroller, `#press`) grouped into four columns (Government and institutional recognition; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter), and the topic-filter chips shown in the open ("Show only a standard or topic" and "In development"). Each section is wrapped in a `div` with the matching `id` and `scroll-mt-24`.
+Two parts, sharing the same links and filters:
 
-## Media coverage scroller
+1. **Full menu ("On this page")**, directly below the hero and not sticky. Section links are in four groups (Government and international; Standards; Evidence and adoption; Research, academia and policy; grouping lives in `navGroups` in the page frontmatter, plus "In the press" via `extraNavLabels`). Below them is one "Show only:" row: the highlighted **Legislation & reporting** button, the topic chips, and a "Show everything" link that appears only while a filter is on.
+2. **Sticky section bar**, hidden until the full menu scrolls out of view, then fixed to the top of the screen on all screen sizes. It shows "You are in: <current section>" (each section wrapper carries `data-nav-label`) and a **Show all sections** button that opens the same menu as a dropdown (capped at 75% of the screen height, scrolls inside). The dropdown closes after a choice, on Escape, or when clicking elsewhere, and the button reads "Close" while it is open.
 
-Just above the closing "Work with the Green Software Foundation" banner, a full-width sideways scroller, three cards deep, shows media coverage. It reads `src/data/press-mentions.json` (the Notion "GSF Mentions in the News" database, the same data as `/press/`), so new press mentions appear automatically. Left/right arrow buttons, a thick visible scrollbar, a fade with an arrow at the right edge and cards that peek past the edge make it obvious there is more to scroll to; arrow keys also scroll when the strip is focused. The arrows and fade hide when everything fits. It sits outside the `data-section` wrappers, so topic filters do not hide it. Styles and a small inline script are at the end of the page file. The `/press/` page itself keeps its original grid.
+Each section wrapper has the matching `id` and `scroll-mt-24`, so headings clear the sticky bar.
 
 ## Legislation & reporting button
 
-A highlighted call-out at the top of the navigation block ("Using GSF standards for legislation and reporting?") holds a **Legislation & reporting** button. It is a normal filter button (`data-filter="legislation"`), so it uses the same filter and "Show everything" behaviour as the topic chips. It shows every card tagged `legislation`: government policy and procurement (UK, Taiwan, Germany, US GovAI handbook), the French asset managers' guidance, G7 ministers, and the EU AI Act, CSRD, GHG Protocol Scope 2 and Ofgem papers. When adding a card that shows GSF standards supporting a law, regulation, reporting rule or procurement requirement, add `"legislation"` to its `tags`.
+The **Legislation & reporting** button is the first, highlighted item in the "Show only:" row (in both the full menu and the sticky dropdown), with a one-line explanation under it in the full menu. It is a normal filter button (`data-filter="legislation"`), so it uses the same filter and "Show everything" behaviour as the topic chips. It shows every card tagged `legislation`: government policy and procurement (UK, Taiwan, Germany, US GovAI handbook), the French asset managers' guidance, G7 ministers, and the EU AI Act, CSRD, GHG Protocol Scope 2 and Ofgem papers. When adding a card that shows GSF standards supporting a law, regulation, reporting rule or procurement requirement, add `"legislation"` to its `tags`.
 
 ## Topic filter
 
-The topic chips in the navigation block (Standards & topics: SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; In development: Data center specification (SILO), SCI for OpenTelemetry, SCI for Security, SCI for MCP) shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any jump link, or use the floating "Show everything" pill at the bottom of the screen whenever a filter is active. 
+The topic chips in the "Show only:" row (SCI, SCI for AI, SCI for Web, Real Time Cloud, Water (SWI), Principles & practices, Training, Policy; the in-development standards are reached through their own section link rather than chips) shows only matching cards and hides empty sections. To get back to the full list: click the active topic again, choose "Show everything", click any jump link, or use the floating "Show everything" pill at the bottom of the screen whenever a filter is active. 
 A small inline script at the bottom of the page does this. Each card carries a `data-tags` attribute (the optional `tags` field on `CardGrid` cards); each section wrapper has `data-section`. Cards with no topic only appear under "Show everything".
 
 ## Calls to action at the top of every section

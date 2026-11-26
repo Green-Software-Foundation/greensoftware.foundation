@@ -22,7 +22,7 @@ export const navItems = [
     label: "Standards",
     footerLink: { href: "/standards/", label: "About our standards process →" },
     extraFooterLinks: [
-      { href: "/partnerships/", label: "Partnerships & Recognition →" },
+      { href: "/partnerships/", label: "Partnerships & Adoption →" },
     ],
     sections: [
       {
@@ -322,7 +322,7 @@ export const navItems = [
           },
           {
             href: "/partnerships/",
-            label: "Partnerships & Recognition",
+            label: "Partnerships & Adoption",
           },
           { href: "/brand/", label: "Brand & Assets" /* icon: "palette" */ },
           { href: "/contact/", label: "Contact" /* icon: "mail" */ },

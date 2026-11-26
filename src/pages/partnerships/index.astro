@@ -28,13 +28,12 @@ const intro = {
 };
 const extraNavLabels: Record<string, string> = { press: "In the press" };
 const navGroups = [
-  { title: "Government and institutional recognition", ids: ["g7", "gov", "igo", "wri"] },
+  { title: "Government and international", ids: ["g7", "gov", "igo", "wri"] },
   { title: "Standards", ids: ["standards", "roadmap", "assemblies", "selfcert"] },
   { title: "Evidence and adoption", ids: ["independent", "industry", "press"] },
   { title: "Research, academia and policy", ids: ["research", "academic", "policy"] },
 ];
 const filters = [{"id": "sci", "label": "SCI"}, {"id": "sci-ai", "label": "SCI for AI"}, {"id": "sci-web", "label": "SCI for Web"}, {"id": "rtc", "label": "Real Time Cloud"}, {"id": "swi", "label": "Water (SWI)"}, {"id": "principles", "label": "Principles & practices"}, {"id": "training", "label": "Training"}, {"id": "policy", "label": "Policy"}];
-const roadmapFilters = [{"id": "silo", "label": "Data center specification (SILO)"}, {"id": "otel", "label": "SCI for OpenTelemetry"}, {"id": "sci-security", "label": "SCI for Security"}, {"id": "sci-mcp", "label": "SCI for MCP"}];
 const sections = [
   {
     "special": null,
@@ -1582,7 +1581,7 @@ const sections = [
 ---
 
 <Layout
-  title="Partnerships & Recognition — Green Software Foundation"
+  title="Partnerships & Adoption — Green Software Foundation"
   description="Governments, intergovernmental bodies and universities working with the Green Software Foundation: from G7 recognition to national adoption of SCI."
 >
   <Navbar
@@ -1597,69 +1596,106 @@ const sections = [
   <Breadcrumb items={[
     { label: "Home", href: "/" },
     { label: "About", href: "/about/" },
-    { label: "Partnerships & Recognition" },
+    { label: "Partnerships & Adoption" },
   ]} />
 
   <Hero
     heading="Partnerships"
-    headingAccent="& Recognition"
+    headingAccent="& Adoption"
     body="From the G7 to national digital agencies, the Green Software Foundation's open standards are being cited, adopted and built into public policy."
-    ctaLeadIn="Government and academic institutions can become members of the Foundation free of charge."
-    ctas={[{ text: "Membership enquiries", variant: "primary", href: "/membership/enquire/" }]}
+    ctaLeadIn="Interested in partnering with the GSF?"
+    ctas={[{ text: "Partnership enquiries", variant: "primary", href: "/membership/enquire/" }]}
     bgClass="bg-accent-lightest-2"
     imageSrc="/assets/partnerships-hero.svg"
     imageAlt="A globe connected to a government building, a university, a policy document and a certification rosette"
   />
 
-  <!-- Section navigation: always visible, not sticky. Every section and topic filter is shown
-       in the open; a floating "Show everything" pill appears while a filter is active. -->
-  <nav aria-label="On this page" class="border-b border-primary-lighter bg-white">
-    <div class="container py-8">
-      <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h2 class="text-xl font-extrabold text-primary-dark md:text-2xl">Navigate to the section of interest</h2>
-          <p class="mt-1 text-sm text-primary-dark/80 md:text-base">Jump to a section below, or show only the items on one standard or topic.</p>
-        </div>
-        <button type="button" data-filter="all" aria-pressed="true" class="self-start rounded-full bg-primary-dark px-4 py-1.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary md:self-auto">Show everything</button>
-      </div>
-      <div class="mt-6 flex flex-col gap-4 rounded-lg border-2 border-primary-dark bg-accent-lightest-2 p-5 md:flex-row md:items-center md:justify-between">
-        <div class="max-w-3xl">
-          <p class="text-lg font-extrabold text-primary-dark">Using GSF standards for legislation and reporting?</p>
-          <p class="mt-1 text-sm text-primary-dark/80 md:text-base">See where our standards support organisations' legal and regulatory commitments, including CSRD sustainability reporting, the EU AI Act, public procurement and government policy.</p>
-        </div>
-        <button type="button" data-filter="legislation" aria-pressed="false" class="shrink-0 rounded-full bg-primary-dark px-5 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
-      </div>
-      <div class="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+  <!-- Section navigation. The full menu sits below the hero; once it scrolls out of view a slim
+       bar sticks to the top of the screen showing the current section, with a "Show all sections"
+       button that opens the same menu as a dropdown. A floating pill appears while a filter is on. -->
+  <nav aria-label="On this page" data-section-nav class="border-b border-primary-lighter bg-white">
+    <div class="container py-8 md:py-10">
+      <h2 class="text-xl font-extrabold text-primary-dark md:text-2xl">On this page</h2>
+      <p class="mt-1 text-sm text-primary-dark/70 md:text-base">Select a section to go straight to it.</p>
+      <div class="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {navGroups.map((g) => (
           <div>
             <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
-            <ul class="mt-2 space-y-1 text-sm font-semibold">
+            <ul class="mt-3 space-y-2">
               {g.ids.map((id) => (
                 <li>
-                  <a href={`#${id}`} data-pill={id} class="inline-block border-b-2 border-transparent py-0.5 text-primary-dark transition-colors hover:border-primary hover:text-primary">{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</a>
+                  <a href={`#${id}`} data-pill={id} class="group flex items-center justify-between gap-2 rounded-md px-2 py-1.5 -mx-2 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-lightest-2 hover:text-primary">
+                    <span>{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</span>
+                    <span aria-hidden="true" class="text-primary/40 transition-colors group-hover:text-primary">&rarr;</span>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      <div data-filter-bar class="mt-8 border-t border-primary-lighter pt-6">
-        <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">Show only a standard or topic</p>
-        <div class="mt-3 flex flex-wrap gap-2">
+      <div data-filter-bar class="mt-8 border-t border-primary-lighter pt-5">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
+          <button type="button" data-filter="legislation" aria-pressed="false" title="Where GSF standards support legal and regulatory commitments: CSRD, the EU AI Act, public procurement and government policy" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
           {filters.map((f) => (
-            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
           ))}
+          <button type="button" data-filter="all" aria-pressed="true" class="ml-1 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-dark aria-pressed:hidden">Show everything</button>
         </div>
-        <p class="mt-5 text-xs font-bold uppercase tracking-wider text-accent-dark">In development</p>
-        <div class="mt-3 flex flex-wrap gap-2">
-          {roadmapFilters.map((f) => (
-            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-primary-dark shadow-sm ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
-          ))}
-        </div>
+        <p class="mt-2 text-xs text-primary-dark/60">"Legislation &amp; reporting" shows where GSF standards support legal and regulatory commitments, including CSRD, the EU AI Act, public procurement and government policy.</p>
       </div>
-      <p data-filter-status aria-live="polite" class="mt-4 text-sm text-primary-dark/70 empty:hidden"></p>
+      <p data-filter-status aria-live="polite" class="mt-3 text-sm font-semibold text-primary-dark empty:hidden"></p>
     </div>
   </nav>
+
+  <!-- Sticky section bar: hidden until the full menu above has scrolled out of view -->
+  <div data-sticky-nav hidden class="fixed inset-x-0 top-0 z-40 shadow-lg">
+    <div class="bg-primary-dark text-white">
+      <div class="container flex h-14 items-center justify-between gap-3">
+        <p class="min-w-0 truncate text-sm">
+          <span class="text-white/70">You are in:</span>
+          <span data-current-section class="ml-1 font-bold"></span>
+        </p>
+        <button type="button" data-filter-toggle aria-expanded="false" aria-controls="filter-panel" class="flex shrink-0 items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-primary-dark transition-colors hover:bg-accent-lightest-2">
+          <span aria-hidden="true">&#9776;</span>
+          <span data-toggle-text>Show all sections</span>
+          <span aria-hidden="true" data-toggle-caret>&#9662;</span>
+        </button>
+      </div>
+    </div>
+    <div id="filter-panel" data-filter-panel hidden class="max-h-[75vh] overflow-y-auto border-b border-primary-lighter bg-white">
+      <div class="container py-6">
+        <div class="grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        {navGroups.map((g) => (
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-accent-dark">{g.title}</p>
+            <ul class="mt-2 space-y-1">
+              {g.ids.map((id) => (
+                <li>
+                  <a href={`#${id}`} data-pill={id} class="group flex items-center justify-between gap-2 rounded-md px-2 py-1.5 -mx-2 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-lightest-2 hover:text-primary">
+                    <span>{sections.find((x) => x.id === id)?.navLabel ?? extraNavLabels[id]}</span>
+                    <span aria-hidden="true" class="text-primary/40 transition-colors group-hover:text-primary">&rarr;</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        </div>
+        <div class="mt-6 border-t border-primary-lighter pt-4">
+          <div class="flex flex-wrap items-center gap-2">
+          <span class="mr-1 text-sm font-bold text-primary-dark">Show only:</span>
+          <button type="button" data-filter="legislation" aria-pressed="false" title="Where GSF standards support legal and regulatory commitments: CSRD, the EU AI Act, public procurement and government policy" class="rounded-full bg-primary-dark px-4 py-1 text-sm font-bold text-white transition-colors hover:bg-primary aria-pressed:ring-4 aria-pressed:ring-primary-lighter">Legislation &amp; reporting</button>
+          {filters.map((f) => (
+            <button type="button" data-filter={f.id} aria-pressed="false" class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-primary-dark ring-1 ring-primary-lighter transition hover:ring-primary aria-pressed:bg-primary-dark aria-pressed:text-white aria-pressed:ring-primary-dark">{f.label}</button>
+          ))}
+          <button type="button" data-filter="all" aria-pressed="true" class="ml-1 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-dark aria-pressed:hidden">Show everything</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div data-filter-float hidden class="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-4 rounded-full bg-primary-dark py-3 pl-6 pr-3 text-base font-semibold text-white shadow-2xl ring-4 ring-white">
     <span data-filter-float-text></span>
@@ -1701,7 +1737,7 @@ const sections = [
   </div>
 
   {sections.map((s) => (
-    <div id={s.id} data-section class="scroll-mt-24">
+    <div id={s.id} data-section data-nav-label={s.navLabel} class="scroll-mt-24">
       {s.cta && (
         <section class="bg-primary-dark py-6 md:py-8" data-pagefind-ignore>
           <div class="container flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
@@ -1780,7 +1816,7 @@ const sections = [
   ))}
 
   <!-- Media Coverage: full-width sideways scroller, three cards deep -->
-  <section id="press" class="scroll-mt-24 bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
+  <section id="press" data-nav-label="In the press" class="scroll-mt-24 bg-white py-16 md:py-24" aria-labelledby="coverage-heading">
     <div class="mx-auto max-w-6xl px-6">
       <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
@@ -1844,7 +1880,7 @@ const sections = [
   var bar=document.querySelector('[data-filter-bar]'); if(!bar) return;
   var btns=[].slice.call(document.querySelectorAll('button[data-filter]'));
   var panel=document.querySelector('[data-filter-panel]'); var toggle=document.querySelector('[data-filter-toggle]');
-  function setPanel(open){if(!panel||!toggle)return;panel.hidden=!open;toggle.setAttribute('aria-expanded',open?'true':'false');}
+  function setPanel(open){if(!panel||!toggle)return;panel.hidden=!open;toggle.setAttribute('aria-expanded',open?'true':'false');var tt=toggle.querySelector('[data-toggle-text]');if(tt)tt.textContent=open?'Close':'Show all sections';var tc=toggle.querySelector('[data-toggle-caret]');if(tc)tc.innerHTML=open?'&#9652;':'&#9662;';}
   if(toggle){toggle.addEventListener('click',function(){setPanel(panel.hidden);});}
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setPanel(false);});
   document.addEventListener('click',function(e){if(panel&&!panel.hidden&&!e.target.closest('[data-filter-panel]')&&!e.target.closest('[data-filter-toggle]'))setPanel(false);});
@@ -1879,10 +1915,24 @@ const sections = [
   });
   // Jump links: show the full list again if a filter is on, then scroll to the section.
   links.forEach(function(a){a.addEventListener('click',function(e){
+    setPanel(false);
     var t=document.getElementById(a.getAttribute('data-pill'));
     if(t&&current!=='all'){e.preventDefault();apply('all');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},50);}
   });});
   if(float){float.querySelector('button').addEventListener('click',function(){apply('all');window.scrollTo({top:0,behavior:'smooth'});});}
+  // Sticky section bar: show once the full menu has scrolled away; keep "You are in" current.
+  var navEl=document.querySelector('[data-section-nav]'); var sticky=document.querySelector('[data-sticky-nav]');
+  var current=document.querySelector('[data-current-section]');
+  var labelled=[].slice.call(document.querySelectorAll('[data-nav-label]'));
+  function onScroll(){
+    if(navEl&&sticky){var show=navEl.getBoundingClientRect().bottom<0; if(sticky.hidden===show){sticky.hidden=!show; if(!show)setPanel(false);}}
+    if(current){var name=labelled.length?labelled[0].getAttribute('data-nav-label'):'';
+      labelled.forEach(function(el){if(!el.hidden&&el.getBoundingClientRect().top<=120)name=el.getAttribute('data-nav-label');});
+      current.textContent=name;}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
 })();
 </script>
   <style>
